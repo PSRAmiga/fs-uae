@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Amiga</class>
  <widget class="QMainWindow" name="Amiga">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,6 +12,12 @@
     <width>470</width>
     <height>520</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Amiga</string>
@@ -23,6 +32,18 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionSummary"/>
+    <addaction name="separator"/>
+    <addaction name="actionReport_bug"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_fs_uae"/>
+    <addaction name="actionAbout_Amiga"/>
+   </widget>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -33,6 +54,26 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionReport_bug">
+   <property name="text">
+    <string>Report bug...</string>
+   </property>
+  </action>
+  <action name="actionAbout_fs_uae">
+   <property name="text">
+    <string>About FS-UAE</string>
+   </property>
+  </action>
+  <action name="actionAbout_Amiga">
+   <property name="text">
+    <string>About Amiga</string>
+   </property>
+  </action>
+  <action name="actionSummary">
+   <property name="text">
+    <string>Summary</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
