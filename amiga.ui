@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FS_UAE</class>
- <widget class="QMainWindow" name="FS_UAE">
+ <class>Amiga</class>
+ <widget class="QMainWindow" name="Amiga">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -31,7 +31,7 @@
   <property name="windowTitle">
    <string>FS_UAE</string>
   </property>
-  <widget class="QWidget" name="QT_FS_UAE">
+  <widget class="QWidget" name="widget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
      <horstretch>0</horstretch>
@@ -87,7 +87,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>8</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -113,6 +113,273 @@
      <attribute name="title">
       <string>ROM</string>
      </attribute>
+    </widget>
+    <widget class="QWidget" name="CPU">
+     <attribute name="title">
+      <string>CPU</string>
+     </attribute>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>290</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>68000/68010 -&gt; none</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>310</y>
+        <width>321</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>68EC020/68020/68030 -&gt; none 68881 68882</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>330</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>68040-&gt; 68040</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>350</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>68060-&gt; 68060</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSlider_2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>170</y>
+        <width>121</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>5119</number>
+      </property>
+      <property name="pageStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>170</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cycles/insn:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>290</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Adjustable -&gt; cycle/insn</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>60</y>
+        <width>112</width>
+        <height>215</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_37">
+         <property name="text">
+          <string>CPU type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_9">
+         <property name="text">
+          <string>68000</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_10">
+         <property name="text">
+          <string>68010</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_11">
+         <property name="text">
+          <string>68EC20</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_16">
+         <property name="text">
+          <string>68020</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_17">
+         <property name="text">
+          <string>68030</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_20">
+         <property name="text">
+          <string>68040</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_18">
+         <property name="text">
+          <string>68060</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>60</y>
+        <width>112</width>
+        <height>159</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_38">
+         <property name="text">
+          <string>FPU type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_19">
+         <property name="text">
+          <string>None</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_21">
+         <property name="text">
+          <string>68881</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_24">
+         <property name="text">
+          <string>68882</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_22">
+         <property name="text">
+          <string>68040</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_23">
+         <property name="text">
+          <string>68060</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>60</y>
+        <width>244</width>
+        <height>103</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_39">
+         <property name="text">
+          <string>CPU speed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_27">
+         <property name="text">
+          <string>Optimize for host CPU speed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_26">
+         <property name="text">
+          <string>Approximate 68000/7MHz speed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_25">
+         <property name="text">
+          <string>Adjustable</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="RAM">
      <attribute name="title">
@@ -507,273 +774,6 @@ ram     all ram no 1.8MB slow mem
         <widget class="QRadioButton" name="radioButton_36">
          <property name="text">
           <string>8 MB</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="CPU">
-     <attribute name="title">
-      <string>CPU</string>
-     </attribute>
-     <widget class="QLabel" name="label_31">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>290</y>
-        <width>171</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68000/68010 -&gt; none</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_32">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>310</y>
-        <width>321</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68EC020/68020/68030 -&gt; none 68881 68882</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_33">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>330</y>
-        <width>131</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68040-&gt; 68040</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_34">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>350</y>
-        <width>121</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68060-&gt; 68060</string>
-      </property>
-     </widget>
-     <widget class="QSlider" name="horizontalSlider_2">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>170</y>
-        <width>121</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <number>1</number>
-      </property>
-      <property name="maximum">
-       <number>5119</number>
-      </property>
-      <property name="pageStep">
-       <number>1</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_35">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>170</y>
-        <width>78</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Cycles/insn:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_36">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>290</y>
-        <width>181</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Adjustable -&gt; cycle/insn</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>60</y>
-        <width>112</width>
-        <height>215</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QLabel" name="label_37">
-         <property name="text">
-          <string>CPU type</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_9">
-         <property name="text">
-          <string>68000</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_10">
-         <property name="text">
-          <string>68010</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_11">
-         <property name="text">
-          <string>68EC20</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_16">
-         <property name="text">
-          <string>68020</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_17">
-         <property name="text">
-          <string>68030</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_20">
-         <property name="text">
-          <string>68040</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_18">
-         <property name="text">
-          <string>68060</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>60</y>
-        <width>112</width>
-        <height>159</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QLabel" name="label_38">
-         <property name="text">
-          <string>FPU type</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_19">
-         <property name="text">
-          <string>None</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_21">
-         <property name="text">
-          <string>68881</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_24">
-         <property name="text">
-          <string>68882</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_22">
-         <property name="text">
-          <string>68040</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_23">
-         <property name="text">
-          <string>68060</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>60</y>
-        <width>244</width>
-        <height>103</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <widget class="QLabel" name="label_39">
-         <property name="text">
-          <string>CPU speed</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_27">
-         <property name="text">
-          <string>Optimize for host CPU speed</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_26">
-         <property name="text">
-          <string>Approximate 68000/7MHz speed</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_25">
-         <property name="text">
-          <string>Adjustable</string>
          </property>
         </widget>
        </item>
