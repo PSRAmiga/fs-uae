@@ -2127,7 +2127,10 @@ ram     all ram no 1.8MB slow mem
     </property>
     <addaction name="actionSummary"/>
     <addaction name="separator"/>
+    <addaction name="actionReport_bug"/>
+    <addaction name="separator"/>
     <addaction name="actionAbout_2"/>
+    <addaction name="actionAbout_Amiga"/>
    </widget>
    <addaction name="menuHelp"/>
   </widget>
@@ -2152,7 +2155,17 @@ ram     all ram no 1.8MB slow mem
   </action>
   <action name="actionAbout_2">
    <property name="text">
-    <string>About</string>
+    <string>About fs-uae</string>
+   </property>
+  </action>
+  <action name="actionReport_bug">
+   <property name="text">
+    <string>Report bug</string>
+   </property>
+  </action>
+  <action name="actionAbout_Amiga">
+   <property name="text">
+    <string>About Amiga</string>
    </property>
   </action>
  </widget>
