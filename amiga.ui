@@ -90,7 +90,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>4</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -456,14 +456,14 @@ ram     all ram no 1.8MB slow mem
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_34">
+        <widget class="QRadioButton" name="M1_2">
          <property name="text">
           <string>1 MB</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_35">
+        <widget class="QRadioButton" name="m1_8">
          <property name="text">
           <string>1.8 MB</string>
          </property>
@@ -745,44 +745,44 @@ ram     all ram no 1.8MB slow mem
         <height>159</height>
        </rect>
       </property>
-      <layout class="QFormLayout" name="formLayout_3">
+      <layout class="QFormLayout" name="Chip_mem">
        <item row="0" column="0">
-        <widget class="QLabel" name="Chip_mem">
+        <widget class="QLabel" name="Chip_me_label">
          <property name="text">
           <string>Chip Mem</string>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QRadioButton" name="radioButton_28">
+        <widget class="QRadioButton" name="K512_chip">
          <property name="text">
           <string>512 KB</string>
          </property>
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QRadioButton" name="radioButton_29">
+        <widget class="QRadioButton" name="M1_chip">
          <property name="text">
           <string>1 MB</string>
          </property>
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QRadioButton" name="radioButton_30">
+        <widget class="QRadioButton" name="M2_chip">
          <property name="text">
           <string>2 MB</string>
          </property>
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QRadioButton" name="radioButton_31">
+        <widget class="QRadioButton" name="M4_chip">
          <property name="text">
           <string>4 MB</string>
          </property>
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QRadioButton" name="radioButton_36">
+        <widget class="QRadioButton" name="M8">
          <property name="text">
           <string>8 MB</string>
          </property>
@@ -1529,7 +1529,7 @@ ram     all ram no 1.8MB slow mem
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>320</y>
+        <y>315</y>
         <width>83</width>
         <height>17</height>
        </rect>
@@ -1538,6 +1538,46 @@ ram     all ram no 1.8MB slow mem
        <string>Kickstart dir:</string>
       </property>
      </widget>
+     <widget class="QLineEdit" name="kickstart_dir">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>309</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>32000</number>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton">
+      <property name="geometry">
+       <rect>
+        <x>483</x>
+        <y>309</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+      </property>
+     </widget>
+     <zorder>layoutWidget</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>label_40</zorder>
+     <zorder>toolButton</zorder>
+     <zorder>kickstart_dir</zorder>
+     <zorder>toolButton</zorder>
     </widget>
     <widget class="QWidget" name="Sound_menu">
      <attribute name="title">
@@ -2089,8 +2129,7 @@ ram     all ram no 1.8MB slow mem
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../ICO/gtk-execute.png</normaloff>
-      <normalon>../ICO/gtk-execute.png</normalon>../ICO/gtk-execute.png</iconset>
+      <normaloff>../ICO/gtk-ex.png</normaloff>../ICO/gtk-ex.png</iconset>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
@@ -2110,8 +2149,7 @@ ram     all ram no 1.8MB slow mem
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../ICO/gtk-save.png</normaloff>
-      <normalon>https:/github.com/PSRAmiga/fs-uae</normalon>../ICO/gtk-save.png</iconset>
+      <normaloff>../ICO/gtk-save.png</normaloff>../ICO/gtk-save.png</iconset>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>

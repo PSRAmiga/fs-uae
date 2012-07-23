@@ -16,3 +16,5 @@ SOURCES += main.cpp\
 HEADERS  += amiga.h
 
 FORMS    += amiga.ui
+
+RESOURCES +=
