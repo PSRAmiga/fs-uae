@@ -3,5 +3,9 @@
         <file>Images/gtk-save.png</file>
         <file>Images/gtk-ex.png</file>
         <file>Images/drive-harddisk.png</file>
+        <file>Images/designer-property-editor-remove-dynamic.png</file>
+        <file>Images/designer-property-editor-add-dynamic.png</file>
+        <file>Images/linguist-filesave.png</file>
+        <file>Images/linguist-fileopen.png</file>
     </qresource>
 </RCC>
