@@ -17,4 +17,5 @@ HEADERS  += amiga.h
 
 FORMS    += amiga.ui
 
-RESOURCES +=
+RESOURCES += \
+    ICO.qrc

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Images/gtk-save.png</file>
+        <file>Images/gtk-ex.png</file>
+        <file>Images/drive-harddisk.png</file>
+    </qresource>
+</RCC>

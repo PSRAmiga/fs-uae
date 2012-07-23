@@ -90,7 +90,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>4</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -225,7 +225,7 @@
        <rect>
         <x>240</x>
         <y>160</y>
-        <width>205</width>
+        <width>206</width>
         <height>75</height>
        </rect>
       </property>
@@ -262,7 +262,7 @@
         <x>70</x>
         <y>70</y>
         <width>601</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -289,8 +289,8 @@
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -302,7 +302,7 @@
         <x>70</x>
         <y>110</y>
         <width>601</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -332,8 +332,8 @@
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -365,18 +365,18 @@
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PROGRAM ARGUMENTS&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;=================&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;path&amp;gt;               Use a custom configuration file instead of Default.fs-uae&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can also specify any configuration option with --key=value&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(e.g --floppy-drive-0=/path/to/adf)&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some options commonly used as program arguments:&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--fullscreen         Start in fullscreen mode instead of windowed mode&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--stdout             Also log to stdout (not on Windows)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;PROGRAM ARGUMENTS&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;=================&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&amp;lt;path&amp;gt;               Use a custom configuration file instead of Default.fs-uae&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;You can also specify any configuration option with --key=value&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;(e.g --floppy-drive-0=/path/to/adf)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Some options commonly used as program arguments:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;--fullscreen         Start in fullscreen mode instead of windowed mode&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;--stdout             Also log to stdout (not on Windows)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget_5">
@@ -461,17 +461,6 @@ p, li { white-space: pre-wrap; }
 A4000/40-&gt;68040 2MB chipram</string>
       </property>
      </widget>
-     <zorder>layoutWidget</zorder>
-     <zorder>layoutWidget</zorder>
-     <zorder>layoutWidget</zorder>
-     <zorder>Motherboard_type_label</zorder>
-     <zorder>modelListComboBox</zorder>
-     <zorder>verticalLayoutWidget</zorder>
-     <zorder>verticalLayoutWidget_2</zorder>
-     <zorder>label_10</zorder>
-     <zorder>textEdit</zorder>
-     <zorder>layoutWidget_5</zorder>
-     <zorder>label_31</zorder>
     </widget>
     <widget class="QWidget" name="RAM">
      <attribute name="title">
@@ -909,7 +898,7 @@ ram     all ram no 1.8MB slow mem
         <x>40</x>
         <y>20</y>
         <width>641</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -936,8 +925,8 @@ ram     all ram no 1.8MB slow mem
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -949,7 +938,7 @@ ram     all ram no 1.8MB slow mem
         <x>40</x>
         <y>50</y>
         <width>641</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_12">
@@ -976,8 +965,8 @@ ram     all ram no 1.8MB slow mem
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -989,7 +978,7 @@ ram     all ram no 1.8MB slow mem
         <x>40</x>
         <y>80</y>
         <width>641</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_13">
@@ -1016,8 +1005,8 @@ ram     all ram no 1.8MB slow mem
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1029,7 +1018,7 @@ ram     all ram no 1.8MB slow mem
         <x>40</x>
         <y>110</y>
         <width>641</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_14">
@@ -1056,8 +1045,8 @@ ram     all ram no 1.8MB slow mem
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1122,7 +1111,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>40</x>
         <y>350</y>
         <width>641</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_15">
@@ -1152,8 +1141,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1303,7 +1292,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>50</y>
+        <y>43</y>
         <width>261</width>
         <height>17</height>
        </rect>
@@ -1332,7 +1321,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>30</x>
         <y>10</y>
         <width>641</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_17">
@@ -1362,8 +1351,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1432,7 +1421,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>10</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_18">
@@ -1462,8 +1451,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1514,7 +1503,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>50</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -1544,8 +1533,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1596,7 +1585,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>90</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_20">
@@ -1626,8 +1615,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1678,7 +1667,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>130</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_21">
@@ -1708,8 +1697,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1760,7 +1749,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>170</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_22">
@@ -1790,8 +1779,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1842,7 +1831,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>210</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -1872,8 +1861,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -1924,7 +1913,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>250</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_24">
@@ -1954,8 +1943,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -2006,7 +1995,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>290</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_25">
@@ -2036,8 +2025,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -2088,7 +2077,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>330</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_26">
@@ -2118,8 +2107,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -2170,7 +2159,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>10</x>
         <y>370</y>
         <width>701</width>
-        <height>29</height>
+        <height>34</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_27">
@@ -2200,8 +2189,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
           <string>...</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
          </property>
         </widget>
        </item>
@@ -3310,8 +3299,8 @@ e tuto il resto che non ci sta d'altra parte</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>../ICO/gtk-ex.png</normaloff>../ICO/gtk-ex.png</iconset>
+     <iconset resource="ICO.qrc">
+      <normaloff>:/Images/Images/gtk-ex.png</normaloff>:/Images/Images/gtk-ex.png</iconset>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
@@ -3330,8 +3319,8 @@ e tuto il resto che non ci sta d'altra parte</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>../ICO/gtk-save.png</normaloff>../ICO/gtk-save.png</iconset>
+     <iconset resource="ICO.qrc">
+      <normaloff>:/Images/Images/gtk-save.png</normaloff>:/Images/Images/gtk-save.png</iconset>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
@@ -3421,6 +3410,8 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="ICO.qrc"/>
+ </resources>
  <connections/>
 </ui>
