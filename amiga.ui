@@ -51,7 +51,7 @@
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
@@ -90,7 +90,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>8</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -2073,70 +2073,6 @@ ram     all ram no 1.8MB slow mem
      <attribute name="title">
       <string>Presets</string>
      </attribute>
-    </widget>
-    <widget class="QWidget" name="About">
-     <attribute name="title">
-      <string>About</string>
-     </attribute>
-     <widget class="QLabel" name="label_10">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>150</y>
-        <width>247</width>
-        <height>48</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>30</pointsize>
-        <weight>75</weight>
-        <italic>false</italic>
-        <bold>true</bold>
-        <underline>false</underline>
-        <strikeout>false</strikeout>
-       </font>
-      </property>
-      <property name="text">
-       <string>FS-UAE 0.1</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>250</y>
-        <width>312</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QLabel" name="label_11">
-         <property name="font">
-          <font>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Choose your settings, then </string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolButton" name="toolButton">
-         <property name="text">
-          <string>...</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../ICO/gtk-execute.png</normaloff>
-           <normalon>../ICO/gtk-execute.png</normalon>../ICO/gtk-execute.png</iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
     </widget>
    </widget>
    <widget class="QToolButton" name="Run">
