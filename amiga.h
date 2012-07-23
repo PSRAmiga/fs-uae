@@ -15,8 +15,10 @@ public:
     explicit Amiga(QWidget *parent = 0);
     ~Amiga();
     
+
+
 private slots:
-    void on_toolButton_clicked();
+    void on_loadKickstartDirButt_clicked();
 
 private:
     Ui::Amiga *ui;

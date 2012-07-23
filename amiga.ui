@@ -90,7 +90,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -107,133 +107,283 @@
     <property name="movable">
      <bool>false</bool>
     </property>
-    <widget class="QWidget" name="Floppies">
+    <widget class="QWidget" name="Chipset_menu">
      <attribute name="title">
-      <string>Floppies</string>
+      <string>Chipset</string>
      </attribute>
-     <widget class="QLabel" name="label_26">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>170</y>
-        <width>115</width>
-        <height>17</height>
+        <x>200</x>
+        <y>20</y>
+        <width>231</width>
+        <height>31</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Floppy .adf 4max</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="CPU">
-     <attribute name="title">
-      <string>CPU</string>
-     </attribute>
-     <widget class="QLabel" name="label_31">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>290</y>
-        <width>171</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68000/68010 -&gt; none</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_32">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>310</y>
-        <width>321</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68EC020/68020/68030 -&gt; none 68881 68882</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_33">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>330</y>
-        <width>131</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68040-&gt; 68040</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_34">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>350</y>
-        <width>121</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>68060-&gt; 68060</string>
-      </property>
-     </widget>
-     <widget class="QSlider" name="horizontalSlider_2">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>170</y>
-        <width>121</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <number>1</number>
-      </property>
-      <property name="maximum">
-       <number>5119</number>
-      </property>
-      <property name="pageStep">
-       <number>1</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_35">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>170</y>
-        <width>78</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Cycles/insn:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_36">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>290</y>
-        <width>181</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Adjustable -&gt; cycle/insn</string>
-      </property>
+      <layout class="QHBoxLayout" name="Motherboard">
+       <item>
+        <widget class="QLabel" name="Motherboard_type_label">
+         <property name="text">
+          <string>Amiga Model:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="modelListComboBox">
+         <item>
+          <property name="text">
+           <string>A500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>A500+</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>A600</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>A1200</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>A1200/020</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>A4000/040</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CD32</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CDTV</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>60</y>
+        <x>70</x>
+        <y>160</y>
+        <width>157</width>
+        <height>103</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="Sprite_collision">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>Accuracy:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="accuracyLeastRadioButton">
+         <property name="text">
+          <string>Least accurate (-1)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="accuracyNormalRadioButton">
+         <property name="text">
+          <string>Normal (0)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="accuracyMostRadioButton">
+         <property name="text">
+          <string notr="true">Most accurate (+1)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>160</y>
+        <width>205</width>
+        <height>75</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="Chipset_video_output">
+       <item>
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>Video Out Mode:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="videoModeEuropeanRadioButton">
+         <property name="text">
+          <string>PAL (European 50 Hz) (0)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="videoModeAmericanRadioButton">
+         <property name="text">
+          <string>NTSC (American 60 Hz) (1)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>70</y>
+        <width>601</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>Kickstart file:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="kickstartDir">
+         <property name="maxLength">
+          <number>32000</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="loadKickstartDirButt">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>110</y>
+        <width>601</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_49">
+         <property name="text">
+          <string>Kickstart Extended dir (CD32,CDTV):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="kickstartExtendedDir">
+         <property name="text">
+          <string>da fare il suo codice</string>
+         </property>
+         <property name="maxLength">
+          <number>32000</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="loadKickstartExtDirButt">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>30</y>
+        <width>268</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>se model=CDxx abilito solo quello sotto</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>300</y>
+        <width>351</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PROGRAM ARGUMENTS&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;=================&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;path&amp;gt;               Use a custom configuration file instead of Default.fs-uae&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can also specify any configuration option with --key=value&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(e.g --floppy-drive-0=/path/to/adf)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some options commonly used as program arguments:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--fullscreen         Start in fullscreen mode instead of windowed mode&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--stdout             Also log to stdout (not on Windows)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>150</y>
         <width>112</width>
         <height>215</height>
        </rect>
@@ -297,100 +447,31 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>60</y>
-        <width>112</width>
-        <height>159</height>
+        <x>500</x>
+        <y>380</y>
+        <width>211</width>
+        <height>41</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QLabel" name="label_38">
-         <property name="text">
-          <string>FPU type</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_19">
-         <property name="text">
-          <string>None</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_21">
-         <property name="text">
-          <string>68881</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_24">
-         <property name="text">
-          <string>68882</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_22">
-         <property name="text">
-          <string>68040</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_23">
-         <property name="text">
-          <string>68060</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>60</y>
-        <width>244</width>
-        <height>103</height>
-       </rect>
+      <property name="text">
+       <string>A1200/20 -&gt; 68020 default
+A4000/40-&gt;68040 2MB chipram</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <widget class="QLabel" name="label_39">
-         <property name="text">
-          <string>CPU speed</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_27">
-         <property name="text">
-          <string>Optimize for host CPU speed</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_26">
-         <property name="text">
-          <string>Approximate 68000/7MHz speed</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_25">
-         <property name="text">
-          <string>Adjustable</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
+     <zorder>layoutWidget</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>Motherboard_type_label</zorder>
+     <zorder>modelListComboBox</zorder>
+     <zorder>verticalLayoutWidget</zorder>
+     <zorder>verticalLayoutWidget_2</zorder>
+     <zorder>label_10</zorder>
+     <zorder>textEdit</zorder>
+     <zorder>layoutWidget_5</zorder>
+     <zorder>label_31</zorder>
     </widget>
     <widget class="QWidget" name="RAM">
      <attribute name="title">
@@ -400,9 +481,9 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>200</y>
+        <y>186</y>
         <width>381</width>
-        <height>257</height>
+        <height>271</height>
        </rect>
       </property>
       <property name="text">
@@ -412,7 +493,7 @@ ram     all chip mem
         all fast mem
                 if chip mem = 4/8MB fast mem off
 cpu 68010
-ram =cpu 68000
+identico a 68000
 cpu 68EC020
 ram     all chip mem
         all fast mem
@@ -476,7 +557,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>270</x>
         <y>20</y>
-        <width>66</width>
+        <width>69</width>
         <height>159</height>
        </rect>
       </property>
@@ -533,7 +614,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>361</x>
         <y>21</y>
-        <width>161</width>
+        <width>165</width>
         <height>161</height>
        </rect>
       </property>
@@ -643,7 +724,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>542</x>
         <y>23</y>
-        <width>153</width>
+        <width>157</width>
         <height>133</height>
        </rect>
       </property>
@@ -789,6 +870,429 @@ ram     all ram no 1.8MB slow mem
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QLabel" name="label_50">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>210</y>
+        <width>181</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>mettere valori defult letti
+ in Conf  Opt.pdf</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Floppies">
+     <attribute name="title">
+      <string>Floppies</string>
+     </attribute>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>310</y>
+        <width>671</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4 floppy veri e fino a 20 floppy da swappare a caldo. File browser multipli? sisisi</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>641</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_51">
+         <property name="text">
+          <string>Floppy Drive 0:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="kickstartDir_2">
+         <property name="maxLength">
+          <number>32000</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="loadKickstartDirButt_2">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>641</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <item>
+        <widget class="QLabel" name="label_52">
+         <property name="text">
+          <string>Floppy Drive 1:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="kickstartDir_3">
+         <property name="maxLength">
+          <number>32000</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="loadKickstartDirButt_3">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>641</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <widget class="QLabel" name="label_53">
+         <property name="text">
+          <string>Floppy Drive 2:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="kickstartDir_4">
+         <property name="maxLength">
+          <number>32000</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="loadKickstartDirButt_4">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>641</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <widget class="QLabel" name="label_54">
+         <property name="text">
+          <string>Floppy Drive 3:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="kickstartDir_5">
+         <property name="maxLength">
+          <number>32000</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="loadKickstartDirButt_5">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QListWidget" name="listWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>160</y>
+        <width>641</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::MultiSelection</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>280</y>
+        <width>97</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add file(s)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>280</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remove selected</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>280</y>
+        <width>431</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add file continua ad aggiungere file MULTIPLI
+la lista supporta la selezione (e quindi cancellazione multipla)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>350</y>
+        <width>641</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <widget class="QLabel" name="label_55">
+         <property name="text">
+          <string>Floppy overlays dir:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="kickstartDir_6">
+         <property name="text">
+          <string>è una directory NON un file</string>
+         </property>
+         <property name="maxLength">
+          <number>32000</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="loadKickstartDirButt_6">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>140</y>
+        <width>641</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Floppy Swapping Images:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_56">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>390</y>
+        <width>141</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Floppy Drive volume:</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSlider_2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>390</y>
+        <width>160</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>20</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_9">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>390</y>
+        <width>97</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Mute</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>396</y>
+        <width>31</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>20</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_57">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>420</y>
+        <width>141</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Floppy Drive speed:</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSlider_3">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>420</y>
+        <width>160</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>1200</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>420</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>8X</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_39">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>420</y>
+        <width>271</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>convertire in 8X e se =0 scrivere TURBO</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="Graphics">
@@ -971,7 +1475,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>390</x>
         <y>140</y>
-        <width>251</width>
+        <width>260</width>
         <height>29</height>
        </rect>
       </property>
@@ -1249,7 +1753,7 @@ ram     all ram no 1.8MB slow mem
        </rect>
       </property>
       <property name="text">
-       <string>Amiga models fullscreen</string>
+       <string>Amiga modes fullscreen</string>
       </property>
      </widget>
      <widget class="QCheckBox" name="checkBox_8">
@@ -1262,7 +1766,7 @@ ram     all ram no 1.8MB slow mem
        </rect>
       </property>
       <property name="text">
-       <string>Picasso models fullscreen</string>
+       <string>Picasso modes fullscreen</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget">
@@ -1347,7 +1851,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>40</x>
         <y>140</y>
-        <width>251</width>
+        <width>260</width>
         <height>29</height>
        </rect>
       </property>
@@ -1381,204 +1885,6 @@ ram     all ram no 1.8MB slow mem
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="Chipset_menu">
-     <attribute name="title">
-      <string>Chipset</string>
-     </attribute>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>100</y>
-        <width>231</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="Motherboard">
-       <item>
-        <widget class="QLabel" name="Motherboard_type_label">
-         <property name="text">
-          <string>Motherboar type:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="Motherboard_list">
-         <item>
-          <property name="text">
-           <string>A500</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>A500+</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>A600</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>A1200/020</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>A4000/040</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>CD32</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>CDTV</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>180</y>
-        <width>124</width>
-        <height>103</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="Sprite_collision">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLabel" name="label_25">
-         <property name="text">
-          <string>Accuracy</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="None">
-         <property name="text">
-          <string>Least accrate</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="Sprites_only">
-         <property name="text">
-          <string>Fastest</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="Sprites_playfield">
-         <property name="text">
-          <string notr="true">Most accurate</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>181</y>
-        <width>184</width>
-        <height>75</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="Chipset_video_output">
-       <item>
-        <widget class="QLabel" name="label_27">
-         <property name="text">
-          <string>Ntsc mode</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="PAL_European">
-         <property name="text">
-          <string>PAL (European 50 Hz)</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="NTSC_American">
-         <property name="text">
-          <string>NTSC (American 60 Hz)</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_40">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>315</y>
-        <width>83</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Kickstart dir:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="kickstart_dir">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>309</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="maxLength">
-       <number>32000</number>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QToolButton" name="toolButton">
-      <property name="geometry">
-       <rect>
-        <x>483</x>
-        <y>309</y>
-        <width>41</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>...</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../ICO/drive-harddisk.png</normaloff>../ICO/drive-harddisk.png</iconset>
-      </property>
-     </widget>
-     <zorder>layoutWidget</zorder>
-     <zorder>layoutWidget</zorder>
-     <zorder>layoutWidget</zorder>
-     <zorder>label_40</zorder>
-     <zorder>toolButton</zorder>
-     <zorder>kickstart_dir</zorder>
-     <zorder>toolButton</zorder>
-    </widget>
     <widget class="QWidget" name="Sound_menu">
      <attribute name="title">
       <string>Sound</string>
@@ -1588,7 +1894,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>180</x>
         <y>90</y>
-        <width>96</width>
+        <width>102</width>
         <height>131</height>
        </rect>
       </property>
@@ -1675,7 +1981,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>410</x>
         <y>90</y>
-        <width>156</width>
+        <width>159</width>
         <height>159</height>
        </rect>
       </property>
@@ -1759,7 +2065,7 @@ ram     all ram no 1.8MB slow mem
         <x>339</x>
         <y>271</y>
         <width>211</width>
-        <height>56</height>
+        <height>66</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="Stereo">
@@ -1851,7 +2157,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>390</x>
         <y>70</y>
-        <width>173</width>
+        <width>180</width>
         <height>164</height>
        </rect>
       </property>
@@ -1905,7 +2211,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>170</x>
         <y>70</y>
-        <width>173</width>
+        <width>180</width>
         <height>164</height>
        </rect>
       </property>
@@ -1959,7 +2265,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>230</x>
         <y>310</y>
-        <width>299</width>
+        <width>302</width>
         <height>29</height>
        </rect>
       </property>
@@ -2109,6 +2415,26 @@ ram     all ram no 1.8MB slow mem
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Misc</string>
+     </attribute>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>90</y>
+        <width>371</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>grabinput
+socket
+e tuto il resto che non ci sta d'altra parte</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="Presets">
      <attribute name="title">
       <string>Presets</string>
@@ -2172,6 +2498,20 @@ ram     all ram no 1.8MB slow mem
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>510</y>
+      <width>491</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>You can also store the file anywhere you want, and invoke FS-UAE with
+the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
     </property>
    </widget>
   </widget>
