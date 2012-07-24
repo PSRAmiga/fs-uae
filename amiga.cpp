@@ -2,7 +2,7 @@
 #include "ui_amiga.h"
 #include <QFileDialog>
 #include <QColorDialog>
-#include <QPlastiqueStyle> /////funziona???
+#include <QPlastiqueStyle> //funziona??
 
 
 Amiga::Amiga(QWidget *parent) :
