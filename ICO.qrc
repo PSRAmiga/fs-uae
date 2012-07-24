@@ -9,5 +9,7 @@
         <file>Images/linguist-fileopen.png</file>
         <file>Images/furiusisomount.png</file>
         <file>Images/exaile.png</file>
+        <file>Images/linguist-editcopy.png</file>
+        <file>Images/media-eject.png</file>
     </qresource>
 </RCC>
