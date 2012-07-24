@@ -120,7 +120,7 @@
     <property name="movable">
      <bool>false</bool>
     </property>
-    <widget class="QWidget" name="Chipset_menu">
+    <widget class="QWidget" name="chipsetMenu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
        <normaloff>:/Images/Images/RAM (1).png</normaloff>:/Images/Images/RAM (1).png</iconset>
@@ -137,16 +137,16 @@
         <height>31</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="Motherboard">
+      <layout class="QHBoxLayout" name="amigaModelPanel">
        <item>
-        <widget class="QLabel" name="Motherboard_type_label">
+        <widget class="QLabel" name="amigaModelLabel">
          <property name="text">
           <string>Amiga Model:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="modelListComboBox">
+        <widget class="QComboBox" name="amigaModelComboBox">
          <item>
           <property name="text">
            <string>A500</string>
@@ -200,33 +200,33 @@
         <height>103</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="AccuracyPanel">
+      <layout class="QVBoxLayout" name="accuracyPanel">
        <property name="leftMargin">
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_25">
+        <widget class="QLabel" name="accuracyLabel">
          <property name="text">
           <string>Accuracy:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="accuracyLeastRadioButton">
+        <widget class="QRadioButton" name="accuracyLeastRadio">
          <property name="text">
           <string>Least accurate (-1)</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="accuracyNormalRadioButton">
+        <widget class="QRadioButton" name="accuracyNormalRadio">
          <property name="text">
           <string>Normal (0)</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="accuracyMostRadioButton">
+        <widget class="QRadioButton" name="accuracyMostadio">
          <property name="text">
           <string notr="true">Most accurate (+1)</string>
          </property>
@@ -246,16 +246,16 @@
         <height>75</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="Chipset_video_output">
+      <layout class="QVBoxLayout" name="videoOutModePanel">
        <item>
-        <widget class="QLabel" name="label_27">
+        <widget class="QLabel" name="videoOutModeLabel">
          <property name="text">
           <string>Video Out Mode:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="videoModeEuropeanRadioButton">
+        <widget class="QRadioButton" name="videoModePALRadio">
          <property name="text">
           <string>PAL (European 50 Hz) (0)</string>
          </property>
@@ -265,7 +265,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="videoModeAmericanRadioButton">
+        <widget class="QRadioButton" name="videoModeNTSCRadio">
          <property name="text">
           <string>NTSC (American 60 Hz) (1)</string>
          </property>
@@ -278,20 +278,20 @@
        <rect>
         <x>70</x>
         <y>70</y>
-        <width>601</width>
+        <width>731</width>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="kickstartFilePanel">
        <item>
-        <widget class="QLabel" name="label_40">
+        <widget class="QLabel" name="kickstartFileLabel">
          <property name="text">
           <string>Kickstart file:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir">
+        <widget class="QLineEdit" name="kickstartFileLineEdit">
          <property name="maxLength">
           <number>32000</number>
          </property>
@@ -301,7 +301,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt">
+        <widget class="QToolButton" name="kickstartFileToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -318,23 +318,20 @@
        <rect>
         <x>70</x>
         <y>110</y>
-        <width>601</width>
+        <width>731</width>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <layout class="QHBoxLayout" name="kickstartExtFilePanel">
        <item>
-        <widget class="QLabel" name="label_49">
+        <widget class="QLabel" name="kickstartExtFileLabel">
          <property name="text">
           <string>Kickstart Extended dir (CD32,CDTV):</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir">
-         <property name="text">
-          <string>da fare il suo codice   </string>
-         </property>
+        <widget class="QLineEdit" name="kickstartExtFileLineEdit">
          <property name="maxLength">
           <number>32000</number>
          </property>
@@ -344,7 +341,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt">
+        <widget class="QToolButton" name="kickstartExtFileToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -405,9 +402,9 @@ p, li { white-space: pre-wrap; }
         <height>215</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <layout class="QVBoxLayout" name="cpuTypePanel">
        <item>
-        <widget class="QLabel" name="label_37">
+        <widget class="QLabel" name="cpuTypeLabel">
          <property name="text">
           <string>CPU type</string>
          </property>
@@ -421,42 +418,42 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_10">
+        <widget class="QRadioButton" name="cpu68010Radio">
          <property name="text">
           <string>68010</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_11">
+        <widget class="QRadioButton" name="cpu68EC20Radio">
          <property name="text">
           <string>68EC20</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_16">
+        <widget class="QRadioButton" name="cpu68030Radio">
          <property name="text">
           <string>68020</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_17">
+        <widget class="QRadioButton" name="cpu69030Radio">
          <property name="text">
           <string>68030</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_20">
+        <widget class="QRadioButton" name="cpu68040Radio">
          <property name="text">
           <string>68040</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_18">
+        <widget class="QRadioButton" name="cpu69060Radio">
          <property name="text">
           <string>68060</string>
          </property>
@@ -479,7 +476,7 @@ A4000/40-&gt;68040 2MB chipram</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="RAM">
+    <widget class="QWidget" name="ramMenu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
        <normaloff>:/Images/Images/ubuntu-ram-logo.png</normaloff>:/Images/Images/ubuntu-ram-logo.png</iconset>
@@ -738,39 +735,39 @@ ram     all ram no 1.8MB slow mem
         <height>137</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="P96_RAM_menu">
+      <layout class="QHBoxLayout" name="P96RamPanel">
        <item>
-        <layout class="QVBoxLayout" name="P96">
+        <layout class="QVBoxLayout" name="P96RamLowPanel">
          <item>
-          <widget class="QLabel" name="P96_RAM">
+          <widget class="QLabel" name="P96RamLabel">
            <property name="text">
             <string>P96 RAM</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="None_2">
+          <widget class="QRadioButton" name="P96RamNoneRadio">
            <property name="text">
             <string>None</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_53">
+          <widget class="QRadioButton" name="P96Ram1MbRadio">
            <property name="text">
             <string>1 MB</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_54">
+          <widget class="QRadioButton" name="P96Ram2MbRadio">
            <property name="text">
             <string>2 MB</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_55">
+          <widget class="QRadioButton" name="P96Ram4MbRadio">
            <property name="text">
             <string>4 MB</string>
            </property>
@@ -779,16 +776,16 @@ ram     all ram no 1.8MB slow mem
         </layout>
        </item>
        <item>
-        <layout class="QFormLayout" name="P96_8M">
+        <layout class="QFormLayout" name="P96RamHighPanel">
          <item row="1" column="0">
-          <widget class="QRadioButton" name="MB8">
+          <widget class="QRadioButton" name="P96Ram8MbRadio">
            <property name="text">
             <string>8 MB</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QRadioButton" name="MB16">
+          <widget class="QRadioButton" name="P96Ram16MbRadio">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -804,14 +801,14 @@ ram     all ram no 1.8MB slow mem
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QRadioButton" name="MB32">
+          <widget class="QRadioButton" name="P96Ram32MbRadio">
            <property name="text">
             <string>32 MB</string>
            </property>
           </widget>
          </item>
          <item row="0" column="0" colspan="2">
-          <spacer name="adj">
+          <spacer name="P96RamHighSpacer">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>
@@ -836,44 +833,44 @@ ram     all ram no 1.8MB slow mem
         <height>164</height>
        </rect>
       </property>
-      <layout class="QFormLayout" name="Chip_mem">
+      <layout class="QFormLayout" name="chipMemPanel">
        <item row="0" column="0">
-        <widget class="QLabel" name="Chip_me_label">
+        <widget class="QLabel" name="chipMemLabel">
          <property name="text">
           <string>Chip Mem</string>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QRadioButton" name="K512_chip">
+        <widget class="QRadioButton" name="chipMem512KbRadio">
          <property name="text">
           <string>512 KB</string>
          </property>
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QRadioButton" name="M1_chip">
+        <widget class="QRadioButton" name="chipMem1MbRadio">
          <property name="text">
           <string>1 MB</string>
          </property>
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QRadioButton" name="M2_chip">
+        <widget class="QRadioButton" name="chipMem2MbRadio">
          <property name="text">
           <string>2 MB</string>
          </property>
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QRadioButton" name="M4_chip">
+        <widget class="QRadioButton" name="chipMem4MbRadio">
          <property name="text">
           <string>4 MB</string>
          </property>
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QRadioButton" name="M8">
+        <widget class="QRadioButton" name="chipMeme8MbRadio">
          <property name="text">
           <string>8 MB</string>
          </property>
@@ -4800,7 +4797,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>21</x>

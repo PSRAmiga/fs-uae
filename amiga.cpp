@@ -20,14 +20,19 @@ Amiga::~Amiga()
 
 
 
-void Amiga::on_loadKickstartDirButt_clicked()
+void Amiga::on_kickstartFileToolButton_clicked()
 {
-    //QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/home", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks); show anly dir
+
     QString fileName=QFileDialog::getOpenFileName(this, tr("open file"), "/", tr("Image adf/rom(*.adf *.rom)")); //
-    ui->kickstartDir->setText(fileName);
+    ui->kickstartFileLineEdit->setText(fileName);
 
 }
 
+void Amiga::on_kickstartExtFileToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->kickstartExtFileLineEdit->setText(dir);
+}
 
  // PER CAMBIARE COLORE AL BOTTONE
 void Amiga::on_pushButton_17_clicked()
