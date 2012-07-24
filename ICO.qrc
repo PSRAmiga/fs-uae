@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/Images">
-        <file>Images/gtk-save.png</file>
-        <file>Images/gtk-ex.png</file>
         <file>Images/drive-harddisk.png</file>
         <file>Images/designer-property-editor-remove-dynamic.png</file>
         <file>Images/designer-property-editor-add-dynamic.png</file>
@@ -11,9 +9,13 @@
         <file>Images/exaile.png</file>
         <file>Images/linguist-editcopy.png</file>
         <file>Images/media-eject.png</file>
-        <file>Images/motherboard_icon.jpg</file>
         <file>Images/joystick.png</file>
-        <file>Images/Boingball.gif</file>
-        <file>Images/audio.png</file>
+        <file>Images/ubuntu-ram-logo.png</file>
+        <file>Images/RAM (1).png</file>
+        <file>Images/graphics.png</file>
+        <file>Images/Amiga_ball.png</file>
+        <file>Images/BIGautojonas-rask-itunes-icon.png.png</file>
+        <file>Images/Save.png</file>
+        <file>Images/Load.png</file>
     </qresource>
 </RCC>

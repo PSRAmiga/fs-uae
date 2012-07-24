@@ -35,7 +35,7 @@
    <string>FS_UAE</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ICO.qrc">
+   <iconset>
     <normaloff>:/Images/Images/Boingball.gif</normaloff>:/Images/Images/Boingball.gif</iconset>
   </property>
   <property name="animated">
@@ -57,10 +57,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>9</x>
       <y>0</y>
       <width>880</width>
-      <height>490</height>
+      <height>501</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -78,7 +78,7 @@
     <property name="maximumSize">
      <size>
       <width>999999</width>
-      <height>481</height>
+      <height>999999</height>
      </size>
     </property>
     <property name="mouseTracking">
@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -123,7 +123,7 @@
     <widget class="QWidget" name="Chipset_menu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
-       <normaloff>:/Images/Images/motherboard_icon.jpg</normaloff>:/Images/Images/motherboard_icon.jpg</iconset>
+       <normaloff>:/Images/Images/RAM (1).png</normaloff>:/Images/Images/RAM (1).png</iconset>
      </attribute>
      <attribute name="title">
       <string>Chipset</string>
@@ -480,6 +480,10 @@ A4000/40-&gt;68040 2MB chipram</string>
      </widget>
     </widget>
     <widget class="QWidget" name="RAM">
+     <attribute name="icon">
+      <iconset resource="ICO.qrc">
+       <normaloff>:/Images/Images/ubuntu-ram-logo.png</normaloff>:/Images/Images/ubuntu-ram-logo.png</iconset>
+     </attribute>
      <attribute name="title">
       <string>RAM</string>
      </attribute>
@@ -2611,6 +2615,10 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
     <widget class="QWidget" name="Graphics">
+     <attribute name="icon">
+      <iconset resource="ICO.qrc">
+       <normaloff>:/Images/Images/graphics.png</normaloff>:/Images/Images/graphics.png</iconset>
+     </attribute>
      <attribute name="title">
       <string>Graphics</string>
      </attribute>
@@ -3203,7 +3211,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QWidget" name="Sound_menu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
-       <normaloff>:/Images/Images/audio.png</normaloff>:/Images/Images/audio.png</iconset>
+       <normaloff>:/Images/Images/BIGautojonas-rask-itunes-icon.png.png</normaloff>:/Images/Images/BIGautojonas-rask-itunes-icon.png.png</iconset>
      </attribute>
      <attribute name="title">
       <string>Sound</string>
@@ -3439,6 +3447,10 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
     <widget class="QWidget" name="tab">
+     <attribute name="icon">
+      <iconset resource="ICO.qrc">
+       <normaloff>:/Images/Images/Amiga_ball.png</normaloff>:/Images/Images/Amiga_ball.png</iconset>
+     </attribute>
      <attribute name="title">
       <string>Misc</string>
      </attribute>
@@ -3465,7 +3477,7 @@ direcotry predefinite varie</string>
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>505</y>
+      <y>508</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -3485,7 +3497,7 @@ direcotry predefinite varie</string>
     <property name="geometry">
      <rect>
       <x>730</x>
-      <y>505</y>
+      <y>508</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -3498,7 +3510,7 @@ direcotry predefinite varie</string>
     </property>
     <property name="icon">
      <iconset resource="ICO.qrc">
-      <normaloff>:/Images/Images/linguist-filesave.png</normaloff>:/Images/Images/linguist-filesave.png</iconset>
+      <normaloff>:/Images/Images/Save.png</normaloff>:/Images/Images/Save.png</iconset>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
@@ -3509,7 +3521,7 @@ direcotry predefinite varie</string>
      <rect>
       <x>0</x>
       <y>-10</y>
-      <width>751</width>
+      <width>901</width>
       <height>20</height>
      </rect>
     </property>
@@ -3540,14 +3552,18 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
    <widget class="QToolButton" name="toolButton_3">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>510</y>
-      <width>26</width>
-      <height>25</height>
+      <x>650</x>
+      <y>508</y>
+      <width>71</width>
+      <height>32</height>
      </rect>
     </property>
     <property name="text">
      <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset resource="ICO.qrc">
+      <normaloff>:/Images/Images/Load.png</normaloff>:/Images/Images/Load.png</iconset>
     </property>
    </widget>
   </widget>
