@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>6</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -382,18 +382,18 @@
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;PROGRAM ARGUMENTS&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;=================&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&amp;lt;path&amp;gt;               Use a custom configuration file instead of Default.fs-uae&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;You can also specify any configuration option with --key=value&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;(e.g --floppy-drive-0=/path/to/adf)&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Some options commonly used as program arguments:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;--fullscreen         Start in fullscreen mode instead of windowed mode&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;--stdout             Also log to stdout (not on Windows)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PROGRAM ARGUMENTS&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;=================&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;path&amp;gt;               Use a custom configuration file instead of Default.fs-uae&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can also specify any configuration option with --key=value&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(e.g --floppy-drive-0=/path/to/adf)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some options commonly used as program arguments:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--fullscreen         Start in fullscreen mode instead of windowed mode&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--stdout             Also log to stdout (not on Windows)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget_5">
@@ -2339,22 +2339,6 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
      <attribute name="title">
       <string>Input devices</string>
      </attribute>
-     <widget class="QCheckBox" name="checkBox">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>260</y>
-        <width>191</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Use legacy configuration</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
@@ -2372,8 +2356,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="geometry">
        <rect>
         <x>11</x>
-        <y>70</y>
-        <width>418</width>
+        <y>50</y>
+        <width>181</width>
         <height>202</height>
        </rect>
       </property>
@@ -2512,68 +2496,237 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QTextEdit" name="textEdit_2">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>310</y>
-        <width>302</width>
-        <height>29</height>
+        <x>40</x>
+        <y>420</y>
+        <width>571</width>
+        <height>41</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;If you have more than one device of the same model, the second is referred to by appending a space and #2 (and so on). The device names are case insensitive.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>280</y>
+        <width>181</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QRadioButton" name="radioButton_6">
          <property name="text">
-          <string>Keyboard lanuguage:</string>
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox">
-         <item>
-          <property name="text">
-           <string>English (QWERTY)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Danish</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Deutsch (QWERTZ)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Swedish</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Francais (AZERTY)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Italian</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Spanish</string>
-          </property>
-         </item>
+        <widget class="QRadioButton" name="radioButton_7">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_8">
+         <property name="text">
+          <string>CD32 Gamepad</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_12">
+         <property name="text">
+          <string>Auto</string>
+         </property>
         </widget>
        </item>
       </layout>
      </widget>
+     <widget class="QLabel" name="label_45">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>260</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Joystick Port 0 Mode</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>280</y>
+        <width>181</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QRadioButton" name="radioButton_13">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_14">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_15">
+         <property name="text">
+          <string>CD32 Gamepad</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_19">
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>280</y>
+        <width>181</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QRadioButton" name="radioButton_21">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_22">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_23">
+         <property name="text">
+          <string>CD32 Gamepad</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_24">
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>280</y>
+        <width>181</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QRadioButton" name="radioButton_25">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_26">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_27">
+         <property name="text">
+          <string>CD32 Gamepad</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_28">
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_46">
+      <property name="geometry">
+       <rect>
+        <x>249</x>
+        <y>260</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Joystick Port 1 Mode</string>
+      </property>
+     </widget>
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>250</x>
         <y>20</y>
         <width>111</width>
         <height>17</height>
@@ -2583,10 +2736,337 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Joystick Port 1</string>
       </property>
      </widget>
+     <widget class="QWidget" name="layoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>50</y>
+        <width>181</width>
+        <height>202</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QRadioButton" name="radioButton_29">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_30">
+         <property name="text">
+          <string>Keyboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_31">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_7">
+         <item>
+          <property name="text">
+           <string>Generic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech PS3/USB Cordless Gamepad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Dual Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Extreme 3D PRO</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumblepad 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Gamepad F310</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumble Gamepad F510</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Wireless Gamepad F710</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playstation 3 Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P380</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P880</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mosic Speed-Link Competition Pro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thrustmaster 2-in-1 DT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microsoft X-Box 360 Pad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XBox 360 Wireless Receiver</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_34">
+         <property name="text">
+          <string>Custom Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string>Customize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_35">
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_47">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>260</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Joystick Port 3 Mode</string>
+      </property>
+     </widget>
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>691</x>
+        <y>20</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Joystick Port 3</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>671</x>
+        <y>50</y>
+        <width>181</width>
+        <height>202</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QRadioButton" name="radioButton_36">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_52">
+         <property name="text">
+          <string>Keyboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_56">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_12">
+         <item>
+          <property name="text">
+           <string>Generic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech PS3/USB Cordless Gamepad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Dual Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Extreme 3D PRO</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumblepad 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Gamepad F310</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumble Gamepad F510</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Wireless Gamepad F710</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playstation 3 Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P380</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P880</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mosic Speed-Link Competition Pro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thrustmaster 2-in-1 DT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microsoft X-Box 360 Pad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XBox 360 Wireless Receiver</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_57">
+         <property name="text">
+          <string>Custom Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="text">
+          <string>Customize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_58">
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>469</x>
+        <y>260</y>
+        <width>151</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Joystick Port 2 Mode</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_44">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
         <y>20</y>
         <width>111</width>
         <height>17</height>
@@ -2596,21 +3076,200 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Joystick Port 2</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="textEdit_2">
+     <widget class="QWidget" name="layoutWidget_12">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>350</y>
-        <width>571</width>
-        <height>91</height>
+        <x>450</x>
+        <y>50</y>
+        <width>181</width>
+        <height>202</height>
        </rect>
       </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:11pt; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;If you have more than one device of the same model, the second is referred to by appending a space and #2 (and so on). The device names are case insensitive.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QRadioButton" name="radioButton_59">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_60">
+         <property name="text">
+          <string>Keyboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_61">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_13">
+         <item>
+          <property name="text">
+           <string>Generic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech PS3/USB Cordless Gamepad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Dual Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Extreme 3D PRO</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumblepad 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Gamepad F310</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumble Gamepad F510</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Wireless Gamepad F710</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playstation 3 Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P380</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P880</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mosic Speed-Link Competition Pro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thrustmaster 2-in-1 DT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microsoft X-Box 360 Pad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XBox 360 Wireless Receiver</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_62">
+         <property name="text">
+          <string>Custom Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="text">
+          <string>Customize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_63">
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>189</x>
+        <y>0</y>
+        <width>41</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>0</y>
+        <width>41</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>0</y>
+        <width>41</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>250</y>
+        <width>881</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </widget>
@@ -2622,591 +3281,6 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Graphics</string>
      </attribute>
-     <widget class="QComboBox" name="comboBox_2">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>110</y>
-        <width>251</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>640x480</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>720x480</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>800x600</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>848x480</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1024x768</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1152x768</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1280x720</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1280x800</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>100</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>640 e 720 tutto</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>113</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>848 no horizontal</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>80</y>
-        <width>108</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Fullscreen mode</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_2">
-      <property name="geometry">
-       <rect>
-        <x>41</x>
-        <y>260</y>
-        <width>158</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Correct aspect ratio</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>223</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>tutti gli altri hanno doubling e LED</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_3">
-      <property name="geometry">
-       <rect>
-        <x>41</x>
-        <y>290</y>
-        <width>168</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Show LEDs on screen</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_12">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>80</y>
-        <width>110</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Windowed mode</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_8">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>110</y>
-        <width>251</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>320x256</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>400x300</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>640x512</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>800x600</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>140</y>
-        <width>260</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_8">
-       <item>
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>Horizontal bounds detect:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_9">
-         <item>
-          <property name="text">
-           <string>Off</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Simple</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Smart</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>180</y>
-        <width>251</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_9">
-       <item>
-        <widget class="QLabel" name="label_16">
-         <property name="text">
-          <string>Vertical bound detect:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_10">
-         <item>
-          <property name="text">
-           <string>Off</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Simple</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Smart</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_4">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>220</y>
-        <width>251</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_10">
-       <item>
-        <widget class="QLabel" name="label_17">
-         <property name="text">
-          <string>Line doubling:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_11">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <item>
-          <property name="text">
-           <string>Double</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Scanlines</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_4">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>290</y>
-        <width>168</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Show LEDs on screen</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_5">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>260</y>
-        <width>158</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Correct aspect ratio</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_18">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>10</y>
-        <width>151</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>320 no doubling e ratio</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_19">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>30</y>
-        <width>108</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>400 solo LED</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_20">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>10</y>
-        <width>126</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>800 doubling e LED</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_21">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>50</y>
-        <width>79</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>640 no ratio</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_22">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>50</y>
-        <width>157</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>800 solo doubling e LED</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_23">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>310</y>
-        <width>94</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Miscellaneous</string>
-      </property>
-     </widget>
-     <widget class="QSlider" name="horizontalSlider">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>331</y>
-        <width>90</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <number>20</number>
-      </property>
-      <property name="pageStep">
-       <number>1</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_24">
-      <property name="geometry">
-       <rect>
-        <x>224</x>
-        <y>332</y>
-        <width>71</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>Framerate:</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_6">
-      <property name="geometry">
-       <rect>
-        <x>221</x>
-        <y>355</y>
-        <width>133</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Immediate blits</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_7">
-      <property name="geometry">
-       <rect>
-        <x>221</x>
-        <y>383</y>
-        <width>192</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Amiga modes fullscreen</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_8">
-      <property name="geometry">
-       <rect>
-        <x>221</x>
-        <y>411</y>
-        <width>199</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Picasso modes fullscreen</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>41</x>
-        <y>180</y>
-        <width>251</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Vertical bound detect:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_4">
-         <item>
-          <property name="text">
-           <string>Off</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Simple</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Smart</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>220</y>
-        <width>251</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QLabel" name="label_8">
-         <property name="text">
-          <string>Line doubling:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_5">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <item>
-          <property name="text">
-           <string>Double</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Scanlines</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>140</y>
-        <width>260</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Horizontal bounds detect:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_3">
-         <item>
-          <property name="text">
-           <string>Off</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Simple</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Smart</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
     </widget>
     <widget class="QWidget" name="Sound_menu">
      <attribute name="icon">
@@ -3482,12 +3556,21 @@ direcotry predefinite varie</string>
       <height>31</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Run Current Configuration</string>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
      <iconset resource="ICO.qrc">
       <normaloff>:/Images/Images/exaile.png</normaloff>:/Images/Images/exaile.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
@@ -3503,7 +3586,7 @@ direcotry predefinite varie</string>
      </rect>
     </property>
     <property name="toolTip">
-     <string>Salva la configurazione</string>
+     <string>Save Configuration</string>
     </property>
     <property name="text">
      <string/>
@@ -3511,6 +3594,12 @@ direcotry predefinite varie</string>
     <property name="icon">
      <iconset resource="ICO.qrc">
       <normaloff>:/Images/Images/Save.png</normaloff>:/Images/Images/Save.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
@@ -3558,12 +3647,21 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
       <height>32</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Load Configuration</string>
+    </property>
     <property name="text">
      <string>...</string>
     </property>
     <property name="icon">
      <iconset resource="ICO.qrc">
       <normaloff>:/Images/Images/Load.png</normaloff>:/Images/Images/Load.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
     </property>
    </widget>
   </widget>
