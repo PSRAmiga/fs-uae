@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>7</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -1115,31 +1115,48 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>40</x>
         <y>280</y>
-        <width>97</width>
+        <width>151</width>
         <height>27</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
       <property name="text">
        <string>Add file(s)</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ICO.qrc">
+        <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>190</x>
         <y>280</y>
-        <width>131</width>
+        <width>151</width>
         <height>27</height>
        </rect>
       </property>
       <property name="text">
        <string>Remove selected</string>
       </property>
+      <property name="icon">
+       <iconset resource="ICO.qrc">
+        <normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</iconset>
+      </property>
      </widget>
      <widget class="QLabel" name="label_32">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>400</x>
         <y>280</y>
         <width>431</width>
         <height>31</height>
@@ -1328,40 +1345,6 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>convertire in 8X e se =0 scrivere TURBO</string>
       </property>
      </widget>
-     <widget class="QToolButton" name="toolButton">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>250</y>
-        <width>26</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>...</string>
-      </property>
-      <property name="icon">
-       <iconset resource="ICO.qrc">
-        <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
-      </property>
-     </widget>
-     <widget class="QToolButton" name="toolButton_2">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>250</y>
-        <width>26</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>...</string>
-      </property>
-      <property name="icon">
-       <iconset resource="ICO.qrc">
-        <normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</iconset>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="Hard_CD">
      <attribute name="icon">
@@ -1388,7 +1371,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>220</y>
+        <y>260</y>
         <width>431</width>
         <height>31</height>
        </rect>
@@ -1441,23 +1424,6 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>220</y>
-        <width>97</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add file(s)</string>
-      </property>
-      <property name="icon">
-       <iconset resource="ICO.qrc">
-        <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_61">
       <property name="geometry">
        <rect>
@@ -1484,12 +1450,12 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <enum>QAbstractItemView::MultiSelection</enum>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="pushButton_3">
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>180</x>
         <y>220</y>
-        <width>131</width>
+        <width>151</width>
         <height>27</height>
        </rect>
       </property>
@@ -1499,6 +1465,32 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="icon">
        <iconset resource="ICO.qrc">
         <normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>151</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Add file(s)</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ICO.qrc">
+        <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
       </property>
      </widget>
     </widget>
@@ -3477,7 +3469,7 @@ direcotry predefinite varie</string>
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>508</y>
+      <y>510</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -3497,7 +3489,7 @@ direcotry predefinite varie</string>
     <property name="geometry">
      <rect>
       <x>730</x>
-      <y>508</y>
+      <y>510</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -3514,25 +3506,6 @@ direcotry predefinite varie</string>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>-10</y>
-      <width>901</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label_11">
@@ -3553,7 +3526,7 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
     <property name="geometry">
      <rect>
       <x>650</x>
-      <y>508</y>
+      <y>510</y>
       <width>71</width>
       <height>32</height>
      </rect>
@@ -3580,12 +3553,18 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
     <property name="title">
      <string>Help</string>
     </property>
+    <widget class="QMenu" name="menuAbout">
+     <property name="title">
+      <string>About</string>
+     </property>
+     <addaction name="actionAmiga"/>
+     <addaction name="actionFS_UAE"/>
+    </widget>
     <addaction name="actionSummary"/>
     <addaction name="separator"/>
-    <addaction name="actionReport_bug"/>
+    <addaction name="menuAbout"/>
     <addaction name="separator"/>
-    <addaction name="actionAbout_2"/>
-    <addaction name="actionAbout_Amiga"/>
+    <addaction name="actionReport_bug"/>
    </widget>
    <addaction name="menuHelp"/>
   </widget>
@@ -3610,9 +3589,14 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
     <string>Report bug</string>
    </property>
   </action>
-  <action name="actionAbout_Amiga">
+  <action name="actionAmiga">
    <property name="text">
-    <string>About Amiga</string>
+    <string>Amiga</string>
+   </property>
+  </action>
+  <action name="actionFS_UAE">
+   <property name="text">
+    <string>FS-UAE</string>
    </property>
   </action>
  </widget>
