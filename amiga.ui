@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -521,37 +521,37 @@ ram     all ram no 1.8MB slow mem
         <height>131</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
+      <layout class="QVBoxLayout" name="slowMemLabel">
        <item>
-        <widget class="QLabel" name="label_41">
+        <widget class="QLabel" name="slowMemLabel_2">
          <property name="text">
           <string>Slow Mem</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_32">
+        <widget class="QRadioButton" name="slowMemNoneRadio">
          <property name="text">
           <string>None</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_33">
+        <widget class="QRadioButton" name="slowMem512KbRadio">
          <property name="text">
           <string>512 KB</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="M1_2">
+        <widget class="QRadioButton" name="slowMem1MbRadio">
          <property name="text">
           <string>1 MB</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="m1_8">
+        <widget class="QRadioButton" name="slowMem1_8MbRadio">
          <property name="text">
           <string>1.8 MB</string>
          </property>
@@ -568,47 +568,47 @@ ram     all ram no 1.8MB slow mem
         <height>159</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,0,0">
+      <layout class="QVBoxLayout" name="fastMemPanel" stretch="0,0,0,0,0,0">
        <property name="sizeConstraint">
         <enum>QLayout::SetMinimumSize</enum>
        </property>
        <item>
-        <widget class="QLabel" name="label_42">
+        <widget class="QLabel" name="fastMemLabel">
          <property name="text">
           <string>Fast Mem</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_37">
+        <widget class="QRadioButton" name="fastMemNoneRadio">
          <property name="text">
           <string>None</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_38">
+        <widget class="QRadioButton" name="fastMem1MbRadio">
          <property name="text">
           <string>1 MB</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_39">
+        <widget class="QRadioButton" name="fastMem2MbRadio">
          <property name="text">
           <string>2 MB</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_40">
+        <widget class="QRadioButton" name="fastMem4MbRadio">
          <property name="text">
           <string>4 MB</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_41">
+        <widget class="QRadioButton" name="fastMem8MbRadio">
          <property name="text">
           <string>8 MB</string>
          </property>
@@ -625,46 +625,46 @@ ram     all ram no 1.8MB slow mem
         <height>166</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_11">
+      <layout class="QHBoxLayout" name="z3MemPanel">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_9">
+        <layout class="QVBoxLayout" name="z3MemLowPanel">
          <item>
-          <widget class="QLabel" name="label_43">
+          <widget class="QLabel" name="z3MemLabel">
            <property name="text">
             <string>Z3 Mem</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_42">
+          <widget class="QRadioButton" name="z3MemNoneRadio">
            <property name="text">
             <string>None</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_47">
+          <widget class="QRadioButton" name="z3Mem1MbRadio">
            <property name="text">
             <string>1 MB</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_43">
+          <widget class="QRadioButton" name="z3Mem2MbRadio">
            <property name="text">
             <string>2 MB</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_48">
+          <widget class="QRadioButton" name="z3Mem4MbRadio">
            <property name="text">
             <string>4 MB</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_44">
+          <widget class="QRadioButton" name="z3Mem8MbRadio">
            <property name="text">
             <string>8 MB</string>
            </property>
@@ -673,37 +673,37 @@ ram     all ram no 1.8MB slow mem
         </layout>
        </item>
        <item>
-        <layout class="QFormLayout" name="formLayout_2">
+        <layout class="QFormLayout" name="z3MemHighPanel">
          <item row="1" column="0">
-          <widget class="QRadioButton" name="radioButton_49">
+          <widget class="QRadioButton" name="z3Mem16MbRadio">
            <property name="text">
             <string>16 MB</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QRadioButton" name="radioButton_50">
+          <widget class="QRadioButton" name="z3Mem32MbRadio">
            <property name="text">
             <string>32 MB</string>
            </property>
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QRadioButton" name="radioButton_45">
+          <widget class="QRadioButton" name="z3Mem64MbRadio">
            <property name="text">
             <string>64 MB</string>
            </property>
           </widget>
          </item>
          <item row="4" column="0">
-          <widget class="QRadioButton" name="radioButton_46">
+          <widget class="QRadioButton" name="z3Mem128MbRadio">
            <property name="text">
             <string>128 MB</string>
            </property>
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QRadioButton" name="radioButton_51">
+          <widget class="QRadioButton" name="z3Mem256MbRadio">
            <property name="text">
             <string>256 MB</string>
            </property>
