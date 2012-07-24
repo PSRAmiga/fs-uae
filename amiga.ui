@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -893,7 +893,7 @@ ram     all ram no 1.8MB slow mem
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="Floppies">
+    <widget class="QWidget" name="floppiesMenu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
        <normaloff>:/Images/Images/linguist-filesave.png</normaloff>:/Images/Images/linguist-filesave.png</iconset>
@@ -923,16 +923,16 @@ ram     all ram no 1.8MB slow mem
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <layout class="QHBoxLayout" name="floppyDrive0Panel">
        <item>
-        <widget class="QLabel" name="label_51">
+        <widget class="QLabel" name="floppyDrive0Label">
          <property name="text">
           <string>Floppy Drive 0:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_2">
+        <widget class="QLineEdit" name="floppyDirve0LineEdit">
          <property name="maxLength">
           <number>32000</number>
          </property>
@@ -942,7 +942,7 @@ ram     all ram no 1.8MB slow mem
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_2">
+        <widget class="QToolButton" name="floppyDrive0ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -963,16 +963,16 @@ ram     all ram no 1.8MB slow mem
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_12">
+      <layout class="QHBoxLayout" name="floppyDrive1Panel">
        <item>
-        <widget class="QLabel" name="label_52">
+        <widget class="QLabel" name="floppyDirve1Label">
          <property name="text">
           <string>Floppy Drive 1:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_3">
+        <widget class="QLineEdit" name="floppyDrive1LineEdit">
          <property name="maxLength">
           <number>32000</number>
          </property>
@@ -982,7 +982,7 @@ ram     all ram no 1.8MB slow mem
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_3">
+        <widget class="QToolButton" name="floppyDrive1ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -1003,16 +1003,16 @@ ram     all ram no 1.8MB slow mem
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_13">
+      <layout class="QHBoxLayout" name="floppyDrive2Panel">
        <item>
-        <widget class="QLabel" name="label_53">
+        <widget class="QLabel" name="floppyDrive2Label">
          <property name="text">
           <string>Floppy Drive 2:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_4">
+        <widget class="QLineEdit" name="floppyDrive2LineEdit">
          <property name="maxLength">
           <number>32000</number>
          </property>
@@ -1022,7 +1022,7 @@ ram     all ram no 1.8MB slow mem
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_4">
+        <widget class="QToolButton" name="floppyDrive2ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -1043,16 +1043,16 @@ ram     all ram no 1.8MB slow mem
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_14">
+      <layout class="QHBoxLayout" name="floopyDriv3Panel">
        <item>
-        <widget class="QLabel" name="label_54">
+        <widget class="QLabel" name="floppyDirve3Label">
          <property name="text">
           <string>Floppy Drive 3:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_5">
+        <widget class="QLineEdit" name="floppyDrive3LineEdit">
          <property name="maxLength">
           <number>32000</number>
          </property>
@@ -1062,7 +1062,7 @@ ram     all ram no 1.8MB slow mem
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_5">
+        <widget class="QToolButton" name="floppyDrive3ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -1074,7 +1074,7 @@ ram     all ram no 1.8MB slow mem
        </item>
       </layout>
      </widget>
-     <widget class="QListWidget" name="listWidget">
+     <widget class="QListWidget" name="floppySwappingImagesListWidget">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1107,7 +1107,7 @@ ram     all ram no 1.8MB slow mem
        </property>
       </item>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="floppySwappingImagesAddPushButton">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1133,7 +1133,7 @@ ram     all ram no 1.8MB slow mem
         <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="floppySwappingImagerRemovePushButton">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -1173,16 +1173,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_15">
+      <layout class="QHBoxLayout" name="floppyOverlaysDirPanel">
        <item>
-        <widget class="QLabel" name="label_55">
+        <widget class="QLabel" name="floppyOverlaysDirLabel">
          <property name="text">
           <string>Floppy overlays dir:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_6">
+        <widget class="QLineEdit" name="floppyOverlaysDirLineEdit">
          <property name="text">
           <string>è una directory NON un file</string>
          </property>
@@ -1195,7 +1195,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_6">
+        <widget class="QToolButton" name="floppyOverlaysDirToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -1207,7 +1207,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label_34">
+     <widget class="QLabel" name="floppySwappingImagesLabel">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1220,7 +1220,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Floppy Swapping Images:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_56">
+     <widget class="QLabel" name="floppyDriveVolumeLabel">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1233,7 +1233,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Floppy Drive volume:</string>
       </property>
      </widget>
-     <widget class="QSlider" name="horizontalSlider_2">
+     <widget class="QSlider" name="floppyDriveVolumeSlider">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -1252,7 +1252,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_9">
+     <widget class="QCheckBox" name="floppyDriveVolumeMuteCheckBox">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -1265,7 +1265,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Mute</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_35">
+     <widget class="QLabel" name="floppyDriveVolumeDisplayLabel">
       <property name="geometry">
        <rect>
         <x>191</x>
@@ -1278,7 +1278,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>20</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_57">
+     <widget class="QLabel" name="floppyDriveSpeedLabel">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -1291,7 +1291,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Floppy Drive speed:</string>
       </property>
      </widget>
-     <widget class="QSlider" name="horizontalSlider_3">
+     <widget class="QSlider" name="floppyDriveSpeedSlider">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -1313,7 +1313,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_38">
+     <widget class="QLabel" name="floppyDriveSpeedDisplyLabel">
       <property name="geometry">
        <rect>
         <x>180</x>
