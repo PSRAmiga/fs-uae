@@ -11,5 +11,9 @@
         <file>Images/exaile.png</file>
         <file>Images/linguist-editcopy.png</file>
         <file>Images/media-eject.png</file>
+        <file>Images/motherboard_icon.jpg</file>
+        <file>Images/joystick.png</file>
+        <file>Images/Boingball.gif</file>
+        <file>Images/audio.png</file>
     </qresource>
 </RCC>
