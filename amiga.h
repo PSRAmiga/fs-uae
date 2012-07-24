@@ -20,6 +20,8 @@ public:
 private slots:
     void on_loadKickstartDirButt_clicked();
 
+    void on_pushButton_17_clicked();
+
 private:
     Ui::Amiga *ui;
 };

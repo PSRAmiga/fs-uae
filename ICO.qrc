@@ -17,5 +17,6 @@
         <file>Images/BIGautojonas-rask-itunes-icon.png.png</file>
         <file>Images/Save.png</file>
         <file>Images/Load.png</file>
+        <file>Images/theme.png</file>
     </qresource>
 </RCC>

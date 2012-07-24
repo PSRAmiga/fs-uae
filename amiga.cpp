@@ -1,6 +1,9 @@
 #include "amiga.h"
 #include "ui_amiga.h"
 #include <QFileDialog>
+#include <QColorDialog>
+#include <QPlastiqueStyle> /////funziona???
+
 
 Amiga::Amiga(QWidget *parent) :
     QMainWindow(parent),
@@ -24,3 +27,14 @@ void Amiga::on_loadKickstartDirButt_clicked()
     ui->kickstartDir->setText(fileName);
 
 }
+
+
+ // PER CAMBIARE COLORE AL BOTTONE
+void Amiga::on_pushButton_17_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::black, this);
+    ui->pushButton_17->setText(color.name());
+    ui->pushButton_17->setStyleSheet(QString("background-color: ")+color.name());
+
+}
+
