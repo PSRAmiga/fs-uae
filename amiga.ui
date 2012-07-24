@@ -3354,7 +3354,7 @@ e tuto il resto che non ci sta d'altra parte</string>
     </property>
     <property name="icon">
      <iconset resource="ICO.qrc">
-      <normaloff>:/Images/Images/gtk-save.png</normaloff>:/Images/Images/gtk-save.png</iconset>
+      <normaloff>:/Images/Images/linguist-filesave.png</normaloff>:/Images/Images/linguist-filesave.png</iconset>
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
