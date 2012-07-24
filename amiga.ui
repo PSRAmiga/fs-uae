@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>2</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -919,7 +919,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>40</x>
         <y>20</y>
-        <width>641</width>
+        <width>801</width>
         <height>34</height>
        </rect>
       </property>
@@ -959,7 +959,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>40</x>
         <y>50</y>
-        <width>641</width>
+        <width>801</width>
         <height>34</height>
        </rect>
       </property>
@@ -999,7 +999,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>40</x>
         <y>80</y>
-        <width>641</width>
+        <width>801</width>
         <height>34</height>
        </rect>
       </property>
@@ -1039,7 +1039,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>40</x>
         <y>110</y>
-        <width>641</width>
+        <width>801</width>
         <height>34</height>
        </rect>
       </property>
@@ -1079,7 +1079,7 @@ ram     all ram no 1.8MB slow mem
        <rect>
         <x>40</x>
         <y>160</y>
-        <width>641</width>
+        <width>801</width>
         <height>121</height>
        </rect>
       </property>
@@ -1383,7 +1383,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>30</x>
         <y>10</y>
-        <width>641</width>
+        <width>811</width>
         <height>34</height>
        </rect>
       </property>
@@ -1439,7 +1439,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>30</x>
         <y>60</y>
-        <width>641</width>
+        <width>811</width>
         <height>151</height>
        </rect>
       </property>
@@ -1504,7 +1504,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -1586,7 +1586,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>50</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -1668,7 +1668,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>90</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -1750,7 +1750,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>130</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -1832,7 +1832,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>170</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -1914,7 +1914,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>210</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -1996,7 +1996,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>250</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -2078,7 +2078,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>290</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -2160,7 +2160,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>330</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
@@ -2242,7 +2242,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <rect>
         <x>10</x>
         <y>370</y>
-        <width>701</width>
+        <width>851</width>
         <height>34</height>
        </rect>
       </property>
