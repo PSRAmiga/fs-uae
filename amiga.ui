@@ -90,7 +90,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -333,7 +333,7 @@
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
-           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1064,6 +1064,26 @@ ram     all ram no 1.8MB slow mem
       <property name="selectionMode">
        <enum>QAbstractItemView::MultiSelection</enum>
       </property>
+      <item>
+       <property name="text">
+        <string>per sfogliare i file icona di file</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>per sfogliare le cartelle icona di cartella</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>....</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>aggiungere tooltip a tutto</string>
+       </property>
+      </item>
      </widget>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
@@ -1142,7 +1162,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
-           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1339,7 +1359,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>130</y>
+        <y>220</y>
         <width>431</width>
         <height>31</height>
        </rect>
@@ -1396,7 +1416,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>130</y>
+        <y>220</y>
         <width>97</width>
         <height>27</height>
        </rect>
@@ -1424,7 +1444,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <x>30</x>
         <y>60</y>
         <width>641</width>
-        <height>71</height>
+        <height>151</height>
        </rect>
       </property>
       <property name="selectionMode">
@@ -1435,7 +1455,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>130</y>
+        <y>220</y>
         <width>131</width>
         <height>27</height>
        </rect>
@@ -1633,7 +1653,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <item>
         <widget class="QLineEdit" name="kickstartDir_11">
          <property name="text">
-          <string/>
+          <string>sia selezione di file che di cartelle</string>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -2265,6 +2285,206 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
          <property name="text">
           <string>ReadOnly</string>
          </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Input_devices">
+     <attribute name="title">
+      <string>Input devices</string>
+     </attribute>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>260</y>
+        <width>191</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use legacy configuration</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>20</y>
+        <width>431</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Joystick [i] disattivi, gli altri mutui escusivi se attivata la legacy</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>70</y>
+        <width>180</width>
+        <height>164</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QRadioButton" name="radioButton_7">
+         <property name="text">
+          <string>Joystick 0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_6">
+         <property name="text">
+          <string>Joystick 1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_5">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_8">
+         <property name="text">
+          <string>Numeric pad</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_15">
+         <property name="text">
+          <string>Cursor keys/Right Ctrl</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_14">
+         <property name="text">
+          <string>T/F/H/B/Left Alt</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>70</y>
+        <width>180</width>
+        <height>164</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="text">
+          <string>Joystick 0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="text">
+          <string>Joystick 1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_4">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_3">
+         <property name="text">
+          <string>Numeric pad</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_13">
+         <property name="text">
+          <string>Cursor keys/Right Ctrl</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_12">
+         <property name="text">
+          <string>T/F/H/B/Left Alt</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>310</y>
+        <width>302</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Keyboard lanuguage:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>English (QWERTY)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Danish</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Deutsch (QWERTZ)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Swedish</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Francais (AZERTY)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Italian</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Spanish</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
@@ -3094,206 +3314,6 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="Input_devices">
-     <attribute name="title">
-      <string>Input devices</string>
-     </attribute>
-     <widget class="QCheckBox" name="checkBox">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>260</y>
-        <width>191</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Use legacy configuration</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_9">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>20</y>
-        <width>431</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Joystick [i] disattivi, gli altri mutui escusivi se attivata la legacy</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>70</y>
-        <width>180</width>
-        <height>164</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QRadioButton" name="radioButton_7">
-         <property name="text">
-          <string>Joystick 0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_6">
-         <property name="text">
-          <string>Joystick 1</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_5">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_8">
-         <property name="text">
-          <string>Numeric pad</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_15">
-         <property name="text">
-          <string>Cursor keys/Right Ctrl</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_14">
-         <property name="text">
-          <string>T/F/H/B/Left Alt</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>70</y>
-        <width>180</width>
-        <height>164</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QRadioButton" name="radioButton">
-         <property name="text">
-          <string>Joystick 0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="text">
-          <string>Joystick 1</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_4">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_3">
-         <property name="text">
-          <string>Numeric pad</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_13">
-         <property name="text">
-          <string>Cursor keys/Right Ctrl</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_12">
-         <property name="text">
-          <string>T/F/H/B/Left Alt</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>310</y>
-        <width>302</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Keyboard lanuguage:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox">
-         <item>
-          <property name="text">
-           <string>English (QWERTY)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Danish</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Deutsch (QWERTZ)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Swedish</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Francais (AZERTY)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Italian</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Spanish</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Misc</string>
@@ -3310,7 +3330,9 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="text">
        <string>grabinput
 socket
-e tuto il resto che non ci sta d'altra parte</string>
+e tuto il resto che non ci sta d'altra parte
+
+direcotry predefinite varie</string>
       </property>
      </widget>
     </widget>
