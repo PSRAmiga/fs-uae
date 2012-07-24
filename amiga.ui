@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>2</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -951,7 +951,7 @@ ram     all ram no 1.8MB slow mem
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
-           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+           <normaloff>:/Images/Images/linguist-editcopy.png</normaloff>:/Images/Images/linguist-editcopy.png</iconset>
          </property>
         </widget>
        </item>
@@ -991,7 +991,7 @@ ram     all ram no 1.8MB slow mem
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
-           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+           <normaloff>:/Images/Images/linguist-editcopy.png</normaloff>:/Images/Images/linguist-editcopy.png</iconset>
          </property>
         </widget>
        </item>
@@ -1031,7 +1031,7 @@ ram     all ram no 1.8MB slow mem
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
-           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+           <normaloff>:/Images/Images/linguist-editcopy.png</normaloff>:/Images/Images/linguist-editcopy.png</iconset>
          </property>
         </widget>
        </item>
@@ -1071,7 +1071,7 @@ ram     all ram no 1.8MB slow mem
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
-           <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+           <normaloff>:/Images/Images/linguist-editcopy.png</normaloff>:/Images/Images/linguist-editcopy.png</iconset>
          </property>
         </widget>
        </item>
