@@ -43,6 +43,7 @@ private slots:
 
     void on_fadeColorPushButton_clicked();
 
+    void on_loadDefaultValuesToolButton_clicked();
 
     void on_actionReport_bug_triggered();
 

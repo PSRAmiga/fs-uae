@@ -416,6 +416,19 @@ p, li { white-space: pre-wrap; }
 A4000/40-&gt;68040 2MB chipram</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>440</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>http://qt-project.org/doc/qt-4.8/qprocess.html</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="ramMenu">
      <attribute name="icon">
@@ -5903,6 +5916,32 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
     <property name="icon">
      <iconset resource="ICO.qrc">
       <normaloff>:/Images/Images/Load.png</normaloff>:/Images/Images/Load.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="loadDefaultValuesToolButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>510</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Load Default Settings</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset resource="ICO.qrc">
+      <normaloff>:/Images/Images/reload.png</normaloff>:/Images/Images/reload.png</iconset>
     </property>
     <property name="iconSize">
      <size>

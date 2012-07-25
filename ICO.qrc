@@ -23,5 +23,6 @@
         <file>Images/help-about.svg</file>
         <file>Images/alert.png</file>
         <file>Images/config.png</file>
+        <file>Images/reload.png</file>
     </qresource>
 </RCC>
