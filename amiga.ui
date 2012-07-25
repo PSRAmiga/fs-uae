@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>7</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -1313,7 +1313,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="floppyDriveSpeedDisplyLabel">
+     <widget class="QLabel" name="floppyDriveSpeedDisplayLabel">
       <property name="geometry">
        <rect>
         <x>180</x>
@@ -2320,7 +2320,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="Input_devices">
+    <widget class="QWidget" name="inputDevicesMenu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
        <normaloff>:/Images/Images/joystick.png</normaloff>:/Images/Images/joystick.png</iconset>
@@ -2328,7 +2328,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
      <attribute name="title">
       <string>Input devices</string>
      </attribute>
-     <widget class="QLabel" name="label_9">
+     <widget class="QLabel" name="joystickPort0Label">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2341,151 +2341,10 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Joystick Port 0</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>11</x>
-        <y>50</y>
-        <width>181</width>
-        <height>202</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QRadioButton" name="radioButton">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="text">
-          <string>Keyboard</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_4">
-         <property name="text">
-          <string>Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_6">
-         <item>
-          <property name="text">
-           <string>Generic</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech PS3/USB Cordless Gamepad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Dual Action</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Extreme 3D PRO</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumblepad 2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Gamepad F310</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumble Gamepad F510</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Wireless Gamepad F710</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Playstation 3 Controller</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P380</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P880</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Mosic Speed-Link Competition Pro</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Thrustmaster 2-in-1 DT</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Microsoft X-Box 360 Pad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>XBox 360 Wireless Receiver</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_5">
-         <property name="text">
-          <string>Custom Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>Customize</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_3">
-         <property name="text">
-          <string>Nothing</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="QTextEdit" name="textEdit_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -2511,9 +2370,9 @@ p, li { white-space: pre-wrap; }
         <height>131</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <layout class="QVBoxLayout" name="joystickPort0ModePanel">
        <item>
-        <widget class="QRadioButton" name="radioButton_6">
+        <widget class="QRadioButton" name="joystickPort0ModeMouseRadioButton">
          <property name="text">
           <string>Mouse</string>
          </property>
@@ -2526,21 +2385,21 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_7">
+        <widget class="QRadioButton" name="joystickPort0ModeJoystickRadioButton">
          <property name="text">
           <string>Joystick</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_8">
+        <widget class="QRadioButton" name="joystickPort0ModeCD32GamepadRadioButton">
          <property name="text">
           <string>CD32 Gamepad</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_12">
+        <widget class="QRadioButton" name="joystickPort0ModeAutoRadioButton">
          <property name="text">
           <string>Auto</string>
          </property>
@@ -2548,7 +2407,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label_45">
+     <widget class="QLabel" name="joystickPort0ModeLabel">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -2570,9 +2429,9 @@ p, li { white-space: pre-wrap; }
         <height>131</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
+      <layout class="QVBoxLayout" name="joystickPort1ModePanel">
        <item>
-        <widget class="QRadioButton" name="radioButton_13">
+        <widget class="QRadioButton" name="joystickPort1ModeMouseRadioButton">
          <property name="text">
           <string>Mouse</string>
          </property>
@@ -2585,21 +2444,21 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_14">
+        <widget class="QRadioButton" name="joystickPort1ModeJoysticjkRadioButton">
          <property name="text">
           <string>Joystick</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_15">
+        <widget class="QRadioButton" name="joystickPort1CD32GamepadRadioButton">
          <property name="text">
           <string>CD32 Gamepad</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_19">
+        <widget class="QRadioButton" name="joystickPort1ModeAutoRadioButton">
          <property name="text">
           <string>Auto</string>
          </property>
@@ -2616,9 +2475,9 @@ p, li { white-space: pre-wrap; }
         <height>131</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
+      <layout class="QVBoxLayout" name="joystickPort2ModePanel">
        <item>
-        <widget class="QRadioButton" name="radioButton_21">
+        <widget class="QRadioButton" name="joystickPort2ModeMouse">
          <property name="text">
           <string>Mouse</string>
          </property>
@@ -2631,21 +2490,21 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_22">
+        <widget class="QRadioButton" name="joystickPort2ModeJoystickRadioButton">
          <property name="text">
           <string>Joystick</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_23">
+        <widget class="QRadioButton" name="joystickPort2ModeCD32GamepadRadioButton">
          <property name="text">
           <string>CD32 Gamepad</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_24">
+        <widget class="QRadioButton" name="joystickPort2ModeAuto">
          <property name="text">
           <string>Auto</string>
          </property>
@@ -2662,9 +2521,9 @@ p, li { white-space: pre-wrap; }
         <height>131</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_10">
+      <layout class="QVBoxLayout" name="joystickPort3ModePanel">
        <item>
-        <widget class="QRadioButton" name="radioButton_25">
+        <widget class="QRadioButton" name="joystickPort3ModeMouseRadioButton">
          <property name="text">
           <string>Mouse</string>
          </property>
@@ -2677,21 +2536,21 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_26">
+        <widget class="QRadioButton" name="joystickPort3ModeJoystickRadioButton">
          <property name="text">
           <string>Joystick</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_27">
+        <widget class="QRadioButton" name="joystickPort3ModeCD32GamepadRadioButton">
          <property name="text">
           <string>CD32 Gamepad</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_28">
+        <widget class="QRadioButton" name="joystickPort3ModeAutoRadioButton">
          <property name="text">
           <string>Auto</string>
          </property>
@@ -2699,7 +2558,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label_46">
+     <widget class="QLabel" name="joystickPort1ModeLabel">
       <property name="geometry">
        <rect>
         <x>249</x>
@@ -2712,10 +2571,10 @@ p, li { white-space: pre-wrap; }
        <string>Joystick Port 1 Mode</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_13">
+     <widget class="QLabel" name="joystickPort1Label">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>275</x>
         <y>20</y>
         <width>111</width>
         <height>17</height>
@@ -2725,151 +2584,7 @@ p, li { white-space: pre-wrap; }
        <string>Joystick Port 1</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget_10">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>50</y>
-        <width>201</width>
-        <height>202</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_11">
-       <item>
-        <widget class="QRadioButton" name="radioButton_29">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_30">
-         <property name="text">
-          <string>Keyboard</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_31">
-         <property name="text">
-          <string>Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_7">
-         <item>
-          <property name="text">
-           <string>Generic</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech PS3/USB Cordless Gamepad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Dual Action</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Extreme 3D PRO</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumblepad 2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Gamepad F310</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumble Gamepad F510</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Wireless Gamepad F710</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Playstation 3 Controller</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P380</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P880</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Mosic Speed-Link Competition Pro</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Thrustmaster 2-in-1 DT</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Microsoft X-Box 360 Pad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>XBox 360 Wireless Receiver</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_34">
-         <property name="text">
-          <string>Custom Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="text">
-          <string>Customize</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_35">
-         <property name="text">
-          <string>Nothing</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_47">
+     <widget class="QLabel" name="joystickPort3ModeLabel">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -2882,10 +2597,10 @@ p, li { white-space: pre-wrap; }
        <string>Joystick Port 3 Mode</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
+     <widget class="QLabel" name="joystickPort3Label">
       <property name="geometry">
        <rect>
-        <x>710</x>
+        <x>720</x>
         <y>20</y>
         <width>111</width>
         <height>17</height>
@@ -2895,151 +2610,7 @@ p, li { white-space: pre-wrap; }
        <string>Joystick Port 3</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget_11">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>50</y>
-        <width>191</width>
-        <height>202</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_12">
-       <item>
-        <widget class="QRadioButton" name="radioButton_36">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_52">
-         <property name="text">
-          <string>Keyboard</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_56">
-         <property name="text">
-          <string>Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_12">
-         <item>
-          <property name="text">
-           <string>Generic</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech PS3/USB Cordless Gamepad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Dual Action</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Extreme 3D PRO</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumblepad 2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Gamepad F310</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumble Gamepad F510</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Wireless Gamepad F710</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Playstation 3 Controller</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P380</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P880</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Mosic Speed-Link Competition Pro</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Thrustmaster 2-in-1 DT</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Microsoft X-Box 360 Pad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>XBox 360 Wireless Receiver</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_57">
-         <property name="text">
-          <string>Custom Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_7">
-         <property name="text">
-          <string>Customize</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_58">
-         <property name="text">
-          <string>Nothing</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_48">
+     <widget class="QLabel" name="joystickPort2ModeLabel">
       <property name="geometry">
        <rect>
         <x>469</x>
@@ -3052,10 +2623,10 @@ p, li { white-space: pre-wrap; }
        <string>Joystick Port 2 Mode</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_44">
+     <widget class="QLabel" name="joystickPort2Label">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>495</x>
         <y>20</y>
         <width>111</width>
         <height>17</height>
@@ -3065,154 +2636,10 @@ p, li { white-space: pre-wrap; }
        <string>Joystick Port 2</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget_12">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>50</y>
-        <width>191</width>
-        <height>202</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_13">
-       <item>
-        <widget class="QRadioButton" name="radioButton_59">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_60">
-         <property name="text">
-          <string>Keyboard</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_61">
-         <property name="text">
-          <string>Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_13">
-         <item>
-          <property name="text">
-           <string>Generic</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech PS3/USB Cordless Gamepad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Dual Action</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Extreme 3D PRO</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumblepad 2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Gamepad F310</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumble Gamepad F510</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Wireless Gamepad F710</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Playstation 3 Controller</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P380</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P880</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Mosic Speed-Link Competition Pro</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Thrustmaster 2-in-1 DT</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Microsoft X-Box 360 Pad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>XBox 360 Wireless Receiver</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_62">
-         <property name="text">
-          <string>Custom Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_8">
-         <property name="text">
-          <string>Customize</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_63">
-         <property name="text">
-          <string>Nothing</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="Line" name="line_2">
       <property name="geometry">
        <rect>
-        <x>189</x>
+        <x>190</x>
         <y>0</y>
         <width>41</width>
         <height>411</height>
@@ -3238,7 +2665,7 @@ p, li { white-space: pre-wrap; }
      <widget class="Line" name="line_4">
       <property name="geometry">
        <rect>
-        <x>630</x>
+        <x>635</x>
         <y>0</y>
         <width>41</width>
         <height>411</height>
@@ -3260,6 +2687,729 @@ p, li { white-space: pre-wrap; }
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>50</y>
+        <width>177</width>
+        <height>205</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="joystickPort0Panel">
+       <item>
+        <widget class="QRadioButton" name="joystickPort0MouseRadioButton">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort0KeyboardRadioButton">
+         <property name="text">
+          <string>Keyboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort0JoystickRadioButton">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="joystickPort0ModelComboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Generic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech PS3/USB Cordless Gamepad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Dual Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Extreme 3D PRO</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumblepad 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Gamepad F310</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumble Gamepad F510</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Wireless Gamepad F710</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playstation 3 Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P380</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P880</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mosic Speed-Link Competition Pro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thrustmaster 2-in-1 DT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microsoft X-Box 360 Pad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XBox 360 Wireless Receiver</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort0CustomJoystickRadioButton">
+         <property name="text">
+          <string>Custom Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="joystickPort0CustomizePushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Customize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort0NothingRadioButton">
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>231</x>
+        <y>50</y>
+        <width>177</width>
+        <height>205</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="joystickPort1Panel">
+       <item>
+        <widget class="QRadioButton" name="joystickPort1MouseRadioButton">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort1KeyboardRadioButton">
+         <property name="text">
+          <string>Keyboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joysickPort1JoystickRadioButton">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="joystickPort1ModelComboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Generic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech PS3/USB Cordless Gamepad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Dual Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Extreme 3D PRO</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumblepad 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Gamepad F310</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumble Gamepad F510</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Wireless Gamepad F710</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playstation 3 Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P380</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P880</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mosic Speed-Link Competition Pro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thrustmaster 2-in-1 DT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microsoft X-Box 360 Pad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XBox 360 Wireless Receiver</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort1CustomJoystickRadioButton">
+         <property name="text">
+          <string>Custom Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="joystickPort1CusomizePushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Customize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort1NothingRadioButton">
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>452</x>
+        <y>50</y>
+        <width>177</width>
+        <height>205</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="joystickPort2Panel">
+       <item>
+        <widget class="QRadioButton" name="joysticckPort2MouseRadioButton">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort2KeyboardRadioButton">
+         <property name="text">
+          <string>Keyboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort2JoystickRadioButton">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="joystickPort2ModelComboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Generic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech PS3/USB Cordless Gamepad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Dual Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Extreme 3D PRO</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumblepad 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Gamepad F310</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumble Gamepad F510</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Wireless Gamepad F710</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playstation 3 Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P380</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P880</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mosic Speed-Link Competition Pro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thrustmaster 2-in-1 DT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microsoft X-Box 360 Pad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XBox 360 Wireless Receiver</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort2CustomJoystickRadioButton">
+         <property name="text">
+          <string>Custom Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="joystickPort2CustomizePushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Customize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort2NothingRadioButton">
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>675</x>
+        <y>50</y>
+        <width>177</width>
+        <height>205</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="joystickPort3Panel">
+       <item>
+        <widget class="QRadioButton" name="joystickPort3MouseRadioButton">
+         <property name="text">
+          <string>Mouse</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort3KeyboardRadioButton">
+         <property name="text">
+          <string>Keyboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort3JoystickRadioButton">
+         <property name="text">
+          <string>Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="joystickPort3ModelComboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Generic</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech PS3/USB Cordless Gamepad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Dual Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Extreme 3D PRO</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumblepad 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Gamepad F310</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Rumble Gamepad F510</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Logitech Wireless Gamepad F710</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playstation 3 Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P380</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Saitek P880</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mosic Speed-Link Competition Pro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thrustmaster 2-in-1 DT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microsoft X-Box 360 Pad</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XBox 360 Wireless Receiver</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort3CustomJoystickRadioButton">
+         <property name="text">
+          <string>Custom Joystick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="joystickPort3CustomizePushButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Customize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="joystickPort3NothingRadioButton">
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="Graphics">
@@ -4690,7 +4840,8 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;rinominare tutti i componenti&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;pensare alle classi della configurazione&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;filebrowser per file/cartella/entrambi (or 2 pulsanti)&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Dopo x minuto o tot secondi salve configurazione in file backup home/user/.FS-UAE/gui/Default.fs-uae~&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget_2">
