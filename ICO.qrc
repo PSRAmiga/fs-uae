@@ -24,5 +24,6 @@
         <file>Images/alert.png</file>
         <file>Images/config.png</file>
         <file>Images/reload.png</file>
+        <file>Images/gtk-save.png</file>
     </qresource>
 </RCC>
