@@ -34,14 +34,20 @@ void Amiga::on_kickstartExtFileToolButton_clicked()
     configChipset.setParameter("kickstart_ext_file",fileName.toStdString());
 }
 
+<<<<<<< HEAD
 // PER CAMBIARE COLORE AL BOTTONE
 void Amiga::on_pushButton_17_clicked()
+=======
+ // PER CAMBIARE COLORE AL BOTTONE
+void Amiga::on_fadeColorPushButton_clicked()
+>>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
 {
     QColor color = QColorDialog::getColor(Qt::black, this);
-    ui->pushButton_17->setText(color.name());
-    ui->pushButton_17->setStyleSheet(QString("background-color: ")+color.name());
+    ui->fadeColorPushButton->setText(color.name());
+    ui->fadeColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
 
 }
+<<<<<<< HEAD
 
 
 
@@ -174,3 +180,5 @@ void Amiga::on_videoModeNTSCRadio_clicked()
 {
     this->configChipset.setParameter("ntsc_mode","1");
 }
+=======
+>>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
