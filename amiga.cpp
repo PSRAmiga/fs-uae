@@ -165,6 +165,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
 
     //KICKSTART EXT ROM
     string kickstart_ext_file=this->configChipset.getKickstartExtFileString();
+    //ui->kickstartExtFileLineEdit->setText(QString::fromStdString(kickstart_ext_file));
     ui->kickstartExtFileLineEdit->setText(QString::fromStdString(kickstart_ext_file));
 }
 
