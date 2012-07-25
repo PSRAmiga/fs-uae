@@ -4476,7 +4476,7 @@ p, li { white-space: pre-wrap; }
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_5">
+    <widget class="QWidget" name="themeMenu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
        <normaloff>:/Images/Images/theme.png</normaloff>:/Images/Images/theme.png</iconset>
@@ -4484,7 +4484,7 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Theme</string>
      </attribute>
-     <widget class="QLabel" name="label_184">
+     <widget class="QLabel" name="viewportLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -4497,7 +4497,7 @@ p, li { white-space: pre-wrap; }
        <string>[VIEWPORT]</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_8">
+     <widget class="QLineEdit" name="viewportIn1LineEdit">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -4516,7 +4516,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_9">
+     <widget class="QLineEdit" name="viewportIn2LineEdit">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -4535,7 +4535,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_10">
+     <widget class="QLineEdit" name="viewportIn3LineEdit">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -4554,7 +4554,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_11">
+     <widget class="QLineEdit" name="viewportIn4LineEdit">
       <property name="geometry">
        <rect>
         <x>140</x>
@@ -4573,7 +4573,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_12">
+     <widget class="QLineEdit" name="viewportOut1LineEdit">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -4592,7 +4592,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_13">
+     <widget class="QLineEdit" name="viewportOut2LineEdit">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -4611,7 +4611,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_14">
+     <widget class="QLineEdit" name="viewportOut3LineEdit">
       <property name="geometry">
        <rect>
         <x>300</x>
@@ -4630,7 +4630,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_15">
+     <widget class="QLineEdit" name="viewportOut4LineEdit">
       <property name="geometry">
        <rect>
         <x>340</x>
@@ -4649,7 +4649,7 @@ p, li { white-space: pre-wrap; }
        <string>*</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_185">
+     <widget class="QLabel" name="frecciaLabel">
       <property name="geometry">
        <rect>
         <x>194</x>
@@ -4662,7 +4662,7 @@ p, li { white-space: pre-wrap; }
        <string>=&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_186">
+     <widget class="QLabel" name="leaveStarLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -4688,7 +4688,7 @@ p, li { white-space: pre-wrap; }
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_187">
+     <widget class="QLabel" name="themeLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -4710,9 +4710,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_52">
+      <layout class="QHBoxLayout" name="themeFolderPanel">
        <item>
-        <widget class="QLabel" name="label_188">
+        <widget class="QLabel" name="themeFolderLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -4725,7 +4725,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_13">
+        <widget class="QLineEdit" name="themeFolderLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -4750,7 +4750,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_13">
+        <widget class="QToolButton" name="themeFolderPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -4762,7 +4762,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label_194">
+     <widget class="QLabel" name="perspectiveLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -4775,7 +4775,7 @@ p, li { white-space: pre-wrap; }
        <string>[PERSPECTIVE MODE]</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_22">
+     <widget class="QPushButton" name="headColorPushButton">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -4788,7 +4788,7 @@ p, li { white-space: pre-wrap; }
        <string>Select Color</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_195">
+     <widget class="QLabel" name="headColorLabel">
       <property name="geometry">
        <rect>
         <x>290</x>
@@ -4801,7 +4801,7 @@ p, li { white-space: pre-wrap; }
        <string>Head Color:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_196">
+     <widget class="QLabel" name="sidebarLabel">
       <property name="geometry">
        <rect>
         <x>290</x>
@@ -4853,16 +4853,16 @@ p, li { white-space: pre-wrap; }
         <height>29</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <layout class="QHBoxLayout" name="wallColor1Panel">
        <item>
-        <widget class="QLabel" name="label_190">
+        <widget class="QLabel" name="wallColor1Label">
          <property name="text">
           <string>Wall Color 1:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_18">
+        <widget class="QPushButton" name="wallColor1PushButton">
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -4879,16 +4879,16 @@ p, li { white-space: pre-wrap; }
         <height>29</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <layout class="QHBoxLayout" name="wallColor2Panel">
        <item>
-        <widget class="QLabel" name="label_191">
+        <widget class="QLabel" name="wallColor2Label">
          <property name="text">
           <string>Wall Color 2:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_19">
+        <widget class="QPushButton" name="wallColor2PushButton">
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -4905,16 +4905,16 @@ p, li { white-space: pre-wrap; }
         <height>29</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <layout class="QHBoxLayout" name="floorColor1Panel">
        <item>
-        <widget class="QLabel" name="label_192">
+        <widget class="QLabel" name="floorColor1Label">
          <property name="text">
           <string>Floor Color 1:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_20">
+        <widget class="QPushButton" name="floorColor1PushButton">
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -4931,16 +4931,16 @@ p, li { white-space: pre-wrap; }
         <height>29</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <layout class="QHBoxLayout" name="floorColor2Panel">
        <item>
-        <widget class="QLabel" name="label_193">
+        <widget class="QLabel" name="floorColor2Label">
          <property name="text">
           <string>Floor Color 2:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_21">
+        <widget class="QPushButton" name="floorColor2PushButton">
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -4957,16 +4957,16 @@ p, li { white-space: pre-wrap; }
         <height>29</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="fadeColorPanel">
        <item>
-        <widget class="QLabel" name="label_189">
+        <widget class="QLabel" name="fadeColorLabel">
          <property name="text">
           <string>Fade Color:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_17">
+        <widget class="QPushButton" name="fadeColorPushButton">
          <property name="text">
           <string>Select Color</string>
          </property>

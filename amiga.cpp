@@ -35,11 +35,10 @@ void Amiga::on_kickstartExtFileToolButton_clicked()
 }
 
  // PER CAMBIARE COLORE AL BOTTONE
-void Amiga::on_pushButton_17_clicked()
+void Amiga::on_fadeColorPushButton_clicked()
 {
     QColor color = QColorDialog::getColor(Qt::black, this);
-    ui->pushButton_17->setText(color.name());
-    ui->pushButton_17->setStyleSheet(QString("background-color: ")+color.name());
+    ui->fadeColorPushButton->setText(color.name());
+    ui->fadeColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
 
 }
-
