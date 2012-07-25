@@ -211,7 +211,7 @@ void Amiga::on_videoModeNTSCRadio_clicked()
 
 void Amiga::on_actionReport_bug_triggered()
 {
-       QDesktopServices::openUrl(QUrl(tr("mailto:alessandromario.riva@gmail.com?subject=FS-UAE Gui Bug Report")));
+       QDesktopServices::openUrl(QUrl(tr("mailto:alessandromario.riva@gmail.com,dsanvito90@gmail.com?subject=FS-UAE Gui Bug Report")));
 }
 
 void Amiga::on_loadDefaultValuesToolButton_clicked()
