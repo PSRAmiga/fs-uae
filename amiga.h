@@ -43,6 +43,7 @@ private slots:
 
     void on_fadeColorPushButton_clicked();
 
+    void on_loadDefaultValuesToolButton_clicked();
 
 private:
     Ui::Amiga *ui;

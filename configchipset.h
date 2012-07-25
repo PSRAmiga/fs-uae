@@ -18,6 +18,12 @@ public:
     string getAccuracyString();
     string getNTSCModeConfigString();
     string getNTSCModeString();
+    string getAmigaModelConfigString();
+    string getAmigaModelString();
+    string getKickstartFileConfigString();
+    string getKickstartFileString();
+    string getKickstartExtFileConfigString();
+    string getKickstartExtFileString();
 
     void setParameter(string parameter,string value);
     void setToDefaultConfiguration();
