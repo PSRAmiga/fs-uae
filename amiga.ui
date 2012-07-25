@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>4</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -1508,16 +1508,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_18">
+      <layout class="QHBoxLayout" name="hardDrive0Panel">
        <item>
-        <widget class="QLabel" name="label_62">
+        <widget class="QLabel" name="hardDrive0Label">
          <property name="text">
           <string>Hard Drive 0:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_9">
+        <widget class="QLineEdit" name="hardDrive0LineEdit">
          <property name="text">
           <string>file hdf or folder or zip(&gt;0.9.11)  -----&gt; </string>
          </property>
@@ -1530,7 +1530,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_9">
+        <widget class="QToolButton" name="hardDrive0ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -1541,14 +1541,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_72">
+        <widget class="QLabel" name="hardDrive0Label0Label">
          <property name="text">
           <string>Label 0:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_19">
+        <widget class="QLineEdit" name="hardDrive0Label0LineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1573,7 +1573,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_10">
+        <widget class="QCheckBox" name="hardDrive0ReadOnlyCheckBox">
          <property name="text">
           <string>ReadOnly</string>
          </property>
@@ -1836,16 +1836,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_22">
+      <layout class="QHBoxLayout" name="hardDrive4Panel">
        <item>
-        <widget class="QLabel" name="label_66">
+        <widget class="QLabel" name="hardDrive4Label">
          <property name="text">
           <string>Hard Drive 4:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_13">
+        <widget class="QLineEdit" name="hardDrive4LineEdit">
          <property name="text">
           <string/>
          </property>
@@ -1858,7 +1858,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_13">
+        <widget class="QToolButton" name="hardDrive4ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -1869,14 +1869,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_76">
+        <widget class="QLabel" name="hardDrive4Label4Label">
          <property name="text">
           <string>Label 4:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_23">
+        <widget class="QLineEdit" name="hardDrive4LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1901,7 +1901,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_14">
+        <widget class="QCheckBox" name="hardDrive4ReadOnlyCheckBox">
          <property name="text">
           <string>ReadOnly</string>
          </property>
@@ -1918,16 +1918,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_23">
+      <layout class="QHBoxLayout" name="hardDrive5Panel">
        <item>
-        <widget class="QLabel" name="label_67">
+        <widget class="QLabel" name="hardDrive5Label">
          <property name="text">
           <string>Hard Drive 5:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_14">
+        <widget class="QLineEdit" name="hardDrive5LineEdit">
          <property name="text">
           <string/>
          </property>
@@ -1940,7 +1940,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_14">
+        <widget class="QToolButton" name="hardDrive5ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -1951,14 +1951,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_77">
+        <widget class="QLabel" name="hardDrive5Label5Label">
          <property name="text">
           <string>Label 5:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_24">
+        <widget class="QLineEdit" name="hardDrive5Label5LineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1983,7 +1983,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_15">
+        <widget class="QCheckBox" name="hardDrive5ReadOnlyCheckBox">
          <property name="text">
           <string>ReadOnly</string>
          </property>
@@ -2000,16 +2000,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_24">
+      <layout class="QHBoxLayout" name="hardDrive6Panel">
        <item>
-        <widget class="QLabel" name="label_68">
+        <widget class="QLabel" name="hardDrive6Label">
          <property name="text">
           <string>Hard Drive 6:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_15">
+        <widget class="QLineEdit" name="hardDrive6LineEdit">
          <property name="text">
           <string/>
          </property>
@@ -2022,7 +2022,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_15">
+        <widget class="QToolButton" name="hardDrive6ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -2033,14 +2033,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_78">
+        <widget class="QLabel" name="hardDrive6Label6Label">
          <property name="text">
           <string>Label 6:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_25">
+        <widget class="QLineEdit" name="hardDrive6Label6LineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -2065,7 +2065,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_16">
+        <widget class="QCheckBox" name="hardDrive6ReadOnlyCheckBox">
          <property name="text">
           <string>ReadOnly</string>
          </property>
@@ -2082,16 +2082,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_25">
+      <layout class="QHBoxLayout" name="hardDrive7Panel">
        <item>
-        <widget class="QLabel" name="label_69">
+        <widget class="QLabel" name="hardDrive7Label">
          <property name="text">
           <string>Hard Drive 7:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_16">
+        <widget class="QLineEdit" name="hardDrive7LineEdit">
          <property name="text">
           <string/>
          </property>
@@ -2104,7 +2104,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_16">
+        <widget class="QToolButton" name="hardDrive7ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -2115,14 +2115,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_79">
+        <widget class="QLabel" name="hardDrive7Label7Label">
          <property name="text">
           <string>Label 7:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_26">
+        <widget class="QLineEdit" name="hardDrive7Label7LineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -2147,7 +2147,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_17">
+        <widget class="QCheckBox" name="hardDrive7ReadOnlyCheckBox">
          <property name="text">
           <string>ReadOnly</string>
          </property>
@@ -2164,16 +2164,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_26">
+      <layout class="QHBoxLayout" name="hardDrive8Panel">
        <item>
-        <widget class="QLabel" name="label_70">
+        <widget class="QLabel" name="hardDrive8Label">
          <property name="text">
           <string>Hard Drive 8:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_17">
+        <widget class="QLineEdit" name="haraDrive8LineEdit">
          <property name="text">
           <string/>
          </property>
@@ -2186,7 +2186,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_17">
+        <widget class="QToolButton" name="hardDrive8ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -2197,14 +2197,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_80">
+        <widget class="QLabel" name="hardDrive8Label8Label">
          <property name="text">
           <string>Label 8:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_27">
+        <widget class="QLineEdit" name="hardDrive8Label8LineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -2229,7 +2229,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_18">
+        <widget class="QCheckBox" name="hardDrive8ReadOnlyCheckBox">
          <property name="text">
           <string>ReadOnly</string>
          </property>
@@ -2246,16 +2246,16 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_27">
+      <layout class="QHBoxLayout" name="hardDrive9Panel">
        <item>
-        <widget class="QLabel" name="label_71">
+        <widget class="QLabel" name="haardDrive9Label">
          <property name="text">
           <string>Hard Drive 9:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_18">
+        <widget class="QLineEdit" name="hardDrive9LineEdit">
          <property name="text">
           <string/>
          </property>
@@ -2268,7 +2268,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartDirButt_18">
+        <widget class="QToolButton" name="hardDrive9ToolButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -2279,14 +2279,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_81">
+        <widget class="QLabel" name="hardDrive9Label9Label">
          <property name="text">
           <string>Label 9:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartDir_28">
+        <widget class="QLineEdit" name="hardDrive9Label9LineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -2311,7 +2311,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_19">
+        <widget class="QCheckBox" name="hardDrive9ReadOnlyCheckBox">
          <property name="text">
           <string>ReadOnly</string>
          </property>
