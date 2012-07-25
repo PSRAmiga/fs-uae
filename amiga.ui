@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>8</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -4919,7 +4919,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QWidget" name="miscMenu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
-       <normaloff>:/Images/Images/Amiga_ball.png</normaloff>:/Images/Images/Amiga_ball.png</iconset>
+       <normaloff>:/Images/Images/config.png</normaloff>:/Images/Images/config.png</iconset>
      </attribute>
      <attribute name="title">
       <string>Misc</string>
@@ -5926,8 +5926,18 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
      <string>Help</string>
     </property>
     <widget class="QMenu" name="menuAbout">
+     <property name="tearOffEnabled">
+      <bool>false</bool>
+     </property>
      <property name="title">
       <string>About</string>
+     </property>
+     <property name="icon">
+      <iconset resource="ICO.qrc">
+       <normaloff>:/Images/Images/help-about.svg</normaloff>:/Images/Images/help-about.svg</iconset>
+     </property>
+     <property name="separatorsCollapsible">
+      <bool>true</bool>
      </property>
      <addaction name="actionAmiga"/>
      <addaction name="actionFS_UAE"/>
@@ -5964,18 +5974,39 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
    </property>
   </action>
   <action name="actionReport_bug">
+   <property name="icon">
+    <iconset resource="ICO.qrc">
+     <normaloff>:/Images/Images/alert.png</normaloff>:/Images/Images/alert.png</iconset>
+   </property>
    <property name="text">
     <string>Report bug</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionAmiga">
+   <property name="icon">
+    <iconset resource="ICO.qrc">
+     <normaloff>:/Images/Images/Amiga_ball.png</normaloff>:/Images/Images/Amiga_ball.png</iconset>
+   </property>
    <property name="text">
     <string>Amiga</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionFS_UAE">
+   <property name="icon">
+    <iconset resource="ICO.qrc">
+     <normaloff>:/Images/Images/help-about.svg</normaloff>:/Images/Images/help-about.svg</iconset>
+   </property>
    <property name="text">
     <string>FS-UAE</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
    </property>
   </action>
  </widget>

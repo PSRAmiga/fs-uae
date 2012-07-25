@@ -19,5 +19,9 @@
         <file>Images/Load.png</file>
         <file>Images/theme.png</file>
         <file>Images/help-contents.svg</file>
+        <file>Images/help-info.svg</file>
+        <file>Images/help-about.svg</file>
+        <file>Images/alert.png</file>
+        <file>Images/config.png</file>
     </qresource>
 </RCC>
