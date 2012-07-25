@@ -24,7 +24,7 @@ private slots:
 
     void on_kickstartExtFileToolButton_clicked();
 
-<<<<<<< HEAD
+
     void on_amigaModelComboBox_currentIndexChanged(const QString &arg1);
 
     void on_accuracyLeastRadio_clicked();
@@ -40,9 +40,9 @@ private slots:
     void on_videoModePALRadio_clicked();
 
     void on_videoModeNTSCRadio_clicked();
-=======
+
     void on_fadeColorPushButton_clicked();
->>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
+
 
 private:
     Ui::Amiga *ui;

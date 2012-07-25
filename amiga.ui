@@ -103,11 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-<<<<<<< HEAD
      <number>0</number>
-=======
-     <number>8</number>
->>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -2286,153 +2282,6 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>Joystick Port 0</string>
       </property>
      </widget>
-<<<<<<< HEAD
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>11</x>
-        <y>50</y>
-        <width>434</width>
-        <height>202</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QRadioButton" name="radioButton">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="text">
-          <string>Keyboard</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_4">
-         <property name="text">
-          <string>Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_6">
-         <item>
-          <property name="text">
-           <string>Generic</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech PS3/USB Cordless Gamepad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Dual Action</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Extreme 3D PRO</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumblepad 2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Gamepad F310</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Rumble Gamepad F510</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Logitech Wireless Gamepad F710</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Playstation 3 Controller</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P380</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Saitek P880</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>SmartJoyPlus / TigerGame PS/PS2 Game Controller Adapter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Mosic Speed-Link Competition Pro</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Thrustmaster 2-in-1 DT</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Microsoft X-Box 360 Pad</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>XBox 360 Wireless Receiver</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_5">
-         <property name="text">
-          <string>Custom Joystick</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>Customize</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_3">
-         <property name="text">
-          <string>Nothing</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-=======
->>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
      <widget class="QTextEdit" name="textEdit_2">
       <property name="enabled">
        <bool>true</bool>
@@ -2780,18 +2629,13 @@ p, li { white-space: pre-wrap; }
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>14</x>
         <y>50</y>
-<<<<<<< HEAD
-        <width>434</width>
-        <height>202</height>
-=======
         <width>177</width>
         <height>205</height>
->>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort0Panel">
@@ -2965,18 +2809,13 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>231</x>
         <y>50</y>
-<<<<<<< HEAD
-        <width>434</width>
-        <height>202</height>
-=======
         <width>177</width>
         <height>205</height>
->>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort1Panel">
@@ -3150,18 +2989,13 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>452</x>
         <y>50</y>
-<<<<<<< HEAD
-        <width>434</width>
-        <height>202</height>
-=======
         <width>177</width>
         <height>205</height>
->>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort2Panel">
@@ -3335,7 +3169,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>675</x>
@@ -4934,7 +4768,6 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-<<<<<<< HEAD
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;Convenzione dei segni:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;1_prima lettera minuscola&lt;/span&gt;&lt;/p&gt;
@@ -4948,24 +4781,8 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;rinominare tutti i componenti&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;pensare alle classi della configurazione&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;filebrowser per file/cartella/entrambi (or 2 pulsanti)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-=======
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Convenzione dei segni:&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1_prima lettera minuscola&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2_paroleMultipleAllaBimboMinkia&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3_fadeColorLabel e fadeColorButton&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4_themeFolderLabel themeFolderLineEdit themeFolderButton&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;DA FARE:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;configurazione joystick personalizzati&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;immagini theme?&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;thread per avviare fs-uae&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;rinominare tutti i componenti&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;pensare alle classi della configurazione&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;filebrowser per file/cartella/entrambi (or 2 pulsanti)&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Dopo x minuto o tot secondi salve configurazione in file backup home/user/.FS-UAE/gui/Default.fs-uae~&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
->>>>>>> eb723a978d247236cb705e606256aa9efbc5587e
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dopo x minuto o tot secondi salve configurazione in file backup home/user/.FS-UAE/gui/Default.fs-uae~&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget_2">
@@ -5919,13 +5736,13 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>670</x>
         <y>80</y>
         <width>146</width>
-        <height>225</height>
+        <height>243</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="netPlayPanel">
