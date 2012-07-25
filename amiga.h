@@ -16,13 +16,9 @@ class Amiga : public QMainWindow
 public:
     explicit Amiga(QWidget *parent = 0);
     ~Amiga();
-    
 
 
 private slots:
-   // void on_loadKickstartDirButt_clicked();
-
-
 
     void on_pushButton_17_clicked();
 
@@ -40,9 +36,17 @@ private slots:
 
     void on_saveConfigToolButton_clicked();
 
+    void on_loadConfigToolButton_clicked();
+
+    void on_videoModePALRadio_clicked();
+
+    void on_videoModeNTSCRadio_clicked();
+
 private:
     Ui::Amiga *ui;
     ConfigChipset configChipset;
+    void parseLine(string line);
+    void updateGraphicsFromInternalConfiguration();
 };
 
 #endif // AMIGA_H

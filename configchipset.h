@@ -14,8 +14,14 @@ class ConfigChipset
 
 public:
     ConfigChipset();
-    void setAccuracy(bool least,bool normal,bool most);
+    string getAccuracyConfigString();
     string getAccuracyString();
+    string getNTSCModeConfigString();
+    string getNTSCModeString();
+
+    void setParameter(string parameter,string value);
+    void setToDefaultConfiguration();
+    //void updateGraphicsFromInternalConfiguration(Amiga amiga);
 };
 
 #endif // CONFIGCHIPSET_H
