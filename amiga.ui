@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>0</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -2688,7 +2688,7 @@ p, li { white-space: pre-wrap; }
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>14</x>
@@ -2868,7 +2868,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>231</x>
@@ -3048,7 +3048,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>452</x>
@@ -3228,7 +3228,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>675</x>
@@ -5795,7 +5795,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>670</x>
@@ -6006,8 +6006,15 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
    </property>
   </action>
   <action name="actionSummary">
+   <property name="icon">
+    <iconset resource="ICO.qrc">
+     <normaloff>:/Images/Images/help-contents.svg</normaloff>:/Images/Images/help-contents.svg</iconset>
+   </property>
    <property name="text">
     <string>Summary</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
    </property>
   </action>
   <action name="actionAbout_2">

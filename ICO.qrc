@@ -18,5 +18,6 @@
         <file>Images/Save.png</file>
         <file>Images/Load.png</file>
         <file>Images/theme.png</file>
+        <file>Images/help-contents.svg</file>
     </qresource>
 </RCC>
