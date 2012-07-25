@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>8</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -4975,7 +4975,7 @@ p, li { white-space: pre-wrap; }
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="miscMenu">
      <attribute name="icon">
       <iconset resource="ICO.qrc">
        <normaloff>:/Images/Images/Amiga_ball.png</normaloff>:/Images/Images/Amiga_ball.png</iconset>
@@ -4983,7 +4983,7 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Misc</string>
      </attribute>
-     <widget class="QLabel" name="label_165">
+     <widget class="QLabel" name="bytesLabel">
       <property name="geometry">
        <rect>
         <x>200</x>
@@ -4996,7 +4996,7 @@ p, li { white-space: pre-wrap; }
        <string>bytes</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_164">
+     <widget class="QLabel" name="audioBufferLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -5009,7 +5009,7 @@ p, li { white-space: pre-wrap; }
        <string>Audio Buffer:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="audioBufferLineEdit">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -5022,7 +5022,7 @@ p, li { white-space: pre-wrap; }
        <string>8192</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_39">
+     <widget class="QCheckBox" name="grabMouseCheckBox">
       <property name="geometry">
        <rect>
         <x>269</x>
@@ -5041,7 +5041,7 @@ p, li { white-space: pre-wrap; }
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_40">
+     <widget class="QCheckBox" name="useBSDCheckBox">
       <property name="geometry">
        <rect>
         <x>270</x>
@@ -5060,7 +5060,7 @@ p, li { white-space: pre-wrap; }
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_166">
+     <widget class="QLabel" name="alternativeDirectoryLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -5082,9 +5082,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <layout class="QHBoxLayout" name="alternativeKickstartDirPanel">
        <item>
-        <widget class="QLabel" name="label_167">
+        <widget class="QLabel" name="alternativeKickstartDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5103,7 +5103,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_3">
+        <widget class="QLineEdit" name="alternativeKickstartDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5128,7 +5128,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_3">
+        <widget class="QToolButton" name="alternativeKickstartDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5149,9 +5149,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_43">
+      <layout class="QHBoxLayout" name="alernativeSaveStatesDirPanel">
        <item>
-        <widget class="QLabel" name="label_168">
+        <widget class="QLabel" name="alernativeSaveStatesDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5170,7 +5170,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_4">
+        <widget class="QLineEdit" name="alernativeSaveStatesDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5195,7 +5195,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_4">
+        <widget class="QToolButton" name="alernativeSaveStatesDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5216,9 +5216,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_44">
+      <layout class="QHBoxLayout" name="alternativeFloppyOverlaysDirPanel">
        <item>
-        <widget class="QLabel" name="label_169">
+        <widget class="QLabel" name="alternativeFloppyOverlaysDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5237,7 +5237,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_5">
+        <widget class="QLineEdit" name="alternativeFloppyOverlaysDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5262,7 +5262,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_5">
+        <widget class="QToolButton" name="alternativeFloppyOverlaysDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5283,9 +5283,9 @@ p, li { white-space: pre-wrap; }
         <height>31</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_45">
+      <layout class="QHBoxLayout" name="alternativeFlashMemoryDirPanel">
        <item>
-        <widget class="QLabel" name="label_170">
+        <widget class="QLabel" name="alternativeFlashMemoryDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5304,7 +5304,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_6">
+        <widget class="QLineEdit" name="alternativeFlashMemoryLineDirEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5329,7 +5329,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_6">
+        <widget class="QToolButton" name="alternativeFlashMemoryDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5350,9 +5350,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_46">
+      <layout class="QHBoxLayout" name="alternativeControllersDirPanel">
        <item>
-        <widget class="QLabel" name="label_171">
+        <widget class="QLabel" name="alternativeControllersDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5371,7 +5371,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_7">
+        <widget class="QLineEdit" name="alternativeControllersDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5396,7 +5396,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_7">
+        <widget class="QToolButton" name="alternativeControllersDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5417,9 +5417,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_47">
+      <layout class="QHBoxLayout" name="alternativeLogsDirPanel">
        <item>
-        <widget class="QLabel" name="label_172">
+        <widget class="QLabel" name="alternativeLogsDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5438,7 +5438,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_8">
+        <widget class="QLineEdit" name="alternativeLogsDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5463,7 +5463,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_8">
+        <widget class="QToolButton" name="alternativeLogsDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5484,9 +5484,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_48">
+      <layout class="QHBoxLayout" name="alternativeHardDrivesDirPanel">
        <item>
-        <widget class="QLabel" name="label_173">
+        <widget class="QLabel" name="alternativeHardDrivesDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5505,7 +5505,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_9">
+        <widget class="QLineEdit" name="alternativeHardDrivesDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5530,7 +5530,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_9">
+        <widget class="QToolButton" name="alternativeHardDrivesDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5551,9 +5551,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_49">
+      <layout class="QHBoxLayout" name="alternativeCdromsDirPanel">
        <item>
-        <widget class="QLabel" name="label_174">
+        <widget class="QLabel" name="alternativeCdromsDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5572,7 +5572,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_10">
+        <widget class="QLineEdit" name="alternativeCdromsDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5597,7 +5597,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_10">
+        <widget class="QToolButton" name="alternativeCdromsDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5618,9 +5618,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_50">
+      <layout class="QHBoxLayout" name="alternativeFloppiesDirPanel">
        <item>
-        <widget class="QLabel" name="label_175">
+        <widget class="QLabel" name="alternativeFloppiesDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5639,7 +5639,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_11">
+        <widget class="QLineEdit" name="alternativeFloppiesDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5664,7 +5664,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_11">
+        <widget class="QToolButton" name="alternativeFloppiesDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
@@ -5676,7 +5676,7 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label_177">
+     <widget class="QLabel" name="menuTitleLabel">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -5689,7 +5689,7 @@ p, li { white-space: pre-wrap; }
        <string>Menu Title:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="menuTitleLineEdit">
       <property name="geometry">
        <rect>
         <x>660</x>
@@ -5702,7 +5702,7 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="menuSubtitleLineEdit">
       <property name="geometry">
        <rect>
         <x>660</x>
@@ -5715,7 +5715,7 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label_178">
+     <widget class="QLabel" name="menuSubtitleLabel">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -5728,123 +5728,6 @@ p, li { white-space: pre-wrap; }
        <string>Menu SubTitle:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_179">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>80</y>
-        <width>101</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>[NET PLAY]</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_180">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>110</y>
-        <width>101</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Server IP:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_4">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>130</y>
-        <width>191</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_5">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>180</y>
-        <width>191</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_181">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>160</y>
-        <width>101</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Server Port:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_6">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>230</y>
-        <width>191</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_182">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>210</y>
-        <width>121</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Player Username:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_7">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>280</y>
-        <width>191</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_183">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>260</y>
-        <width>101</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Password:</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="verticalLayoutWidget_54">
       <property name="geometry">
        <rect>
@@ -5854,9 +5737,9 @@ p, li { white-space: pre-wrap; }
         <height>34</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_51">
+      <layout class="QHBoxLayout" name="alternativeBaseDirPanel">
        <item>
-        <widget class="QLabel" name="label_176">
+        <widget class="QLabel" name="alternativeBaseDirLabel">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -5875,7 +5758,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="kickstartExtendedDir_12">
+        <widget class="QLineEdit" name="alternativeBaseDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5900,13 +5783,88 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="loadKickstartExtDirButt_12">
+        <widget class="QToolButton" name="alternativeBaseDirPushButton">
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>80</y>
+        <width>146</width>
+        <height>225</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="netPlayPanel">
+       <item>
+        <widget class="QLabel" name="netPlayLabel">
+         <property name="text">
+          <string>[NET PLAY]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="serverIPLabel">
+         <property name="text">
+          <string>Server IP:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="serverIPLineEdit">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="serverPortLabel">
+         <property name="text">
+          <string>Server Port:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="serverPortLineEdit">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="playerUsernameLabel">
+         <property name="text">
+          <string>Player Username:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="playerUsernameLineEdit">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="passwordLabel">
+         <property name="text">
+          <string>Password:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="passwordLineEdit">
+         <property name="text">
+          <string/>
          </property>
         </widget>
        </item>
