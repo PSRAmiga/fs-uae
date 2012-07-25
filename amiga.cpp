@@ -1,6 +1,8 @@
 #include "amiga.h"
 #include "ui_amiga.h"
 #include <fstream>
+#include <QUrl>
+#include <QDesktopServices>
 #include <QFileDialog>
 #include <QColorDialog>
 using namespace std;
@@ -175,3 +177,8 @@ void Amiga::on_videoModeNTSCRadio_clicked()
     this->configChipset.setParameter("ntsc_mode","1");
 }
 
+
+void Amiga::on_actionReport_bug_triggered()
+{
+       QDesktopServices::openUrl(QUrl(tr("mailto:alessandromario.riva@gmail.com?subject=FS-UAE Gui Bug Report")));
+}

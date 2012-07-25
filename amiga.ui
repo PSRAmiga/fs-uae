@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>0</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -5921,41 +5921,23 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
      <height>27</height>
     </rect>
    </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
     </property>
-    <widget class="QMenu" name="menuAbout">
-     <property name="tearOffEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="title">
-      <string>About</string>
-     </property>
-     <property name="icon">
-      <iconset resource="ICO.qrc">
-       <normaloff>:/Images/Images/help-about.svg</normaloff>:/Images/Images/help-about.svg</iconset>
-     </property>
-     <property name="separatorsCollapsible">
-      <bool>true</bool>
-     </property>
-     <addaction name="actionAmiga"/>
-     <addaction name="actionFS_UAE"/>
-    </widget>
     <addaction name="actionSummary"/>
     <addaction name="separator"/>
-    <addaction name="menuAbout"/>
+    <addaction name="actionAmiga"/>
+    <addaction name="actionFS_UAE"/>
     <addaction name="separator"/>
     <addaction name="actionReport_bug"/>
    </widget>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionAbout">
-   <property name="text">
-    <string>About</string>
-   </property>
-  </action>
   <action name="actionSummary">
    <property name="icon">
     <iconset resource="ICO.qrc">
@@ -5964,13 +5946,20 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
    <property name="text">
     <string>Summary</string>
    </property>
+   <property name="shortcut">
+    <string/>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::PreferencesRole</enum>
+   </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
    </property>
-  </action>
-  <action name="actionAbout_2">
-   <property name="text">
-    <string>About fs-uae</string>
+   <property name="priority">
+    <enum>QAction::NormalPriority</enum>
    </property>
   </action>
   <action name="actionReport_bug">
@@ -5991,7 +5980,7 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
      <normaloff>:/Images/Images/Amiga_ball.png</normaloff>:/Images/Images/Amiga_ball.png</iconset>
    </property>
    <property name="text">
-    <string>Amiga</string>
+    <string>About Amiga</string>
    </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
@@ -6003,7 +5992,7 @@ the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
      <normaloff>:/Images/Images/help-about.svg</normaloff>:/Images/Images/help-about.svg</iconset>
    </property>
    <property name="text">
-    <string>FS-UAE</string>
+    <string>About FS-UAE</string>
    </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
