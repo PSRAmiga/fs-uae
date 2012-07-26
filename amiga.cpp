@@ -84,7 +84,7 @@ void Amiga::on_saveConfigToolButton_clicked()
 {
     //ui->kickstartExtFileLineEdit->setText(QString::fromStdString(configChipset.getAccuracyString()));
     QString fileName=QFileDialog::getSaveFileName(this, tr("Save file as"), "/", tr("Config file *.fs-uae (*.fs-uae)"));
-
+    if (fileName.compare("")==0) {return; }
 
     //fare check sull'estensione
     string fileNameString;
@@ -174,6 +174,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
 void Amiga::on_loadConfigToolButton_clicked()
 {
     QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), "/", tr("Config file *.fs-uae (*.fs-uae)"));
+    if (fileName.compare("")==0) {return; }
 
     //devo resettare tutte le impostazioni a default perchè nel file i valori di defult non sono esplicitamente salvati
     //quindi rischierei di vedere i valori dell'ultima config
