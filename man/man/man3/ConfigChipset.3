@@ -1,0 +1,173 @@
+.TH "ConfigChipset" 3 "Fri Jul 27 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigChipset \- 
+.PP
+Create the Chipset Configuration Class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configchipset\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigChipset\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetAccuracyConfigString\fP ()"
+.br
+.RI "\fIRepresents the string of Accuracy to be written in Config File\&. If Accuracy is the default value, it returns an empty string\&.
+.br
+ accuracy = 1\&. \fP"
+.ti -1c
+.RI "string \fBgetAccuracyString\fP ()"
+.br
+.RI "\fIRepresent the effective value of Accuracy\&. \fP"
+.ti -1c
+.RI "string \fBgetNTSCModeConfigString\fP ()"
+.br
+.RI "\fIRepresents the string of NTSCMode to be written in Config file\&. If NTSCMode is the default value, it returns an empty string\&.
+.br
+ ntsc_mode = 0\&. \fP"
+.ti -1c
+.RI "string \fBgetNTSCModeString\fP ()"
+.br
+.RI "\fIRepresent the effective value of NTSCMode\&. \fP"
+.ti -1c
+.RI "string \fBgetAmigaModelConfigString\fP ()"
+.br
+.RI "\fIRepresents the string of AmigaModel to be written in Config file\&. If AmigaModel is the default value, it returns an empty string\&.
+.br
+ amiga_model = A500\&. \fP"
+.ti -1c
+.RI "string \fBgetAmigaModelString\fP ()"
+.br
+.RI "\fIRepresent the effective value of AmigaModel\&. \fP"
+.ti -1c
+.RI "string \fBgetKickstartFileConfigString\fP ()"
+.br
+.RI "\fIRepresents the string of KickstartFile to be written in Config file\&. If KickstartFile is the default value, it returns an empty string\&.
+.br
+ kickstart_file = path/to/kickstart\&.rom [or path/to/kickstart\&.adf]\&. \fP"
+.ti -1c
+.RI "string \fBgetKickstartFileString\fP ()"
+.br
+.RI "\fIRepresent the effective value of KickstartFile\&. \fP"
+.ti -1c
+.RI "string \fBgetKickstartExtFileConfigString\fP ()"
+.br
+.RI "\fIRepresents the string of KickstartExtFile to be written in Config file\&. If KickstartExtFile is the default value, it returns an empty string\&.
+.br
+ kickstart_ext_file = path/to/extended-kickstart\&.rom\&. \fP"
+.ti -1c
+.RI "string \fBgetKickstartExtFileString\fP ()"
+.br
+.RI "\fIRepresent the effective value of KickstartExtFile\&. \fP"
+.ti -1c
+.RI "void \fBsetParameter\fP (string parameter, string value)"
+.br
+.ti -1c
+.RI "void \fBsetToDefaultConfiguration\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBamiga_model\fP"
+.br
+.RI "\fISpecify the \fBAmiga\fP model you want to emulate\&. \fP"
+.ti -1c
+.RI "string \fBkickstart_file\fP"
+.br
+.RI "\fISpecify the path to a specific kickstart file\&. \fP"
+.ti -1c
+.RI "string \fBkickstart_ext_file\fP"
+.br
+.RI "\fISpecify the path to the extended kickstart ROM (for CD32, \&.\&.\&.)\&. \fP"
+.ti -1c
+.RI "string \fBaccuracy\fP"
+.br
+.RI "\fIRepreset the accuracy of the emulation\&. \fP"
+.ti -1c
+.RI "string \fBntsc_mode\fP"
+.br
+.RI "\fIRepresent the video mode of the emulation (NTSC/PAL) \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Create the Chipset Configuration Class\&. 
+
+This class is responsible for the Chipset Configuration 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBConfigChipset::ConfigChipset\fP ()"
+.SH "Member Function Documentation"
+.PP 
+.SS "string \fBConfigChipset::getAccuracyConfigString\fP ()"
+.PP
+Represents the string of Accuracy to be written in Config File\&. If Accuracy is the default value, it returns an empty string\&.
+.br
+ accuracy = 1\&. 
+.SS "string \fBConfigChipset::getAccuracyString\fP ()"
+.PP
+Represent the effective value of Accuracy\&. 
+.SS "string \fBConfigChipset::getAmigaModelConfigString\fP ()"
+.PP
+Represents the string of AmigaModel to be written in Config file\&. If AmigaModel is the default value, it returns an empty string\&.
+.br
+ amiga_model = A500\&. 
+.SS "string \fBConfigChipset::getAmigaModelString\fP ()"
+.PP
+Represent the effective value of AmigaModel\&. 
+.SS "string \fBConfigChipset::getKickstartExtFileConfigString\fP ()"
+.PP
+Represents the string of KickstartExtFile to be written in Config file\&. If KickstartExtFile is the default value, it returns an empty string\&.
+.br
+ kickstart_ext_file = path/to/extended-kickstart\&.rom\&. 
+.SS "string \fBConfigChipset::getKickstartExtFileString\fP ()"
+.PP
+Represent the effective value of KickstartExtFile\&. 
+.SS "string \fBConfigChipset::getKickstartFileConfigString\fP ()"
+.PP
+Represents the string of KickstartFile to be written in Config file\&. If KickstartFile is the default value, it returns an empty string\&.
+.br
+ kickstart_file = path/to/kickstart\&.rom [or path/to/kickstart\&.adf]\&. 
+.SS "string \fBConfigChipset::getKickstartFileString\fP ()"
+.PP
+Represent the effective value of KickstartFile\&. 
+.SS "string \fBConfigChipset::getNTSCModeConfigString\fP ()"
+.PP
+Represents the string of NTSCMode to be written in Config file\&. If NTSCMode is the default value, it returns an empty string\&.
+.br
+ ntsc_mode = 0\&. 
+.SS "string \fBConfigChipset::getNTSCModeString\fP ()"
+.PP
+Represent the effective value of NTSCMode\&. 
+.SS "void \fBConfigChipset::setParameter\fP (stringparameter, stringvalue)"
+.SS "void \fBConfigChipset::setToDefaultConfiguration\fP ()"
+.SH "Member Data Documentation"
+.PP 
+.SS "string \fBConfigChipset::accuracy\fP\fC [private]\fP"
+.PP
+Represet the accuracy of the emulation\&. 
+.SS "string \fBConfigChipset::amiga_model\fP\fC [private]\fP"
+.PP
+Specify the \fBAmiga\fP model you want to emulate\&. 
+.SS "string \fBConfigChipset::kickstart_ext_file\fP\fC [private]\fP"
+.PP
+Specify the path to the extended kickstart ROM (for CD32, \&.\&.\&.)\&. 
+.SS "string \fBConfigChipset::kickstart_file\fP\fC [private]\fP"
+.PP
+Specify the path to a specific kickstart file\&. 
+.SS "string \fBConfigChipset::ntsc_mode\fP\fC [private]\fP"
+.PP
+Represent the video mode of the emulation (NTSC/PAL) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FS-UAE Gui for Linux OS from the source code\&.

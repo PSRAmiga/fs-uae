@@ -1,0 +1,236 @@
+.TH "Amiga" 3 "Fri Jul 27 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Amiga \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <amiga\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAmiga\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~Amiga\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_kickstartFileToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_kickstartExtFileToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_amigaModelComboBox_currentIndexChanged\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_accuracyLeastRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_accuracyNormalRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_accuracyMostadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_saveConfigToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_loadConfigToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_videoModePALRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_videoModeNTSCRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_fadeColorPushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_loadDefaultValuesToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_actionReport_bug_triggered\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_chipMem4MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_chipMeme8MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_chipMem512KbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_chipMem1MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_chipMem2MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_slowMemNoneRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_slowMem512KbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_slowMem1MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_slowMem1_8MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_fastMemNoneRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_fastMem1MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_fastMem2MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_fastMem4MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_fastMem8MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3MemNoneRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem1MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem2MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem4MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem8MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem16MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem32MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem64MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem128MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_z3Mem256MbRadio_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_runConfigButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_actionAmiga_triggered\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_actionSummary_triggered\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBparseLine\fP (string line)"
+.br
+.ti -1c
+.RI "void \fBsetFastMemoryDisabled\fP (bool state)"
+.br
+.ti -1c
+.RI "void \fBupdateGraphicsFromInternalConfiguration\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetConfigurationAreaFromParameterName\fP (string parameterName)"
+.br
+.ti -1c
+.RI "void \fBsaveConfigInFile\fP (string fileName)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::Amiga * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBConfigChipset\fP \fBchipsetConfiguration\fP"
+.br
+.ti -1c
+.RI "\fBConfigRam\fP \fBramConfiguration\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBAmiga::Amiga\fP (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
+.SS "\fBAmiga::~Amiga\fP ()"
+.SH "Member Function Documentation"
+.PP 
+.SS "int \fBAmiga::getConfigurationAreaFromParameterName\fP (stringparameterName)\fC [private]\fP"
+.SS "void \fBAmiga::on_accuracyLeastRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_accuracyMostadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_accuracyNormalRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_actionAmiga_triggered\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_actionReport_bug_triggered\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_actionSummary_triggered\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_amigaModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_chipMem1MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_chipMem2MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_chipMem4MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_chipMem512KbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_chipMeme8MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_fadeColorPushButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_fastMem1MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_fastMem2MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_fastMem4MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_fastMem8MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_fastMemNoneRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_kickstartExtFileToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_kickstartFileToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_loadConfigToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_loadDefaultValuesToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_runConfigButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_saveConfigToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_slowMem1_8MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_slowMem1MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_slowMem512KbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_slowMemNoneRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_videoModeNTSCRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_videoModePALRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem128MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem16MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem1MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem256MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem2MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem32MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem4MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem64MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3Mem8MbRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_z3MemNoneRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::parseLine\fP (stringline)\fC [private]\fP"
+.SS "void \fBAmiga::saveConfigInFile\fP (stringfileName)\fC [private]\fP"
+.SS "void \fBAmiga::setFastMemoryDisabled\fP (boolstate)\fC [private]\fP"
+.SS "void \fBAmiga::updateGraphicsFromInternalConfiguration\fP ()\fC [private]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConfigChipset\fP \fBAmiga::chipsetConfiguration\fP\fC [private]\fP"
+.SS "\fBConfigRam\fP \fBAmiga::ramConfiguration\fP\fC [private]\fP"
+.SS "Ui::Amiga* \fBAmiga::ui\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FS-UAE Gui for Linux OS from the source code\&.

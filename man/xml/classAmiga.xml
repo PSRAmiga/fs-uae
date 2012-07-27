@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classAmiga" kind="class" prot="public">
+    <compoundname>Amiga</compoundname>
+    <includes refid="amiga_8h" local="no">amiga.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAmiga_1a1de34d0078fedd7288aaed0d4f0fab98" prot="private" static="no" mutable="no">
+        <type>Ui::Amiga *</type>
+        <definition>Ui::Amiga* Amiga::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="105" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" prot="private" static="no" mutable="no">
+        <type><ref refid="classConfigChipset" kindref="compound">ConfigChipset</ref></type>
+        <definition>ConfigChipset Amiga::chipsetConfiguration</definition>
+        <argsstring></argsstring>
+        <name>chipsetConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="106" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAmiga_1a2f4fca23ed8fd82e7fd2fb966f9103e2" prot="private" static="no" mutable="no">
+        <type><ref refid="classConfigRam" kindref="compound">ConfigRam</ref></type>
+        <definition>ConfigRam Amiga::ramConfiguration</definition>
+        <argsstring></argsstring>
+        <name>ramConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="107" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAmiga_1adcfee400507a257674854183ea7013e3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Amiga::Amiga</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>Amiga</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="18" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="15" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classAmiga_1a90e0c9e26d6a45d5ddd1a0fe17e5ca95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Amiga::~Amiga</definition>
+        <argsstring>()</argsstring>
+        <name>~Amiga</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classAmiga_1ab3560d086c01189e0b8440df7ccb47d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_kickstartFileToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_kickstartFileToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a57608a8aede14c8f85f8d244debc84d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_kickstartExtFileToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_kickstartExtFileToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a8c808dcb36de6d61ffb409ef80aefa1d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_amigaModelComboBox_currentIndexChanged</definition>
+        <argsstring>(const QString &amp;arg1)</argsstring>
+        <name>on_amigaModelComboBox_currentIndexChanged</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="54" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a68fa00efc092a7b2dfc30004955ccde3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_accuracyLeastRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_accuracyLeastRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a728c3e4f93863a6d2188e64b1a2d0e9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_accuracyNormalRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_accuracyNormalRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1afdbb9b61aa05c68cc304052753407f2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_accuracyMostadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_accuracyMostadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="34" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ae74cddcd49b8face7e891fa9aa7afcf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_saveConfigToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_saveConfigToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="36" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="122" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a8a01a4ed20d33dbd7cf8ef02b4ddeb10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_loadConfigToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_loadConfigToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="38" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="285" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ab02373685a7d154e8cd4ba9ada48fd87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_videoModePALRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_videoModePALRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="40" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="313" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ad07a6a7c995ee702e92cd223e096ba70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_videoModeNTSCRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_videoModeNTSCRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="42" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="318" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a171344c3ca223f1cbcf1cdbb21b81f44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_fadeColorPushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fadeColorPushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="44" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ae5acd7fae447ac9fdfbb21afdc97c6fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_loadDefaultValuesToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_loadDefaultValuesToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="46" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="329" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a496638173e676f15b49624da24cb8e1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_actionReport_bug_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionReport_bug_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="48" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="324" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1abfbaa0415ec9ecd9b2dfdf62627ddbba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_chipMem4MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_chipMem4MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="50" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="350" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a6d06b74977d884ac2f9450af30f6eadf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_chipMeme8MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_chipMeme8MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="52" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="356" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a1dc8bda1d953b8cdbfee4b2227f8dca9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_chipMem512KbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_chipMem512KbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="54" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="362" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a10acfe67fa104e601351c227656bcd95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_chipMem1MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_chipMem1MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="56" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="368" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a1bb0ae3077f191c3cf0e2b430925cdb0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_chipMem2MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_chipMem2MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="58" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="374" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ae4d3b014240b739b11cd9a42a6d64c68" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_slowMemNoneRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_slowMemNoneRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="60" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="380" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1aa4e44f1c5fb0d117e62d65b0e887a0b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_slowMem512KbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_slowMem512KbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="62" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="385" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ac30409283338d527d1dc44bac7fe03e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_slowMem1MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_slowMem1MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="64" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="390" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ab230812d0a4fbb503545546ffaffe657" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_slowMem1_8MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_slowMem1_8MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="66" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="395" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a044a93fa88c24e5f9e4718571d923dec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_fastMemNoneRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fastMemNoneRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="68" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="400" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ad62cbcbdf368e9bec4b04dd9e68d30eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_fastMem1MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fastMem1MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="70" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="405" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a5bbaf0c4f82d772a162fd2b59644b423" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_fastMem2MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fastMem2MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="72" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="410" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a17cd2c88c7d77f3904ad319ad300dd4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_fastMem4MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fastMem4MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="74" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="415" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a4081a090fbcc5f86109fee996cb1c3ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_fastMem8MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fastMem8MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="76" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="420" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1abdbbaf8972ac768db392e864be9584fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3MemNoneRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3MemNoneRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="78" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="425" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a11c91a53d0ea616fc34cf9ee59137ba7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem1MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem1MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="80" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="430" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a0e53c7f6e7568b8408e404191403125c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem2MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem2MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="82" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="436" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1abf4d7dc3f984b3d18bf7865cafc5ad8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem4MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem4MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="84" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="441" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a98f2a778627e8d4cfdd568bf00517e9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem8MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem8MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="86" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="446" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1af46fe3ef84a596b58eb974d9006a438d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem16MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem16MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="88" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="451" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a38029edeb4eb5520631f1a68b64b5007" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem32MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem32MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="90" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="456" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a4df55e9f18bfb0c9bb7a956b8c80e5b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem64MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem64MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="92" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="461" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ac3c6ea30cab7bff74e4b473bf15090c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem128MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem128MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="94" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="466" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a249bb279b14d48d465498e82c9a66e2a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_z3Mem256MbRadio_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_z3Mem256MbRadio_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="96" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="471" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ad0950189995ac8d3448771623e3ceafa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_runConfigButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_runConfigButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="98" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="476" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1aec79f2ab3d67db633c76fbb5acf4ace0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_actionAmiga_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionAmiga_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="100" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="486" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a65ebd6eb61e897f954e4d137f80468bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_actionSummary_triggered</definition>
+        <argsstring>()</argsstring>
+        <name>on_actionSummary_triggered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="102" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="491" bodyend="505"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAmiga_1a74c547003937479f8715e0dfbbefa33d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::parseLine</definition>
+        <argsstring>(string line)</argsstring>
+        <name>parseLine</name>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="109" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="152" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classAmiga_1a2ad7c64788f0dabf2f08f1327acf34b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::setFastMemoryDisabled</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setFastMemoryDisabled</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="110" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="340" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classAmiga_1a153bfcb59f5250e9fec9cf03cd0fe8d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::updateGraphicsFromInternalConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>updateGraphicsFromInternalConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="111" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="173" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Amiga::getConfigurationAreaFromParameterName</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>getConfigurationAreaFromParameterName</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="112" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="137" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classAmiga_1a736cfd656c31325245e25700f951c5a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::saveConfigInFile</definition>
+        <argsstring>(string fileName)</argsstring>
+        <name>saveConfigInFile</name>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="113" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="100" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>ConfigRam</label>
+        <link refid="classConfigRam"/>
+      </node>
+      <node id="1">
+        <label>Amiga</label>
+        <link refid="classAmiga"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>chipsetConfiguration</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ramConfiguration</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ConfigChipset</label>
+        <link refid="classConfigChipset"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="13" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="12" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classAmiga_1adcfee400507a257674854183ea7013e3" prot="public" virt="non-virtual"><scope>Amiga</scope><name>Amiga</name></member>
+      <member refid="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" prot="private" virt="non-virtual"><scope>Amiga</scope><name>chipsetConfiguration</name></member>
+      <member refid="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" prot="private" virt="non-virtual"><scope>Amiga</scope><name>getConfigurationAreaFromParameterName</name></member>
+      <member refid="classAmiga_1a68fa00efc092a7b2dfc30004955ccde3" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_accuracyLeastRadio_clicked</name></member>
+      <member refid="classAmiga_1afdbb9b61aa05c68cc304052753407f2d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_accuracyMostadio_clicked</name></member>
+      <member refid="classAmiga_1a728c3e4f93863a6d2188e64b1a2d0e9e" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_accuracyNormalRadio_clicked</name></member>
+      <member refid="classAmiga_1aec79f2ab3d67db633c76fbb5acf4ace0" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_actionAmiga_triggered</name></member>
+      <member refid="classAmiga_1a496638173e676f15b49624da24cb8e1b" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_actionReport_bug_triggered</name></member>
+      <member refid="classAmiga_1a65ebd6eb61e897f954e4d137f80468bc" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_actionSummary_triggered</name></member>
+      <member refid="classAmiga_1a8c808dcb36de6d61ffb409ef80aefa1d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_amigaModelComboBox_currentIndexChanged</name></member>
+      <member refid="classAmiga_1a10acfe67fa104e601351c227656bcd95" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_chipMem1MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a1bb0ae3077f191c3cf0e2b430925cdb0" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_chipMem2MbRadio_clicked</name></member>
+      <member refid="classAmiga_1abfbaa0415ec9ecd9b2dfdf62627ddbba" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_chipMem4MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a1dc8bda1d953b8cdbfee4b2227f8dca9" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_chipMem512KbRadio_clicked</name></member>
+      <member refid="classAmiga_1a6d06b74977d884ac2f9450af30f6eadf" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_chipMeme8MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a171344c3ca223f1cbcf1cdbb21b81f44" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fadeColorPushButton_clicked</name></member>
+      <member refid="classAmiga_1ad62cbcbdf368e9bec4b04dd9e68d30eb" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMem1MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a5bbaf0c4f82d772a162fd2b59644b423" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMem2MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a17cd2c88c7d77f3904ad319ad300dd4e" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMem4MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a4081a090fbcc5f86109fee996cb1c3ee" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMem8MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a044a93fa88c24e5f9e4718571d923dec" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMemNoneRadio_clicked</name></member>
+      <member refid="classAmiga_1a57608a8aede14c8f85f8d244debc84d5" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_kickstartExtFileToolButton_clicked</name></member>
+      <member refid="classAmiga_1ab3560d086c01189e0b8440df7ccb47d5" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_kickstartFileToolButton_clicked</name></member>
+      <member refid="classAmiga_1a8a01a4ed20d33dbd7cf8ef02b4ddeb10" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_loadConfigToolButton_clicked</name></member>
+      <member refid="classAmiga_1ae5acd7fae447ac9fdfbb21afdc97c6fb" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_loadDefaultValuesToolButton_clicked</name></member>
+      <member refid="classAmiga_1ad0950189995ac8d3448771623e3ceafa" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_runConfigButton_clicked</name></member>
+      <member refid="classAmiga_1ae74cddcd49b8face7e891fa9aa7afcf9" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_saveConfigToolButton_clicked</name></member>
+      <member refid="classAmiga_1ab230812d0a4fbb503545546ffaffe657" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_slowMem1_8MbRadio_clicked</name></member>
+      <member refid="classAmiga_1ac30409283338d527d1dc44bac7fe03e9" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_slowMem1MbRadio_clicked</name></member>
+      <member refid="classAmiga_1aa4e44f1c5fb0d117e62d65b0e887a0b4" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_slowMem512KbRadio_clicked</name></member>
+      <member refid="classAmiga_1ae4d3b014240b739b11cd9a42a6d64c68" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_slowMemNoneRadio_clicked</name></member>
+      <member refid="classAmiga_1ad07a6a7c995ee702e92cd223e096ba70" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_videoModeNTSCRadio_clicked</name></member>
+      <member refid="classAmiga_1ab02373685a7d154e8cd4ba9ada48fd87" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_videoModePALRadio_clicked</name></member>
+      <member refid="classAmiga_1ac3c6ea30cab7bff74e4b473bf15090c5" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem128MbRadio_clicked</name></member>
+      <member refid="classAmiga_1af46fe3ef84a596b58eb974d9006a438d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem16MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a11c91a53d0ea616fc34cf9ee59137ba7" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem1MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a249bb279b14d48d465498e82c9a66e2a" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem256MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a0e53c7f6e7568b8408e404191403125c" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem2MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a38029edeb4eb5520631f1a68b64b5007" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem32MbRadio_clicked</name></member>
+      <member refid="classAmiga_1abf4d7dc3f984b3d18bf7865cafc5ad8c" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem4MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a4df55e9f18bfb0c9bb7a956b8c80e5b3" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem64MbRadio_clicked</name></member>
+      <member refid="classAmiga_1a98f2a778627e8d4cfdd568bf00517e9d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3Mem8MbRadio_clicked</name></member>
+      <member refid="classAmiga_1abdbbaf8972ac768db392e864be9584fa" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_z3MemNoneRadio_clicked</name></member>
+      <member refid="classAmiga_1a74c547003937479f8715e0dfbbefa33d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>parseLine</name></member>
+      <member refid="classAmiga_1a2f4fca23ed8fd82e7fd2fb966f9103e2" prot="private" virt="non-virtual"><scope>Amiga</scope><name>ramConfiguration</name></member>
+      <member refid="classAmiga_1a736cfd656c31325245e25700f951c5a7" prot="private" virt="non-virtual"><scope>Amiga</scope><name>saveConfigInFile</name></member>
+      <member refid="classAmiga_1a2ad7c64788f0dabf2f08f1327acf34b2" prot="private" virt="non-virtual"><scope>Amiga</scope><name>setFastMemoryDisabled</name></member>
+      <member refid="classAmiga_1a1de34d0078fedd7288aaed0d4f0fab98" prot="private" virt="non-virtual"><scope>Amiga</scope><name>ui</name></member>
+      <member refid="classAmiga_1a153bfcb59f5250e9fec9cf03cd0fe8d6" prot="private" virt="non-virtual"><scope>Amiga</scope><name>updateGraphicsFromInternalConfiguration</name></member>
+      <member refid="classAmiga_1a90e0c9e26d6a45d5ddd1a0fe17e5ca95" prot="public" virt="non-virtual"><scope>Amiga</scope><name>~Amiga</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

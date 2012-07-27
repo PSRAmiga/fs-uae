@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.7.6.1">
+  <compound refid="classAmiga" kind="class"><name>Amiga</name>
+    <member refid="classAmiga_1a1de34d0078fedd7288aaed0d4f0fab98" kind="variable"><name>ui</name></member>
+    <member refid="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" kind="variable"><name>chipsetConfiguration</name></member>
+    <member refid="classAmiga_1a2f4fca23ed8fd82e7fd2fb966f9103e2" kind="variable"><name>ramConfiguration</name></member>
+    <member refid="classAmiga_1adcfee400507a257674854183ea7013e3" kind="function"><name>Amiga</name></member>
+    <member refid="classAmiga_1a90e0c9e26d6a45d5ddd1a0fe17e5ca95" kind="function"><name>~Amiga</name></member>
+    <member refid="classAmiga_1ab3560d086c01189e0b8440df7ccb47d5" kind="slot"><name>on_kickstartFileToolButton_clicked</name></member>
+    <member refid="classAmiga_1a57608a8aede14c8f85f8d244debc84d5" kind="slot"><name>on_kickstartExtFileToolButton_clicked</name></member>
+    <member refid="classAmiga_1a8c808dcb36de6d61ffb409ef80aefa1d" kind="slot"><name>on_amigaModelComboBox_currentIndexChanged</name></member>
+    <member refid="classAmiga_1a68fa00efc092a7b2dfc30004955ccde3" kind="slot"><name>on_accuracyLeastRadio_clicked</name></member>
+    <member refid="classAmiga_1a728c3e4f93863a6d2188e64b1a2d0e9e" kind="slot"><name>on_accuracyNormalRadio_clicked</name></member>
+    <member refid="classAmiga_1afdbb9b61aa05c68cc304052753407f2d" kind="slot"><name>on_accuracyMostadio_clicked</name></member>
+    <member refid="classAmiga_1ae74cddcd49b8face7e891fa9aa7afcf9" kind="slot"><name>on_saveConfigToolButton_clicked</name></member>
+    <member refid="classAmiga_1a8a01a4ed20d33dbd7cf8ef02b4ddeb10" kind="slot"><name>on_loadConfigToolButton_clicked</name></member>
+    <member refid="classAmiga_1ab02373685a7d154e8cd4ba9ada48fd87" kind="slot"><name>on_videoModePALRadio_clicked</name></member>
+    <member refid="classAmiga_1ad07a6a7c995ee702e92cd223e096ba70" kind="slot"><name>on_videoModeNTSCRadio_clicked</name></member>
+    <member refid="classAmiga_1a171344c3ca223f1cbcf1cdbb21b81f44" kind="slot"><name>on_fadeColorPushButton_clicked</name></member>
+    <member refid="classAmiga_1ae5acd7fae447ac9fdfbb21afdc97c6fb" kind="slot"><name>on_loadDefaultValuesToolButton_clicked</name></member>
+    <member refid="classAmiga_1a496638173e676f15b49624da24cb8e1b" kind="slot"><name>on_actionReport_bug_triggered</name></member>
+    <member refid="classAmiga_1abfbaa0415ec9ecd9b2dfdf62627ddbba" kind="slot"><name>on_chipMem4MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a6d06b74977d884ac2f9450af30f6eadf" kind="slot"><name>on_chipMeme8MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a1dc8bda1d953b8cdbfee4b2227f8dca9" kind="slot"><name>on_chipMem512KbRadio_clicked</name></member>
+    <member refid="classAmiga_1a10acfe67fa104e601351c227656bcd95" kind="slot"><name>on_chipMem1MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a1bb0ae3077f191c3cf0e2b430925cdb0" kind="slot"><name>on_chipMem2MbRadio_clicked</name></member>
+    <member refid="classAmiga_1ae4d3b014240b739b11cd9a42a6d64c68" kind="slot"><name>on_slowMemNoneRadio_clicked</name></member>
+    <member refid="classAmiga_1aa4e44f1c5fb0d117e62d65b0e887a0b4" kind="slot"><name>on_slowMem512KbRadio_clicked</name></member>
+    <member refid="classAmiga_1ac30409283338d527d1dc44bac7fe03e9" kind="slot"><name>on_slowMem1MbRadio_clicked</name></member>
+    <member refid="classAmiga_1ab230812d0a4fbb503545546ffaffe657" kind="slot"><name>on_slowMem1_8MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a044a93fa88c24e5f9e4718571d923dec" kind="slot"><name>on_fastMemNoneRadio_clicked</name></member>
+    <member refid="classAmiga_1ad62cbcbdf368e9bec4b04dd9e68d30eb" kind="slot"><name>on_fastMem1MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a5bbaf0c4f82d772a162fd2b59644b423" kind="slot"><name>on_fastMem2MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a17cd2c88c7d77f3904ad319ad300dd4e" kind="slot"><name>on_fastMem4MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a4081a090fbcc5f86109fee996cb1c3ee" kind="slot"><name>on_fastMem8MbRadio_clicked</name></member>
+    <member refid="classAmiga_1abdbbaf8972ac768db392e864be9584fa" kind="slot"><name>on_z3MemNoneRadio_clicked</name></member>
+    <member refid="classAmiga_1a11c91a53d0ea616fc34cf9ee59137ba7" kind="slot"><name>on_z3Mem1MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a0e53c7f6e7568b8408e404191403125c" kind="slot"><name>on_z3Mem2MbRadio_clicked</name></member>
+    <member refid="classAmiga_1abf4d7dc3f984b3d18bf7865cafc5ad8c" kind="slot"><name>on_z3Mem4MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a98f2a778627e8d4cfdd568bf00517e9d" kind="slot"><name>on_z3Mem8MbRadio_clicked</name></member>
+    <member refid="classAmiga_1af46fe3ef84a596b58eb974d9006a438d" kind="slot"><name>on_z3Mem16MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a38029edeb4eb5520631f1a68b64b5007" kind="slot"><name>on_z3Mem32MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a4df55e9f18bfb0c9bb7a956b8c80e5b3" kind="slot"><name>on_z3Mem64MbRadio_clicked</name></member>
+    <member refid="classAmiga_1ac3c6ea30cab7bff74e4b473bf15090c5" kind="slot"><name>on_z3Mem128MbRadio_clicked</name></member>
+    <member refid="classAmiga_1a249bb279b14d48d465498e82c9a66e2a" kind="slot"><name>on_z3Mem256MbRadio_clicked</name></member>
+    <member refid="classAmiga_1ad0950189995ac8d3448771623e3ceafa" kind="slot"><name>on_runConfigButton_clicked</name></member>
+    <member refid="classAmiga_1aec79f2ab3d67db633c76fbb5acf4ace0" kind="slot"><name>on_actionAmiga_triggered</name></member>
+    <member refid="classAmiga_1a65ebd6eb61e897f954e4d137f80468bc" kind="slot"><name>on_actionSummary_triggered</name></member>
+    <member refid="classAmiga_1a74c547003937479f8715e0dfbbefa33d" kind="function"><name>parseLine</name></member>
+    <member refid="classAmiga_1a2ad7c64788f0dabf2f08f1327acf34b2" kind="function"><name>setFastMemoryDisabled</name></member>
+    <member refid="classAmiga_1a153bfcb59f5250e9fec9cf03cd0fe8d6" kind="function"><name>updateGraphicsFromInternalConfiguration</name></member>
+    <member refid="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" kind="function"><name>getConfigurationAreaFromParameterName</name></member>
+    <member refid="classAmiga_1a736cfd656c31325245e25700f951c5a7" kind="function"><name>saveConfigInFile</name></member>
+  </compound>
+  <compound refid="classConfigChipset" kind="class"><name>ConfigChipset</name>
+    <member refid="classConfigChipset_1a4bc77e1b25746f228af19e8315982822" kind="variable"><name>amiga_model</name></member>
+    <member refid="classConfigChipset_1a741b37054ee3bba7d7c1dd0478c99062" kind="variable"><name>kickstart_file</name></member>
+    <member refid="classConfigChipset_1ad96fe812365b5770a3cf57326aa564f6" kind="variable"><name>kickstart_ext_file</name></member>
+    <member refid="classConfigChipset_1aac118cb9562ecaba7d6fc24c1bfedc45" kind="variable"><name>accuracy</name></member>
+    <member refid="classConfigChipset_1a2957b49b2ebd0fa73850bc3f0e893502" kind="variable"><name>ntsc_mode</name></member>
+    <member refid="classConfigChipset_1a5c8883eb03e10dcb4c17e9d8d08c28af" kind="function"><name>ConfigChipset</name></member>
+    <member refid="classConfigChipset_1a8df3fc13802b8ab395b2b752ecaf2e4b" kind="function"><name>getAccuracyConfigString</name></member>
+    <member refid="classConfigChipset_1ad151ad2223bb3d6db2d3323435fef3fc" kind="function"><name>getAccuracyString</name></member>
+    <member refid="classConfigChipset_1a75301906dd1d3547f8f826ba7420e862" kind="function"><name>getNTSCModeConfigString</name></member>
+    <member refid="classConfigChipset_1a84b7342aa2b6c452a866a4992cce4b2e" kind="function"><name>getNTSCModeString</name></member>
+    <member refid="classConfigChipset_1a2cee39e4c4eb03e50d5843d757619b15" kind="function"><name>getAmigaModelConfigString</name></member>
+    <member refid="classConfigChipset_1ac109ba888a28357c7ee79b1511fa8dd7" kind="function"><name>getAmigaModelString</name></member>
+    <member refid="classConfigChipset_1ae12d127741abe604b9a79a1524bb4eae" kind="function"><name>getKickstartFileConfigString</name></member>
+    <member refid="classConfigChipset_1a35a96251236644d9a252d59e325f4b61" kind="function"><name>getKickstartFileString</name></member>
+    <member refid="classConfigChipset_1a1fafcd89c72d2447a08fc88fb2bc9926" kind="function"><name>getKickstartExtFileConfigString</name></member>
+    <member refid="classConfigChipset_1aa756feef2817f1a5afddf6157066a814" kind="function"><name>getKickstartExtFileString</name></member>
+    <member refid="classConfigChipset_1a6dc149a460407e313cdc1ec348e5cf03" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigChipset_1a748fd2c9e997c27b920bb79daee2ab21" kind="function"><name>setToDefaultConfiguration</name></member>
+  </compound>
+  <compound refid="classConfigRam" kind="class"><name>ConfigRam</name>
+    <member refid="classConfigRam_1ad6b2684bcb11199f26659524612e3741" kind="variable"><name>chip_memory</name></member>
+    <member refid="classConfigRam_1a716614ef01fde9b247de51555722eb21" kind="variable"><name>slow_memory</name></member>
+    <member refid="classConfigRam_1a924ca1cd8def2cb5ee7a1b5413968040" kind="variable"><name>fast_memory</name></member>
+    <member refid="classConfigRam_1a3ec94161f229dc1a7e9fe0b609bc2ac5" kind="variable"><name>zorro_iii_memory</name></member>
+    <member refid="classConfigRam_1aaca57679f5c41f8441c0a97ddb2d0a22" kind="function"><name>ConfigRam</name></member>
+    <member refid="classConfigRam_1abecbb2f54c5af5613a059abbbfc3542a" kind="function"><name>getChipMemoryConfigString</name></member>
+    <member refid="classConfigRam_1a527c56bbaa9f503e1038089d995df18e" kind="function"><name>getChipMemoryString</name></member>
+    <member refid="classConfigRam_1a8817d9cec97e5107b0ea771b897363a9" kind="function"><name>getSlowMemoryConfigString</name></member>
+    <member refid="classConfigRam_1a006873994b74d5b3abb9128aea9e755a" kind="function"><name>getSlowMemoryString</name></member>
+    <member refid="classConfigRam_1adf8f3353c2c46ea21286e72216dea218" kind="function"><name>getFastMemoryConfigString</name></member>
+    <member refid="classConfigRam_1a55c39f64ad63dfb5ddbcb2778e53016d" kind="function"><name>getFastMemoryString</name></member>
+    <member refid="classConfigRam_1a456cfc71f7085ad5bd7300446a82b547" kind="function"><name>getZorro3ConfigString</name></member>
+    <member refid="classConfigRam_1a14f205c9a74967e3c70aa460dac5e1ff" kind="function"><name>getZorro3String</name></member>
+    <member refid="classConfigRam_1a0aa65deb20de0380b4b6126f6ea58569" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigRam_1a43e6e17db9a030a4cb522b329f00797e" kind="function"><name>setToDefaultConfiguration</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="namespaceUi" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="amiga_8cpp" kind="file"><name>amiga.cpp</name>
+    <member refid="amiga_8cpp_1a44d123ae1154603e13e99f12b8cc5986" kind="function"><name>isEmptyString</name></member>
+  </compound>
+  <compound refid="amiga_8h" kind="file"><name>amiga.h</name>
+  </compound>
+  <compound refid="configchipset_8cpp" kind="file"><name>configchipset.cpp</name>
+    <member refid="configchipset_8cpp_1a6853c05965333a35e9223261c0c52175" kind="variable"><name>DEFAULTACCURACY</name></member>
+    <member refid="configchipset_8cpp_1a27088af9bba3dee1a00c7d923484aeef" kind="variable"><name>DEFAULTNTSCMODE</name></member>
+    <member refid="configchipset_8cpp_1ae9e137436bfa773d47e9fae4790e9a97" kind="variable"><name>DEFAULTAMIGAMODEL</name></member>
+    <member refid="configchipset_8cpp_1a6b7a973056570affead4ca7300f44876" kind="variable"><name>DEFAULTKICKSTARTFILE</name></member>
+    <member refid="configchipset_8cpp_1a9735f2bffda02ee4956ee401b0d8179f" kind="variable"><name>DEFAULTKICKSTARTEXTFILE</name></member>
+  </compound>
+  <compound refid="configchipset_8h" kind="file"><name>configchipset.h</name>
+  </compound>
+  <compound refid="configram_8cpp" kind="file"><name>configram.cpp</name>
+    <member refid="configram_8cpp_1acb96ed928a373ffbfe5c07984b0f1736" kind="variable"><name>DEFAULTCHIPMEMORY</name></member>
+    <member refid="configram_8cpp_1a6a8e42078e4e8d01132bc354009f988c" kind="variable"><name>DEFAULTSLOWMEMORY</name></member>
+    <member refid="configram_8cpp_1a16eac1e2cd30dc3307dc14daa2fdc0a1" kind="variable"><name>DEFAULTFASTMEMORY</name></member>
+    <member refid="configram_8cpp_1a142a201d9251a08d5a89b577a109fbf2" kind="variable"><name>DEFAULTZORROIIIMEMORY</name></member>
+  </compound>
+  <compound refid="configram_8h" kind="file"><name>configram.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+</doxygenindex>
