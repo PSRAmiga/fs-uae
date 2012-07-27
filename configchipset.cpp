@@ -1,5 +1,4 @@
 #include "configchipset.h"
-#include "amiga.h"
 
 const string DEFAULTACCURACY = "1";
 const string DEFAULTNTSCMODE = "0";

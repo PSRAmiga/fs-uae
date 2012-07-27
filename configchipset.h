@@ -1,6 +1,6 @@
-#include <string>
 #ifndef CONFIGCHIPSET_H
 #define CONFIGCHIPSET_H
+#include <string>
 using namespace std;
 
 class ConfigChipset
@@ -11,9 +11,9 @@ class ConfigChipset
     string accuracy;
     string ntsc_mode;
 
-
 public:
     ConfigChipset();
+
     string getAccuracyConfigString();
     string getAccuracyString();
     string getNTSCModeConfigString();
@@ -27,7 +27,6 @@ public:
 
     void setParameter(string parameter,string value);
     void setToDefaultConfiguration();
-    //void updateGraphicsFromInternalConfiguration(Amiga amiga);
 };
 
 #endif // CONFIGCHIPSET_H

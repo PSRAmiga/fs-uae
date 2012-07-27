@@ -12,10 +12,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         amiga.cpp \
-    configchipset.cpp
+    configchipset.cpp \
+    configram.cpp
 
 HEADERS  += amiga.h \
-    configchipset.h
+    configchipset.h \
+    configram.h
 
 FORMS    += amiga.ui
 
