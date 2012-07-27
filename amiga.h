@@ -95,6 +95,8 @@ private slots:
 
     void on_z3Mem256MbRadio_clicked();
 
+    void on_runConfigButton_clicked();
+
 private:
     Ui::Amiga *ui;
     ConfigChipset chipsetConfiguration;
@@ -104,6 +106,7 @@ private:
     void setFastMemoryDisabled(bool state);
     void updateGraphicsFromInternalConfiguration();
     int getConfigurationAreaFromParameterName(string parameterName);
+    void saveConfigInFile(string fileName);
 };
 
 #endif // AMIGA_H

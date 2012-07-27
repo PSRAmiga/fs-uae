@@ -5,6 +5,9 @@
 #include <QDesktopServices>
 #include <QFileDialog>
 #include <QColorDialog>
+#include <QProcess>
+
+#include <cstdlib>
 using namespace std;
 
 
@@ -89,32 +92,17 @@ void Amiga::on_accuracyMostadio_clicked()
 }
 
 bool isEmptyString(string s){
-     //NB compare ritorna 0 se è la comparazione è vera, è il contrario!
+    //NB compare ritorna 0 se è la comparazione è vera, è il contrario!
     return !(s.compare(""));
 }
 
-void Amiga::on_saveConfigToolButton_clicked()
-{
-    //ui->kickstartExtFileLineEdit->setText(QString::fromStdString(configChipset.getAccuracyString()));
-    QString fileName=QFileDialog::getSaveFileName(this, tr("Save file as"), "/", tr("Config file *.fs-uae (*.fs-uae)"));
-    if (fileName.compare("")==0) {return; }
-
-    //fare check sull'estensione
-    string fileNameString;
-
-    if(fileName.contains(".fs-uae", Qt::CaseInsensitive)) {fileNameString=fileName.toStdString();}
-    else {fileNameString=fileName.toStdString()+".fs-uae";}
-
-
+void Amiga::saveConfigInFile(string fileName){
     //TODO devo controllare gli errore sulla scrittura/lettura /////////////////////////////////////////////////////////////////////////////////
 
     ofstream myfile;
-    //myfile.open ("/home/davide/Desktop/prova.txt",ios::out);
-    myfile.open(fileNameString.c_str(),ios::out);
+    myfile.open(fileName.c_str(),ios::out);
 
     myfile << "[config]" <<endl;
-
-
 
     if (!isEmptyString(chipsetConfiguration.getAccuracyConfigString())) {myfile << chipsetConfiguration.getAccuracyConfigString() << endl;}
     if (!isEmptyString(chipsetConfiguration.getNTSCModeConfigString())) {myfile << chipsetConfiguration.getNTSCModeConfigString() << endl;}
@@ -128,6 +116,21 @@ void Amiga::on_saveConfigToolButton_clicked()
     if (!isEmptyString(ramConfiguration.getZorro3ConfigString())) {myfile << ramConfiguration.getZorro3ConfigString() << endl;}
 
     myfile.close();
+}
+
+void Amiga::on_saveConfigToolButton_clicked()
+{
+    QString fileName=QFileDialog::getSaveFileName(this, tr("Save file as"), "/", tr("Config file *.fs-uae (*.fs-uae)"));
+    if (fileName.compare("")==0) {return; }
+
+    //fare check sull'estensione
+    string fileNameString;
+
+    if(fileName.contains(".fs-uae", Qt::CaseInsensitive)) {fileNameString=fileName.toStdString();}
+    else {fileNameString=fileName.toStdString()+".fs-uae";}
+
+    saveConfigInFile(fileNameString);
+
 }
 
 int Amiga::getConfigurationAreaFromParameterName(string parameterName){
@@ -467,4 +470,10 @@ void Amiga::on_z3Mem128MbRadio_clicked()
 void Amiga::on_z3Mem256MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","262144");
+}
+
+void Amiga::on_runConfigButton_clicked()
+{
+    saveConfigInFile(".current.fs-uae");
+    system("fs-uae .current.fs-uae");
 }
