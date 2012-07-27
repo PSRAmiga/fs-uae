@@ -2,20 +2,22 @@
 #include "ui_amiga.h"
 #include <fstream>
 #include <QUrl>
+#include <stdlib.h>
+#include <pwd.h>
+#include <stdio.h>
 #include <QDesktopServices>
 #include <QFileDialog>
 #include <QColorDialog>
 #include <QProcess>
-
 #include <cstdlib>
 using namespace std;
-
 
 Amiga::Amiga(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Amiga)
 {
     ui->setupUi(this);
+    ui->Setup->setCurrentIndex(0);
 }
 
 Amiga::~Amiga()
@@ -46,7 +48,6 @@ void Amiga::on_fadeColorPushButton_clicked()
     QColor color = QColorDialog::getColor(Qt::black, this);
     ui->fadeColorPushButton->setText(color.name());
     ui->fadeColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
-
 }
 
 
@@ -475,5 +476,30 @@ void Amiga::on_z3Mem256MbRadio_clicked()
 void Amiga::on_runConfigButton_clicked()
 {
     saveConfigInFile(".current.fs-uae");
-    system("fs-uae .current.fs-uae");
+    int returnValue=system("fs-uae .current.fs-uae");
+    if (returnValue!=0)
+    {
+        ui->errorLabel->setText(QString::fromStdString("Ops...something went wrong :-("));
+    }
+}
+
+void Amiga::on_actionAmiga_triggered()
+{
+    ui->Setup->setCurrentIndex(8);
+}
+
+void Amiga::on_actionSummary_triggered()
+{
+    string username="";
+    register struct passwd *pw;
+    register uid_t uid;
+    uid = geteuid ();
+    pw = getpwuid (uid);
+    if (pw)
+    {
+        username=pw->pw_name;
+    }
+
+    string index="file:///home/"+username+"/.FS-UAE/html/index.html";
+    QDesktopServices::openUrl(QUrl(QString::fromStdString(index), QUrl::TolerantMode));
 }
