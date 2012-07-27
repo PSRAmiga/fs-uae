@@ -99,6 +99,7 @@ void Amiga::on_saveConfigToolButton_clicked()
     //myfile.open ("/home/davide/Desktop/prova.txt",ios::out);
     myfile.open(fileNameString.c_str(),ios::out);
 
+    myfile << "[config]" <<endl;
     if (configChipset.getAccuracyConfigString().compare("")) {myfile << configChipset.getAccuracyConfigString() << endl;}
     if (configChipset.getNTSCModeConfigString().compare("")) {myfile << configChipset.getNTSCModeConfigString() << endl;}
     if (configChipset.getAmigaModelConfigString().compare("")) {myfile << configChipset.getAmigaModelConfigString() << endl;}
@@ -112,9 +113,10 @@ void Amiga::on_saveConfigToolButton_clicked()
 void Amiga::parseLine(string line){
     if (line.length()==0) return;
     //fs-uae config file convention is "name = value"
-    int separatorPosition=line.find_last_of(" = ");
-    string parameterName=line.substr(0,separatorPosition-2);
-    string parameterValue=line.substr(separatorPosition+1,line.length()-1);
+
+    int separatorPosition=line.find_first_of(" = ");
+    string parameterName=line.substr(0,separatorPosition);
+    string parameterValue=line.substr(separatorPosition+3,line.length()-1);
 
     //bisogna capire in quale configurazione indirizzarlo, poi ogni config si sistema da sola internamente
     //magari con una funzione del tipo getConfigurationAreaFromParameterName(parameterName) che restituisce
@@ -212,7 +214,7 @@ void Amiga::on_videoModeNTSCRadio_clicked()
 
 void Amiga::on_actionReport_bug_triggered()
 {
-       QDesktopServices::openUrl(QUrl(tr("mailto:alessandromario.riva@gmail.com,dsanvito90@gmail.com?subject=FS-UAE Gui Bug Report")));
+    QDesktopServices::openUrl(QUrl(tr("mailto:alessandromario.riva@gmail.com,dsanvito90@gmail.com?subject=FS-UAE Gui Bug Report")));
 }
 
 void Amiga::on_loadDefaultValuesToolButton_clicked()
