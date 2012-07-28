@@ -13,11 +13,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         amiga.cpp \
     configchipset.cpp \
-    configram.cpp
+    configram.cpp \
+    configfloppy.cpp
 
 HEADERS  += amiga.h \
     configchipset.h \
-    configram.h
+    configram.h \
+    configfloppy.h
 
 FORMS    += amiga.ui
 

@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <configchipset.h>
 #include <configram.h>
+#include <configfloppy.h>
 
 namespace Ui {
 class Amiga;
@@ -97,10 +98,32 @@ private slots:
 
     void on_runConfigButton_clicked();
 
+    void on_floppyDrive0ToolButton_clicked();
+
+    void on_floppySwappingImagesAddPushButton_clicked();
+
+    void on_floppyDriveVolumeSlider_valueChanged(int value);
+
+    void on_floppyDriveVolumeMuteCheckBox_clicked();
+
+    void on_floppyDriveSpeedSlider_valueChanged(int position);
+
+    void on_floppyDrive1ToolButton_clicked();
+
+    void on_floppyDrive2ToolButton_clicked();
+
+    void on_floppyDrive3ToolButton_clicked();
+
+    void on_floppySwappingImagerRemovePushButton_clicked();
+
+    void on_alternativeBaseDirPushButton_clicked();
+
 private:
     Ui::Amiga *ui;
     ConfigChipset chipsetConfiguration;
     ConfigRam ramConfiguration;
+    ConfigFloppy floppyConfiguration;
+
 
     void parseLine(string line);
     void setFastMemoryDisabled(bool state);

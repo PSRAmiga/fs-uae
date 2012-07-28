@@ -1,8 +1,10 @@
 #include "amiga.h"
 #include "ui_amiga.h"
+#include <sstream>
 #include <fstream>
 #include <QUrl>
 #include <QDesktopServices>
+#include <QMessageBox>
 #include <QFileDialog>
 #include <QColorDialog>
 #include <QProcess>
@@ -26,15 +28,14 @@ Amiga::~Amiga()
 
 void Amiga::on_kickstartFileToolButton_clicked()
 {
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), "/", tr("Image adf/rom(*.adf *.rom)"));
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Image adf/rom(*.adf *.rom)"));
     ui->kickstartFileLineEdit->setText(fileName);
     chipsetConfiguration.setParameter("kickstart_file",fileName.toStdString());
 }
 
 void Amiga::on_kickstartExtFileToolButton_clicked()
 {
-    //QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), "/", tr("Image ROM(*.rom)"));
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Image ROM(*.rom)"));
     ui->kickstartExtFileLineEdit->setText(fileName);
     chipsetConfiguration.setParameter("kickstart_ext_file",fileName.toStdString());
 }
@@ -115,12 +116,25 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(ramConfiguration.getSlowMemoryConfigString())) {myfile << ramConfiguration.getSlowMemoryConfigString() << endl;}
     if (!isEmptyString(ramConfiguration.getZorro3ConfigString())) {myfile << ramConfiguration.getZorro3ConfigString() << endl;}
 
+    if (!isEmptyString(floppyConfiguration.getFloppyDrive0ConfigString())) {myfile << floppyConfiguration.getFloppyDrive0ConfigString() << endl;}
+    if (!isEmptyString(floppyConfiguration.getFloppyDrive1ConfigString())) {myfile << floppyConfiguration.getFloppyDrive1ConfigString() << endl;}
+    if (!isEmptyString(floppyConfiguration.getFloppyDrive2ConfigString())) {myfile << floppyConfiguration.getFloppyDrive2ConfigString() << endl;}
+    if (!isEmptyString(floppyConfiguration.getFloppyDrive3ConfigString())) {myfile << floppyConfiguration.getFloppyDrive3ConfigString() << endl;}
+    if (!isEmptyString(floppyConfiguration.getFloppyDriveSpeedConfigString())) {myfile << floppyConfiguration.getFloppyDriveSpeedConfigString() << endl;}
+    if (!isEmptyString(floppyConfiguration.getFloppyDriveVolumeConfigString())) {myfile << floppyConfiguration.getFloppyDriveVolumeConfigString() << endl;}
+    if (floppyConfiguration.getFloppyImageSize()>0){
+        for(int i=0;i<floppyConfiguration.getFloppyImageSize();i++){
+            myfile << "floppy_image_" << i << " = " << floppyConfiguration.getFloppyImageAt(i) << endl;
+        }
+
+    }
+
     myfile.close();
 }
 
 void Amiga::on_saveConfigToolButton_clicked()
 {
-    QString fileName=QFileDialog::getSaveFileName(this, tr("Save file as"), "/", tr("Config file *.fs-uae (*.fs-uae)"));
+    QString fileName=QFileDialog::getSaveFileName(this, tr("Save file as"), QDir::homePath(), tr("Config file *.fs-uae (*.fs-uae)"));
     if (fileName.compare("")==0) {return; }
 
     //fare check sull'estensione
@@ -137,12 +151,13 @@ int Amiga::getConfigurationAreaFromParameterName(string parameterName){
     //per ora ritorno un numero/una stringa poi magari potrei fare una configurazione astratta e ritornare direttamente l'oggetto chipsetConfiguration.
     //ovviamente tutte le config dovranno implemntare l'astratta così questa funzione ritorna un oggetto di tipo padre abstract config
     //e posso fare abstrobj.setParameter(...) con un'unica riga dentro a parseLine()
-
-
     if ((parameterName.compare("amiga_model")==0)||(parameterName.compare("accuracy")==0)||(parameterName.compare("kickstart_file")==0)||(parameterName.compare("kickstart_ext_file")==0)||(parameterName.compare("ntsc_mode")==0)) {
         return 1;
     } else if ((parameterName.compare("chip_memory")==0)||(parameterName.compare("slow_memory")==0)||(parameterName.compare("fast_memory")==0)||(parameterName.compare("zorro_iii_memory")==0)){
         return 2;
+    } else if ((parameterName.substr(0,parameterName.length()-1).compare("floppy_drive_")==0)||(parameterName.substr(0,parameterName.length()-1).compare("floppy_image_")==0)||(parameterName.substr(0,parameterName.length()-2).compare("floppy_image_")==0)||(parameterName.compare("floppy_drive_volume")==0)||(parameterName.compare("floppy_drive_speed")==0)){
+        //QMessageBox::about(this, tr("Error"),QString::fromStdString(parameterName.substr(0,parameterName.length()-1)));
+        return 3;
     } else {
         return -1;
     }
@@ -159,11 +174,16 @@ void Amiga::parseLine(string line){
     //bisogna capire in quale configurazione indirizzarlo, poi ogni config si sistema da sola internamente
     //magari con una funzione del tipo getConfigurationAreaFromParameterName(parameterName) che restituisce
     //una string oppure una ENUM
+
+    //NB se non trovo nessun parametro con quel nome significa che il parametro non esiste (getConfigurationAreaFromParameterName ritorna -1)
+    //se invece il parametro esiste ma non è un valore valido se ne preoccupa l'area di configurazione
     int configArea=getConfigurationAreaFromParameterName(parameterName);
     if (configArea==1){
         chipsetConfiguration.setParameter(parameterName,parameterValue);
     } else if (configArea==2){
         ramConfiguration.setParameter(parameterName,parameterValue);
+    } else if (configArea==3){
+        floppyConfiguration.setParameter(parameterName,parameterValue);
     }
 
 
@@ -220,8 +240,10 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string chip_memory=this->ramConfiguration.getChipMemoryString();
     if (chip_memory.compare("8192")==0){
         ui->chipMeme8MbRadio->setChecked(true);
+        setFastMemoryDisabled(true);
     } else if (chip_memory.compare("4096")==0){
         ui->chipMem4MbRadio->setChecked(true);
+        setFastMemoryDisabled(true);
     } else if (chip_memory.compare("2048")==0){
         ui->chipMem2MbRadio->setChecked(true);
     } else if (chip_memory.compare("1024")==0){
@@ -256,6 +278,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         ui->fastMemNoneRadio->setChecked(true);
     }
 
+    //ZORRO MEMORY
     string zorro_iii_memory=this->ramConfiguration.getZorro3String();
     if (zorro_iii_memory.compare("262144")==0){
         ui->z3Mem256MbRadio->setChecked(true);
@@ -279,17 +302,70 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         ui->z3MemNoneRadio->setChecked(true);
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //FLOPPY DRIVES
+    string floppy_drive_0=this->floppyConfiguration.getFloppyDrive0String();
+    ui->floppyDrive0LineEdit->setText(QString::fromStdString(floppy_drive_0));
+
+    string floppy_drive_1=this->floppyConfiguration.getFloppyDrive1String();
+    ui->floppyDrive1LineEdit->setText(QString::fromStdString(floppy_drive_1));
+
+    string floppy_drive_2=this->floppyConfiguration.getFloppyDrive2String();
+    ui->floppyDrive2LineEdit->setText(QString::fromStdString(floppy_drive_2));
+
+    string floppy_drive_3=this->floppyConfiguration.getFloppyDrive3String();
+    ui->floppyDrive3LineEdit->setText(QString::fromStdString(floppy_drive_3));
+
+    //FLOPPY DRIVE VOLUME
+    string floppy_drive_volume=this->floppyConfiguration.getFloppyDriveVolumeString();
+    ui->floppyDriveVolumeDisplayLabel->setText(QString::fromStdString(floppy_drive_volume));
+    istringstream buffer(floppy_drive_volume);
+    int intValue;
+    buffer >> intValue;
+    ui->floppyDriveVolumeSlider->setValue(intValue);
+
+    //FLOPPY DRIVE SPEED
+    //0<floppy_drive_speed<1200
+    string floppy_drive_speed=this->floppyConfiguration.getFloppyDriveSpeedString();
+    istringstream buffer2(floppy_drive_speed);
+    int intValue2;
+    buffer2 >> intValue2;
+    ui->floppyDriveSpeedSlider->setValue(intValue2/100);
+    string displayString;
+    if (intValue2==0){
+        displayString="TURBO";
+    } else{
+        displayString=floppy_drive_speed.substr(0,floppy_drive_speed.length()-2) + "X";
+    }
+    ui->floppyDriveSpeedDisplayLabel->setText(QString::fromStdString(displayString));
+
+    ui->floppyDriveVolumeMuteCheckBox->setChecked(false);
+
+    //FLOPPY SWAP IMAGES
+    ui->floppySwappingImagesListWidget->clear();
+    if (floppyConfiguration.getFloppyImageSize()>0){
+        for(int i=0;i<floppyConfiguration.getFloppyImageSize();i++){
+            ui->floppySwappingImagesListWidget->addItem(QString::fromStdString(floppyConfiguration.getFloppyImageAt(i)));
+        }
+
+    }
+    string floppyOccupiedSlotsString=static_cast<ostringstream*>( &(ostringstream() << floppyConfiguration.getFloppyImageSize()) )->str();
+    ui->floppyOccupiedSlotsDisplayLabel->setText(QString::fromStdString(floppyOccupiedSlotsString+"/20"));
 }
 
 void Amiga::on_loadConfigToolButton_clicked()
 {
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), "/", tr("Config file *.fs-uae (*.fs-uae)"));
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Config file *.fs-uae (*.fs-uae)"));
     if (fileName.compare("")==0) {return; }
 
     //devo resettare tutte le impostazioni a default perchè nel file i valori di defult non sono esplicitamente salvati
     //quindi rischierei di vedere i valori dell'ultima config
 
     chipsetConfiguration.setToDefaultConfiguration();
+    ramConfiguration.setToDefaultConfiguration();
+    floppyConfiguration.setToDefaultConfiguration();
+    /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
     //poi leggo riga per riga, aggiorno la configurazione interna e aggiorno i componenti
 
@@ -308,12 +384,10 @@ void Amiga::on_loadConfigToolButton_clicked()
     //lo devo fare per ogni configuration area
     updateGraphicsFromInternalConfiguration();
 }
-
 void Amiga::on_videoModePALRadio_clicked()
 {
     this->chipsetConfiguration.setParameter("ntsc_mode","0");
 }
-
 void Amiga::on_videoModeNTSCRadio_clicked()
 {
     this->chipsetConfiguration.setParameter("ntsc_mode","1");
@@ -329,10 +403,15 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
 {
     chipsetConfiguration.setToDefaultConfiguration();
     ramConfiguration.setToDefaultConfiguration();
-    //confiRAM.setToDefaultConfiguration();     //ecc per tutti gli altri
-    updateGraphicsFromInternalConfiguration();
+    floppyConfiguration.setToDefaultConfiguration();
+    /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
-    //DEVO DISABILITARE KICK_EXT_DIR e tutte le cose che di default sarebbero disabilitate!
+
+    //devo DISABILITARE/SVUOTARE KICK_EXT_DIR e tutte le cose che di default sarebbero disabilitate/vuote!
+    setFastMemoryDisabled(false);
+    // ui->floppySwappingImagesListWidget->clear();
+
+    updateGraphicsFromInternalConfiguration();
 
 }
 
@@ -351,122 +430,98 @@ void Amiga::on_chipMem4MbRadio_clicked()
     setFastMemoryDisabled(true);
     this->ramConfiguration.setParameter("chip_memory","4096");
 }
-
 void Amiga::on_chipMeme8MbRadio_clicked()
 {
     setFastMemoryDisabled(true);
     this->ramConfiguration.setParameter("chip_memory","8192");
 }
-
 void Amiga::on_chipMem512KbRadio_clicked()
 {
     setFastMemoryDisabled(false);
     this->ramConfiguration.setParameter("chip_memory","512");
 }
-
 void Amiga::on_chipMem1MbRadio_clicked()
 {
     setFastMemoryDisabled(false);
     this->ramConfiguration.setParameter("chip_memory","1024");
 }
-
 void Amiga::on_chipMem2MbRadio_clicked()
 {
     setFastMemoryDisabled(false);
     this->ramConfiguration.setParameter("chip_memory","2048");
 }
-
 void Amiga::on_slowMemNoneRadio_clicked()
 {
     this->ramConfiguration.setParameter("slow_memory","NONE");
 }
-
 void Amiga::on_slowMem512KbRadio_clicked()
 {
     this->ramConfiguration.setParameter("slow_memory","512");
 }
-
 void Amiga::on_slowMem1MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("slow_memory","1024");
 }
-
 void Amiga::on_slowMem1_8MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("slow_memory","1792");
 }
-
 void Amiga::on_fastMemNoneRadio_clicked()
 {
     this->ramConfiguration.setParameter("fast_memory","NONE");
 }
-
 void Amiga::on_fastMem1MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("fast_memory","1024");
 }
-
 void Amiga::on_fastMem2MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("fast_memory","2048");
 }
-
 void Amiga::on_fastMem4MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("fast_memory","4096");
 }
-
 void Amiga::on_fastMem8MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("fast_memory","8192");
 }
-
 void Amiga::on_z3MemNoneRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","NONE");
 }
-
 void Amiga::on_z3Mem1MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","1024");
 }
-
-
 void Amiga::on_z3Mem2MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","2048");
 }
-
 void Amiga::on_z3Mem4MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","4096");
 }
-
 void Amiga::on_z3Mem8MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","8192");
 }
-
 void Amiga::on_z3Mem16MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","16384");
 }
-
 void Amiga::on_z3Mem32MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","32768");
 }
-
 void Amiga::on_z3Mem64MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","65536");
 }
-
 void Amiga::on_z3Mem128MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","131072");
 }
-
 void Amiga::on_z3Mem256MbRadio_clicked()
 {
     this->ramConfiguration.setParameter("zorro_iii_memory","262144");
@@ -476,4 +531,129 @@ void Amiga::on_runConfigButton_clicked()
 {
     saveConfigInFile(".current.fs-uae");
     system("fs-uae .current.fs-uae");
+}
+
+void Amiga::on_floppyDrive0ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    ui->floppyDrive0LineEdit->setText(fileName);
+    floppyConfiguration.setParameter("floppy_drive_0",fileName.toStdString());
+}
+
+void Amiga::on_floppyDrive1ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    ui->floppyDrive1LineEdit->setText(fileName);
+    floppyConfiguration.setParameter("floppy_drive_1",fileName.toStdString());
+}
+
+void Amiga::on_floppyDrive2ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    ui->floppyDrive2LineEdit->setText(fileName);
+    floppyConfiguration.setParameter("floppy_drive_2",fileName.toStdString());
+}
+
+void Amiga::on_floppyDrive3ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    ui->floppyDrive3LineEdit->setText(fileName);
+    floppyConfiguration.setParameter("floppy_drive_3",fileName.toStdString());
+}
+
+
+void Amiga::on_floppySwappingImagesAddPushButton_clicked()
+{
+    if (ui->floppySwappingImagesListWidget->count()==20){
+        QMessageBox::about(this, tr("Error"),tr("You can select at most 20 floppies"));
+        return;}
+    QStringList fileNames=QFileDialog::getOpenFileNames(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+
+    if (fileNames.count()==0){
+        //hai premuto annulla
+        return;}
+
+    if (fileNames.count()+ui->floppySwappingImagesListWidget->count()>20){
+        QMessageBox::about(this, tr("Error"),tr("You can select at most 20 floppies"));
+        return;}
+
+    for(int i=0;i<fileNames.count();i++){
+        //aggiorno la lista interna
+        floppyConfiguration.pushBackFloppyImage(fileNames.at(i).toStdString());
+        //aggiorno la lista grafica
+        //  ui->floppySwappingImagesListWidget->addItem(fileNames.at(i));
+    }
+    updateGraphicsFromInternalConfiguration();
+}
+
+void Amiga::on_floppySwappingImagerRemovePushButton_clicked()
+{
+    //devo rimuovere i selezionati dalla lista interna
+    QItemSelectionModel *selection = ui->floppySwappingImagesListWidget->selectionModel();
+    QModelIndexList indexes = selection->selectedRows();
+    QListIterator<QModelIndex> i(indexes);
+    QList <int> indexList;
+    while(i.hasNext())
+    {
+        QModelIndex index = i.next();
+        indexList << index.row();
+
+    };
+    //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
+    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
+    for(int x=indexList.size()-1;x>=0;x--){
+        floppyConfiguration.eraseFloppyImageAt(indexList[x]);
+    }
+
+    //svuoto lista grafica
+    ui->floppySwappingImagesListWidget->clear();
+
+    //aggiorno la grafica
+    updateGraphicsFromInternalConfiguration();
+}
+
+void Amiga::on_floppyDriveVolumeSlider_valueChanged(int value)
+{
+    string stringvalue=static_cast<ostringstream*>( &(ostringstream() << value) )->str();
+
+    floppyConfiguration.setParameter("floppy_drive_volume",stringvalue);
+    ui->floppyDriveVolumeDisplayLabel->setText(QString::fromStdString(floppyConfiguration.getFloppyDriveVolumeString()));
+}
+
+void Amiga::on_floppyDriveVolumeMuteCheckBox_clicked()
+{
+    if(ui->floppyDriveVolumeMuteCheckBox->isChecked()){
+        ui->floppyDriveVolumeDisplayLabel->setText("0");
+        ui->floppyDriveVolumeSlider->setEnabled(false);
+        floppyConfiguration.setParameter("floppy_drive_volume","0");
+    } else {
+        string stringvalue=static_cast<ostringstream*>( &(ostringstream() << ui->floppyDriveVolumeSlider->value()) )->str();
+        ui->floppyDriveVolumeDisplayLabel->setText(QString::fromStdString(stringvalue));
+        ui->floppyDriveVolumeSlider->setEnabled(true);
+        floppyConfiguration.setParameter("floppy_drive_volume",stringvalue);
+    }
+}
+
+void Amiga::on_floppyDriveSpeedSlider_valueChanged(int position)
+{
+    //0<=position<=12
+    string positionString=static_cast<ostringstream*>( &(ostringstream() << position) )->str();
+    string stringvalue=static_cast<ostringstream*>( &(ostringstream() << position*100) )->str();
+    floppyConfiguration.setParameter("floppy_drive_speed",stringvalue);
+    string displayString;
+    if (position==0){
+        displayString="TURBO";
+    } else{
+        displayString=positionString+"X";
+    }
+    ui->floppyDriveSpeedDisplayLabel->setText(QString::fromStdString(displayString));
+}
+
+
+
+
+void Amiga::on_alternativeBaseDirPushButton_clicked()
+{
+    //QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+
 }

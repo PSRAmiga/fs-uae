@@ -58,7 +58,7 @@ string ConfigChipset::getKickstartFileString()
 
 string ConfigChipset::getKickstartExtFileConfigString()
 {
-    if (kickstart_ext_file.compare(DEFAULTKICKSTARTEXTFILE)==0){return "";}
+    if (kickstart_ext_file.compare(DEFAULTKICKSTARTEXTFILE)==0 || !(amiga_model.compare("CD32")==0)||(amiga_model.compare("CDTV")==0)){return "";}
     else {return "kickstart_ext_file = " + kickstart_ext_file;}
 }
 
@@ -70,11 +70,23 @@ string ConfigChipset::getKickstartExtFileString()
 void ConfigChipset::setParameter(string parameter, string value)
 {
     if(parameter.compare("accuracy")==0){
-        accuracy=value;
+        if ((value.compare("-1")==0)||(value.compare("0")==0)||(value.compare("1")==0)){
+            accuracy=value;}
+        else{
+            accuracy=DEFAULTACCURACY;
+        }
     } else if(parameter.compare("ntsc_mode")==0){
-        ntsc_mode=value;
+        if ((value.compare("0")==0)||(value.compare("0")==1)){
+            ntsc_mode=value;
+        }else{
+            ntsc_mode=DEFAULTNTSCMODE;
+        }
     } else if(parameter.compare("amiga_model")==0){
-        amiga_model=value;
+        if ((value.compare("A500")==0)||(value.compare("A500+")==0)||(value.compare("A600")==0)||(value.compare("A1200")==0)||(value.compare("A1200/020")==0)||(value.compare("A4000/040")==0)||(value.compare("CD32")==0)||(value.compare("CDTV")==0)){
+            amiga_model=value;}
+        else{
+            amiga_model=DEFAULTAMIGAMODEL;
+        }
     } else if(parameter.compare("kickstart_file")==0){
         kickstart_file=value;
     } else if(parameter.compare("kickstart_ext_file")==0){

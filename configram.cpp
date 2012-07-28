@@ -34,7 +34,7 @@ string ConfigRam::getSlowMemoryString()
 //////////////////////////////////////////////////////////////////////////////////////////
 string ConfigRam::getFastMemoryConfigString()
 {
-    if (fast_memory.compare(DEFAULTFASTMEMORY)==0){return "";}
+    if ((fast_memory.compare(DEFAULTFASTMEMORY)==0)||(chip_memory.compare("4096")==0)||(chip_memory.compare("8192")==0)){return "";}
     else {return "fast_memory = " + fast_memory;}
 }
 
@@ -57,14 +57,33 @@ string ConfigRam::getZorro3String()
 
 void ConfigRam::setParameter(string parameter, string value)
 {
+    //se mi arriva un parametro che non so/devo gestire io non faccio nulla
+    //se mi arriva un mio parametro verifico sia valido, se no setto il DEFAULT
+    //in questo modo se qualcuno salva la config, manomette (o modifica erroneamente) il file, io garantisco sia una configurazione valida
     if(parameter.compare("chip_memory")==0){
-        chip_memory=value;
+        if ((value.compare("512")==0)||(value.compare("1024")==0)||(value.compare("2048")==0)||(value.compare("4096")==0)||(value.compare("8192")==0)){
+        chip_memory=value;}
+        else{
+            chip_memory=DEFAULTCHIPMEMORY;
+        }
     } else if(parameter.compare("slow_memory")==0){
-        slow_memory=value;
+        if ((value.compare("NONE")==0)||(value.compare("512")==0)||(value.compare("1024")==0)||(value.compare("1792")==0)){
+        slow_memory=value;}
+        else{
+            slow_memory=DEFAULTSLOWMEMORY;
+        }
     } else if(parameter.compare("fast_memory")==0){
-        fast_memory=value;
+        if ((value.compare("NONE")==0)||(value.compare("1024")==0)||(value.compare("2048")==0)||(value.compare("4096")==0)||(value.compare("8192")==0)){
+        fast_memory=value;}
+        else{
+            fast_memory=DEFAULTFASTMEMORY;
+        }
     } else if(parameter.compare("zorro_iii_memory")==0){
-        zorro_iii_memory=value;
+        if ((value.compare("NONE")==0)||(value.compare("1024")==0)||(value.compare("2048")==0)||(value.compare("4096")==0)||(value.compare("8192")==0)||(value.compare("16384")==0)||(value.compare("32768")==0)||(value.compare("65536")==0)||(value.compare("131072")==0)||(value.compare("262144")==0)){
+        zorro_iii_memory=value;}
+        else{
+            zorro_iii_memory=DEFAULTZORROIIIMEMORY;
+        }
     }
 }
 

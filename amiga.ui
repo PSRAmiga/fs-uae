@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -361,32 +361,6 @@
         </widget>
        </item>
       </layout>
-     </widget>
-     <widget class="QLabel" name="label_10">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>30</y>
-        <width>268</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>se model=CDxx abilito solo quello sotto</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>540</x>
-        <y>440</y>
-        <width>321</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>http://qt-project.org/doc/qt-4.8/qprocess.html</string>
-      </property>
      </widget>
      <widget class="QWidget" name="layoutWidget6">
       <property name="geometry">
@@ -696,19 +670,6 @@
      <attribute name="title">
       <string>Floppies</string>
      </attribute>
-     <widget class="QLabel" name="label_26">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>310</y>
-        <width>671</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>4 floppy veri e fino a 20 floppy da swappare a caldo. File browser multipli? sisisi</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="verticalLayoutWidget_3">
       <property name="geometry">
        <rect>
@@ -727,7 +688,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="floppyDirve0LineEdit">
+        <widget class="QLineEdit" name="floppyDrive0LineEdit">
          <property name="maxLength">
           <number>32000</number>
          </property>
@@ -760,7 +721,7 @@
       </property>
       <layout class="QHBoxLayout" name="floppyDrive1Panel">
        <item>
-        <widget class="QLabel" name="floppyDirve1Label">
+        <widget class="QLabel" name="floppyDrive1Label">
          <property name="text">
           <string>Floppy Drive 1:</string>
          </property>
@@ -840,7 +801,7 @@
       </property>
       <layout class="QHBoxLayout" name="floopyDriv3Panel">
        <item>
-        <widget class="QLabel" name="floppyDirve3Label">
+        <widget class="QLabel" name="floppyDrive3Label">
          <property name="text">
           <string>Floppy Drive 3:</string>
          </property>
@@ -875,38 +836,18 @@
         <x>40</x>
         <y>160</y>
         <width>801</width>
-        <height>121</height>
+        <height>201</height>
        </rect>
       </property>
       <property name="selectionMode">
        <enum>QAbstractItemView::MultiSelection</enum>
       </property>
-      <item>
-       <property name="text">
-        <string>per sfogliare i file icona di file</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>per sfogliare le cartelle icona di cartella</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>....</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>aggiungere tooltip a tutto</string>
-       </property>
-      </item>
      </widget>
      <widget class="QPushButton" name="floppySwappingImagesAddPushButton">
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>280</y>
+        <y>360</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -932,7 +873,7 @@
       <property name="geometry">
        <rect>
         <x>190</x>
-        <y>280</y>
+        <y>360</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -944,63 +885,6 @@
        <iconset resource="ICO.qrc">
         <normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</iconset>
       </property>
-     </widget>
-     <widget class="QLabel" name="label_32">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>280</y>
-        <width>431</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add file continua ad aggiungere file MULTIPLI
-la lista supporta la selezione (e quindi cancellazione multipla)</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_7">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>350</y>
-        <width>641</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="floppyOverlaysDirPanel">
-       <item>
-        <widget class="QLabel" name="floppyOverlaysDirLabel">
-         <property name="text">
-          <string>Floppy overlays dir:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="floppyOverlaysDirLineEdit">
-         <property name="text">
-          <string>è una directory NON un file</string>
-         </property>
-         <property name="maxLength">
-          <number>32000</number>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolButton" name="floppyOverlaysDirToolButton">
-         <property name="text">
-          <string>...</string>
-         </property>
-         <property name="icon">
-          <iconset resource="ICO.qrc">
-           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
      <widget class="QLabel" name="floppySwappingImagesLabel">
       <property name="geometry">
@@ -1096,13 +980,13 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </rect>
       </property>
       <property name="maximum">
-       <number>1200</number>
+       <number>12</number>
       </property>
       <property name="singleStep">
-       <number>100</number>
+       <number>1</number>
       </property>
       <property name="value">
-       <number>100</number>
+       <number>1</number>
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -1118,23 +1002,36 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </rect>
       </property>
       <property name="text">
-       <string>8X</string>
+       <string>1X</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_39">
+     <widget class="QLabel" name="floppyOccupiedSlotsLabel">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>420</y>
-        <width>271</width>
-        <height>30</height>
+        <x>350</x>
+        <y>370</y>
+        <width>111</width>
+        <height>17</height>
        </rect>
       </property>
       <property name="text">
-       <string>convertire in 8X e se =0 scrivere TURBO</string>
+       <string>Occupied Slots:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="floppyOccupiedSlotsDisplayLabel">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>370</y>
+        <width>401</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0/20</string>
       </property>
      </widget>
     </widget>
@@ -5658,7 +5555,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] se faccio LOAD aggiorno le config interne e poi la grafica&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] se faccio SALVA leggo le config interne e le salvo (quindi NON dalla grafica)&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] appena clicco/modifico la grafica tengo aggiornata la config interna&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] se faccio PLAY è come fare SALVA (tanto la config interna è sempre tenuta aggiornata) e avvio amiga col file creato&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] se faccio PLAY viene salvato un file nascosto temporaneo così avvio fs-uae con lo stato effettivamente corrente, non con l'ultimo salvato&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;=================&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[PROGRAM ARGUMENTS]&lt;/p&gt;
@@ -5755,20 +5652,6 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="arrowType">
      <enum>Qt::NoArrow</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>510</y>
-      <width>491</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>You can also store the file anywhere you want, and invoke FS-UAE with
-the config file as a parameter (fs-uae /path/to/config-file.fs-uae)</string>
     </property>
    </widget>
    <widget class="QToolButton" name="loadConfigToolButton">
