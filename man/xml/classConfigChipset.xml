@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classConfigChipset" kind="class" prot="public">
+    <compoundname>ConfigChipset</compoundname>
+    <includes refid="configchipset_8h" local="no">configchipset.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classConfigChipset_1a4bc77e1b25746f228af19e8315982822" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigChipset::amiga_model</definition>
+        <argsstring></argsstring>
+        <name>amiga_model</name>
+        <briefdescription>
+<para>Specify the <ref refid="classAmiga" kindref="compound">Amiga</ref> model you want to emulate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="12" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfigChipset_1a741b37054ee3bba7d7c1dd0478c99062" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigChipset::kickstart_file</definition>
+        <argsstring></argsstring>
+        <name>kickstart_file</name>
+        <briefdescription>
+<para>Specify the path to a specific kickstart file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="13" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfigChipset_1ad96fe812365b5770a3cf57326aa564f6" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigChipset::kickstart_ext_file</definition>
+        <argsstring></argsstring>
+        <name>kickstart_ext_file</name>
+        <briefdescription>
+<para>Specify the path to the extended kickstart ROM (for CD32, ...). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="14" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfigChipset_1aac118cb9562ecaba7d6fc24c1bfedc45" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigChipset::accuracy</definition>
+        <argsstring></argsstring>
+        <name>accuracy</name>
+        <briefdescription>
+<para>Represet the accuracy of the emulation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="15" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfigChipset_1a2957b49b2ebd0fa73850bc3f0e893502" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigChipset::ntsc_mode</definition>
+        <argsstring></argsstring>
+        <name>ntsc_mode</name>
+        <briefdescription>
+<para>Represent the video mode of the emulation (NTSC/PAL) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classConfigChipset_1a5c8883eb03e10dcb4c17e9d8d08c28af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConfigChipset::ConfigChipset</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigChipset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a8df3fc13802b8ab395b2b752ecaf2e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getAccuracyConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getAccuracyConfigString</name>
+        <briefdescription>
+<para>Represents the string of Accuracy to be written in Config File. If Accuracy is the default value, it returns an empty string.<linebreak/>
+ accuracy = 1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="21" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1ad151ad2223bb3d6db2d3323435fef3fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getAccuracyString</definition>
+        <argsstring>()</argsstring>
+        <name>getAccuracyString</name>
+        <briefdescription>
+<para>Represent the effective value of Accuracy. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="22" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a75301906dd1d3547f8f826ba7420e862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getNTSCModeConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getNTSCModeConfigString</name>
+        <briefdescription>
+<para>Represents the string of NTSCMode to be written in Config file. If NTSCMode is the default value, it returns an empty string.<linebreak/>
+ ntsc_mode = 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a84b7342aa2b6c452a866a4992cce4b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getNTSCModeString</definition>
+        <argsstring>()</argsstring>
+        <name>getNTSCModeString</name>
+        <briefdescription>
+<para>Represent the effective value of NTSCMode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a2cee39e4c4eb03e50d5843d757619b15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getAmigaModelConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getAmigaModelConfigString</name>
+        <briefdescription>
+<para>Represents the string of AmigaModel to be written in Config file. If AmigaModel is the default value, it returns an empty string.<linebreak/>
+ amiga_model = A500. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1ac109ba888a28357c7ee79b1511fa8dd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getAmigaModelString</definition>
+        <argsstring>()</argsstring>
+        <name>getAmigaModelString</name>
+        <briefdescription>
+<para>Represent the effective value of AmigaModel. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1ae12d127741abe604b9a79a1524bb4eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getKickstartFileConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getKickstartFileConfigString</name>
+        <briefdescription>
+<para>Represents the string of KickstartFile to be written in Config file. If KickstartFile is the default value, it returns an empty string.<linebreak/>
+ kickstart_file = path/to/kickstart.rom [or path/to/kickstart.adf]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a35a96251236644d9a252d59e325f4b61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getKickstartFileString</definition>
+        <argsstring>()</argsstring>
+        <name>getKickstartFileString</name>
+        <briefdescription>
+<para>Represent the effective value of KickstartFile. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a1fafcd89c72d2447a08fc88fb2bc9926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getKickstartExtFileConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getKickstartExtFileConfigString</name>
+        <briefdescription>
+<para>Represents the string of KickstartExtFile to be written in Config file. If KickstartExtFile is the default value, it returns an empty string.<linebreak/>
+ kickstart_ext_file = path/to/extended-kickstart.rom. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1aa756feef2817f1a5afddf6157066a814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigChipset::getKickstartExtFileString</definition>
+        <argsstring>()</argsstring>
+        <name>getKickstartExtFileString</name>
+        <briefdescription>
+<para>Represent the effective value of KickstartExtFile. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a6dc149a460407e313cdc1ec348e5cf03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigChipset::setParameter</definition>
+        <argsstring>(string parameter, string value)</argsstring>
+        <name>setParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="70" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1a748fd2c9e997c27b920bb79daee2ab21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigChipset::setToDefaultConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>setToDefaultConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="85" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Create the Chipset Configuration Class. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class is responsible for the Chipset Configuration </para>    </detaileddescription>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="11" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="10" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classConfigChipset_1aac118cb9562ecaba7d6fc24c1bfedc45" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>accuracy</name></member>
+      <member refid="classConfigChipset_1a4bc77e1b25746f228af19e8315982822" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>amiga_model</name></member>
+      <member refid="classConfigChipset_1a5c8883eb03e10dcb4c17e9d8d08c28af" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>ConfigChipset</name></member>
+      <member refid="classConfigChipset_1a8df3fc13802b8ab395b2b752ecaf2e4b" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getAccuracyConfigString</name></member>
+      <member refid="classConfigChipset_1ad151ad2223bb3d6db2d3323435fef3fc" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getAccuracyString</name></member>
+      <member refid="classConfigChipset_1a2cee39e4c4eb03e50d5843d757619b15" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getAmigaModelConfigString</name></member>
+      <member refid="classConfigChipset_1ac109ba888a28357c7ee79b1511fa8dd7" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getAmigaModelString</name></member>
+      <member refid="classConfigChipset_1a1fafcd89c72d2447a08fc88fb2bc9926" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getKickstartExtFileConfigString</name></member>
+      <member refid="classConfigChipset_1aa756feef2817f1a5afddf6157066a814" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getKickstartExtFileString</name></member>
+      <member refid="classConfigChipset_1ae12d127741abe604b9a79a1524bb4eae" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getKickstartFileConfigString</name></member>
+      <member refid="classConfigChipset_1a35a96251236644d9a252d59e325f4b61" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getKickstartFileString</name></member>
+      <member refid="classConfigChipset_1a75301906dd1d3547f8f826ba7420e862" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getNTSCModeConfigString</name></member>
+      <member refid="classConfigChipset_1a84b7342aa2b6c452a866a4992cce4b2e" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getNTSCModeString</name></member>
+      <member refid="classConfigChipset_1ad96fe812365b5770a3cf57326aa564f6" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>kickstart_ext_file</name></member>
+      <member refid="classConfigChipset_1a741b37054ee3bba7d7c1dd0478c99062" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>kickstart_file</name></member>
+      <member refid="classConfigChipset_1a2957b49b2ebd0fa73850bc3f0e893502" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>ntsc_mode</name></member>
+      <member refid="classConfigChipset_1a6dc149a460407e313cdc1ec348e5cf03" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>setParameter</name></member>
+      <member refid="classConfigChipset_1a748fd2c9e997c27b920bb79daee2ab21" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>setToDefaultConfiguration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

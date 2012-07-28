@@ -118,6 +118,11 @@ private slots:
 
     void on_alternativeBaseDirPushButton_clicked();
 
+    void on_actionAmiga_triggered();
+
+    void on_actionSummary_triggered();
+
+
 private:
     Ui::Amiga *ui;
     ConfigChipset chipsetConfiguration;

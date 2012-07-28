@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="amiga_8h" kind="file">
+    <compoundname>amiga.h</compoundname>
+    <includes local="no">QMainWindow</includes>
+    <includes refid="configchipset_8h" local="no">configchipset.h</includes>
+    <includes refid="configram_8h" local="no">configram.h</includes>
+    <includedby refid="amiga_8cpp" local="yes">amiga.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <incdepgraph>
+      <node id="22">
+        <label>configram.h</label>
+        <link refid="configram_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>QMainWindow</label>
+      </node>
+      <node id="20">
+        <label>configchipset.h</label>
+        <link refid="configchipset_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>amiga.h</label>
+        <link refid="amiga.h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="24">
+        <label>amiga.cpp</label>
+        <link refid="amiga_8cpp"/>
+      </node>
+      <node id="25">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="23">
+        <label>amiga.h</label>
+        <link refid="amiga.h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classAmiga" prot="public">Amiga</innerclass>
+    <innernamespace refid="namespaceUi">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>AMIGA_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AMIGA_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMainWindow&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="configchipset_8h" kindref="compound">configchipset.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="configram_8h" kindref="compound">configram.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="namespaceUi" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Ui<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAmiga" kindref="compound">Amiga</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classAmiga" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAmiga" kindref="compound">Amiga</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QMainWindow</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1adcfee400507a257674854183ea7013e3" kindref="member">Amiga</ref>(QWidget<sp/>*parent<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAmiga_1a90e0c9e26d6a45d5ddd1a0fe17e5ca95" kindref="member">~Amiga</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ab3560d086c01189e0b8440df7ccb47d5" kindref="member">on_kickstartFileToolButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a57608a8aede14c8f85f8d244debc84d5" kindref="member">on_kickstartExtFileToolButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a8c808dcb36de6d61ffb409ef80aefa1d" kindref="member">on_amigaModelComboBox_currentIndexChanged</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;arg1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a68fa00efc092a7b2dfc30004955ccde3" kindref="member">on_accuracyLeastRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a728c3e4f93863a6d2188e64b1a2d0e9e" kindref="member">on_accuracyNormalRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1afdbb9b61aa05c68cc304052753407f2d" kindref="member">on_accuracyMostadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ae74cddcd49b8face7e891fa9aa7afcf9" kindref="member">on_saveConfigToolButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a8a01a4ed20d33dbd7cf8ef02b4ddeb10" kindref="member">on_loadConfigToolButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ab02373685a7d154e8cd4ba9ada48fd87" kindref="member">on_videoModePALRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ad07a6a7c995ee702e92cd223e096ba70" kindref="member">on_videoModeNTSCRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a171344c3ca223f1cbcf1cdbb21b81f44" kindref="member">on_fadeColorPushButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ae5acd7fae447ac9fdfbb21afdc97c6fb" kindref="member">on_loadDefaultValuesToolButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a496638173e676f15b49624da24cb8e1b" kindref="member">on_actionReport_bug_triggered</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1abfbaa0415ec9ecd9b2dfdf62627ddbba" kindref="member">on_chipMem4MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a6d06b74977d884ac2f9450af30f6eadf" kindref="member">on_chipMeme8MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a1dc8bda1d953b8cdbfee4b2227f8dca9" kindref="member">on_chipMem512KbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a10acfe67fa104e601351c227656bcd95" kindref="member">on_chipMem1MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a1bb0ae3077f191c3cf0e2b430925cdb0" kindref="member">on_chipMem2MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ae4d3b014240b739b11cd9a42a6d64c68" kindref="member">on_slowMemNoneRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1aa4e44f1c5fb0d117e62d65b0e887a0b4" kindref="member">on_slowMem512KbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ac30409283338d527d1dc44bac7fe03e9" kindref="member">on_slowMem1MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ab230812d0a4fbb503545546ffaffe657" kindref="member">on_slowMem1_8MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a044a93fa88c24e5f9e4718571d923dec" kindref="member">on_fastMemNoneRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ad62cbcbdf368e9bec4b04dd9e68d30eb" kindref="member">on_fastMem1MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a5bbaf0c4f82d772a162fd2b59644b423" kindref="member">on_fastMem2MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a17cd2c88c7d77f3904ad319ad300dd4e" kindref="member">on_fastMem4MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a4081a090fbcc5f86109fee996cb1c3ee" kindref="member">on_fastMem8MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1abdbbaf8972ac768db392e864be9584fa" kindref="member">on_z3MemNoneRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a11c91a53d0ea616fc34cf9ee59137ba7" kindref="member">on_z3Mem1MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a0e53c7f6e7568b8408e404191403125c" kindref="member">on_z3Mem2MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1abf4d7dc3f984b3d18bf7865cafc5ad8c" kindref="member">on_z3Mem4MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a98f2a778627e8d4cfdd568bf00517e9d" kindref="member">on_z3Mem8MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1af46fe3ef84a596b58eb974d9006a438d" kindref="member">on_z3Mem16MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a38029edeb4eb5520631f1a68b64b5007" kindref="member">on_z3Mem32MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a4df55e9f18bfb0c9bb7a956b8c80e5b3" kindref="member">on_z3Mem64MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ac3c6ea30cab7bff74e4b473bf15090c5" kindref="member">on_z3Mem128MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a249bb279b14d48d465498e82c9a66e2a" kindref="member">on_z3Mem256MbRadio_clicked</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1ad0950189995ac8d3448771623e3ceafa" kindref="member">on_runConfigButton_clicked</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1aec79f2ab3d67db633c76fbb5acf4ace0" kindref="member">on_actionAmiga_triggered</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a65ebd6eb61e897f954e4d137f80468bc" kindref="member">on_actionSummary_triggered</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105" refid="classAmiga_1a1de34d0078fedd7288aaed0d4f0fab98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::Amiga<sp/>*<ref refid="classAmiga_1a1de34d0078fedd7288aaed0d4f0fab98" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="106" refid="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classConfigChipset" kindref="compound" tooltip="Create the Chipset Configuration Class.">ConfigChipset</ref><sp/><ref refid="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" kindref="member">chipsetConfiguration</ref>;</highlight></codeline>
+<codeline lineno="107" refid="classAmiga_1a2f4fca23ed8fd82e7fd2fb966f9103e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classConfigRam" kindref="compound" tooltip="Create the RAM Configuration Class.">ConfigRam</ref><sp/><ref refid="classAmiga_1a2f4fca23ed8fd82e7fd2fb966f9103e2" kindref="member">ramConfiguration</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a74c547003937479f8715e0dfbbefa33d" kindref="member">parseLine</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a2ad7c64788f0dabf2f08f1327acf34b2" kindref="member">setFastMemoryDisabled</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a153bfcb59f5250e9fec9cf03cd0fe8d6" kindref="member">updateGraphicsFromInternalConfiguration</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" kindref="member">getConfigurationAreaFromParameterName</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameterName);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAmiga_1a736cfd656c31325245e25700f951c5a7" kindref="member">saveConfigInFile</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>AMIGA_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h"/>
+  </compounddef>
+</doxygen>
