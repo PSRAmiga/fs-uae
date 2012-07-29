@@ -5,6 +5,9 @@ var searchData=
   ['configchipset',['ConfigChipset',['../classConfigChipset.html',1,'ConfigChipset'],['../classConfigChipset.html#a5c8883eb03e10dcb4c17e9d8d08c28af',1,'ConfigChipset::ConfigChipset()']]],
   ['configchipset_2ecpp',['configchipset.cpp',['../configchipset_8cpp.html',1,'']]],
   ['configchipset_2eh',['configchipset.h',['../configchipset_8h.html',1,'']]],
+  ['configfloppy',['ConfigFloppy',['../classConfigFloppy.html',1,'ConfigFloppy'],['../classConfigFloppy.html#a75d54a0d12cde066d49a5936b28dd11a',1,'ConfigFloppy::ConfigFloppy()']]],
+  ['configfloppy_2ecpp',['configfloppy.cpp',['../configfloppy_8cpp.html',1,'']]],
+  ['configfloppy_2eh',['configfloppy.h',['../configfloppy_8h.html',1,'']]],
   ['configram',['ConfigRam',['../classConfigRam.html',1,'ConfigRam'],['../classConfigRam.html#aaca57679f5c41f8441c0a97ddb2d0a22',1,'ConfigRam::ConfigRam()']]],
   ['configram_2ecpp',['configram.cpp',['../configram_8cpp.html',1,'']]],
   ['configram_2eh',['configram.h',['../configram_8h.html',1,'']]]

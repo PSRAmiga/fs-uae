@@ -4,6 +4,7 @@
     <member refid="classAmiga_1a1de34d0078fedd7288aaed0d4f0fab98" kind="variable"><name>ui</name></member>
     <member refid="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" kind="variable"><name>chipsetConfiguration</name></member>
     <member refid="classAmiga_1a2f4fca23ed8fd82e7fd2fb966f9103e2" kind="variable"><name>ramConfiguration</name></member>
+    <member refid="classAmiga_1a36205e2c4a2c96a4132098522f558bd4" kind="variable"><name>floppyConfiguration</name></member>
     <member refid="classAmiga_1adcfee400507a257674854183ea7013e3" kind="function"><name>Amiga</name></member>
     <member refid="classAmiga_1a90e0c9e26d6a45d5ddd1a0fe17e5ca95" kind="function"><name>~Amiga</name></member>
     <member refid="classAmiga_1ab3560d086c01189e0b8440df7ccb47d5" kind="slot"><name>on_kickstartFileToolButton_clicked</name></member>
@@ -44,6 +45,16 @@
     <member refid="classAmiga_1ac3c6ea30cab7bff74e4b473bf15090c5" kind="slot"><name>on_z3Mem128MbRadio_clicked</name></member>
     <member refid="classAmiga_1a249bb279b14d48d465498e82c9a66e2a" kind="slot"><name>on_z3Mem256MbRadio_clicked</name></member>
     <member refid="classAmiga_1ad0950189995ac8d3448771623e3ceafa" kind="slot"><name>on_runConfigButton_clicked</name></member>
+    <member refid="classAmiga_1a7ded57c91db93833e6cdfd1e21dcdcda" kind="slot"><name>on_floppyDrive0ToolButton_clicked</name></member>
+    <member refid="classAmiga_1ab0fad33dad5daa1811788af807f16640" kind="slot"><name>on_floppySwappingImagesAddPushButton_clicked</name></member>
+    <member refid="classAmiga_1a32286caf852d867709cb56fc0aeb3bc0" kind="slot"><name>on_floppyDriveVolumeSlider_valueChanged</name></member>
+    <member refid="classAmiga_1adeb313b0432509223d547d97ca3cda6b" kind="slot"><name>on_floppyDriveVolumeMuteCheckBox_clicked</name></member>
+    <member refid="classAmiga_1af8c051b704b3a1642ec4606e6b682e10" kind="slot"><name>on_floppyDriveSpeedSlider_valueChanged</name></member>
+    <member refid="classAmiga_1ac1e72bc40727000067723403f1d407d8" kind="slot"><name>on_floppyDrive1ToolButton_clicked</name></member>
+    <member refid="classAmiga_1ad428ecd1871e9f42a6e5947ee0fcf22d" kind="slot"><name>on_floppyDrive2ToolButton_clicked</name></member>
+    <member refid="classAmiga_1a084e32bc56163ff8dceee9610166c92a" kind="slot"><name>on_floppyDrive3ToolButton_clicked</name></member>
+    <member refid="classAmiga_1a80b9fc533b748b6833ec9f8edbd2a765" kind="slot"><name>on_floppySwappingImagerRemovePushButton_clicked</name></member>
+    <member refid="classAmiga_1a6dc1b3a66f80dacf5ce6c0d947a51ca9" kind="slot"><name>on_alternativeBaseDirPushButton_clicked</name></member>
     <member refid="classAmiga_1aec79f2ab3d67db633c76fbb5acf4ace0" kind="slot"><name>on_actionAmiga_triggered</name></member>
     <member refid="classAmiga_1a65ebd6eb61e897f954e4d137f80468bc" kind="slot"><name>on_actionSummary_triggered</name></member>
     <member refid="classAmiga_1a74c547003937479f8715e0dfbbefa33d" kind="function"><name>parseLine</name></member>
@@ -71,6 +82,34 @@
     <member refid="classConfigChipset_1aa756feef2817f1a5afddf6157066a814" kind="function"><name>getKickstartExtFileString</name></member>
     <member refid="classConfigChipset_1a6dc149a460407e313cdc1ec348e5cf03" kind="function"><name>setParameter</name></member>
     <member refid="classConfigChipset_1a748fd2c9e997c27b920bb79daee2ab21" kind="function"><name>setToDefaultConfiguration</name></member>
+  </compound>
+  <compound refid="classConfigFloppy" kind="class"><name>ConfigFloppy</name>
+    <member refid="classConfigFloppy_1a644df600cf5af15184baa0e62cc7cc4d" kind="variable"><name>floppy_drive_0</name></member>
+    <member refid="classConfigFloppy_1a59246a5f8a5282bcfe2df1cb9204a298" kind="variable"><name>floppy_drive_1</name></member>
+    <member refid="classConfigFloppy_1a86ecb4d492f195e1dc637d8ac4af732b" kind="variable"><name>floppy_drive_2</name></member>
+    <member refid="classConfigFloppy_1a44d121fa385f64bfe0f8781d14816d7c" kind="variable"><name>floppy_drive_3</name></member>
+    <member refid="classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kind="variable"><name>floppy_image</name></member>
+    <member refid="classConfigFloppy_1a837e42c4161dd4260f792f5463494f5d" kind="variable"><name>floppy_drive_volume</name></member>
+    <member refid="classConfigFloppy_1a8ec130442e9d309be80375441efbe869" kind="variable"><name>floppy_drive_speed</name></member>
+    <member refid="classConfigFloppy_1a75d54a0d12cde066d49a5936b28dd11a" kind="function"><name>ConfigFloppy</name></member>
+    <member refid="classConfigFloppy_1a8d3ff1d1fb76ce4768a82c8790be9e47" kind="function"><name>getFloppyDrive0ConfigString</name></member>
+    <member refid="classConfigFloppy_1a47e1ec929fb11182ba4bf3851d73b80f" kind="function"><name>getFloppyDrive0String</name></member>
+    <member refid="classConfigFloppy_1ac2c4119c0145d8efc629c8f3f882faec" kind="function"><name>getFloppyDrive1ConfigString</name></member>
+    <member refid="classConfigFloppy_1ae103fe8d9f0a7d0c592d7e1bfcadc947" kind="function"><name>getFloppyDrive1String</name></member>
+    <member refid="classConfigFloppy_1a9a9c4c8bb65f7006df466cde8d3030dd" kind="function"><name>getFloppyDrive2ConfigString</name></member>
+    <member refid="classConfigFloppy_1ada04661ba078952a18700b8b1ab8760b" kind="function"><name>getFloppyDrive2String</name></member>
+    <member refid="classConfigFloppy_1a1bb48466b7a964fc9478bf5bbe8540ec" kind="function"><name>getFloppyDrive3ConfigString</name></member>
+    <member refid="classConfigFloppy_1ac02afbba07325f31cfd8d5afdb8c024e" kind="function"><name>getFloppyDrive3String</name></member>
+    <member refid="classConfigFloppy_1ae23a9205765ae374056eeedc61ecc4e0" kind="function"><name>getFloppyDriveVolumeConfigString</name></member>
+    <member refid="classConfigFloppy_1a42d162155742145202cdbb0e4511a3e1" kind="function"><name>getFloppyDriveVolumeString</name></member>
+    <member refid="classConfigFloppy_1a89d4c3e870f1dd98c2b5cc018ca302ff" kind="function"><name>getFloppyDriveSpeedConfigString</name></member>
+    <member refid="classConfigFloppy_1a06d4b5a421fabfd65c81bfe786de0121" kind="function"><name>getFloppyDriveSpeedString</name></member>
+    <member refid="classConfigFloppy_1a5a3184d2d357f265496917da3572bc18" kind="function"><name>getFloppyImageSize</name></member>
+    <member refid="classConfigFloppy_1ade3102e0c84e7161e65dc4db081f87e5" kind="function"><name>getFloppyImageAt</name></member>
+    <member refid="classConfigFloppy_1a33efa54ddc6d1f903b3033f409ff5711" kind="function"><name>pushBackFloppyImage</name></member>
+    <member refid="classConfigFloppy_1a438a72cf02a171956e0518e2ecad1d62" kind="function"><name>eraseFloppyImageAt</name></member>
+    <member refid="classConfigFloppy_1ae4cbb88c409d03a6bd2f65d05dd10646" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigFloppy_1a1ef111aadbbbc82c0a37bcabbd2d78e5" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="classConfigRam" kind="class"><name>ConfigRam</name>
     <member refid="classConfigRam_1ad6b2684bcb11199f26659524612e3741" kind="variable"><name>chip_memory</name></member>
@@ -106,6 +145,13 @@
     <member refid="configchipset_8cpp_1a9735f2bffda02ee4956ee401b0d8179f" kind="variable"><name>DEFAULTKICKSTARTEXTFILE</name></member>
   </compound>
   <compound refid="configchipset_8h" kind="file"><name>configchipset.h</name>
+  </compound>
+  <compound refid="configfloppy_8cpp" kind="file"><name>configfloppy.cpp</name>
+    <member refid="configfloppy_8cpp_1a514c2b9a9b765bc3fc268969cdc6514f" kind="variable"><name>DEFAULTFLOPPYDRIVE</name></member>
+    <member refid="configfloppy_8cpp_1afb2522fc085d5d42c44c4ac99e1e0ddc" kind="variable"><name>DEFAULTFLOPPYDRIVEVOLUME</name></member>
+    <member refid="configfloppy_8cpp_1a7dda05950472b377b748893bd522bb70" kind="variable"><name>DEFAULTFLOPPYDRIVESPEED</name></member>
+  </compound>
+  <compound refid="configfloppy_8h" kind="file"><name>configfloppy.h</name>
   </compound>
   <compound refid="configram_8cpp" kind="file"><name>configram.cpp</name>
     <member refid="configram_8cpp_1acb96ed928a373ffbfe5c07984b0f1736" kind="variable"><name>DEFAULTCHIPMEMORY</name></member>

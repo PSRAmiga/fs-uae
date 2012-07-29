@@ -1,4 +1,4 @@
-.TH "Amiga" 3 "Fri Jul 27 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "Amiga" 3 "Sun Jul 29 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -136,6 +136,36 @@ Amiga \-
 .RI "void \fBon_runConfigButton_clicked\fP ()"
 .br
 .ti -1c
+.RI "void \fBon_floppyDrive0ToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_floppySwappingImagesAddPushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_floppyDriveVolumeSlider_valueChanged\fP (int value)"
+.br
+.ti -1c
+.RI "void \fBon_floppyDriveVolumeMuteCheckBox_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_floppyDriveSpeedSlider_valueChanged\fP (int position)"
+.br
+.ti -1c
+.RI "void \fBon_floppyDrive1ToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_floppyDrive2ToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_floppyDrive3ToolButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_floppySwappingImagerRemovePushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_alternativeBaseDirPushButton_clicked\fP ()"
+.br
+.ti -1c
 .RI "void \fBon_actionAmiga_triggered\fP ()"
 .br
 .ti -1c
@@ -173,6 +203,9 @@ Amiga \-
 .ti -1c
 .RI "\fBConfigRam\fP \fBramConfiguration\fP"
 .br
+.ti -1c
+.RI "\fBConfigFloppy\fP \fBfloppyConfiguration\fP"
+.br
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -187,6 +220,7 @@ Amiga \-
 .SS "void \fBAmiga::on_actionAmiga_triggered\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_actionReport_bug_triggered\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_actionSummary_triggered\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_alternativeBaseDirPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_amigaModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_chipMem1MbRadio_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_chipMem2MbRadio_clicked\fP ()\fC [private, slot]\fP"
@@ -199,6 +233,15 @@ Amiga \-
 .SS "void \fBAmiga::on_fastMem4MbRadio_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_fastMem8MbRadio_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_fastMemNoneRadio_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppyDrive0ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppyDrive1ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppyDrive2ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppyDrive3ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppyDriveSpeedSlider_valueChanged\fP (intposition)\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppyDriveVolumeMuteCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppyDriveVolumeSlider_valueChanged\fP (intvalue)\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppySwappingImagerRemovePushButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_floppySwappingImagesAddPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_kickstartExtFileToolButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_kickstartFileToolButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_loadConfigToolButton_clicked\fP ()\fC [private, slot]\fP"
@@ -228,6 +271,7 @@ Amiga \-
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBConfigChipset\fP \fBAmiga::chipsetConfiguration\fP\fC [private]\fP"
+.SS "\fBConfigFloppy\fP \fBAmiga::floppyConfiguration\fP\fC [private]\fP"
 .SS "\fBConfigRam\fP \fBAmiga::ramConfiguration\fP\fC [private]\fP"
 .SS "Ui::Amiga* \fBAmiga::ui\fP\fC [private]\fP"
 

@@ -5,43 +5,56 @@
     <includes local="no">QtGui/QApplication</includes>
     <includes refid="amiga_8h" local="yes">amiga.h</includes>
     <incdepgraph>
-      <node id="54">
+      <node id="74">
         <label>configram.h</label>
         <link refid="configram_8h"/>
-        <childnode refid="53" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="73">
         <label>string</label>
       </node>
-      <node id="51">
+      <node id="71">
         <label>QMainWindow</label>
       </node>
-      <node id="49">
+      <node id="69">
         <label>QtGui/QApplication</label>
       </node>
-      <node id="52">
+      <node id="75">
+        <label>configfloppy.h</label>
+        <link refid="configfloppy_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
         <label>configchipset.h</label>
         <link refid="configchipset_8h"/>
-        <childnode refid="53" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
       </node>
-      <node id="48">
+      <node id="76">
+        <label>vector</label>
+      </node>
+      <node id="68">
         <label>main.cpp</label>
         <link refid="main.cpp"/>
-        <childnode refid="49" relation="include">
+        <childnode refid="69" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="70">
         <label>amiga.h</label>
         <link refid="amiga_8h"/>
-        <childnode refid="51" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
         </childnode>
       </node>
     </incdepgraph>

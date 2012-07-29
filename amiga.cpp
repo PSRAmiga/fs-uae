@@ -561,28 +561,28 @@ void Amiga::on_actionSummary_triggered()
 
 void Amiga::on_floppyDrive0ToolButton_clicked()
 {
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF/IPF File(*.adf *.ipf)"));
     ui->floppyDrive0LineEdit->setText(fileName);
     floppyConfiguration.setParameter("floppy_drive_0",fileName.toStdString());
 }
 
 void Amiga::on_floppyDrive1ToolButton_clicked()
 {
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF/IPF File(*.adf *.ipf)"));
     ui->floppyDrive1LineEdit->setText(fileName);
     floppyConfiguration.setParameter("floppy_drive_1",fileName.toStdString());
 }
 
 void Amiga::on_floppyDrive2ToolButton_clicked()
 {
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF/IPF File(*.adf *.ipf)"));
     ui->floppyDrive2LineEdit->setText(fileName);
     floppyConfiguration.setParameter("floppy_drive_2",fileName.toStdString());
 }
 
 void Amiga::on_floppyDrive3ToolButton_clicked()
 {
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("ADF/IPF File(*.adf *.ipf)"));
     ui->floppyDrive3LineEdit->setText(fileName);
     floppyConfiguration.setParameter("floppy_drive_3",fileName.toStdString());
 }

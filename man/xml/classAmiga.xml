@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="105" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="105" bodyend="-1"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="127" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" prot="private" static="no" mutable="no">
         <type><ref refid="classConfigChipset" kindref="compound">ConfigChipset</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="106" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="106" bodyend="-1"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="128" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classAmiga_1a2f4fca23ed8fd82e7fd2fb966f9103e2" prot="private" static="no" mutable="no">
         <type><ref refid="classConfigRam" kindref="compound">ConfigRam</ref></type>
@@ -41,7 +41,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="107" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="107" bodyend="-1"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="129" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAmiga_1a36205e2c4a2c96a4132098522f558bd4" prot="private" static="no" mutable="no">
+        <type><ref refid="classConfigFloppy" kindref="compound">ConfigFloppy</ref></type>
+        <definition>ConfigFloppy Amiga::floppyConfiguration</definition>
+        <argsstring></argsstring>
+        <name>floppyConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="130" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -61,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="18" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="15" bodyend="21"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="17" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="classAmiga_1a90e0c9e26d6a45d5ddd1a0fe17e5ca95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -74,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="23" bodyend="26"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-slot">
@@ -89,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="29" bodyend="34"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="31" bodyend="36"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a57608a8aede14c8f85f8d244debc84d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -102,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="36" bodyend="42"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="38" bodyend="43"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a8c808dcb36de6d61ffb409ef80aefa1d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -119,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="54" bodyend="78"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="55" bodyend="79"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a68fa00efc092a7b2dfc30004955ccde3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -132,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="80" bodyend="83"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="81" bodyend="84"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a728c3e4f93863a6d2188e64b1a2d0e9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -145,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="85" bodyend="88"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1afdbb9b61aa05c68cc304052753407f2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -158,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="34" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="90" bodyend="93"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="35" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="91" bodyend="94"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ae74cddcd49b8face7e891fa9aa7afcf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="36" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="122" bodyend="135"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="37" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="136" bodyend="149"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a8a01a4ed20d33dbd7cf8ef02b4ddeb10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -184,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="38" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="285" bodyend="311"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="39" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="358" bodyend="387"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ab02373685a7d154e8cd4ba9ada48fd87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="40" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="313" bodyend="316"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="41" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="388" bodyend="391"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ad07a6a7c995ee702e92cd223e096ba70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -210,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="42" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="318" bodyend="321"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="43" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="392" bodyend="395"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a171344c3ca223f1cbcf1cdbb21b81f44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="44" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="46" bodyend="51"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="45" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="47" bodyend="52"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ae5acd7fae447ac9fdfbb21afdc97c6fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -236,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="46" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="329" bodyend="338"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="47" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="403" bodyend="417"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a496638173e676f15b49624da24cb8e1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -249,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="48" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="324" bodyend="327"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="49" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="398" bodyend="401"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1abfbaa0415ec9ecd9b2dfdf62627ddbba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -262,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="50" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="350" bodyend="354"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="51" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="429" bodyend="433"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a6d06b74977d884ac2f9450af30f6eadf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -275,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="52" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="356" bodyend="360"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="53" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="434" bodyend="438"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a1dc8bda1d953b8cdbfee4b2227f8dca9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -288,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="54" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="362" bodyend="366"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="55" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="439" bodyend="443"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a10acfe67fa104e601351c227656bcd95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -301,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="56" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="368" bodyend="372"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="57" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="444" bodyend="448"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a1bb0ae3077f191c3cf0e2b430925cdb0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -314,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="58" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="374" bodyend="378"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="59" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="449" bodyend="453"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ae4d3b014240b739b11cd9a42a6d64c68" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -327,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="60" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="380" bodyend="383"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="61" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="454" bodyend="457"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1aa4e44f1c5fb0d117e62d65b0e887a0b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -340,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="62" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="385" bodyend="388"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="63" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="458" bodyend="461"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ac30409283338d527d1dc44bac7fe03e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -353,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="64" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="390" bodyend="393"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="65" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="462" bodyend="465"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ab230812d0a4fbb503545546ffaffe657" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -366,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="66" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="395" bodyend="398"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="67" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="466" bodyend="469"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a044a93fa88c24e5f9e4718571d923dec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -379,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="68" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="400" bodyend="403"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="69" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="470" bodyend="473"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ad62cbcbdf368e9bec4b04dd9e68d30eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -392,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="70" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="405" bodyend="408"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="71" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="474" bodyend="477"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a5bbaf0c4f82d772a162fd2b59644b423" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -405,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="72" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="410" bodyend="413"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="73" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="478" bodyend="481"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a17cd2c88c7d77f3904ad319ad300dd4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -418,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="74" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="415" bodyend="418"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="75" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="482" bodyend="485"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a4081a090fbcc5f86109fee996cb1c3ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -431,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="76" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="420" bodyend="423"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="77" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="486" bodyend="489"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1abdbbaf8972ac768db392e864be9584fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -444,7 +457,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="78" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="425" bodyend="428"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="79" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="490" bodyend="493"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a11c91a53d0ea616fc34cf9ee59137ba7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -457,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="80" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="430" bodyend="433"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="81" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="494" bodyend="497"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a0e53c7f6e7568b8408e404191403125c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -470,7 +483,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="82" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="436" bodyend="439"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="83" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="498" bodyend="501"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1abf4d7dc3f984b3d18bf7865cafc5ad8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -483,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="84" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="441" bodyend="444"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="85" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="502" bodyend="505"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a98f2a778627e8d4cfdd568bf00517e9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -496,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="86" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="446" bodyend="449"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="87" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="506" bodyend="509"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1af46fe3ef84a596b58eb974d9006a438d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -509,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="88" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="451" bodyend="454"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="89" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="510" bodyend="513"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a38029edeb4eb5520631f1a68b64b5007" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -522,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="90" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="456" bodyend="459"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="91" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="514" bodyend="517"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a4df55e9f18bfb0c9bb7a956b8c80e5b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -535,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="92" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="461" bodyend="464"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="93" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="518" bodyend="521"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ac3c6ea30cab7bff74e4b473bf15090c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -548,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="94" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="466" bodyend="469"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="95" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="522" bodyend="525"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a249bb279b14d48d465498e82c9a66e2a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -561,7 +574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="96" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="471" bodyend="474"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="97" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="526" bodyend="529"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ad0950189995ac8d3448771623e3ceafa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -574,7 +587,145 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="98" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="476" bodyend="484"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="99" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="531" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a7ded57c91db93833e6cdfd1e21dcdcda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDrive0ToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDrive0ToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="101" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="562" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ab0fad33dad5daa1811788af807f16640" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppySwappingImagesAddPushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppySwappingImagesAddPushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="103" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="591" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a32286caf852d867709cb56fc0aeb3bc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDriveVolumeSlider_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_floppyDriveVolumeSlider_valueChanged</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="105" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="641" bodyend="647"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1adeb313b0432509223d547d97ca3cda6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDriveVolumeMuteCheckBox_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDriveVolumeMuteCheckBox_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="107" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="649" bodyend="661"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1af8c051b704b3a1642ec4606e6b682e10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDriveSpeedSlider_valueChanged</definition>
+        <argsstring>(int position)</argsstring>
+        <name>on_floppyDriveSpeedSlider_valueChanged</name>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="109" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="663" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ac1e72bc40727000067723403f1d407d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDrive1ToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDrive1ToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="111" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="569" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ad428ecd1871e9f42a6e5947ee0fcf22d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDrive2ToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDrive2ToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="113" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="576" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a084e32bc56163ff8dceee9610166c92a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDrive3ToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDrive3ToolButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="115" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="583" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a80b9fc533b748b6833ec9f8edbd2a765" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppySwappingImagerRemovePushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppySwappingImagerRemovePushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="117" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="615" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a6dc1b3a66f80dacf5ce6c0d947a51ca9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_alternativeBaseDirPushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_alternativeBaseDirPushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="119" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="681" bodyend="685"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1aec79f2ab3d67db633c76fbb5acf4ace0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -587,7 +738,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="100" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="486" bodyend="489"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="121" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="541" bodyend="544"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a65ebd6eb61e897f954e4d137f80468bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -600,7 +751,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="102" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="491" bodyend="505"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="123" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="546" bodyend="560"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -619,7 +770,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="109" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="152" bodyend="171"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="133" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="167" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="classAmiga_1a2ad7c64788f0dabf2f08f1327acf34b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -636,7 +787,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="110" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="340" bodyend="348"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="134" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="419" bodyend="427"/>
       </memberdef>
       <memberdef kind="function" id="classAmiga_1a153bfcb59f5250e9fec9cf03cd0fe8d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -649,7 +800,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="111" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="173" bodyend="283"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="135" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="193" bodyend="356"/>
       </memberdef>
       <memberdef kind="function" id="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -666,7 +817,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="112" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="137" bodyend="150"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="136" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="151" bodyend="165"/>
       </memberdef>
       <memberdef kind="function" id="classAmiga_1a736cfd656c31325245e25700f951c5a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -683,7 +834,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="113" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="100" bodyend="120"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="137" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="101" bodyend="134"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -691,7 +842,7 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="3">
+      <node id="4">
         <label>ConfigRam</label>
         <link refid="classConfigRam"/>
       </node>
@@ -699,21 +850,29 @@
         <label>Amiga</label>
         <link refid="classAmiga"/>
         <childnode refid="2" relation="usage">
-          <edgelabel>chipsetConfiguration</edgelabel>
+          <edgelabel>floppyConfiguration</edgelabel>
         </childnode>
         <childnode refid="3" relation="usage">
+          <edgelabel>chipsetConfiguration</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
           <edgelabel>ramConfiguration</edgelabel>
         </childnode>
       </node>
-      <node id="2">
+      <node id="3">
         <label>ConfigChipset</label>
         <link refid="classConfigChipset"/>
       </node>
+      <node id="2">
+        <label>ConfigFloppy</label>
+        <link refid="classConfigFloppy"/>
+      </node>
     </collaborationgraph>
-    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="13" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="12" bodyend="114"/>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="14" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" bodystart="13" bodyend="138"/>
     <listofallmembers>
       <member refid="classAmiga_1adcfee400507a257674854183ea7013e3" prot="public" virt="non-virtual"><scope>Amiga</scope><name>Amiga</name></member>
       <member refid="classAmiga_1aeb2c3830963c65181abffc55f4cbe73a" prot="private" virt="non-virtual"><scope>Amiga</scope><name>chipsetConfiguration</name></member>
+      <member refid="classAmiga_1a36205e2c4a2c96a4132098522f558bd4" prot="private" virt="non-virtual"><scope>Amiga</scope><name>floppyConfiguration</name></member>
       <member refid="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" prot="private" virt="non-virtual"><scope>Amiga</scope><name>getConfigurationAreaFromParameterName</name></member>
       <member refid="classAmiga_1a68fa00efc092a7b2dfc30004955ccde3" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_accuracyLeastRadio_clicked</name></member>
       <member refid="classAmiga_1afdbb9b61aa05c68cc304052753407f2d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_accuracyMostadio_clicked</name></member>
@@ -721,6 +880,7 @@
       <member refid="classAmiga_1aec79f2ab3d67db633c76fbb5acf4ace0" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_actionAmiga_triggered</name></member>
       <member refid="classAmiga_1a496638173e676f15b49624da24cb8e1b" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_actionReport_bug_triggered</name></member>
       <member refid="classAmiga_1a65ebd6eb61e897f954e4d137f80468bc" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_actionSummary_triggered</name></member>
+      <member refid="classAmiga_1a6dc1b3a66f80dacf5ce6c0d947a51ca9" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_alternativeBaseDirPushButton_clicked</name></member>
       <member refid="classAmiga_1a8c808dcb36de6d61ffb409ef80aefa1d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_amigaModelComboBox_currentIndexChanged</name></member>
       <member refid="classAmiga_1a10acfe67fa104e601351c227656bcd95" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_chipMem1MbRadio_clicked</name></member>
       <member refid="classAmiga_1a1bb0ae3077f191c3cf0e2b430925cdb0" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_chipMem2MbRadio_clicked</name></member>
@@ -733,6 +893,15 @@
       <member refid="classAmiga_1a17cd2c88c7d77f3904ad319ad300dd4e" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMem4MbRadio_clicked</name></member>
       <member refid="classAmiga_1a4081a090fbcc5f86109fee996cb1c3ee" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMem8MbRadio_clicked</name></member>
       <member refid="classAmiga_1a044a93fa88c24e5f9e4718571d923dec" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_fastMemNoneRadio_clicked</name></member>
+      <member refid="classAmiga_1a7ded57c91db93833e6cdfd1e21dcdcda" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppyDrive0ToolButton_clicked</name></member>
+      <member refid="classAmiga_1ac1e72bc40727000067723403f1d407d8" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppyDrive1ToolButton_clicked</name></member>
+      <member refid="classAmiga_1ad428ecd1871e9f42a6e5947ee0fcf22d" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppyDrive2ToolButton_clicked</name></member>
+      <member refid="classAmiga_1a084e32bc56163ff8dceee9610166c92a" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppyDrive3ToolButton_clicked</name></member>
+      <member refid="classAmiga_1af8c051b704b3a1642ec4606e6b682e10" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppyDriveSpeedSlider_valueChanged</name></member>
+      <member refid="classAmiga_1adeb313b0432509223d547d97ca3cda6b" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppyDriveVolumeMuteCheckBox_clicked</name></member>
+      <member refid="classAmiga_1a32286caf852d867709cb56fc0aeb3bc0" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppyDriveVolumeSlider_valueChanged</name></member>
+      <member refid="classAmiga_1a80b9fc533b748b6833ec9f8edbd2a765" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppySwappingImagerRemovePushButton_clicked</name></member>
+      <member refid="classAmiga_1ab0fad33dad5daa1811788af807f16640" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_floppySwappingImagesAddPushButton_clicked</name></member>
       <member refid="classAmiga_1a57608a8aede14c8f85f8d244debc84d5" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_kickstartExtFileToolButton_clicked</name></member>
       <member refid="classAmiga_1ab3560d086c01189e0b8440df7ccb47d5" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_kickstartFileToolButton_clicked</name></member>
       <member refid="classAmiga_1a8a01a4ed20d33dbd7cf8ef02b4ddeb10" prot="private" virt="non-virtual"><scope>Amiga</scope><name>on_loadConfigToolButton_clicked</name></member>

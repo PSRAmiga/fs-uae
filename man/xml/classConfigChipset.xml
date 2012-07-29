@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="70" bodyend="83"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="70" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classConfigChipset_1a748fd2c9e997c27b920bb79daee2ab21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="85" bodyend="93"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="97" bodyend="105"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
