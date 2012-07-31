@@ -14,12 +14,16 @@ SOURCES += main.cpp\
         amiga.cpp \
     configchipset.cpp \
     configram.cpp \
-    configfloppy.cpp
+    configfloppy.cpp \
+    configcdrom.cpp \
+    configharddisks.cpp
 
 HEADERS  += amiga.h \
     configchipset.h \
     configram.h \
-    configfloppy.h
+    configfloppy.h \
+    configcdrom.h \
+    configharddisks.h
 
 FORMS    += amiga.ui
 

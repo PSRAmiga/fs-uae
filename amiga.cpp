@@ -3,15 +3,16 @@
 #include <sstream>
 #include <fstream>
 #include <QUrl>
-#include <stdlib.h>
-#include <pwd.h>
-#include <stdio.h>
 #include <QDesktopServices>
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QColorDialog>
 #include <QProcess>
 #include <cstdlib>
+
+#include <stdlib.h>
+#include <pwd.h>
+#include <stdio.h>
 using namespace std;
 
 Amiga::Amiga(QWidget *parent) :
@@ -34,7 +35,6 @@ void Amiga::on_kickstartFileToolButton_clicked()
     ui->kickstartFileLineEdit->setText(fileName);
     chipsetConfiguration.setParameter("kickstart_file",fileName.toStdString());
 }
-
 void Amiga::on_kickstartExtFileToolButton_clicked()
 {
     QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Image ROM(*.rom)"));
@@ -54,40 +54,17 @@ void Amiga::on_fadeColorPushButton_clicked()
 
 void Amiga::on_amigaModelComboBox_currentIndexChanged(const QString &arg1)
 {
-    //Enable or Disable Kickstart extend Dir selection
-    if ((QString::compare(arg1,"CD32")==0)||(QString::compare(arg1,"CDTV")==0))
-    {
-        ui->kickstartExtFileLabel->setEnabled(true);
-        ui->kickstartExtFileLineEdit->setEnabled(true);
-        ui->kickstartExtFileToolButton->setEnabled(true);
-    } else
-    {
-        ui->kickstartExtFileLabel->setEnabled(false);
-        ui->kickstartExtFileLineEdit->setEnabled(false);
-        ui->kickstartExtFileToolButton->setEnabled(false);
-    }
-
-    if ((QString::compare(arg1,"A1200/020")==0)||(QString::compare(arg1,"A4000/040")==0)||(QString::compare(arg1,"CD32")==0))
-    {
-        ui->slowMem1_8MbRadio->setDisabled(true);
-    } else
-    {
-        ui->slowMem1_8MbRadio->setDisabled(false);
-    }
-
     chipsetConfiguration.setParameter("amiga_model",arg1.toStdString());
+    updateGraphicsFromInternalConfiguration();
 }
-
 void Amiga::on_accuracyLeastRadio_clicked()
 {
     this->chipsetConfiguration.setParameter("accuracy","-1");
 }
-
 void Amiga::on_accuracyNormalRadio_clicked()
 {
     this->chipsetConfiguration.setParameter("accuracy","0");
 }
-
 void Amiga::on_accuracyMostadio_clicked()
 {
     this->chipsetConfiguration.setParameter("accuracy","1");
@@ -117,17 +94,28 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(ramConfiguration.getSlowMemoryConfigString())) {myfile << ramConfiguration.getSlowMemoryConfigString() << endl;}
     if (!isEmptyString(ramConfiguration.getZorro3ConfigString())) {myfile << ramConfiguration.getZorro3ConfigString() << endl;}
 
-    if (!isEmptyString(floppyConfiguration.getFloppyDrive0ConfigString())) {myfile << floppyConfiguration.getFloppyDrive0ConfigString() << endl;}
-    if (!isEmptyString(floppyConfiguration.getFloppyDrive1ConfigString())) {myfile << floppyConfiguration.getFloppyDrive1ConfigString() << endl;}
-    if (!isEmptyString(floppyConfiguration.getFloppyDrive2ConfigString())) {myfile << floppyConfiguration.getFloppyDrive2ConfigString() << endl;}
-    if (!isEmptyString(floppyConfiguration.getFloppyDrive3ConfigString())) {myfile << floppyConfiguration.getFloppyDrive3ConfigString() << endl;}
+    for(int i=0;i<4;i++){
+        if (!isEmptyString(floppyConfiguration.getFloppyDriveConfigStringAt(i))) {myfile << floppyConfiguration.getFloppyDriveConfigStringAt(i) << endl;}
+    }
     if (!isEmptyString(floppyConfiguration.getFloppyDriveSpeedConfigString())) {myfile << floppyConfiguration.getFloppyDriveSpeedConfigString() << endl;}
     if (!isEmptyString(floppyConfiguration.getFloppyDriveVolumeConfigString())) {myfile << floppyConfiguration.getFloppyDriveVolumeConfigString() << endl;}
     if (floppyConfiguration.getFloppyImageSize()>0){
         for(int i=0;i<floppyConfiguration.getFloppyImageSize();i++){
             myfile << "floppy_image_" << i << " = " << floppyConfiguration.getFloppyImageAt(i) << endl;
         }
+    }
 
+    if ((!isEmptyString(cdromConfiguration.getCDRomDrive0ConfigString())) && (((chipsetConfiguration.getAmigaModelString().compare("CDTV")==0))||(chipsetConfiguration.getAmigaModelString().compare("CD32")==0))) {myfile << cdromConfiguration.getCDRomDrive0ConfigString() << endl;}
+    if ((cdromConfiguration.getCDRomImageSize()>0) && (((chipsetConfiguration.getAmigaModelString().compare("CDTV")==0))||(chipsetConfiguration.getAmigaModelString().compare("CD32")==0))){
+        for(int i=0;i<cdromConfiguration.getCDRomImageSize();i++){
+            myfile << "cdrom_image_" << i << " = " << cdromConfiguration.getCDRomImageAt(i) << endl;
+        }
+    }
+
+    for(int i=0;i<10;i++){
+        if (!isEmptyString(hardDiskConfiguration.getHardDriveConfigStringAt(i))) {myfile << hardDiskConfiguration.getHardDriveConfigStringAt(i) << endl;}
+        if (!isEmptyString(hardDiskConfiguration.getHardDriveLabelConfigStringAt(i))) {myfile << hardDiskConfiguration.getHardDriveLabelConfigStringAt(i) << endl;}
+        if (!isEmptyString(hardDiskConfiguration.getHardDriveReadOnlyConfigStringAt(i))) {myfile << hardDiskConfiguration.getHardDriveReadOnlyConfigStringAt(i) << endl;}
     }
 
     myfile.close();
@@ -149,7 +137,7 @@ void Amiga::on_saveConfigToolButton_clicked()
 }
 
 int Amiga::getConfigurationAreaFromParameterName(string parameterName){
-    //per ora ritorno un numero/una stringa poi magari potrei fare una configurazione astratta e ritornare direttamente l'oggetto chipsetConfiguration.
+    //per ora ritorno un numero poi magari potrei fare una configurazione astratta e ritornare direttamente l'oggetto chipsetConfiguration.
     //ovviamente tutte le config dovranno implemntare l'astratta così questa funzione ritorna un oggetto di tipo padre abstract config
     //e posso fare abstrobj.setParameter(...) con un'unica riga dentro a parseLine()
     if ((parameterName.compare("amiga_model")==0)||(parameterName.compare("accuracy")==0)||(parameterName.compare("kickstart_file")==0)||(parameterName.compare("kickstart_ext_file")==0)||(parameterName.compare("ntsc_mode")==0)) {
@@ -157,15 +145,20 @@ int Amiga::getConfigurationAreaFromParameterName(string parameterName){
     } else if ((parameterName.compare("chip_memory")==0)||(parameterName.compare("slow_memory")==0)||(parameterName.compare("fast_memory")==0)||(parameterName.compare("zorro_iii_memory")==0)){
         return 2;
     } else if ((parameterName.substr(0,parameterName.length()-1).compare("floppy_drive_")==0)||(parameterName.substr(0,parameterName.length()-1).compare("floppy_image_")==0)||(parameterName.substr(0,parameterName.length()-2).compare("floppy_image_")==0)||(parameterName.compare("floppy_drive_volume")==0)||(parameterName.compare("floppy_drive_speed")==0)){
-        //QMessageBox::about(this, tr("Error"),QString::fromStdString(parameterName.substr(0,parameterName.length()-1)));
         return 3;
+    } else if ((parameterName.substr(0,parameterName.length()-1).compare("cdrom_drive_")==0)||(parameterName.substr(0,parameterName.length()-1).compare("cdrom_image_")==0)||(parameterName.substr(0,parameterName.length()-2).compare("cdrom_image_")==0)){
+        return 4;
+    } else if ((parameterName.substr(0,parameterName.length()-1).compare("hard_drive_")==0)||
+               ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_label")==0))||
+               ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_read_only")==0))){
+        return 5;
     } else {
         return -1;
     }
 }
 
 void Amiga::parseLine(string line){
-    if (line.length()==0) return;
+    if (line.length()<=1) return;
     //fs-uae config file convention is "name = value"
 
     int separatorPosition=line.find_first_of(" = ");
@@ -177,7 +170,7 @@ void Amiga::parseLine(string line){
     //una string oppure una ENUM
 
     //NB se non trovo nessun parametro con quel nome significa che il parametro non esiste (getConfigurationAreaFromParameterName ritorna -1)
-    //se invece il parametro esiste ma non è un valore valido se ne preoccupa l'area di configurazione
+    //MA se invece il parametro esiste ma non è un valore valido se ne preoccupa l'area di configurazione
     int configArea=getConfigurationAreaFromParameterName(parameterName);
     if (configArea==1){
         chipsetConfiguration.setParameter(parameterName,parameterValue);
@@ -185,9 +178,11 @@ void Amiga::parseLine(string line){
         ramConfiguration.setParameter(parameterName,parameterValue);
     } else if (configArea==3){
         floppyConfiguration.setParameter(parameterName,parameterValue);
+    } else if (configArea==4){
+        cdromConfiguration.setParameter(parameterName,parameterValue);
+    } else if (configArea==5){
+        hardDiskConfiguration.setParameter(parameterName,parameterValue);
     }
-
-
 }
 
 void Amiga::updateGraphicsFromInternalConfiguration(){
@@ -220,11 +215,39 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         ui->kickstartExtFileLabel->setEnabled(true);
         ui->kickstartExtFileLineEdit->setEnabled(true);
         ui->kickstartExtFileToolButton->setEnabled(true);
+
+        ui->cdromDrive0Label->setEnabled(true);
+        ui->cdromDrive0LineEdit->setEnabled(true);
+        ui->cdromDrive0ToolButton->setEnabled(true);
+        ui->cdromSwappingImagesLabel->setEnabled(true);
+        ui->cdromSwappingImagesListWidget->setEnabled(true);
+        ui->cdromSwappingImagesRemovePushButton->setEnabled(true);
+        ui->cdromSwappingImagesAddPushButton->setEnabled(true);
+        ui->cdromOccupiedSlotsLabel->setEnabled(true);
+        ui->cdromOccupiedSlotsDisplayLabel->setEnabled(true);
     } else
     {
         ui->kickstartExtFileLabel->setEnabled(false);
         ui->kickstartExtFileLineEdit->setEnabled(false);
         ui->kickstartExtFileToolButton->setEnabled(false);
+
+        ui->cdromDrive0Label->setEnabled(false);
+        ui->cdromDrive0LineEdit->setEnabled(false);
+        ui->cdromDrive0ToolButton->setEnabled(false);
+        ui->cdromSwappingImagesLabel->setEnabled(false);
+        ui->cdromSwappingImagesListWidget->setEnabled(false);
+        ui->cdromSwappingImagesRemovePushButton->setEnabled(false);
+        ui->cdromSwappingImagesAddPushButton->setEnabled(false);
+        ui->cdromOccupiedSlotsLabel->setEnabled(false);
+        ui->cdromOccupiedSlotsDisplayLabel->setEnabled(false);
+    }
+
+    if ((amiga_model.compare("A1200/020")==0)||(amiga_model.compare("A4000/040")==0)||(amiga_model.compare("CD32")==0))
+    {
+        ui->slowMem1_8MbRadio->setDisabled(true);
+    } else
+    {
+        ui->slowMem1_8MbRadio->setDisabled(false);
     }
 
     //KICKSTART ROM
@@ -306,17 +329,15 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //FLOPPY DRIVES
-    string floppy_drive_0=this->floppyConfiguration.getFloppyDrive0String();
-    ui->floppyDrive0LineEdit->setText(QString::fromStdString(floppy_drive_0));
+    for(int i=0;i<4;i++){
+        string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
 
-    string floppy_drive_1=this->floppyConfiguration.getFloppyDrive1String();
-    ui->floppyDrive1LineEdit->setText(QString::fromStdString(floppy_drive_1));
-
-    string floppy_drive_2=this->floppyConfiguration.getFloppyDrive2String();
-    ui->floppyDrive2LineEdit->setText(QString::fromStdString(floppy_drive_2));
-
-    string floppy_drive_3=this->floppyConfiguration.getFloppyDrive3String();
-    ui->floppyDrive3LineEdit->setText(QString::fromStdString(floppy_drive_3));
+        string floppy_drive=this->floppyConfiguration.getFloppyDriveStringAt(i);
+        QLineEdit *lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("floppyDrive" + iString + "LineEdit"));
+        if (lineEdit !=0){
+            lineEdit->setText(QString::fromStdString(floppy_drive));
+        }
+    }
 
     //FLOPPY DRIVE VOLUME
     string floppy_drive_volume=this->floppyConfiguration.getFloppyDriveVolumeString();
@@ -353,6 +374,50 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
     string floppyOccupiedSlotsString=static_cast<ostringstream*>( &(ostringstream() << floppyConfiguration.getFloppyImageSize()) )->str();
     ui->floppyOccupiedSlotsDisplayLabel->setText(QString::fromStdString(floppyOccupiedSlotsString+"/20"));
+
+    //CDROM DRIVE
+    string cdrom_drive_0=this->cdromConfiguration.getCDRomDrive0String();
+    ui->cdromDrive0LineEdit->setText(QString::fromStdString(cdrom_drive_0));
+
+    //CDROM SWAP IMAGES
+    ui->cdromSwappingImagesListWidget->clear();
+    if (cdromConfiguration.getCDRomImageSize()>0){
+        for(int i=0;i<cdromConfiguration.getCDRomImageSize();i++){
+            ui->cdromSwappingImagesListWidget->addItem(QString::fromStdString(cdromConfiguration.getCDRomImageAt(i)));
+        }
+
+    }
+    string cdromOccupiedSlotsString=static_cast<ostringstream*>( &(ostringstream() << cdromConfiguration.getCDRomImageSize()) )->str();
+    ui->cdromOccupiedSlotsDisplayLabel->setText(QString::fromStdString(cdromOccupiedSlotsString+"/20"));
+
+    //HARD DRIVES
+
+    for(int i=0;i<10;i++){
+        string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
+
+        string hardDriveString=this->hardDiskConfiguration.getHardDriveStringAt(i);
+        QLineEdit *lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("hardDrive" + iString + "LineEdit"));
+        if (lineEdit !=0){
+            lineEdit->setText(QString::fromStdString(hardDriveString));
+        }
+
+        string hardDriveLabelString=this->hardDiskConfiguration.getHardDriveLabelStringAt(i);
+        lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("hardDrive" + iString + "LabelLineEdit"));
+        if (lineEdit !=0){
+            lineEdit->setText(QString::fromStdString(hardDriveLabelString));
+        }
+
+        string isChecked=this->hardDiskConfiguration.getHardDriveReadOnlyStringAt(i);
+        QCheckBox *checkBox = ui->widget->findChild<QCheckBox *>(QString::fromStdString("hardDrive" + iString + "ReadOnlyCheckBox"));
+        if (checkBox !=0){
+            if (isChecked.compare("1")==0){
+                checkBox->setChecked(true);
+            } else {
+                checkBox->setChecked(false);
+            }
+        }
+    }
+
 }
 
 void Amiga::on_loadConfigToolButton_clicked()
@@ -366,6 +431,8 @@ void Amiga::on_loadConfigToolButton_clicked()
     chipsetConfiguration.setToDefaultConfiguration();
     ramConfiguration.setToDefaultConfiguration();
     floppyConfiguration.setToDefaultConfiguration();
+    cdromConfiguration.setToDefaultConfiguration();
+    hardDiskConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
     //poi leggo riga per riga, aggiorno la configurazione interna e aggiorno i componenti
@@ -405,6 +472,8 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
     chipsetConfiguration.setToDefaultConfiguration();
     ramConfiguration.setToDefaultConfiguration();
     floppyConfiguration.setToDefaultConfiguration();
+    cdromConfiguration.setToDefaultConfiguration();
+    hardDiskConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
 
@@ -534,7 +603,8 @@ void Amiga::on_runConfigButton_clicked()
     int returnValue=system("fs-uae .current.fs-uae");
     if (returnValue!=0)
     {
-        ui->errorLabel->setText(QString::fromStdString("Ops...something went wrong :-("));
+        //ui->errorLabel->setText(QString::fromStdString("Ops...something went wrong :-("));
+        QMessageBox::about(this, tr("Error"),tr("Ops...something went wrong :-("));
     }
 }
 
@@ -675,11 +745,345 @@ void Amiga::on_floppyDriveSpeedSlider_valueChanged(int position)
     ui->floppyDriveSpeedDisplayLabel->setText(QString::fromStdString(displayString));
 }
 
-
-
-
 void Amiga::on_alternativeBaseDirPushButton_clicked()
 {
     //QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
 
+}
+
+void Amiga::on_cdromDrive0ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("CD Image CUE/BIN/ISO(*.cue *.bin *.iso)"));
+    ui->cdromDrive0LineEdit->setText(fileName);
+    cdromConfiguration.setParameter("cdrom_drive_0",fileName.toStdString());
+}
+
+void Amiga::on_cdromSwappingImagesAddPushButton_clicked()
+{
+    if (ui->cdromSwappingImagesListWidget->count()==20){
+        QMessageBox::about(this, tr("Error"),tr("You can select at most 20 CDRoms"));
+        return;}
+    QStringList fileNames=QFileDialog::getOpenFileNames(this, tr("Open file"), QDir::homePath(), tr("CD Image CUE/BIN/ISO(*.cue *.bin *.iso)"));
+
+    if (fileNames.count()==0){
+        //hai premuto annulla
+        return;}
+
+    if (fileNames.count()+ui->cdromSwappingImagesListWidget->count()>20){
+        QMessageBox::about(this, tr("Error"),tr("You can select at most 20 CDRoms"));
+        return;}
+
+    for(int i=0;i<fileNames.count();i++){
+        //aggiorno la lista interna
+        cdromConfiguration.pushBackCDRomImage(fileNames.at(i).toStdString());
+        //aggiorno la lista grafica
+        //  ui->floppySwappingImagesListWidget->addItem(fileNames.at(i));
+    }
+    updateGraphicsFromInternalConfiguration();
+}
+
+void Amiga::on_cdromSwappingImagesRemovePushButton_clicked()
+{
+    //devo rimuovere i selezionati dalla lista interna
+    QItemSelectionModel *selection = ui->cdromSwappingImagesListWidget->selectionModel();
+    QModelIndexList indexes = selection->selectedRows();
+    QListIterator<QModelIndex> i(indexes);
+    QList <int> indexList;
+    while(i.hasNext())
+    {
+        QModelIndex index = i.next();
+        indexList << index.row();
+
+    };
+    //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
+    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
+    for(int x=indexList.size()-1;x>=0;x--){
+        cdromConfiguration.erasCDRomImageAt(indexList[x]);
+    }
+
+    //svuoto lista grafica
+    ui->cdromSwappingImagesListWidget->clear();
+
+    //aggiorno la grafica
+    updateGraphicsFromInternalConfiguration();
+}
+
+void Amiga::on_hardDrive0ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive0LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_0",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive0FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive0LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_0",dir.toStdString());
+}
+
+void Amiga::on_hardDrive1ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive1LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_1",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive1FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive1LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_1",dir.toStdString());
+}
+
+void Amiga::on_hardDrive2ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive2LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_2",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive2FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive2LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_2",dir.toStdString());
+}
+
+void Amiga::on_hardDrive3ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive3LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_3",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive3FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive3LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_3",dir.toStdString());
+}
+
+void Amiga::on_hardDrive4ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive4LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_4",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive4FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive4LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_4",dir.toStdString());
+}
+
+void Amiga::on_hardDrive5ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive5LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_5",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive5FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive5LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_5",dir.toStdString());
+}
+
+void Amiga::on_hardDrive6ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive6LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_6",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive6FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive6LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_6",dir.toStdString());
+}
+
+void Amiga::on_hardDrive7ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive7LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_7",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive7FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive7LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_7",dir.toStdString());
+}
+
+void Amiga::on_hardDrive8ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive8LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_8",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive8FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive8LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_8",dir.toStdString());
+}
+
+void Amiga::on_hardDrive9ToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File adf/zip(*.adf *.zip)"));
+    ui->hardDrive9LineEdit->setText(fileName);
+    hardDiskConfiguration.setParameter("hard_drive_9",fileName.toStdString());
+}
+
+void Amiga::on_hardDrive9FolderToolButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->hardDrive9LineEdit->setText(dir);
+    hardDiskConfiguration.setParameter("hard_drive_9",dir.toStdString());
+}
+
+void Amiga::on_hardDrive0LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_0_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive1LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_1_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive2LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_2_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive3LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_3_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive4LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_4_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive5LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_5_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive6LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_6_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive7LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_7_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive8LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_8_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive9LabelLineEdit_textChanged(const QString &arg1)
+{
+    hardDiskConfiguration.setParameter("hard_drive_9_label",arg1.toStdString());
+}
+
+void Amiga::on_hardDrive0ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive0ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_0_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_0_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive1ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive1ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_1_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_1_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive2ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive2ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_2_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_2_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive3ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive3ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_3_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_3_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive4ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive4ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_4_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_4_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive5ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive5ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_5_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_5_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive6ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive6ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_6_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_6_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive7ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive7ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_7_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_7_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive8ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive8ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_8_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_8_read_only","0");
+    }
+}
+
+void Amiga::on_hardDrive9ReadOnlyCheckBox_clicked()
+{
+    if(ui->hardDrive9ReadOnlyCheckBox->isChecked()){
+        hardDiskConfiguration.setParameter("hard_drive_9_read_only","1");
+    } else {
+        hardDiskConfiguration.setParameter("hard_drive_9_read_only","0");
+    }
 }

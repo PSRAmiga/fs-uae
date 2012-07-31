@@ -1,7 +1,6 @@
 #include "configfloppy.h"
 #include <sstream>
 #include <string>
-using namespace std; /////////////////serve??
 
 const string DEFAULTFLOPPYDRIVE = "";
 const string DEFAULTFLOPPYDRIVEVOLUME = "20";
@@ -12,48 +11,18 @@ ConfigFloppy::ConfigFloppy()
     setToDefaultConfiguration();
 }
 
-string ConfigFloppy::getFloppyDrive0ConfigString()
+string ConfigFloppy::getFloppyDriveConfigStringAt(int i)
 {
-    if (floppy_drive_0.compare(DEFAULTFLOPPYDRIVE)==0){return "";}
-    else {return "floppy_drive_0 = " + floppy_drive_0;}
+    string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
+    if (i<0 || i>3){return "";}
+    if (floppy_drive[i].compare(DEFAULTFLOPPYDRIVE)==0){return "";}
+    else {return "floppy_drive_" + iString + " = " + floppy_drive[i];}
 }
 
-string ConfigFloppy::getFloppyDrive0String()
+string ConfigFloppy::getFloppyDriveStringAt(int i)
 {
-    return floppy_drive_0;
-}
-
-string ConfigFloppy::getFloppyDrive1ConfigString()
-{
-    if (floppy_drive_1.compare(DEFAULTFLOPPYDRIVE)==0){return "";}
-    else {return "floppy_drive_1 = " + floppy_drive_1;}
-}
-
-string ConfigFloppy::getFloppyDrive1String()
-{
-    return floppy_drive_1;
-}
-
-string ConfigFloppy::getFloppyDrive2ConfigString()
-{
-    if (floppy_drive_2.compare(DEFAULTFLOPPYDRIVE)==0){return "";}
-    else {return "floppy_drive_2 = " + floppy_drive_2;}
-}
-
-string ConfigFloppy::getFloppyDrive2String()
-{
-    return floppy_drive_2;
-}
-
-string ConfigFloppy::getFloppyDrive3ConfigString()
-{
-    if (floppy_drive_3.compare(DEFAULTFLOPPYDRIVE)==0){return "";}
-    else {return "floppy_drive_3 = " + floppy_drive_3;}
-}
-
-string ConfigFloppy::getFloppyDrive3String()
-{
-    return floppy_drive_3;
+    if (i<0 || i>3){return "";}
+    return floppy_drive[i];
 }
 
 string ConfigFloppy::getFloppyDriveVolumeConfigString()
@@ -103,13 +72,13 @@ void ConfigFloppy::eraseFloppyImageAt(int position)
 void ConfigFloppy::setParameter(string parameter, string value)
 {
     if(parameter.compare("floppy_drive_0")==0){
-        floppy_drive_0=value;
+        floppy_drive[0]=value;
     } else if(parameter.compare("floppy_drive_1")==0){
-        floppy_drive_1=value;
+        floppy_drive[1]=value;
     } else if(parameter.compare("floppy_drive_2")==0){
-        floppy_drive_2=value;
+        floppy_drive[2]=value;
     } else if(parameter.compare("floppy_drive_3")==0){
-        floppy_drive_3=value;
+        floppy_drive[3]=value;
     } else if(parameter.compare("floppy_drive_volume")==0){
         istringstream buffer(value);
         int intValue;
@@ -138,10 +107,9 @@ void ConfigFloppy::setToDefaultConfiguration()
 {
     //set options to default values
 
-    floppy_drive_0=DEFAULTFLOPPYDRIVE;
-    floppy_drive_1=DEFAULTFLOPPYDRIVE;
-    floppy_drive_2=DEFAULTFLOPPYDRIVE;
-    floppy_drive_3=DEFAULTFLOPPYDRIVE;
+    for(int i=0;i<4;i++){
+        floppy_drive[i]=DEFAULTFLOPPYDRIVE;
+    }
     floppy_drive_volume=DEFAULTFLOPPYDRIVEVOLUME;
     floppy_drive_speed=DEFAULTFLOPPYDRIVESPEED;
     floppy_image.clear();

@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -661,19 +661,30 @@
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <zorder>layoutWidget</zorder>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>290</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Zorro III quand'è che non si può usare?</string>
+      </property>
+     </widget>
      <zorder>layoutWidget2</zorder>
      <zorder>layoutWidget3</zorder>
      <zorder>verticalLayoutWidget</zorder>
      <zorder>verticalLayoutWidget_2</zorder>
-     <zorder>label_10</zorder>
-     <zorder>label</zorder>
      <zorder>layoutWidget6</zorder>
      <zorder>layoutWidget5</zorder>
      <zorder>layoutWidget8</zorder>
      <zorder>layoutWidget4</zorder>
      <zorder>line_6</zorder>
-     <zorder></zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>label_2</zorder>
     </widget>
     <widget class="QWidget" name="floppiesMenu">
      <attribute name="icon">
@@ -1039,7 +1050,7 @@
        <rect>
         <x>460</x>
         <y>370</y>
-        <width>401</width>
+        <width>61</width>
         <height>17</height>
        </rect>
       </property>
@@ -1056,33 +1067,6 @@
      <attribute name="title">
       <string>CD-ROM</string>
      </attribute>
-     <widget class="QLabel" name="label_58">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>43</y>
-        <width>261</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Il CD si abilita solo con CD32 e CDTV</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_36">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>260</y>
-        <width>431</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add file continua ad aggiungere file MULTIPLI
-la lista supporta la selezione (e quindi cancellazione multipla)</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="verticalLayoutWidget_8">
       <property name="geometry">
        <rect>
@@ -1095,6 +1079,9 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <layout class="QHBoxLayout" name="cdromDrive0Panel">
        <item>
         <widget class="QLabel" name="cdromDrive0Label">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>CD-ROM Drive 0: </string>
          </property>
@@ -1102,8 +1089,11 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QLineEdit" name="cdromDrive0LineEdit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
-          <string>solo CUE,BIN e ISO</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -1115,6 +1105,9 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="cdromDrive0ToolButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -1127,6 +1120,9 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       </layout>
      </widget>
      <widget class="QLabel" name="cdromSwappingImagesLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1140,12 +1136,15 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       </property>
      </widget>
      <widget class="QListWidget" name="cdromSwappingImagesListWidget">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>30</x>
         <y>60</y>
         <width>811</width>
-        <height>151</height>
+        <height>331</height>
        </rect>
       </property>
       <property name="selectionMode">
@@ -1153,10 +1152,13 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       </property>
      </widget>
      <widget class="QPushButton" name="cdromSwappingImagesRemovePushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>220</y>
+        <y>390</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -1169,11 +1171,14 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         <normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="cdromSwwappingImagesAddPushButton">
+     <widget class="QPushButton" name="cdromSwappingImagesAddPushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>220</y>
+        <y>390</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -1193,6 +1198,52 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
       <property name="icon">
        <iconset resource="ICO.qrc">
         <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cdromOccupiedSlotsLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>400</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Occupied Slots:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cdromOccupiedSlotsDisplayLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>400</y>
+        <width>61</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0/20</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>430</y>
+        <width>791</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Problema: se ho dei cd selezionati e poi cambio modello, devo ricordarmi di NON salvarli nel file di config
+Non riesco a fare andare i CD :((</string>
       </property>
      </widget>
     </widget>
@@ -1224,7 +1275,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <item>
         <widget class="QLineEdit" name="hardDrive0LineEdit">
          <property name="text">
-          <string>file hdf or folder or zip(&gt;0.9.11)  -----&gt; </string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -1236,12 +1287,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive0ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive0FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1253,7 +1321,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive0Label0LineEdit">
+        <widget class="QLineEdit" name="hardDrive0LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1306,7 +1374,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <item>
         <widget class="QLineEdit" name="hardDrive1LineEdit">
          <property name="text">
-          <string>verificare si possa fare con 1 solo button</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -1318,12 +1386,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive1ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive1FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1335,7 +1420,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive1Label1LineEdit">
+        <widget class="QLineEdit" name="hardDrive1LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1388,7 +1473,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <item>
         <widget class="QLineEdit" name="hardDrive2LineEdit">
          <property name="text">
-          <string>sia selezione di file che di cartelle</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -1400,12 +1485,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive2ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive2FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1417,7 +1519,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive2Label2LineEdit">
+        <widget class="QLineEdit" name="hardDrive2LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1482,12 +1584,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive3ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive3FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1499,7 +1618,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive3Label3LineEdit">
+        <widget class="QLineEdit" name="hardDrive3LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1564,12 +1683,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive4ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive4FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1646,12 +1782,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive5ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive5FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1663,7 +1816,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive5Label5LineEdit">
+        <widget class="QLineEdit" name="hardDrive5LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1728,12 +1881,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive6ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive6FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1745,7 +1915,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive6Label6LineEdit">
+        <widget class="QLineEdit" name="hardDrive6LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1810,12 +1980,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive7ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive7FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1827,7 +2014,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive7Label7LineEdit">
+        <widget class="QLineEdit" name="hardDrive7LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1878,7 +2065,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="haraDrive8LineEdit">
+        <widget class="QLineEdit" name="hardDrive8LineEdit">
          <property name="text">
           <string/>
          </property>
@@ -1892,12 +2079,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive8ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive8FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1909,7 +2113,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive8Label8LineEdit">
+        <widget class="QLineEdit" name="hardDrive8LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1974,12 +2178,29 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        </item>
        <item>
         <widget class="QToolButton" name="hardDrive9ToolButton">
+         <property name="toolTip">
+          <string>Select ADF or ZIP file</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
          <property name="icon">
           <iconset resource="ICO.qrc">
            <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="hardDrive9FolderToolButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ICO.qrc">
+           <normaloff>:/Images/Images/linguist-fileopen.png</normaloff>:/Images/Images/linguist-fileopen.png</iconset>
          </property>
         </widget>
        </item>
@@ -1991,7 +2212,7 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hardDrive9Label9LineEdit">
+        <widget class="QLineEdit" name="hardDrive9LabelLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -2062,8 +2283,8 @@ la lista supporta la selezione (e quindi cancellazione multipla)</string>
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:11pt; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;If you have more than one device of the same model, the second is referred to by appending a space and #2 (and so on). The device names are case insensitive.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;If you have more than one device of the same model, the second is referred to by appending a space and #2 (and so on). The device names are case insensitive.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget_6">
@@ -5590,21 +5811,19 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Convenzione dei segni:&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1_prima lettera minuscola&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2_paroleMultipleAllaBimboMinkia&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3_fadeColorLabel e fadeColorButton&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4_themeFolderLabel themeFolderLineEdit themeFolderButton&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;DA FARE:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;configurazione joystick personalizzati&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;immagini theme?&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;thread per avviare fs-uae&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;rinominare tutti i componenti&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;pensare alle classi della configurazione&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;filebrowser per file/cartella/entrambi (or 2 pulsanti)&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Dopo x minuto o tot secondi salve configurazione in file backup home/user/.FS-UAE/gui/Default.fs-uae~&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;Convenzione dei segni:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;1_prima lettera minuscola&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;2_paroleMultipleAllaBimboMinkia&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;3_fadeColorLabel e fadeColorButton&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;4_themeFolderLabel themeFolderLineEdit themeFolderButton&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;DA FARE:&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;configurazione joystick personalizzati&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;immagini theme?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;filebrowser per file/cartella/entrambi (or 2 pulsanti)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dopo x minuto o tot secondi salve configurazione in file backup home/user/.FS-UAE/gui/Default.fs-uae~&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Capire come fare l'installazione della documentazione&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -5748,7 +5967,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>27</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="defaultUp">
