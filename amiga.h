@@ -7,6 +7,7 @@
 #include <configfloppy.h>
 #include <configcdrom.h>
 #include <configharddisks.h>
+#include <configgraphics.h>
 
 namespace Ui {
 class Amiga;
@@ -122,9 +123,47 @@ private slots:
     void on_hardDrive8ReadOnlyCheckBox_clicked();
     void on_hardDrive9ReadOnlyCheckBox_clicked();
 
+    void on_displaySettingsStartFullscreenRadioButton_clicked();
+    void on_displaySettingsResizableRadioButton_clicked();
+    void on_displaySettingsKeepAspectRatioRadioButton_clicked();
+    void on_scanlinesRadioButton_clicked();
+    void on_scanlinesRTGRadioButton_clicked();
+    void on_lowResolutionRadioButton_clicked();
+    void on_lineDoublingRadioButton_clicked();
+    void on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1);
+    void on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1);
+    void on_windowResolutionXSpinBox_valueChanged(const QString &arg1);
+    void on_windowResolutionYSpinBox_valueChanged(const QString &arg1);
+    void on_scaleXDoubleSpinBox_valueChanged(const QString &arg1);
+    void on_scaleYDoubleSpinBox_valueChanged(const QString &arg1);
+    void on_alignXdoubleSpinBox_valueChanged(const QString &arg1);
+    void on_alignYDoubleSpinBox_valueChanged(const QString &arg1);
+    void on_scanlinesDarkHorizontalSlider_valueChanged(int position);
+    void on_scanlinesLightHorizontalSlider_valueChanged(int position);
+    void on_fullSceneAntiAliasingOffRadioButton_clicked();
+    void on_fullSceneAntiAliasing2xRadioButton_clicked();
+    void on_fullSceneAntiAliasing4xRadioButton_clicked();
+    void on_fullSceneAntiAliasing8xRadioButton_clicked();
+    void on_textureFilterLinearRadioButton_clicked();
+    void on_textureFilterNearestRadioButton_clicked();
+    void on_f11InitalModeAutoRadioButton_clicked();
+    void on_f11InitalModeFullRadioButton_clicked();
+    void on_f11InitalMode640x400RadioButton_clicked();
+    void on_f11InitalMode640x480RadioButton_clicked();
+    void on_f11InitalMode640x512RadioButton_clicked();
+    void on_f11InitialModeWithBorderCheckBox_clicked();
+    void on_videoFormatBGRARadioButton_clicked();
+    void on_videoFormatRGBARadioButton_clicked();
+    void on_textureFormatModeRGBRadioButton_clicked();
+    void on_textureFormatModeRGB8RadioButton_clicked();
+    void on_textureFormatModeRGBARadioButton_clicked();
+    void on_textureFormatModeRGBA8RadioButton_clicked();
+    void on_shaderComboBox_currentIndexChanged(const QString &arg1);
+    void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);
+    void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);
+
     void on_alternativeBaseDirPushButton_clicked();
     void on_fadeColorPushButton_clicked();
-
 
 private:
     Ui::Amiga *ui;
@@ -133,10 +172,14 @@ private:
     ConfigFloppy floppyConfiguration;
     ConfigCDRom cdromConfiguration;
     ConfigHardDisks hardDiskConfiguration;
-
+    ConfigGraphics graphicsConfiguration;
 
     void parseLine(string line);
+    bool checkConfigurationConsistency();
+
     void setFastMemoryDisabled(bool state);
+    void setZorroIIIMemoryDisabled(bool state);
+
     void updateGraphicsFromInternalConfiguration();
     int getConfigurationAreaFromParameterName(string parameterName);
     void saveConfigInFile(string fileName);

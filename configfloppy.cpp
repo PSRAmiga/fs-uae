@@ -69,6 +69,21 @@ void ConfigFloppy::eraseFloppyImageAt(int position)
     floppy_image.erase(floppy_image.begin()+ position);
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+bool static isNumber(string s){
+    istringstream buffer(s);
+    int intValue;
+    buffer >> intValue;
+    //la conversione ritorna 0 se non è un numero. Devo stare attento al caso in cui la stringa sia proprio "0"
+    if (intValue==0 && s.compare("0")==0) return true;
+    return intValue!=0;
+}
+
+int static strToInt(string s){
+    istringstream buffer(s);
+    int intValue;
+    buffer >> intValue;
+    return intValue;
+}
 void ConfigFloppy::setParameter(string parameter, string value)
 {
     if(parameter.compare("floppy_drive_0")==0){
@@ -80,11 +95,7 @@ void ConfigFloppy::setParameter(string parameter, string value)
     } else if(parameter.compare("floppy_drive_3")==0){
         floppy_drive[3]=value;
     } else if(parameter.compare("floppy_drive_volume")==0){
-        istringstream buffer(value);
-        int intValue;
-        buffer >> intValue;
-        //questa conversione ritorna zero se ci sono lettere nella stringa, quindi devo distinguere uno zero vero da uno falso
-        if (value.compare("0")==0 || (intValue>=0 && intValue<=100)){
+        if (isNumber(value) && strToInt(value)>=0 && strToInt(value)<=100){
             floppy_drive_volume=value;}
         else{
             floppy_drive_volume=DEFAULTFLOPPYDRIVEVOLUME;

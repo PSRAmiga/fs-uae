@@ -7,8 +7,10 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QColorDialog>
-#include <QProcess>
 #include <cstdlib>
+
+#include <QApplication>
+#include <QDesktopWidget>
 
 #include <stdlib.h>
 #include <pwd.h>
@@ -21,6 +23,8 @@ Amiga::Amiga(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->Setup->setCurrentIndex(0);
+    ui->fullscreenResolutionXSpinBox->setValue(QApplication::desktop()->width());
+    ui->fullscreenResolutionYSpinBox->setValue(QApplication::desktop()->height());
 }
 
 Amiga::~Amiga()
@@ -28,51 +32,25 @@ Amiga::~Amiga()
     delete ui;
 }
 
-
-void Amiga::on_kickstartFileToolButton_clicked()
-{
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Image adf/rom(*.adf *.rom)"));
-    ui->kickstartFileLineEdit->setText(fileName);
-    chipsetConfiguration.setParameter("kickstart_file",fileName.toStdString());
-}
-void Amiga::on_kickstartExtFileToolButton_clicked()
-{
-    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Image ROM(*.rom)"));
-    ui->kickstartExtFileLineEdit->setText(fileName);
-    chipsetConfiguration.setParameter("kickstart_ext_file",fileName.toStdString());
+int strToInt(string s){
+    istringstream buffer(s);
+    int intValue;
+    buffer >> intValue;
+    return intValue;
 }
 
-
-// PER CAMBIARE COLORE AL BOTTONE
-void Amiga::on_fadeColorPushButton_clicked()
-{
-    QColor color = QColorDialog::getColor(Qt::black, this);
-    ui->fadeColorPushButton->setText(color.name());
-    ui->fadeColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
+float strToFloat(string line){
+    float valor;
+    stringstream stream(line);
+    stream >> valor;
+    return valor;
 }
 
-
-void Amiga::on_amigaModelComboBox_currentIndexChanged(const QString &arg1)
-{
-    chipsetConfiguration.setParameter("amiga_model",arg1.toStdString());
-    updateGraphicsFromInternalConfiguration();
-}
-void Amiga::on_accuracyLeastRadio_clicked()
-{
-    this->chipsetConfiguration.setParameter("accuracy","-1");
-}
-void Amiga::on_accuracyNormalRadio_clicked()
-{
-    this->chipsetConfiguration.setParameter("accuracy","0");
-}
-void Amiga::on_accuracyMostadio_clicked()
-{
-    this->chipsetConfiguration.setParameter("accuracy","1");
-}
+/////////////////////////////////////////////////////////////////////
 
 bool isEmptyString(string s){
     //NB compare ritorna 0 se è la comparazione è vera, è il contrario!
-    return !(s.compare(""));
+    return (s.compare("")==0);
 }
 
 void Amiga::saveConfigInFile(string fileName){
@@ -92,7 +70,8 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(ramConfiguration.getChipMemoryConfigString())) {myfile << ramConfiguration.getChipMemoryConfigString() << endl;}
     if (!isEmptyString(ramConfiguration.getFastMemoryConfigString())) {myfile << ramConfiguration.getFastMemoryConfigString() << endl;}
     if (!isEmptyString(ramConfiguration.getSlowMemoryConfigString())) {myfile << ramConfiguration.getSlowMemoryConfigString() << endl;}
-    if (!isEmptyString(ramConfiguration.getZorro3ConfigString())) {myfile << ramConfiguration.getZorro3ConfigString() << endl;}
+    if (!isEmptyString(ramConfiguration.getZorro3ConfigString()) && (chipsetConfiguration.getAmigaModelString().compare("A1200/020")==0 || chipsetConfiguration.getAmigaModelString().compare("A4000/040")==0)) {myfile << ramConfiguration.getZorro3ConfigString() << endl;}
+    ////////////////////////////////////////////////////////////////check sul modello oppure fare una fx validate configuration prima di salvare e al caricamento da file??? /////////////////
 
     for(int i=0;i<4;i++){
         if (!isEmptyString(floppyConfiguration.getFloppyDriveConfigStringAt(i))) {myfile << floppyConfiguration.getFloppyDriveConfigStringAt(i) << endl;}
@@ -118,6 +97,32 @@ void Amiga::saveConfigInFile(string fileName){
         if (!isEmptyString(hardDiskConfiguration.getHardDriveReadOnlyConfigStringAt(i))) {myfile << hardDiskConfiguration.getHardDriveReadOnlyConfigStringAt(i) << endl;}
     }
 
+    if (!isEmptyString(graphicsConfiguration.getFullscreenConfigString())) {myfile << graphicsConfiguration.getFullscreenConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getWindowResizableConfigString())) {myfile << graphicsConfiguration.getWindowResizableConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getKeepAspectConfigString())) {myfile << graphicsConfiguration.getKeepAspectConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getFullscreenWidthConfigString()) && static_cast<ostringstream*>( &(ostringstream() << QApplication::desktop()->width()) )->str().compare(graphicsConfiguration.getFullscreenWidthString())) {myfile << graphicsConfiguration.getFullscreenWidthConfigString() << endl;}// << static_cast<ostringstream*>( &(ostringstream() << QApplication::desktop()->width()) )->str().compare(graphicsConfiguration.getFullscreenWidthConfigString()) << endl;}
+    if (!isEmptyString(graphicsConfiguration.getFullscreenHeightConfigString()) && static_cast<ostringstream*>( &(ostringstream() << QApplication::desktop()->height()) )->str().compare(graphicsConfiguration.getFullscreenHeightString())) {myfile << graphicsConfiguration.getFullscreenHeightConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getWindowWidthConfigString())) {myfile << graphicsConfiguration.getWindowWidthConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getWindowHeightConfigString())) {myfile << graphicsConfiguration.getWindowHeightConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getFsaaConfigString())) {myfile << graphicsConfiguration.getFsaaConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getScanlinesConfigString())) {myfile << graphicsConfiguration.getScanlinesConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getRtgScanlinesConfigString())) {myfile << graphicsConfiguration.getRtgScanlinesConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getScanlinesDarkConfigString())) {myfile << graphicsConfiguration.getScanlinesDarkConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getScanlinesLightConfigString())) {myfile << graphicsConfiguration.getScanlinesLightConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getShaderConfigString())) {myfile << graphicsConfiguration.getShaderConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getLowResolutionConfigString())) {myfile << graphicsConfiguration.getLowResolutionConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getLineDoublingConfigString())) {myfile << graphicsConfiguration.getLineDoublingConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getScaleXConfigString())) {myfile << graphicsConfiguration.getScaleXConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getScaleYConfigString())) {myfile << graphicsConfiguration.getScaleYConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getAlignXConfigString())) {myfile << graphicsConfiguration.getAlignXConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getAlignYConfigString())) {myfile << graphicsConfiguration.getAlignYConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getZoomConfigString())) {myfile << graphicsConfiguration.getZoomConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getTextureFilterConfigString())) {myfile << graphicsConfiguration.getTextureFilterConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getVideoSyncConfigString())) {myfile << graphicsConfiguration.getVideoSyncConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getVideoSyncMethodConfigString())) {myfile << graphicsConfiguration.getVideoSyncMethodConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getVideoFormatConfigString())) {myfile << graphicsConfiguration.getVideoFormatConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getTextureFormatConfigString())) {myfile << graphicsConfiguration.getTextureFormatConfigString() << endl;}
+
     myfile.close();
 }
 
@@ -132,14 +137,13 @@ void Amiga::on_saveConfigToolButton_clicked()
     if(fileName.contains(".fs-uae", Qt::CaseInsensitive)) {fileNameString=fileName.toStdString();}
     else {fileNameString=fileName.toStdString()+".fs-uae";}
 
+    //checkConfigurationConsistency() --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+
     saveConfigInFile(fileNameString);
 
 }
 
 int Amiga::getConfigurationAreaFromParameterName(string parameterName){
-    //per ora ritorno un numero poi magari potrei fare una configurazione astratta e ritornare direttamente l'oggetto chipsetConfiguration.
-    //ovviamente tutte le config dovranno implemntare l'astratta così questa funzione ritorna un oggetto di tipo padre abstract config
-    //e posso fare abstrobj.setParameter(...) con un'unica riga dentro a parseLine()
     if ((parameterName.compare("amiga_model")==0)||(parameterName.compare("accuracy")==0)||(parameterName.compare("kickstart_file")==0)||(parameterName.compare("kickstart_ext_file")==0)||(parameterName.compare("ntsc_mode")==0)) {
         return 1;
     } else if ((parameterName.compare("chip_memory")==0)||(parameterName.compare("slow_memory")==0)||(parameterName.compare("fast_memory")==0)||(parameterName.compare("zorro_iii_memory")==0)){
@@ -152,6 +156,17 @@ int Amiga::getConfigurationAreaFromParameterName(string parameterName){
                ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_label")==0))||
                ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_read_only")==0))){
         return 5;
+    } else if (false){ ///fare joystick!!!
+        return 6;
+    } else if ((parameterName.compare("fullscreen")==0)||(parameterName.compare("fullscreen_width")==0)||(parameterName.compare("fullscreen_height")==0)||
+               (parameterName.compare("window_width")==0)||(parameterName.compare("window_height")==0)||(parameterName.compare("window_resizable")==0)||
+               (parameterName.compare("fsaa")==0)||(parameterName.compare("keep_aspect")==0)||(parameterName.compare("scanlines")==0)||
+               (parameterName.compare("rtg_scanlines")==0)||(parameterName.compare("scanlines_dark")==0)||(parameterName.compare("scanlines_light")==0)||
+               (parameterName.compare("shader")==0)||(parameterName.compare("low_resolution")==0)||(parameterName.compare("line_doubling")==0)||
+               (parameterName.compare("scale_x")==0)||(parameterName.compare("scale_y")==0)||(parameterName.compare("align_x")==0)||
+               (parameterName.compare("align_y")==0)||(parameterName.compare("zoom")==0)||(parameterName.compare("texture_filter")==0)||
+               (parameterName.compare("video_sync")==0)||(parameterName.compare("video_sync")==0)||(parameterName.compare("video_format")==0)||(parameterName.compare("texture_format")==0)){
+        return 7;
     } else {
         return -1;
     }
@@ -165,12 +180,10 @@ void Amiga::parseLine(string line){
     string parameterName=line.substr(0,separatorPosition);
     string parameterValue=line.substr(separatorPosition+3,line.length()-1);
 
-    //bisogna capire in quale configurazione indirizzarlo, poi ogni config si sistema da sola internamente
-    //magari con una funzione del tipo getConfigurationAreaFromParameterName(parameterName) che restituisce
-    //una string oppure una ENUM
-
+    //bisogna capire in quale area di configurazione indirizzarlo
     //NB se non trovo nessun parametro con quel nome significa che il parametro non esiste (getConfigurationAreaFromParameterName ritorna -1)
-    //MA se invece il parametro esiste ma non è un valore valido se ne preoccupa l'area di configurazione
+    //MA se invece il parametro esiste ma non ha un valore valido se ne preoccupa l'area di configurazione
+
     int configArea=getConfigurationAreaFromParameterName(parameterName);
     if (configArea==1){
         chipsetConfiguration.setParameter(parameterName,parameterValue);
@@ -182,12 +195,35 @@ void Amiga::parseLine(string line){
         cdromConfiguration.setParameter(parameterName,parameterValue);
     } else if (configArea==5){
         hardDiskConfiguration.setParameter(parameterName,parameterValue);
+    } else if (configArea==6){
+        //inputConfiguration.setParameter(parameterName,parameterValue);
+    } else if (configArea==7){
+        graphicsConfiguration.setParameter(parameterName,parameterValue);
     }
+}
+
+bool Amiga::checkConfigurationConsistency()
+{
+    /*controlli da fare:
+
+      NB la priorità di è da sx a dx nelle tab. devo far uscire un SI/NO che avvisa che sono state trovate Inconsistenze e non si può salvare/eseguire
+
+      posso fare che se una cosa è disabilitata la svuoto/la setto al default?
+
+    1-kickstart extended è abiiltato solo con CD32 e CDTV  --> quindi se model=CD32 devo cancellare/settare a DEFAULT la kickstart ext e tutti i parametri del CD
+    2-CD è abilitato solo con CD32 e CDTV
+    3-slowmemory 1.8MB è DIS-abilitato solo con A1200/020, A4000/040 e CD32
+    4-zorro3 è abilitato solo con A1200/020 e A4000/040
+    5-fastmemory è DIS-abilitato se chipsetram=4MB o 8MB
+    6-with borders è disabilitato con full e auto
+
+    */
+    return true;
 }
 
 void Amiga::updateGraphicsFromInternalConfiguration(){
     //ACCURACY
-    string accuracy=this->chipsetConfiguration.getAccuracyString();
+    string accuracy=chipsetConfiguration.getAccuracyString();
     if (accuracy.compare("-1")==0){
         ui->accuracyLeastRadio->setChecked(true);
     } else if (accuracy.compare("0")==0){
@@ -197,7 +233,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
 
     //NTSC MODE
-    string ntsc_mode=this->chipsetConfiguration.getNTSCModeString();
+    string ntsc_mode=chipsetConfiguration.getNTSCModeString();
     if (ntsc_mode.compare("1")==0){
         ui->videoModeNTSCRadio->setChecked(true);
     } else {
@@ -205,7 +241,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
 
     //AMIGA MODEL
-    string amiga_model=this->chipsetConfiguration.getAmigaModelString();
+    string amiga_model=chipsetConfiguration.getAmigaModelString();
     if(ui->amigaModelComboBox->findText(QString::fromStdString(amiga_model),Qt::MatchExactly)!=-1){
         ui->amigaModelComboBox->setCurrentIndex(ui->amigaModelComboBox->findText(QString::fromStdString(amiga_model),Qt::MatchExactly));
     } else {ui->amigaModelComboBox->setCurrentIndex(0); }
@@ -250,18 +286,26 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         ui->slowMem1_8MbRadio->setDisabled(false);
     }
 
+    if ((amiga_model.compare("A1200/020")==0)||(amiga_model.compare("A4000/040")==0))
+    {
+        setZorroIIIMemoryDisabled(false);
+    } else
+    {
+        setZorroIIIMemoryDisabled(true);
+    }
+
     //KICKSTART ROM
-    string kickstart_file=this->chipsetConfiguration.getKickstartFileString();
+    string kickstart_file=chipsetConfiguration.getKickstartFileString();
     ui->kickstartFileLineEdit->setText(QString::fromStdString(kickstart_file));
 
     //KICKSTART EXT ROM
-    string kickstart_ext_file=this->chipsetConfiguration.getKickstartExtFileString();
+    string kickstart_ext_file=chipsetConfiguration.getKickstartExtFileString();
     ui->kickstartExtFileLineEdit->setText(QString::fromStdString(kickstart_ext_file));
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //CHIP MEMORY
-    string chip_memory=this->ramConfiguration.getChipMemoryString();
+    string chip_memory=ramConfiguration.getChipMemoryString();
     if (chip_memory.compare("8192")==0){
         ui->chipMeme8MbRadio->setChecked(true);
         setFastMemoryDisabled(true);
@@ -277,7 +321,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
 
     //SLOW MEMORY
-    string slow_memory=this->ramConfiguration.getSlowMemoryString();
+    string slow_memory=ramConfiguration.getSlowMemoryString();
     if (slow_memory.compare("1792")==0){
         ui->slowMem1_8MbRadio->setChecked(true);
     } else if (slow_memory.compare("1024")==0){
@@ -289,7 +333,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
 
     //FAST MEMORY
-    string fast_memory=this->ramConfiguration.getFastMemoryString();
+    string fast_memory=ramConfiguration.getFastMemoryString();
     if (fast_memory.compare("8192")==0){
         ui->fastMem8MbRadio->setChecked(true);
     } else if (fast_memory.compare("4096")==0){
@@ -303,7 +347,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
 
     //ZORRO MEMORY
-    string zorro_iii_memory=this->ramConfiguration.getZorro3String();
+    string zorro_iii_memory=ramConfiguration.getZorro3String();
     if (zorro_iii_memory.compare("262144")==0){
         ui->z3Mem256MbRadio->setChecked(true);
     } else if (zorro_iii_memory.compare("131072")==0){
@@ -332,7 +376,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     for(int i=0;i<4;i++){
         string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
 
-        string floppy_drive=this->floppyConfiguration.getFloppyDriveStringAt(i);
+        string floppy_drive=floppyConfiguration.getFloppyDriveStringAt(i);
         QLineEdit *lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("floppyDrive" + iString + "LineEdit"));
         if (lineEdit !=0){
             lineEdit->setText(QString::fromStdString(floppy_drive));
@@ -340,22 +384,16 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
 
     //FLOPPY DRIVE VOLUME
-    string floppy_drive_volume=this->floppyConfiguration.getFloppyDriveVolumeString();
+    string floppy_drive_volume=floppyConfiguration.getFloppyDriveVolumeString();
     ui->floppyDriveVolumeDisplayLabel->setText(QString::fromStdString(floppy_drive_volume));
-    istringstream buffer(floppy_drive_volume);
-    int intValue;
-    buffer >> intValue;
-    ui->floppyDriveVolumeSlider->setValue(intValue);
+    ui->floppyDriveVolumeSlider->setValue(strToInt(floppy_drive_volume));
 
     //FLOPPY DRIVE SPEED
     //0<floppy_drive_speed<1200
-    string floppy_drive_speed=this->floppyConfiguration.getFloppyDriveSpeedString();
-    istringstream buffer2(floppy_drive_speed);
-    int intValue2;
-    buffer2 >> intValue2;
-    ui->floppyDriveSpeedSlider->setValue(intValue2/100);
+    string floppy_drive_speed=floppyConfiguration.getFloppyDriveSpeedString();
+    ui->floppyDriveSpeedSlider->setValue(strToInt(floppy_drive_speed)/100);
     string displayString;
-    if (intValue2==0){
+    if (strToInt(floppy_drive_speed)==0){
         displayString="TURBO";
     } else{
         displayString=floppy_drive_speed.substr(0,floppy_drive_speed.length()-2) + "X";
@@ -376,7 +414,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     ui->floppyOccupiedSlotsDisplayLabel->setText(QString::fromStdString(floppyOccupiedSlotsString+"/20"));
 
     //CDROM DRIVE
-    string cdrom_drive_0=this->cdromConfiguration.getCDRomDrive0String();
+    string cdrom_drive_0=cdromConfiguration.getCDRomDrive0String();
     ui->cdromDrive0LineEdit->setText(QString::fromStdString(cdrom_drive_0));
 
     //CDROM SWAP IMAGES
@@ -395,19 +433,19 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     for(int i=0;i<10;i++){
         string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
 
-        string hardDriveString=this->hardDiskConfiguration.getHardDriveStringAt(i);
+        string hardDriveString=hardDiskConfiguration.getHardDriveStringAt(i);
         QLineEdit *lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("hardDrive" + iString + "LineEdit"));
         if (lineEdit !=0){
             lineEdit->setText(QString::fromStdString(hardDriveString));
         }
 
-        string hardDriveLabelString=this->hardDiskConfiguration.getHardDriveLabelStringAt(i);
+        string hardDriveLabelString=hardDiskConfiguration.getHardDriveLabelStringAt(i);
         lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("hardDrive" + iString + "LabelLineEdit"));
         if (lineEdit !=0){
             lineEdit->setText(QString::fromStdString(hardDriveLabelString));
         }
 
-        string isChecked=this->hardDiskConfiguration.getHardDriveReadOnlyStringAt(i);
+        string isChecked=hardDiskConfiguration.getHardDriveReadOnlyStringAt(i);
         QCheckBox *checkBox = ui->widget->findChild<QCheckBox *>(QString::fromStdString("hardDrive" + iString + "ReadOnlyCheckBox"));
         if (checkBox !=0){
             if (isChecked.compare("1")==0){
@@ -418,6 +456,190 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         }
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //FULLSCREEN
+    string fullscreen=graphicsConfiguration.getFullscreenString();
+    if(fullscreen.compare("1")==0){
+        ui->displaySettingsStartFullscreenRadioButton->setChecked(true);
+    } else {
+        ui->displaySettingsStartFullscreenRadioButton->setChecked(false);
+    }
+
+    //RESIZABLE
+    string resizable=graphicsConfiguration.getWindowResizableString();
+    if(resizable.compare("0")==0){
+        ui->displaySettingsResizableRadioButton->setChecked(false);
+    } else {
+        ui->displaySettingsResizableRadioButton->setChecked(true);
+    }
+
+    //KEEP ASPECT RATIO
+    string keep_aspect=graphicsConfiguration.getKeepAspectString();
+    if(keep_aspect.compare("1")==0){
+        ui->displaySettingsKeepAspectRatioRadioButton->setChecked(true);
+    } else {
+        ui->displaySettingsKeepAspectRatioRadioButton->setChecked(false);
+    }
+
+    //SCANLINES
+    string scanlines=graphicsConfiguration.getScanlinesString();
+    if(scanlines.compare("1")==0){
+        ui->scanlinesRadioButton->setChecked(true);
+    } else {
+        ui->scanlinesRadioButton->setChecked(false);
+    }
+
+    //RTG SCANLINES
+    string scanlines_rtg=graphicsConfiguration.getRtgScanlinesString();
+    if(scanlines_rtg.compare("1")==0){
+        ui->scanlinesRTGRadioButton->setChecked(true);
+    } else {
+        ui->scanlinesRTGRadioButton->setChecked(false);
+    }
+
+    //LOW RESOLUTION
+    string low_resolution=graphicsConfiguration.getLowResolutionString();
+    if(low_resolution.compare("1")==0){
+        ui->lowResolutionRadioButton->setChecked(true);
+    } else {
+        ui->lowResolutionRadioButton->setChecked(false);
+    }
+
+    //LINE DOUBLING
+    string line_doubling=graphicsConfiguration.getLineDoublingString();
+    if(line_doubling.compare("0")==0){
+        ui->lineDoublingRadioButton->setChecked(false);
+    } else {
+        ui->lineDoublingRadioButton->setChecked(true);
+    }
+
+    //RESOLUTIONS
+    string fullscreen_resolution_x=graphicsConfiguration.getFullscreenWidthString();
+    if (isEmptyString(fullscreen_resolution_x)){
+        ui->fullscreenResolutionXSpinBox->setValue(QApplication::desktop()->width());
+    } else {ui->fullscreenResolutionXSpinBox->setValue(strToInt(fullscreen_resolution_x));
+    }
+
+    string fullscreen_resolution_y=graphicsConfiguration.getFullscreenHeightString();
+    if (isEmptyString(fullscreen_resolution_y)){
+        ui->fullscreenResolutionYSpinBox->setValue(QApplication::desktop()->height());
+    } else {ui->fullscreenResolutionYSpinBox->setValue(strToInt(fullscreen_resolution_y));
+    }
+
+    string window_resolution_x=graphicsConfiguration.getWindowWidthString();
+    ui->windowResolutionXSpinBox->setValue(strToInt(window_resolution_x));
+
+    string window_resolution_y=graphicsConfiguration.getWindowHeightString();
+    ui->windowResolutionYSpinBox->setValue(strToInt(window_resolution_y));
+
+    //SCALE
+    string scale_x=graphicsConfiguration.getScaleXString();
+    ui->scaleXDoubleSpinBox->setValue(strToFloat(scale_x));
+
+    string scale_y=graphicsConfiguration.getScaleYString();
+    ui->scaleYDoubleSpinBox->setValue(strToFloat(scale_y));
+
+    //ALIGN
+    string align_x=graphicsConfiguration.getAlignXString();
+    ui->alignXdoubleSpinBox->setValue(strToFloat(align_x));
+
+    string align_y=graphicsConfiguration.getAlignYString();
+    ui->alignYDoubleSpinBox->setValue(strToFloat(align_y));
+
+    //FSAA
+    string fsaa=graphicsConfiguration.getFsaaString();
+    if (fsaa.compare("8")==0){
+        ui->fullSceneAntiAliasing8xRadioButton->setChecked(true);
+    } else if (fsaa.compare("4")==0){
+        ui->fullSceneAntiAliasing4xRadioButton->setChecked(true);
+    } else if (fsaa.compare("2")==0){
+        ui->fullSceneAntiAliasing2xRadioButton->setChecked(true);
+    } else {
+        ui->fullSceneAntiAliasingOffRadioButton->setChecked(true);
+    }
+
+    //TEXTURE FILTER
+    string texture_filter=graphicsConfiguration.getTextureFilterString();
+    if (texture_filter.compare("nearest")==0){
+        ui->textureFilterNearestRadioButton->setChecked(true);
+    } else {
+        ui->textureFilterLinearRadioButton->setChecked(true);
+    }
+
+    //ZOOM
+    string zoom=graphicsConfiguration.getZoomString();
+    ui->f11InitialModeWithBorderCheckBox->setDisabled(false);
+    ui->f11InitialModeWithBorderCheckBox->setChecked(false);
+    if (zoom.compare("640x512+border")==0){
+        ui->f11InitalMode640x512RadioButton->setChecked(true);
+        ui->f11InitialModeWithBorderCheckBox->setChecked(true);
+    } else if (zoom.compare("640x512")==0){
+        ui->f11InitalMode640x512RadioButton->setChecked(true);
+    } else if (zoom.compare("640x480+border")==0){
+        ui->f11InitalMode640x480RadioButton->setChecked(true);
+        ui->f11InitialModeWithBorderCheckBox->setChecked(true);
+    } else if (zoom.compare("640x480")==0){
+        ui->f11InitalMode640x480RadioButton->setChecked(true);
+    } else if (zoom.compare("640x400+border")==0){
+        ui->f11InitalMode640x400RadioButton->setChecked(true);
+        ui->f11InitialModeWithBorderCheckBox->setChecked(true);
+    } else if (zoom.compare("640x400")==0){
+        ui->f11InitalMode640x400RadioButton->setChecked(true);
+    } else if (zoom.compare("full")==0){
+        ui->f11InitalModeFullRadioButton->setChecked(true);
+        ui->f11InitialModeWithBorderCheckBox->setDisabled(true);
+    } else {
+        ui->f11InitalModeAutoRadioButton->setChecked(true);
+         ui->f11InitialModeWithBorderCheckBox->setDisabled(true);
+    }
+
+    //VIDEO FORMAT
+    string video_format=graphicsConfiguration.getVideoFormatString();
+    if (video_format.compare("rgba")==0){
+        ui->videoFormatRGBARadioButton->setChecked(true);
+    } else {
+        ui->videoFormatBGRARadioButton->setChecked(true);
+    }
+
+    //VIDEO TEXTURE FORMAT
+    string video_texture_format=graphicsConfiguration.getTextureFormatString();
+    if (video_texture_format.compare("rgba8")==0){
+        ui->textureFormatModeRGBA8RadioButton->setChecked(true);
+    } else if (video_texture_format.compare("rgba")==0){
+        ui->textureFormatModeRGBARadioButton->setChecked(true);
+    } else if (video_texture_format.compare("rgb8")==0){
+        ui->textureFormatModeRGB8RadioButton->setChecked(true);
+    } else {
+        ui->textureFormatModeRGBRadioButton->setChecked(true);
+    }
+
+    //SCANLINES SLIDERS
+    string scanlines_dark=graphicsConfiguration.getScanlinesDarkString();
+    ui->scanlinesDarkDisplayLabel->setText(QString::fromStdString(scanlines_dark+"%"));
+    ui->scanlinesDarkHorizontalSlider->setValue(strToInt(scanlines_dark));
+
+    string scanlines_light=graphicsConfiguration.getScanlinesLightString();
+    ui->scanlinesLightDisplayLabel->setText(QString::fromStdString(scanlines_light+"%"));
+    ui->scanlinesLightHorizontalSlider->setValue(strToInt(scanlines_light));
+
+    //SHADER
+    string shader=graphicsConfiguration.getShaderString();
+    if(ui->shaderComboBox->findText(QString::fromStdString(shader),Qt::MatchExactly)!=-1){
+        ui->shaderComboBox->setCurrentIndex(ui->shaderComboBox->findText(QString::fromStdString(shader),Qt::MatchExactly));
+    } else {ui->shaderComboBox->setCurrentIndex(0); }
+
+    //VIDEO SYNC
+    string video_sync_type=graphicsConfiguration.getVideoSyncString();
+    if(ui->videoSyncComboBox->findText(QString::fromStdString(video_sync_type),Qt::MatchExactly)!=-1){
+        ui->videoSyncComboBox->setCurrentIndex(ui->videoSyncComboBox->findText(QString::fromStdString(video_sync_type),Qt::MatchExactly));
+    } else {ui->videoSyncComboBox->setCurrentIndex(0); }
+
+    //VIDEO SYNC METHOD
+    string video_sync_method=graphicsConfiguration.getVideoSyncString();
+    if(ui->videoSynkMethodeComboBox->findText(QString::fromStdString(video_sync_method),Qt::MatchExactly)!=-1){
+        ui->videoSynkMethodeComboBox->setCurrentIndex(ui->videoSynkMethodeComboBox->findText(QString::fromStdString(video_sync_method),Qt::MatchExactly));
+    } else {ui->videoSynkMethodeComboBox->setCurrentIndex(0); }
 }
 
 void Amiga::on_loadConfigToolButton_clicked()
@@ -433,6 +655,7 @@ void Amiga::on_loadConfigToolButton_clicked()
     floppyConfiguration.setToDefaultConfiguration();
     cdromConfiguration.setToDefaultConfiguration();
     hardDiskConfiguration.setToDefaultConfiguration();
+    graphicsConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
     //poi leggo riga per riga, aggiorno la configurazione interna e aggiorno i componenti
@@ -449,22 +672,10 @@ void Amiga::on_loadConfigToolButton_clicked()
         myfile.close();
     }
 
+    //checkConfigurationConsistency() --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+
     //lo devo fare per ogni configuration area
     updateGraphicsFromInternalConfiguration();
-}
-void Amiga::on_videoModePALRadio_clicked()
-{
-    this->chipsetConfiguration.setParameter("ntsc_mode","0");
-}
-void Amiga::on_videoModeNTSCRadio_clicked()
-{
-    this->chipsetConfiguration.setParameter("ntsc_mode","1");
-}
-
-
-void Amiga::on_actionReport_bug_triggered()
-{
-    QDesktopServices::openUrl(QUrl(tr("mailto:alessandromario.riva@gmail.com,dsanvito90@gmail.com?subject=FS-UAE Gui Bug Report")));
 }
 
 void Amiga::on_loadDefaultValuesToolButton_clicked()
@@ -474,8 +685,8 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
     floppyConfiguration.setToDefaultConfiguration();
     cdromConfiguration.setToDefaultConfiguration();
     hardDiskConfiguration.setToDefaultConfiguration();
+    graphicsConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
-
 
     //devo DISABILITARE/SVUOTARE KICK_EXT_DIR e tutte le cose che di default sarebbero disabilitate/vuote!
     setFastMemoryDisabled(false);
@@ -485,6 +696,66 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
 
 }
 
+void Amiga::on_runConfigButton_clicked()
+{
+    //fare check consistenza!!! ////////////////////////////////////////////////////////////////////
+    saveConfigInFile(".current.fs-uae");
+    /*
+            int returnValue=system("fs-uae .current.fs-uae");
+            if (returnValue!=0)
+            {
+                //ui->errorLabel->setText(QString::fromStdString("Ops...something went wrong :-("));
+                QMessageBox::about(this, tr("Error"),tr("Ops...something went wrong :-("));
+            }*/
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void Amiga::on_kickstartFileToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Image ADF/ROM(*.adf *.rom)"));
+    ui->kickstartFileLineEdit->setText(fileName);
+    chipsetConfiguration.setParameter("kickstart_file",fileName.toStdString());
+}
+void Amiga::on_kickstartExtFileToolButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Image ROM(*.rom)"));
+    ui->kickstartExtFileLineEdit->setText(fileName);
+    chipsetConfiguration.setParameter("kickstart_ext_file",fileName.toStdString());
+}
+
+void Amiga::on_amigaModelComboBox_currentIndexChanged(const QString &arg1)
+{
+    chipsetConfiguration.setParameter("amiga_model",arg1.toStdString());
+    updateGraphicsFromInternalConfiguration();
+}
+void Amiga::on_accuracyLeastRadio_clicked()
+{
+    chipsetConfiguration.setParameter("accuracy","-1");
+}
+void Amiga::on_accuracyNormalRadio_clicked()
+{
+    chipsetConfiguration.setParameter("accuracy","0");
+}
+void Amiga::on_accuracyMostadio_clicked()
+{
+    chipsetConfiguration.setParameter("accuracy","1");
+}
+
+void Amiga::on_videoModePALRadio_clicked()
+{
+    this->chipsetConfiguration.setParameter("ntsc_mode","0");
+}
+void Amiga::on_videoModeNTSCRadio_clicked()
+{
+    this->chipsetConfiguration.setParameter("ntsc_mode","1");
+}
+
+void Amiga::on_actionReport_bug_triggered()
+{
+    QDesktopServices::openUrl(QUrl(tr("mailto:alessandromario.riva@gmail.com,dsanvito90@gmail.com?subject=FS-UAE Gui Bug Report")));
+}
+
 void Amiga::setFastMemoryDisabled(bool state){
     ui->fastMem1MbRadio->setDisabled(state);
     ui->fastMem2MbRadio->setDisabled(state);
@@ -492,7 +763,20 @@ void Amiga::setFastMemoryDisabled(bool state){
     ui->fastMem8MbRadio->setDisabled(state);
     ui->fastMemLabel->setDisabled(state);
     ui->fastMemNoneRadio->setDisabled(state);
+}
 
+void Amiga::setZorroIIIMemoryDisabled(bool state){
+    ui->z3MemLabel->setDisabled(state);
+    ui->z3Mem128MbRadio->setDisabled(state);
+    ui->z3Mem16MbRadio->setDisabled(state);
+    ui->z3Mem1MbRadio->setDisabled(state);
+    ui->z3Mem256MbRadio->setDisabled(state);
+    ui->z3Mem2MbRadio->setDisabled(state);
+    ui->z3Mem32MbRadio->setDisabled(state);
+    ui->z3Mem4MbRadio->setDisabled(state);
+    ui->z3Mem64MbRadio->setDisabled(state);
+    ui->z3Mem8MbRadio->setDisabled(state);
+    ui->z3MemNoneRadio->setDisabled(state);
 }
 
 void Amiga::on_chipMem4MbRadio_clicked()
@@ -597,17 +881,6 @@ void Amiga::on_z3Mem256MbRadio_clicked()
     this->ramConfiguration.setParameter("zorro_iii_memory","262144");
 }
 
-void Amiga::on_runConfigButton_clicked()
-{
-    saveConfigInFile(".current.fs-uae");
-    int returnValue=system("fs-uae .current.fs-uae");
-    if (returnValue!=0)
-    {
-        //ui->errorLabel->setText(QString::fromStdString("Ops...something went wrong :-("));
-        QMessageBox::about(this, tr("Error"),tr("Ops...something went wrong :-("));
-    }
-}
-
 void Amiga::on_actionAmiga_triggered()
 {
     ui->Setup->setCurrentIndex(8);
@@ -693,8 +966,8 @@ void Amiga::on_floppySwappingImagerRemovePushButton_clicked()
     {
         QModelIndex index = i.next();
         indexList << index.row();
-
     };
+
     //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
     //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
     for(int x=indexList.size()-1;x>=0;x--){
@@ -743,12 +1016,6 @@ void Amiga::on_floppyDriveSpeedSlider_valueChanged(int position)
         displayString=positionString+"X";
     }
     ui->floppyDriveSpeedDisplayLabel->setText(QString::fromStdString(displayString));
-}
-
-void Amiga::on_alternativeBaseDirPushButton_clicked()
-{
-    //QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
-
 }
 
 void Amiga::on_cdromDrive0ToolButton_clicked()
@@ -1087,3 +1354,278 @@ void Amiga::on_hardDrive9ReadOnlyCheckBox_clicked()
         hardDiskConfiguration.setParameter("hard_drive_9_read_only","0");
     }
 }
+
+void Amiga::on_displaySettingsStartFullscreenRadioButton_clicked()
+{
+    if(ui->displaySettingsStartFullscreenRadioButton->isChecked()){
+        graphicsConfiguration.setParameter("fullscreen","1");
+    } else {
+        graphicsConfiguration.setParameter("fullscreen","0");
+    }
+}
+
+void Amiga::on_displaySettingsResizableRadioButton_clicked()
+{
+    if(ui->displaySettingsResizableRadioButton->isChecked()){
+        graphicsConfiguration.setParameter("window_resizable","1");
+    } else {
+        graphicsConfiguration.setParameter("window_resizable","0");
+    }
+}
+
+void Amiga::on_displaySettingsKeepAspectRatioRadioButton_clicked()
+{
+    if(ui->displaySettingsKeepAspectRatioRadioButton->isChecked()){
+        graphicsConfiguration.setParameter("keep_aspect","1");
+    } else {
+        graphicsConfiguration.setParameter("keep_aspect","0");
+    }
+}
+
+void Amiga::on_scanlinesRadioButton_clicked()
+{
+    if(ui->scanlinesRadioButton->isChecked()){
+        graphicsConfiguration.setParameter("scanlines","1");
+    } else {
+        graphicsConfiguration.setParameter("scanlines","0");
+    }
+}
+
+void Amiga::on_scanlinesRTGRadioButton_clicked()
+{
+    if(ui->scanlinesRTGRadioButton->isChecked()){
+        graphicsConfiguration.setParameter("rtg_scanlines","1");
+    } else {
+        graphicsConfiguration.setParameter("rtg_scanlines","0");
+    }
+}
+
+void Amiga::on_lowResolutionRadioButton_clicked()
+{
+    if(ui->lowResolutionRadioButton->isChecked()){
+        graphicsConfiguration.setParameter("low_resolution","1");
+    } else {
+        graphicsConfiguration.setParameter("low_resolution","0");
+    }
+}
+
+void Amiga::on_lineDoublingRadioButton_clicked()
+{
+    if(ui->lineDoublingRadioButton->isChecked()){
+        graphicsConfiguration.setParameter("line_doubling","1");
+    } else {
+        graphicsConfiguration.setParameter("line_doubling","0");
+    }
+}
+
+void Amiga::on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("fullscreen_width",arg1.toStdString());
+}
+
+
+void Amiga::on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("fullscreen_height",arg1.toStdString());
+}
+
+void Amiga::on_windowResolutionXSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("window_width",arg1.toStdString());
+}
+
+void Amiga::on_windowResolutionYSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("window_height",arg1.toStdString());
+}
+
+void Amiga::on_scaleXDoubleSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("scale_x",arg1.toStdString());
+}
+
+
+void Amiga::on_scaleYDoubleSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("scale_y",arg1.toStdString());
+}
+
+void Amiga::on_alignXdoubleSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("align_x",arg1.toStdString());
+}
+
+void Amiga::on_alignYDoubleSpinBox_valueChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("align_y",arg1.toStdString());
+}
+
+void Amiga::on_scanlinesDarkHorizontalSlider_valueChanged(int position)
+{
+    string positionString=static_cast<ostringstream*>( &(ostringstream() << position) )->str();
+    graphicsConfiguration.setParameter("scanlines_dark",positionString);
+    ui->scanlinesDarkDisplayLabel->setText(QString::fromStdString(positionString+"%"));
+}
+
+void Amiga::on_scanlinesLightHorizontalSlider_valueChanged(int position)
+{
+    string positionString=static_cast<ostringstream*>( &(ostringstream() << position) )->str();
+    graphicsConfiguration.setParameter("scanlines_light",positionString);
+    ui->scanlinesLightDisplayLabel->setText(QString::fromStdString(positionString+"%"));
+}
+
+void Amiga::on_fullSceneAntiAliasingOffRadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("fsaa","0");
+}
+
+void Amiga::on_fullSceneAntiAliasing2xRadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("fsaa","2");
+}
+
+void Amiga::on_fullSceneAntiAliasing4xRadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("fsaa","4");
+}
+
+void Amiga::on_fullSceneAntiAliasing8xRadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("fsaa","8");
+}
+
+void Amiga::on_textureFilterLinearRadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("texture_filter","linear");
+}
+
+void Amiga::on_textureFilterNearestRadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("texture_filter","nearest");
+}
+
+void Amiga::on_f11InitalModeAutoRadioButton_clicked()
+{
+    ui->f11InitialModeWithBorderCheckBox->setDisabled(true);
+    ui->f11InitialModeWithBorderCheckBox->setChecked(false);
+    graphicsConfiguration.setParameter("zoom","auto");
+}
+
+void Amiga::on_f11InitalModeFullRadioButton_clicked()
+{
+    ui->f11InitialModeWithBorderCheckBox->setDisabled(true);
+    ui->f11InitialModeWithBorderCheckBox->setChecked(false);
+    graphicsConfiguration.setParameter("zoom","full");
+}
+
+void Amiga::on_f11InitalMode640x400RadioButton_clicked()
+{
+    ui->f11InitialModeWithBorderCheckBox->setDisabled(false);
+    if (ui->f11InitialModeWithBorderCheckBox->isChecked()){
+        graphicsConfiguration.setParameter("zoom","640x400+border");
+    } else {
+        graphicsConfiguration.setParameter("zoom","640x400");
+    }
+}
+
+void Amiga::on_f11InitalMode640x480RadioButton_clicked()
+{
+    ui->f11InitialModeWithBorderCheckBox->setDisabled(false);
+    if (ui->f11InitialModeWithBorderCheckBox->isChecked()){
+        graphicsConfiguration.setParameter("zoom","640x480+border");
+    } else {
+        graphicsConfiguration.setParameter("zoom","640x480");
+    }
+}
+
+void Amiga::on_f11InitalMode640x512RadioButton_clicked()
+{
+    ui->f11InitialModeWithBorderCheckBox->setDisabled(false);
+    if (ui->f11InitialModeWithBorderCheckBox->isChecked()){
+        graphicsConfiguration.setParameter("zoom","640x512+border");
+    } else {
+        graphicsConfiguration.setParameter("zoom","640x512");
+    }
+}
+
+void Amiga::on_f11InitialModeWithBorderCheckBox_clicked()
+{
+    if (ui->f11InitialModeWithBorderCheckBox->isChecked()){
+        if (ui->f11InitalMode640x400RadioButton->isChecked()){
+            graphicsConfiguration.setParameter("zoom","640x400+border");
+        } else if (ui->f11InitalMode640x480RadioButton->isChecked()){
+            graphicsConfiguration.setParameter("zoom","640x480+border");
+        } else if (ui->f11InitalMode640x512RadioButton->isChecked()){
+            graphicsConfiguration.setParameter("zoom","640x512+border");
+        }
+    } else {
+        if (ui->f11InitalMode640x400RadioButton->isChecked()){
+            graphicsConfiguration.setParameter("zoom","640x400");
+        } else if (ui->f11InitalMode640x480RadioButton->isChecked()){
+            graphicsConfiguration.setParameter("zoom","640x480");
+        } else if (ui->f11InitalMode640x512RadioButton->isChecked()){
+            graphicsConfiguration.setParameter("zoom","640x512");
+        }
+    }
+}
+
+void Amiga::on_videoFormatBGRARadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("video_format","bgra");
+}
+
+void Amiga::on_videoFormatRGBARadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("video_format","rgba");
+}
+
+
+void Amiga::on_textureFormatModeRGBRadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("texture_format","rgb");
+}
+
+void Amiga::on_textureFormatModeRGB8RadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("texture_format","rgb8");
+}
+
+void Amiga::on_textureFormatModeRGBARadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("texture_format","rgba");
+}
+
+void Amiga::on_textureFormatModeRGBA8RadioButton_clicked()
+{
+    graphicsConfiguration.setParameter("texture_format","rgba8");
+}
+
+void Amiga::on_shaderComboBox_currentIndexChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("shader",arg1.toStdString());
+}
+
+void Amiga::on_videoSyncComboBox_currentIndexChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("video_sync",arg1.toStdString());
+}
+
+void Amiga::on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1)
+{
+    graphicsConfiguration.setParameter("video_sync_method",arg1.toStdString());
+}
+
+// PER CAMBIARE COLORE AL BOTTONE
+void Amiga::on_fadeColorPushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::black, this);
+    ui->fadeColorPushButton->setText(color.name());
+    ui->fadeColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
+}
+
+
+void Amiga::on_alternativeBaseDirPushButton_clicked()
+{
+    //QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+}
+
