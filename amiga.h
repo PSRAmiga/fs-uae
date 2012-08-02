@@ -8,6 +8,7 @@
 #include <configcdrom.h>
 #include <configharddisks.h>
 #include <configgraphics.h>
+#include <configmisc.h>
 
 namespace Ui {
 class Amiga;
@@ -164,6 +165,36 @@ private slots:
 
     void on_alternativeBaseDirPushButton_clicked();
     void on_fadeColorPushButton_clicked();
+    void on_viewportIn1LineEdit_textChanged(const QString &arg1);
+    void on_viewportIn2LineEdit_textChanged(const QString &arg1);
+    void on_viewportIn3LineEdit_textChanged(const QString &arg1);
+    void on_viewportIn4LineEdit_textChanged(const QString &arg1);
+    void on_viewportOut1LineEdit_textChanged(const QString &arg1);
+    void on_viewportOut2LineEdit_textChanged(const QString &arg1);
+    void on_viewportOut3LineEdit_textChanged(const QString &arg1);
+    void on_viewportOut4LineEdit_textChanged(const QString &arg1);
+
+    void on_alternativeKickstartDirPushButton_clicked();
+    void on_alernativeSaveStatesDirPushButton_clicked();
+    void on_alternativeFloppyOverlaysDirPushButton_clicked();
+    void on_alternativeFlashMemoryDirPushButton_clicked();
+    void on_alternativeControllersDirPushButton_clicked();
+    void on_alternativeLogsDirPushButton_clicked();
+    void on_alternativeHardDrivesDirPushButton_clicked();
+    void on_alternativeCdromsDirPushButton_clicked();
+    void on_alternativeFloppiesDirPushButton_clicked();
+
+    void on_grabMouseCheckBox_clicked();
+    void on_grabMouseAutoCheckBox_clicked();
+    void on_useBSDCheckBox_clicked();
+    void on_audioBufferLineEdit_textChanged(const QString &arg1);
+    void on_menuTitleLineEdit_textChanged(const QString &arg1);
+    void on_menuSubtitleLineEdit_textChanged(const QString &arg1);
+
+    void on_serverIPLineEdit_textChanged(const QString &arg1);
+    void on_serverPortLineEdit_textChanged(const QString &arg1);
+    void on_playerUsernameLineEdit_textChanged(const QString &arg1);
+    void on_playerPasswordLineEdit_textChanged(const QString &arg1);
 
 private:
     Ui::Amiga *ui;
@@ -172,7 +203,10 @@ private:
     ConfigFloppy floppyConfiguration;
     ConfigCDRom cdromConfiguration;
     ConfigHardDisks hardDiskConfiguration;
+    //input
     ConfigGraphics graphicsConfiguration;
+    //theme
+    ConfigMisc miscConfiguration;
 
     void parseLine(string line);
     bool checkConfigurationConsistency();

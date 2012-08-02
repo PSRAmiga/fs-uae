@@ -33,6 +33,8 @@ const string DEFAULTVIDEOSYNCMETHOD = "finish-swap-finish";
 const string DEFAULTVIDEOFORMAT = "bgra";
 const string DEFAULTTEXTUREFORMAT = "rgb";
 
+const string DEFAULTVIEWPORT = "* * * * => * * * *";
+
 
 ConfigGraphics::ConfigGraphics()
 {
@@ -314,6 +316,19 @@ string ConfigGraphics::getTextureFormatString()
     return texture_format;
 }
 
+string ConfigGraphics::getViewportConfigString()
+{
+    if (viewport.compare(DEFAULTVIEWPORT)==0){return "";}
+    else {return "viewport = " + viewport;}
+}
+
+string ConfigGraphics::getViewportString()
+{
+    return viewport;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
 bool static isNumber(string s){
     istringstream buffer(s);
     int intValue;
@@ -339,6 +354,12 @@ int static strToInt(string s){
     buffer >> intValue;
     return intValue;
 }
+
+string static intToStr(int n){
+    return static_cast<ostringstream*>( &(ostringstream() << n) )->str();
+}
+
+////////////////////////////////////////////////////////////////////////////
 
 void ConfigGraphics::setParameter(string parameter, string value)
 {
@@ -459,7 +480,7 @@ void ConfigGraphics::setParameter(string parameter, string value)
     } else if(parameter.compare("zoom")==0){
         if ((value.compare("auto")==0)||(value.compare("full")==0)||(value.compare("640x400")==0)||(value.compare("640x400+border")==0)||(value.compare("640x480")==0)||(value.compare("640x480+border")==0)||(value.compare("640x512")==0)||(value.compare("640x512+border")==0)){
             zoom=value;
-       } else {
+        } else {
             zoom=DEFAULTZOOM;
         }
     } else if(parameter.compare("texture_filter")==0){
@@ -492,6 +513,29 @@ void ConfigGraphics::setParameter(string parameter, string value)
         else{
             texture_format=DEFAULTTEXTUREFORMAT;
         }
+    } else if(parameter.compare("viewport")==0){
+        /* 74 40 640 400 => 74 36 640 400
+        devono esserci 8 numeri positivi (oppure un "*") e un separatore "=>"
+        */
+        QStringList viewportList = QString::fromStdString(value).split(" ");
+        if(viewportList.count()!=9){
+            viewport=DEFAULTVIEWPORT;
+            return;
+        }
+        if(viewportList.at(4).compare("=>")!=0){
+            viewport=DEFAULTVIEWPORT;
+            return;
+        }
+        for(int i=0;i<viewportList.count();i++){
+            if (i!=4){
+                if (((isNumber(viewportList.at(i).toStdString())==false) && (viewportList.at(i).toStdString().compare("*")!=0))||
+                        (isNumber(viewportList.at(i).toStdString()) && strToInt(viewportList.at(i).toStdString())<0)){
+                    viewport=DEFAULTVIEWPORT;
+                    return;
+                }
+            }
+        }
+        viewport=value;
     }
 }
 
@@ -524,4 +568,6 @@ void ConfigGraphics::setToDefaultConfiguration()
     video_sync_method=DEFAULTVIDEOSYNCMETHOD;
     video_format=DEFAULTVIDEOFORMAT;
     texture_format=DEFAULTTEXTUREFORMAT;
+
+    viewport=DEFAULTVIEWPORT;
 }

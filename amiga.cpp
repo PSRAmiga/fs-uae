@@ -22,9 +22,27 @@ Amiga::Amiga(QWidget *parent) :
     ui(new Ui::Amiga)
 {
     ui->setupUi(this);
+
+    //things to do onLoad
     ui->Setup->setCurrentIndex(0);
+    //acquire current screen resolution
     ui->fullscreenResolutionXSpinBox->setValue(QApplication::desktop()->width());
     ui->fullscreenResolutionYSpinBox->setValue(QApplication::desktop()->height());
+   //allow only numeric input
+    ui->audioBufferLineEdit->setValidator(new QIntValidator(ui->audioBufferLineEdit));
+    ui->serverPortLineEdit->setValidator(new QIntValidator(ui->serverPortLineEdit));
+
+    QRegExp rx("[*]|[0-9]{1,4}");
+    QValidator *validator = new QRegExpValidator(rx, this);
+    ui->viewportIn1LineEdit->setValidator(validator);
+    ui->viewportIn2LineEdit->setValidator(validator);
+    ui->viewportIn3LineEdit->setValidator(validator);
+    ui->viewportIn4LineEdit->setValidator(validator);
+    ui->viewportOut1LineEdit->setValidator(validator);
+    ui->viewportOut2LineEdit->setValidator(validator);
+    ui->viewportOut3LineEdit->setValidator(validator);
+    ui->viewportOut4LineEdit->setValidator(validator);
+
 }
 
 Amiga::~Amiga()
@@ -44,6 +62,10 @@ float strToFloat(string line){
     stringstream stream(line);
     stream >> valor;
     return valor;
+}
+
+string intToStr(int n){
+    return static_cast<ostringstream*>( &(ostringstream() << n) )->str();
 }
 
 /////////////////////////////////////////////////////////////////////
@@ -100,8 +122,8 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(graphicsConfiguration.getFullscreenConfigString())) {myfile << graphicsConfiguration.getFullscreenConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getWindowResizableConfigString())) {myfile << graphicsConfiguration.getWindowResizableConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getKeepAspectConfigString())) {myfile << graphicsConfiguration.getKeepAspectConfigString() << endl;}
-    if (!isEmptyString(graphicsConfiguration.getFullscreenWidthConfigString()) && static_cast<ostringstream*>( &(ostringstream() << QApplication::desktop()->width()) )->str().compare(graphicsConfiguration.getFullscreenWidthString())) {myfile << graphicsConfiguration.getFullscreenWidthConfigString() << endl;}// << static_cast<ostringstream*>( &(ostringstream() << QApplication::desktop()->width()) )->str().compare(graphicsConfiguration.getFullscreenWidthConfigString()) << endl;}
-    if (!isEmptyString(graphicsConfiguration.getFullscreenHeightConfigString()) && static_cast<ostringstream*>( &(ostringstream() << QApplication::desktop()->height()) )->str().compare(graphicsConfiguration.getFullscreenHeightString())) {myfile << graphicsConfiguration.getFullscreenHeightConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getFullscreenWidthConfigString()) && intToStr(QApplication::desktop()->width()).compare(graphicsConfiguration.getFullscreenWidthString())) {myfile << graphicsConfiguration.getFullscreenWidthConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getFullscreenHeightConfigString()) && intToStr(QApplication::desktop()->height()).compare(graphicsConfiguration.getFullscreenHeightString())) {myfile << graphicsConfiguration.getFullscreenHeightConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getWindowWidthConfigString())) {myfile << graphicsConfiguration.getWindowWidthConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getWindowHeightConfigString())) {myfile << graphicsConfiguration.getWindowHeightConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getFsaaConfigString())) {myfile << graphicsConfiguration.getFsaaConfigString() << endl;}
@@ -122,6 +144,28 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(graphicsConfiguration.getVideoSyncMethodConfigString())) {myfile << graphicsConfiguration.getVideoSyncMethodConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getVideoFormatConfigString())) {myfile << graphicsConfiguration.getVideoFormatConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getTextureFormatConfigString())) {myfile << graphicsConfiguration.getTextureFormatConfigString() << endl;}
+    if (!isEmptyString(graphicsConfiguration.getViewportConfigString())) {myfile << graphicsConfiguration.getViewportConfigString() << endl;}
+
+    if (!isEmptyString(miscConfiguration.getInputGrabConfigString())) {myfile << miscConfiguration.getInputGrabConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getAutomaticInputGrabConfigString())) {myfile << miscConfiguration.getAutomaticInputGrabConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getBsdSocketLibraryConfigString())) {myfile << miscConfiguration.getBsdSocketLibraryConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getAudioBufferConfigString())) {myfile << miscConfiguration.getAudioBufferConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getTitleConfigString())) {myfile << miscConfiguration.getTitleConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getSubTitleConfigString())) {myfile << miscConfiguration.getSubTitleConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getNetPlayServerConfigString())) {myfile << miscConfiguration.getNetPlayServerConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getNetPlayPortConfigString())) {myfile << miscConfiguration.getNetPlayPortConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getNetPlayTagConfigString())) {myfile << miscConfiguration.getNetPlayTagConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getNetPlayPasswordConfigString())) {myfile << miscConfiguration.getNetPlayPasswordConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getBaseDirConfigString())) {myfile << miscConfiguration.getBaseDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getKickstartsDirConfigString())) {myfile << miscConfiguration.getKickstartsDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getSaveStatesDirConfigString())) {myfile << miscConfiguration.getSaveStatesDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getFloppyOverlaysDirConfigString())) {myfile << miscConfiguration.getFloppyOverlaysDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getFlashMemoryDirConfigString())) {myfile << miscConfiguration.getFlashMemoryDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getControllersDirConfigString())) {myfile << miscConfiguration.getControllersDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getLogsDirConfigString())) {myfile << miscConfiguration.getLogsDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getHardDrivesDirConfigString())) {myfile << miscConfiguration.getHardDrivesDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getCDRomsDirConfigString())) {myfile << miscConfiguration.getCDRomsDirConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getFloppiesDirConfigString())) {myfile << miscConfiguration.getFloppiesDirConfigString() << endl;}
 
     myfile.close();
 }
@@ -165,8 +209,19 @@ int Amiga::getConfigurationAreaFromParameterName(string parameterName){
                (parameterName.compare("shader")==0)||(parameterName.compare("low_resolution")==0)||(parameterName.compare("line_doubling")==0)||
                (parameterName.compare("scale_x")==0)||(parameterName.compare("scale_y")==0)||(parameterName.compare("align_x")==0)||
                (parameterName.compare("align_y")==0)||(parameterName.compare("zoom")==0)||(parameterName.compare("texture_filter")==0)||
-               (parameterName.compare("video_sync")==0)||(parameterName.compare("video_sync")==0)||(parameterName.compare("video_format")==0)||(parameterName.compare("texture_format")==0)){
+               (parameterName.compare("video_sync")==0)||(parameterName.compare("video_sync")==0)||(parameterName.compare("video_format")==0)||
+               (parameterName.compare("texture_format")==0)||(parameterName.compare("viewport")==0)){
         return 7;
+    } else if (false){ //fare theme
+        return 8;
+    } else if ((parameterName.compare("input_grab")==0)||(parameterName.compare("automatic_input_grab")==0)||(parameterName.compare("bsdsocket_library")==0)||
+               (parameterName.compare("audio_buffer_target_bytes")==0)||(parameterName.compare("title")==0)||(parameterName.compare("sub_title")==0)||
+               (parameterName.compare("netplay_server")==0)||(parameterName.compare("netplay_port")==0)||(parameterName.compare("netplay_tag")==0)||
+               (parameterName.compare("base_dir")==0)||(parameterName.compare("kickstarts_dir")==0)||(parameterName.compare("save_states_dir")==0)||
+               (parameterName.compare("floppy_overlays_dir")==0)||(parameterName.compare("flash_memory_dir")==0)||(parameterName.compare("controllers_dir")==0)||
+               (parameterName.compare("logs_dir")==0)||(parameterName.compare("hard_drives_dir")==0)||(parameterName.compare("cdroms_dir")==0)||
+               (parameterName.compare("floppies_dir")==0)||(parameterName.compare("netplay_password")==0)){
+        return 9;
     } else {
         return -1;
     }
@@ -199,6 +254,10 @@ void Amiga::parseLine(string line){
         //inputConfiguration.setParameter(parameterName,parameterValue);
     } else if (configArea==7){
         graphicsConfiguration.setParameter(parameterName,parameterValue);
+    } else if (configArea==8){
+        //themeConfiguration.setParameter(parameterName,parameterValue);
+    } else if (configArea==9){
+        miscConfiguration.setParameter(parameterName,parameterValue);
     }
 }
 
@@ -374,7 +433,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
 
     //FLOPPY DRIVES
     for(int i=0;i<4;i++){
-        string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
+        string iString=intToStr(i);
 
         string floppy_drive=floppyConfiguration.getFloppyDriveStringAt(i);
         QLineEdit *lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("floppyDrive" + iString + "LineEdit"));
@@ -410,7 +469,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         }
 
     }
-    string floppyOccupiedSlotsString=static_cast<ostringstream*>( &(ostringstream() << floppyConfiguration.getFloppyImageSize()) )->str();
+    string floppyOccupiedSlotsString=intToStr(floppyConfiguration.getFloppyImageSize());
     ui->floppyOccupiedSlotsDisplayLabel->setText(QString::fromStdString(floppyOccupiedSlotsString+"/20"));
 
     //CDROM DRIVE
@@ -425,13 +484,13 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         }
 
     }
-    string cdromOccupiedSlotsString=static_cast<ostringstream*>( &(ostringstream() << cdromConfiguration.getCDRomImageSize()) )->str();
+    string cdromOccupiedSlotsString=intToStr(cdromConfiguration.getCDRomImageSize());
     ui->cdromOccupiedSlotsDisplayLabel->setText(QString::fromStdString(cdromOccupiedSlotsString+"/20"));
 
     //HARD DRIVES
 
     for(int i=0;i<10;i++){
-        string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
+        string iString=intToStr(i);
 
         string hardDriveString=hardDiskConfiguration.getHardDriveStringAt(i);
         QLineEdit *lineEdit = ui->widget->findChild<QLineEdit *>(QString::fromStdString("hardDrive" + iString + "LineEdit"));
@@ -591,7 +650,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
         ui->f11InitialModeWithBorderCheckBox->setDisabled(true);
     } else {
         ui->f11InitalModeAutoRadioButton->setChecked(true);
-         ui->f11InitialModeWithBorderCheckBox->setDisabled(true);
+        ui->f11InitialModeWithBorderCheckBox->setDisabled(true);
     }
 
     //VIDEO FORMAT
@@ -640,6 +699,102 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     if(ui->videoSynkMethodeComboBox->findText(QString::fromStdString(video_sync_method),Qt::MatchExactly)!=-1){
         ui->videoSynkMethodeComboBox->setCurrentIndex(ui->videoSynkMethodeComboBox->findText(QString::fromStdString(video_sync_method),Qt::MatchExactly));
     } else {ui->videoSynkMethodeComboBox->setCurrentIndex(0); }
+
+    //VIEWPORT
+    QStringList viewportList = QString::fromStdString(graphicsConfiguration.getViewportString()).split(" ");
+    if(viewportList.count()!=9){
+        return;
+    }
+    ui->viewportIn1LineEdit->setText(viewportList.at(0));
+    ui->viewportIn2LineEdit->setText(viewportList.at(1));
+    ui->viewportIn3LineEdit->setText(viewportList.at(2));
+    ui->viewportIn4LineEdit->setText(viewportList.at(3));
+    ui->viewportOut1LineEdit->setText(viewportList.at(5));
+    ui->viewportOut2LineEdit->setText(viewportList.at(6));
+    ui->viewportOut3LineEdit->setText(viewportList.at(7));
+    ui->viewportOut4LineEdit->setText(viewportList.at(8));
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //INPUT GRAB
+    string input_grab=miscConfiguration.getInputGrabString();
+    if(input_grab.compare("0")==0){
+        ui->grabMouseCheckBox->setChecked(false);
+    } else {
+        ui->grabMouseCheckBox->setChecked(true);
+    }
+
+    //AUTO INPUT GRAB
+    string automatic_input_grab=miscConfiguration.getAutomaticInputGrabString();
+    if(automatic_input_grab.compare("0")==0){
+        ui->grabMouseAutoCheckBox->setChecked(false);
+    } else {
+        ui->grabMouseAutoCheckBox->setChecked(true);
+    }
+
+    //BSD SOCKET
+    string bsdsocket_library=miscConfiguration.getBsdSocketLibraryString();
+    if(bsdsocket_library.compare("1")==0){
+        ui->useBSDCheckBox->setChecked(true);
+    } else {
+        ui->useBSDCheckBox->setChecked(false);
+    }
+
+    //AUDIO BUFFER
+    string audio_buffer_target_bytes=miscConfiguration.getAudioBufferString();
+    ui->audioBufferLineEdit->setText(QString::fromStdString(audio_buffer_target_bytes));
+
+    //TITLE
+    string title=miscConfiguration.getTitleString();
+    ui->menuTitleLineEdit->setText(QString::fromStdString(title));
+
+    //SUBTITLE
+    string sub_title=miscConfiguration.getSubTitleString();
+    ui->menuSubtitleLineEdit->setText(QString::fromStdString(sub_title));
+
+    //NETPLAY
+    string netplay_server=miscConfiguration.getNetPlayServerString();
+    ui->serverIPLineEdit->setText(QString::fromStdString(netplay_server));
+
+    string netplay_port=miscConfiguration.getNetPlayPortString();
+    ui->serverPortLineEdit->setText(QString::fromStdString(netplay_port));
+
+    string netplay_tag=miscConfiguration.getNetPlayTagString();
+    ui->playerUsernameLineEdit->setText(QString::fromStdString(netplay_tag));
+
+    string netplay_password=miscConfiguration.getNetPlayTagString();
+    ui->playerPasswordLineEdit->setText(QString::fromStdString(netplay_password));
+
+    //ALTERNATIVE DIRs
+    string base_dir=miscConfiguration.getBaseDirString();
+    ui->alternativeBaseDirLineEdit->setText(QString::fromStdString(base_dir));
+
+    string kickstarts_dir=miscConfiguration.getKickstartsDirString();
+    ui->alternativeKickstartDirLineEdit->setText(QString::fromStdString(kickstarts_dir));
+
+    string save_states_dir=miscConfiguration.getSaveStatesDirString();
+    ui->alternativeSaveStatesDirLineEdit->setText(QString::fromStdString(save_states_dir));
+
+    string floppy_overlays_dir=miscConfiguration.getFloppyOverlaysDirString();
+    ui->alternativeFloppyOverlaysDirLineEdit->setText(QString::fromStdString(floppy_overlays_dir));
+
+    string flash_memory_dir=miscConfiguration.getFlashMemoryDirString();
+    ui->alternativeFlashMemoryLineDirEdit->setText(QString::fromStdString(flash_memory_dir));
+
+    string controllers_dir=miscConfiguration.getControllersDirString();
+    ui->alternativeControllersDirLineEdit->setText(QString::fromStdString(controllers_dir));
+
+    string logs_dir=miscConfiguration.getLogsDirString();
+    ui->alternativeLogsDirLineEdit->setText(QString::fromStdString(logs_dir));
+
+    string hard_drives_dir=miscConfiguration.getHardDrivesDirString();
+    ui->alternativeHardDrivesDirLineEdit->setText(QString::fromStdString(hard_drives_dir));
+
+    string cdroms_dir=miscConfiguration.getCDRomsDirString();
+    ui->alternativeCdromsDirLineEdit->setText(QString::fromStdString(cdroms_dir));
+
+    string floppies_dir=miscConfiguration.getFloppiesDirString();
+    ui->alternativeFloppiesDirLineEdit->setText(QString::fromStdString(floppies_dir));
 }
 
 void Amiga::on_loadConfigToolButton_clicked()
@@ -656,6 +811,7 @@ void Amiga::on_loadConfigToolButton_clicked()
     cdromConfiguration.setToDefaultConfiguration();
     hardDiskConfiguration.setToDefaultConfiguration();
     graphicsConfiguration.setToDefaultConfiguration();
+    miscConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
     //poi leggo riga per riga, aggiorno la configurazione interna e aggiorno i componenti
@@ -686,6 +842,7 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
     cdromConfiguration.setToDefaultConfiguration();
     hardDiskConfiguration.setToDefaultConfiguration();
     graphicsConfiguration.setToDefaultConfiguration();
+    miscConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
     //devo DISABILITARE/SVUOTARE KICK_EXT_DIR e tutte le cose che di default sarebbero disabilitate/vuote!
@@ -700,13 +857,12 @@ void Amiga::on_runConfigButton_clicked()
 {
     //fare check consistenza!!! ////////////////////////////////////////////////////////////////////
     saveConfigInFile(".current.fs-uae");
-    /*
-            int returnValue=system("fs-uae .current.fs-uae");
-            if (returnValue!=0)
-            {
-                //ui->errorLabel->setText(QString::fromStdString("Ops...something went wrong :-("));
-                QMessageBox::about(this, tr("Error"),tr("Ops...something went wrong :-("));
-            }*/
+
+    /*int returnValue=system("fs-uae .current.fs-uae");
+    if (returnValue!=0)
+    {
+        QMessageBox::about(this, tr("Error"),tr("Ops...something went wrong :-("));
+    }*/
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -983,7 +1139,7 @@ void Amiga::on_floppySwappingImagerRemovePushButton_clicked()
 
 void Amiga::on_floppyDriveVolumeSlider_valueChanged(int value)
 {
-    string stringvalue=static_cast<ostringstream*>( &(ostringstream() << value) )->str();
+    string stringvalue=intToStr(value);
 
     floppyConfiguration.setParameter("floppy_drive_volume",stringvalue);
     ui->floppyDriveVolumeDisplayLabel->setText(QString::fromStdString(floppyConfiguration.getFloppyDriveVolumeString()));
@@ -996,7 +1152,7 @@ void Amiga::on_floppyDriveVolumeMuteCheckBox_clicked()
         ui->floppyDriveVolumeSlider->setEnabled(false);
         floppyConfiguration.setParameter("floppy_drive_volume","0");
     } else {
-        string stringvalue=static_cast<ostringstream*>( &(ostringstream() << ui->floppyDriveVolumeSlider->value()) )->str();
+        string stringvalue=intToStr(ui->floppyDriveVolumeSlider->value());
         ui->floppyDriveVolumeDisplayLabel->setText(QString::fromStdString(stringvalue));
         ui->floppyDriveVolumeSlider->setEnabled(true);
         floppyConfiguration.setParameter("floppy_drive_volume",stringvalue);
@@ -1006,8 +1162,8 @@ void Amiga::on_floppyDriveVolumeMuteCheckBox_clicked()
 void Amiga::on_floppyDriveSpeedSlider_valueChanged(int position)
 {
     //0<=position<=12
-    string positionString=static_cast<ostringstream*>( &(ostringstream() << position) )->str();
-    string stringvalue=static_cast<ostringstream*>( &(ostringstream() << position*100) )->str();
+    string positionString=intToStr(position);
+    string stringvalue=intToStr(position*100);
     floppyConfiguration.setParameter("floppy_drive_speed",stringvalue);
     string displayString;
     if (position==0){
@@ -1462,14 +1618,14 @@ void Amiga::on_alignYDoubleSpinBox_valueChanged(const QString &arg1)
 
 void Amiga::on_scanlinesDarkHorizontalSlider_valueChanged(int position)
 {
-    string positionString=static_cast<ostringstream*>( &(ostringstream() << position) )->str();
+    string positionString=intToStr(position);
     graphicsConfiguration.setParameter("scanlines_dark",positionString);
     ui->scanlinesDarkDisplayLabel->setText(QString::fromStdString(positionString+"%"));
 }
 
 void Amiga::on_scanlinesLightHorizontalSlider_valueChanged(int position)
 {
-    string positionString=static_cast<ostringstream*>( &(ostringstream() << position) )->str();
+    string positionString=intToStr(position);
     graphicsConfiguration.setParameter("scanlines_light",positionString);
     ui->scanlinesLightDisplayLabel->setText(QString::fromStdString(positionString+"%"));
 }
@@ -1624,8 +1780,254 @@ void Amiga::on_fadeColorPushButton_clicked()
 }
 
 
-void Amiga::on_alternativeBaseDirPushButton_clicked()
+void Amiga::on_viewportIn1LineEdit_textChanged(const QString &arg1)
 {
-    //QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),"/", QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    string viewportString=arg1.toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
 }
 
+void Amiga::on_viewportIn2LineEdit_textChanged(const QString &arg1)
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=arg1.toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
+}
+
+void Amiga::on_viewportIn3LineEdit_textChanged(const QString &arg1)
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=arg1.toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
+}
+
+void Amiga::on_viewportIn4LineEdit_textChanged(const QString &arg1)
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=arg1.toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
+}
+
+void Amiga::on_viewportOut1LineEdit_textChanged(const QString &arg1)
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=arg1.toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
+}
+
+void Amiga::on_viewportOut2LineEdit_textChanged(const QString &arg1)
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=arg1.toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
+}
+
+void Amiga::on_viewportOut3LineEdit_textChanged(const QString &arg1)
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=arg1.toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
+}
+
+void Amiga::on_viewportOut4LineEdit_textChanged(const QString &arg1)
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=arg1.toStdString();
+
+    graphicsConfiguration.setParameter("viewport",viewportString);
+}
+
+void Amiga::on_alternativeBaseDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeBaseDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("base_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeKickstartDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeKickstartDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("kickstarts_dir",dir.toStdString());
+}
+
+void Amiga::on_alernativeSaveStatesDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeSaveStatesDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("save_states_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeFloppyOverlaysDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeFloppyOverlaysDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("floppy_overlays_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeFlashMemoryDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeFlashMemoryLineDirEdit->setText(dir);
+    miscConfiguration.setParameter("flash_memory_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeControllersDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeControllersDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("controllers_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeLogsDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeLogsDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("logs_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeHardDrivesDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeHardDrivesDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("hard_drives_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeCdromsDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeCdromsDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("cdroms_dir",dir.toStdString());
+}
+
+void Amiga::on_alternativeFloppiesDirPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->alternativeFloppiesDirLineEdit->setText(dir);
+    miscConfiguration.setParameter("floppies_dir",dir.toStdString());
+}
+
+void Amiga::on_grabMouseCheckBox_clicked()
+{
+    if(ui->grabMouseCheckBox->isChecked()){
+        miscConfiguration.setParameter("input_grab","1");
+    } else {
+        miscConfiguration.setParameter("input_grab","0");
+    }
+}
+
+void Amiga::on_grabMouseAutoCheckBox_clicked()
+{
+    if(ui->grabMouseAutoCheckBox->isChecked()){
+        miscConfiguration.setParameter("automatic_input_grab","1");
+    } else {
+        miscConfiguration.setParameter("automatic_input_grab","0");
+    }
+}
+
+void Amiga::on_useBSDCheckBox_clicked()
+{
+    if(ui->useBSDCheckBox->isChecked()){
+        miscConfiguration.setParameter("bsdsocket_library","1");
+    } else {
+        miscConfiguration.setParameter("bsdsocket_library","0");
+    }
+}
+
+void Amiga::on_audioBufferLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("audio_buffer_target_bytes",arg1.toStdString());
+}
+
+void Amiga::on_menuTitleLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("title",arg1.toStdString());
+}
+
+void Amiga::on_menuSubtitleLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("sub_title",arg1.toStdString());
+}
+
+void Amiga::on_serverIPLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("netplay_server",arg1.toStdString());
+}
+
+void Amiga::on_serverPortLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("netplay_port",arg1.toStdString());
+}
+
+void Amiga::on_playerUsernameLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("netplay_tag",arg1.toStdString());
+}
+
+void Amiga::on_playerPasswordLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("netplay_password",arg1.toStdString());
+}

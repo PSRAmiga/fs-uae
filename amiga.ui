@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>4</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -131,7 +131,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>70</x>
         <y>20</y>
         <width>231</width>
         <height>31</height>
@@ -195,8 +195,8 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>160</y>
-        <width>157</width>
+        <y>170</y>
+        <width>131</width>
         <height>103</height>
        </rect>
       </property>
@@ -214,21 +214,21 @@
        <item>
         <widget class="QRadioButton" name="accuracyLeastRadio">
          <property name="text">
-          <string>Least accurate (-1)</string>
+          <string>Least accurate</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="accuracyNormalRadio">
          <property name="text">
-          <string>Normal (0)</string>
+          <string>Normal</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="accuracyMostadio">
          <property name="text">
-          <string notr="true">Most accurate (+1)</string>
+          <string notr="true">Most accurate</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -240,8 +240,8 @@
      <widget class="QWidget" name="layoutWidget3">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>160</y>
+        <x>260</x>
+        <y>170</y>
         <width>206</width>
         <height>75</height>
        </rect>
@@ -257,7 +257,7 @@
        <item>
         <widget class="QRadioButton" name="videoModePALRadio">
          <property name="text">
-          <string>PAL (European 50 Hz) (0)</string>
+          <string>PAL (European 50 Hz)</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -267,7 +267,7 @@
        <item>
         <widget class="QRadioButton" name="videoModeNTSCRadio">
          <property name="text">
-          <string>NTSC (American 60 Hz) (1)</string>
+          <string>NTSC (American 60 Hz)</string>
          </property>
         </widget>
        </item>
@@ -365,9 +365,9 @@
      <widget class="QWidget" name="layoutWidget6">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>280</y>
-        <width>167</width>
+        <x>631</x>
+        <y>291</y>
+        <width>175</width>
         <height>166</height>
        </rect>
       </property>
@@ -380,7 +380,7 @@
             <bool>false</bool>
            </property>
            <property name="text">
-            <string>Z3 Mem</string>
+            <string>Z3 Memory</string>
            </property>
           </widget>
          </item>
@@ -517,9 +517,9 @@
      <widget class="QWidget" name="layoutWidget5">
       <property name="geometry">
        <rect>
-        <x>269</x>
-        <y>279</y>
-        <width>69</width>
+        <x>460</x>
+        <y>290</y>
+        <width>91</width>
         <height>159</height>
        </rect>
       </property>
@@ -530,7 +530,7 @@
        <item>
         <widget class="QLabel" name="fastMemLabel">
          <property name="text">
-          <string>Fast Mem</string>
+          <string>Fast Memory</string>
          </property>
         </widget>
        </item>
@@ -578,8 +578,8 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>279</y>
-        <width>86</width>
+        <y>290</y>
+        <width>99</width>
         <height>164</height>
        </rect>
       </property>
@@ -587,7 +587,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="chipMemLabel">
          <property name="text">
-          <string>Chip Mem</string>
+          <string>Chip Memory</string>
          </property>
         </widget>
        </item>
@@ -634,9 +634,9 @@
      <widget class="QWidget" name="layoutWidget4">
       <property name="geometry">
        <rect>
-        <x>169</x>
-        <y>279</y>
-        <width>80</width>
+        <x>260</x>
+        <y>290</y>
+        <width>95</width>
         <height>131</height>
        </rect>
       </property>
@@ -644,7 +644,7 @@
        <item>
         <widget class="QLabel" name="slowMemLabel_2">
          <property name="text">
-          <string>Slow Mem</string>
+          <string>Slow Memory</string>
          </property>
         </widget>
        </item>
@@ -685,7 +685,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>260</y>
+        <y>270</y>
         <width>881</width>
         <height>20</height>
        </rect>
@@ -694,17 +694,69 @@
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="Line" name="line_18">
       <property name="geometry">
        <rect>
-        <x>540</x>
+        <x>210</x>
         <y>290</y>
-        <width>261</width>
-        <height>31</height>
+        <width>20</width>
+        <height>171</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Zorro III quand'è che non si può usare?</string>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_19">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>290</y>
+        <width>20</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_20">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>290</y>
+        <width>20</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_21">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>881</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_22">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>20</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
      <zorder>layoutWidget2</zorder>
@@ -717,7 +769,11 @@
      <zorder>layoutWidget4</zorder>
      <zorder>line_6</zorder>
      <zorder>layoutWidget</zorder>
-     <zorder>label_2</zorder>
+     <zorder>line_18</zorder>
+     <zorder>line_19</zorder>
+     <zorder>line_20</zorder>
+     <zorder>line_21</zorder>
+     <zorder>line_22</zorder>
     </widget>
     <widget class="QWidget" name="floppiesMenu">
      <attribute name="icon">
@@ -731,7 +787,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>20</y>
+        <y>0</y>
         <width>801</width>
         <height>34</height>
        </rect>
@@ -771,7 +827,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>50</y>
+        <y>30</y>
         <width>801</width>
         <height>34</height>
        </rect>
@@ -811,7 +867,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>80</y>
+        <y>60</y>
         <width>801</width>
         <height>34</height>
        </rect>
@@ -851,7 +907,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>110</y>
+        <y>90</y>
         <width>801</width>
         <height>34</height>
        </rect>
@@ -891,7 +947,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>160</y>
+        <y>150</y>
         <width>801</width>
         <height>201</height>
        </rect>
@@ -904,7 +960,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>360</y>
+        <y>350</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -930,7 +986,7 @@
       <property name="geometry">
        <rect>
         <x>190</x>
-        <y>360</y>
+        <y>350</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -947,7 +1003,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>140</y>
+        <y>130</y>
         <width>641</width>
         <height>21</height>
        </rect>
@@ -1069,7 +1125,7 @@
       <property name="geometry">
        <rect>
         <x>350</x>
-        <y>370</y>
+        <y>360</y>
         <width>111</width>
         <height>17</height>
        </rect>
@@ -1082,7 +1138,7 @@
       <property name="geometry">
        <rect>
         <x>460</x>
-        <y>370</y>
+        <y>360</y>
         <width>61</width>
         <height>17</height>
        </rect>
@@ -1159,7 +1215,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>40</y>
+        <y>50</y>
         <width>251</width>
         <height>21</height>
        </rect>
@@ -1175,9 +1231,9 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>60</y>
+        <y>70</y>
         <width>811</width>
-        <height>331</height>
+        <height>361</height>
        </rect>
       </property>
       <property name="selectionMode">
@@ -1191,7 +1247,7 @@
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>390</y>
+        <y>430</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -1211,7 +1267,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>390</y>
+        <y>430</y>
         <width>151</width>
         <height>27</height>
        </rect>
@@ -1240,7 +1296,7 @@
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>400</y>
+        <y>440</y>
         <width>111</width>
         <height>17</height>
        </rect>
@@ -1256,7 +1312,7 @@
       <property name="geometry">
        <rect>
         <x>450</x>
-        <y>400</y>
+        <y>440</y>
         <width>61</width>
         <height>17</height>
        </rect>
@@ -1269,14 +1325,13 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>430</y>
+        <y>444</y>
         <width>791</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>Problema: se ho dei cd selezionati e poi cambio modello, devo ricordarmi di NON salvarli nel file di config
-Non riesco a fare andare i CD :((</string>
+       <string>Problema: se ho dei cd selezionati e poi cambio modello, devo ricordarmi di NON salvarli nel file di config</string>
       </property>
      </widget>
     </widget>
@@ -2291,7 +2346,7 @@ Non riesco a fare andare i CD :((</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>20</y>
+        <y>30</y>
         <width>111</width>
         <height>17</height>
        </rect>
@@ -2307,9 +2362,9 @@ Non riesco a fare andare i CD :((</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>420</y>
+        <y>450</y>
         <width>721</width>
-        <height>41</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="html">
@@ -2324,7 +2379,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>11</x>
-        <y>280</y>
+        <y>310</y>
         <width>181</width>
         <height>131</height>
        </rect>
@@ -2373,7 +2428,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>260</y>
+        <y>290</y>
         <width>151</width>
         <height>17</height>
        </rect>
@@ -2386,7 +2441,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>280</y>
+        <y>310</y>
         <width>181</width>
         <height>131</height>
        </rect>
@@ -2438,7 +2493,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>450</x>
-        <y>280</y>
+        <y>310</y>
         <width>181</width>
         <height>131</height>
        </rect>
@@ -2487,7 +2542,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>670</x>
-        <y>280</y>
+        <y>310</y>
         <width>181</width>
         <height>131</height>
        </rect>
@@ -2536,7 +2591,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>249</x>
-        <y>260</y>
+        <y>290</y>
         <width>151</width>
         <height>17</height>
        </rect>
@@ -2549,7 +2604,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>275</x>
-        <y>20</y>
+        <y>30</y>
         <width>111</width>
         <height>17</height>
        </rect>
@@ -2562,7 +2617,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>690</x>
-        <y>260</y>
+        <y>290</y>
         <width>151</width>
         <height>17</height>
        </rect>
@@ -2575,7 +2630,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>720</x>
-        <y>20</y>
+        <y>30</y>
         <width>111</width>
         <height>17</height>
        </rect>
@@ -2588,7 +2643,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>469</x>
-        <y>260</y>
+        <y>290</y>
         <width>151</width>
         <height>17</height>
        </rect>
@@ -2601,7 +2656,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>495</x>
-        <y>20</y>
+        <y>30</y>
         <width>111</width>
         <height>17</height>
        </rect>
@@ -2616,7 +2671,7 @@ p, li { white-space: pre-wrap; }
         <x>190</x>
         <y>20</y>
         <width>41</width>
-        <height>391</height>
+        <height>451</height>
        </rect>
       </property>
       <property name="orientation">
@@ -2629,7 +2684,7 @@ p, li { white-space: pre-wrap; }
         <x>410</x>
         <y>0</y>
         <width>41</width>
-        <height>411</height>
+        <height>471</height>
        </rect>
       </property>
       <property name="orientation">
@@ -2639,34 +2694,21 @@ p, li { white-space: pre-wrap; }
      <widget class="Line" name="line_4">
       <property name="geometry">
        <rect>
-        <x>635</x>
+        <x>631</x>
         <y>20</y>
         <width>41</width>
-        <height>391</height>
+        <height>451</height>
        </rect>
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="Line" name="line_5">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>250</y>
-        <width>881</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget9">
       <property name="geometry">
        <rect>
         <x>14</x>
-        <y>50</y>
+        <y>60</y>
         <width>177</width>
         <height>205</height>
        </rect>
@@ -2852,7 +2894,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>231</x>
-        <y>50</y>
+        <y>60</y>
         <width>177</width>
         <height>205</height>
        </rect>
@@ -3047,7 +3089,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>452</x>
-        <y>50</y>
+        <y>60</y>
         <width>177</width>
         <height>205</height>
        </rect>
@@ -3239,7 +3281,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>675</x>
-        <y>50</y>
+        <y>60</y>
         <width>177</width>
         <height>205</height>
        </rect>
@@ -3453,6 +3495,58 @@ p, li { white-space: pre-wrap; }
        <string>PARALLEL JOYSTICK PORTS</string>
       </property>
      </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_45">
+      <property name="geometry">
+       <rect>
+        <x>222</x>
+        <y>270</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_46">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>270</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_47">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>270</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="graphicsMenu">
      <attribute name="icon">
@@ -3478,7 +3572,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QSpinBox" name="fullscreenResolutionXSpinBox">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>420</x>
         <y>30</y>
         <width>71</width>
         <height>27</height>
@@ -3494,7 +3588,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="fullscreenResolutionLabel">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>420</x>
         <y>10</y>
         <width>151</width>
         <height>17</height>
@@ -3507,7 +3601,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="fullscreenResolutionIcsLabel">
       <property name="geometry">
        <rect>
-        <x>321</x>
+        <x>491</x>
         <y>34</y>
         <width>16</width>
         <height>17</height>
@@ -3520,7 +3614,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QSpinBox" name="fullscreenResolutionYSpinBox">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>500</x>
         <y>30</y>
         <width>71</width>
         <height>27</height>
@@ -3539,8 +3633,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QSpinBox" name="windowResolutionYSpinBox">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>80</y>
+        <x>500</x>
+        <y>90</y>
         <width>71</width>
         <height>27</height>
        </rect>
@@ -3558,8 +3652,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="windowResolutionLabel">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>60</y>
+        <x>420</x>
+        <y>70</y>
         <width>151</width>
         <height>17</height>
        </rect>
@@ -3571,8 +3665,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="windowResolutionIcsLabel">
       <property name="geometry">
        <rect>
-        <x>321</x>
-        <y>90</y>
+        <x>491</x>
+        <y>100</y>
         <width>16</width>
         <height>17</height>
        </rect>
@@ -3584,8 +3678,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QSpinBox" name="windowResolutionXSpinBox">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>80</y>
+        <x>420</x>
+        <y>90</y>
         <width>71</width>
         <height>27</height>
        </rect>
@@ -3603,7 +3697,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="verticalLayoutWidget_19">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>670</x>
         <y>0</y>
         <width>154</width>
         <height>131</height>
@@ -3669,9 +3763,9 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>120</y>
-        <width>851</width>
+        <width>881</width>
         <height>20</height>
        </rect>
       </property>
@@ -3950,7 +4044,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="scaleYLabel">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>420</x>
         <y>180</y>
         <width>71</width>
         <height>17</height>
@@ -3963,7 +4057,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="alignXLabel">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>420</x>
         <y>210</y>
         <width>71</width>
         <height>17</height>
@@ -3976,7 +4070,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="alignYLabel">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>420</x>
         <y>240</y>
         <width>71</width>
         <height>17</height>
@@ -3989,7 +4083,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QDoubleSpinBox" name="scaleXDoubleSpinBox">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>490</x>
         <y>140</y>
         <width>81</width>
         <height>27</height>
@@ -4026,7 +4120,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="scaleXLabel">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>420</x>
         <y>150</y>
         <width>71</width>
         <height>17</height>
@@ -4039,7 +4133,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QDoubleSpinBox" name="scaleYDoubleSpinBox">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>490</x>
         <y>170</y>
         <width>81</width>
         <height>27</height>
@@ -4076,7 +4170,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QDoubleSpinBox" name="alignXdoubleSpinBox">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>490</x>
         <y>200</y>
         <width>81</width>
         <height>27</height>
@@ -4113,7 +4207,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QDoubleSpinBox" name="alignYDoubleSpinBox">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>490</x>
         <y>230</y>
         <width>81</width>
         <height>27</height>
@@ -4150,8 +4244,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="verticalLayoutWidget_20">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>160</y>
+        <x>670</x>
+        <y>150</y>
         <width>161</width>
         <height>191</height>
        </rect>
@@ -4217,8 +4311,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="verticalLayoutWidget_21">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>260</y>
+        <x>420</x>
+        <y>270</y>
         <width>161</width>
         <height>81</height>
        </rect>
@@ -4253,9 +4347,9 @@ p, li { white-space: pre-wrap; }
      <widget class="Line" name="line_11">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>350</y>
-        <width>851</width>
+        <width>881</width>
         <height>20</height>
        </rect>
       </property>
@@ -4432,7 +4526,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="videoAndTextureLabel">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>380</x>
         <y>360</y>
         <width>271</width>
         <height>17</height>
@@ -4445,7 +4539,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="verticalLayoutWidget_43">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>380</x>
         <y>380</y>
         <width>111</width>
         <height>81</height>
@@ -4481,10 +4575,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="verticalLayoutWidget_44">
       <property name="geometry">
        <rect>
-        <x>500</x>
-        <y>374</y>
+        <x>530</x>
+        <y>380</y>
         <width>314</width>
-        <height>91</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="textureFormatPanel">
@@ -4532,6 +4626,71 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
+     <widget class="Line" name="line_13">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>10</y>
+        <width>20</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_15">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>140</y>
+        <width>20</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_14">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>10</y>
+        <width>20</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_16">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>140</y>
+        <width>20</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_17">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>370</y>
+        <width>20</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="themeMenu">
      <attribute name="icon">
@@ -4546,12 +4705,12 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>20</x>
         <y>10</y>
-        <width>321</width>
+        <width>141</width>
         <height>17</height>
        </rect>
       </property>
       <property name="text">
-       <string>[VIEWPORT] --&gt; only used in F11 AUTO mode</string>
+       <string>[VIEWPORT]</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportIn1LineEdit">
@@ -4567,10 +4726,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportIn2LineEdit">
@@ -4586,10 +4745,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportIn3LineEdit">
@@ -4605,10 +4764,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportIn4LineEdit">
@@ -4624,10 +4783,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportOut1LineEdit">
@@ -4643,10 +4802,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportOut2LineEdit">
@@ -4662,10 +4821,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportOut3LineEdit">
@@ -4681,10 +4840,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="viewportOut4LineEdit">
@@ -4700,10 +4859,10 @@ p, li { white-space: pre-wrap; }
        <string/>
       </property>
       <property name="text">
-       <string/>
+       <string>*</string>
       </property>
       <property name="placeholderText">
-       <string>*</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="frecciaLabel">
@@ -4735,10 +4894,10 @@ p, li { white-space: pre-wrap; }
      <widget class="Line" name="line_12">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>100</y>
-        <width>851</width>
-        <height>16</height>
+        <width>881</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="orientation">
@@ -4775,6 +4934,12 @@ p, li { white-space: pre-wrap; }
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
          </property>
          <property name="text">
           <string>Theme folder:</string>
@@ -4876,7 +5041,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>20</x>
         <y>235</y>
-        <width>193</width>
+        <width>201</width>
         <height>29</height>
        </rect>
       </property>
@@ -4902,7 +5067,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>20</x>
         <y>270</y>
-        <width>193</width>
+        <width>201</width>
         <height>29</height>
        </rect>
       </property>
@@ -4928,7 +5093,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>20</x>
         <y>304</y>
-        <width>199</width>
+        <width>201</width>
         <height>29</height>
        </rect>
       </property>
@@ -4954,7 +5119,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>20</x>
         <y>340</y>
-        <width>199</width>
+        <width>201</width>
         <height>29</height>
        </rect>
       </property>
@@ -4980,7 +5145,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>21</x>
         <y>201</y>
-        <width>191</width>
+        <width>201</width>
         <height>29</height>
        </rect>
       </property>
@@ -5000,19 +5165,6 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
       </layout>
-     </widget>
-     <widget class="QLabel" name="leaveStarLabel_2">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>60</y>
-        <width>271</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>permettere solo numeri e asterisco!</string>
-      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="miscMenu">
@@ -5059,7 +5211,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="inputMethodHints">
-       <set>Qt::ImhNone</set>
+       <set>Qt::ImhDigitsOnly</set>
       </property>
       <property name="text">
        <string>8192</string>
@@ -5070,12 +5222,12 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>269</x>
         <y>13</y>
-        <width>231</width>
+        <width>271</width>
         <height>22</height>
        </rect>
       </property>
       <property name="text">
-       <string>Grab Mouse&amp;&amp;Keyboard Input</string>
+       <string>Grab Mouse&amp;&amp;Keyboard Input on Start</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -5088,7 +5240,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>40</y>
+        <y>70</y>
         <width>191</width>
         <height>22</height>
        </rect>
@@ -5107,7 +5259,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>70</y>
+        <y>120</y>
         <width>211</width>
         <height>17</height>
        </rect>
@@ -5120,7 +5272,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>140</y>
+        <y>187</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5160,7 +5312,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5187,7 +5339,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>170</y>
+        <y>217</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5213,7 +5365,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="alernativeSaveStatesDirLineEdit">
+        <widget class="QLineEdit" name="alternativeSaveStatesDirLineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -5227,7 +5379,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5254,7 +5406,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>200</y>
+        <y>247</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5294,7 +5446,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5321,7 +5473,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>233</y>
+        <y>280</y>
         <width>601</width>
         <height>31</height>
        </rect>
@@ -5361,7 +5513,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5388,7 +5540,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>260</y>
+        <y>307</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5428,7 +5580,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5455,7 +5607,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>290</y>
+        <y>337</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5495,7 +5647,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5522,7 +5674,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>320</y>
+        <y>367</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5562,7 +5714,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5589,7 +5741,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>350</y>
+        <y>397</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5629,7 +5781,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5656,7 +5808,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>380</y>
+        <y>427</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5696,7 +5848,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5722,8 +5874,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="menuTitleLabel">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>20</y>
+        <x>570</x>
+        <y>15</y>
         <width>101</width>
         <height>17</height>
        </rect>
@@ -5735,7 +5887,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QLineEdit" name="menuTitleLineEdit">
       <property name="geometry">
        <rect>
-        <x>660</x>
+        <x>671</x>
         <y>10</y>
         <width>191</width>
         <height>27</height>
@@ -5748,8 +5900,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLineEdit" name="menuSubtitleLineEdit">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>40</y>
+        <x>671</x>
+        <y>50</y>
         <width>191</width>
         <height>27</height>
        </rect>
@@ -5761,8 +5913,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="menuSubtitleLabel">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>50</y>
+        <x>569</x>
+        <y>53</y>
         <width>101</width>
         <height>17</height>
        </rect>
@@ -5775,7 +5927,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>90</y>
+        <y>137</y>
         <width>601</width>
         <height>34</height>
        </rect>
@@ -5815,7 +5967,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5842,9 +5994,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>670</x>
-        <y>80</y>
-        <width>146</width>
-        <height>243</height>
+        <y>120</y>
+        <width>171</width>
+        <height>291</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="netPlayPanel">
@@ -5864,8 +6016,11 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLineEdit" name="serverIPLineEdit">
+         <property name="inputMask">
+          <string>000.000.000.000;_</string>
+         </property>
          <property name="text">
-          <string/>
+          <string>...</string>
          </property>
         </widget>
        </item>
@@ -5879,7 +6034,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QLineEdit" name="serverPortLineEdit">
          <property name="text">
-          <string/>
+          <string>25100</string>
          </property>
         </widget>
        </item>
@@ -5905,38 +6060,86 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="passwordLineEdit">
+        <widget class="QLineEdit" name="playerPasswordLineEdit">
          <property name="text">
           <string/>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="leaveStarLabel_3">
+     <widget class="QCheckBox" name="grabMouseAutoCheckBox">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>50</y>
+        <x>270</x>
+        <y>40</y>
         <width>271</width>
-        <height>17</height>
+        <height>22</height>
        </rect>
       </property>
       <property name="text">
-       <string>permettere solo numeri!!</string>
+       <string>Grab Mouse&amp;&amp;Keyboard Input</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="tristate">
+       <bool>false</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="leaveStarLabel_4">
+     <widget class="Line" name="line_7">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>330</y>
-        <width>201</width>
-        <height>20</height>
+        <x>0</x>
+        <y>102</y>
+        <width>881</width>
+        <height>16</height>
        </rect>
       </property>
-      <property name="text">
-       <string>permettere solo IP e NUMBER</string>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_8">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>-1</y>
+        <width>20</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_9">
+      <property name="geometry">
+       <rect>
+        <x>547</x>
+        <y>-1</y>
+        <width>20</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_10">
+      <property name="geometry">
+       <rect>
+        <x>635</x>
+        <y>110</y>
+        <width>20</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
     </widget>
@@ -5967,6 +6170,9 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;=================&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[PROGRAM ARGUMENTS]&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] fs-uae config-fil&lt;/p&gt;
@@ -5988,18 +6194,15 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;Convenzione dei segni:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;1_prima lettera minuscola&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;2_paroleMultipleAllaBimboMinkia&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;3_fadeColorLabel e fadeColorButton&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;4_themeFolderLabel themeFolderLineEdit themeFolderButton&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;DA FARE:&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;configurazione joystick personalizzati&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;immagini theme?&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;filebrowser per file/cartella/entrambi (or 2 pulsanti)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;controllo tipi di dati inseriti nelle caselle di testo&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dopo x minuto o tot secondi salve configurazione in file backup home/user/.FS-UAE/gui/Default.fs-uae~&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Capire come fare l'installazione della documentazione&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# configurazione joystick personalizzati&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;# immagini theme?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# Capire come fare l'installazione della documentazione&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# Eliminare sstream usando intToStr e strToInt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -6112,28 +6315,6 @@ p, li { white-space: pre-wrap; }
       <width>24</width>
       <height>24</height>
      </size>
-    </property>
-   </widget>
-   <widget class="QLabel" name="errorLabel">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>247</x>
-      <y>514</y>
-      <width>311</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
     </property>
    </widget>
   </widget>

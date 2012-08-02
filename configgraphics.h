@@ -33,6 +33,8 @@ class ConfigGraphics
     string video_format;
     string texture_format;
 
+    string viewport;
+
 public:
     ConfigGraphics();
 
@@ -88,6 +90,9 @@ public:
     string getVideoFormatString();
     string getTextureFormatConfigString();
     string getTextureFormatString();
+
+    string getViewportConfigString();
+    string getViewportString();
 
     void setParameter(string parameter,string value);
     void setToDefaultConfiguration();
