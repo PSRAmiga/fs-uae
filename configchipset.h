@@ -17,7 +17,7 @@ class ConfigChipset
 
 
 public:
-    ConfigChipset();		      
+    ConfigChipset();
     string getAccuracyConfigString();           ///< Represents the string of Accuracy to be written in Config File. If Accuracy is the default value, it returns an empty string.\n accuracy = 1
     string getAccuracyString();                 ///< Represent the effective value of Accuracy
     string getNTSCModeConfigString();           ///< Represents the string of NTSCMode to be written in Config file. If NTSCMode is the default value, it returns an empty string.\n ntsc_mode = 0

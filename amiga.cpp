@@ -28,10 +28,10 @@ Amiga::Amiga(QWidget *parent) :
     //acquire current screen resolution
     ui->fullscreenResolutionXSpinBox->setValue(QApplication::desktop()->width());
     ui->fullscreenResolutionYSpinBox->setValue(QApplication::desktop()->height());
-   //allow only numeric input
+    //allow only numeric input
     ui->audioBufferLineEdit->setValidator(new QIntValidator(ui->audioBufferLineEdit));
     ui->serverPortLineEdit->setValidator(new QIntValidator(ui->serverPortLineEdit));
-
+    //allow only numeric/* input
     QRegExp rx("[*]|[0-9]{1,4}");
     QValidator *validator = new QRegExpValidator(rx, this);
     ui->viewportIn1LineEdit->setValidator(validator);
@@ -42,7 +42,6 @@ Amiga::Amiga(QWidget *parent) :
     ui->viewportOut2LineEdit->setValidator(validator);
     ui->viewportOut3LineEdit->setValidator(validator);
     ui->viewportOut4LineEdit->setValidator(validator);
-
 }
 
 Amiga::~Amiga()
@@ -167,6 +166,15 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(miscConfiguration.getCDRomsDirConfigString())) {myfile << miscConfiguration.getCDRomsDirConfigString() << endl;}
     if (!isEmptyString(miscConfiguration.getFloppiesDirConfigString())) {myfile << miscConfiguration.getFloppiesDirConfigString() << endl;}
 
+    if (!isEmptyString(themeConfiguration.getOverlayImageConfigString())) {myfile << themeConfiguration.getOverlayImageConfigString() << endl;}
+    if (!isEmptyString(themeConfiguration.getThemeConfigString())) {myfile << themeConfiguration.getThemeConfigString() << endl;}
+    if (!isEmptyString(themeConfiguration.getFadeColorConfigString())) {myfile << themeConfiguration.getFadeColorConfigString() << endl;}
+    if (!isEmptyString(themeConfiguration.getFloorColor1ConfigString())) {myfile << themeConfiguration.getFloorColor1ConfigString() << endl;}
+    if (!isEmptyString(themeConfiguration.getFloorColor2ConfigString())) {myfile << themeConfiguration.getFloorColor2ConfigString() << endl;}
+    if (!isEmptyString(themeConfiguration.getHeadingColorConfigString())) {myfile << themeConfiguration.getHeadingColorConfigString() << endl;}
+    if (!isEmptyString(themeConfiguration.getWallColor1ConfigString())) {myfile << themeConfiguration.getWallColor1ConfigString() << endl;}
+    if (!isEmptyString(themeConfiguration.getWallColor2ConfigString())) {myfile << themeConfiguration.getWallColor2ConfigString() << endl;}
+
     myfile.close();
 }
 
@@ -184,7 +192,6 @@ void Amiga::on_saveConfigToolButton_clicked()
     //checkConfigurationConsistency() --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
 
     saveConfigInFile(fileNameString);
-
 }
 
 int Amiga::getConfigurationAreaFromParameterName(string parameterName){
@@ -212,7 +219,9 @@ int Amiga::getConfigurationAreaFromParameterName(string parameterName){
                (parameterName.compare("video_sync")==0)||(parameterName.compare("video_sync")==0)||(parameterName.compare("video_format")==0)||
                (parameterName.compare("texture_format")==0)||(parameterName.compare("viewport")==0)){
         return 7;
-    } else if (false){ //fare theme
+    } else if ((parameterName.compare("theme")==0)||(parameterName.compare("theme_fade_color")==0)||(parameterName.compare("theme_wall_color_1")==0)||
+               (parameterName.compare("theme_wall_color_2")==0)||(parameterName.compare("theme_floor_color_1")==0)||(parameterName.compare("theme_floor_color_2")==0)||
+               (parameterName.compare("theme_heading_color")==0)||(parameterName.compare("theme_overlay_image")==0)){
         return 8;
     } else if ((parameterName.compare("input_grab")==0)||(parameterName.compare("automatic_input_grab")==0)||(parameterName.compare("bsdsocket_library")==0)||
                (parameterName.compare("audio_buffer_target_bytes")==0)||(parameterName.compare("title")==0)||(parameterName.compare("sub_title")==0)||
@@ -255,7 +264,7 @@ void Amiga::parseLine(string line){
     } else if (configArea==7){
         graphicsConfiguration.setParameter(parameterName,parameterValue);
     } else if (configArea==8){
-        //themeConfiguration.setParameter(parameterName,parameterValue);
+        themeConfiguration.setParameter(parameterName,parameterValue);
     } else if (configArea==9){
         miscConfiguration.setParameter(parameterName,parameterValue);
     }
@@ -795,6 +804,40 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
 
     string floppies_dir=miscConfiguration.getFloppiesDirString();
     ui->alternativeFloppiesDirLineEdit->setText(QString::fromStdString(floppies_dir));
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //THEME
+    string theme=themeConfiguration.getThemeString();
+    ui->themeFolderLineEdit->setText(QString::fromStdString(theme));
+
+    //THEME OVERLAY IMAGE
+    string theme_overlay_image=themeConfiguration.getOverlayImageString();
+    ui->themeOverlayImageLineEdit->setText(QString::fromStdString(theme_overlay_image));
+
+    string theme_fade_color=themeConfiguration.getFadeColorString();
+    ui->fadeColorPushButton->setText(QString::fromStdString(theme_fade_color));
+    ui->fadeColorPushButton->setStyleSheet(QString("background-color: ").append(theme_fade_color.c_str()));
+
+    string theme_wall_color_1=themeConfiguration.getWallColor1String();
+    ui->wallColor1PushButton->setText(QString::fromStdString(theme_wall_color_1));
+    ui->wallColor1PushButton->setStyleSheet(QString("background-color: ").append(theme_wall_color_1.c_str()));
+
+    string theme_wall_color_2=themeConfiguration.getWallColor2String();
+    ui->wallColor2PushButton->setText(QString::fromStdString(theme_wall_color_2));
+    ui->wallColor2PushButton->setStyleSheet(QString("background-color: ").append(theme_wall_color_2.c_str()));
+
+    string theme_floor_color_1=themeConfiguration.getFloorColor1String();
+    ui->floorColor1PushButton->setText(QString::fromStdString(theme_floor_color_1));
+    ui->floorColor1PushButton->setStyleSheet(QString("background-color: ").append(theme_floor_color_1.c_str()));
+
+    string theme_floor_color_2=themeConfiguration.getFloorColor2String();
+    ui->floorColor2PushButton->setText(QString::fromStdString(theme_floor_color_2));
+    ui->floorColor2PushButton->setStyleSheet(QString("background-color: ").append(theme_floor_color_2.c_str()));
+
+    string theme_heading_color=themeConfiguration.getHeadingColorString();
+    ui->headColorPushButton->setText(QString::fromStdString(theme_heading_color));
+    ui->headColorPushButton->setStyleSheet(QString("background-color: ").append(theme_heading_color.c_str()));
 }
 
 void Amiga::on_loadConfigToolButton_clicked()
@@ -811,6 +854,7 @@ void Amiga::on_loadConfigToolButton_clicked()
     cdromConfiguration.setToDefaultConfiguration();
     hardDiskConfiguration.setToDefaultConfiguration();
     graphicsConfiguration.setToDefaultConfiguration();
+    themeConfiguration.setToDefaultConfiguration();
     miscConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
@@ -842,6 +886,7 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
     cdromConfiguration.setToDefaultConfiguration();
     hardDiskConfiguration.setToDefaultConfiguration();
     graphicsConfiguration.setToDefaultConfiguration();
+    themeConfiguration.setToDefaultConfiguration();
     miscConfiguration.setToDefaultConfiguration();
     /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
 
@@ -1774,9 +1819,10 @@ void Amiga::on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1)
 // PER CAMBIARE COLORE AL BOTTONE
 void Amiga::on_fadeColorPushButton_clicked()
 {
-    QColor color = QColorDialog::getColor(Qt::black, this);
+    QColor color = QColorDialog::getColor(Qt::white, this);
     ui->fadeColorPushButton->setText(color.name());
     ui->fadeColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_fade_color",color.name().toStdString());
 }
 
 
@@ -2030,4 +2076,58 @@ void Amiga::on_playerUsernameLineEdit_textChanged(const QString &arg1)
 void Amiga::on_playerPasswordLineEdit_textChanged(const QString &arg1)
 {
     miscConfiguration.setParameter("netplay_password",arg1.toStdString());
+}
+
+void Amiga::on_wallColor1PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->wallColor1PushButton->setText(color.name());
+    ui->wallColor1PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_wall_color_1",color.name().toStdString());
+}
+
+void Amiga::on_wallColor2PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->wallColor2PushButton->setText(color.name());
+    ui->wallColor2PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_wall_color_2",color.name().toStdString());
+}
+
+void Amiga::on_floorColor1PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->floorColor1PushButton->setText(color.name());
+    ui->floorColor1PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_floor_color_1",color.name().toStdString());
+}
+
+void Amiga::on_floorColor2PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->floorColor2PushButton->setText(color.name());
+    ui->floorColor2PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_floor_color_2",color.name().toStdString());
+}
+
+void Amiga::on_headColorPushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->headColorPushButton->setText(color.name());
+    ui->headColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_heading_color",color.name().toStdString());
+}
+
+void Amiga::on_themeOverlayImagerPushButton_clicked()
+{
+    QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File png(*.png)"));
+    ui->themeOverlayImageLineEdit->setText(fileName);
+    themeConfiguration.setParameter("theme_overlay_image",fileName.toStdString());
+}
+
+void Amiga::on_themeFolderPushButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+    ui->themeFolderLineEdit->setText(dir);
+    themeConfiguration.setParameter("theme",dir.toStdString());
 }

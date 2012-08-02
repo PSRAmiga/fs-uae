@@ -2,7 +2,6 @@
 #include "amiga.h"
 #include <QString>
 #include <sstream>
-using namespace std;
 
 const string DEFAULTINPUTGRAB = "1";
 const string DEFAULTAUTOMATICINPUTGRAB = "1";

@@ -355,10 +355,6 @@ int static strToInt(string s){
     return intValue;
 }
 
-string static intToStr(int n){
-    return static_cast<ostringstream*>( &(ostringstream() << n) )->str();
-}
-
 ////////////////////////////////////////////////////////////////////////////
 
 void ConfigGraphics::setParameter(string parameter, string value)

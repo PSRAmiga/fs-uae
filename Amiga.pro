@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     configcdrom.cpp \
     configharddisks.cpp \
     configgraphics.cpp \
-    configmisc.cpp
+    configmisc.cpp \
+    configtheme.cpp
 
 HEADERS  += amiga.h \
     configchipset.h \
@@ -27,7 +28,8 @@ HEADERS  += amiga.h \
     configcdrom.h \
     configharddisks.h \
     configgraphics.h \
-    configmisc.h
+    configmisc.h \
+    configtheme.h
 
 FORMS    += amiga.ui
 

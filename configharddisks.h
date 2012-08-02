@@ -5,11 +5,8 @@ using namespace std;
 
 class ConfigHardDisks
 {
-    //string hard_drive_0;
     string hard_drive[10];
-    //string hard_drive_0_label;
     string hard_drive_label[10];
-    //string hard_drive_0_read_only;
     string hard_drive_read_only[10];
 
 public:

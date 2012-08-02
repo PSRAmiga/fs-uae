@@ -8,6 +8,7 @@
 #include <configcdrom.h>
 #include <configharddisks.h>
 #include <configgraphics.h>
+#include <configtheme.h>
 #include <configmisc.h>
 
 namespace Ui {
@@ -163,8 +164,6 @@ private slots:
     void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);
     void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);
 
-    void on_alternativeBaseDirPushButton_clicked();
-    void on_fadeColorPushButton_clicked();
     void on_viewportIn1LineEdit_textChanged(const QString &arg1);
     void on_viewportIn2LineEdit_textChanged(const QString &arg1);
     void on_viewportIn3LineEdit_textChanged(const QString &arg1);
@@ -174,6 +173,7 @@ private slots:
     void on_viewportOut3LineEdit_textChanged(const QString &arg1);
     void on_viewportOut4LineEdit_textChanged(const QString &arg1);
 
+    void on_alternativeBaseDirPushButton_clicked();
     void on_alternativeKickstartDirPushButton_clicked();
     void on_alernativeSaveStatesDirPushButton_clicked();
     void on_alternativeFloppyOverlaysDirPushButton_clicked();
@@ -196,6 +196,15 @@ private slots:
     void on_playerUsernameLineEdit_textChanged(const QString &arg1);
     void on_playerPasswordLineEdit_textChanged(const QString &arg1);
 
+    void on_fadeColorPushButton_clicked();
+    void on_wallColor1PushButton_clicked();
+    void on_wallColor2PushButton_clicked();
+    void on_floorColor1PushButton_clicked();
+    void on_floorColor2PushButton_clicked();
+    void on_headColorPushButton_clicked();
+    void on_themeOverlayImagerPushButton_clicked();
+    void on_themeFolderPushButton_clicked();
+
 private:
     Ui::Amiga *ui;
     ConfigChipset chipsetConfiguration;
@@ -205,7 +214,7 @@ private:
     ConfigHardDisks hardDiskConfiguration;
     //input
     ConfigGraphics graphicsConfiguration;
-    //theme
+    ConfigTheme themeConfiguration;
     ConfigMisc miscConfiguration;
 
     void parseLine(string line);
