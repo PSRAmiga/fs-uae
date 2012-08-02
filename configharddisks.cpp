@@ -10,9 +10,13 @@ ConfigHardDisks::ConfigHardDisks()
     setToDefaultConfiguration();
 }
 
+string static intToStr(int n){
+    return static_cast<ostringstream*>( &(ostringstream() << n) )->str();
+}
+
 string ConfigHardDisks::getHardDriveConfigStringAt(int i)
 {
-    string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
+    string iString=intToStr(i);
     if (i<0 || i>10){return "";}
     if (hard_drive[i].compare(DEFAULTHARDDISKDRIVE)==0){return "";}
     else {return "hard_drive_" + iString + " = " + hard_drive[i];}
@@ -26,7 +30,7 @@ string ConfigHardDisks::getHardDriveStringAt(int i)
 
 string ConfigHardDisks::getHardDriveLabelConfigStringAt(int i)
 {
-    string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
+    string iString=intToStr(i);
     if (i<0 || i>10){return "";}
     if (hard_drive_label[i].compare(DEFAULTHARDDISKDRIVELABEL)==0){return "";}
     else {return "hard_drive_" + iString + "_label = " + hard_drive_label[i];}
@@ -40,7 +44,7 @@ string ConfigHardDisks::getHardDriveLabelStringAt(int i)
 
 string ConfigHardDisks::getHardDriveReadOnlyConfigStringAt(int i)
 {
-    string iString=static_cast<ostringstream*>( &(ostringstream() << i) )->str();
+    string iString=intToStr(i);
     if (i<0 || i>10){return "";}
     if (hard_drive_read_only[i].compare(DEFAULTHARDDISKDRIVEREADONLY)==0){return "";}
     else {return "hard_drive_" + iString + "_read_only = " + hard_drive_read_only[i];}

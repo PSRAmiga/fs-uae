@@ -11,11 +11,28 @@
 
 #include <QApplication>
 #include <QDesktopWidget>
-
-#include <stdlib.h>
-#include <pwd.h>
-#include <stdio.h>
+#include <sys/stat.h>
 using namespace std;
+
+void static checkFoldersExistence(){
+    char *username=getenv("USER");
+    struct stat st;
+    string italianFolder="/home/"+string(username)+"/Documenti/FS-UAE";     //per testare il msg d'errore scrivere Documenti con la D minuscola
+    string englishFolder="/home/"+string(username)+"/Documents/FS-UAE";
+    if ((stat(italianFolder.c_str(),&st) != 0)&&(stat(englishFolder.c_str(),&st) != 0)){
+        QMessageBox msg;
+        msg.setText("FS-UAE folders not found. You must start FS-UAE for the first time to create FS-UAE folders. FS-UAE wil be now launched.\nPress F12 to enter menu, then navigate to the X button in the top right corner with the cursor keys and finally press Return to quit FS-UAE.");
+        msg.exec();
+        int returnValue=system("fs-uae"); //per testare il msg d'errore fare system("fs-uaeeee")
+        if (returnValue!=0){
+            QMessageBox msg2;
+            msg2.setText("FS-UAE is not installed in your system, please install it and relaunch this application.");
+            msg2.exec();
+            exit(0);
+        }
+    }
+
+}
 
 Amiga::Amiga(QWidget *parent) :
     QMainWindow(parent),
@@ -24,6 +41,9 @@ Amiga::Amiga(QWidget *parent) :
     ui->setupUi(this);
 
     //things to do onLoad
+
+    checkFoldersExistence();
+
     ui->Setup->setCurrentIndex(0);
     //acquire current screen resolution
     ui->fullscreenResolutionXSpinBox->setValue(QApplication::desktop()->width());
@@ -1089,17 +1109,8 @@ void Amiga::on_actionAmiga_triggered()
 
 void Amiga::on_actionSummary_triggered()
 {
-    string username="";
-    register struct passwd *pw;
-    register uid_t uid;
-    uid = geteuid ();
-    pw = getpwuid (uid);
-    if (pw)
-    {
-        username=pw->pw_name;
-    }
-
-    string index="file:///home/"+username+"/.FS-UAE/html/index.html";
+    char *username=getenv("USER");
+    string index="file:///home/"+string(username)+"/.FS-UAE/html/index.html";
     QDesktopServices::openUrl(QUrl(QString::fromStdString(index), QUrl::TolerantMode));
 }
 
