@@ -99,25 +99,65 @@ void ConfigHardDisks::setParameter(string parameter, string value)
     } else if(parameter.compare("hard_drive_9_label")==0){
         hard_drive_label[9]=value;
     } else if(parameter.compare("hard_drive_0_read_only")==0){
-        hard_drive_read_only[0]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[0]=value;}
+        else{
+            hard_drive_read_only[0]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_1_read_only")==0){
-        hard_drive_read_only[1]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[1]=value;}
+        else{
+            hard_drive_read_only[1]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_2_read_only")==0){
-        hard_drive_read_only[2]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[2]=value;}
+        else{
+            hard_drive_read_only[2]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_3_read_only")==0){
-        hard_drive_read_only[3]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[3]=value;}
+        else{
+            hard_drive_read_only[3]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_4_read_only")==0){
-        hard_drive_read_only[4]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[4]=value;}
+        else{
+            hard_drive_read_only[4]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_5_read_only")==0){
-        hard_drive_read_only[5]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[5]=value;}
+        else{
+            hard_drive_read_only[5]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_6_read_only")==0){
-        hard_drive_read_only[6]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[6]=value;}
+        else{
+            hard_drive_read_only[6]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_7_read_only")==0){
-        hard_drive_read_only[7]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[7]=value;}
+        else{
+            hard_drive_read_only[7]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_8_read_only")==0){
-        hard_drive_read_only[8]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[8]=value;}
+        else{
+            hard_drive_read_only[8]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     } else if(parameter.compare("hard_drive_9_read_only")==0){
-        hard_drive_read_only[9]=value;
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
+            hard_drive_read_only[9]=value;}
+        else{
+            hard_drive_read_only[9]=DEFAULTHARDDISKDRIVEREADONLY;
+        }
     }
 }
 

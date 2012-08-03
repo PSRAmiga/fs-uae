@@ -31,7 +31,6 @@ void static checkFoldersExistence(){
             exit(0);
         }
     }
-
 }
 
 Amiga::Amiga(QWidget *parent) :
@@ -111,8 +110,7 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(ramConfiguration.getChipMemoryConfigString())) {myfile << ramConfiguration.getChipMemoryConfigString() << endl;}
     if (!isEmptyString(ramConfiguration.getFastMemoryConfigString())) {myfile << ramConfiguration.getFastMemoryConfigString() << endl;}
     if (!isEmptyString(ramConfiguration.getSlowMemoryConfigString())) {myfile << ramConfiguration.getSlowMemoryConfigString() << endl;}
-    if (!isEmptyString(ramConfiguration.getZorro3ConfigString()) && (chipsetConfiguration.getAmigaModelString().compare("A1200/020")==0 || chipsetConfiguration.getAmigaModelString().compare("A4000/040")==0)) {myfile << ramConfiguration.getZorro3ConfigString() << endl;}
-    ////////////////////////////////////////////////////////////////check sul modello oppure fare una fx validate configuration prima di salvare e al caricamento da file??? /////////////////
+    if (!isEmptyString(ramConfiguration.getZorro3ConfigString())) {myfile << ramConfiguration.getZorro3ConfigString() << endl;}
 
     for(int i=0;i<4;i++){
         if (!isEmptyString(floppyConfiguration.getFloppyDriveConfigStringAt(i))) {myfile << floppyConfiguration.getFloppyDriveConfigStringAt(i) << endl;}
@@ -125,8 +123,8 @@ void Amiga::saveConfigInFile(string fileName){
         }
     }
 
-    if ((!isEmptyString(cdromConfiguration.getCDRomDrive0ConfigString())) && (((chipsetConfiguration.getAmigaModelString().compare("CDTV")==0))||(chipsetConfiguration.getAmigaModelString().compare("CD32")==0))) {myfile << cdromConfiguration.getCDRomDrive0ConfigString() << endl;}
-    if ((cdromConfiguration.getCDRomImageSize()>0) && (((chipsetConfiguration.getAmigaModelString().compare("CDTV")==0))||(chipsetConfiguration.getAmigaModelString().compare("CD32")==0))){
+    if (!isEmptyString(cdromConfiguration.getCDRomDrive0ConfigString())) {myfile << cdromConfiguration.getCDRomDrive0ConfigString() << endl;}
+    if (cdromConfiguration.getCDRomImageSize()>0){
         for(int i=0;i<cdromConfiguration.getCDRomImageSize();i++){
             myfile << "cdrom_image_" << i << " = " << cdromConfiguration.getCDRomImageAt(i) << endl;
         }
@@ -209,7 +207,9 @@ void Amiga::on_saveConfigToolButton_clicked()
     if(fileName.contains(".fs-uae", Qt::CaseInsensitive)) {fileNameString=fileName.toStdString();}
     else {fileNameString=fileName.toStdString()+".fs-uae";}
 
-    //checkConfigurationConsistency() --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+    checkConfigurationConsistency();// --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+
+    updateGraphicsFromInternalConfiguration();
 
     saveConfigInFile(fileNameString);
 }
@@ -290,23 +290,74 @@ void Amiga::parseLine(string line){
     }
 }
 
-bool Amiga::checkConfigurationConsistency()
+void Amiga::checkConfigurationConsistency()
 {
+    string message="Following configuration inconsistencies have been found and resolved:\n\n";
+
+    string amiga_model=chipsetConfiguration.getAmigaModelString();
+    if ((amiga_model.compare("CD32")!=0)&&(amiga_model.compare("CDTV")!=0)){
+        //CD section is enabled only if model is CD32 or CDTV
+        if((cdromConfiguration.getCDRomDrive0String().compare("")!=0)||(cdromConfiguration.getCDRomImageSize()>0)){
+            message.append("-"+amiga_model+" hasn't any CD drive --> you can't select any CDrom image\n");
+            cdromConfiguration.setToDefaultConfiguration();
+        }
+        //Kickstart Extended ROm is only available witch CD32 and CDTV
+        if(chipsetConfiguration.getKickstartExtFileString().compare("")!=0){
+            message.append("-Extended kickstart ROM are only available with CD32 and CDTV model\n");
+            chipsetConfiguration.setParameter("kickstart_ext_file","");
+        }
+    }
+    if ((amiga_model.compare("A1200/020")==0)||(amiga_model.compare("A4000/040")==0)||(amiga_model.compare("CD32")==0)){
+        //slowmemory 1.8MB is disabled with A1200/020, A4000/040 e CD32 model
+        if(ramConfiguration.getSlowMemoryString().compare("1792")==0){
+            message.append("-You can't select 1.8MB slowmemory with "+amiga_model+" model\n");
+            ramConfiguration.setParameter("slow_memory","NONE");
+        }
+    }
+    if ((amiga_model.compare("A1200/020")!=0)&&(amiga_model.compare("A4000/040")!=0)){
+        //Zorro3 is enabled only if model is A1200/020 or A4000/040
+        if(ramConfiguration.getZorro3String().compare("NONE")!=0){
+            message.append("-"+amiga_model+" hasn't ZorroIII memory --> you can't select a value different from NONE\n");
+            ramConfiguration.setParameter("zorro_iii_memory","NONE");
+        }
+    }
+    if((ramConfiguration.getChipMemoryString().compare("4096")==0) || (ramConfiguration.getChipMemoryString().compare("8192")==0)){
+        //fastmemory is disabled if chipsetram=4MB or 8MB
+        if(ramConfiguration.getFastMemoryString().compare("")!=0){
+            message.append("-You can't select any Fastmemory if Chipset memory is 4MB or 8MB\n");
+            ramConfiguration.setParameter("fast_memory","NONE");
+        }
+    }
+    for(int i=0;i<10;i++){
+        //HD's label and readonly flag can be setted only if HD isn't empty
+        if(hardDiskConfiguration.getHardDriveStringAt(i).compare("")==0){
+            if(hardDiskConfiguration.getHardDriveLabelStringAt(i).compare("")!=0){
+                message.append("-Hard Disk "+intToStr(i)+" is empty --> you can't set its Label\n");
+                hardDiskConfiguration.setParameter("hard_drive_"+intToStr(i)+"_label","");
+            }
+            if(hardDiskConfiguration.getHardDriveReadOnlyStringAt(i).compare("0")!=0){
+                message.append("-Hard Disk "+intToStr(i)+" is empty --> you can't set its Readonly flag\n");
+                hardDiskConfiguration.setParameter("hard_drive_"+intToStr(i)+"_read_only","0");
+            }
+        }
+    }
+
+
     /*controlli da fare:
 
-      NB la priorità di è da sx a dx nelle tab. devo far uscire un SI/NO che avvisa che sono state trovate Inconsistenze e non si può salvare/eseguire
+    7-with borders è disabilitato con full e auto
+    8-controllo joystick mutex
 
-      posso fare che se una cosa è disabilitata la svuoto/la setto al default?
 
-    1-kickstart extended è abiiltato solo con CD32 e CDTV  --> quindi se model=CD32 devo cancellare/settare a DEFAULT la kickstart ext e tutti i parametri del CD
-    2-CD è abilitato solo con CD32 e CDTV
-    3-slowmemory 1.8MB è DIS-abilitato solo con A1200/020, A4000/040 e CD32
-    4-zorro3 è abilitato solo con A1200/020 e A4000/040
-    5-fastmemory è DIS-abilitato se chipsetram=4MB o 8MB
-    6-with borders è disabilitato con full e auto
+    NNB la consistenza non si preoccupa della grafica (disabilitazioni varie) ma dello stato interno. va quindi eseguita PRIMA per preparare
+    l'aggiornamento della grafica DALLO stato interno. Viceversa updateGraphics() non tocca lo stato interno però sa cosa abilitare/disabilitare
 
     */
-    return true;
+    if (message.compare("Following configuration inconsistencies have been found and resolved:\n\n")==0){
+        return;}
+    QMessageBox msg;
+    msg.setText(QString::fromStdString(message));
+    msg.exec();
 }
 
 void Amiga::updateGraphicsFromInternalConfiguration(){
@@ -892,7 +943,7 @@ void Amiga::on_loadConfigToolButton_clicked()
         myfile.close();
     }
 
-    //checkConfigurationConsistency() --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+    checkConfigurationConsistency();// --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
 
     //lo devo fare per ogni configuration area
     updateGraphicsFromInternalConfiguration();
@@ -920,14 +971,17 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
 
 void Amiga::on_runConfigButton_clicked()
 {
-    //fare check consistenza!!! ////////////////////////////////////////////////////////////////////
+    checkConfigurationConsistency();// --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+
+    updateGraphicsFromInternalConfiguration();
+
     saveConfigInFile(".current.fs-uae");
 
-    /*int returnValue=system("fs-uae .current.fs-uae");
+    int returnValue=system("fs-uae .current.fs-uae");
     if (returnValue!=0)
     {
         QMessageBox::about(this, tr("Error"),tr("Ops...something went wrong :-("));
-    }*/
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1255,8 +1309,6 @@ void Amiga::on_cdromSwappingImagesAddPushButton_clicked()
     for(int i=0;i<fileNames.count();i++){
         //aggiorno la lista interna
         cdromConfiguration.pushBackCDRomImage(fileNames.at(i).toStdString());
-        //aggiorno la lista grafica
-        //  ui->floppySwappingImagesListWidget->addItem(fileNames.at(i));
     }
     updateGraphicsFromInternalConfiguration();
 }

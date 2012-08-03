@@ -218,7 +218,7 @@ private:
     ConfigMisc miscConfiguration;
 
     void parseLine(string line);
-    bool checkConfigurationConsistency();
+    void checkConfigurationConsistency();
 
     void setFastMemoryDisabled(bool state);
     void setZorroIIIMemoryDisabled(bool state);
