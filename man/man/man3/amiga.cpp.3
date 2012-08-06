@@ -1,4 +1,4 @@
-.TH "amiga.cpp" 3 "Sun Jul 29 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "amiga.cpp" 3 "Mon Aug 6 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,12 +16,6 @@ amiga.cpp \-
 .br
 \fC#include <QUrl>\fP
 .br
-\fC#include <stdlib\&.h>\fP
-.br
-\fC#include <pwd\&.h>\fP
-.br
-\fC#include <stdio\&.h>\fP
-.br
 \fC#include <QDesktopServices>\fP
 .br
 \fC#include <QMessageBox>\fP
@@ -30,21 +24,50 @@ amiga.cpp \-
 .br
 \fC#include <QColorDialog>\fP
 .br
-\fC#include <QProcess>\fP
-.br
 \fC#include <cstdlib>\fP
+.br
+\fC#include <QApplication>\fP
+.br
+\fC#include <QDesktopWidget>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
 .br
 
 .SS "Functions"
 
 .in +1c
 .ti -1c
+.RI "static void \fBcheckFoldersExistence\fP ()"
+.br
+.ti -1c
+.RI "int \fBstrToInt\fP (string s)"
+.br
+.ti -1c
+.RI "float \fBstrToFloat\fP (string line)"
+.br
+.ti -1c
+.RI "string \fBintToStr\fP (int n)"
+.br
+.ti -1c
 .RI "bool \fBisEmptyString\fP (string s)"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+\fBamiga\&.cpp\fP
+.PP
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version\&.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.PP
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc\&., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA\&. Written by Riva Alessandro Mario, alessandromario.riva@gmail.com and Sanvito Davide, dsanvito90@gmail.com\&. 
 .SH "Function Documentation"
 .PP 
+.SS "static void \fBcheckFoldersExistence\fP ()\fC [static]\fP"
+.SS "string \fBintToStr\fP (intn)"
 .SS "bool \fBisEmptyString\fP (strings)"
+.SS "float \fBstrToFloat\fP (stringline)"
+.SS "int \fBstrToInt\fP (strings)"
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for FS-UAE Gui for Linux OS from the source code\&.

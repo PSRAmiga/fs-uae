@@ -6,43 +6,55 @@
     <includedby refid="amiga_8h" local="no">amiga.h</includedby>
     <includedby refid="configchipset_8cpp" local="yes">configchipset.cpp</includedby>
     <incdepgraph>
-      <node id="37">
+      <node id="63">
         <label>string</label>
       </node>
-      <node id="36">
+      <node id="62">
         <label>configchipset.h</label>
         <link refid="configchipset.h"/>
-        <childnode refid="37" relation="include">
+        <childnode refid="63" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="42">
+      <node id="70">
         <label>configchipset.cpp</label>
         <link refid="configchipset_8cpp"/>
       </node>
-      <node id="40">
+      <node id="66">
         <label>amiga.cpp</label>
         <link refid="amiga_8cpp"/>
       </node>
-      <node id="38">
+      <node id="64">
         <label>configchipset.h</label>
         <link refid="configchipset.h"/>
-        <childnode refid="39" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="68">
+        <label>configmisc.cpp</label>
+        <link refid="configmisc_8cpp"/>
+      </node>
+      <node id="67">
+        <label>configgraphics.cpp</label>
+        <link refid="configgraphics_8cpp"/>
+      </node>
+      <node id="69">
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="39">
+      <node id="65">
         <label>amiga.h</label>
         <link refid="amiga_8h"/>
-        <childnode refid="40" relation="include">
+        <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -67,7 +79,7 @@
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classConfigChipset" kindref="compound" tooltip="Create the Chipset Configuration Class.">ConfigChipset</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classConfigChipset" kindref="compound" tooltip="Create the Chipset Configuration Class.">ConfigChipset</ref>();</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAccuracyConfigString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAccuracyString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getNTSCModeConfigString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>

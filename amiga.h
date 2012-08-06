@@ -1,3 +1,9 @@
+/*! \mainpage A Gui designed to simplify the creation of Amiga configuration file
+ */
+/**
+* \class Amiga
+* This class is responsible for the magement of FS-UAE Gui
+*/
 #ifndef AMIGA_H
 #define AMIGA_H
 
@@ -11,7 +17,7 @@
 #include <configtheme.h>
 #include <configmisc.h>
 
-namespace Ui {
+namespace Ui {      /// \namespace UI Create a new main window: Amiga Gui
 class Amiga;
 }
 
@@ -25,48 +31,48 @@ public:
     ~Amiga();
 
 private slots:
-    void on_saveConfigToolButton_clicked();
-    void on_loadConfigToolButton_clicked();
-    void on_loadDefaultValuesToolButton_clicked();
-    void on_runConfigButton_clicked();
+    void on_saveConfigToolButton_clicked(); ///< Save configuration
+    void on_loadConfigToolButton_clicked(); ///< Load configuration
+    void on_loadDefaultValuesToolButton_clicked();  ///< Reset configuration
+    void on_runConfigButton_clicked();  ///< Run FS-UAE
 
-    void on_actionAmiga_triggered();
-    void on_actionSummary_triggered();
-    void on_actionReport_bug_triggered();
+    void on_actionAmiga_triggered();    ///< Help menu: what's Amiga?
+    void on_actionSummary_triggered();  ///< Help menu: a brief summary
+    void on_actionReport_bug_triggered();   ///< Help menu: open an email browser to report bug.
 
-    void on_kickstartFileToolButton_clicked();
-    void on_kickstartExtFileToolButton_clicked();
-    void on_amigaModelComboBox_currentIndexChanged(const QString &arg1);
-    void on_accuracyLeastRadio_clicked();
-    void on_accuracyNormalRadio_clicked();
-    void on_accuracyMostadio_clicked();
-    void on_videoModePALRadio_clicked();
-    void on_videoModeNTSCRadio_clicked();
+    void on_kickstartFileToolButton_clicked(); ///< Load Kickstart file
+    void on_kickstartExtFileToolButton_clicked(); ///< Load Extended Kickstart file
+    void on_amigaModelComboBox_currentIndexChanged(const QString &arg1);    ///< List of avaiable Amiga models
+    void on_accuracyLeastRadio_clicked();   ///< Click to least accuracy
+    void on_accuracyNormalRadio_clicked();  ///< Click to normal accuracy
+    void on_accuracyMostadio_clicked();     ///< Click to most accuracy
+    void on_videoModePALRadio_clicked();    ///< Click to PAL video mode
+    void on_videoModeNTSCRadio_clicked();   ///< Click to NTST video mode
 
-    void on_chipMem4MbRadio_clicked();
-    void on_chipMeme8MbRadio_clicked();
-    void on_chipMem512KbRadio_clicked();
-    void on_chipMem1MbRadio_clicked();
-    void on_chipMem2MbRadio_clicked();
-    void on_slowMemNoneRadio_clicked();
-    void on_slowMem512KbRadio_clicked();
-    void on_slowMem1MbRadio_clicked();
-    void on_slowMem1_8MbRadio_clicked();
-    void on_fastMemNoneRadio_clicked();
-    void on_fastMem1MbRadio_clicked();
-    void on_fastMem2MbRadio_clicked();
-    void on_fastMem4MbRadio_clicked();
-    void on_fastMem8MbRadio_clicked();
-    void on_z3MemNoneRadio_clicked();
-    void on_z3Mem1MbRadio_clicked();
-    void on_z3Mem2MbRadio_clicked();
-    void on_z3Mem4MbRadio_clicked();
-    void on_z3Mem8MbRadio_clicked();
-    void on_z3Mem16MbRadio_clicked();
-    void on_z3Mem32MbRadio_clicked();
-    void on_z3Mem64MbRadio_clicked();
-    void on_z3Mem128MbRadio_clicked();
-    void on_z3Mem256MbRadio_clicked();
+    void on_chipMem4MbRadio_clicked();      ///< Chip memory setting at 4Mb
+    void on_chipMeme8MbRadio_clicked();     ///< Chip memory setting at 8Mb
+    void on_chipMem512KbRadio_clicked();    ///< Chip memory setting at 512Kb
+    void on_chipMem1MbRadio_clicked();      ///< Chip memory setting at 1Mb
+    void on_chipMem2MbRadio_clicked();      ///< Chip memory setting at 2Mb
+    void on_slowMemNoneRadio_clicked();     ///< None slow memory
+    void on_slowMem512KbRadio_clicked();    ///< Slow memory setting at 512kb
+    void on_slowMem1MbRadio_clicked();      ///< Slow memory setting at 1Mb
+    void on_slowMem1_8MbRadio_clicked();    ///< Slow memory setting at 1.8Mb
+    void on_fastMemNoneRadio_clicked();     ///< None fast memory
+    void on_fastMem1MbRadio_clicked();      ///< Fast memory setting at 1Mb
+    void on_fastMem2MbRadio_clicked();      ///< Fast memory setting at 2Mb
+    void on_fastMem4MbRadio_clicked();      ///< Fast memory setting at 4Mb
+    void on_fastMem8MbRadio_clicked();      ///< Fast memory setting at 8Mb
+    void on_z3MemNoneRadio_clicked();       ///< None Zorro III memory
+    void on_z3Mem1MbRadio_clicked();        ///< Zorro III memory setting at 1Mb
+    void on_z3Mem2MbRadio_clicked();        ///< Zorro III memory setting at 2Mb
+    void on_z3Mem4MbRadio_clicked();        ///< Zorro III memory setting at 4Mb
+    void on_z3Mem8MbRadio_clicked();        ///< Zorro III memory setting at 8Mb
+    void on_z3Mem16MbRadio_clicked();       ///< Zorro III memory setting at 16Mb
+    void on_z3Mem32MbRadio_clicked();       ///< Zorro III memory setting at 32Mb
+    void on_z3Mem64MbRadio_clicked();       ///< Zorro III memory setting at 64Mb
+    void on_z3Mem128MbRadio_clicked();      ///< Zorro III memory setting at 128Mb
+    void on_z3Mem256MbRadio_clicked();      ///< Zorro III memory setting at 256Mb
 
     void on_floppyDrive0ToolButton_clicked();
     void on_floppySwappingImagesAddPushButton_clicked();

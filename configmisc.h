@@ -1,3 +1,7 @@
+/**
+* \class ConfigMisc
+* This class is responsible for the Miscellaneous Configuration
+*/
 #ifndef CONFIGMISC_H
 #define CONFIGMISC_H
 #include <string>

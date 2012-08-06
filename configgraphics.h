@@ -1,3 +1,7 @@
+/**
+* \class ConfigGraphics
+* This class is responsible for the Graphics Configuration
+*/
 #ifndef CONFIGGRAPHICS_H
 #define CONFIGGRAPHICS_H
 #include <string>

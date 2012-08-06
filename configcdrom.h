@@ -1,4 +1,7 @@
-#ifndef CONFIGCDROM_H
+/**
+* \class ConfigCdRom
+* This class is responsible for the Cd-Rom Configuration
+*/#ifndef CONFIGCDROM_H
 #define CONFIGCDROM_H
 #include <vector>
 #include <string>

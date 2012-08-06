@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="8" bodyend="11"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="26" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1abecbb2f54c5af5613a059abbbfc3542a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="21" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="13" bodyend="17"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="21" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="31" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a527c56bbaa9f503e1038089d995df18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="22" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="19" bodyend="22"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="22" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="37" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a8817d9cec97e5107b0ea771b897363a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="24" bodyend="28"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="42" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a006873994b74d5b3abb9128aea9e755a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="30" bodyend="33"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1adf8f3353c2c46ea21286e72216dea218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="35" bodyend="39"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="53" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a55c39f64ad63dfb5ddbcb2778e53016d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="41" bodyend="44"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="59" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a456cfc71f7085ad5bd7300446a82b547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="46" bodyend="50"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="64" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a14f205c9a74967e3c70aa460dac5e1ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="52" bodyend="55"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="70" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a0aa65deb20de0380b4b6126f6ea58569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="58" bodyend="88"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="76" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="classConfigRam_1a43e6e17db9a030a4cb522b329f00797e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="90" bodyend="97"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="108" bodyend="115"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

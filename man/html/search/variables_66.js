@@ -1,12 +1,16 @@
 var searchData=
 [
   ['fast_5fmemory',['fast_memory',['../classConfigRam.html#a924ca1cd8def2cb5ee7a1b5413968040',1,'ConfigRam']]],
-  ['floppy_5fdrive_5f0',['floppy_drive_0',['../classConfigFloppy.html#a644df600cf5af15184baa0e62cc7cc4d',1,'ConfigFloppy']]],
-  ['floppy_5fdrive_5f1',['floppy_drive_1',['../classConfigFloppy.html#a59246a5f8a5282bcfe2df1cb9204a298',1,'ConfigFloppy']]],
-  ['floppy_5fdrive_5f2',['floppy_drive_2',['../classConfigFloppy.html#a86ecb4d492f195e1dc637d8ac4af732b',1,'ConfigFloppy']]],
-  ['floppy_5fdrive_5f3',['floppy_drive_3',['../classConfigFloppy.html#a44d121fa385f64bfe0f8781d14816d7c',1,'ConfigFloppy']]],
+  ['flash_5fmemory_5fdir',['flash_memory_dir',['../classConfigMisc.html#a6b6ba790675e0ce1fc404787d53bc0bd',1,'ConfigMisc']]],
+  ['floppies_5fdir',['floppies_dir',['../classConfigMisc.html#a034635d6c70bf95c4f4a1bfb30e082f0',1,'ConfigMisc']]],
+  ['floppy_5fdrive',['floppy_drive',['../classConfigFloppy.html#a503917a7d7f423ed21aca5485066e590',1,'ConfigFloppy']]],
   ['floppy_5fdrive_5fspeed',['floppy_drive_speed',['../classConfigFloppy.html#a8ec130442e9d309be80375441efbe869',1,'ConfigFloppy']]],
   ['floppy_5fdrive_5fvolume',['floppy_drive_volume',['../classConfigFloppy.html#a837e42c4161dd4260f792f5463494f5d',1,'ConfigFloppy']]],
   ['floppy_5fimage',['floppy_image',['../classConfigFloppy.html#a89af257a11a5a71dbf002a06c6077c9c',1,'ConfigFloppy']]],
-  ['floppyconfiguration',['floppyConfiguration',['../classAmiga.html#a36205e2c4a2c96a4132098522f558bd4',1,'Amiga']]]
+  ['floppy_5foverlays_5fdir',['floppy_overlays_dir',['../classConfigMisc.html#a6973cb8df315ab068391faf67bdc885e',1,'ConfigMisc']]],
+  ['floppyconfiguration',['floppyConfiguration',['../classAmiga.html#a36205e2c4a2c96a4132098522f558bd4',1,'Amiga']]],
+  ['fsaa',['fsaa',['../classConfigGraphics.html#ac866834bdb5280266a3cca59849bf328',1,'ConfigGraphics']]],
+  ['fullscreen',['fullscreen',['../classConfigGraphics.html#ab38c61e796c2d3900604c2d6985b37d8',1,'ConfigGraphics']]],
+  ['fullscreen_5fheight',['fullscreen_height',['../classConfigGraphics.html#a2741a87a4da0711c112f7e26a66565b6',1,'ConfigGraphics']]],
+  ['fullscreen_5fwidth',['fullscreen_width',['../classConfigGraphics.html#a7a9eda885c4120791e0cd9a3cdf87e8d',1,'ConfigGraphics']]]
 ];
