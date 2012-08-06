@@ -3,6 +3,9 @@
 .nh
 .SH NAME
 Amiga \- 
+.PP
+This class is responsible for the magement of FS-UAE Gui\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -180,273 +183,363 @@ Amiga \-
 .ti -1c
 .RI "void \fBon_floppyDrive0ToolButton_clicked\fP ()"
 .br
-.ti -1c
-.RI "void \fBon_floppySwappingImagesAddPushButton_clicked\fP ()"
-.br
-.ti -1c
-.RI "void \fBon_floppyDriveVolumeSlider_valueChanged\fP (int value)"
-.br
-.ti -1c
-.RI "void \fBon_floppyDriveVolumeMuteCheckBox_clicked\fP ()"
-.br
-.ti -1c
-.RI "void \fBon_floppyDriveSpeedSlider_valueChanged\fP (int position)"
-.br
+.RI "\fILoad Floppy in Drive 0\&. \fP"
 .ti -1c
 .RI "void \fBon_floppyDrive1ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Floppy in Drive 1\&. \fP"
 .ti -1c
 .RI "void \fBon_floppyDrive2ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Floppy in Dirve 2\&. \fP"
 .ti -1c
 .RI "void \fBon_floppyDrive3ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Floppy in Drive 3\&. \fP"
+.ti -1c
+.RI "void \fBon_floppySwappingImagesAddPushButton_clicked\fP ()"
+.br
+.RI "\fIAdd Floppy image(s) in Swapping area\&. \fP"
 .ti -1c
 .RI "void \fBon_floppySwappingImagerRemovePushButton_clicked\fP ()"
 .br
+.RI "\fIRemove floppy image(s) from swapping area\&. \fP"
+.ti -1c
+.RI "void \fBon_floppyDriveVolumeSlider_valueChanged\fP (int value)"
+.br
+.RI "\fIChange floppy drive volume (slider)\&. \fP"
+.ti -1c
+.RI "void \fBon_floppyDriveVolumeMuteCheckBox_clicked\fP ()"
+.br
+.RI "\fIMute floppy drive volume\&. \fP"
+.ti -1c
+.RI "void \fBon_floppyDriveSpeedSlider_valueChanged\fP (int position)"
+.br
+.RI "\fIChange floppy dirve speed (slider)\&. \fP"
 .ti -1c
 .RI "void \fBon_cdromDrive0ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad CD-ROM in Drive 0\&. \fP"
 .ti -1c
 .RI "void \fBon_cdromSwappingImagesAddPushButton_clicked\fP ()"
 .br
+.RI "\fIAdd CD-ROM(s) in Swapping area\&. \fP"
 .ti -1c
 .RI "void \fBon_cdromSwappingImagesRemovePushButton_clicked\fP ()"
 .br
+.RI "\fIRemove CD-ROM(s) from Swapping area\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive0FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 0\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive0ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 0\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive1ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 1\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive1FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 1\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive2ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 2\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive2FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 2\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive3ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 3\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive3FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 3\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive4FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 4\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive4ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 4\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive5ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 5\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive5FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 5\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive6ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 6\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive6FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 6\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive7ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 7\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive7FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 7\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive8ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 8\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive8FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 8\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive9ToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disks in Drive 9\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive9FolderToolButton_clicked\fP ()"
 .br
+.RI "\fILoad Hard Disk Folder in Drive 9\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive0LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 0\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive1LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 1\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive2LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 2\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive3LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 3\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive4LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 4\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive5LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 5\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive6LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 6\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive7LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 7\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive8LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 8\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive9LabelLineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIType here a new label of Hard Disk stored in Drive 9\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive0ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive1ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive2ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive3ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive4ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive5ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive6ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive7ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive8ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_hardDrive9ReadOnlyCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_displaySettingsStartFullscreenRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_displaySettingsResizableRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_displaySettingsKeepAspectRatioRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_scanlinesRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_scanlinesRTGRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_lowResolutionRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_lineDoublingRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_fullscreenResolutionXSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_fullscreenResolutionYSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_windowResolutionXSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_windowResolutionYSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_scaleXDoubleSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_scaleYDoubleSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_alignXdoubleSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_alignYDoubleSpinBox_valueChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_scanlinesDarkHorizontalSlider_valueChanged\fP (int position)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_scanlinesLightHorizontalSlider_valueChanged\fP (int position)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_fullSceneAntiAliasingOffRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_fullSceneAntiAliasing2xRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_fullSceneAntiAliasing4xRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_fullSceneAntiAliasing8xRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_textureFilterLinearRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_textureFilterNearestRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_f11InitalModeAutoRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_f11InitalModeFullRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_f11InitalMode640x400RadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_f11InitalMode640x480RadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_f11InitalMode640x512RadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_f11InitialModeWithBorderCheckBox_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_videoFormatBGRARadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_videoFormatRGBARadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_textureFormatModeRGBRadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_textureFormatModeRGB8RadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_textureFormatModeRGBARadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_textureFormatModeRGBA8RadioButton_clicked\fP ()"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_shaderComboBox_currentIndexChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_videoSyncComboBox_currentIndexChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_videoSynkMethodeComboBox_currentIndexChanged\fP (const QString &arg1)"
 .br
+.RI "\fIZorro III memory setting at 256Mb\&. \fP"
 .ti -1c
 .RI "void \fBon_viewportIn1LineEdit_textChanged\fP (const QString &arg1)"
 .br
@@ -614,7 +707,7 @@ Amiga \-
 .in -1c
 .SH "Detailed Description"
 .PP 
-This class is responsible for the magement of FS-UAE Gui 
+This class is responsible for the magement of FS-UAE Gui\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "\fBAmiga::Amiga\fP (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
@@ -643,7 +736,11 @@ Help menu: open an email browser to report bug\&.
 Help menu: a brief summary\&. 
 .SS "void \fBAmiga::on_alernativeSaveStatesDirPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_alignXdoubleSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_alignYDoubleSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_alternativeBaseDirPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_alternativeCdromsDirPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_alternativeControllersDirPushButton_clicked\fP ()\fC [private, slot]\fP"
@@ -658,8 +755,14 @@ Help menu: a brief summary\&.
 List of avaiable \fBAmiga\fP models\&. 
 .SS "void \fBAmiga::on_audioBufferLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_cdromDrive0ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load CD-ROM in Drive 0\&. 
 .SS "void \fBAmiga::on_cdromSwappingImagesAddPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Add CD-ROM(s) in Swapping area\&. 
 .SS "void \fBAmiga::on_cdromSwappingImagesRemovePushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Remove CD-ROM(s) from Swapping area\&. 
 .SS "void \fBAmiga::on_chipMem1MbRadio_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Chip memory setting at 1Mb\&. 
@@ -676,14 +779,32 @@ Chip memory setting at 512Kb\&.
 .PP
 Chip memory setting at 8Mb\&. 
 .SS "void \fBAmiga::on_displaySettingsKeepAspectRatioRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_displaySettingsResizableRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_displaySettingsStartFullscreenRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_f11InitalMode640x400RadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_f11InitalMode640x480RadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_f11InitalMode640x512RadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_f11InitalModeAutoRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_f11InitalModeFullRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_f11InitialModeWithBorderCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_fadeColorPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_fastMem1MbRadio_clicked\fP ()\fC [private, slot]\fP"
 .PP
@@ -703,62 +824,172 @@ None fast memory\&.
 .SS "void \fBAmiga::on_floorColor1PushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_floorColor2PushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_floppyDrive0ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Floppy in Drive 0\&. 
 .SS "void \fBAmiga::on_floppyDrive1ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Floppy in Drive 1\&. 
 .SS "void \fBAmiga::on_floppyDrive2ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Floppy in Dirve 2\&. 
 .SS "void \fBAmiga::on_floppyDrive3ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Floppy in Drive 3\&. 
 .SS "void \fBAmiga::on_floppyDriveSpeedSlider_valueChanged\fP (intposition)\fC [private, slot]\fP"
+.PP
+Change floppy dirve speed (slider)\&. 
 .SS "void \fBAmiga::on_floppyDriveVolumeMuteCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Mute floppy drive volume\&. 
 .SS "void \fBAmiga::on_floppyDriveVolumeSlider_valueChanged\fP (intvalue)\fC [private, slot]\fP"
+.PP
+Change floppy drive volume (slider)\&. 
 .SS "void \fBAmiga::on_floppySwappingImagerRemovePushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Remove floppy image(s) from swapping area\&. 
 .SS "void \fBAmiga::on_floppySwappingImagesAddPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Add Floppy image(s) in Swapping area\&. 
 .SS "void \fBAmiga::on_fullSceneAntiAliasing2xRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_fullSceneAntiAliasing4xRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_fullSceneAntiAliasing8xRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_fullSceneAntiAliasingOffRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_fullscreenResolutionXSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_fullscreenResolutionYSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_grabMouseAutoCheckBox_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_grabMouseCheckBox_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_hardDrive0FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 0\&. 
 .SS "void \fBAmiga::on_hardDrive0LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 0\&. 
 .SS "void \fBAmiga::on_hardDrive0ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive0ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 0\&. 
 .SS "void \fBAmiga::on_hardDrive1FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 1\&. 
 .SS "void \fBAmiga::on_hardDrive1LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 1\&. 
 .SS "void \fBAmiga::on_hardDrive1ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive1ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 1\&. 
 .SS "void \fBAmiga::on_hardDrive2FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 2\&. 
 .SS "void \fBAmiga::on_hardDrive2LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 2\&. 
 .SS "void \fBAmiga::on_hardDrive2ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive2ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 2\&. 
 .SS "void \fBAmiga::on_hardDrive3FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 3\&. 
 .SS "void \fBAmiga::on_hardDrive3LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 3\&. 
 .SS "void \fBAmiga::on_hardDrive3ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive3ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 3\&. 
 .SS "void \fBAmiga::on_hardDrive4FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 4\&. 
 .SS "void \fBAmiga::on_hardDrive4LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 4\&. 
 .SS "void \fBAmiga::on_hardDrive4ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive4ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 4\&. 
 .SS "void \fBAmiga::on_hardDrive5FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 5\&. 
 .SS "void \fBAmiga::on_hardDrive5LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 5\&. 
 .SS "void \fBAmiga::on_hardDrive5ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive5ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 5\&. 
 .SS "void \fBAmiga::on_hardDrive6FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 6\&. 
 .SS "void \fBAmiga::on_hardDrive6LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 6\&. 
 .SS "void \fBAmiga::on_hardDrive6ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive6ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 6\&. 
 .SS "void \fBAmiga::on_hardDrive7FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 7\&. 
 .SS "void \fBAmiga::on_hardDrive7LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 7\&. 
 .SS "void \fBAmiga::on_hardDrive7ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive7ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 7\&. 
 .SS "void \fBAmiga::on_hardDrive8FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 8\&. 
 .SS "void \fBAmiga::on_hardDrive8LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 8\&. 
 .SS "void \fBAmiga::on_hardDrive8ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive8ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 8\&. 
 .SS "void \fBAmiga::on_hardDrive9FolderToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disk Folder in Drive 9\&. 
 .SS "void \fBAmiga::on_hardDrive9LabelLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Type here a new label of Hard Disk stored in Drive 9\&. 
 .SS "void \fBAmiga::on_hardDrive9ReadOnlyCheckBox_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_hardDrive9ToolButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Load Hard Disks in Drive 9\&. 
 .SS "void \fBAmiga::on_headColorPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_kickstartExtFileToolButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
@@ -767,6 +998,8 @@ Load Extended Kickstart file\&.
 .PP
 Load Kickstart file\&. 
 .SS "void \fBAmiga::on_lineDoublingRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_loadConfigToolButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Load configuration\&. 
@@ -774,6 +1007,8 @@ Load configuration\&.
 .PP
 Reset configuration\&. 
 .SS "void \fBAmiga::on_lowResolutionRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_menuSubtitleLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_menuTitleLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_playerPasswordLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
@@ -785,14 +1020,28 @@ Run FS-UAE\&.
 .PP
 Save configuration\&. 
 .SS "void \fBAmiga::on_scaleXDoubleSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_scaleYDoubleSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_scanlinesDarkHorizontalSlider_valueChanged\fP (intposition)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_scanlinesLightHorizontalSlider_valueChanged\fP (intposition)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_scanlinesRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_scanlinesRTGRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_serverIPLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_serverPortLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_shaderComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_slowMem1_8MbRadio_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Slow memory setting at 1\&.8Mb\&. 
@@ -806,16 +1055,32 @@ Slow memory setting at 512kb\&.
 .PP
 None slow memory\&. 
 .SS "void \fBAmiga::on_textureFilterLinearRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_textureFilterNearestRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_textureFormatModeRGB8RadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_textureFormatModeRGBA8RadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_textureFormatModeRGBARadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_textureFormatModeRGBRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_themeFolderPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_themeOverlayImagerPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_useBSDCheckBox_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_videoFormatBGRARadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_videoFormatRGBARadioButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_videoModeNTSCRadio_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Click to NTST video mode\&. 
@@ -823,7 +1088,11 @@ Click to NTST video mode\&.
 .PP
 Click to PAL video mode\&. 
 .SS "void \fBAmiga::on_videoSyncComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_videoSynkMethodeComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_viewportIn1LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_viewportIn2LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_viewportIn3LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
@@ -835,7 +1104,11 @@ Click to PAL video mode\&.
 .SS "void \fBAmiga::on_wallColor1PushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_wallColor2PushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_windowResolutionXSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_windowResolutionYSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Zorro III memory setting at 256Mb\&. 
 .SS "void \fBAmiga::on_z3Mem128MbRadio_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Zorro III memory setting at 128Mb\&. 

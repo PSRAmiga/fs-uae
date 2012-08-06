@@ -52,14 +52,14 @@
     <member refid="classAmiga_1ac3c6ea30cab7bff74e4b473bf15090c5" kind="slot"><name>on_z3Mem128MbRadio_clicked</name></member>
     <member refid="classAmiga_1a249bb279b14d48d465498e82c9a66e2a" kind="slot"><name>on_z3Mem256MbRadio_clicked</name></member>
     <member refid="classAmiga_1a7ded57c91db93833e6cdfd1e21dcdcda" kind="slot"><name>on_floppyDrive0ToolButton_clicked</name></member>
-    <member refid="classAmiga_1ab0fad33dad5daa1811788af807f16640" kind="slot"><name>on_floppySwappingImagesAddPushButton_clicked</name></member>
-    <member refid="classAmiga_1a32286caf852d867709cb56fc0aeb3bc0" kind="slot"><name>on_floppyDriveVolumeSlider_valueChanged</name></member>
-    <member refid="classAmiga_1adeb313b0432509223d547d97ca3cda6b" kind="slot"><name>on_floppyDriveVolumeMuteCheckBox_clicked</name></member>
-    <member refid="classAmiga_1af8c051b704b3a1642ec4606e6b682e10" kind="slot"><name>on_floppyDriveSpeedSlider_valueChanged</name></member>
     <member refid="classAmiga_1ac1e72bc40727000067723403f1d407d8" kind="slot"><name>on_floppyDrive1ToolButton_clicked</name></member>
     <member refid="classAmiga_1ad428ecd1871e9f42a6e5947ee0fcf22d" kind="slot"><name>on_floppyDrive2ToolButton_clicked</name></member>
     <member refid="classAmiga_1a084e32bc56163ff8dceee9610166c92a" kind="slot"><name>on_floppyDrive3ToolButton_clicked</name></member>
+    <member refid="classAmiga_1ab0fad33dad5daa1811788af807f16640" kind="slot"><name>on_floppySwappingImagesAddPushButton_clicked</name></member>
     <member refid="classAmiga_1a80b9fc533b748b6833ec9f8edbd2a765" kind="slot"><name>on_floppySwappingImagerRemovePushButton_clicked</name></member>
+    <member refid="classAmiga_1a32286caf852d867709cb56fc0aeb3bc0" kind="slot"><name>on_floppyDriveVolumeSlider_valueChanged</name></member>
+    <member refid="classAmiga_1adeb313b0432509223d547d97ca3cda6b" kind="slot"><name>on_floppyDriveVolumeMuteCheckBox_clicked</name></member>
+    <member refid="classAmiga_1af8c051b704b3a1642ec4606e6b682e10" kind="slot"><name>on_floppyDriveSpeedSlider_valueChanged</name></member>
     <member refid="classAmiga_1ab523f5aa022774e2119a5f4f90788116" kind="slot"><name>on_cdromDrive0ToolButton_clicked</name></member>
     <member refid="classAmiga_1a8f7c8f7734893028521a9dc9b8b1ef11" kind="slot"><name>on_cdromSwappingImagesAddPushButton_clicked</name></member>
     <member refid="classAmiga_1add58be9105a95e3fab94a58285304ac3" kind="slot"><name>on_cdromSwappingImagesRemovePushButton_clicked</name></member>
@@ -448,8 +448,6 @@
     <member refid="classConfigTheme_1ab3cd5e9247843ee93d5c39fa7d60d195" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
-  </compound>
-  <compound refid="namespaceUI" kind="namespace"><name>UI</name>
   </compound>
   <compound refid="namespaceUi" kind="namespace"><name>Ui</name>
   </compound>

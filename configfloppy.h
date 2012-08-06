@@ -17,17 +17,17 @@ class ConfigFloppy
 
 public:
     ConfigFloppy();
-    string getFloppyDriveConfigStringAt(int i);
-    string getFloppyDriveStringAt(int i);
+    string getFloppyDriveConfigStringAt(int i); ///<
+    string getFloppyDriveStringAt(int i);       ///<
     string getFloppyDriveVolumeConfigString();  ///< Represents the string of floppy_drive_volume to be written in Config File. If floppy_drive_volume is the default value, it returns an empty string.\n floppy_drive_volume = 20
     string getFloppyDriveVolumeString();        ///< Represent the effective value of floppy_drive_volume.
     string getFloppyDriveSpeedConfigString();   ///< Represents the string of floppy_drive_speed to be written in Config File. If floppy_drive_speed is the default value [100], it returns an empty string.\n floppy_drive_speed = 100
     string getFloppyDriveSpeedString();
 
-    int getFloppyImageSize();
-    string getFloppyImageAt(int position);
-    void pushBackFloppyImage(string s);
-    void eraseFloppyImageAt(int position);
+    int getFloppyImageSize();                   ///< Represent the size of the floppy
+    string getFloppyImageAt(int position);      ///< Return the string that represet the Floppy Image
+    void pushBackFloppyImage(string s);         ///< Add new Floppy Image
+    void eraseFloppyImageAt(int position);      ///< Erase a Flopy Image
 
 
     void setParameter(string parameter,string value);

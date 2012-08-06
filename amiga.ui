@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -1172,6 +1172,16 @@
       </property>
       <property name="text">
        <string>0/20</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>330</y>
+        <width>120</width>
+        <height>80</height>
+       </rect>
       </property>
      </widget>
     </widget>

@@ -673,12 +673,51 @@
         <argsstring>()</argsstring>
         <name>on_floppyDrive0ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Floppy in Drive 0. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="77" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1189" bodyend="1194"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ac1e72bc40727000067723403f1d407d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDrive1ToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDrive1ToolButton_clicked</name>
+        <briefdescription>
+<para>Load Floppy in Drive 1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="78" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1196" bodyend="1201"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1ad428ecd1871e9f42a6e5947ee0fcf22d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDrive2ToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDrive2ToolButton_clicked</name>
+        <briefdescription>
+<para>Load Floppy in Dirve 2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="79" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1203" bodyend="1208"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a084e32bc56163ff8dceee9610166c92a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppyDrive3ToolButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppyDrive3ToolButton_clicked</name>
+        <briefdescription>
+<para>Load Floppy in Drive 3. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="80" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1210" bodyend="1215"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ab0fad33dad5daa1811788af807f16640" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -686,12 +725,25 @@
         <argsstring>()</argsstring>
         <name>on_floppySwappingImagesAddPushButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Add Floppy image(s) in Swapping area. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="78" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1218" bodyend="1240"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="81" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1218" bodyend="1240"/>
+      </memberdef>
+      <memberdef kind="slot" id="classAmiga_1a80b9fc533b748b6833ec9f8edbd2a765" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Amiga::on_floppySwappingImagerRemovePushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_floppySwappingImagerRemovePushButton_clicked</name>
+        <briefdescription>
+<para>Remove floppy image(s) from swapping area. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="82" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1242" bodyend="1266"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1a32286caf852d867709cb56fc0aeb3bc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -703,12 +755,12 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Change floppy drive volume (slider). </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="79" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1268" bodyend="1274"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="83" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1268" bodyend="1274"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1adeb313b0432509223d547d97ca3cda6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -716,12 +768,12 @@
         <argsstring>()</argsstring>
         <name>on_floppyDriveVolumeMuteCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Mute floppy drive volume. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="80" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1276" bodyend="1288"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="84" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1276" bodyend="1288"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1af8c051b704b3a1642ec4606e6b682e10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -733,64 +785,12 @@
           <declname>position</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Change floppy dirve speed (slider). </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="81" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1290" bodyend="1303"/>
-      </memberdef>
-      <memberdef kind="slot" id="classAmiga_1ac1e72bc40727000067723403f1d407d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Amiga::on_floppyDrive1ToolButton_clicked</definition>
-        <argsstring>()</argsstring>
-        <name>on_floppyDrive1ToolButton_clicked</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="82" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1196" bodyend="1201"/>
-      </memberdef>
-      <memberdef kind="slot" id="classAmiga_1ad428ecd1871e9f42a6e5947ee0fcf22d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Amiga::on_floppyDrive2ToolButton_clicked</definition>
-        <argsstring>()</argsstring>
-        <name>on_floppyDrive2ToolButton_clicked</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="83" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1203" bodyend="1208"/>
-      </memberdef>
-      <memberdef kind="slot" id="classAmiga_1a084e32bc56163ff8dceee9610166c92a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Amiga::on_floppyDrive3ToolButton_clicked</definition>
-        <argsstring>()</argsstring>
-        <name>on_floppyDrive3ToolButton_clicked</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="84" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1210" bodyend="1215"/>
-      </memberdef>
-      <memberdef kind="slot" id="classAmiga_1a80b9fc533b748b6833ec9f8edbd2a765" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Amiga::on_floppySwappingImagerRemovePushButton_clicked</definition>
-        <argsstring>()</argsstring>
-        <name>on_floppySwappingImagerRemovePushButton_clicked</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="85" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1242" bodyend="1266"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="85" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.cpp" bodystart="1290" bodyend="1303"/>
       </memberdef>
       <memberdef kind="slot" id="classAmiga_1ab523f5aa022774e2119a5f4f90788116" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -798,7 +798,7 @@
         <argsstring>()</argsstring>
         <name>on_cdromDrive0ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load CD-ROM in Drive 0. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -811,7 +811,7 @@
         <argsstring>()</argsstring>
         <name>on_cdromSwappingImagesAddPushButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Add CD-ROM(s) in Swapping area. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -824,7 +824,7 @@
         <argsstring>()</argsstring>
         <name>on_cdromSwappingImagesRemovePushButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Remove CD-ROM(s) from Swapping area. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -837,7 +837,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive0FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 0. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -850,7 +850,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive0ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 0. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -863,7 +863,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive1ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 1. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -876,7 +876,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive1FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 1. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -889,7 +889,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive2ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 2. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -902,7 +902,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive2FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 2. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -915,7 +915,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive3ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 3. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -928,7 +928,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive3FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 3. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -941,7 +941,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive4FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 4. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -954,7 +954,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive4ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 4. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -967,7 +967,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive5ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 5. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -980,7 +980,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive5FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 5. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -993,7 +993,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive6ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 6. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1006,7 +1006,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive6FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 6. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1019,7 +1019,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive7ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 7. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1032,7 +1032,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive7FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 7. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1045,7 +1045,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive8ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 8. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1058,7 +1058,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive8FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 8. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1071,7 +1071,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive9ToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disks in Drive 9. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1084,7 +1084,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive9FolderToolButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Load Hard Disk Folder in Drive 9. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1101,7 +1101,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 0. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1118,7 +1118,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 1. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1135,7 +1135,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 2. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1152,7 +1152,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 3. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1169,7 +1169,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 4. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1186,7 +1186,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 5. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1203,7 +1203,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 6. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1220,7 +1220,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 7. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1237,7 +1237,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 8. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1254,7 +1254,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Type here a new label of Hard Disk stored in Drive 9. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1267,7 +1267,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive0ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1280,7 +1280,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive1ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1293,7 +1293,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive2ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1306,7 +1306,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive3ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1319,7 +1319,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive4ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1332,7 +1332,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive5ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1345,7 +1345,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive6ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1358,7 +1358,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive7ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1371,7 +1371,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive8ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1384,7 +1384,7 @@
         <argsstring>()</argsstring>
         <name>on_hardDrive9ReadOnlyCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1397,7 +1397,7 @@
         <argsstring>()</argsstring>
         <name>on_displaySettingsStartFullscreenRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1410,7 +1410,7 @@
         <argsstring>()</argsstring>
         <name>on_displaySettingsResizableRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1423,7 +1423,7 @@
         <argsstring>()</argsstring>
         <name>on_displaySettingsKeepAspectRatioRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1436,7 +1436,7 @@
         <argsstring>()</argsstring>
         <name>on_scanlinesRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1449,7 +1449,7 @@
         <argsstring>()</argsstring>
         <name>on_scanlinesRTGRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1462,7 +1462,7 @@
         <argsstring>()</argsstring>
         <name>on_lowResolutionRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1475,7 +1475,7 @@
         <argsstring>()</argsstring>
         <name>on_lineDoublingRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1492,7 +1492,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1509,7 +1509,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1526,7 +1526,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1543,7 +1543,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1560,7 +1560,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1577,7 +1577,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1594,7 +1594,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1611,7 +1611,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1628,7 +1628,7 @@
           <declname>position</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1645,7 +1645,7 @@
           <declname>position</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1658,7 +1658,7 @@
         <argsstring>()</argsstring>
         <name>on_fullSceneAntiAliasingOffRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1671,7 +1671,7 @@
         <argsstring>()</argsstring>
         <name>on_fullSceneAntiAliasing2xRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1684,7 +1684,7 @@
         <argsstring>()</argsstring>
         <name>on_fullSceneAntiAliasing4xRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1697,7 +1697,7 @@
         <argsstring>()</argsstring>
         <name>on_fullSceneAntiAliasing8xRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1710,7 +1710,7 @@
         <argsstring>()</argsstring>
         <name>on_textureFilterLinearRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1723,7 +1723,7 @@
         <argsstring>()</argsstring>
         <name>on_textureFilterNearestRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1736,7 +1736,7 @@
         <argsstring>()</argsstring>
         <name>on_f11InitalModeAutoRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1749,7 +1749,7 @@
         <argsstring>()</argsstring>
         <name>on_f11InitalModeFullRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1762,7 +1762,7 @@
         <argsstring>()</argsstring>
         <name>on_f11InitalMode640x400RadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1775,7 +1775,7 @@
         <argsstring>()</argsstring>
         <name>on_f11InitalMode640x480RadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1788,7 +1788,7 @@
         <argsstring>()</argsstring>
         <name>on_f11InitalMode640x512RadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1801,7 +1801,7 @@
         <argsstring>()</argsstring>
         <name>on_f11InitialModeWithBorderCheckBox_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1814,7 +1814,7 @@
         <argsstring>()</argsstring>
         <name>on_videoFormatBGRARadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1827,7 +1827,7 @@
         <argsstring>()</argsstring>
         <name>on_videoFormatRGBARadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1840,7 +1840,7 @@
         <argsstring>()</argsstring>
         <name>on_textureFormatModeRGBRadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1853,7 +1853,7 @@
         <argsstring>()</argsstring>
         <name>on_textureFormatModeRGB8RadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1866,7 +1866,7 @@
         <argsstring>()</argsstring>
         <name>on_textureFormatModeRGBARadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1879,7 +1879,7 @@
         <argsstring>()</argsstring>
         <name>on_textureFormatModeRGBA8RadioButton_clicked</name>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1896,7 +1896,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1913,7 +1913,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -1930,7 +1930,7 @@
           <declname>arg1</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Zorro III memory setting at 256Mb. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -2580,9 +2580,9 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>This class is responsible for the magement of FS-UAE Gui. </para>    </briefdescription>
     <detaileddescription>
-<para>This class is responsible for the magement of FS-UAE Gui </para>    </detaileddescription>
+    </detaileddescription>
     <collaborationgraph>
       <node id="3">
         <label>ConfigHardDisks</label>
