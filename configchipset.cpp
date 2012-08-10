@@ -85,31 +85,35 @@ string ConfigChipset::getKickstartExtFileString()
     return kickstart_ext_file;
 }
 
-void ConfigChipset::setParameter(string parameter, string value)
+int ConfigChipset::setParameter(string parameter, string value)
 {
     if(parameter.compare("accuracy")==0){
         if ((value.compare("-1")==0)||(value.compare("0")==0)||(value.compare("1")==0)){
             accuracy=value;}
         else{
             accuracy=DEFAULTACCURACY;
+            return -1;
         }
     } else if(parameter.compare("ntsc_mode")==0){
         if ((value.compare("0")==0)||(value.compare("0")==1)){
             ntsc_mode=value;
         }else{
             ntsc_mode=DEFAULTNTSCMODE;
+            return -1;
         }
     } else if(parameter.compare("amiga_model")==0){
         if ((value.compare("A500")==0)||(value.compare("A500+")==0)||(value.compare("A600")==0)||(value.compare("A1200")==0)||(value.compare("A1200/020")==0)||(value.compare("A4000/040")==0)||(value.compare("CD32")==0)||(value.compare("CDTV")==0)){
             amiga_model=value;}
         else{
             amiga_model=DEFAULTAMIGAMODEL;
+            return -1;
         }
     } else if(parameter.compare("kickstart_file")==0){
         kickstart_file=value;
     } else if(parameter.compare("kickstart_ext_file")==0){
         kickstart_ext_file=value;
     }
+    return 0;
 }
 
 void ConfigChipset::setToDefaultConfiguration()

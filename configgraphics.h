@@ -98,7 +98,7 @@ public:
     string getViewportConfigString();
     string getViewportString();
 
-    void setParameter(string parameter,string value);
+    int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
 };
 

@@ -29,7 +29,7 @@ public:
     string getKickstartExtFileConfigString();	///< Represents the string of KickstartExtFile to be written in Config file. If KickstartExtFile is the default value, it returns an empty string.\n kickstart_ext_file = path/to/extended-kickstart.rom
     string getKickstartExtFileString(); 		///< Represent the effective value of KickstartExtFile
 
-    void setParameter(string parameter,string value);
+    int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
 };
 

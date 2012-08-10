@@ -27,7 +27,7 @@ public:
     string getZorro3ConfigString();     ///< Represents the string of Zorro III Fast memory to be written in Config File. If Zorro III memory is the default value, it returns an empty string.\n zorro_iii_memory = 65536
     string getZorro3String();           ///< Represent the effective value of Zorro III Fast memory
 
-    void setParameter(string parameter,string value);
+    int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
 };
 

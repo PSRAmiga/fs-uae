@@ -13,6 +13,7 @@ class ConfigMisc
     string automatic_input_grab;
     string bsdsocket_library;
     string audio_buffer_target_bytes;
+    string mouse_speed;
     string title;
     string sub_title;
 
@@ -43,6 +44,8 @@ public:
     string getBsdSocketLibraryString();
     string getAudioBufferConfigString();
     string getAudioBufferString();
+    string getMouseSpeedConfigString();
+    string getMouseSpeedString();
     string getTitleConfigString();
     string getTitleString();
     string getSubTitleConfigString();
@@ -78,7 +81,7 @@ public:
     string getFloppiesDirConfigString();
     string getFloppiesDirString();
 
-    void setParameter(string parameter,string value);
+    int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
 };
 

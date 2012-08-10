@@ -19,7 +19,7 @@ public:
     string getHardDriveReadOnlyConfigStringAt(int i);
     string getHardDriveReadOnlyStringAt(int i);
 
-    void setParameter(string parameter,string value);
+    int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
 };
 

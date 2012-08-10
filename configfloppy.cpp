@@ -102,7 +102,7 @@ int static strToInt(string s){
     buffer >> intValue;
     return intValue;
 }
-void ConfigFloppy::setParameter(string parameter, string value)
+int ConfigFloppy::setParameter(string parameter, string value)
 {
     if(parameter.compare("floppy_drive_0")==0){
         floppy_drive[0]=value;
@@ -117,6 +117,7 @@ void ConfigFloppy::setParameter(string parameter, string value)
             floppy_drive_volume=value;}
         else{
             floppy_drive_volume=DEFAULTFLOPPYDRIVEVOLUME;
+            return -1;
         }
     } else if(parameter.compare("floppy_drive_speed")==0){
 
@@ -125,11 +126,13 @@ void ConfigFloppy::setParameter(string parameter, string value)
         }
         else{
             floppy_drive_speed=DEFAULTFLOPPYDRIVESPEED;
+            return -1;
         }
 
     } else if((parameter.substr(0,parameter.length()-1).compare("floppy_image_")==0 || parameter.substr(0,parameter.length()-2).compare("floppy_image_")==0)&& floppy_image.size()<20){
         floppy_image.push_back(value);
     }
+    return 0;
 }
 
 void ConfigFloppy::setToDefaultConfiguration()

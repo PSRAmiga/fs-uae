@@ -25,6 +25,7 @@ const string DEFAULTINPUTGRAB = "1";
 const string DEFAULTAUTOMATICINPUTGRAB = "1";
 const string DEFAULTBSDSOCKET = "0";
 const string DEFAULTAUDIOBUFFER = "8192";
+const string DEFAULTMOUSESPEED = "100";
 const string DEFAULTTITLE = "";
 const string DEFAULTSUBTITLE = "";
 
@@ -82,6 +83,17 @@ string ConfigMisc::getAudioBufferConfigString()
 string ConfigMisc::getAudioBufferString()
 {
     return audio_buffer_target_bytes;
+}
+
+string ConfigMisc::getMouseSpeedConfigString()
+{
+    if (mouse_speed.compare(DEFAULTMOUSESPEED)==0){return "";}
+    else {return "uae_input.mouse_speed = " + mouse_speed;}
+}
+
+string ConfigMisc::getMouseSpeedString()
+{
+    return mouse_speed;
 }
 
 string ConfigMisc::getTitleConfigString()
@@ -278,31 +290,42 @@ int static strToInt(string s){
 }
 ////////////////////////////////////////////////////////////////////////////
 
-void ConfigMisc::setParameter(string parameter, string value)
+int ConfigMisc::setParameter(string parameter, string value)
 {
     if(parameter.compare("input_grab")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             input_grab=value;}
         else{
             input_grab=DEFAULTINPUTGRAB;
+            return -1;
         }
     } else if(parameter.compare("automatic_input_grab")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             automatic_input_grab=value;}
         else{
             automatic_input_grab=DEFAULTAUTOMATICINPUTGRAB;
+            return -1;
         }
     } else if(parameter.compare("bsdsocket_library")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             bsdsocket_library=value;}
         else{
             bsdsocket_library=DEFAULTBSDSOCKET;
+            return -1;
         }
     } else if(parameter.compare("audio_buffer_target_bytes")==0){
         if (isNumber(value) && strToInt(value)>0){
             audio_buffer_target_bytes=value;
         }else{
             audio_buffer_target_bytes=DEFAULTAUDIOBUFFER;
+            return -1;
+        }
+    } else if(parameter.compare("uae_input.mouse_speed")==0){
+        if (isNumber(value) && strToInt(value)>0){
+            mouse_speed=value;
+        }else{
+            mouse_speed=DEFAULTMOUSESPEED;
+            return -1;
         }
     } else if(parameter.compare("title")==0){
         title=value;
@@ -312,13 +335,13 @@ void ConfigMisc::setParameter(string parameter, string value)
         QStringList ipOctetsList = QString::fromStdString(value).split(".");
         if(ipOctetsList.count()!=4){
             netplay_server=DEFAULTNETPLAYSERVER;
-            return;
+            return -1;
         }
         for(int i=0;i<ipOctetsList.count();i++){
             if ((isNumber(ipOctetsList.at(i).toStdString())==false)||
                     (isNumber(ipOctetsList.at(i).toStdString()) && ((strToInt(ipOctetsList.at(i).toStdString())<0) || strToInt(ipOctetsList.at(i).toStdString())>255))){
                 netplay_server=DEFAULTNETPLAYSERVER;
-                return;
+                return -1;
             }
         }
         netplay_server=value;
@@ -327,6 +350,7 @@ void ConfigMisc::setParameter(string parameter, string value)
             netplay_port=value;
         }else{
             netplay_port=DEFAULTNETPLAYPORT;
+            return -1;
         }
     } else if(parameter.compare("netplay_tag")==0){
         if (value.compare("")!=0){
@@ -361,6 +385,7 @@ void ConfigMisc::setParameter(string parameter, string value)
     } else if(parameter.compare("floppies_dir")==0){
         floppies_dir=value;
     }
+    return 0;
 }
 
 void ConfigMisc::setToDefaultConfiguration()
@@ -369,6 +394,7 @@ void ConfigMisc::setToDefaultConfiguration()
     automatic_input_grab=DEFAULTAUTOMATICINPUTGRAB;
     bsdsocket_library=DEFAULTBSDSOCKET;
     audio_buffer_target_bytes=DEFAULTAUDIOBUFFER;
+    mouse_speed=DEFAULTMOUSESPEED;
     title=DEFAULTTITLE;
     sub_title=DEFAULTSUBTITLE;
 

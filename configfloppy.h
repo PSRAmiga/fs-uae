@@ -30,7 +30,7 @@ public:
     void eraseFloppyImageAt(int position);      ///< Erase a Flopy Image
 
 
-    void setParameter(string parameter,string value);
+    int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
 };
 

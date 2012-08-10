@@ -74,7 +74,7 @@ string ConfigHardDisks::getHardDriveReadOnlyStringAt(int i)
     return hard_drive_read_only[i];
 }
 
-void ConfigHardDisks::setParameter(string parameter, string value)
+int ConfigHardDisks::setParameter(string parameter, string value)
 {
     if(parameter.compare("hard_drive_0")==0){
         hard_drive[0]=value;
@@ -121,62 +121,73 @@ void ConfigHardDisks::setParameter(string parameter, string value)
             hard_drive_read_only[0]=value;}
         else{
             hard_drive_read_only[0]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_1_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[1]=value;}
         else{
             hard_drive_read_only[1]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_2_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[2]=value;}
         else{
             hard_drive_read_only[2]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_3_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[3]=value;}
         else{
             hard_drive_read_only[3]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_4_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[4]=value;}
         else{
             hard_drive_read_only[4]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_5_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[5]=value;}
         else{
             hard_drive_read_only[5]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_6_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[6]=value;}
         else{
             hard_drive_read_only[6]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_7_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[7]=value;}
         else{
             hard_drive_read_only[7]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_8_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[8]=value;}
         else{
             hard_drive_read_only[8]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     } else if(parameter.compare("hard_drive_9_read_only")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             hard_drive_read_only[9]=value;}
         else{
             hard_drive_read_only[9]=DEFAULTHARDDISKDRIVEREADONLY;
+            return -1;
         }
     }
+    return 0;
 }
 
 void ConfigHardDisks::setToDefaultConfiguration()

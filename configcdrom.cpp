@@ -58,7 +58,7 @@ void ConfigCDRom::erasCDRomImageAt(int position)
     cdrom_image.erase(cdrom_image.begin()+ position);
 }
 
-void ConfigCDRom::setParameter(string parameter, string value)
+int ConfigCDRom::setParameter(string parameter, string value)
 {
     if(parameter.compare("cdrom_drive_0")==0){
         cdrom_drive_0=value;

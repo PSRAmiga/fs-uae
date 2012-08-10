@@ -120,7 +120,7 @@ string ConfigTheme::getOverlayImageString()
     return theme_overlay_image;
 }
 
-void ConfigTheme::setParameter(string parameter, string value)
+int ConfigTheme::setParameter(string parameter, string value)
 {
     QRegExp rx("#[A-Fa-f0-9]{6}");
     if(parameter.compare("theme")==0){
@@ -130,40 +130,47 @@ void ConfigTheme::setParameter(string parameter, string value)
             theme_fade_color=value;}
         else{
             theme_fade_color=DEFAULTTHEMEFADECOLOR;
+            return -1;
         }
     } else if(parameter.compare("theme_wall_color_1")==0){
         if (rx.exactMatch(QString::fromStdString(value))){
             theme_wall_color_1=value;}
         else{
             theme_wall_color_1=DEFAULTTHEMEWALLCOLOR;
+            return -1;
         }
     } else if(parameter.compare("theme_wall_color_2")==0){
         if (rx.exactMatch(QString::fromStdString(value))){
             theme_wall_color_2=value;}
         else{
             theme_wall_color_2=DEFAULTTHEMEWALLCOLOR;
+            return -1;
         }
     } else if(parameter.compare("theme_floor_color_1")==0){
         if (rx.exactMatch(QString::fromStdString(value))){
             theme_floor_color_1=value;}
         else{
             theme_floor_color_1=DEFAULTTHEMEFLOORCOLOR1;
+            return -1;
         }
     } else if(parameter.compare("theme_floor_color_2")==0){
         if (rx.exactMatch(QString::fromStdString(value))){
             theme_floor_color_2=value;}
         else{
             theme_floor_color_2=DEFAULTTHEMEFLOORCOLOR2;
+            return -1;
         }
     } else if(parameter.compare("theme_heading_color")==0){
         if (rx.exactMatch(QString::fromStdString(value))){
             theme_heading_color=value;}
         else{
             theme_heading_color=DEFAULTTHEMEHEADINGCOLOR;
+            return -1;
         }
     } else if(parameter.compare("theme_overlay_image")==0){
         theme_overlay_image=value;
     }
+    return 0;
 }
 
 void ConfigTheme::setToDefaultConfiguration()

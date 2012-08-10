@@ -1,7 +1,8 @@
 /**
 * \class ConfigCdRom
 * This class is responsible for the Cd-Rom Configuration
-*/#ifndef CONFIGCDROM_H
+*/
+#ifndef CONFIGCDROM_H
 #define CONFIGCDROM_H
 #include <vector>
 #include <string>
@@ -22,7 +23,7 @@ public:
     void pushBackCDRomImage(string s);
     void erasCDRomImageAt(int position);
 
-    void setParameter(string parameter,string value);
+    int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
 };
 

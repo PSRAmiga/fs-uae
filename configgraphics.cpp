@@ -375,157 +375,182 @@ int static strToInt(string s){
 
 ////////////////////////////////////////////////////////////////////////////
 
-void ConfigGraphics::setParameter(string parameter, string value)
+int ConfigGraphics::setParameter(string parameter, string value)
 {
     if(parameter.compare("fullscreen")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             fullscreen=value;}
         else{
             fullscreen=DEFAULTFULLSCREEN;
+            return -1;
         }
     } else if(parameter.compare("fullscreen_width")==0){
         if (isNumber(value)){
             fullscreen_width=value;
         }else{
             fullscreen_width=DEFAULTFULLSCREENWIDTH;
+            return -1;
         }
     } else if(parameter.compare("fullscreen_height")==0){
         if (isNumber(value)){
             fullscreen_height=value;
         }else{
             fullscreen_height=DEFAULTFULLSCREENHEIGHT;
+            return -1;
         }
     } else if(parameter.compare("window_width")==0){
         if (isNumber(value)){
             window_width=value;
         }else{
             window_width=DEFAULTWINDOWWIDTH;
+            return -1;
         }
     } else if(parameter.compare("window_height")==0){
         if (isNumber(value)){
             window_height=value;
         }else{
             window_height=DEFAULTWINDOWHEIGHT;
+            return -1;
         }
     } else if(parameter.compare("window_resizable")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             window_resizable=value;}
         else{
             window_resizable=DEFAULTWINDOWRESIZABLE;
+            return -1;
         }
     } else if(parameter.compare("fsaa")==0){
         if ((value.compare("0")==0)||(value.compare("2")==0)||(value.compare("4")==0)||(value.compare("8")==0)){
             fsaa=value;}
         else{
             fsaa=DEFAULTFSAA;
+            return -1;
         }
     } else if(parameter.compare("keep_aspect")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             keep_aspect=value;}
         else{
             keep_aspect=DEFAULTKEEPASPECT;
+            return -1;
         }
     } else if(parameter.compare("scanlines")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             scanlines=value;}
         else{
             scanlines=DEFAULTSCANLINES;
+            return -1;
         }
     } else if(parameter.compare("rtg_scanlines")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             rtg_scanlines=value;}
         else{
             rtg_scanlines=DEFAULTRTGSCANLINES;
+            return -1;
         }
     } else if(parameter.compare("scanlines_dark")==0){
         if (isNumber(value) && strToInt(value)>=0 && strToInt(value)<=100){
             scanlines_dark=value;
         }else{
             scanlines_dark=DEFAULTSCANLINESDARK;
+            return -1;
         }
     } else if(parameter.compare("scanlines_light")==0){
         if (isNumber(value) && strToInt(value)>=0 && strToInt(value)<=100){
             scanlines_light=value;
         }else{
             scanlines_light=DEFAULTSCANLINESLIGHT;
+            return -1;
         }
     } else if(parameter.compare("shader")==0){
         if ((value.compare("")==0)||(value.compare("crt")==0)||(value.compare("curvature")==0)||(value.compare("scanline-3x")==0)||(value.compare("heavybloom")==0)||(value.compare("simplebloom")==0)||(value.compare("edge-detection")==0)||(value.compare("lanczos-6tap")==0)||(value.compare("hq2x")==0)||(value.compare("scale2x")==0)){
             shader=value;}
         else{
             shader=DEFAULTSHADER;
+            return -1;
         }
     } else if(parameter.compare("low_resolution")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             low_resolution=value;}
         else{
             low_resolution=DEFAULTLOWRESOLUTION;
+            return -1;
         }
     } else if(parameter.compare("line_doubling")==0){
         if ((value.compare("0")==0)||(value.compare("1")==0)){
             line_doubling=value;}
         else{
             line_doubling=DEFAULTLINEDOUBLING;
+            return -1;
         }
     } else if(parameter.compare("scale_x")==0){
         if (isFloat(value)){
             scale_x=value;
         }else{
             scale_x=DEFAULTSCALEX;
+            return -1;
         }
     } else if(parameter.compare("scale_y")==0){
         if (isFloat(value)){
             scale_y=value;
         }else{
             scale_y=DEFAULTSCALEY;
+            return -1;
         }
     } else if(parameter.compare("align_x")==0){
         if (isFloat(value)){
             align_x=value;
         }else{
             align_x=DEFAULTALIGNX;
+            return -1;
         }
     } else if(parameter.compare("align_y")==0){
         if (isFloat(value)){
             align_y=value;
         } else {
             align_y=DEFAULTALIGNY;
+            return -1;
         }
     } else if(parameter.compare("zoom")==0){
         if ((value.compare("auto")==0)||(value.compare("full")==0)||(value.compare("640x400")==0)||(value.compare("640x400+border")==0)||(value.compare("640x480")==0)||(value.compare("640x480+border")==0)||(value.compare("640x512")==0)||(value.compare("640x512+border")==0)){
             zoom=value;
         } else {
             zoom=DEFAULTZOOM;
+            return -1;
         }
     } else if(parameter.compare("texture_filter")==0){
         if ((value.compare("linear")==0)||(value.compare("nearest")==0)){
             texture_filter=value;}
         else{
             texture_filter=DEFAULTTEXTUREFILTER;
+            return -1;
         }
     } else if(parameter.compare("video_sync")==0){
         if ((value.compare("auto")==0)||(value.compare("off")==0)||(value.compare("vblank")==0)||(value.compare("full")==0)){
             video_sync=value;}
         else{
             video_sync=DEFAULTVIDEOSYNC;
+            return -1;
         }
     } else if(parameter.compare("video_sync_method")==0){
         if ((value.compare("finish-swap-finish")==0)||(value.compare("swap")==0)||(value.compare("swap-finish")==0)||(value.compare("finish-sleep-swap-finish")==0)||(value.compare("sleep-swap-finish")==0)||(value.compare("swap-fence")==0)||(value.compare("swap-sleep-fence")==0)){
             video_sync_method=value;}
         else{
             video_sync_method=DEFAULTVIDEOSYNCMETHOD;
+            return -1;
         }
     } else if(parameter.compare("video_format")==0){
         if ((value.compare("bgra")==0)||(value.compare("rgba")==0)){
             video_format=value;}
         else{
             video_format=DEFAULTVIDEOFORMAT;
+            return -1;
         }
     } else if(parameter.compare("texture_format")==0){
         if ((value.compare("rgb")==0)||(value.compare("rgb8")==0)||(value.compare("rgba")==0)||(value.compare("rgba8")==0)){
             texture_format=value;}
         else{
             texture_format=DEFAULTTEXTUREFORMAT;
+            return -1;
         }
     } else if(parameter.compare("viewport")==0){
         /* 74 40 640 400 => 74 36 640 400
@@ -534,23 +559,24 @@ void ConfigGraphics::setParameter(string parameter, string value)
         QStringList viewportList = QString::fromStdString(value).split(" ");
         if(viewportList.count()!=9){
             viewport=DEFAULTVIEWPORT;
-            return;
+           return -1;
         }
         if(viewportList.at(4).compare("=>")!=0){
             viewport=DEFAULTVIEWPORT;
-            return;
+            return -1;
         }
         for(int i=0;i<viewportList.count();i++){
             if (i!=4){
                 if (((isNumber(viewportList.at(i).toStdString())==false) && (viewportList.at(i).toStdString().compare("*")!=0))||
                         (isNumber(viewportList.at(i).toStdString()) && strToInt(viewportList.at(i).toStdString())<0)){
                     viewport=DEFAULTVIEWPORT;
-                    return;
+                    return -1;
                 }
             }
         }
         viewport=value;
     }
+    return 0;
 }
 
 void ConfigGraphics::setToDefaultConfiguration()

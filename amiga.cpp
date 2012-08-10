@@ -27,10 +27,18 @@
 #include <QColorDialog>
 #include <cstdlib>
 
+#include <QKeyEvent>
+
 #include <QApplication>
 #include <QDesktopWidget>
 #include <sys/stat.h>
 using namespace std;
+
+void static showAlert(string message){
+    QMessageBox msg;
+    msg.setText(QString::fromStdString(message));
+    msg.exec();
+}
 
 void static checkFoldersExistence(){
     char *username=getenv("USER");
@@ -38,14 +46,10 @@ void static checkFoldersExistence(){
     string italianFolder="/home/"+string(username)+"/Documenti/FS-UAE";     //per testare il msg d'errore scrivere Documenti con la D minuscola
     string englishFolder="/home/"+string(username)+"/Documents/FS-UAE";
     if ((stat(italianFolder.c_str(),&st) != 0)&&(stat(englishFolder.c_str(),&st) != 0)){
-        QMessageBox msg;
-        msg.setText("FS-UAE folders not found. You must start FS-UAE for the first time to create FS-UAE folders. FS-UAE wil be now launched.\nPress F12 to enter menu, then navigate to the X button in the top right corner with the cursor keys and finally press Return to quit FS-UAE.");
-        msg.exec();
+        showAlert("FS-UAE folders not found. You must start FS-UAE for the first time to create FS-UAE folders. FS-UAE wil be now launched.\nPress F12 to enter menu, then navigate to the X button in the top right corner with the cursor keys and finally press Return to quit FS-UAE.");
         int returnValue=system("fs-uae"); //per testare il msg d'errore fare system("fs-uaeeee")
         if (returnValue!=0){
-            QMessageBox msg2;
-            msg2.setText("FS-UAE is not installed in your system, please install it and relaunch this application.");
-            msg2.exec();
+            showAlert("FS-UAE is not installed in your system, please install it and relaunch this application.");
             exit(0);
         }
     }
@@ -68,7 +72,8 @@ Amiga::Amiga(QWidget *parent) :
     //allow only numeric input
     ui->audioBufferLineEdit->setValidator(new QIntValidator(ui->audioBufferLineEdit));
     ui->serverPortLineEdit->setValidator(new QIntValidator(ui->serverPortLineEdit));
-    //allow only numeric/* input
+    ui->mouseSpeedLineEdit->setValidator(new QIntValidator(ui->mouseSpeedLineEdit));
+    //allow only numeric or * input
     QRegExp rx("[*]|[0-9]{1,4}");
     QValidator *validator = new QRegExpValidator(rx, this);
     ui->viewportIn1LineEdit->setValidator(validator);
@@ -185,6 +190,7 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(miscConfiguration.getAutomaticInputGrabConfigString())) {myfile << miscConfiguration.getAutomaticInputGrabConfigString() << endl;}
     if (!isEmptyString(miscConfiguration.getBsdSocketLibraryConfigString())) {myfile << miscConfiguration.getBsdSocketLibraryConfigString() << endl;}
     if (!isEmptyString(miscConfiguration.getAudioBufferConfigString())) {myfile << miscConfiguration.getAudioBufferConfigString() << endl;}
+    if (!isEmptyString(miscConfiguration.getMouseSpeedConfigString())) {myfile << miscConfiguration.getMouseSpeedConfigString() << endl;}
     if (!isEmptyString(miscConfiguration.getTitleConfigString())) {myfile << miscConfiguration.getTitleConfigString() << endl;}
     if (!isEmptyString(miscConfiguration.getSubTitleConfigString())) {myfile << miscConfiguration.getSubTitleConfigString() << endl;}
     if (!isEmptyString(miscConfiguration.getNetPlayServerConfigString())) {myfile << miscConfiguration.getNetPlayServerConfigString() << endl;}
@@ -212,6 +218,18 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(themeConfiguration.getWallColor2ConfigString())) {myfile << themeConfiguration.getWallColor2ConfigString() << endl;}
 
     myfile.close();
+}
+
+void Amiga::keyPressEvent(QKeyEvent *e)
+{
+    if(ui->pushButton->hasFocus()){
+        switch(e->key()){
+        case Qt::Key_Backspace : ui->pushButton->setText("keyboard_key_backspace");
+        case Qt::Key_Tab : ui->pushButton->setText("keyboard_key_tab");
+        case Qt::Key_Clear : ui->pushButton->setText("keyboard_key_clear");
+        case Qt::Key_Return : ui->pushButton->setText("keyboard_key_return");
+        }
+    }
 }
 
 void Amiga::on_saveConfigToolButton_clicked()
@@ -267,7 +285,7 @@ int Amiga::getConfigurationAreaFromParameterName(string parameterName){
                (parameterName.compare("base_dir")==0)||(parameterName.compare("kickstarts_dir")==0)||(parameterName.compare("save_states_dir")==0)||
                (parameterName.compare("floppy_overlays_dir")==0)||(parameterName.compare("flash_memory_dir")==0)||(parameterName.compare("controllers_dir")==0)||
                (parameterName.compare("logs_dir")==0)||(parameterName.compare("hard_drives_dir")==0)||(parameterName.compare("cdroms_dir")==0)||
-               (parameterName.compare("floppies_dir")==0)||(parameterName.compare("netplay_password")==0)){
+               (parameterName.compare("floppies_dir")==0)||(parameterName.compare("netplay_password")==0)||(parameterName.compare("uae_input.mouse_speed")==0)){
         return 9;
     } else {
         return -1;
@@ -280,7 +298,7 @@ void Amiga::parseLine(string line){
 
     int separatorPosition=line.find_first_of(" = ");
     string parameterName=line.substr(0,separatorPosition);
-    string parameterValue=line.substr(separatorPosition+3,line.length()-1);
+    string parameterValue=line.substr(separatorPosition+3,line.length()-1); ///////////////////// -1
 
     //bisogna capire in quale area di configurazione indirizzarlo
     //NB se non trovo nessun parametro con quel nome significa che il parametro non esiste (getConfigurationAreaFromParameterName ritorna -1)
@@ -288,23 +306,41 @@ void Amiga::parseLine(string line){
 
     int configArea=getConfigurationAreaFromParameterName(parameterName);
     if (configArea==1){
-        chipsetConfiguration.setParameter(parameterName,parameterValue);
+        if (chipsetConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     } else if (configArea==2){
-        ramConfiguration.setParameter(parameterName,parameterValue);
+        if (ramConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     } else if (configArea==3){
-        floppyConfiguration.setParameter(parameterName,parameterValue);
+        if (floppyConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     } else if (configArea==4){
-        cdromConfiguration.setParameter(parameterName,parameterValue);
+        if (cdromConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     } else if (configArea==5){
-        hardDiskConfiguration.setParameter(parameterName,parameterValue);
+        if (hardDiskConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     } else if (configArea==6){
-        //inputConfiguration.setParameter(parameterName,parameterValue);
+        /* if (inputConfiguration.setParameter(parameterName,parameterValue)==-1){
+           showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }*/
     } else if (configArea==7){
-        graphicsConfiguration.setParameter(parameterName,parameterValue);
+        if (graphicsConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     } else if (configArea==8){
-        themeConfiguration.setParameter(parameterName,parameterValue);
+        if (themeConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     } else if (configArea==9){
-        miscConfiguration.setParameter(parameterName,parameterValue);
+        if (miscConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+        }
     }
 }
 
@@ -362,8 +398,6 @@ void Amiga::checkConfigurationConsistency()
 
 
     /*controlli da fare:
-
-    7-with borders è disabilitato con full e auto
     8-controllo joystick mutex
 
 
@@ -373,9 +407,7 @@ void Amiga::checkConfigurationConsistency()
     */
     if (message.compare("Following configuration inconsistencies have been found and resolved:\n\n")==0){
         return;}
-    QMessageBox msg;
-    msg.setText(QString::fromStdString(message));
-    msg.exec();
+    showAlert(message);
 }
 
 void Amiga::updateGraphicsFromInternalConfiguration(){
@@ -842,6 +874,10 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string audio_buffer_target_bytes=miscConfiguration.getAudioBufferString();
     ui->audioBufferLineEdit->setText(QString::fromStdString(audio_buffer_target_bytes));
 
+    //MOUSE SPEED
+    string mouse_speed=miscConfiguration.getMouseSpeedString();
+    ui->mouseSpeedLineEdit->setText(QString::fromStdString(mouse_speed));
+
     //TITLE
     string title=miscConfiguration.getTitleString();
     ui->menuTitleLineEdit->setText(QString::fromStdString(title));
@@ -949,6 +985,7 @@ void Amiga::on_loadConfigToolButton_clicked()
 
     //poi leggo riga per riga, aggiorno la configurazione interna e aggiorno i componenti
 
+    string errorMessage;
     string line;
     ifstream myfile(fileName.toStdString().c_str());
     if (myfile.is_open())
@@ -956,10 +993,20 @@ void Amiga::on_loadConfigToolButton_clicked()
         while (myfile.good())
         {
             getline (myfile,line);
+            int separatorPosition=line.find_first_of(" = ");
+            string parameterName=line.substr(0,separatorPosition);
+            if(getConfigurationAreaFromParameterName(parameterName)==-1 && line.compare("")!=0 && line.compare("[config]")!=0){
+                errorMessage.append("-Line \""+line+"\" has an invalid parameter name\n");
+            }
             parseLine(line);
         }
         myfile.close();
     }
+
+    if (errorMessage.compare("")!=0){
+        showAlert(errorMessage);
+    }
+
 
     checkConfigurationConsistency();// --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
 
@@ -2211,4 +2258,46 @@ void Amiga::on_themeFolderPushButton_clicked()
     QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
     ui->themeFolderLineEdit->setText(dir);
     themeConfiguration.setParameter("theme",dir.toStdString());
+}
+
+void Amiga::on_mouseSpeedLineEdit_textChanged(const QString &arg1)
+{
+    miscConfiguration.setParameter("uae_input.mouse_speed",arg1.toStdString());
+}
+
+void Amiga::on_pushButton_clicked()
+{
+
+    /* QKeyEvent *e=QKeyEven;
+
+    switch( e->key() )
+    {
+    case Qt::Key_L:
+        light = !light;
+
+        if( light )
+            glEnable( GL_LIGHTING );
+        else
+            glDisable( GL_LIGHTING );
+
+        break;
+
+    case Qt::Key_F:
+        filter++;
+        if( filter > 2 )
+            filter = 0;
+
+        break;
+
+    case Qt::Key_Left:
+        droty -= 0.01f;
+
+        break;
+
+        ...
+
+    default:
+        NeHeWidget::keyPressEvent( e );
+    }
+}*/
 }

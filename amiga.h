@@ -211,6 +211,11 @@ private slots:
     void on_themeOverlayImagerPushButton_clicked();
     void on_themeFolderPushButton_clicked();
 
+    void on_mouseSpeedLineEdit_textChanged(const QString &arg1);
+
+    void on_pushButton_clicked();
+    void keyPressEvent(QKeyEvent *e);
+
 private:
     Ui::Amiga *ui;
     ConfigChipset chipsetConfiguration;
