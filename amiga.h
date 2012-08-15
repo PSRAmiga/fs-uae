@@ -14,6 +14,7 @@
 #include <configcdrom.h>
 #include <configharddisks.h>
 #include <configgraphics.h>
+#include <configinput.h>
 #include <configtheme.h>
 #include <configmisc.h>
 /// Create a new main window: Amiga Gui
@@ -210,11 +211,16 @@ private slots:
     void on_headColorPushButton_clicked();
     void on_themeOverlayImagerPushButton_clicked();
     void on_themeFolderPushButton_clicked();
-
     void on_mouseSpeedLineEdit_textChanged(const QString &arg1);
 
     void on_pushButton_clicked();
     void keyPressEvent(QKeyEvent *e);
+
+    void on_readKeyPushButton_clicked();
+
+    void on_customInputMappingAddPushButton_clicked();
+
+    void on_customInputMappingRemovePushButton_clicked();
 
 private:
     Ui::Amiga *ui;
@@ -223,7 +229,7 @@ private:
     ConfigFloppy floppyConfiguration;
     ConfigCDRom cdromConfiguration;
     ConfigHardDisks hardDiskConfiguration;
-    //input
+    ConfigInput inputConfiguration;
     ConfigGraphics graphicsConfiguration;
     ConfigTheme themeConfiguration;
     ConfigMisc miscConfiguration;
@@ -237,6 +243,9 @@ private:
     void updateGraphicsFromInternalConfiguration();
     int getConfigurationAreaFromParameterName(string parameterName);
     void saveConfigInFile(string fileName);
+    void loadDefaultValues();
+
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 #endif // AMIGA_H

@@ -24,8 +24,8 @@ public:
     string getFloppyDriveSpeedConfigString();   ///< Represents the string of floppy_drive_speed to be written in Config File. If floppy_drive_speed is the default value [100], it returns an empty string.\n floppy_drive_speed = 100
     string getFloppyDriveSpeedString();
 
-    int getFloppyImageSize();                   ///< Represent the size of the floppy
-    string getFloppyImageAt(int position);      ///< Return the string that represet the Floppy Image
+    int getFloppyImageSize();                   ///< Returns the size of the floppy
+    string getFloppyImageAt(int position);      ///< Returns the string that represet the Floppy Image
     void pushBackFloppyImage(string s);         ///< Add new Floppy Image
     void eraseFloppyImageAt(int position);      ///< Erase a Flopy Image
 

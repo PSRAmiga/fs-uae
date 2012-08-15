@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -148,7 +148,7 @@
        <item>
         <widget class="QComboBox" name="amigaModelComboBox">
          <property name="toolTip">
-          <string>Amiga model list</string>
+          <string>Select Amiga model</string>
          </property>
          <item>
           <property name="text">
@@ -790,7 +790,7 @@
        <normaloff>:/Images/Images/linguist-filesave.png</normaloff>:/Images/Images/linguist-filesave.png</iconset>
      </attribute>
      <attribute name="title">
-      <string>Floppies</string>
+      <string>Floppy</string>
      </attribute>
      <widget class="QWidget" name="verticalLayoutWidget_3">
       <property name="geometry">
@@ -1174,16 +1174,6 @@
        <string>0/20</string>
       </property>
      </widget>
-     <widget class="QWidget" name="widget_2" native="true">
-      <property name="geometry">
-       <rect>
-        <x>340</x>
-        <y>330</y>
-        <width>120</width>
-        <height>80</height>
-       </rect>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="cdromMenu">
      <attribute name="icon">
@@ -1233,6 +1223,9 @@
         <widget class="QToolButton" name="cdromDrive0ToolButton">
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Load CD-ROM Image</string>
          </property>
          <property name="text">
           <string>...</string>
@@ -1289,6 +1282,9 @@
         <height>27</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>Remove CD-ROM image(s)</string>
+      </property>
       <property name="text">
        <string>Remove selected</string>
       </property>
@@ -1317,6 +1313,9 @@
       </property>
       <property name="acceptDrops">
        <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Add CD-ROM image(s)</string>
       </property>
       <property name="text">
        <string>Add file(s)</string>
@@ -1365,7 +1364,7 @@
        <normaloff>:/Images/Images/drive-harddisk.png</normaloff>:/Images/Images/drive-harddisk.png</iconset>
      </attribute>
      <attribute name="title">
-      <string>Hard Disks</string>
+      <string>HD</string>
      </attribute>
      <widget class="QWidget" name="verticalLayoutWidget_9">
       <property name="geometry">
@@ -2385,10 +2384,10 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>450</y>
-        <width>721</width>
-        <height>21</height>
+        <x>440</x>
+        <y>430</y>
+        <width>421</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="html">
@@ -2396,7 +2395,8 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;If you have more than one device of the same model, the 2th is referred to by appending a space and #2. Device names are case insensitive. Devo garantire il mutex se manometto la configurazione?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;Devo garantire il mutex se manometto la configurazione?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;Not all combinations of joystick_port_n and joystick_port_n_mode are valid. For instance, a host joystick cannot currently be mapped to an Amiga mouse.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget_6">
@@ -2439,7 +2439,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort0ModeAutoRadioButton">
          <property name="text">
-          <string>Auto</string>
+          <string>No Amiga Device</string>
          </property>
          <property name="checked">
           <bool>false</bool>
@@ -2473,6 +2473,9 @@ p, li { white-space: pre-wrap; }
       <layout class="QVBoxLayout" name="joystickPort1ModePanel">
        <item>
         <widget class="QRadioButton" name="joystickPort1ModeMouseRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Mouse</string>
          </property>
@@ -2504,7 +2507,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort1ModeAutoRadioButton">
          <property name="text">
-          <string>Auto</string>
+          <string>No Amiga Device</string>
          </property>
          <property name="checked">
           <bool>false</bool>
@@ -2519,23 +2522,10 @@ p, li { white-space: pre-wrap; }
         <x>450</x>
         <y>310</y>
         <width>181</width>
-        <height>131</height>
+        <height>61</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort2ModePanel">
-       <item>
-        <widget class="QRadioButton" name="joystickPort2ModeMouse">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
        <item>
         <widget class="QRadioButton" name="joystickPort2ModeJoystickRadioButton">
          <property name="text">
@@ -2544,16 +2534,9 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="joystickPort2ModeCD32GamepadRadioButton">
-         <property name="text">
-          <string>CD32 Gamepad</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QRadioButton" name="joystickPort2ModeAuto">
          <property name="text">
-          <string>Auto</string>
+          <string>No Amiga Device</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -2568,23 +2551,10 @@ p, li { white-space: pre-wrap; }
         <x>670</x>
         <y>310</y>
         <width>181</width>
-        <height>131</height>
+        <height>61</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort3ModePanel">
-       <item>
-        <widget class="QRadioButton" name="joystickPort3ModeMouseRadioButton">
-         <property name="text">
-          <string>Mouse</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
        <item>
         <widget class="QRadioButton" name="joystickPort3ModeJoystickRadioButton">
          <property name="text">
@@ -2593,16 +2563,9 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="joystickPort3ModeCD32GamepadRadioButton">
-         <property name="text">
-          <string>CD32 Gamepad</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QRadioButton" name="joystickPort3ModeAutoRadioButton">
          <property name="text">
-          <string>Auto</string>
+          <string>No Amiga Device</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -2908,7 +2871,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort0NothingRadioButton">
          <property name="text">
-          <string>Nothing</string>
+          <string>No Host Device</string>
          </property>
         </widget>
        </item>
@@ -3103,7 +3066,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort1NothingRadioButton">
          <property name="text">
-          <string>Nothing</string>
+          <string>No Host Device</string>
          </property>
         </widget>
        </item>
@@ -3139,6 +3102,9 @@ p, li { white-space: pre-wrap; }
         <widget class="QRadioButton" name="joystickPort2KeyboardRadioButton">
          <property name="text">
           <string>Keyboard</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -3292,7 +3258,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort2NothingRadioButton">
          <property name="text">
-          <string>Nothing</string>
+          <string>No Host Device</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -3331,6 +3297,9 @@ p, li { white-space: pre-wrap; }
         <widget class="QRadioButton" name="joystickPort3KeyboardRadioButton">
          <property name="text">
           <string>Keyboard</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -3484,7 +3453,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort3NothingRadioButton">
          <property name="text">
-          <string>Nothing</string>
+          <string>No Host Device</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -3582,6 +3551,225 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>PushButton</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ramMenu">
+     <attribute name="icon">
+      <iconset resource="ICO.qrc">
+       <normaloff>:/Images/Images/keyboard_key.png</normaloff>:/Images/Images/keyboard_key.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Input Map</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>330</y>
+        <width>511</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] All'avvio vengono controllate se esistono le cartelle di FS-UAE&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] Tutti i parametri sono settati ai valori di default&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] LOAD: aggiorno la config interna e quindi la grafica&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] SALVA: leggo la config interna e le salvo su file&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] appena clicco/modifico la grafica aggiorno la config interna&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] PLAY: la config attuale viene salvata in un file nascosto temporaneo così avvio fs-uae con lo stato effettivamente corrente, non con l'ultimo salvato su file&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Al salvataggio il programma garantisce la coerenza perchè la grafica abilita/disabilita i vari componenti MA ma potrei manomettere il file con configurazioni non ammissibili o fare errori con la grafica (x es. seleziono CDTV, carico una ISO, cambio modello in A500, la zona CD viene disabilitata ma la ISO resta caricata anche se A500 non ha il lettore CD!)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--&amp;gt; Prima di salvare, prima di avviare e al caricamento da file viene testata la coerenza della config e corretta (NON nel file, così poi SE voglio sovrascrivo il file errato&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Se nel file di config c'è una riga sbagliata (un parametro inesistente) la riga viene ignorata, se invece il parametro esiste ma il valore è invalido viene settato al valore di default&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;==============================================&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[PROGRAM ARGUMENTS]&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] fs-uae config-file&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] You can also specify any configuration option with --key=value&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(e.g: fs-uae --floppy-drive-0=/path/to/adf)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>330</y>
+        <width>331</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;DA FARE:&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# configurazione joystick personalizzati&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;# immagini theme?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# Capire come fare l'installazione della documentazione&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# testare i check delle cartelle di FS-UAE&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# nel controllo consistenza devo mettere azioni/tasti validi? (il programma già controlla l'associazione 1:1)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;#BUG: nel controllo consistenza devo mettere l'estensioni sui file?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="readKeyPushButton">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>60</y>
+        <width>181</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Read Key from Keyboard</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="joystickPort0Label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>201</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>[CUSTOMIZE INPUT MAPPING]</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="customInputMappingRemovePushButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>100</y>
+        <width>151</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Remove floppy image(s)</string>
+      </property>
+      <property name="text">
+       <string>Remove selected</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ICO.qrc">
+        <normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</iconset>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="customInputMappingListWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>127</y>
+        <width>801</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::MultiSelection</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="joystickPort0Label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>221</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Action to be remapped:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="actionsComboBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>291</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>action_mouse_0_horiz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_alt_right</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_mouse_0_vert</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="keyboardEventLineEdit">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>60</y>
+        <width>291</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="customInputMappingAddPushButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Add floppy image(s)</string>
+      </property>
+      <property name="text">
+       <string>Add</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ICO.qrc">
+        <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
+      </property>
+     </widget>
+     <widget class="QLabel" name="joystickPort0Label_6">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>221</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New Key:</string>
       </property>
      </widget>
     </widget>
@@ -3997,6 +4185,9 @@ p, li { white-space: pre-wrap; }
         <width>201</width>
         <height>27</height>
        </size>
+      </property>
+      <property name="toolTip">
+       <string>Select Shader</string>
       </property>
       <item>
        <property name="text">
@@ -4463,6 +4654,9 @@ p, li { white-space: pre-wrap; }
         <height>27</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Select Video Synchronization Type</string>
+      </property>
       <item>
        <property name="text">
         <string>auto</string>
@@ -4510,6 +4704,9 @@ p, li { white-space: pre-wrap; }
         <width>201</width>
         <height>27</height>
        </size>
+      </property>
+      <property name="toolTip">
+       <string>Select Video Synchronization Method</string>
       </property>
       <item>
        <property name="text">
@@ -4998,7 +5195,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5010,6 +5207,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="themeFolderPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5042,6 +5242,9 @@ p, li { white-space: pre-wrap; }
         <width>97</width>
         <height>27</height>
        </rect>
+      </property>
+      <property name="toolTip">
+       <string>Click to select a Color</string>
       </property>
       <property name="text">
        <string>Select Color</string>
@@ -5092,6 +5295,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="wallColor1PushButton">
+         <property name="toolTip">
+          <string>Click to select a Color</string>
+         </property>
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -5118,6 +5324,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="wallColor2PushButton">
+         <property name="toolTip">
+          <string>Click to select a Color</string>
+         </property>
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -5144,6 +5353,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="floorColor1PushButton">
+         <property name="toolTip">
+          <string>Click to select a Color</string>
+         </property>
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -5170,6 +5382,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="floorColor2PushButton">
+         <property name="toolTip">
+          <string>Click to select a Color</string>
+         </property>
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -5196,6 +5411,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="fadeColorPushButton">
+         <property name="toolTip">
+          <string>Click to select a Color</string>
+         </property>
          <property name="text">
           <string>Select Color</string>
          </property>
@@ -5247,7 +5465,7 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
          <property name="text">
-          <string>da fare il suo codice</string>
+          <string/>
          </property>
          <property name="maxLength">
           <number>32000</number>
@@ -5259,6 +5477,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="themeOverlayImagerPushButton">
+         <property name="toolTip">
+          <string>Select an Image</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5352,7 +5573,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>269</x>
         <y>13</y>
-        <width>271</width>
+        <width>281</width>
         <height>22</height>
        </rect>
       </property>
@@ -5454,6 +5675,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeKickstartDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5521,6 +5745,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alernativeSaveStatesDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5588,6 +5815,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeFloppyOverlaysDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5655,6 +5885,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeFlashMemoryDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5722,6 +5955,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeControllersDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5789,6 +6025,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeLogsDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5856,6 +6095,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeHardDrivesDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5923,6 +6165,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeCdromsDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -5990,6 +6235,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeFloppiesDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -6109,6 +6357,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QToolButton" name="alternativeBaseDirPushButton">
+         <property name="toolTip">
+          <string>Select a folder</string>
+         </property>
          <property name="text">
           <string>...</string>
          </property>
@@ -6328,72 +6579,6 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="ramMenu">
-     <attribute name="title">
-      <string>DA FARE</string>
-     </attribute>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>511</width>
-        <height>451</height>
-       </rect>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] All'avvio vengono controllate se esistono le cartelle di FS-UAE&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] Tutti i parametri sono settati ai valori di default&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] LOAD: aggiorno la config interna e quindi la grafica&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] SALVA: leggo la config interna e le salvo su file&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] appena clicco/modifico la grafica aggiorno la config interna&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] PLAY: la config attuale viene salvata in un file nascosto temporaneo così avvio fs-uae con lo stato effettivamente corrente, non con l'ultimo salvato su file&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Al salvataggio il programma garantisce la coerenza perchè la grafica abilita/disabilita i vari componenti MA ma potrei manomettere il file con configurazioni non ammissibili o fare errori con la grafica (x es. seleziono CDTV, carico una ISO, cambio modello in A500, la zona CD viene disabilitata ma la ISO resta caricata anche se A500 non ha il lettore CD!)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--&amp;gt; Prima di salvare, prima di avviare e al caricamento da file viene testata la coerenza della config e corretta (NON nel file, così poi SE voglio sovrascrivo il file errato&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Se nel file di config c'è una riga sbagliata (un parametro inesistente) la riga viene ignorata, se invece il parametro esiste ma il valore è invalido viene settato al valore di default&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;==============================================&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[PROGRAM ARGUMENTS]&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] fs-uae config-file&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] You can also specify any configuration option with --key=value&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(e.g: fs-uae --floppy-drive-0=/path/to/adf)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="textEdit_5">
-      <property name="geometry">
-       <rect>
-        <x>530</x>
-        <y>20</y>
-        <width>331</width>
-        <height>371</height>
-       </rect>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;DA FARE:&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# configurazione joystick personalizzati&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;# immagini theme?&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# Capire come fare l'installazione della documentazione&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# testare i check delle cartelle di FS-UAE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </widget>
    </widget>
    <widget class="QToolButton" name="runConfigButton">
     <property name="geometry">
@@ -6434,7 +6619,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="toolTip">
-     <string>Save Configuration</string>
+     <string>Save Current Configuration</string>
     </property>
     <property name="text">
      <string/>

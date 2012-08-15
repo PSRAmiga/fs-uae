@@ -65,6 +65,8 @@ Amiga::Amiga(QWidget *parent) :
 
     checkFoldersExistence();
 
+    loadDefaultValues();
+
     ui->Setup->setCurrentIndex(0);
     //acquire current screen resolution
     ui->fullscreenResolutionXSpinBox->setValue(QApplication::desktop()->width());
@@ -217,6 +219,12 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(themeConfiguration.getWallColor1ConfigString())) {myfile << themeConfiguration.getWallColor1ConfigString() << endl;}
     if (!isEmptyString(themeConfiguration.getWallColor2ConfigString())) {myfile << themeConfiguration.getWallColor2ConfigString() << endl;}
 
+    if (inputConfiguration.getCustomInputMappingSize()>0){
+        for(int i=0;i<inputConfiguration.getCustomInputMappingSize();i++){
+            myfile << inputConfiguration.getCustomInputMappingAt(i) << endl;
+        }
+    }
+
     myfile.close();
 }
 
@@ -231,6 +239,7 @@ void Amiga::keyPressEvent(QKeyEvent *e)
         }
     }
 }
+
 
 void Amiga::on_saveConfigToolButton_clicked()
 {
@@ -263,7 +272,7 @@ int Amiga::getConfigurationAreaFromParameterName(string parameterName){
                ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_label")==0))||
                ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_read_only")==0))){
         return 5;
-    } else if (false){ ///fare joystick!!!
+    } else if (parameterName.substr(0,13).compare("keyboard_key_")==0){
         return 6;
     } else if ((parameterName.compare("fullscreen")==0)||(parameterName.compare("fullscreen_width")==0)||(parameterName.compare("fullscreen_height")==0)||
                (parameterName.compare("window_width")==0)||(parameterName.compare("window_height")==0)||(parameterName.compare("window_resizable")==0)||
@@ -326,9 +335,9 @@ void Amiga::parseLine(string line){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
     } else if (configArea==6){
-        /* if (inputConfiguration.setParameter(parameterName,parameterValue)==-1){
+         if (inputConfiguration.setParameter(parameterName,parameterValue)==-1){
            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
-        }*/
+        }
     } else if (configArea==7){
         if (graphicsConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
@@ -963,6 +972,14 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string theme_heading_color=themeConfiguration.getHeadingColorString();
     ui->headColorPushButton->setText(QString::fromStdString(theme_heading_color));
     ui->headColorPushButton->setStyleSheet(QString("background-color: ").append(theme_heading_color.c_str()));
+
+    //CUSTOM INPUT MAPPING
+    ui->customInputMappingListWidget->clear();
+    if (inputConfiguration.getCustomInputMappingSize()>0){
+        for(int i=0;i<inputConfiguration.getCustomInputMappingSize();i++){
+            ui->customInputMappingListWidget->addItem(QString::fromStdString(inputConfiguration.getCustomInputMappingAt(i)));
+        }
+    }
 }
 
 void Amiga::on_loadConfigToolButton_clicked()
@@ -973,15 +990,7 @@ void Amiga::on_loadConfigToolButton_clicked()
     //devo resettare tutte le impostazioni a default perchè nel file i valori di defult non sono esplicitamente salvati
     //quindi rischierei di vedere i valori dell'ultima config
 
-    chipsetConfiguration.setToDefaultConfiguration();
-    ramConfiguration.setToDefaultConfiguration();
-    floppyConfiguration.setToDefaultConfiguration();
-    cdromConfiguration.setToDefaultConfiguration();
-    hardDiskConfiguration.setToDefaultConfiguration();
-    graphicsConfiguration.setToDefaultConfiguration();
-    themeConfiguration.setToDefaultConfiguration();
-    miscConfiguration.setToDefaultConfiguration();
-    /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
+    loadDefaultValues();
 
     //poi leggo riga per riga, aggiorno la configurazione interna e aggiorno i componenti
 
@@ -1014,8 +1023,7 @@ void Amiga::on_loadConfigToolButton_clicked()
     updateGraphicsFromInternalConfiguration();
 }
 
-void Amiga::on_loadDefaultValuesToolButton_clicked()
-{
+void Amiga::loadDefaultValues(){
     chipsetConfiguration.setToDefaultConfiguration();
     ramConfiguration.setToDefaultConfiguration();
     floppyConfiguration.setToDefaultConfiguration();
@@ -1024,14 +1032,14 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
     graphicsConfiguration.setToDefaultConfiguration();
     themeConfiguration.setToDefaultConfiguration();
     miscConfiguration.setToDefaultConfiguration();
-    /////////////////////////////////////////////ecc per tutti gli altri///////////////////////////////////////////////////
-
-    //devo DISABILITARE/SVUOTARE KICK_EXT_DIR e tutte le cose che di default sarebbero disabilitate/vuote!
-    setFastMemoryDisabled(false);
-    // ui->floppySwappingImagesListWidget->clear();
+    inputConfiguration.setToDefaultConfiguration();
 
     updateGraphicsFromInternalConfiguration();
+}
 
+void Amiga::on_loadDefaultValuesToolButton_clicked()
+{
+    loadDefaultValues();
 }
 
 void Amiga::on_runConfigButton_clicked()
@@ -2265,39 +2273,509 @@ void Amiga::on_mouseSpeedLineEdit_textChanged(const QString &arg1)
     miscConfiguration.setParameter("uae_input.mouse_speed",arg1.toStdString());
 }
 
+
 void Amiga::on_pushButton_clicked()
 {
+    QFormLayout *formLayout = new QFormLayout;
+    QLabel *label = new QLabel;
+    label->setText("Insert your Joystick/GamePad name. If you have more than one device of the same model,\nthe second is referred to by appending a space and #2 (and so on).");
+    QLabel *label2 = new QLabel;
+    label2->setTextFormat(Qt::RichText);
+    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
+    label2->setOpenExternalLinks(true);
+    label2->setText("Custom configurations file can be placed in the directory: Documents/FS-UAE/Controllers/<br>"
+                    "The name of the ini file is the system name of the controller, converted to lowercase,<br>"
+                    "with an underscore between each work. Characters other than letters and numbers are also<br>"
+                    "converted to underscore, and there is never more than one underscore between each word,<br>"
+                    "and the name will not start nor end with underscore.<br><br>"
+                    "<font color='red'>Example:</font> Controller (Xbox 360 Wireless Receiver For Windows) becomes<br>"
+                    "controller_xbox_360_wireless_receiver_for_windows.ini<br><br>"
+                    "Please visit <a href='http://fengestad.no/wp/fs-uae/custom-controller-configuration'>http://fengestad.no/wp/fs-uae/custom-controller-configuration</a> for an example<br>"
+                    "of INI Custom Controller Configuration file.");
+    QLineEdit *nameLineEdit = new QLineEdit;
+    QPushButton *closeButton = new QPushButton("OK");
+    QWidget *window = new QWidget;
+    formLayout->addRow(label);
+    formLayout->addRow(("Name:"), nameLineEdit);
+    formLayout->addRow(label2);
+    formLayout->addRow(closeButton);
+    window->setLayout(formLayout);
+    window->setWindowModality(Qt::ApplicationModal);
+    //connect(closeButton,SIGNAL(clicked()),this,SLOT(close()));
+    //connect(closeButton,SIGNAL(clicked()),this,);
 
-    /* QKeyEvent *e=QKeyEven;
+    //////////////////////////fare in modo di salvare il valore e chiudere la finestra!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    switch( e->key() )
+    window->show();
+}
+
+
+QString getAmigaKeyboardKeysFromKey(int key){
+    /*
+    To map an action, you add a line like this to your configuration file:
+
+    devicename_eventname = actionname
+
+    Here is a specific example, mapping the keyboard key q to the fire button on the primary Amiga joystick (joy_1 is the joystick in joystick port 1):
+
+    keyboard_key_q = action_joy_1_fire_button
+
+
+    LISTA DI TUTI I TASTI: http://fengestad.no/wp/fs-uae/custom-input-mapping ---> sezione "Mapping Keyboard Keys"
+    LISTA DI TUTTE LE AZIONI: http://fengestad.no/wp/fs-uae/input-actions
+
+        <widget class="QComboBox" name="amigaModelComboBox">
+         <property name="toolTip">
+          <string>Select Amiga model</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>A500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>A1000</string>
+          </property>
+         </item>
+        </widget>
+
+    */
+    switch(key)
     {
-    case Qt::Key_L:
-        light = !light;
-
-        if( light )
-            glEnable( GL_LIGHTING );
-        else
-            glDisable( GL_LIGHTING );
-
+    case Qt::Key_Backspace:
+        return QString("keyboard_key_backspace");
         break;
-
+    case Qt::Key_Tab:
+        return QString("keyboard_key_tab");
+        break;
+    case Qt::Key_Clear:
+        return QString("keyboard_key_clear");
+        break;
+    case Qt::Key_Return:
+        return QString("keyboard_key_return");
+        break;
+    case Qt::Key_Pause:
+        return QString("keyboard_key_pause");
+        break;
+    case Qt::Key_Escape:
+        return QString("keyboard_key_escape");
+        break;
+    case Qt::Key_Space:
+        return QString("keyboard_key_space");
+        break;
+    case Qt::Key_Exclam:
+        return QString("keyboard_key_exclaim");
+        break;
+    case Qt::Key_QuoteDbl:
+        return QString("keyboard_key_quotedbl");
+        break;
+    case Qt::Key_QuoteLeft:
+        return QString("keyboard_key_quote");
+        break;
+    case Qt::Key_ParenLeft:
+        return QString("keyboard_key_leftparen");
+        break;
+    case Qt::Key_ParenRight:
+        return QString("keyboard_key_rightparen");
+        break;
+    case Qt::Key_Asterisk:
+        return QString("keyboard_key_asterisk");
+        break;
+    case Qt::Key_Plus:
+        return QString("keyboard_key_plus");
+        break;
+    case Qt::Key_Comma:
+        return QString("keyboard_key_comma");
+        break;
+    case Qt::Key_Minus:
+        return QString("keyboard_key_minus");
+        break;
+    case Qt::Key_Period:
+        return QString("keyboard_key_period");
+        break;
+    case Qt::Key_Slash:
+        return QString("keyboard_key_slash");
+        break;
+    case Qt::Key_Ampersand:
+        return QString("keyboard_key_ampersand");
+        break;
+    case Qt::Key_0:
+        return QString("keyboard_key_0");
+        break;
+    case Qt::Key_1:
+        return QString("keyboard_key_1");
+        break;
+    case Qt::Key_2:
+        return QString("keyboard_key_2");
+        break;
+    case Qt::Key_3:
+        return QString("keyboard_key_3");
+        break;
+    case Qt::Key_4:
+        return QString("keyboard_key_4");
+        break;
+    case Qt::Key_5:
+        return QString("keyboard_key_5");
+        break;
+    case Qt::Key_6:
+        return QString("keyboard_key_6");
+        break;
+    case Qt::Key_7:
+        return QString("keyboard_key_7");
+        break;
+    case Qt::Key_8:
+        return QString("keyboard_key_8");
+        break;
+    case Qt::Key_9:
+        return QString("keyboard_key_9");
+        break;
+    case Qt::Key_Colon:
+        return QString("keyboard_key_colon");
+        break;
+    case Qt::Key_Semicolon:
+        return QString("keyboard_key_semicolon");
+        break;
+    case Qt::Key_Less:
+        return QString("keyboard_key_less");
+        break;
+    case Qt::Key_Equal:
+        return QString("keyboard_key_equals");
+        break;
+    case Qt::Key_Greater:
+        return QString("keyboard_key_greater");
+        break;
+    case Qt::Key_Question:
+        return QString("keyboard_key_question");
+        break;
+    case Qt::Key_At:
+        return QString("keyboard_key_at");
+        break;
+    case Qt::Key_BracketLeft:
+        return QString("keyboard_key_leftbracket");
+        break;
+    case Qt::Key_Backslash:
+        return QString("keyboard_key_backslash");
+        break;
+    case Qt::Key_BracketRight:
+        return QString("keyboard_key_rightbracket");
+        break;
+    case Qt::Key_Underscore:
+        return QString("keyboard_key_underscore");
+        break;
+    case Qt::Key_A:
+        return QString("keyboard_key_a");
+        break;
+    case Qt::Key_B:
+        return QString("keyboard_key_b");
+        break;
+    case Qt::Key_C:
+        return QString("keyboard_key_c");
+        break;
+    case Qt::Key_D:
+        return QString("keyboard_key_d");
+        break;
+    case Qt::Key_E:
+        return QString("keyboard_key_e");
+        break;
     case Qt::Key_F:
-        filter++;
-        if( filter > 2 )
-            filter = 0;
-
+        return QString("keyboard_key_f");
         break;
-
+    case Qt::Key_G:
+        return QString("keyboard_key_g");
+        break;
+    case Qt::Key_H:
+        return QString("keyboard_key_h");
+        break;
+    case Qt::Key_I:
+        return QString("keyboard_key_i");
+        break;
+    case Qt::Key_J:
+        return QString("keyboard_key_j");
+        break;
+    case Qt::Key_K:
+        return QString("keyboard_key_k");
+        break;
+    case Qt::Key_L:
+        return QString("keyboard_key_l");
+        break;
+    case Qt::Key_M:
+        return QString("keyboard_key_m");
+        break;
+    case Qt::Key_N:
+        return QString("keyboard_key_n");
+        break;
+    case Qt::Key_O:
+        return QString("keyboard_key_o");
+        break;
+    case Qt::Key_P:
+        return QString("keyboard_key_p");
+        break;
+    case Qt::Key_Q:
+        return QString("keyboard_key_q");
+        break;
+    case Qt::Key_R:
+        return QString("keyboard_key_r");
+        break;
+    case Qt::Key_S:
+        return QString("keyboard_key_s");
+        break;
+    case Qt::Key_T:
+        return QString("keyboard_key_t");
+        break;
+    case Qt::Key_U:
+        return QString("keyboard_key_u");
+        break;
+    case Qt::Key_V:
+        return QString("keyboard_key_v");
+        break;
+    case Qt::Key_W:
+        return QString("keyboard_key_w");
+        break;
+    case Qt::Key_X:
+        return QString("keyboard_key_x");
+        break;
+    case Qt::Key_Y:
+        return QString("keyboard_key_y");
+        break;
+    case Qt::Key_Z:
+        return QString("keyboard_key_z");
+        break;
+    case Qt::Key_Up:
+        return QString("keyboard_key_up");
+        break;
+    case Qt::Key_Down:
+        return QString("keyboard_key_down");
+        break;
+    case Qt::Key_Right:
+        return QString("keyboard_key_right");
+        break;
     case Qt::Key_Left:
-        droty -= 0.01f;
-
+        return QString("keyboard_key_left");
+        break;
+    case Qt::Key_Insert:
+        return QString("keyboard_key_insert");
+        break;
+    case Qt::Key_Delete:
+        return QString("keyboard_key_delete");
+        break;
+    case Qt::Key_Home:
+        return QString("keyboard_key_home");
+        break;
+    case Qt::Key_End:
+        return QString("keyboard_key_end");
+        break;
+    case Qt::Key_PageUp:
+        return QString("keyboard_key_pageup");
+        break;
+    case Qt::Key_PageDown:
+        return QString("keyboard_key_pagedown");
+        break;
+    case Qt::Key_F1:
+        return QString("keyboard_key_f1");
+        break;
+    case Qt::Key_F2:
+        return QString("keyboard_key_f2");
+        break;
+    case Qt::Key_F3:
+        return QString("keyboard_key_f3");
+        break;
+    case Qt::Key_F4:
+        return QString("keyboard_key_f4");
+        break;
+    case Qt::Key_F5:
+        return QString("keyboard_key_f5");
+        break;
+    case Qt::Key_F6:
+        return QString("keyboard_key_f6");
+        break;
+    case Qt::Key_F7:
+        return QString("keyboard_key_f7");
+        break;
+    case Qt::Key_F8:
+        return QString("keyboard_key_f8");
+        break;
+    case Qt::Key_F9:
+        return QString("keyboard_key_f9");
+        break;
+    case Qt::Key_F10:
+        return QString("keyboard_key_f10");
+        break;
+    case Qt::Key_F11:
+        return QString("keyboard_key_f11");
+        break;
+    case Qt::Key_F12:
+        return QString("keyboard_key_f12");
+        break;
+    case Qt::Key_F13:
+        return QString("keyboard_key_f13");
+        break;
+    case Qt::Key_F14:
+        return QString("keyboard_key_f14");
+        break;
+    case Qt::Key_F15:
+        return QString("keyboard_key_f15");
+        break;
+    case Qt::Key_NumLock:
+        return QString("keyboard_key_numlock");
+        break;
+    case Qt::Key_CapsLock:
+        return QString("keyboard_key_capslock");
+        break;
+    case Qt::Key_ScrollLock:
+        return QString("keyboard_key_scrollock");
+        break;
+    case Qt::Key_Shift:
+        return QString("keyboard_key_rshift");
+        break;
+    case Qt::Key_Control:
+        return QString("keyboard_key_rctrl");
+        break;
+    case Qt::Key_AltGr:
+        return QString("keyboard_key_ralt");
+        break;
+    case Qt::Key_Alt:
+        return QString("keyboard_key_lalt");
+        break;
+    case Qt::Key_Meta:
+        return QString("keyboard_key_rmeta");
+        break;
+    case Qt::Key_Super_R:
+        return QString("keyboard_key_rsuper");
+        break;
+    case Qt::Key_Super_L:
+        return QString("keyboard_key_lsuper");
+        break;
+    case Qt::Key_Mode_switch:
+        return QString("keyboard_key_mode");
+        break;
+    case Qt::Key_Help:
+        return QString("keyboard_key_help");
+        break;
+    case Qt::Key_Print:
+        return QString("keyboard_key_print");
+        break;
+    case Qt::Key_SysReq:
+        return QString("keyboard_key_sysreq");
+        break;
+    case Qt::Key_Menu:
+        return QString("keyboard_key_menu");
+        break;
+    case Qt::Key_PowerOff:
+        return QString("keyboard_key_power");
         break;
 
-        ...
+        /*
 
+NON POSSO DISTINGURE SHIFT DX/SX E CTRL DX/SX
+keyboard_key_lshift
+keyboard_key_lctrl
+keyboard_key_lmeta
+
+NON POSSO DISTINGUERE IL TASTIERINO NUMERICO
+keyboard_key_kp0
+keyboard_key_kp1
+keyboard_key_kp2
+keyboard_key_kp3
+keyboard_key_kp4
+keyboard_key_kp5
+keyboard_key_kp6
+keyboard_key_kp7
+keyboard_key_kp8
+keyboard_key_kp9
+keyboard_key_kp_period
+keyboard_key_kp_divide
+keyboard_key_kp_multiply
+keyboard_key_kp_minus
+keyboard_key_kp_plus
+keyboard_key_kp_enter
+keyboard_key_kp_equals
+
+NON LI TROVO QUESTI...
+keyboard_key_caret
+keyboard_key_hash
+keyboard_key_dollar
+keyboard_key_backquote
+keyboard_key_compose
+keyboard_key_break
+keyboard_key_euro
+keyboard_key_undo
+
+          */
     default:
-        NeHeWidget::keyPressEvent( e );
+        return QString("");
     }
-}*/
+}
+
+bool Amiga::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::KeyPress) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        ui->keyboardEventLineEdit->setText(getAmigaKeyboardKeysFromKey(keyEvent->key()));
+       /* ui->readKeyPushButton->setText("Read Key from Keyboard");
+        ui->readKeyPushButton->setStyleSheet(QString(""));*/
+        return true;
+    }  else
+        if (event->type() == QEvent::FocusOut) {
+            ui->readKeyPushButton->setText("Read Key from Keyboard");
+            ui->readKeyPushButton->setStyleSheet(QString(""));
+            return true;
+        } else {
+            return QObject::eventFilter(obj, event);
+        }
+}
+
+void Amiga::on_readKeyPushButton_clicked()
+{
+    ui->readKeyPushButton->installEventFilter(this);
+    ui->readKeyPushButton->setText(". . . reading . . .");
+    ui->readKeyPushButton->setStyleSheet(QString("background-color: red"));
+}
+void Amiga::on_customInputMappingAddPushButton_clicked()
+{
+    ////NON faccio alcun controllo sul fatto che potrei già aver assegnato la stessa azione o lo stesso tasto?? magari sì
+
+    //keyboard_key_q = action_joy_1_fire_button
+    if (ui->keyboardEventLineEdit->text().compare("")==0){
+        QMessageBox::about(this, tr("Error"),tr("You must assign a Key Value"));
+        return;}
+    if (inputConfiguration.containsKeyOrAction(ui->keyboardEventLineEdit->text().toStdString())){
+        QMessageBox::about(this, tr("Error"),QString("You have already assigned \""+ui->keyboardEventLineEdit->text()+"\" key."));
+        return;
+    }
+    if (inputConfiguration.containsKeyOrAction(ui->actionsComboBox->currentText().toStdString())){
+        QMessageBox::about(this, tr("Error"),QString("You have already assigned \""+ui->actionsComboBox->currentText()+"\" action."));
+        return;
+    }
+
+    inputConfiguration.setParameter(ui->keyboardEventLineEdit->text().toStdString(),ui->actionsComboBox->currentText().toStdString());
+
+    ui->keyboardEventLineEdit->setText("");
+    updateGraphicsFromInternalConfiguration();
+}
+
+void Amiga::on_customInputMappingRemovePushButton_clicked()
+{
+    //devo rimuovere i selezionati dalla lista interna
+    QItemSelectionModel *selection = ui->customInputMappingListWidget->selectionModel();
+    QModelIndexList indexes = selection->selectedRows();
+    QListIterator<QModelIndex> i(indexes);
+    QList <int> indexList;
+    while(i.hasNext())
+    {
+        QModelIndex index = i.next();
+        indexList << index.row();
+    };
+
+    //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
+    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
+    for(int x=indexList.size()-1;x>=0;x--){
+        inputConfiguration.eraseCustomInputMappingAt(indexList[x]);
+    }
+
+    //svuoto lista grafica
+    ui->customInputMappingListWidget->clear();
+
+    //aggiorno la grafica
+    updateGraphicsFromInternalConfiguration();
 }

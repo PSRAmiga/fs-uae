@@ -25,5 +25,6 @@
         <file>Images/config.png</file>
         <file>Images/reload.png</file>
         <file>Images/gtk-save.png</file>
+        <file>Images/keyboard_key.png</file>
     </qresource>
 </RCC>
