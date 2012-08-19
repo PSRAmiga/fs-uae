@@ -1,8 +1,11 @@
+/**
+* \class ConfigHardDisks
+*/
 #ifndef CONFIGHARDDISKS_H
 #define CONFIGHARDDISKS_H
 #include <string>
 using namespace std;
-
+/// This class is responsible for the Hard Disks Configuration.
 class ConfigHardDisks
 {
     string hard_drive[10];

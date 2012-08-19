@@ -1,12 +1,11 @@
 /**
 * \class ConfigGraphics
-* This class is responsible for the Graphics Configuration
 */
 #ifndef CONFIGGRAPHICS_H
 #define CONFIGGRAPHICS_H
 #include <string>
 using namespace std;
-
+/// This class is responsible for the Graphics Configuration
 class ConfigGraphics
 {
     string fullscreen;

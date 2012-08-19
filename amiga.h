@@ -121,55 +121,55 @@ private slots:
     void on_hardDrive8LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 8.
     void on_hardDrive9LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 9.
 
-    void on_hardDrive0ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive1ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive2ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive3ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive4ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive5ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive6ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive7ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive8ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_hardDrive9ReadOnlyCheckBox_clicked();///< Zorro III memory setting at 256Mb.
+    void on_hardDrive0ReadOnlyCheckBox_clicked();///< Set hard drive 0 as Read Only.
+    void on_hardDrive1ReadOnlyCheckBox_clicked();///< Set hard drive 1 as Read Only.
+    void on_hardDrive2ReadOnlyCheckBox_clicked();///< Set hard drive 2 as Read Only.
+    void on_hardDrive3ReadOnlyCheckBox_clicked();///< Set hard drive 3 as Read Only.
+    void on_hardDrive4ReadOnlyCheckBox_clicked();///< Set hard drive 4 as Read Only.
+    void on_hardDrive5ReadOnlyCheckBox_clicked();///< Set hard drive 5 as Read Only.
+    void on_hardDrive6ReadOnlyCheckBox_clicked();///< Set hard drive 6 as Read Only.
+    void on_hardDrive7ReadOnlyCheckBox_clicked();///< Set hard drive 7 as Read Only.
+    void on_hardDrive8ReadOnlyCheckBox_clicked();///< Set hard drive 8 as Read Only.
+    void on_hardDrive9ReadOnlyCheckBox_clicked();///< Set hard drive 9 as Read Only.
 
-    void on_displaySettingsStartFullscreenRadioButton_clicked();    ///< Zorro III memory setting at 256Mb.
-    void on_displaySettingsResizableRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_displaySettingsKeepAspectRatioRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_scanlinesRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_scanlinesRTGRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_lowResolutionRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_lineDoublingRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_windowResolutionXSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_windowResolutionYSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_scaleXDoubleSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_scaleYDoubleSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_alignXdoubleSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_alignYDoubleSpinBox_valueChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_scanlinesDarkHorizontalSlider_valueChanged(int position);///< Zorro III memory setting at 256Mb.
-    void on_scanlinesLightHorizontalSlider_valueChanged(int position);///< Zorro III memory setting at 256Mb.
-    void on_fullSceneAntiAliasingOffRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_fullSceneAntiAliasing2xRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_fullSceneAntiAliasing4xRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_fullSceneAntiAliasing8xRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_textureFilterLinearRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_textureFilterNearestRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_f11InitalModeAutoRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_f11InitalModeFullRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_f11InitalMode640x400RadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_f11InitalMode640x480RadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_f11InitalMode640x512RadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_f11InitialModeWithBorderCheckBox_clicked();///< Zorro III memory setting at 256Mb.
-    void on_videoFormatBGRARadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_videoFormatRGBARadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_textureFormatModeRGBRadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_textureFormatModeRGB8RadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_textureFormatModeRGBARadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_textureFormatModeRGBA8RadioButton_clicked();///< Zorro III memory setting at 256Mb.
-    void on_shaderComboBox_currentIndexChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
-    void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);///< Zorro III memory setting at 256Mb.
+    void on_displaySettingsStartFullscreenRadioButton_clicked();    ///< Start emulation in fulscreen mode.
+    void on_displaySettingsResizableRadioButton_clicked();///< Disable resizing of emulation window.
+    void on_displaySettingsKeepAspectRatioRadioButton_clicked();///< Enable keep aspect ratio.
+    void on_scanlinesRadioButton_clicked();///< Enable scanlines.
+    void on_scanlinesRTGRadioButton_clicked();///< Enable RTG scanlines.
+    void on_lowResolutionRadioButton_clicked();///< Start emulatio with low resolution.
+    void on_lineDoublingRadioButton_clicked();///< Enable line doubling.
+    void on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1);///< Change X-resolution in fullscreen mode.
+    void on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1);///< Change Y-resolution in fullscreen mode.
+    void on_windowResolutionXSpinBox_valueChanged(const QString &arg1);///< Change X-resolution in window mode.
+    void on_windowResolutionYSpinBox_valueChanged(const QString &arg1);///< Change Y-resolution in window mode.
+    void on_scaleXDoubleSpinBox_valueChanged(const QString &arg1);///< Change X-scale.
+    void on_scaleYDoubleSpinBox_valueChanged(const QString &arg1);///< Change Y-scale.
+    void on_alignXdoubleSpinBox_valueChanged(const QString &arg1);///< Change X-alignment.
+    void on_alignYDoubleSpinBox_valueChanged(const QString &arg1);///< Change Y-alignment.
+    void on_scanlinesDarkHorizontalSlider_valueChanged(int position);///< Change scanlines dark.
+    void on_scanlinesLightHorizontalSlider_valueChanged(int position);///< Change scanline light.
+    void on_fullSceneAntiAliasingOffRadioButton_clicked();///< Disable fullScene anti-aliasing mode.
+    void on_fullSceneAntiAliasing2xRadioButton_clicked();///< Enable 2x fullScene anti-aliasing mode.
+    void on_fullSceneAntiAliasing4xRadioButton_clicked();///< Enable 4x fullScene anti-aliasing mode.
+    void on_fullSceneAntiAliasing8xRadioButton_clicked();///< Enable 8x fullScene anti-aliasing mode.
+    void on_textureFilterLinearRadioButton_clicked();///< Apply a linear filter on the texture.
+    void on_textureFilterNearestRadioButton_clicked();///< Apply a nearest filter on the texture.
+    void on_f11InitalModeAutoRadioButton_clicked();///< Setting F11 initial mode as automatic.
+    void on_f11InitalModeFullRadioButton_clicked();///< Setting F11 initial mode as fullscreen.
+    void on_f11InitalMode640x400RadioButton_clicked();///< Setting F11 initial mode as 640x400 px.
+    void on_f11InitalMode640x480RadioButton_clicked();///< Setting F11 initial mode as 640x480 px.
+    void on_f11InitalMode640x512RadioButton_clicked();///< Setting F11 initial mode as 640x512 px.
+    void on_f11InitialModeWithBorderCheckBox_clicked();///< Enable border in F11 initial mode.
+    void on_videoFormatBGRARadioButton_clicked();///< Setting video format as BRGA.
+    void on_videoFormatRGBARadioButton_clicked();///< Setting video format as RBGA.
+    void on_textureFormatModeRGBRadioButton_clicked();///< Setting video texture as RGB.
+    void on_textureFormatModeRGB8RadioButton_clicked();///< Setting video texture as RGB8.
+    void on_textureFormatModeRGBARadioButton_clicked();///< Setting video texture as RGBA.
+    void on_textureFormatModeRGBA8RadioButton_clicked();///< Setting vide texture as RGBA8.
+    void on_shaderComboBox_currentIndexChanged(const QString &arg1);///< A list of type of shader.
+    void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);///< A list of type of video syncronization.
+    void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);///< A list of method of video syncronization.
 
     void on_viewportIn1LineEdit_textChanged(const QString &arg1);
     void on_viewportIn2LineEdit_textChanged(const QString &arg1);

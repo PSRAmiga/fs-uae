@@ -8,7 +8,7 @@ var searchData=
   ['checkfoldersexistence',['checkFoldersExistence',['../amiga_8cpp.html#a512c26da8c9fd4eb400ac92bc1184c36',1,'amiga.cpp']]],
   ['chip_5fmemory',['chip_memory',['../classConfigRam.html#ad6b2684bcb11199f26659524612e3741',1,'ConfigRam']]],
   ['chipsetconfiguration',['chipsetConfiguration',['../classAmiga.html#aeb2c3830963c65181abffc55f4cbe73a',1,'Amiga']]],
-  ['configcdrom',['ConfigCDRom',['../classConfigCDRom.html',1,'ConfigCDRom'],['../classConfigCdRom.html',1,'ConfigCdRom'],['../classConfigCDRom.html#abb2ce18b3b13904c51df05b0312fee43',1,'ConfigCDRom::ConfigCDRom()']]],
+  ['configcdrom',['ConfigCDRom',['../classConfigCDRom.html',1,'ConfigCDRom'],['../classConfigCDRom.html#abb2ce18b3b13904c51df05b0312fee43',1,'ConfigCDRom::ConfigCDRom()']]],
   ['configcdrom_2ecpp',['configcdrom.cpp',['../configcdrom_8cpp.html',1,'']]],
   ['configcdrom_2eh',['configcdrom.h',['../configcdrom_8h.html',1,'']]],
   ['configchipset',['ConfigChipset',['../classConfigChipset.html',1,'ConfigChipset'],['../classConfigChipset.html#a5c8883eb03e10dcb4c17e9d8d08c28af',1,'ConfigChipset::ConfigChipset()']]],
@@ -23,6 +23,9 @@ var searchData=
   ['configharddisks',['ConfigHardDisks',['../classConfigHardDisks.html',1,'ConfigHardDisks'],['../classConfigHardDisks.html#a05d1c7cb90b78b6fbe6e5f8e75f22b75',1,'ConfigHardDisks::ConfigHardDisks()']]],
   ['configharddisks_2ecpp',['configharddisks.cpp',['../configharddisks_8cpp.html',1,'']]],
   ['configharddisks_2eh',['configharddisks.h',['../configharddisks_8h.html',1,'']]],
+  ['configinput',['ConfigInput',['../classConfigInput.html',1,'ConfigInput'],['../classConfigInput.html#a857038752c21c23ca844992cf124e4af',1,'ConfigInput::ConfigInput()']]],
+  ['configinput_2ecpp',['configinput.cpp',['../configinput_8cpp.html',1,'']]],
+  ['configinput_2eh',['configinput.h',['../configinput_8h.html',1,'']]],
   ['configmisc',['ConfigMisc',['../classConfigMisc.html',1,'ConfigMisc'],['../classConfigMisc.html#a85ec555cfdcd1b48774c13f227c0d800',1,'ConfigMisc::ConfigMisc()']]],
   ['configmisc_2ecpp',['configmisc.cpp',['../configmisc_8cpp.html',1,'']]],
   ['configmisc_2eh',['configmisc.h',['../configmisc_8h.html',1,'']]],
@@ -32,5 +35,8 @@ var searchData=
   ['configtheme',['ConfigTheme',['../classConfigTheme.html',1,'ConfigTheme'],['../classConfigTheme.html#ad586a7e87627e44fc9858aca7cca56dc',1,'ConfigTheme::ConfigTheme()']]],
   ['configtheme_2ecpp',['configtheme.cpp',['../configtheme_8cpp.html',1,'']]],
   ['configtheme_2eh',['configtheme.h',['../configtheme_8h.html',1,'']]],
-  ['controllers_5fdir',['controllers_dir',['../classConfigMisc.html#ad4ad47fc54ee23bf7891f5e92cff7e6f',1,'ConfigMisc']]]
+  ['containskeyoraction',['containsKeyOrAction',['../classConfigInput.html#a82d3b55578796552f3257a9b7f2ac25b',1,'ConfigInput']]],
+  ['controllers_5fdir',['controllers_dir',['../classConfigMisc.html#ad4ad47fc54ee23bf7891f5e92cff7e6f',1,'ConfigMisc']]],
+  ['custom_5finput_5fmapping_5finserted_5factions',['custom_input_mapping_inserted_actions',['../classConfigInput.html#a8a171cb1bbde58bffdf56b1301e05629',1,'ConfigInput']]],
+  ['custom_5finput_5fmapping_5finserted_5fkeys',['custom_input_mapping_inserted_keys',['../classConfigInput.html#a2baae33b1a25b590cca86201a9d74b92',1,'ConfigInput']]]
 ];

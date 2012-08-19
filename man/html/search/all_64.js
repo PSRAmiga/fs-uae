@@ -27,6 +27,7 @@ var searchData=
   ['defaultkickstartfile',['DEFAULTKICKSTARTFILE',['../configchipset_8cpp.html#a6b7a973056570affead4ca7300f44876',1,'configchipset.cpp']]],
   ['defaultlinedoubling',['DEFAULTLINEDOUBLING',['../configgraphics_8cpp.html#acf94cad0f906ebadcdf83df61d04cd55',1,'configgraphics.cpp']]],
   ['defaultlowresolution',['DEFAULTLOWRESOLUTION',['../configgraphics_8cpp.html#a817b91d7920ac93dbfe4b945ebc9a949',1,'configgraphics.cpp']]],
+  ['defaultmousespeed',['DEFAULTMOUSESPEED',['../configmisc_8cpp.html#ab8a736b07100229022c6b20b9f71267e',1,'configmisc.cpp']]],
   ['defaultnetplaypassword',['DEFAULTNETPLAYPASSWORD',['../configmisc_8cpp.html#a18e98f2cddefcea99fe02a6508bb24a7',1,'configmisc.cpp']]],
   ['defaultnetplayport',['DEFAULTNETPLAYPORT',['../configmisc_8cpp.html#ac0bc8e13661c69cf0d9f1047544823d3',1,'configmisc.cpp']]],
   ['defaultnetplayserver',['DEFAULTNETPLAYSERVER',['../configmisc_8cpp.html#ac39d6cbb7903ae874e3461e177859f8f',1,'configmisc.cpp']]],

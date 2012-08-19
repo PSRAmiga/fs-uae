@@ -1,9 +1,12 @@
+/**
+* \class ConfigInput
+*/
 #ifndef CONFIGINPUT_H
 #define CONFIGINPUT_H
 #include <vector>
 #include <string>
 using namespace std;
-
+/// This class is responsible for the Graphics Configuration
 class ConfigInput
 {
     vector<string> custom_input_mapping_inserted_keys;

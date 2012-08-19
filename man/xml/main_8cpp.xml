@@ -5,98 +5,108 @@
     <includes local="no">QtGui/QApplication</includes>
     <includes refid="amiga_8h" local="yes">amiga.h</includes>
     <incdepgraph>
-      <node id="186">
+      <node id="207">
         <label>configharddisks.h</label>
         <link refid="configharddisks_8h"/>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="189">
+      <node id="211">
         <label>configmisc.h</label>
         <link refid="configmisc_8h"/>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="182">
+      <node id="203">
         <label>configram.h</label>
         <link refid="configram_8h"/>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="181">
+      <node id="202">
         <label>string</label>
       </node>
-      <node id="179">
+      <node id="200">
         <label>QMainWindow</label>
       </node>
-      <node id="177">
+      <node id="198">
         <label>QtGui/QApplication</label>
       </node>
-      <node id="188">
+      <node id="210">
         <label>configtheme.h</label>
         <link refid="configtheme_8h"/>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="183">
+      <node id="204">
         <label>configfloppy.h</label>
         <link refid="configfloppy_8h"/>
-        <childnode refid="184" relation="include">
+        <childnode refid="205" relation="include">
         </childnode>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="187">
+      <node id="208">
         <label>configgraphics.h</label>
         <link refid="configgraphics_8h"/>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="180">
+      <node id="201">
         <label>configchipset.h</label>
         <link refid="configchipset_8h"/>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="184">
+      <node id="209">
+        <label>configinput.h</label>
+        <link refid="configinput_8h"/>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="205">
         <label>vector</label>
       </node>
-      <node id="185">
+      <node id="206">
         <label>configcdrom.h</label>
         <link refid="configcdrom_8h"/>
-        <childnode refid="184" relation="include">
+        <childnode refid="205" relation="include">
         </childnode>
-        <childnode refid="181" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="176">
+      <node id="197">
         <label>main.cpp</label>
         <link refid="main.cpp"/>
-        <childnode refid="177" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
-        <childnode refid="178" relation="include">
+        <childnode refid="199" relation="include">
         </childnode>
       </node>
-      <node id="178">
+      <node id="199">
         <label>amiga.h</label>
         <link refid="amiga_8h"/>
-        <childnode refid="179" relation="include">
+        <childnode refid="200" relation="include">
         </childnode>
-        <childnode refid="180" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
-        <childnode refid="182" relation="include">
+        <childnode refid="203" relation="include">
         </childnode>
-        <childnode refid="183" relation="include">
+        <childnode refid="204" relation="include">
         </childnode>
-        <childnode refid="185" relation="include">
+        <childnode refid="206" relation="include">
         </childnode>
-        <childnode refid="186" relation="include">
+        <childnode refid="207" relation="include">
         </childnode>
-        <childnode refid="187" relation="include">
+        <childnode refid="208" relation="include">
         </childnode>
-        <childnode refid="188" relation="include">
+        <childnode refid="209" relation="include">
         </childnode>
-        <childnode refid="189" relation="include">
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
         </childnode>
       </node>
     </incdepgraph>

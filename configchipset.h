@@ -1,12 +1,11 @@
 /**
 * \class ConfigChipset
-* This class is responsible for the Chipset Configuration
 */
 #include <string>
 #ifndef CONFIGCHIPSET_H
 #define CONFIGCHIPSET_H
 using namespace std;
-/// Create the Chipset Configuration Class
+/// This class is responsible for the Chipset Configuration.
 class ConfigChipset			  
 {
     string amiga_model;          ///< Specify the Amiga model you want to emulate.

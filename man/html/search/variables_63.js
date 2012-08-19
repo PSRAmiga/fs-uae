@@ -6,5 +6,7 @@ var searchData=
   ['cdroms_5fdir',['cdroms_dir',['../classConfigMisc.html#a3e9690cdf18d18cd63c91e1d14d38146',1,'ConfigMisc']]],
   ['chip_5fmemory',['chip_memory',['../classConfigRam.html#ad6b2684bcb11199f26659524612e3741',1,'ConfigRam']]],
   ['chipsetconfiguration',['chipsetConfiguration',['../classAmiga.html#aeb2c3830963c65181abffc55f4cbe73a',1,'Amiga']]],
-  ['controllers_5fdir',['controllers_dir',['../classConfigMisc.html#ad4ad47fc54ee23bf7891f5e92cff7e6f',1,'ConfigMisc']]]
+  ['controllers_5fdir',['controllers_dir',['../classConfigMisc.html#ad4ad47fc54ee23bf7891f5e92cff7e6f',1,'ConfigMisc']]],
+  ['custom_5finput_5fmapping_5finserted_5factions',['custom_input_mapping_inserted_actions',['../classConfigInput.html#a8a171cb1bbde58bffdf56b1301e05629',1,'ConfigInput']]],
+  ['custom_5finput_5fmapping_5finserted_5fkeys',['custom_input_mapping_inserted_keys',['../classConfigInput.html#a2baae33b1a25b590cca86201a9d74b92',1,'ConfigInput']]]
 ];

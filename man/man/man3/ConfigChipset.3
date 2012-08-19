@@ -1,10 +1,10 @@
-.TH "ConfigChipset" 3 "Mon Aug 6 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "ConfigChipset" 3 "Sun Aug 19 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 ConfigChipset \- 
 .PP
-Create the Chipset Configuration Class\&.  
+This class is responsible for the Chipset Configuration\&.  
 
 .SH SYNOPSIS
 .br
@@ -68,7 +68,7 @@ Create the Chipset Configuration Class\&.
 .br
 .RI "\fIRepresent the effective value of KickstartExtFile\&. \fP"
 .ti -1c
-.RI "void \fBsetParameter\fP (string parameter, string value)"
+.RI "int \fBsetParameter\fP (string parameter, string value)"
 .br
 .ti -1c
 .RI "void \fBsetToDefaultConfiguration\fP ()"
@@ -100,9 +100,7 @@ Create the Chipset Configuration Class\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Create the Chipset Configuration Class\&. 
-
-This class is responsible for the Chipset Configuration 
+This class is responsible for the Chipset Configuration\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "\fBConfigChipset::ConfigChipset\fP ()"
@@ -148,7 +146,7 @@ Represents the string of NTSCMode to be written in Config file\&. If NTSCMode is
 .SS "string \fBConfigChipset::getNTSCModeString\fP ()"
 .PP
 Represent the effective value of NTSCMode\&. 
-.SS "void \fBConfigChipset::setParameter\fP (stringparameter, stringvalue)"
+.SS "int \fBConfigChipset::setParameter\fP (stringparameter, stringvalue)"
 .SS "void \fBConfigChipset::setToDefaultConfiguration\fP ()"
 .SH "Member Data Documentation"
 .PP 

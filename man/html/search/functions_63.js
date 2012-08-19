@@ -7,7 +7,9 @@ var searchData=
   ['configfloppy',['ConfigFloppy',['../classConfigFloppy.html#a75d54a0d12cde066d49a5936b28dd11a',1,'ConfigFloppy']]],
   ['configgraphics',['ConfigGraphics',['../classConfigGraphics.html#a624f551149e426f0135eabe27dd317b0',1,'ConfigGraphics']]],
   ['configharddisks',['ConfigHardDisks',['../classConfigHardDisks.html#a05d1c7cb90b78b6fbe6e5f8e75f22b75',1,'ConfigHardDisks']]],
+  ['configinput',['ConfigInput',['../classConfigInput.html#a857038752c21c23ca844992cf124e4af',1,'ConfigInput']]],
   ['configmisc',['ConfigMisc',['../classConfigMisc.html#a85ec555cfdcd1b48774c13f227c0d800',1,'ConfigMisc']]],
   ['configram',['ConfigRam',['../classConfigRam.html#aaca57679f5c41f8441c0a97ddb2d0a22',1,'ConfigRam']]],
-  ['configtheme',['ConfigTheme',['../classConfigTheme.html#ad586a7e87627e44fc9858aca7cca56dc',1,'ConfigTheme']]]
+  ['configtheme',['ConfigTheme',['../classConfigTheme.html#ad586a7e87627e44fc9858aca7cca56dc',1,'ConfigTheme']]],
+  ['containskeyoraction',['containsKeyOrAction',['../classConfigInput.html#a82d3b55578796552f3257a9b7f2ac25b',1,'ConfigInput']]]
 ];

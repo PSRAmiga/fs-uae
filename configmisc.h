@@ -1,12 +1,11 @@
 /**
 * \class ConfigMisc
-* This class is responsible for the Miscellaneous Configuration
 */
 #ifndef CONFIGMISC_H
 #define CONFIGMISC_H
 #include <string>
 using namespace std;
-
+/// This class is responsible for the Miscellaneous Configuration
 class ConfigMisc
 {
     string input_grab;

@@ -7,6 +7,7 @@
     <member refid="classAmiga_1a36205e2c4a2c96a4132098522f558bd4" kind="variable"><name>floppyConfiguration</name></member>
     <member refid="classAmiga_1a5029ba6114bcb8078f08465554673cc3" kind="variable"><name>cdromConfiguration</name></member>
     <member refid="classAmiga_1ae1832e72dc0b41053adf1966b885fc63" kind="variable"><name>hardDiskConfiguration</name></member>
+    <member refid="classAmiga_1a736cabf86fe3944fab2bebf9b711a322" kind="variable"><name>inputConfiguration</name></member>
     <member refid="classAmiga_1a159cf3cc1382cd231a7e9b9e1966682e" kind="variable"><name>graphicsConfiguration</name></member>
     <member refid="classAmiga_1aa1352bd57bb87e1106284d7bd2410f13" kind="variable"><name>themeConfiguration</name></member>
     <member refid="classAmiga_1aea640ab20a7e94bd6766cb8be505c897" kind="variable"><name>miscConfiguration</name></member>
@@ -177,6 +178,12 @@
     <member refid="classAmiga_1adfa285404758b0c454b4a6b89c6399b3" kind="slot"><name>on_headColorPushButton_clicked</name></member>
     <member refid="classAmiga_1ad75a18c9a31e0615e52bfc55d21e542f" kind="slot"><name>on_themeOverlayImagerPushButton_clicked</name></member>
     <member refid="classAmiga_1a1046b78c3b0735cbef1f5d19def8fc58" kind="slot"><name>on_themeFolderPushButton_clicked</name></member>
+    <member refid="classAmiga_1a57d9cc12ce42e4fb19adc2e3d2bed7d2" kind="slot"><name>on_mouseSpeedLineEdit_textChanged</name></member>
+    <member refid="classAmiga_1a14ccc59462b0f1779fb1511a89ff304e" kind="slot"><name>on_pushButton_clicked</name></member>
+    <member refid="classAmiga_1ad63f756828f142b082aac80090666cb9" kind="slot"><name>keyPressEvent</name></member>
+    <member refid="classAmiga_1af25d8dfbddb67d5a498f6881ae0be3b7" kind="slot"><name>on_readKeyPushButton_clicked</name></member>
+    <member refid="classAmiga_1ae06ba9d08ac98fcdc1f62d4a5ae4186c" kind="slot"><name>on_customInputMappingAddPushButton_clicked</name></member>
+    <member refid="classAmiga_1af7f403590ea3e372d63178d6f94f3613" kind="slot"><name>on_customInputMappingRemovePushButton_clicked</name></member>
     <member refid="classAmiga_1a74c547003937479f8715e0dfbbefa33d" kind="function"><name>parseLine</name></member>
     <member refid="classAmiga_1ab1652767e9ee1f7f440445506e85da2e" kind="function"><name>checkConfigurationConsistency</name></member>
     <member refid="classAmiga_1a2ad7c64788f0dabf2f08f1327acf34b2" kind="function"><name>setFastMemoryDisabled</name></member>
@@ -184,6 +191,8 @@
     <member refid="classAmiga_1a153bfcb59f5250e9fec9cf03cd0fe8d6" kind="function"><name>updateGraphicsFromInternalConfiguration</name></member>
     <member refid="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" kind="function"><name>getConfigurationAreaFromParameterName</name></member>
     <member refid="classAmiga_1a736cfd656c31325245e25700f951c5a7" kind="function"><name>saveConfigInFile</name></member>
+    <member refid="classAmiga_1a23a02dd7b05d592d5ffb925c049dee96" kind="function"><name>loadDefaultValues</name></member>
+    <member refid="classAmiga_1a9d24fe556f77e5c2edcc5962203d63be" kind="function"><name>eventFilter</name></member>
   </compound>
   <compound refid="classConfigCDRom" kind="class"><name>ConfigCDRom</name>
     <member refid="classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" kind="variable"><name>cdrom_drive_0</name></member>
@@ -195,10 +204,8 @@
     <member refid="classConfigCDRom_1a2fc1e5a66f20400409c1d4fb924070ff" kind="function"><name>getCDRomImageAt</name></member>
     <member refid="classConfigCDRom_1a8e8852a5a88780827be47ab28e6be33f" kind="function"><name>pushBackCDRomImage</name></member>
     <member refid="classConfigCDRom_1a0f78ca614f70da1671b997139ebc1f3d" kind="function"><name>erasCDRomImageAt</name></member>
-    <member refid="classConfigCDRom_1a7b69b6f2c4429c4f6bb86c41de143048" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigCDRom_1aceb8218c5f2156c79b5c6336c1d2378b" kind="function"><name>setParameter</name></member>
     <member refid="classConfigCDRom_1a69b62dbf21ea72a52cd3bd4d36bf06f0" kind="function"><name>setToDefaultConfiguration</name></member>
-  </compound>
-  <compound refid="classConfigCdRom" kind="class"><name>ConfigCdRom</name>
   </compound>
   <compound refid="classConfigChipset" kind="class"><name>ConfigChipset</name>
     <member refid="classConfigChipset_1a4bc77e1b25746f228af19e8315982822" kind="variable"><name>amiga_model</name></member>
@@ -217,7 +224,7 @@
     <member refid="classConfigChipset_1a35a96251236644d9a252d59e325f4b61" kind="function"><name>getKickstartFileString</name></member>
     <member refid="classConfigChipset_1a1fafcd89c72d2447a08fc88fb2bc9926" kind="function"><name>getKickstartExtFileConfigString</name></member>
     <member refid="classConfigChipset_1aa756feef2817f1a5afddf6157066a814" kind="function"><name>getKickstartExtFileString</name></member>
-    <member refid="classConfigChipset_1a6dc149a460407e313cdc1ec348e5cf03" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigChipset_1ad68ceb3328c0a206006b327210253d5b" kind="function"><name>setParameter</name></member>
     <member refid="classConfigChipset_1a748fd2c9e997c27b920bb79daee2ab21" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="classConfigFloppy" kind="class"><name>ConfigFloppy</name>
@@ -236,7 +243,7 @@
     <member refid="classConfigFloppy_1ade3102e0c84e7161e65dc4db081f87e5" kind="function"><name>getFloppyImageAt</name></member>
     <member refid="classConfigFloppy_1a33efa54ddc6d1f903b3033f409ff5711" kind="function"><name>pushBackFloppyImage</name></member>
     <member refid="classConfigFloppy_1a438a72cf02a171956e0518e2ecad1d62" kind="function"><name>eraseFloppyImageAt</name></member>
-    <member refid="classConfigFloppy_1ae4cbb88c409d03a6bd2f65d05dd10646" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigFloppy_1a9adb626c8b5dc40e94cb4f421452029d" kind="function"><name>setParameter</name></member>
     <member refid="classConfigFloppy_1a1ef111aadbbbc82c0a37bcabbd2d78e5" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="classConfigGraphics" kind="class"><name>ConfigGraphics</name>
@@ -319,7 +326,7 @@
     <member refid="classConfigGraphics_1a40fdfee82b1f3639de79e1d00dfaf499" kind="function"><name>getTextureFormatString</name></member>
     <member refid="classConfigGraphics_1a29ce08c3626060a6f87f1aebcf50b306" kind="function"><name>getViewportConfigString</name></member>
     <member refid="classConfigGraphics_1a605decac076027fab3f1c0c1f135dae2" kind="function"><name>getViewportString</name></member>
-    <member refid="classConfigGraphics_1a52e69067027423e8a0ebdb04404308ad" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigGraphics_1a6a9e3470e3d18b2c92d716b00529cd5e" kind="function"><name>setParameter</name></member>
     <member refid="classConfigGraphics_1a7669fd041f18294ecf43689fb5b58a97" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="classConfigHardDisks" kind="class"><name>ConfigHardDisks</name>
@@ -333,14 +340,26 @@
     <member refid="classConfigHardDisks_1a6cdcbdffd8d53bafce27f0518fce109f" kind="function"><name>getHardDriveLabelStringAt</name></member>
     <member refid="classConfigHardDisks_1a1c18c71afb3c5bc7c8e291e922dd2602" kind="function"><name>getHardDriveReadOnlyConfigStringAt</name></member>
     <member refid="classConfigHardDisks_1ad887288c21a0639ae722d0088d9ea586" kind="function"><name>getHardDriveReadOnlyStringAt</name></member>
-    <member refid="classConfigHardDisks_1acef23f045e308ac5458c4731bc530e49" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigHardDisks_1a21fecbbb887e01c296fefcff66977010" kind="function"><name>setParameter</name></member>
     <member refid="classConfigHardDisks_1a48f254ac83a7943877972537a95caaaf" kind="function"><name>setToDefaultConfiguration</name></member>
+  </compound>
+  <compound refid="classConfigInput" kind="class"><name>ConfigInput</name>
+    <member refid="classConfigInput_1a2baae33b1a25b590cca86201a9d74b92" kind="variable"><name>custom_input_mapping_inserted_keys</name></member>
+    <member refid="classConfigInput_1a8a171cb1bbde58bffdf56b1301e05629" kind="variable"><name>custom_input_mapping_inserted_actions</name></member>
+    <member refid="classConfigInput_1a857038752c21c23ca844992cf124e4af" kind="function"><name>ConfigInput</name></member>
+    <member refid="classConfigInput_1a99a00e4f25c80f8dfa3251555974805e" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigInput_1a0c3a8d0ef982e8c2068bcd466f88e383" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigInput_1a82d3b55578796552f3257a9b7f2ac25b" kind="function"><name>containsKeyOrAction</name></member>
+    <member refid="classConfigInput_1a3fe054324da73ebe977453701eafebaf" kind="function"><name>getCustomInputMappingSize</name></member>
+    <member refid="classConfigInput_1af78da571bb15f14cbc9bffd738f95b5f" kind="function"><name>getCustomInputMappingAt</name></member>
+    <member refid="classConfigInput_1a24ca2d508ad64e4e3cd23089b9874ef7" kind="function"><name>eraseCustomInputMappingAt</name></member>
   </compound>
   <compound refid="classConfigMisc" kind="class"><name>ConfigMisc</name>
     <member refid="classConfigMisc_1a22cd19e60a08591f04885aed36fb95f4" kind="variable"><name>input_grab</name></member>
     <member refid="classConfigMisc_1a782a27622642510d4f3a880c0978a765" kind="variable"><name>automatic_input_grab</name></member>
     <member refid="classConfigMisc_1a3fa4b55a8f09fae3c9abf1c9e559463a" kind="variable"><name>bsdsocket_library</name></member>
     <member refid="classConfigMisc_1aabd62cd98fb3aad51c8aeb13ce4af547" kind="variable"><name>audio_buffer_target_bytes</name></member>
+    <member refid="classConfigMisc_1a5e8f1fbeccb3020ea69e4f9ffdf12e82" kind="variable"><name>mouse_speed</name></member>
     <member refid="classConfigMisc_1a9ab2ecd449fc1bb7a097af06f8e79a8c" kind="variable"><name>title</name></member>
     <member refid="classConfigMisc_1a843ab5b32601aee585b3798cc4e101af" kind="variable"><name>sub_title</name></member>
     <member refid="classConfigMisc_1a4ba2e67c1674730e43a05458f8e7f117" kind="variable"><name>netplay_server</name></member>
@@ -366,6 +385,8 @@
     <member refid="classConfigMisc_1ad408756331dd0eca3bc2c84eeae7393c" kind="function"><name>getBsdSocketLibraryString</name></member>
     <member refid="classConfigMisc_1ae25508d5429cc3211c50b9d2abbca512" kind="function"><name>getAudioBufferConfigString</name></member>
     <member refid="classConfigMisc_1a7ba449ce13a2a60724358e15ceefcc17" kind="function"><name>getAudioBufferString</name></member>
+    <member refid="classConfigMisc_1acfd02fb9abeb38b168f1b15ab3de8f85" kind="function"><name>getMouseSpeedConfigString</name></member>
+    <member refid="classConfigMisc_1ae7aa208b3ec3caf251560ed9ef7869bd" kind="function"><name>getMouseSpeedString</name></member>
     <member refid="classConfigMisc_1a01b55ac6775a7270396d07a960f64493" kind="function"><name>getTitleConfigString</name></member>
     <member refid="classConfigMisc_1aa5e0f72b7ed76127d4fa4bdbd5cbb447" kind="function"><name>getTitleString</name></member>
     <member refid="classConfigMisc_1aab190a1449d505f1c12512494d7b0d5d" kind="function"><name>getSubTitleConfigString</name></member>
@@ -398,7 +419,7 @@
     <member refid="classConfigMisc_1ae382e0686f254a12f7b70e67dfe875a3" kind="function"><name>getCDRomsDirString</name></member>
     <member refid="classConfigMisc_1a0501d6c662b734320cb51790ac9d70c0" kind="function"><name>getFloppiesDirConfigString</name></member>
     <member refid="classConfigMisc_1aba7efb27def44e650c8116252ff1e7d9" kind="function"><name>getFloppiesDirString</name></member>
-    <member refid="classConfigMisc_1af28e80cae50985c8e6afd53788a5ffec" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigMisc_1a1ec5f284294a8c0c2f9d3a02d3a8ff4d" kind="function"><name>setParameter</name></member>
     <member refid="classConfigMisc_1a6a78fcbcc2990ca67773f2a72ca41b46" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="classConfigRam" kind="class"><name>ConfigRam</name>
@@ -415,7 +436,7 @@
     <member refid="classConfigRam_1a55c39f64ad63dfb5ddbcb2778e53016d" kind="function"><name>getFastMemoryString</name></member>
     <member refid="classConfigRam_1a456cfc71f7085ad5bd7300446a82b547" kind="function"><name>getZorro3ConfigString</name></member>
     <member refid="classConfigRam_1a14f205c9a74967e3c70aa460dac5e1ff" kind="function"><name>getZorro3String</name></member>
-    <member refid="classConfigRam_1a0aa65deb20de0380b4b6126f6ea58569" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigRam_1adcd2aca25e6b1f09fa465d96303fb9aa" kind="function"><name>setParameter</name></member>
     <member refid="classConfigRam_1a43e6e17db9a030a4cb522b329f00797e" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="classConfigTheme" kind="class"><name>ConfigTheme</name>
@@ -444,7 +465,7 @@
     <member refid="classConfigTheme_1ac68a4d64f060086004d45b1b5136c124" kind="function"><name>getHeadingColorString</name></member>
     <member refid="classConfigTheme_1a4ad2271e0851a21b6110e91f537ef04b" kind="function"><name>getOverlayImageConfigString</name></member>
     <member refid="classConfigTheme_1aa5b9c21014f39a67ec48ed1e8c4bf3b0" kind="function"><name>getOverlayImageString</name></member>
-    <member refid="classConfigTheme_1ae8f7cb6b983a41c3cf8a12770e652350" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigTheme_1ab6fe4eb9ca704980d9e82ca8a104b543" kind="function"><name>setParameter</name></member>
     <member refid="classConfigTheme_1ab3cd5e9247843ee93d5c39fa7d60d195" kind="function"><name>setToDefaultConfiguration</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
@@ -452,11 +473,13 @@
   <compound refid="namespaceUi" kind="namespace"><name>Ui</name>
   </compound>
   <compound refid="amiga_8cpp" kind="file"><name>amiga.cpp</name>
+    <member refid="amiga_8cpp_1a1baaa40b7c29d381a7f11de74e44fdee" kind="function"><name>showAlert</name></member>
     <member refid="amiga_8cpp_1a512c26da8c9fd4eb400ac92bc1184c36" kind="function"><name>checkFoldersExistence</name></member>
     <member refid="amiga_8cpp_1a9a111086724f24c1b88a8d5dac63aa1d" kind="function"><name>strToInt</name></member>
     <member refid="amiga_8cpp_1ad3f03b8b3551c1fc32947b4be85b7eef" kind="function"><name>strToFloat</name></member>
     <member refid="amiga_8cpp_1afcbd6e1c2b4014746d5939c3ee3958a5" kind="function"><name>intToStr</name></member>
     <member refid="amiga_8cpp_1a44d123ae1154603e13e99f12b8cc5986" kind="function"><name>isEmptyString</name></member>
+    <member refid="amiga_8cpp_1a84d1dfbb005240bf3f2a6ec0b3293637" kind="function"><name>getAmigaKeyboardKeysFromKey</name></member>
   </compound>
   <compound refid="amiga_8h" kind="file"><name>amiga.h</name>
   </compound>
@@ -524,11 +547,16 @@
   </compound>
   <compound refid="configharddisks_8h" kind="file"><name>configharddisks.h</name>
   </compound>
+  <compound refid="configinput_8cpp" kind="file"><name>configinput.cpp</name>
+  </compound>
+  <compound refid="configinput_8h" kind="file"><name>configinput.h</name>
+  </compound>
   <compound refid="configmisc_8cpp" kind="file"><name>configmisc.cpp</name>
     <member refid="configmisc_8cpp_1aea4f82f725f5eff84ac1d5d957722b43" kind="variable"><name>DEFAULTINPUTGRAB</name></member>
     <member refid="configmisc_8cpp_1a1726d0ed50b227f061efc1b15b5895c9" kind="variable"><name>DEFAULTAUTOMATICINPUTGRAB</name></member>
     <member refid="configmisc_8cpp_1a0d77196127239fcd93e03ad5fe7c8723" kind="variable"><name>DEFAULTBSDSOCKET</name></member>
     <member refid="configmisc_8cpp_1a4eb784c5c0fbd11ce92bb3aff32acd22" kind="variable"><name>DEFAULTAUDIOBUFFER</name></member>
+    <member refid="configmisc_8cpp_1ab8a736b07100229022c6b20b9f71267e" kind="variable"><name>DEFAULTMOUSESPEED</name></member>
     <member refid="configmisc_8cpp_1a479bd1bbfdabde2b615bba97ffc8ae80" kind="variable"><name>DEFAULTTITLE</name></member>
     <member refid="configmisc_8cpp_1a0ab388343d6150b507cc3b926b43bd14" kind="variable"><name>DEFAULTSUBTITLE</name></member>
     <member refid="configmisc_8cpp_1ac39d6cbb7903ae874e3461e177859f8f" kind="variable"><name>DEFAULTNETPLAYSERVER</name></member>

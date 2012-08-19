@@ -1,11 +1,10 @@
 /** \class ConfigTheme
-* This class is responsible for the Theme Configuration.\n
 */
 #ifndef CONFIGTHEME_H
 #define CONFIGTHEME_H
 #include <string>
 using namespace std;
-
+/// This class is responsible for the Theme Configuration.
 class ConfigTheme
 {
     string theme;

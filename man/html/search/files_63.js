@@ -10,6 +10,8 @@ var searchData=
   ['configgraphics_2eh',['configgraphics.h',['../configgraphics_8h.html',1,'']]],
   ['configharddisks_2ecpp',['configharddisks.cpp',['../configharddisks_8cpp.html',1,'']]],
   ['configharddisks_2eh',['configharddisks.h',['../configharddisks_8h.html',1,'']]],
+  ['configinput_2ecpp',['configinput.cpp',['../configinput_8cpp.html',1,'']]],
+  ['configinput_2eh',['configinput.h',['../configinput_8h.html',1,'']]],
   ['configmisc_2ecpp',['configmisc.cpp',['../configmisc_8cpp.html',1,'']]],
   ['configmisc_2eh',['configmisc.h',['../configmisc_8h.html',1,'']]],
   ['configram_2ecpp',['configram.cpp',['../configram_8cpp.html',1,'']]],

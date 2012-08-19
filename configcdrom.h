@@ -1,13 +1,12 @@
 /**
-* \class ConfigCdRom
-* This class is responsible for the Cd-Rom Configuration
+* \class ConfigCDRom
 */
 #ifndef CONFIGCDROM_H
 #define CONFIGCDROM_H
 #include <vector>
 #include <string>
 using namespace std;
-
+/// This class is responsible for the Cd-Rom Configuration.
 class ConfigCDRom
 {
     string cdrom_drive_0;      ///< You specify paths for floppy images in floppy_drive_0.

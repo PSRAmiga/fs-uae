@@ -1,12 +1,10 @@
 /** \class ConfigRam
-* This class is responsible for the Ram Configuration.\n
-* The default value of each type of ram depends on the selected Amiga model.
 */
 #ifndef CONFIGRAM_H
 #define CONFIGRAM_H
 #include <string>
 using namespace std;
-/// Create the RAM Configuration Class
+///  This class is responsible for the Ram Configuration. The default value of each type of ram depends on the selected Amiga model.
 class ConfigRam
 {
     string chip_memory;                 ///< Override amount of chip memory, specified in KB. Must be a multiple of 512.

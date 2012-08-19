@@ -1,4 +1,4 @@
-.TH "amiga.cpp" 3 "Mon Aug 6 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "amiga.cpp" 3 "Sun Aug 19 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,6 +26,8 @@ amiga.cpp \-
 .br
 \fC#include <cstdlib>\fP
 .br
+\fC#include <QKeyEvent>\fP
+.br
 \fC#include <QApplication>\fP
 .br
 \fC#include <QDesktopWidget>\fP
@@ -36,6 +38,9 @@ amiga.cpp \-
 .SS "Functions"
 
 .in +1c
+.ti -1c
+.RI "static void \fBshowAlert\fP (string message)"
+.br
 .ti -1c
 .RI "static void \fBcheckFoldersExistence\fP ()"
 .br
@@ -51,6 +56,9 @@ amiga.cpp \-
 .ti -1c
 .RI "bool \fBisEmptyString\fP (string s)"
 .br
+.ti -1c
+.RI "QString \fBgetAmigaKeyboardKeysFromKey\fP (int key)"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -64,8 +72,10 @@ You should have received a copy of the GNU General Public License along with thi
 .SH "Function Documentation"
 .PP 
 .SS "static void \fBcheckFoldersExistence\fP ()\fC [static]\fP"
+.SS "QString \fBgetAmigaKeyboardKeysFromKey\fP (intkey)"
 .SS "string \fBintToStr\fP (intn)"
 .SS "bool \fBisEmptyString\fP (strings)"
+.SS "static void \fBshowAlert\fP (stringmessage)\fC [static]\fP"
 .SS "float \fBstrToFloat\fP (stringline)"
 .SS "int \fBstrToInt\fP (strings)"
 .SH "Author"
