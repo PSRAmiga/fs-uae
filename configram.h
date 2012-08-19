@@ -29,6 +29,7 @@ public:
 
     int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
+    bool hasParameter(string parameterName);
 };
 
 #endif // CONFIGRAM_H

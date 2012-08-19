@@ -611,3 +611,16 @@ void ConfigGraphics::setToDefaultConfiguration()
 
     viewport=DEFAULTVIEWPORT;
 }
+
+bool ConfigGraphics::hasParameter(string parameterName)
+{
+    return (parameterName.compare("fullscreen")==0)||(parameterName.compare("fullscreen_width")==0)||(parameterName.compare("fullscreen_height")==0)||
+            (parameterName.compare("window_width")==0)||(parameterName.compare("window_height")==0)||(parameterName.compare("window_resizable")==0)||
+            (parameterName.compare("fsaa")==0)||(parameterName.compare("keep_aspect")==0)||(parameterName.compare("scanlines")==0)||
+            (parameterName.compare("rtg_scanlines")==0)||(parameterName.compare("scanlines_dark")==0)||(parameterName.compare("scanlines_light")==0)||
+            (parameterName.compare("shader")==0)||(parameterName.compare("low_resolution")==0)||(parameterName.compare("line_doubling")==0)||
+            (parameterName.compare("scale_x")==0)||(parameterName.compare("scale_y")==0)||(parameterName.compare("align_x")==0)||
+            (parameterName.compare("align_y")==0)||(parameterName.compare("zoom")==0)||(parameterName.compare("texture_filter")==0)||
+            (parameterName.compare("video_sync")==0)||(parameterName.compare("video_sync")==0)||(parameterName.compare("video_format")==0)||
+            (parameterName.compare("texture_format")==0)||(parameterName.compare("viewport")==0);
+}

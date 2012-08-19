@@ -199,3 +199,10 @@ void ConfigHardDisks::setToDefaultConfiguration()
     }
 
 }
+
+bool ConfigHardDisks::hasParameter(string parameterName)
+{
+    return (parameterName.substr(0,parameterName.length()-1).compare("hard_drive_")==0)||
+            ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_label")==0))||
+            ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_read_only")==0));
+}

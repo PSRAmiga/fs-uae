@@ -213,14 +213,43 @@ private slots:
     void on_themeFolderPushButton_clicked();
     void on_mouseSpeedLineEdit_textChanged(const QString &arg1);
 
-    void on_pushButton_clicked();
-    void keyPressEvent(QKeyEvent *e);
+    void customJoystick0Slot(QString s);
+    void customJoystick1Slot(QString s);
+    void customJoystick2Slot(QString s);
+    void customJoystick3Slot(QString s);
 
     void on_readKeyPushButton_clicked();
 
     void on_customInputMappingAddPushButton_clicked();
-
     void on_customInputMappingRemovePushButton_clicked();
+    void on_joystickPort0CustomizePushButton_clicked();
+    void on_joystickPort0CustomJoystickRadioButton_clicked();
+    void on_joystickPort0JoystickRadioButton_clicked();
+    void on_joystickPort0MouseRadioButton_clicked();
+    void on_joystickPort0KeyboardRadioButton_clicked();
+    void on_joystickPort0NothingRadioButton_clicked();
+    void on_joystickPort0ModelComboBox_currentIndexChanged(const QString &arg1);
+    void on_joystickPort1MouseRadioButton_clicked();
+    void on_joystickPort2MouseRadioButton_clicked();
+    void on_joystickPort3MouseRadioButton_clicked();
+    void on_joystickPort1KeyboardRadioButton_clicked();
+    void on_joystickPort2KeyboardRadioButton_clicked();
+    void on_joystickPort3KeyboardRadioButton_clicked();
+    void on_joystickPort1JoystickRadioButton_clicked();
+    void on_joystickPort2JoystickRadioButton_clicked();
+    void on_joystickPort3JoystickRadioButton_clicked();
+    void on_joystickPort1ModelComboBox_currentIndexChanged(const QString &arg1);
+    void on_joystickPort2ModelComboBox_currentIndexChanged(const QString &arg1);
+    void on_joystickPort3ModelComboBox_currentIndexChanged(const QString &arg1);
+    void on_joystickPort1CustomJoystickRadioButton_clicked();
+    void on_joystickPort2CustomJoystickRadioButton_clicked();
+    void on_joystickPort3CustomizePushButton_clicked();
+    void on_joystickPort3CustomJoystickRadioButton_clicked();
+    void on_joystickPort1NothingRadioButton_clicked();
+    void on_joystickPort2NothingRadioButton_clicked();
+    void on_joystickPort3NothingRadioButton_clicked();
+    void on_joystickPort1CusomizePushButton_clicked();
+    void on_joystickPort2CustomizePushButton_clicked();
 
 private:
     Ui::Amiga *ui;
@@ -241,9 +270,9 @@ private:
     void setZorroIIIMemoryDisabled(bool state);
 
     void updateGraphicsFromInternalConfiguration();
-    int getConfigurationAreaFromParameterName(string parameterName);
     void saveConfigInFile(string fileName);
     void loadDefaultValues();
+    bool isExistingParameter(string parameterName);
 
     bool eventFilter(QObject *obj, QEvent *event);
 };
