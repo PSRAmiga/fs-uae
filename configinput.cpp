@@ -283,5 +283,5 @@ bool ConfigInput::hasParameter(string parameterName)
             (parameterName.compare("joystick_port_1")==0)||(parameterName.compare("joystick_port_2")==0)||
             (parameterName.compare("joystick_port_3")==0)||(parameterName.compare("joystick_port_0_mode")==0)||
             (parameterName.compare("joystick_port_1_mode")==0)||(parameterName.compare("joystick_port_2_mode")==0)||
-            (parameterName.compare("joystick_port_0_mode")==0));
+            (parameterName.compare("joystick_port_3_mode")==0));
 }
