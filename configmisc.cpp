@@ -414,3 +414,14 @@ void ConfigMisc::setToDefaultConfiguration()
     cdroms_dir=DEFAULTDIR;
     floppies_dir=DEFAULTDIR;
 }
+
+bool ConfigMisc::hasParameter(string parameterName)
+{
+    return (parameterName.compare("input_grab")==0)||(parameterName.compare("automatic_input_grab")==0)||(parameterName.compare("bsdsocket_library")==0)||
+            (parameterName.compare("audio_buffer_target_bytes")==0)||(parameterName.compare("title")==0)||(parameterName.compare("sub_title")==0)||
+            (parameterName.compare("netplay_server")==0)||(parameterName.compare("netplay_port")==0)||(parameterName.compare("netplay_tag")==0)||
+            (parameterName.compare("base_dir")==0)||(parameterName.compare("kickstarts_dir")==0)||(parameterName.compare("save_states_dir")==0)||
+            (parameterName.compare("floppy_overlays_dir")==0)||(parameterName.compare("flash_memory_dir")==0)||(parameterName.compare("controllers_dir")==0)||
+            (parameterName.compare("logs_dir")==0)||(parameterName.compare("hard_drives_dir")==0)||(parameterName.compare("cdroms_dir")==0)||
+            (parameterName.compare("floppies_dir")==0)||(parameterName.compare("netplay_password")==0)||(parameterName.compare("uae_input.mouse_speed")==0);
+}

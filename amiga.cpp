@@ -67,7 +67,7 @@ Amiga::Amiga(QWidget *parent) :
 
     loadDefaultValues();
 
-    ui->Setup->setCurrentIndex(0);
+    ui->mainTabWidget->setCurrentIndex(0);
     //acquire current screen resolution
     ui->fullscreenResolutionXSpinBox->setValue(QApplication::desktop()->width());
     ui->fullscreenResolutionYSpinBox->setValue(QApplication::desktop()->height());
@@ -225,21 +225,17 @@ void Amiga::saveConfigInFile(string fileName){
         }
     }
 
+    if (!isEmptyString(inputConfiguration.getJoystickPort0ConfigString())) {myfile << inputConfiguration.getJoystickPort0ConfigString() << endl;}
+    if (!isEmptyString(inputConfiguration.getJoystickPort1ConfigString())) {myfile << inputConfiguration.getJoystickPort1ConfigString() << endl;}
+    if (!isEmptyString(inputConfiguration.getJoystickPort2ConfigString())) {myfile << inputConfiguration.getJoystickPort2ConfigString() << endl;}
+    if (!isEmptyString(inputConfiguration.getJoystickPort3ConfigString())) {myfile << inputConfiguration.getJoystickPort3ConfigString() << endl;}
+    if (!isEmptyString(inputConfiguration.getJoystickPort0ModeConfigString())) {myfile << inputConfiguration.getJoystickPort0ModeConfigString() << endl;}
+    if (!isEmptyString(inputConfiguration.getJoystickPort1ModeConfigString())) {myfile << inputConfiguration.getJoystickPort1ModeConfigString() << endl;}
+    if (!isEmptyString(inputConfiguration.getJoystickPort2ModeConfigString())) {myfile << inputConfiguration.getJoystickPort2ModeConfigString() << endl;}
+    if (!isEmptyString(inputConfiguration.getJoystickPort3ModeConfigString())) {myfile << inputConfiguration.getJoystickPort3ModeConfigString() << endl;}
+
     myfile.close();
 }
-
-void Amiga::keyPressEvent(QKeyEvent *e)
-{
-    if(ui->pushButton->hasFocus()){
-        switch(e->key()){
-        case Qt::Key_Backspace : ui->pushButton->setText("keyboard_key_backspace");
-        case Qt::Key_Tab : ui->pushButton->setText("keyboard_key_tab");
-        case Qt::Key_Clear : ui->pushButton->setText("keyboard_key_clear");
-        case Qt::Key_Return : ui->pushButton->setText("keyboard_key_return");
-        }
-    }
-}
-
 
 void Amiga::on_saveConfigToolButton_clicked()
 {
@@ -259,94 +255,52 @@ void Amiga::on_saveConfigToolButton_clicked()
     saveConfigInFile(fileNameString);
 }
 
-int Amiga::getConfigurationAreaFromParameterName(string parameterName){
-    if ((parameterName.compare("amiga_model")==0)||(parameterName.compare("accuracy")==0)||(parameterName.compare("kickstart_file")==0)||(parameterName.compare("kickstart_ext_file")==0)||(parameterName.compare("ntsc_mode")==0)) {
-        return 1;
-    } else if ((parameterName.compare("chip_memory")==0)||(parameterName.compare("slow_memory")==0)||(parameterName.compare("fast_memory")==0)||(parameterName.compare("zorro_iii_memory")==0)){
-        return 2;
-    } else if ((parameterName.substr(0,parameterName.length()-1).compare("floppy_drive_")==0)||(parameterName.substr(0,parameterName.length()-1).compare("floppy_image_")==0)||(parameterName.substr(0,parameterName.length()-2).compare("floppy_image_")==0)||(parameterName.compare("floppy_drive_volume")==0)||(parameterName.compare("floppy_drive_speed")==0)){
-        return 3;
-    } else if ((parameterName.substr(0,parameterName.length()-1).compare("cdrom_drive_")==0)||(parameterName.substr(0,parameterName.length()-1).compare("cdrom_image_")==0)||(parameterName.substr(0,parameterName.length()-2).compare("cdrom_image_")==0)){
-        return 4;
-    } else if ((parameterName.substr(0,parameterName.length()-1).compare("hard_drive_")==0)||
-               ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_label")==0))||
-               ((parameterName.substr(0,string("hard_drive_").length()).compare("hard_drive_")==0)&&(parameterName.substr(string("hard_drive_").length()+1,parameterName.length()).compare("_read_only")==0))){
-        return 5;
-    } else if (parameterName.substr(0,13).compare("keyboard_key_")==0){
-        return 6;
-    } else if ((parameterName.compare("fullscreen")==0)||(parameterName.compare("fullscreen_width")==0)||(parameterName.compare("fullscreen_height")==0)||
-               (parameterName.compare("window_width")==0)||(parameterName.compare("window_height")==0)||(parameterName.compare("window_resizable")==0)||
-               (parameterName.compare("fsaa")==0)||(parameterName.compare("keep_aspect")==0)||(parameterName.compare("scanlines")==0)||
-               (parameterName.compare("rtg_scanlines")==0)||(parameterName.compare("scanlines_dark")==0)||(parameterName.compare("scanlines_light")==0)||
-               (parameterName.compare("shader")==0)||(parameterName.compare("low_resolution")==0)||(parameterName.compare("line_doubling")==0)||
-               (parameterName.compare("scale_x")==0)||(parameterName.compare("scale_y")==0)||(parameterName.compare("align_x")==0)||
-               (parameterName.compare("align_y")==0)||(parameterName.compare("zoom")==0)||(parameterName.compare("texture_filter")==0)||
-               (parameterName.compare("video_sync")==0)||(parameterName.compare("video_sync")==0)||(parameterName.compare("video_format")==0)||
-               (parameterName.compare("texture_format")==0)||(parameterName.compare("viewport")==0)){
-        return 7;
-    } else if ((parameterName.compare("theme")==0)||(parameterName.compare("theme_fade_color")==0)||(parameterName.compare("theme_wall_color_1")==0)||
-               (parameterName.compare("theme_wall_color_2")==0)||(parameterName.compare("theme_floor_color_1")==0)||(parameterName.compare("theme_floor_color_2")==0)||
-               (parameterName.compare("theme_heading_color")==0)||(parameterName.compare("theme_overlay_image")==0)){
-        return 8;
-    } else if ((parameterName.compare("input_grab")==0)||(parameterName.compare("automatic_input_grab")==0)||(parameterName.compare("bsdsocket_library")==0)||
-               (parameterName.compare("audio_buffer_target_bytes")==0)||(parameterName.compare("title")==0)||(parameterName.compare("sub_title")==0)||
-               (parameterName.compare("netplay_server")==0)||(parameterName.compare("netplay_port")==0)||(parameterName.compare("netplay_tag")==0)||
-               (parameterName.compare("base_dir")==0)||(parameterName.compare("kickstarts_dir")==0)||(parameterName.compare("save_states_dir")==0)||
-               (parameterName.compare("floppy_overlays_dir")==0)||(parameterName.compare("flash_memory_dir")==0)||(parameterName.compare("controllers_dir")==0)||
-               (parameterName.compare("logs_dir")==0)||(parameterName.compare("hard_drives_dir")==0)||(parameterName.compare("cdroms_dir")==0)||
-               (parameterName.compare("floppies_dir")==0)||(parameterName.compare("netplay_password")==0)||(parameterName.compare("uae_input.mouse_speed")==0)){
-        return 9;
-    } else {
-        return -1;
-    }
-}
-
 void Amiga::parseLine(string line){
     if (line.length()<=1) return;
     //fs-uae config file convention is "name = value"
 
-    int separatorPosition=line.find_first_of(" = ");
+    //int separatorPosition=line.find_first_of(" = ");
+    int separatorPosition=line.find(" = ");
     string parameterName=line.substr(0,separatorPosition);
-    string parameterValue=line.substr(separatorPosition+3,line.length()-1); ///////////////////// -1
+    string parameterValue=line.substr(separatorPosition+3,line.length()-1);
 
     //bisogna capire in quale area di configurazione indirizzarlo
-    //NB se non trovo nessun parametro con quel nome significa che il parametro non esiste (getConfigurationAreaFromParameterName ritorna -1)
+    //NB se non trovo nessun parametro con quel nome significa che il parametro non esiste
     //MA se invece il parametro esiste ma non ha un valore valido se ne preoccupa l'area di configurazione
 
-    int configArea=getConfigurationAreaFromParameterName(parameterName);
-    if (configArea==1){
+    if (chipsetConfiguration.hasParameter(parameterName)){
         if (chipsetConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==2){
+    } else if (ramConfiguration.hasParameter(parameterName)){
         if (ramConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==3){
+    } else if (floppyConfiguration.hasParameter(parameterName)){
         if (floppyConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==4){
+    } else if (cdromConfiguration.hasParameter(parameterName)){
         if (cdromConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==5){
+    } else if (hardDiskConfiguration.hasParameter(parameterName)){
         if (hardDiskConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==6){
-         if (inputConfiguration.setParameter(parameterName,parameterValue)==-1){
-           showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
+    } else if (inputConfiguration.hasParameter(parameterName)){
+        if (inputConfiguration.setParameter(parameterName,parameterValue)==-1){
+            showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==7){
+    } else if (graphicsConfiguration.hasParameter(parameterName)){
         if (graphicsConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==8){
+    } else if (themeConfiguration.hasParameter(parameterName)){
         if (themeConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
-    } else if (configArea==9){
+    } else if (miscConfiguration.hasParameter(parameterName)){
         if (miscConfiguration.setParameter(parameterName,parameterValue)==-1){
             showAlert("\""+parameterValue+"\" is an invalid value for \""+parameterName+"\"");
         }
@@ -405,17 +359,50 @@ void Amiga::checkConfigurationConsistency()
         }
     }
 
+    //Priority is given from left to right (0-1-2-3)
+    if((inputConfiguration.getJoystickPort1String().compare("mouse")==0)&&(inputConfiguration.getJoystickPort0String().compare("mouse")==0)){
+        message.append("-Mouse is already selected on Port 0 --> you can't set another mouse on Port 1\n");
+        inputConfiguration.setParameter("joystick_port_1","keyboard");
+    }
+    if((inputConfiguration.getJoystickPort1String().compare("keyboard")==0)&&(inputConfiguration.getJoystickPort0String().compare("keyboard")==0)){
+        message.append("-Keyboard is already selected on Port 0 --> you can't set another keyboard on Port 1\n");
+        inputConfiguration.setParameter("joystick_port_1","mouse");
+    }
 
-    /*controlli da fare:
-    8-controllo joystick mutex
+    if(inputConfiguration.getJoystickPort2String().compare("mouse")==0){
+        if ((inputConfiguration.getJoystickPort0String().compare("mouse")==0)||(inputConfiguration.getJoystickPort1String().compare("mouse")==0)){
+            message.append("-Mouse is already selected on Port 0 or 1 --> you can't set another mouse on Port 2\n");
+            inputConfiguration.setParameter("joystick_port_2","none");
+        }
+    }
+    if(inputConfiguration.getJoystickPort2String().compare("keyboard")==0){
+        if ((inputConfiguration.getJoystickPort0String().compare("keyboard")==0)||(inputConfiguration.getJoystickPort1String().compare("keyboard")==0)){
+            message.append("-Keyboard is already selected on Port 0 or 1 --> you can't set another keyboard on Port 2\n");
+            inputConfiguration.setParameter("joystick_port_2","none");
+        }
+    }
 
+    if(inputConfiguration.getJoystickPort3String().compare("mouse")==0){
+        if ((inputConfiguration.getJoystickPort0String().compare("mouse")==0)||(inputConfiguration.getJoystickPort1String().compare("mouse")==0)||(inputConfiguration.getJoystickPort2String().compare("mouse")==0)){
+            message.append("-Mouse is already selected on Port 0, 1 or 2 --> you can't set another mouse on Port 3\n");
+            inputConfiguration.setParameter("joystick_port_3","none");
+        }
+    }
+    if(inputConfiguration.getJoystickPort3String().compare("keyboard")==0){
+        if ((inputConfiguration.getJoystickPort0String().compare("keyboard")==0)||(inputConfiguration.getJoystickPort1String().compare("keyboard")==0)||(inputConfiguration.getJoystickPort2String().compare("keyboard")==0)){
+            message.append("-Keyboard is already selected on Port 0, 1 or 2 --> you can't set another keyboard on Port 3\n");
+            inputConfiguration.setParameter("joystick_port_3","none");
+        }
+    }
 
+    /*
     NNB la consistenza non si preoccupa della grafica (disabilitazioni varie) ma dello stato interno. va quindi eseguita PRIMA per preparare
     l'aggiornamento della grafica DALLO stato interno. Viceversa updateGraphics() non tocca lo stato interno però sa cosa abilitare/disabilitare
-
     */
+
     if (message.compare("Following configuration inconsistencies have been found and resolved:\n\n")==0){
         return;}
+    message.append("\n\nPlease note that the configuration file has NOT been modified.");
     showAlert(message);
 }
 
@@ -980,6 +967,91 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
             ui->customInputMappingListWidget->addItem(QString::fromStdString(inputConfiguration.getCustomInputMappingAt(i)));
         }
     }
+
+    //JOYSTICK PORT 0
+    string joystick_port_0=inputConfiguration.getJoystickPort0String();
+    ui->joystickPort0CustomizePushButton->setDisabled(true);
+    ui->joystickPort0ModelComboBox->setDisabled(true);
+    if(ui->joystickPort0ModelComboBox->findText(QString::fromStdString(joystick_port_0),Qt::MatchExactly)!=-1){
+        ui->joystickPort0ModelComboBox->setCurrentIndex(ui->joystickPort0ModelComboBox->findText(QString::fromStdString(joystick_port_0),Qt::MatchExactly));
+        ui->joystickPort0ModelComboBox->setDisabled(false);
+        ui->joystickPort0JoystickRadioButton->setChecked(true);
+    } else if(joystick_port_0.compare("mouse")==0){
+        ui->joystickPort0MouseRadioButton->setChecked(true);
+    } else if(joystick_port_0.compare("keyboard")==0){
+        ui->joystickPort0KeyboardRadioButton->setChecked(true);
+    } else if(joystick_port_0.compare("none")==0){
+        ui->joystickPort0NothingRadioButton->setChecked(true);
+    } else if(joystick_port_0.compare("")!=0){
+        ui->joystickPort0CustomizePushButton->setDisabled(false);
+        ui->joystickPort0CustomJoystickRadioButton->setChecked(true);
+    }
+
+    //JOYSTICK PORT 1
+    string joystick_port_1=inputConfiguration.getJoystickPort1String();
+    ui->joystickPort1CusomizePushButton->setDisabled(true);
+    ui->joystickPort1ModelComboBox->setDisabled(true);
+    if(ui->joystickPort1ModelComboBox->findText(QString::fromStdString(joystick_port_1),Qt::MatchExactly)!=-1){
+        ui->joystickPort1ModelComboBox->setCurrentIndex(ui->joystickPort1ModelComboBox->findText(QString::fromStdString(joystick_port_1),Qt::MatchExactly));
+        ui->joystickPort1ModelComboBox->setDisabled(false);
+        ui->joystickPort1JoystickRadioButton->setChecked(true);
+    } else if(joystick_port_1.compare("mouse")==0){
+        ui->joystickPort1MouseRadioButton->setChecked(true);
+    } else if(joystick_port_1.compare("keyboard")==0){
+        ui->joystickPort1KeyboardRadioButton->setChecked(true);
+    } else if(joystick_port_1.compare("none")==0){
+        ui->joystickPort1NothingRadioButton->setChecked(true);
+    } else if(joystick_port_1.compare("")!=0){
+        ui->joystickPort1CusomizePushButton->setDisabled(false);
+        ui->joystickPort1CustomJoystickRadioButton->setChecked(true);
+    }
+
+    //JOYSTICK PORT 2
+    string joystick_port_2=inputConfiguration.getJoystickPort2String();
+    ui->joystickPort2CustomizePushButton->setDisabled(true);
+    ui->joystickPort2ModelComboBox->setDisabled(true);
+    if(ui->joystickPort2ModelComboBox->findText(QString::fromStdString(joystick_port_2),Qt::MatchExactly)!=-1){
+        ui->joystickPort2ModelComboBox->setCurrentIndex(ui->joystickPort2ModelComboBox->findText(QString::fromStdString(joystick_port_2),Qt::MatchExactly));
+        ui->joystickPort2ModelComboBox->setDisabled(false);
+        ui->joystickPort2JoystickRadioButton->setChecked(true);
+    } else if(joystick_port_2.compare("mouse")==0){
+        ui->joystickPort2MouseRadioButton->setChecked(true);
+    } else if(joystick_port_2.compare("keyboard")==0){
+        ui->joystickPort2KeyboardRadioButton->setChecked(true);
+    } else if(joystick_port_2.compare("none")==0){
+        ui->joystickPort2NothingRadioButton->setChecked(true);
+    } else if(joystick_port_2.compare("")!=0){
+        ui->joystickPort2CustomizePushButton->setDisabled(false);
+        ui->joystickPort2CustomJoystickRadioButton->setChecked(true);
+    }
+
+    //JOYSTICK PORT 3
+    string joystick_port_3=inputConfiguration.getJoystickPort3String();
+    ui->joystickPort3CustomizePushButton->setDisabled(true);
+    ui->joystickPort3ModelComboBox->setDisabled(true);
+    if(ui->joystickPort3ModelComboBox->findText(QString::fromStdString(joystick_port_3),Qt::MatchExactly)!=-1){
+        ui->joystickPort3ModelComboBox->setCurrentIndex(ui->joystickPort3ModelComboBox->findText(QString::fromStdString(joystick_port_3),Qt::MatchExactly));
+        ui->joystickPort3ModelComboBox->setDisabled(false);
+        ui->joystickPort3JoystickRadioButton->setChecked(true);
+    } else if(joystick_port_3.compare("mouse")==0){
+        ui->joystickPort3MouseRadioButton->setChecked(true);
+    } else if(joystick_port_3.compare("keyboard")==0){
+        ui->joystickPort3KeyboardRadioButton->setChecked(true);
+    } else if(joystick_port_3.compare("none")==0){
+        ui->joystickPort3NothingRadioButton->setChecked(true);
+    } else if(joystick_port_3.compare("")!=0){
+        ui->joystickPort3CustomizePushButton->setDisabled(false);
+        ui->joystickPort3CustomJoystickRadioButton->setChecked(true);
+    }
+
+}
+
+bool Amiga::isExistingParameter(string parameterName){
+    return (chipsetConfiguration.hasParameter(parameterName)||ramConfiguration.hasParameter(parameterName)||
+            floppyConfiguration.hasParameter(parameterName)||cdromConfiguration.hasParameter(parameterName)||
+            hardDiskConfiguration.hasParameter(parameterName)||inputConfiguration.hasParameter(parameterName)||
+            graphicsConfiguration.hasParameter(parameterName)||themeConfiguration.hasParameter(parameterName)||
+            miscConfiguration.hasParameter(parameterName));
 }
 
 void Amiga::on_loadConfigToolButton_clicked()
@@ -1002,9 +1074,10 @@ void Amiga::on_loadConfigToolButton_clicked()
         while (myfile.good())
         {
             getline (myfile,line);
-            int separatorPosition=line.find_first_of(" = ");
+            //int separatorPosition=line.find_first_of(" = ");
+            int separatorPosition=line.find(" = ");
             string parameterName=line.substr(0,separatorPosition);
-            if(getConfigurationAreaFromParameterName(parameterName)==-1 && line.compare("")!=0 && line.compare("[config]")!=0){
+            if(line.compare("")!=0 && line.compare("[config]")!=0 &&!isExistingParameter(parameterName)){
                 errorMessage.append("-Line \""+line+"\" has an invalid parameter name\n");
             }
             parseLine(line);
@@ -1024,6 +1097,11 @@ void Amiga::on_loadConfigToolButton_clicked()
 }
 
 void Amiga::loadDefaultValues(){
+    ui->joystickPort0ModelComboBox->setCurrentIndex(0);
+    ui->joystickPort1ModelComboBox->setCurrentIndex(0);
+    ui->joystickPort2ModelComboBox->setCurrentIndex(0);
+    ui->joystickPort3ModelComboBox->setCurrentIndex(0);
+
     chipsetConfiguration.setToDefaultConfiguration();
     ramConfiguration.setToDefaultConfiguration();
     floppyConfiguration.setToDefaultConfiguration();
@@ -1231,7 +1309,7 @@ void Amiga::on_z3Mem256MbRadio_clicked()
 
 void Amiga::on_actionAmiga_triggered()
 {
-    ui->Setup->setCurrentIndex(8);
+    ui->mainTabWidget->setCurrentIndex(8);
 }
 
 void Amiga::on_actionSummary_triggered()
@@ -2273,73 +2351,25 @@ void Amiga::on_mouseSpeedLineEdit_textChanged(const QString &arg1)
     miscConfiguration.setParameter("uae_input.mouse_speed",arg1.toStdString());
 }
 
-
-void Amiga::on_pushButton_clicked()
-{
-    QFormLayout *formLayout = new QFormLayout;
-    QLabel *label = new QLabel;
-    label->setText("Insert your Joystick/GamePad name. If you have more than one device of the same model,\nthe second is referred to by appending a space and #2 (and so on).");
-    QLabel *label2 = new QLabel;
-    label2->setTextFormat(Qt::RichText);
-    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
-    label2->setOpenExternalLinks(true);
-    label2->setText("Custom configurations file can be placed in the directory: Documents/FS-UAE/Controllers/<br>"
-                    "The name of the ini file is the system name of the controller, converted to lowercase,<br>"
-                    "with an underscore between each work. Characters other than letters and numbers are also<br>"
-                    "converted to underscore, and there is never more than one underscore between each word,<br>"
-                    "and the name will not start nor end with underscore.<br><br>"
-                    "<font color='red'>Example:</font> Controller (Xbox 360 Wireless Receiver For Windows) becomes<br>"
-                    "controller_xbox_360_wireless_receiver_for_windows.ini<br><br>"
-                    "Please visit <a href='http://fengestad.no/wp/fs-uae/custom-controller-configuration'>http://fengestad.no/wp/fs-uae/custom-controller-configuration</a> for an example<br>"
-                    "of INI Custom Controller Configuration file.");
-    QLineEdit *nameLineEdit = new QLineEdit;
-    QPushButton *closeButton = new QPushButton("OK");
-    QWidget *window = new QWidget;
-    formLayout->addRow(label);
-    formLayout->addRow(("Name:"), nameLineEdit);
-    formLayout->addRow(label2);
-    formLayout->addRow(closeButton);
-    window->setLayout(formLayout);
-    window->setWindowModality(Qt::ApplicationModal);
-    //connect(closeButton,SIGNAL(clicked()),this,SLOT(close()));
-    //connect(closeButton,SIGNAL(clicked()),this,);
-
-    //////////////////////////fare in modo di salvare il valore e chiudere la finestra!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-    window->show();
+void Amiga::customJoystick0Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_0",s.toStdString());
 }
-
+void Amiga::customJoystick1Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_1",s.toStdString());
+}
+void Amiga::customJoystick2Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_2",s.toStdString());
+}
+void Amiga::customJoystick3Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_3",s.toStdString());
+}
 
 QString getAmigaKeyboardKeysFromKey(int key){
     /*
     To map an action, you add a line like this to your configuration file:
-
     devicename_eventname = actionname
-
     Here is a specific example, mapping the keyboard key q to the fire button on the primary Amiga joystick (joy_1 is the joystick in joystick port 1):
-
     keyboard_key_q = action_joy_1_fire_button
-
-
-    LISTA DI TUTI I TASTI: http://fengestad.no/wp/fs-uae/custom-input-mapping ---> sezione "Mapping Keyboard Keys"
-    LISTA DI TUTTE LE AZIONI: http://fengestad.no/wp/fs-uae/input-actions
-
-        <widget class="QComboBox" name="amigaModelComboBox">
-         <property name="toolTip">
-          <string>Select Amiga model</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>A500</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>A1000</string>
-          </property>
-         </item>
-        </widget>
-
     */
     switch(key)
     {
@@ -2712,7 +2742,7 @@ bool Amiga::eventFilter(QObject *obj, QEvent *event)
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
         ui->keyboardEventLineEdit->setText(getAmigaKeyboardKeysFromKey(keyEvent->key()));
-       /* ui->readKeyPushButton->setText("Read Key from Keyboard");
+        /* ui->readKeyPushButton->setText("Read Key from Keyboard");
         ui->readKeyPushButton->setStyleSheet(QString(""));*/
         return true;
     }  else
@@ -2778,4 +2808,273 @@ void Amiga::on_customInputMappingRemovePushButton_clicked()
 
     //aggiorno la grafica
     updateGraphicsFromInternalConfiguration();
+}
+
+const QString pro="Custom configurations file can be placed in the directory: Documents/FS-UAE/Controllers/<br>"
+        "The name of the ini file is the system name of the controller, converted to lowercase,<br>"
+        "with an underscore between each work. Characters other than letters and numbers are also<br>"
+        "converted to underscore, and there is never more than one underscore between each word,<br>"
+        "and the name will not start nor end with underscore.<br><br>"
+        "<font color='red'>Example:</font> Controller (Xbox 360 Wireless Receiver For Windows) becomes<br>"
+        "controller_xbox_360_wireless_receiver_for_windows.ini<br><br>"
+        "Please visit <a href='http://fengestad.no/wp/fs-uae/custom-controller-configuration'>http://fengestad.no/wp/fs-uae/custom-controller-configuration</a> for an example<br>"
+        "of INI Custom Controller Configuration file.";
+
+void Amiga::on_joystickPort0CustomizePushButton_clicked()
+{
+    QFormLayout *formLayout = new QFormLayout;
+    QLabel *label = new QLabel;
+    label->setText("Insert your Joystick/GamePad name:");
+    QLabel *label2 = new QLabel;
+    label2->setTextFormat(Qt::RichText);
+    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
+    label2->setOpenExternalLinks(true);
+    label2->setText(pro);
+    QLineEdit *nameLineEdit = new QLineEdit;
+    QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort0String());
+    if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort0ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
+        nameLineEdit->setText(actualJoystick);}
+    QPushButton *closeButton = new QPushButton("OK");
+    QWidget *window = new QWidget;
+    formLayout->addRow(label);
+    formLayout->addRow(("Name:"), nameLineEdit);
+    formLayout->addRow(label2);
+    formLayout->addRow(closeButton);
+    window->setLayout(formLayout);
+    window->setWindowModality(Qt::ApplicationModal);
+    connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick0Slot(QString)));
+    connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    window->show();
+}
+void Amiga::on_joystickPort1CusomizePushButton_clicked()
+{
+    QFormLayout *formLayout = new QFormLayout;
+    QLabel *label = new QLabel;
+    label->setText("Insert your Joystick/GamePad name:");
+    QLabel *label2 = new QLabel;
+    label2->setTextFormat(Qt::RichText);
+    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
+    label2->setOpenExternalLinks(true);
+    label2->setText(pro);
+    QLineEdit *nameLineEdit = new QLineEdit;
+    QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort1String());
+    if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort1ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
+        nameLineEdit->setText(actualJoystick);}
+    QPushButton *closeButton = new QPushButton("OK");
+    QWidget *window = new QWidget;
+    formLayout->addRow(label);
+    formLayout->addRow(("Name:"), nameLineEdit);
+    formLayout->addRow(label2);
+    formLayout->addRow(closeButton);
+    window->setLayout(formLayout);
+    window->setWindowModality(Qt::ApplicationModal);
+    connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick1Slot(QString)));
+    connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    window->show();
+}
+
+void Amiga::on_joystickPort2CustomizePushButton_clicked()
+{
+    QFormLayout *formLayout = new QFormLayout;
+    QLabel *label = new QLabel;
+    label->setText("Insert your Joystick/GamePad name:");QLabel *label2 = new QLabel;
+    label2->setTextFormat(Qt::RichText);
+    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
+    label2->setOpenExternalLinks(true);
+    label2->setText(pro);
+    QLineEdit *nameLineEdit = new QLineEdit;
+    QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort2String());
+    if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort2ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
+        nameLineEdit->setText(actualJoystick);}
+    QPushButton *closeButton = new QPushButton("OK");
+    QWidget *window = new QWidget;
+    formLayout->addRow(label);
+    formLayout->addRow(("Name:"), nameLineEdit);
+    formLayout->addRow(label2);
+    formLayout->addRow(closeButton);
+    window->setLayout(formLayout);
+    window->setWindowModality(Qt::ApplicationModal);
+    connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick2Slot(QString)));
+    connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    window->show();
+}
+void Amiga::on_joystickPort3CustomizePushButton_clicked()
+{
+    QFormLayout *formLayout = new QFormLayout;
+    QLabel *label = new QLabel;
+    label->setText("Insert your Joystick/GamePad name:");QLabel *label2 = new QLabel;
+    label2->setTextFormat(Qt::RichText);
+    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
+    label2->setOpenExternalLinks(true);
+    label2->setText(pro);
+    QLineEdit *nameLineEdit = new QLineEdit;
+    QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort3String());
+    if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort3ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
+        nameLineEdit->setText(actualJoystick);}
+    QPushButton *closeButton = new QPushButton("OK");
+    QWidget *window = new QWidget;
+    formLayout->addRow(label);
+    formLayout->addRow(("Name:"), nameLineEdit);
+    formLayout->addRow(label2);
+    formLayout->addRow(closeButton);
+    window->setLayout(formLayout);
+    window->setWindowModality(Qt::ApplicationModal);
+    connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick3Slot(QString)));
+    connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    window->show();
+}
+void Amiga::on_joystickPort0CustomJoystickRadioButton_clicked()
+{
+    ui->joystickPort0ModelComboBox->setEnabled(false);
+    ui->joystickPort0CustomizePushButton->setEnabled(true);
+}
+
+void Amiga::on_joystickPort0JoystickRadioButton_clicked()
+{
+    ui->joystickPort0ModelComboBox->setEnabled(true);
+    ui->joystickPort0CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_0",ui->joystickPort0ModelComboBox->currentText().toStdString());
+}
+
+void Amiga::on_joystickPort0MouseRadioButton_clicked()
+{
+    ui->joystickPort0ModelComboBox->setEnabled(false);
+    ui->joystickPort0CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_0","mouse");
+}
+
+void Amiga::on_joystickPort0KeyboardRadioButton_clicked()
+{
+    ui->joystickPort0ModelComboBox->setEnabled(false);
+    ui->joystickPort0CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_0","keyboard");
+}
+
+void Amiga::on_joystickPort0NothingRadioButton_clicked()
+{
+    ui->joystickPort0ModelComboBox->setEnabled(false);
+    ui->joystickPort0CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_0","none");
+}
+
+void Amiga::on_joystickPort0ModelComboBox_currentIndexChanged(const QString &arg1)
+{
+    inputConfiguration.setParameter("joystick_port_0",arg1.toStdString());
+}
+
+void Amiga::on_joystickPort1MouseRadioButton_clicked()
+{
+    ui->joystickPort1ModelComboBox->setEnabled(false);
+    ui->joystickPort1CusomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_1","mouse");
+}
+
+void Amiga::on_joystickPort2MouseRadioButton_clicked()
+{
+    ui->joystickPort2ModelComboBox->setEnabled(false);
+    ui->joystickPort2CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_2","mouse");
+}
+
+void Amiga::on_joystickPort3MouseRadioButton_clicked()
+{
+    ui->joystickPort3ModelComboBox->setEnabled(false);
+    ui->joystickPort3CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_3","mouse");
+}
+
+void Amiga::on_joystickPort1KeyboardRadioButton_clicked()
+{
+    ui->joystickPort1ModelComboBox->setEnabled(false);
+    ui->joystickPort1CusomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_1","keyboard");
+}
+
+void Amiga::on_joystickPort2KeyboardRadioButton_clicked()
+{
+    ui->joystickPort2ModelComboBox->setEnabled(false);
+    ui->joystickPort2CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_2","keyboard");
+}
+
+void Amiga::on_joystickPort3KeyboardRadioButton_clicked()
+{
+    ui->joystickPort3ModelComboBox->setEnabled(false);
+    ui->joystickPort3CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_3","keyboard");
+}
+
+void Amiga::on_joystickPort1JoystickRadioButton_clicked()
+{
+    ui->joystickPort1ModelComboBox->setEnabled(true);
+    ui->joystickPort1CusomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_1",ui->joystickPort1ModelComboBox->currentText().toStdString());
+}
+
+void Amiga::on_joystickPort2JoystickRadioButton_clicked()
+{
+    ui->joystickPort2ModelComboBox->setEnabled(true);
+    ui->joystickPort2CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_2",ui->joystickPort2ModelComboBox->currentText().toStdString());
+}
+
+void Amiga::on_joystickPort3JoystickRadioButton_clicked()
+{
+    ui->joystickPort3ModelComboBox->setEnabled(true);
+    ui->joystickPort3CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_3",ui->joystickPort3ModelComboBox->currentText().toStdString());
+}
+
+void Amiga::on_joystickPort1ModelComboBox_currentIndexChanged(const QString &arg1)
+{
+    inputConfiguration.setParameter("joystick_port_1",arg1.toStdString());
+}
+
+void Amiga::on_joystickPort2ModelComboBox_currentIndexChanged(const QString &arg1)
+{
+    inputConfiguration.setParameter("joystick_port_2",arg1.toStdString());
+}
+
+void Amiga::on_joystickPort3ModelComboBox_currentIndexChanged(const QString &arg1)
+{
+    inputConfiguration.setParameter("joystick_port_3",arg1.toStdString());
+}
+
+void Amiga::on_joystickPort1CustomJoystickRadioButton_clicked()
+{
+    ui->joystickPort1ModelComboBox->setEnabled(false);
+    ui->joystickPort1CusomizePushButton->setEnabled(true);
+}
+
+void Amiga::on_joystickPort2CustomJoystickRadioButton_clicked()
+{
+    ui->joystickPort2ModelComboBox->setEnabled(false);
+    ui->joystickPort2CustomizePushButton->setEnabled(true);
+}
+
+void Amiga::on_joystickPort3CustomJoystickRadioButton_clicked()
+{
+    ui->joystickPort3ModelComboBox->setEnabled(false);
+    ui->joystickPort3CustomizePushButton->setEnabled(true);
+}
+
+void Amiga::on_joystickPort1NothingRadioButton_clicked()
+{
+    ui->joystickPort1ModelComboBox->setEnabled(false);
+    ui->joystickPort1CusomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_1","none");
+}
+
+void Amiga::on_joystickPort2NothingRadioButton_clicked()
+{
+    ui->joystickPort2ModelComboBox->setEnabled(false);
+    ui->joystickPort2CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_2","none");
+}
+
+void Amiga::on_joystickPort3NothingRadioButton_clicked()
+{
+    ui->joystickPort3ModelComboBox->setEnabled(false);
+    ui->joystickPort3CustomizePushButton->setEnabled(false);
+    inputConfiguration.setParameter("joystick_port_3","none");
 }

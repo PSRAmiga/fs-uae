@@ -184,3 +184,10 @@ void ConfigTheme::setToDefaultConfiguration()
     theme_heading_color=DEFAULTTHEMEHEADINGCOLOR;
     theme_overlay_image=DEFAULTTHEMEOVERLAYIMAGE;
 }
+
+bool ConfigTheme::hasParameter(string parameterName)
+{
+    return (parameterName.compare("theme")==0)||(parameterName.compare("theme_fade_color")==0)||(parameterName.compare("theme_wall_color_1")==0)||
+            (parameterName.compare("theme_wall_color_2")==0)||(parameterName.compare("theme_floor_color_1")==0)||(parameterName.compare("theme_floor_color_2")==0)||
+            (parameterName.compare("theme_heading_color")==0)||(parameterName.compare("theme_overlay_image")==0);
+}

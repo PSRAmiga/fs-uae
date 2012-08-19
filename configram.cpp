@@ -118,3 +118,8 @@ void ConfigRam::setToDefaultConfiguration()
     zorro_iii_memory=DEFAULTZORROIIIMEMORY;
 
 }
+
+bool ConfigRam::hasParameter(string parameterName)
+{
+    return (parameterName.compare("chip_memory")==0)||(parameterName.compare("slow_memory")==0)||(parameterName.compare("fast_memory")==0)||(parameterName.compare("zorro_iii_memory")==0);
+}

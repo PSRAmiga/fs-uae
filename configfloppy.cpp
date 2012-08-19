@@ -72,7 +72,7 @@ int ConfigFloppy::getFloppyImageSize()
 
 string ConfigFloppy::getFloppyImageAt(int position)
 {
-    if (position>=floppy_image.size()){return "";}
+    if (position>=(int)floppy_image.size()){return "";}
     return floppy_image.at(position);
 }
 
@@ -83,7 +83,7 @@ void ConfigFloppy::pushBackFloppyImage(string s)
 
 void ConfigFloppy::eraseFloppyImageAt(int position)
 {
-    if (position>=floppy_image.size()){return;}
+    if (position>=(int)floppy_image.size()){return;}
     floppy_image.erase(floppy_image.begin()+ position);
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -147,4 +147,9 @@ void ConfigFloppy::setToDefaultConfiguration()
     floppy_image.clear();
 
 
+}
+
+bool ConfigFloppy::hasParameter(string parameterName)
+{
+    return (parameterName.substr(0,parameterName.length()-1).compare("floppy_drive_")==0)||(parameterName.substr(0,parameterName.length()-1).compare("floppy_image_")==0)||(parameterName.substr(0,parameterName.length()-2).compare("floppy_image_")==0)||(parameterName.compare("floppy_drive_volume")==0)||(parameterName.compare("floppy_drive_speed")==0);
 }

@@ -51,7 +51,7 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <widget class="QTabWidget" name="Setup">
+   <widget class="QTabWidget" name="mainTabWidget">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -59,7 +59,7 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>880</width>
+      <width>881</width>
       <height>501</height>
      </rect>
     </property>
@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>4</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -2378,39 +2378,21 @@
        <string>Joystick Port 0</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="textEdit_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>430</y>
-        <width>421</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:11pt; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;Devo garantire il mutex se manometto la configurazione?&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:11pt; font-weight:296; color:#373737; background-color:#ffffff;&quot;&gt;Not all combinations of joystick_port_n and joystick_port_n_mode are valid. For instance, a host joystick cannot currently be mapped to an Amiga mouse.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget_6">
       <property name="geometry">
        <rect>
         <x>11</x>
         <y>310</y>
-        <width>181</width>
-        <height>131</height>
+        <width>197</width>
+        <height>136</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort0ModePanel">
        <item>
         <widget class="QRadioButton" name="joystickPort0ModeMouseRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Mouse</string>
          </property>
@@ -2418,12 +2400,15 @@ p, li { white-space: pre-wrap; }
           <bool>true</bool>
          </property>
          <property name="checked">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="joystickPort0ModeJoystickRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Joystick</string>
          </property>
@@ -2431,6 +2416,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QRadioButton" name="joystickPort0ModeCD32GamepadRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>CD32 Gamepad</string>
          </property>
@@ -2439,10 +2427,10 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort0ModeAutoRadioButton">
          <property name="text">
-          <string>No Amiga Device</string>
+          <string>No Amiga Device (AUTO)</string>
          </property>
          <property name="checked">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -2466,8 +2454,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>230</x>
         <y>310</y>
-        <width>181</width>
-        <height>131</height>
+        <width>197</width>
+        <height>136</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort1ModePanel">
@@ -2489,16 +2477,22 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QRadioButton" name="joystickPort1ModeJoysticjkRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Joystick</string>
          </property>
          <property name="checked">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="joystickPort1CD32GamepadRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>CD32 Gamepad</string>
          </property>
@@ -2507,10 +2501,10 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort1ModeAutoRadioButton">
          <property name="text">
-          <string>No Amiga Device</string>
+          <string>No Amiga Device (AUTO)</string>
          </property>
          <property name="checked">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -2521,13 +2515,16 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>450</x>
         <y>310</y>
-        <width>181</width>
-        <height>61</height>
+        <width>197</width>
+        <height>80</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort2ModePanel">
        <item>
         <widget class="QRadioButton" name="joystickPort2ModeJoystickRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Joystick</string>
          </property>
@@ -2536,7 +2533,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort2ModeAuto">
          <property name="text">
-          <string>No Amiga Device</string>
+          <string>No Amiga Device (AUTO)</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -2550,13 +2547,16 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>670</x>
         <y>310</y>
-        <width>181</width>
-        <height>61</height>
+        <width>197</width>
+        <height>80</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="joystickPort3ModePanel">
        <item>
         <widget class="QRadioButton" name="joystickPort3ModeJoystickRadioButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Joystick</string>
          </property>
@@ -2565,7 +2565,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort3ModeAutoRadioButton">
          <property name="text">
-          <string>No Amiga Device</string>
+          <string>No Amiga Device (AUTO)</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -2890,7 +2890,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort1MouseRadioButton">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
           <string>Mouse</string>
@@ -3085,7 +3085,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort2MouseRadioButton">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
           <string>Mouse</string>
@@ -3280,7 +3280,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QRadioButton" name="joystickPort3MouseRadioButton">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="text">
           <string>Mouse</string>
@@ -3540,19 +3540,6 @@ p, li { white-space: pre-wrap; }
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>0</y>
-        <width>97</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="ramMenu">
      <attribute name="icon">
@@ -3575,23 +3562,23 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] All'avvio vengono controllate se esistono le cartelle di FS-UAE&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] Tutti i parametri sono settati ai valori di default&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] LOAD: aggiorno la config interna e quindi la grafica&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] SALVA: leggo la config interna e le salvo su file&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] appena clicco/modifico la grafica aggiorno la config interna&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] PLAY: la config attuale viene salvata in un file nascosto temporaneo così avvio fs-uae con lo stato effettivamente corrente, non con l'ultimo salvato su file&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Al salvataggio il programma garantisce la coerenza perchè la grafica abilita/disabilita i vari componenti MA ma potrei manomettere il file con configurazioni non ammissibili o fare errori con la grafica (x es. seleziono CDTV, carico una ISO, cambio modello in A500, la zona CD viene disabilitata ma la ISO resta caricata anche se A500 non ha il lettore CD!)&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;--&amp;gt; Prima di salvare, prima di avviare e al caricamento da file viene testata la coerenza della config e corretta (NON nel file, così poi SE voglio sovrascrivo il file errato&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Se nel file di config c'è una riga sbagliata (un parametro inesistente) la riga viene ignorata, se invece il parametro esiste ma il valore è invalido viene settato al valore di default&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;==============================================&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[PROGRAM ARGUMENTS]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] fs-uae config-file&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;[#] You can also specify any configuration option with --key=value&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;(e.g: fs-uae --floppy-drive-0=/path/to/adf)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] All'avvio vengono controllate se esistono le cartelle di FS-UAE&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] Tutti i parametri sono settati ai valori di default&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] LOAD: aggiorno la config interna e quindi la grafica&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] SALVA: leggo la config interna e le salvo su file&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] appena clicco/modifico la grafica aggiorno la config interna&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] PLAY: la config attuale viene salvata in un file nascosto temporaneo così avvio fs-uae con lo stato effettivamente corrente, non con l'ultimo salvato su file&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Al salvataggio il programma garantisce la coerenza perchè la grafica abilita/disabilita i vari componenti MA ma potrei manomettere il file con configurazioni non ammissibili o fare errori con la grafica (x es. seleziono CDTV, carico una ISO, cambio modello in A500, la zona CD viene disabilitata ma la ISO resta caricata anche se A500 non ha il lettore CD!)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;--&amp;gt; Prima di salvare, prima di avviare e al caricamento da file viene testata la coerenza della config e corretta (NON nel file, così poi SE voglio sovrascrivo il file errato&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;----------------------------------------------------------------------------------------------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Se nel file di config c'è una riga sbagliata (un parametro inesistente) la riga viene ignorata, se invece il parametro esiste ma il valore è invalido viene settato al valore di default&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;==============================================&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[PROGRAM ARGUMENTS]&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] fs-uae config-file&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;[#] You can also specify any configuration option with --key=value&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(e.g: fs-uae --floppy-drive-0=/path/to/adf)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextEdit" name="textEdit_5">
@@ -3607,14 +3594,15 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;DA FARE:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;# configurazione joystick personalizzati&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# immagini theme?&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;# Capire come fare l'installazione della documentazione&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;# testare i check delle cartelle di FS-UAE&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;# nel controllo consistenza devo mettere azioni/tasti validi? (il programma già controlla l'associazione 1:1)&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;#BUG: nel controllo consistenza devo mettere l'estensioni sui file?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;DA FARE:&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# configurazione joystick personalizzati&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:10pt;&quot;&gt;# immagini theme?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# Capire come fare l'installazione della documentazione&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# testare i check delle cartelle di FS-UAE&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# nel controllo consistenza devo mettere azioni/tasti validi? (il programma già controlla l'associazione 1:1)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;#BUG: nel controllo consistenza devo mettere l'estensioni sui file?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;#fare indentazione CTRL+I su TUTTI i file!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="readKeyPushButton">
@@ -4491,6 +4479,1246 @@ p, li { white-space: pre-wrap; }
       <item>
        <property name="text">
         <string>action_key_np_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_period</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_add</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_sub</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_mul</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_div</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_lparen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_np_rparen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_2b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_backquote</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_sub</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_equal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_backslash</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_leftbracket</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_rightbracket</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_semicolon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_singlequote</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_comma</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_period</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_div</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_mousewheel_down</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_mousewheel_up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_cdtv_stop</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_cdtv_playpause</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_cdtv_prev</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_cdtv_next</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_cdtv_rew</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_cdtv_ff</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_0e</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_1c</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_2c</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_3b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_47</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_48</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_49</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_4b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_68</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_69</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_6a</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_6b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_6c</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_6d</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_6e</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_6f</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_70</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_71</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_78</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_79</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_7a</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_7b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_7c</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_7d</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_7e</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_key_7f</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_activate_cartridge (1.3.17+)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_eject_floppy_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_eject_floppy_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_eject_floppy_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_eject_floppy_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_pause</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_warp</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_irq_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_state_rewind</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_state_current</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_state_capture</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_volume_down</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_volume_up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_volume_mute</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_master_volume_down</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_master_volume_up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_master_volume_mute</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_quit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_soft_reset</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_hard_reset</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_switch_interpol</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_swapper_next</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_swapper_prev</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_swapper_insert_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_swapper_insert_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_swapper_insert_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_swapper_insert_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_prev_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_prev_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_prev_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_prev_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_next_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_next_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_next_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_disk_next_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_arcadia_diagnostica</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_arcadia_player_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_arcadia_player_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_arcadia_coin_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_arcadia_coin_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_cdtv_front_panel_playpause</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_cdtv_front_panel_prev</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_cdtv_front_panel_next</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_cdtv_front_panel_rew</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_cdtv_front_panel_ff</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_save_state_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_restore_state_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_17</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_18</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_0_insert_floppy_19</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_17</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_18</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_1_insert_floppy_19</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_17</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_18</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_2_insert_floppy_19</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_17</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_18</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_drive_3_insert_floppy_19</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_none</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_mouse</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_djoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_gamepad</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_ajoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_cdtvjoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_cd32joy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_0_mode_lightpen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_none</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_mouse</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_djoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_gamepad</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_ajoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_cdtvjoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_cd32joy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_1_mode_lightpen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_none</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_mouse</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_djoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_gamepad</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_ajoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_cdtvjoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_cd32joy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_2_mode_lightpen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_none</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_mouse</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_djoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_gamepad</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_ajoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_cdtvjoy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_cd32joy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>action_joyport_3_mode_lightpen</string>
        </property>
       </item>
      </widget>
@@ -7477,7 +8705,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>27</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="defaultUp">

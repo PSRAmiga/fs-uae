@@ -43,7 +43,7 @@ int ConfigCDRom::getCDRomImageSize()
 
 string ConfigCDRom::getCDRomImageAt(int position)
 {
-    if (position>=cdrom_image.size()){return "";}
+    if (position>=(int)cdrom_image.size()){return "";}
     return cdrom_image.at(position);
 }
 
@@ -54,7 +54,7 @@ void ConfigCDRom::pushBackCDRomImage(string s)
 
 void ConfigCDRom::erasCDRomImageAt(int position)
 {
-    if (position>=cdrom_image.size()){return;}
+    if (position>=(int)cdrom_image.size()){return;}
     cdrom_image.erase(cdrom_image.begin()+ position);
 }
 
@@ -65,10 +65,16 @@ int ConfigCDRom::setParameter(string parameter, string value)
     } else if((parameter.substr(0,parameter.length()-1).compare("cdrom_image")==0 || parameter.substr(0,parameter.length()-2).compare("cdrom_image")==0)&& cdrom_image.size()<20){
         cdrom_image.push_back(value);
     }
+    return 0;
 }
 
 void ConfigCDRom::setToDefaultConfiguration()
 {
     cdrom_drive_0=DEFAULTCDROMEDRIVE0;
     cdrom_image.clear();
+}
+
+bool ConfigCDRom::hasParameter(string parameterName)
+{
+    return (parameterName.substr(0,parameterName.length()-1).compare("cdrom_drive_")==0)||(parameterName.substr(0,parameterName.length()-1).compare("cdrom_image_")==0)||(parameterName.substr(0,parameterName.length()-2).compare("cdrom_image_")==0);
 }

@@ -95,7 +95,7 @@ int ConfigChipset::setParameter(string parameter, string value)
             return -1;
         }
     } else if(parameter.compare("ntsc_mode")==0){
-        if ((value.compare("0")==0)||(value.compare("0")==1)){
+        if ((value.compare("0")==0)||(value.compare("1")==0)){
             ntsc_mode=value;
         }else{
             ntsc_mode=DEFAULTNTSCMODE;
@@ -124,4 +124,9 @@ void ConfigChipset::setToDefaultConfiguration()
     kickstart_file=DEFAULTKICKSTARTFILE;
     kickstart_ext_file=DEFAULTKICKSTARTEXTFILE;
     ntsc_mode=DEFAULTNTSCMODE;
+}
+
+bool ConfigChipset::hasParameter(string parameterName)
+{
+    return (parameterName.compare("amiga_model")==0)||(parameterName.compare("accuracy")==0)||(parameterName.compare("kickstart_file")==0)||(parameterName.compare("kickstart_ext_file")==0)||(parameterName.compare("ntsc_mode")==0);
 }
