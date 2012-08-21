@@ -1,6 +1,4 @@
 /*! \mainpage A Gui designed to simplify the creation of Amiga configuration file
- */
-/**
 * \namespace Ui
 * \class Amiga
 */
@@ -44,11 +42,11 @@ private slots:
     void on_kickstartFileToolButton_clicked(); ///< Load Kickstart file.
     void on_kickstartExtFileToolButton_clicked(); ///< Load Extended Kickstart file.
     void on_amigaModelComboBox_currentIndexChanged(const QString &arg1);    ///< List of avaiable Amiga models.
-    void on_accuracyLeastRadio_clicked();   ///< Click to least accuracy.
-    void on_accuracyNormalRadio_clicked();  ///< Click to normal accuracy.
-    void on_accuracyMostadio_clicked();     ///< Click to most accuracy.
-    void on_videoModePALRadio_clicked();    ///< Click to PAL video mode.
-    void on_videoModeNTSCRadio_clicked();   ///< Click to NTST video mode.
+    void on_accuracyLeastRadio_clicked();   ///< Switch to least accuracy.
+    void on_accuracyNormalRadio_clicked();  ///< Switch to normal accuracy.
+    void on_accuracyMostadio_clicked();     ///< Switch to most accuracy.
+    void on_videoModePALRadio_clicked();    ///< Switch to PAL video mode.
+    void on_videoModeNTSCRadio_clicked();   ///< Switch to NTST video mode.
 
     void on_chipMem4MbRadio_clicked();      ///< Chip memory setting at 4Mb.
     void on_chipMeme8MbRadio_clicked();     ///< Chip memory setting at 8Mb.
@@ -110,16 +108,16 @@ private slots:
     void on_hardDrive9ToolButton_clicked();///< Load Hard Disks in Drive 9.
     void on_hardDrive9FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 9.
 
-    void on_hardDrive0LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 0.
-    void on_hardDrive1LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 1.
-    void on_hardDrive2LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 2.
-    void on_hardDrive3LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 3.
-    void on_hardDrive4LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 4.
-    void on_hardDrive5LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 5.
-    void on_hardDrive6LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 6.
-    void on_hardDrive7LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 7.
-    void on_hardDrive8LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 8.
-    void on_hardDrive9LabelLineEdit_textChanged(const QString &arg1);///< Type here a new label of Hard Disk stored in Drive 9.
+    void on_hardDrive0LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 0.
+    void on_hardDrive1LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 1.
+    void on_hardDrive2LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 2.
+    void on_hardDrive3LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 3.
+    void on_hardDrive4LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 4.
+    void on_hardDrive5LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 5.
+    void on_hardDrive6LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 6.
+    void on_hardDrive7LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 7.
+    void on_hardDrive8LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 8.
+    void on_hardDrive9LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 9.
 
     void on_hardDrive0ReadOnlyCheckBox_clicked();///< Set hard drive 0 as Read Only.
     void on_hardDrive1ReadOnlyCheckBox_clicked();///< Set hard drive 1 as Read Only.
@@ -171,32 +169,32 @@ private slots:
     void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);///< A list of type of video syncronization.
     void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);///< A list of method of video syncronization.
 
-    void on_viewportIn1LineEdit_textChanged(const QString &arg1);
-    void on_viewportIn2LineEdit_textChanged(const QString &arg1);
-    void on_viewportIn3LineEdit_textChanged(const QString &arg1);
-    void on_viewportIn4LineEdit_textChanged(const QString &arg1);
-    void on_viewportOut1LineEdit_textChanged(const QString &arg1);
-    void on_viewportOut2LineEdit_textChanged(const QString &arg1);
-    void on_viewportOut3LineEdit_textChanged(const QString &arg1);
-    void on_viewportOut4LineEdit_textChanged(const QString &arg1);
+    void on_viewportIn1LineEdit_textChanged(const QString &arg1);   ///< X input value
+    void on_viewportIn2LineEdit_textChanged(const QString &arg1);   ///< Y input value
+    void on_viewportIn3LineEdit_textChanged(const QString &arg1);   ///< width input value
+    void on_viewportIn4LineEdit_textChanged(const QString &arg1);   ///< height ionput value
+    void on_viewportOut1LineEdit_textChanged(const QString &arg1);  ///< X output value
+    void on_viewportOut2LineEdit_textChanged(const QString &arg1);  ///< Y output value
+    void on_viewportOut3LineEdit_textChanged(const QString &arg1);  ///< width output value
+    void on_viewportOut4LineEdit_textChanged(const QString &arg1);  ///< hieght output value
 
-    void on_alternativeBaseDirPushButton_clicked();
-    void on_alternativeKickstartDirPushButton_clicked();
-    void on_alernativeSaveStatesDirPushButton_clicked();
-    void on_alternativeFloppyOverlaysDirPushButton_clicked();
-    void on_alternativeFlashMemoryDirPushButton_clicked();
-    void on_alternativeControllersDirPushButton_clicked();
-    void on_alternativeLogsDirPushButton_clicked();
-    void on_alternativeHardDrivesDirPushButton_clicked();
-    void on_alternativeCdromsDirPushButton_clicked();
-    void on_alternativeFloppiesDirPushButton_clicked();
+    void on_alternativeBaseDirPushButton_clicked();                 ///< Explore system for an Alternative Base directory
+    void on_alternativeKickstartDirPushButton_clicked();            ///< Explore system for an Alternative Kickstart directory
+    void on_alernativeSaveStatesDirPushButton_clicked();            ///< Explore system for an Alternative SaveStates directory
+    void on_alternativeFloppyOverlaysDirPushButton_clicked();       ///< Explore system for an Alternative FloppyOverlay directory
+    void on_alternativeFlashMemoryDirPushButton_clicked();          ///< Explore system for an Alternative FlashMemory directory
+    void on_alternativeControllersDirPushButton_clicked();          ///< Explore system for an Alternative Controllers directory
+    void on_alternativeLogsDirPushButton_clicked();                 ///< Explore system for an Alternative Logs directory
+    void on_alternativeHardDrivesDirPushButton_clicked();           ///< Explore system for an Alternative HardDrivers directory
+    void on_alternativeCdromsDirPushButton_clicked();               ///< Explore system for an Alternative Cdroms directory
+    void on_alternativeFloppiesDirPushButton_clicked();             ///< Explore system for an Alternative Floppies directory
 
-    void on_grabMouseCheckBox_clicked();
-    void on_grabMouseAutoCheckBox_clicked();
-    void on_useBSDCheckBox_clicked();
-    void on_audioBufferLineEdit_textChanged(const QString &arg1);
-    void on_menuTitleLineEdit_textChanged(const QString &arg1);
-    void on_menuSubtitleLineEdit_textChanged(const QString &arg1);
+    void on_grabMouseCheckBox_clicked();                            ///< Disable grabbing mouse
+    void on_grabMouseAutoCheckBox_clicked();                        ///< Disable automatic grabbing mouse
+    void on_useBSDCheckBox_clicked();                               ///< Enable BSD
+    void on_audioBufferLineEdit_textChanged(const QString &arg1);   ///< Change size of audio buffer
+    void on_menuTitleLineEdit_textChanged(const QString &arg1);     ///< Change menu title
+    void on_menuSubtitleLineEdit_textChanged(const QString &arg1);  ///< Change menu subtitle
 
     void on_serverIPLineEdit_textChanged(const QString &arg1);
     void on_serverPortLineEdit_textChanged(const QString &arg1);

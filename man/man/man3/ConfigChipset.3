@@ -1,4 +1,4 @@
-.TH "ConfigChipset" 3 "Sun Aug 19 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "ConfigChipset" 3 "Tue Aug 21 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -73,6 +73,9 @@ This class is responsible for the Chipset Configuration\&.
 .ti -1c
 .RI "void \fBsetToDefaultConfiguration\fP ()"
 .br
+.ti -1c
+.RI "bool \fBhasParameter\fP (string parameterName)"
+.br
 .in -1c
 .SS "Private Attributes"
 
@@ -146,6 +149,7 @@ Represents the string of NTSCMode to be written in Config file\&. If NTSCMode is
 .SS "string \fBConfigChipset::getNTSCModeString\fP ()"
 .PP
 Represent the effective value of NTSCMode\&. 
+.SS "bool \fBConfigChipset::hasParameter\fP (stringparameterName)"
 .SS "int \fBConfigChipset::setParameter\fP (stringparameter, stringvalue)"
 .SS "void \fBConfigChipset::setToDefaultConfiguration\fP ()"
 .SH "Member Data Documentation"

@@ -11,5 +11,9 @@ var searchData=
   ['configmisc',['ConfigMisc',['../classConfigMisc.html#a85ec555cfdcd1b48774c13f227c0d800',1,'ConfigMisc']]],
   ['configram',['ConfigRam',['../classConfigRam.html#aaca57679f5c41f8441c0a97ddb2d0a22',1,'ConfigRam']]],
   ['configtheme',['ConfigTheme',['../classConfigTheme.html#ad586a7e87627e44fc9858aca7cca56dc',1,'ConfigTheme']]],
-  ['containskeyoraction',['containsKeyOrAction',['../classConfigInput.html#a82d3b55578796552f3257a9b7f2ac25b',1,'ConfigInput']]]
+  ['containskeyoraction',['containsKeyOrAction',['../classConfigInput.html#a82d3b55578796552f3257a9b7f2ac25b',1,'ConfigInput']]],
+  ['customjoystick0slot',['customJoystick0Slot',['../classAmiga.html#a80bf81e9dc1d774b9432be83cd80a1b1',1,'Amiga']]],
+  ['customjoystick1slot',['customJoystick1Slot',['../classAmiga.html#af6b42a66b63ea6fad58eaf29af2dbfcc',1,'Amiga']]],
+  ['customjoystick2slot',['customJoystick2Slot',['../classAmiga.html#af464732bdd319d63c8dc738ef12883e7',1,'Amiga']]],
+  ['customjoystick3slot',['customJoystick3Slot',['../classAmiga.html#a11a6c2f56a07306dfcc72a29ac35334f',1,'Amiga']]]
 ];

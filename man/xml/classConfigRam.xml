@@ -213,12 +213,29 @@
         </inbodydescription>
         <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="113" bodyend="120"/>
       </memberdef>
+      <memberdef kind="function" id="classConfigRam_1a9f277dd94654d6670c4e5b133f87e9ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigRam::hasParameter</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>hasParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is responsible for the Ram Configuration. The default value of each type of ram depends on the selected <ref refid="classAmiga" kindref="compound">Amiga</ref> model. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="9" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" bodystart="8" bodyend="30"/>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="9" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" bodystart="8" bodyend="31"/>
     <listofallmembers>
       <member refid="classConfigRam_1ad6b2684bcb11199f26659524612e3741" prot="private" virt="non-virtual"><scope>ConfigRam</scope><name>chip_memory</name></member>
       <member refid="classConfigRam_1aaca57679f5c41f8441c0a97ddb2d0a22" prot="public" virt="non-virtual"><scope>ConfigRam</scope><name>ConfigRam</name></member>
@@ -231,6 +248,7 @@
       <member refid="classConfigRam_1a006873994b74d5b3abb9128aea9e755a" prot="public" virt="non-virtual"><scope>ConfigRam</scope><name>getSlowMemoryString</name></member>
       <member refid="classConfigRam_1a456cfc71f7085ad5bd7300446a82b547" prot="public" virt="non-virtual"><scope>ConfigRam</scope><name>getZorro3ConfigString</name></member>
       <member refid="classConfigRam_1a14f205c9a74967e3c70aa460dac5e1ff" prot="public" virt="non-virtual"><scope>ConfigRam</scope><name>getZorro3String</name></member>
+      <member refid="classConfigRam_1a9f277dd94654d6670c4e5b133f87e9ad" prot="public" virt="non-virtual"><scope>ConfigRam</scope><name>hasParameter</name></member>
       <member refid="classConfigRam_1adcd2aca25e6b1f09fa465d96303fb9aa" prot="public" virt="non-virtual"><scope>ConfigRam</scope><name>setParameter</name></member>
       <member refid="classConfigRam_1a43e6e17db9a030a4cb522b329f00797e" prot="public" virt="non-virtual"><scope>ConfigRam</scope><name>setToDefaultConfiguration</name></member>
       <member refid="classConfigRam_1a716614ef01fde9b247de51555722eb21" prot="private" virt="non-virtual"><scope>ConfigRam</scope><name>slow_memory</name></member>

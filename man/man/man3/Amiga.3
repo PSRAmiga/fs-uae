@@ -1,4 +1,4 @@
-.TH "Amiga" 3 "Sun Aug 19 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "Amiga" 3 "Tue Aug 21 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -543,57 +543,75 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .ti -1c
 .RI "void \fBon_viewportIn1LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIX input value\&. \fP"
 .ti -1c
 .RI "void \fBon_viewportIn2LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIY input value\&. \fP"
 .ti -1c
 .RI "void \fBon_viewportIn3LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIwidth input value \fP"
 .ti -1c
 .RI "void \fBon_viewportIn4LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIheight ionput value \fP"
 .ti -1c
 .RI "void \fBon_viewportOut1LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIX output value\&. \fP"
 .ti -1c
 .RI "void \fBon_viewportOut2LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIY output value\&. \fP"
 .ti -1c
 .RI "void \fBon_viewportOut3LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIwidth output value \fP"
 .ti -1c
 .RI "void \fBon_viewportOut4LineEdit_textChanged\fP (const QString &arg1)"
 .br
+.RI "\fIhieght output value \fP"
 .ti -1c
 .RI "void \fBon_alternativeBaseDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative Base directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeKickstartDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative Kickstart directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alernativeSaveStatesDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative SaveStates directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeFloppyOverlaysDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative FloppyOverlay directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeFlashMemoryDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative FlashMemory directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeControllersDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative Controllers directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeLogsDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative Logs directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeHardDrivesDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative HardDrivers directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeCdromsDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative Cdroms directory\&. \fP"
 .ti -1c
 .RI "void \fBon_alternativeFloppiesDirPushButton_clicked\fP ()"
 .br
+.RI "\fIExplore system for an Alternative Floppies directory\&. \fP"
 .ti -1c
 .RI "void \fBon_grabMouseCheckBox_clicked\fP ()"
 .br
@@ -652,10 +670,16 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .RI "void \fBon_mouseSpeedLineEdit_textChanged\fP (const QString &arg1)"
 .br
 .ti -1c
-.RI "void \fBon_pushButton_clicked\fP ()"
+.RI "void \fBcustomJoystick0Slot\fP (QString s)"
 .br
 .ti -1c
-.RI "void \fBkeyPressEvent\fP (QKeyEvent *e)"
+.RI "void \fBcustomJoystick1Slot\fP (QString s)"
+.br
+.ti -1c
+.RI "void \fBcustomJoystick2Slot\fP (QString s)"
+.br
+.ti -1c
+.RI "void \fBcustomJoystick3Slot\fP (QString s)"
 .br
 .ti -1c
 .RI "void \fBon_readKeyPushButton_clicked\fP ()"
@@ -665,6 +689,90 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .br
 .ti -1c
 .RI "void \fBon_customInputMappingRemovePushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort0CustomizePushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort0CustomJoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort0JoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort0MouseRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort0KeyboardRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort0NothingRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort0ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort1MouseRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort2MouseRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort3MouseRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort1KeyboardRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort2KeyboardRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort3KeyboardRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort1JoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort2JoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort3JoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort1ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort2ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort3ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort1CustomJoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort2CustomJoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort3CustomizePushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort3CustomJoystickRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort1NothingRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort2NothingRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort3NothingRadioButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort1CusomizePushButton_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_joystickPort2CustomizePushButton_clicked\fP ()"
 .br
 .in -1c
 .SS "Private Member Functions"
@@ -686,13 +794,13 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .RI "void \fBupdateGraphicsFromInternalConfiguration\fP ()"
 .br
 .ti -1c
-.RI "int \fBgetConfigurationAreaFromParameterName\fP (string parameterName)"
-.br
-.ti -1c
 .RI "void \fBsaveConfigInFile\fP (string fileName)"
 .br
 .ti -1c
 .RI "void \fBloadDefaultValues\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisExistingParameter\fP (string parameterName)"
 .br
 .ti -1c
 .RI "bool \fBeventFilter\fP (QObject *obj, QEvent *event)"
@@ -742,9 +850,12 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void \fBAmiga::checkConfigurationConsistency\fP ()\fC [private]\fP"
+.SS "void \fBAmiga::customJoystick0Slot\fP (QStrings)\fC [private, slot]\fP"
+.SS "void \fBAmiga::customJoystick1Slot\fP (QStrings)\fC [private, slot]\fP"
+.SS "void \fBAmiga::customJoystick2Slot\fP (QStrings)\fC [private, slot]\fP"
+.SS "void \fBAmiga::customJoystick3Slot\fP (QStrings)\fC [private, slot]\fP"
 .SS "bool \fBAmiga::eventFilter\fP (QObject *obj, QEvent *event)\fC [private]\fP"
-.SS "int \fBAmiga::getConfigurationAreaFromParameterName\fP (stringparameterName)\fC [private]\fP"
-.SS "void \fBAmiga::keyPressEvent\fP (QKeyEvent *e)\fC [private, slot]\fP"
+.SS "bool \fBAmiga::isExistingParameter\fP (stringparameterName)\fC [private]\fP"
 .SS "void \fBAmiga::loadDefaultValues\fP ()\fC [private]\fP"
 .SS "void \fBAmiga::on_accuracyLeastRadio_clicked\fP ()\fC [private, slot]\fP"
 .PP
@@ -765,6 +876,8 @@ Help menu: open an email browser to report bug\&.
 .PP
 Help menu: a brief summary\&. 
 .SS "void \fBAmiga::on_alernativeSaveStatesDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative SaveStates directory\&. 
 .SS "void \fBAmiga::on_alignXdoubleSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .PP
 Change X-alignment\&. 
@@ -772,14 +885,32 @@ Change X-alignment\&.
 .PP
 Change Y-alignment\&. 
 .SS "void \fBAmiga::on_alternativeBaseDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative Base directory\&. 
 .SS "void \fBAmiga::on_alternativeCdromsDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative Cdroms directory\&. 
 .SS "void \fBAmiga::on_alternativeControllersDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative Controllers directory\&. 
 .SS "void \fBAmiga::on_alternativeFlashMemoryDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative FlashMemory directory\&. 
 .SS "void \fBAmiga::on_alternativeFloppiesDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative Floppies directory\&. 
 .SS "void \fBAmiga::on_alternativeFloppyOverlaysDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative FloppyOverlay directory\&. 
 .SS "void \fBAmiga::on_alternativeHardDrivesDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative HardDrivers directory\&. 
 .SS "void \fBAmiga::on_alternativeKickstartDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative Kickstart directory\&. 
 .SS "void \fBAmiga::on_alternativeLogsDirPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Explore system for an Alternative Logs directory\&. 
 .SS "void \fBAmiga::on_amigaModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .PP
 List of avaiable \fBAmiga\fP models\&. 
@@ -1023,6 +1154,34 @@ Set hard drive 9 as Read Only\&.
 .PP
 Load Hard Disks in Drive 9\&. 
 .SS "void \fBAmiga::on_headColorPushButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort0CustomizePushButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort0CustomJoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort0JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort0KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort0ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort0MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort0NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort1CusomizePushButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort1CustomJoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort1JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort1KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort1ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort1MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort1NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort2CustomizePushButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort2CustomJoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort2JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort2KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort2ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort2MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort2NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort3CustomizePushButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort3CustomJoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort3JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort3KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort3ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort3MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
+.SS "void \fBAmiga::on_joystickPort3NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_kickstartExtFileToolButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Load Extended Kickstart file\&. 
@@ -1046,7 +1205,6 @@ Start emulatio with low resolution\&.
 .SS "void \fBAmiga::on_mouseSpeedLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_playerPasswordLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_playerUsernameLineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.SS "void \fBAmiga::on_pushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_readKeyPushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_runConfigButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
@@ -1129,13 +1287,29 @@ A list of type of video syncronization\&.
 .PP
 A list of method of video syncronization\&. 
 .SS "void \fBAmiga::on_viewportIn1LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+X input value\&. 
 .SS "void \fBAmiga::on_viewportIn2LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Y input value\&. 
 .SS "void \fBAmiga::on_viewportIn3LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+width input value 
 .SS "void \fBAmiga::on_viewportIn4LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+height ionput value 
 .SS "void \fBAmiga::on_viewportOut1LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+X output value\&. 
 .SS "void \fBAmiga::on_viewportOut2LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+Y output value\&. 
 .SS "void \fBAmiga::on_viewportOut3LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+width output value 
 .SS "void \fBAmiga::on_viewportOut4LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+hieght output value 
 .SS "void \fBAmiga::on_wallColor1PushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_wallColor2PushButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_windowResolutionXSpinBox_valueChanged\fP (const QString &arg1)\fC [private, slot]\fP"

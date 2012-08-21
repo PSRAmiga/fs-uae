@@ -253,12 +253,29 @@
         </inbodydescription>
         <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="119" bodyend="127"/>
       </memberdef>
+      <memberdef kind="function" id="classConfigChipset_1af6af6d7870cf20a4208b22c23817c352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigChipset::hasParameter</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>hasParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is responsible for the Chipset Configuration. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="10" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="9" bodyend="33"/>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" line="10" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h" bodystart="9" bodyend="34"/>
     <listofallmembers>
       <member refid="classConfigChipset_1aac118cb9562ecaba7d6fc24c1bfedc45" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>accuracy</name></member>
       <member refid="classConfigChipset_1a4bc77e1b25746f228af19e8315982822" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>amiga_model</name></member>
@@ -273,6 +290,7 @@
       <member refid="classConfigChipset_1a35a96251236644d9a252d59e325f4b61" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getKickstartFileString</name></member>
       <member refid="classConfigChipset_1a75301906dd1d3547f8f826ba7420e862" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getNTSCModeConfigString</name></member>
       <member refid="classConfigChipset_1a84b7342aa2b6c452a866a4992cce4b2e" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>getNTSCModeString</name></member>
+      <member refid="classConfigChipset_1af6af6d7870cf20a4208b22c23817c352" prot="public" virt="non-virtual"><scope>ConfigChipset</scope><name>hasParameter</name></member>
       <member refid="classConfigChipset_1ad96fe812365b5770a3cf57326aa564f6" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>kickstart_ext_file</name></member>
       <member refid="classConfigChipset_1a741b37054ee3bba7d7c1dd0478c99062" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>kickstart_file</name></member>
       <member refid="classConfigChipset_1a2957b49b2ebd0fa73850bc3f0e893502" prot="private" virt="non-virtual"><scope>ConfigChipset</scope><name>ntsc_mode</name></member>

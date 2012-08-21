@@ -179,19 +179,49 @@
     <member refid="classAmiga_1ad75a18c9a31e0615e52bfc55d21e542f" kind="slot"><name>on_themeOverlayImagerPushButton_clicked</name></member>
     <member refid="classAmiga_1a1046b78c3b0735cbef1f5d19def8fc58" kind="slot"><name>on_themeFolderPushButton_clicked</name></member>
     <member refid="classAmiga_1a57d9cc12ce42e4fb19adc2e3d2bed7d2" kind="slot"><name>on_mouseSpeedLineEdit_textChanged</name></member>
-    <member refid="classAmiga_1a14ccc59462b0f1779fb1511a89ff304e" kind="slot"><name>on_pushButton_clicked</name></member>
-    <member refid="classAmiga_1ad63f756828f142b082aac80090666cb9" kind="slot"><name>keyPressEvent</name></member>
+    <member refid="classAmiga_1a80bf81e9dc1d774b9432be83cd80a1b1" kind="slot"><name>customJoystick0Slot</name></member>
+    <member refid="classAmiga_1af6b42a66b63ea6fad58eaf29af2dbfcc" kind="slot"><name>customJoystick1Slot</name></member>
+    <member refid="classAmiga_1af464732bdd319d63c8dc738ef12883e7" kind="slot"><name>customJoystick2Slot</name></member>
+    <member refid="classAmiga_1a11a6c2f56a07306dfcc72a29ac35334f" kind="slot"><name>customJoystick3Slot</name></member>
     <member refid="classAmiga_1af25d8dfbddb67d5a498f6881ae0be3b7" kind="slot"><name>on_readKeyPushButton_clicked</name></member>
     <member refid="classAmiga_1ae06ba9d08ac98fcdc1f62d4a5ae4186c" kind="slot"><name>on_customInputMappingAddPushButton_clicked</name></member>
     <member refid="classAmiga_1af7f403590ea3e372d63178d6f94f3613" kind="slot"><name>on_customInputMappingRemovePushButton_clicked</name></member>
+    <member refid="classAmiga_1af79fd991a18148d1722e7dc340c84f1b" kind="slot"><name>on_joystickPort0CustomizePushButton_clicked</name></member>
+    <member refid="classAmiga_1a8c287de95c3f14fbfe42f003608d8730" kind="slot"><name>on_joystickPort0CustomJoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a9c92765568543f58354a8daaeb9fb571" kind="slot"><name>on_joystickPort0JoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a9d891662f495b4a5b017890000f5611c" kind="slot"><name>on_joystickPort0MouseRadioButton_clicked</name></member>
+    <member refid="classAmiga_1ad9310e0d4e7b5e41dfd1ed69aa6dd30a" kind="slot"><name>on_joystickPort0KeyboardRadioButton_clicked</name></member>
+    <member refid="classAmiga_1ab7b49c803e444b0278bccea3ccd72e4e" kind="slot"><name>on_joystickPort0NothingRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a90ea1c38eb93f8f5f63422b1eb9551a0" kind="slot"><name>on_joystickPort0ModelComboBox_currentIndexChanged</name></member>
+    <member refid="classAmiga_1a438b01507278608b96573075efc69bff" kind="slot"><name>on_joystickPort1MouseRadioButton_clicked</name></member>
+    <member refid="classAmiga_1aa76838060cb9f9fdefdecd7d4975b7c2" kind="slot"><name>on_joystickPort2MouseRadioButton_clicked</name></member>
+    <member refid="classAmiga_1aac7966406bc88d1e5e86481d43d591e8" kind="slot"><name>on_joystickPort3MouseRadioButton_clicked</name></member>
+    <member refid="classAmiga_1ae89299fe4033831bba70d03792800f43" kind="slot"><name>on_joystickPort1KeyboardRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a6de475bf19fe0264b5bb4b0665370343" kind="slot"><name>on_joystickPort2KeyboardRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a81cc91dd2bc7359c6107b72c26269a22" kind="slot"><name>on_joystickPort3KeyboardRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a9f793563a3ce5d62fe1d618301d4c5be" kind="slot"><name>on_joystickPort1JoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a55efb7e9a0f451a1ca995b803aabfa9f" kind="slot"><name>on_joystickPort2JoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a5465e3cdfdab6c7c6c48f9a8fb17d654" kind="slot"><name>on_joystickPort3JoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a202243104b23641b689745570e6357cd" kind="slot"><name>on_joystickPort1ModelComboBox_currentIndexChanged</name></member>
+    <member refid="classAmiga_1a28e7a373593d21408fa6a6d6c2c72511" kind="slot"><name>on_joystickPort2ModelComboBox_currentIndexChanged</name></member>
+    <member refid="classAmiga_1a3341154b3aa7c9aefac565655850a31a" kind="slot"><name>on_joystickPort3ModelComboBox_currentIndexChanged</name></member>
+    <member refid="classAmiga_1a38264152b2e7f1ec88e8bfc678b87fef" kind="slot"><name>on_joystickPort1CustomJoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1aa25f66bfc15d7506d7eefd1334ba1c42" kind="slot"><name>on_joystickPort2CustomJoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a29b7262e14ec166bfa851a88d214aeed" kind="slot"><name>on_joystickPort3CustomizePushButton_clicked</name></member>
+    <member refid="classAmiga_1aa794f8845ec4588d35bdc15d5012cfd8" kind="slot"><name>on_joystickPort3CustomJoystickRadioButton_clicked</name></member>
+    <member refid="classAmiga_1aac7a68f9dba4ed9cebb6398358fd8921" kind="slot"><name>on_joystickPort1NothingRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a1664d696b89262820bd34e2277d1acf2" kind="slot"><name>on_joystickPort2NothingRadioButton_clicked</name></member>
+    <member refid="classAmiga_1aaa727bf69cf65ad2d42decd075b842c9" kind="slot"><name>on_joystickPort3NothingRadioButton_clicked</name></member>
+    <member refid="classAmiga_1a8d4404a1bfeeb9923ba4ce87c0ddc1ef" kind="slot"><name>on_joystickPort1CusomizePushButton_clicked</name></member>
+    <member refid="classAmiga_1a5550d45c74679251b813f3807e4f4b3b" kind="slot"><name>on_joystickPort2CustomizePushButton_clicked</name></member>
     <member refid="classAmiga_1a74c547003937479f8715e0dfbbefa33d" kind="function"><name>parseLine</name></member>
     <member refid="classAmiga_1ab1652767e9ee1f7f440445506e85da2e" kind="function"><name>checkConfigurationConsistency</name></member>
     <member refid="classAmiga_1a2ad7c64788f0dabf2f08f1327acf34b2" kind="function"><name>setFastMemoryDisabled</name></member>
     <member refid="classAmiga_1ad17d489ced2debc952e768432eb4893d" kind="function"><name>setZorroIIIMemoryDisabled</name></member>
     <member refid="classAmiga_1a153bfcb59f5250e9fec9cf03cd0fe8d6" kind="function"><name>updateGraphicsFromInternalConfiguration</name></member>
-    <member refid="classAmiga_1acabefa4b90d171daf72fc2cb3942e8da" kind="function"><name>getConfigurationAreaFromParameterName</name></member>
     <member refid="classAmiga_1a736cfd656c31325245e25700f951c5a7" kind="function"><name>saveConfigInFile</name></member>
     <member refid="classAmiga_1a23a02dd7b05d592d5ffb925c049dee96" kind="function"><name>loadDefaultValues</name></member>
+    <member refid="classAmiga_1a3ebbcaad07f23aadf76f9d25a9215fe1" kind="function"><name>isExistingParameter</name></member>
     <member refid="classAmiga_1a9d24fe556f77e5c2edcc5962203d63be" kind="function"><name>eventFilter</name></member>
   </compound>
   <compound refid="classConfigCDRom" kind="class"><name>ConfigCDRom</name>
@@ -206,6 +236,7 @@
     <member refid="classConfigCDRom_1a0f78ca614f70da1671b997139ebc1f3d" kind="function"><name>erasCDRomImageAt</name></member>
     <member refid="classConfigCDRom_1aceb8218c5f2156c79b5c6336c1d2378b" kind="function"><name>setParameter</name></member>
     <member refid="classConfigCDRom_1a69b62dbf21ea72a52cd3bd4d36bf06f0" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigCDRom_1a7be8d3fb6b1290fc50ae1fbf705a28cd" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="classConfigChipset" kind="class"><name>ConfigChipset</name>
     <member refid="classConfigChipset_1a4bc77e1b25746f228af19e8315982822" kind="variable"><name>amiga_model</name></member>
@@ -226,6 +257,7 @@
     <member refid="classConfigChipset_1aa756feef2817f1a5afddf6157066a814" kind="function"><name>getKickstartExtFileString</name></member>
     <member refid="classConfigChipset_1ad68ceb3328c0a206006b327210253d5b" kind="function"><name>setParameter</name></member>
     <member refid="classConfigChipset_1a748fd2c9e997c27b920bb79daee2ab21" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigChipset_1af6af6d7870cf20a4208b22c23817c352" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="classConfigFloppy" kind="class"><name>ConfigFloppy</name>
     <member refid="classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kind="variable"><name>floppy_drive</name></member>
@@ -245,6 +277,7 @@
     <member refid="classConfigFloppy_1a438a72cf02a171956e0518e2ecad1d62" kind="function"><name>eraseFloppyImageAt</name></member>
     <member refid="classConfigFloppy_1a9adb626c8b5dc40e94cb4f421452029d" kind="function"><name>setParameter</name></member>
     <member refid="classConfigFloppy_1a1ef111aadbbbc82c0a37bcabbd2d78e5" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigFloppy_1ac04e50830b98988857ba98ee70f340a6" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="classConfigGraphics" kind="class"><name>ConfigGraphics</name>
     <member refid="classConfigGraphics_1ab38c61e796c2d3900604c2d6985b37d8" kind="variable"><name>fullscreen</name></member>
@@ -328,6 +361,7 @@
     <member refid="classConfigGraphics_1a605decac076027fab3f1c0c1f135dae2" kind="function"><name>getViewportString</name></member>
     <member refid="classConfigGraphics_1a6a9e3470e3d18b2c92d716b00529cd5e" kind="function"><name>setParameter</name></member>
     <member refid="classConfigGraphics_1a7669fd041f18294ecf43689fb5b58a97" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigGraphics_1ad7fa778014cf7ff416674d44206224ac" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="classConfigHardDisks" kind="class"><name>ConfigHardDisks</name>
     <member refid="classConfigHardDisks_1aacce02bf3c29bd37a173a1009f9f9fee" kind="variable"><name>hard_drive</name></member>
@@ -342,17 +376,44 @@
     <member refid="classConfigHardDisks_1ad887288c21a0639ae722d0088d9ea586" kind="function"><name>getHardDriveReadOnlyStringAt</name></member>
     <member refid="classConfigHardDisks_1a21fecbbb887e01c296fefcff66977010" kind="function"><name>setParameter</name></member>
     <member refid="classConfigHardDisks_1a48f254ac83a7943877972537a95caaaf" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigHardDisks_1a795c311ad265dd1a6ffad2f7b2d0887f" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="classConfigInput" kind="class"><name>ConfigInput</name>
     <member refid="classConfigInput_1a2baae33b1a25b590cca86201a9d74b92" kind="variable"><name>custom_input_mapping_inserted_keys</name></member>
     <member refid="classConfigInput_1a8a171cb1bbde58bffdf56b1301e05629" kind="variable"><name>custom_input_mapping_inserted_actions</name></member>
+    <member refid="classConfigInput_1aec3a49b2f201ea2546d3f18836948923" kind="variable"><name>joystick_port_0</name></member>
+    <member refid="classConfigInput_1ad96dbbe2b5223671784856eebc7fd7fe" kind="variable"><name>joystick_port_1</name></member>
+    <member refid="classConfigInput_1a7c12a033eca6c7d0db2222b20b749d12" kind="variable"><name>joystick_port_2</name></member>
+    <member refid="classConfigInput_1ab011bae6319d03bd2cfd4eb33271315c" kind="variable"><name>joystick_port_3</name></member>
+    <member refid="classConfigInput_1a3baa7ed405de7839bb985102472b3263" kind="variable"><name>joystick_port_0_mode</name></member>
+    <member refid="classConfigInput_1af6471964410b7824227ab99b4578945a" kind="variable"><name>joystick_port_1_mode</name></member>
+    <member refid="classConfigInput_1a0d3cf411b8afa21610ac7ba57bd13cef" kind="variable"><name>joystick_port_2_mode</name></member>
+    <member refid="classConfigInput_1a387de806d61a7e31225ff32885a7c52a" kind="variable"><name>joystick_port_3_mode</name></member>
     <member refid="classConfigInput_1a857038752c21c23ca844992cf124e4af" kind="function"><name>ConfigInput</name></member>
-    <member refid="classConfigInput_1a99a00e4f25c80f8dfa3251555974805e" kind="function"><name>setParameter</name></member>
-    <member refid="classConfigInput_1a0c3a8d0ef982e8c2068bcd466f88e383" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigInput_1a8e7b90f1fca40f3b4deee3a3f4ef8759" kind="function"><name>getJoystickPort0ConfigString</name></member>
+    <member refid="classConfigInput_1aec9d76d81c60ccbf96f96915651c8def" kind="function"><name>getJoystickPort0String</name></member>
+    <member refid="classConfigInput_1a946f059c453af8ac8aef0464f2bc769c" kind="function"><name>getJoystickPort1ConfigString</name></member>
+    <member refid="classConfigInput_1ae856ef1114edb47ace7346d54d2b2800" kind="function"><name>getJoystickPort1String</name></member>
+    <member refid="classConfigInput_1ab50717f549f055520e2c88262d2c8c47" kind="function"><name>getJoystickPort2ConfigString</name></member>
+    <member refid="classConfigInput_1a2e27b2d31a431931ee0e2f08a7b24bc2" kind="function"><name>getJoystickPort2String</name></member>
+    <member refid="classConfigInput_1a377e032771eece8b75b6025b0555400b" kind="function"><name>getJoystickPort3ConfigString</name></member>
+    <member refid="classConfigInput_1a450b17024d97c50c0366c6813774ee36" kind="function"><name>getJoystickPort3String</name></member>
+    <member refid="classConfigInput_1a993d978770d68a6db665d3e7276dae93" kind="function"><name>getJoystickPort0ModeConfigString</name></member>
+    <member refid="classConfigInput_1a8593e6d14e501bb7d067fbdb687f2c84" kind="function"><name>getJoystickPort0ModeString</name></member>
+    <member refid="classConfigInput_1a3097903e79ae059b561d9ed0f3b1aaf7" kind="function"><name>getJoystickPort1ModeConfigString</name></member>
+    <member refid="classConfigInput_1aedcb2cc87e11bed14cba8fb005497661" kind="function"><name>getJoystickPort1ModeString</name></member>
+    <member refid="classConfigInput_1a89ab19e935057393ef8d07b5c81da1bd" kind="function"><name>getJoystickPort2ModeConfigString</name></member>
+    <member refid="classConfigInput_1a23e8ff57379b6f7bfafa428060f60134" kind="function"><name>getJoystickPort2ModeString</name></member>
+    <member refid="classConfigInput_1aec5fb280ff8e77aed146cbc8c7a3873d" kind="function"><name>getJoystickPort3ModeConfigString</name></member>
+    <member refid="classConfigInput_1ad35dc50cd49b829c56d3497d99ed66ec" kind="function"><name>getJoystickPort3ModeString</name></member>
     <member refid="classConfigInput_1a82d3b55578796552f3257a9b7f2ac25b" kind="function"><name>containsKeyOrAction</name></member>
     <member refid="classConfigInput_1a3fe054324da73ebe977453701eafebaf" kind="function"><name>getCustomInputMappingSize</name></member>
     <member refid="classConfigInput_1af78da571bb15f14cbc9bffd738f95b5f" kind="function"><name>getCustomInputMappingAt</name></member>
     <member refid="classConfigInput_1a24ca2d508ad64e4e3cd23089b9874ef7" kind="function"><name>eraseCustomInputMappingAt</name></member>
+    <member refid="classConfigInput_1a99a00e4f25c80f8dfa3251555974805e" kind="function"><name>setParameter</name></member>
+    <member refid="classConfigInput_1a0c3a8d0ef982e8c2068bcd466f88e383" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigInput_1a5747b6723f9a1fa3a69c2d5ecb6dc82e" kind="function"><name>hasParameter</name></member>
+    <member refid="classConfigInput_1a527dc8bd98985eac44d45bddebbd20f9" kind="function"><name>joystickNumberString</name></member>
   </compound>
   <compound refid="classConfigMisc" kind="class"><name>ConfigMisc</name>
     <member refid="classConfigMisc_1a22cd19e60a08591f04885aed36fb95f4" kind="variable"><name>input_grab</name></member>
@@ -421,6 +482,7 @@
     <member refid="classConfigMisc_1aba7efb27def44e650c8116252ff1e7d9" kind="function"><name>getFloppiesDirString</name></member>
     <member refid="classConfigMisc_1a1ec5f284294a8c0c2f9d3a02d3a8ff4d" kind="function"><name>setParameter</name></member>
     <member refid="classConfigMisc_1a6a78fcbcc2990ca67773f2a72ca41b46" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigMisc_1ac7dc08009063b4e6168ccb830bf3d409" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="classConfigRam" kind="class"><name>ConfigRam</name>
     <member refid="classConfigRam_1ad6b2684bcb11199f26659524612e3741" kind="variable"><name>chip_memory</name></member>
@@ -438,6 +500,7 @@
     <member refid="classConfigRam_1a14f205c9a74967e3c70aa460dac5e1ff" kind="function"><name>getZorro3String</name></member>
     <member refid="classConfigRam_1adcd2aca25e6b1f09fa465d96303fb9aa" kind="function"><name>setParameter</name></member>
     <member refid="classConfigRam_1a43e6e17db9a030a4cb522b329f00797e" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigRam_1a9f277dd94654d6670c4e5b133f87e9ad" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="classConfigTheme" kind="class"><name>ConfigTheme</name>
     <member refid="classConfigTheme_1a78cd8d5a52ca8674ad2f3e1f21bc576e" kind="variable"><name>theme</name></member>
@@ -467,12 +530,14 @@
     <member refid="classConfigTheme_1aa5b9c21014f39a67ec48ed1e8c4bf3b0" kind="function"><name>getOverlayImageString</name></member>
     <member refid="classConfigTheme_1ab6fe4eb9ca704980d9e82ca8a104b543" kind="function"><name>setParameter</name></member>
     <member refid="classConfigTheme_1ab3cd5e9247843ee93d5c39fa7d60d195" kind="function"><name>setToDefaultConfiguration</name></member>
+    <member refid="classConfigTheme_1a34a95bf0f8b4d0c4fb3add7f23e613a4" kind="function"><name>hasParameter</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="namespaceUi" kind="namespace"><name>Ui</name>
   </compound>
   <compound refid="amiga_8cpp" kind="file"><name>amiga.cpp</name>
+    <member refid="amiga_8cpp_1a0ead79a09cc733d3dbd7235709fe5fb1" kind="variable"><name>pro</name></member>
     <member refid="amiga_8cpp_1a1baaa40b7c29d381a7f11de74e44fdee" kind="function"><name>showAlert</name></member>
     <member refid="amiga_8cpp_1a512c26da8c9fd4eb400ac92bc1184c36" kind="function"><name>checkFoldersExistence</name></member>
     <member refid="amiga_8cpp_1a9a111086724f24c1b88a8d5dac63aa1d" kind="function"><name>strToInt</name></member>
@@ -548,6 +613,11 @@
   <compound refid="configharddisks_8h" kind="file"><name>configharddisks.h</name>
   </compound>
   <compound refid="configinput_8cpp" kind="file"><name>configinput.cpp</name>
+    <member refid="configinput_8cpp_1a9d6166dcf57b7f065c0a24671a89468c" kind="variable"><name>DEFAULTJOYSTICKPORT0</name></member>
+    <member refid="configinput_8cpp_1a2aae26e4bdd329a5a70a37bb46c37ec7" kind="variable"><name>DEFAULTJOYSTICKPORT1</name></member>
+    <member refid="configinput_8cpp_1a731f2b1c2c53db76014c2f7a7729c36b" kind="variable"><name>DEFAULTJOYSTICKPORT</name></member>
+    <member refid="configinput_8cpp_1ad19a2bea6b10027384ac28c802aa3fd8" kind="variable"><name>DEFAULTJOYSTICKPORTMODE</name></member>
+    <member refid="configinput_8cpp_1a38f2b5b2f86e89f6f13db9905fea0b39" kind="function"><name>joystickNameWithoutNumber</name></member>
   </compound>
   <compound refid="configinput_8h" kind="file"><name>configinput.h</name>
   </compound>

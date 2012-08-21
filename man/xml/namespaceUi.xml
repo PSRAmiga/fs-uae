@@ -6,6 +6,6 @@
 <para>Create a new main window: <ref refid="classAmiga" kindref="compound">Amiga</ref> Gui. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="4"/>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="2"/>
   </compounddef>
 </doxygen>

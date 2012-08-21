@@ -93,9 +93,10 @@
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>setParameter(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameter,</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setToDefaultConfiguration();</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONFIGCHIPSET_H</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasParameter(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameterName);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONFIGCHIPSET_H</highlight></codeline>
     </programlisting>
     <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h"/>
   </compounddef>

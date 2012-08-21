@@ -182,6 +182,11 @@
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classConfigRam_1a3ec94161f229dc1a7e9fe0b609bc2ac5" kindref="member" tooltip="Override the amount of Zorro III Fast memory, specified in KB. Must be a multiple of 1024...">zorro_iii_memory</ref>=<ref refid="configram_8cpp_1a142a201d9251a08d5a89b577a109fbf2" kindref="member">DEFAULTZORROIIIMEMORY</ref>;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classConfigRam_1a9f277dd94654d6670c4e5b133f87e9ad" kindref="member">ConfigRam::hasParameter</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameterName)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(parameterName.compare(</highlight><highlight class="stringliteral">&quot;chip_memory&quot;</highlight><highlight class="normal">)==0)||(parameterName.compare(</highlight><highlight class="stringliteral">&quot;slow_memory&quot;</highlight><highlight class="normal">)==0)||(parameterName.compare(</highlight><highlight class="stringliteral">&quot;fast_memory&quot;</highlight><highlight class="normal">)==0)||(parameterName.compare(</highlight><highlight class="stringliteral">&quot;zorro_iii_memory&quot;</highlight><highlight class="normal">)==0);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.cpp"/>
   </compounddef>

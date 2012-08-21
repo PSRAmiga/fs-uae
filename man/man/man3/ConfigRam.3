@@ -1,4 +1,4 @@
-.TH "ConfigRam" 3 "Sun Aug 19 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "ConfigRam" 3 "Tue Aug 21 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -63,6 +63,9 @@ This class is responsible for the Ram Configuration\&. The default value of each
 .ti -1c
 .RI "void \fBsetToDefaultConfiguration\fP ()"
 .br
+.ti -1c
+.RI "bool \fBhasParameter\fP (string parameterName)"
+.br
 .in -1c
 .SS "Private Attributes"
 
@@ -124,6 +127,7 @@ Represents the string of Zorro III Fast memory to be written in Config File\&. I
 .SS "string \fBConfigRam::getZorro3String\fP ()"
 .PP
 Represent the effective value of Zorro III Fast memory\&. 
+.SS "bool \fBConfigRam::hasParameter\fP (stringparameterName)"
 .SS "int \fBConfigRam::setParameter\fP (stringparameter, stringvalue)"
 .SS "void \fBConfigRam::setToDefaultConfiguration\fP ()"
 .SH "Member Data Documentation"

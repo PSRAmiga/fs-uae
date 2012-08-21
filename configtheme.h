@@ -42,3 +42,16 @@ public:
 };
 
 #endif // CONFIGTHEME_H
+
+/*
+The option viewport specifies a crop rectangle to apply to the Amiga video­out. The default, if not specified,
+is to calculate this automatically (auto­scaling). If auto­scaling does not work perfectly for a game, and you
+want a cropped output, you can specify any crop rectangle (x y width height).
+To force an uncropped viewport (and effectively disable autoscaling), you can specify:
+viewport = * * * * => 0 0 752 574
+Often, Amiga games have viewports with varying size and position. The default autoscaling system works well
+with many games, but not all. You can modify the auto­scaling algorithm by specifying patterns to replace.
+The viewport setting will be consulted each time the auto­scaling algorithm chooses a new viewport.
+The following viewport specification does nothing:
+viewport = * * * * => * * * *
+*/
