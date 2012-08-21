@@ -16,6 +16,7 @@
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  Written by Riva Alessandro Mario, alessandromario.riva@gmail.com
  and Sanvito Davide, dsanvito90@gmail.com. */
+
 #include <QtGui/QApplication>
 #include "amiga.h"
 

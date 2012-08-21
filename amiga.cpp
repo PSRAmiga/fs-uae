@@ -340,9 +340,9 @@ void Amiga::checkConfigurationConsistency()
     }
     if((ramConfiguration.getChipMemoryString().compare("4096")==0) || (ramConfiguration.getChipMemoryString().compare("8192")==0)){
         //fastmemory is disabled if chipsetram=4MB or 8MB
-        if(ramConfiguration.getFastMemoryString().compare("")!=0){
+        if(ramConfiguration.getFastMemoryString().compare("NONE")!=0){
             message.append("-You can't select any Fastmemory if Chipset memory is 4MB or 8MB\n");
-            ramConfiguration.setParameter("fast_memory","NONE");
+            this->ramConfiguration.setParameter("fast_memory","NONE");
         }
     }
     for(int i=0;i<10;i++){
@@ -350,11 +350,11 @@ void Amiga::checkConfigurationConsistency()
         if(hardDiskConfiguration.getHardDriveStringAt(i).compare("")==0){
             if(hardDiskConfiguration.getHardDriveLabelStringAt(i).compare("")!=0){
                 message.append("-Hard Disk "+intToStr(i)+" is empty --> you can't set its Label\n");
-                hardDiskConfiguration.setParameter("hard_drive_"+intToStr(i)+"_label","");
+                this->hardDiskConfiguration.setParameter("hard_drive_"+intToStr(i)+"_label","");
             }
             if(hardDiskConfiguration.getHardDriveReadOnlyStringAt(i).compare("0")!=0){
                 message.append("-Hard Disk "+intToStr(i)+" is empty --> you can't set its Readonly flag\n");
-                hardDiskConfiguration.setParameter("hard_drive_"+intToStr(i)+"_read_only","0");
+                this->hardDiskConfiguration.setParameter("hard_drive_"+intToStr(i)+"_read_only","0");
             }
         }
     }
@@ -362,36 +362,36 @@ void Amiga::checkConfigurationConsistency()
     //Priority is given from left to right (0-1-2-3)
     if((inputConfiguration.getJoystickPort1String().compare("mouse")==0)&&(inputConfiguration.getJoystickPort0String().compare("mouse")==0)){
         message.append("-Mouse is already selected on Port 0 --> you can't set another mouse on Port 1\n");
-        inputConfiguration.setParameter("joystick_port_1","keyboard");
+        this->inputConfiguration.setParameter("joystick_port_1","keyboard");
     }
     if((inputConfiguration.getJoystickPort1String().compare("keyboard")==0)&&(inputConfiguration.getJoystickPort0String().compare("keyboard")==0)){
         message.append("-Keyboard is already selected on Port 0 --> you can't set another keyboard on Port 1\n");
-        inputConfiguration.setParameter("joystick_port_1","mouse");
+        this->inputConfiguration.setParameter("joystick_port_1","mouse");
     }
 
     if(inputConfiguration.getJoystickPort2String().compare("mouse")==0){
         if ((inputConfiguration.getJoystickPort0String().compare("mouse")==0)||(inputConfiguration.getJoystickPort1String().compare("mouse")==0)){
             message.append("-Mouse is already selected on Port 0 or 1 --> you can't set another mouse on Port 2\n");
-            inputConfiguration.setParameter("joystick_port_2","none");
+            this->inputConfiguration.setParameter("joystick_port_2","none");
         }
     }
     if(inputConfiguration.getJoystickPort2String().compare("keyboard")==0){
         if ((inputConfiguration.getJoystickPort0String().compare("keyboard")==0)||(inputConfiguration.getJoystickPort1String().compare("keyboard")==0)){
             message.append("-Keyboard is already selected on Port 0 or 1 --> you can't set another keyboard on Port 2\n");
-            inputConfiguration.setParameter("joystick_port_2","none");
+            this->inputConfiguration.setParameter("joystick_port_2","none");
         }
     }
 
     if(inputConfiguration.getJoystickPort3String().compare("mouse")==0){
         if ((inputConfiguration.getJoystickPort0String().compare("mouse")==0)||(inputConfiguration.getJoystickPort1String().compare("mouse")==0)||(inputConfiguration.getJoystickPort2String().compare("mouse")==0)){
             message.append("-Mouse is already selected on Port 0, 1 or 2 --> you can't set another mouse on Port 3\n");
-            inputConfiguration.setParameter("joystick_port_3","none");
+            this->inputConfiguration.setParameter("joystick_port_3","none");
         }
     }
     if(inputConfiguration.getJoystickPort3String().compare("keyboard")==0){
         if ((inputConfiguration.getJoystickPort0String().compare("keyboard")==0)||(inputConfiguration.getJoystickPort1String().compare("keyboard")==0)||(inputConfiguration.getJoystickPort2String().compare("keyboard")==0)){
             message.append("-Keyboard is already selected on Port 0, 1 or 2 --> you can't set another keyboard on Port 3\n");
-            inputConfiguration.setParameter("joystick_port_3","none");
+            this->inputConfiguration.setParameter("joystick_port_3","none");
         }
     }
 
@@ -489,6 +489,8 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    setFastMemoryDisabled(false);
     //CHIP MEMORY
     string chip_memory=ramConfiguration.getChipMemoryString();
     if (chip_memory.compare("8192")==0){
@@ -1205,16 +1207,6 @@ void Amiga::setZorroIIIMemoryDisabled(bool state){
     ui->z3MemNoneRadio->setDisabled(state);
 }
 
-void Amiga::on_chipMem4MbRadio_clicked()
-{
-    setFastMemoryDisabled(true);
-    this->ramConfiguration.setParameter("chip_memory","4096");
-}
-void Amiga::on_chipMeme8MbRadio_clicked()
-{
-    setFastMemoryDisabled(true);
-    this->ramConfiguration.setParameter("chip_memory","8192");
-}
 void Amiga::on_chipMem512KbRadio_clicked()
 {
     setFastMemoryDisabled(false);
@@ -1230,6 +1222,17 @@ void Amiga::on_chipMem2MbRadio_clicked()
     setFastMemoryDisabled(false);
     this->ramConfiguration.setParameter("chip_memory","2048");
 }
+void Amiga::on_chipMem4MbRadio_clicked()
+{
+    setFastMemoryDisabled(true);
+    this->ramConfiguration.setParameter("chip_memory","4096");
+}
+void Amiga::on_chipMeme8MbRadio_clicked()
+{
+    setFastMemoryDisabled(true);
+    this->ramConfiguration.setParameter("chip_memory","8192");
+}
+
 void Amiga::on_slowMemNoneRadio_clicked()
 {
     this->ramConfiguration.setParameter("slow_memory","NONE");

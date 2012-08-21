@@ -52,7 +52,7 @@ string ConfigRam::getSlowMemoryString()
 //////////////////////////////////////////////////////////////////////////////////////////
 string ConfigRam::getFastMemoryConfigString()
 {
-    if ((fast_memory.compare(DEFAULTFASTMEMORY)==0)||(chip_memory.compare("4096")==0)||(chip_memory.compare("8192")==0)){return "";}
+    if ((fast_memory.compare(DEFAULTFASTMEMORY)==0)){return "";} //||(chip_memory.compare("4096")==0)||(chip_memory.compare("8192")==0)
     else {return "fast_memory = " + fast_memory;}
 }
 
