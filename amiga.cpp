@@ -186,7 +186,16 @@ void Amiga::saveConfigInFile(string fileName){
     if (!isEmptyString(graphicsConfiguration.getVideoSyncMethodConfigString())) {myfile << graphicsConfiguration.getVideoSyncMethodConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getVideoFormatConfigString())) {myfile << graphicsConfiguration.getVideoFormatConfigString() << endl;}
     if (!isEmptyString(graphicsConfiguration.getTextureFormatConfigString())) {myfile << graphicsConfiguration.getTextureFormatConfigString() << endl;}
-    if (!isEmptyString(graphicsConfiguration.getViewportConfigString())) {myfile << graphicsConfiguration.getViewportConfigString() << endl;}
+    if (graphicsConfiguration.getViewportSize()>0){
+        myfile << "viewport = ";
+        for(int i=0;i<graphicsConfiguration.getViewportSize();i++){
+            if (i!=0){
+                myfile << ",";
+            }
+            myfile << graphicsConfiguration.getViewportAt(i);
+        }
+        myfile << endl;
+    }
 
     if (!isEmptyString(miscConfiguration.getInputGrabConfigString())) {myfile << miscConfiguration.getInputGrabConfigString() << endl;}
     if (!isEmptyString(miscConfiguration.getAutomaticInputGrabConfigString())) {myfile << miscConfiguration.getAutomaticInputGrabConfigString() << endl;}
@@ -829,18 +838,13 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     } else {ui->videoSynkMethodeComboBox->setCurrentIndex(0); }
 
     //VIEWPORT
-    QStringList viewportList = QString::fromStdString(graphicsConfiguration.getViewportString()).split(" ");
-    if(viewportList.count()!=9){
-        return;
+    //// fare/////////////////////////////////////////////////////////////////////////////////////////////////
+    ui->viewportsListWidget->clear();
+    if (graphicsConfiguration.getViewportSize()>0){
+        for(int i=0;i<graphicsConfiguration.getViewportSize();i++){
+            ui->viewportsListWidget->addItem(QString::fromStdString(graphicsConfiguration.getViewportAt(i)));
+        }
     }
-    ui->viewportIn1LineEdit->setText(viewportList.at(0));
-    ui->viewportIn2LineEdit->setText(viewportList.at(1));
-    ui->viewportIn3LineEdit->setText(viewportList.at(2));
-    ui->viewportIn4LineEdit->setText(viewportList.at(3));
-    ui->viewportOut1LineEdit->setText(viewportList.at(5));
-    ui->viewportOut2LineEdit->setText(viewportList.at(6));
-    ui->viewportOut3LineEdit->setText(viewportList.at(7));
-    ui->viewportOut4LineEdit->setText(viewportList.at(8));
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1103,6 +1107,15 @@ void Amiga::loadDefaultValues(){
     ui->joystickPort1ModelComboBox->setCurrentIndex(0);
     ui->joystickPort2ModelComboBox->setCurrentIndex(0);
     ui->joystickPort3ModelComboBox->setCurrentIndex(0);
+
+    ui->viewportIn1LineEdit->setText("*");
+    ui->viewportIn2LineEdit->setText("*");
+    ui->viewportIn3LineEdit->setText("*");
+    ui->viewportIn4LineEdit->setText("*");
+    ui->viewportOut1LineEdit->setText("*");
+    ui->viewportOut2LineEdit->setText("*");
+    ui->viewportOut3LineEdit->setText("*");
+    ui->viewportOut4LineEdit->setText("*");
 
     chipsetConfiguration.setToDefaultConfiguration();
     ramConfiguration.setToDefaultConfiguration();
@@ -2043,126 +2056,6 @@ void Amiga::on_fadeColorPushButton_clicked()
 }
 
 
-void Amiga::on_viewportIn1LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=arg1.toStdString()+" ";
-    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
-void Amiga::on_viewportIn2LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
-    viewportString+=arg1.toStdString()+" ";
-    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
-void Amiga::on_viewportIn3LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
-    viewportString+=arg1.toStdString()+" ";
-    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
-void Amiga::on_viewportIn4LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
-    viewportString+=arg1.toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
-void Amiga::on_viewportOut1LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=arg1.toStdString()+" ";
-    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
-void Amiga::on_viewportOut2LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
-    viewportString+=arg1.toStdString()+" ";
-    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
-void Amiga::on_viewportOut3LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
-    viewportString+=arg1.toStdString()+" ";
-    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
-void Amiga::on_viewportOut4LineEdit_textChanged(const QString &arg1)
-{
-    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
-    viewportString+="=> ";
-    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
-    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
-    viewportString+=arg1.toStdString();
-
-    graphicsConfiguration.setParameter("viewport",viewportString);
-}
-
 void Amiga::on_alternativeBaseDirPushButton_clicked()
 {
     QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),QDir::homePath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
@@ -3080,4 +2973,60 @@ void Amiga::on_joystickPort3NothingRadioButton_clicked()
     ui->joystickPort3ModelComboBox->setEnabled(false);
     ui->joystickPort3CustomizePushButton->setEnabled(false);
     inputConfiguration.setParameter("joystick_port_3","none");
+}
+
+void Amiga::on_themeAddViewportPushButton_clicked()
+{
+    string viewportString=ui->viewportIn1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportIn4LineEdit->text().toStdString()+" ";
+    viewportString+="=> ";
+    viewportString+=ui->viewportOut1LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut2LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut3LineEdit->text().toStdString()+" ";
+    viewportString+=ui->viewportOut4LineEdit->text().toStdString();
+
+    if (graphicsConfiguration.containsViewport(viewportString)){
+        QMessageBox::about(this, tr("Error"),tr("Vewport already inserted"));
+        return;
+    }
+    graphicsConfiguration.setParameter("viewport",viewportString);
+
+    ui->viewportIn1LineEdit->setText("*");
+    ui->viewportIn2LineEdit->setText("*");
+    ui->viewportIn3LineEdit->setText("*");
+    ui->viewportIn4LineEdit->setText("*");
+    ui->viewportOut1LineEdit->setText("*");
+    ui->viewportOut2LineEdit->setText("*");
+    ui->viewportOut3LineEdit->setText("*");
+    ui->viewportOut4LineEdit->setText("*");
+
+    updateGraphicsFromInternalConfiguration();
+}
+
+void Amiga::on_themeRemoveViewportPushButton_clicked()
+{
+    //devo rimuovere i selezionati dalla lista interna
+    QItemSelectionModel *selection = ui->viewportsListWidget->selectionModel();
+    QModelIndexList indexes = selection->selectedRows();
+    QListIterator<QModelIndex> i(indexes);
+    QList <int> indexList;
+    while(i.hasNext())
+    {
+        QModelIndex index = i.next();
+        indexList << index.row();
+    };
+
+    //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
+    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
+    for(int x=indexList.size()-1;x>=0;x--){
+        graphicsConfiguration.eraseViewportAt(indexList[x]);
+    }
+
+    //svuoto lista grafica
+    ui->viewportsListWidget->clear();
+
+    //aggiorno la grafica
+    updateGraphicsFromInternalConfiguration();
 }

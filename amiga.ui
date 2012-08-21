@@ -103,7 +103,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>7</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
@@ -6962,7 +6962,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -6981,7 +6981,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -7000,7 +7000,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -7019,7 +7019,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -7038,7 +7038,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -7057,7 +7057,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -7076,7 +7076,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -7095,7 +7095,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>60</y>
+        <y>50</y>
         <width>41</width>
         <height>27</height>
        </rect>
@@ -7114,7 +7114,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>194</x>
-        <y>66</y>
+        <y>56</y>
         <width>31</width>
         <height>17</height>
        </rect>
@@ -7127,7 +7127,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>40</y>
+        <y>30</y>
         <width>271</width>
         <height>17</height>
        </rect>
@@ -7140,7 +7140,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>100</y>
+        <y>180</y>
         <width>881</width>
         <height>20</height>
        </rect>
@@ -7153,7 +7153,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>114</y>
+        <y>196</y>
         <width>271</width>
         <height>17</height>
        </rect>
@@ -7166,7 +7166,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>143</y>
+        <y>225</y>
         <width>631</width>
         <height>34</height>
        </rect>
@@ -7236,7 +7236,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>238</y>
+        <y>320</y>
         <width>271</width>
         <height>17</height>
        </rect>
@@ -7248,8 +7248,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="headColorPushButton">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>420</y>
+        <x>590</x>
+        <y>352</y>
         <width>97</width>
         <height>27</height>
        </rect>
@@ -7264,8 +7264,8 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="headColorLabel">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>425</y>
+        <x>490</x>
+        <y>357</y>
         <width>81</width>
         <height>17</height>
        </rect>
@@ -7277,9 +7277,9 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="sidebarLabel">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>390</y>
-        <width>271</width>
+        <x>490</x>
+        <y>320</y>
+        <width>161</width>
         <height>17</height>
        </rect>
       </property>
@@ -7291,7 +7291,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>305</y>
+        <y>387</y>
         <width>201</width>
         <height>29</height>
        </rect>
@@ -7320,7 +7320,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>340</y>
+        <y>422</y>
         <width>201</width>
         <height>29</height>
        </rect>
@@ -7349,7 +7349,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>240</x>
-        <y>271</y>
+        <y>353</y>
         <width>201</width>
         <height>29</height>
        </rect>
@@ -7378,7 +7378,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>240</x>
-        <y>307</y>
+        <y>389</y>
         <width>201</width>
         <height>29</height>
        </rect>
@@ -7407,7 +7407,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>21</x>
-        <y>271</y>
+        <y>353</y>
         <width>201</width>
         <height>29</height>
        </rect>
@@ -7436,7 +7436,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>183</y>
+        <y>265</y>
         <width>631</width>
         <height>34</height>
        </rect>
@@ -7506,7 +7506,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>220</y>
+        <y>302</y>
         <width>860</width>
         <height>20</height>
        </rect>
@@ -7518,14 +7518,76 @@ p, li { white-space: pre-wrap; }
      <widget class="Line" name="line_24">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>370</y>
-        <width>860</width>
-        <height>20</height>
+        <x>456</x>
+        <y>320</y>
+        <width>20</width>
+        <height>141</height>
        </rect>
       </property>
       <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="viewportsListWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>681</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::MultiSelection</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="themeAddViewportPushButton">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>50</y>
+        <width>151</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Add Viewport</string>
+      </property>
+      <property name="text">
+       <string>Add Viewport</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ICO.qrc">
+        <normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</normaloff>:/Images/Images/designer-property-editor-add-dynamic.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="themeRemoveViewportPushButton">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>50</y>
+        <width>151</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Remove selected Viewports</string>
+      </property>
+      <property name="text">
+       <string>Remove selected</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ICO.qrc">
+        <normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</normaloff>:/Images/Images/designer-property-editor-remove-dynamic.png</iconset>
       </property>
      </widget>
     </widget>

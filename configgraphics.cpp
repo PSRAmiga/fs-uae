@@ -18,8 +18,6 @@
  and Sanvito Davide, dsanvito90@gmail.com. */
 #include "configgraphics.h"
 #include "amiga.h"
-#include <QMessageBox>
-
 #include <sstream>
 using namespace std;
 
@@ -51,7 +49,7 @@ const string DEFAULTVIDEOSYNCMETHOD = "finish-swap-finish";
 const string DEFAULTVIDEOFORMAT = "bgra";
 const string DEFAULTTEXTUREFORMAT = "rgb";
 
-const string DEFAULTVIEWPORT = "* * * * => * * * *";
+//const string DEFAULTVIEWPORT = "* * * * => * * * *";
 
 
 ConfigGraphics::ConfigGraphics()
@@ -334,17 +332,30 @@ string ConfigGraphics::getTextureFormatString()
     return texture_format;
 }
 
-string ConfigGraphics::getViewportConfigString()
+bool ConfigGraphics::containsViewport(string s)
 {
-    if (viewport.compare(DEFAULTVIEWPORT)==0){return "";}
-    else {return "viewport = " + viewport;}
+    if(std::find(viewport.begin(), viewport.end(), s) != viewport.end()) {
+        return true;
+    }
+    return false;
 }
 
-string ConfigGraphics::getViewportString()
+int ConfigGraphics::getViewportSize()
 {
-    return viewport;
+    return viewport.size();
 }
 
+string ConfigGraphics::getViewportAt(int position)
+{
+    if (position>=(int)viewport.size()){return "";}
+    return viewport.at(position);
+}
+
+void ConfigGraphics::eraseViewportAt(int position)
+{
+    if (position>=(int)viewport.size()){return;}
+    viewport.erase(viewport.begin()+ position);
+}
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 bool static isNumber(string s){
@@ -374,6 +385,31 @@ int static strToInt(string s){
 }
 
 ////////////////////////////////////////////////////////////////////////////
+
+bool ConfigGraphics::isValidViewport(string viewportString)
+{
+    /* 74 40 640 400 => 74 36 640 400
+    devono esserci 8 numeri positivi (oppure un "*") e un separatore "=>"
+    */
+
+    QStringList viewportList = QString::fromStdString(viewportString).split(" ");
+    if(viewportList.count()!=9){
+        return false;
+    }
+    if(viewportList.at(4).compare("=>")!=0){
+        return false;
+    }
+    for(int i=0;i<viewportList.count();i++){
+        if (i!=4){
+            if (((isNumber(viewportList.at(i).toStdString())==false) && (viewportList.at(i).toStdString().compare("*")!=0))||
+                    (isNumber(viewportList.at(i).toStdString()) && strToInt(viewportList.at(i).toStdString())<0)){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 
 int ConfigGraphics::setParameter(string parameter, string value)
 {
@@ -553,28 +589,19 @@ int ConfigGraphics::setParameter(string parameter, string value)
             return -1;
         }
     } else if(parameter.compare("viewport")==0){
-        /* 74 40 640 400 => 74 36 640 400
-        devono esserci 8 numeri positivi (oppure un "*") e un separatore "=>"
-        */
-        QStringList viewportList = QString::fromStdString(value).split(" ");
-        if(viewportList.count()!=9){
-            viewport=DEFAULTVIEWPORT;
-           return -1;
-        }
-        if(viewportList.at(4).compare("=>")!=0){
-            viewport=DEFAULTVIEWPORT;
-            return -1;
-        }
+        int invalidViewport=0;
+        QStringList viewportList = QString::fromStdString(value).split(",");
         for(int i=0;i<viewportList.count();i++){
-            if (i!=4){
-                if (((isNumber(viewportList.at(i).toStdString())==false) && (viewportList.at(i).toStdString().compare("*")!=0))||
-                        (isNumber(viewportList.at(i).toStdString()) && strToInt(viewportList.at(i).toStdString())<0)){
-                    viewport=DEFAULTVIEWPORT;
-                    return -1;
+            string currentViewport=viewportList.at(i).toStdString();
+            if(isValidViewport(currentViewport)){
+                if(!containsViewport(currentViewport)){
+                    viewport.push_back(currentViewport);
                 }
+            } else {
+                invalidViewport++;
             }
         }
-        viewport=value;
+        if (invalidViewport>0){ return -1;}
     }
     return 0;
 }
@@ -609,7 +636,7 @@ void ConfigGraphics::setToDefaultConfiguration()
     video_format=DEFAULTVIDEOFORMAT;
     texture_format=DEFAULTTEXTUREFORMAT;
 
-    viewport=DEFAULTVIEWPORT;
+    viewport.clear();
 }
 
 bool ConfigGraphics::hasParameter(string parameterName)

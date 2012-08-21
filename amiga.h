@@ -169,15 +169,6 @@ private slots:
     void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);///< A list of type of video syncronization.
     void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);///< A list of method of video syncronization.
 
-    void on_viewportIn1LineEdit_textChanged(const QString &arg1);   ///< X input value
-    void on_viewportIn2LineEdit_textChanged(const QString &arg1);   ///< Y input value
-    void on_viewportIn3LineEdit_textChanged(const QString &arg1);   ///< width input value
-    void on_viewportIn4LineEdit_textChanged(const QString &arg1);   ///< height ionput value
-    void on_viewportOut1LineEdit_textChanged(const QString &arg1);  ///< X output value
-    void on_viewportOut2LineEdit_textChanged(const QString &arg1);  ///< Y output value
-    void on_viewportOut3LineEdit_textChanged(const QString &arg1);  ///< width output value
-    void on_viewportOut4LineEdit_textChanged(const QString &arg1);  ///< hieght output value
-
     void on_alternativeBaseDirPushButton_clicked();                 ///< Explore system for an Alternative Base directory
     void on_alternativeKickstartDirPushButton_clicked();            ///< Explore system for an Alternative Kickstart directory
     void on_alernativeSaveStatesDirPushButton_clicked();            ///< Explore system for an Alternative SaveStates directory
@@ -248,6 +239,10 @@ private slots:
     void on_joystickPort3NothingRadioButton_clicked();
     void on_joystickPort1CusomizePushButton_clicked();
     void on_joystickPort2CustomizePushButton_clicked();
+
+    void on_themeAddViewportPushButton_clicked();
+
+    void on_themeRemoveViewportPushButton_clicked();
 
 private:
     Ui::Amiga *ui;

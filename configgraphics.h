@@ -4,6 +4,7 @@
 #ifndef CONFIGGRAPHICS_H
 #define CONFIGGRAPHICS_H
 #include <string>
+#include <vector>
 using namespace std;
 /// This class is responsible for the Graphics Configuration
 class ConfigGraphics
@@ -36,7 +37,7 @@ class ConfigGraphics
     string video_format;
     string texture_format;
 
-    string viewport;
+    vector<string> viewport;
 
 public:
     ConfigGraphics();
@@ -94,12 +95,15 @@ public:
     string getTextureFormatConfigString();
     string getTextureFormatString();
 
-    string getViewportConfigString();
-    string getViewportString();
+    bool containsViewport(string s);
+    int getViewportSize();
+    string getViewportAt(int position);
+    void eraseViewportAt(int position);
 
     int setParameter(string parameter,string value);
     void setToDefaultConfiguration();
     bool hasParameter(string parameterName);
+    bool isValidViewport(string viewportString);
 };
 
 #endif // CONFIGGRAPHICS_H
