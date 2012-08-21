@@ -187,20 +187,20 @@ private slots:
     void on_menuTitleLineEdit_textChanged(const QString &arg1);     ///< Change menu title
     void on_menuSubtitleLineEdit_textChanged(const QString &arg1);  ///< Change menu subtitle
 
-    void on_serverIPLineEdit_textChanged(const QString &arg1);
-    void on_serverPortLineEdit_textChanged(const QString &arg1);
-    void on_playerUsernameLineEdit_textChanged(const QString &arg1);
-    void on_playerPasswordLineEdit_textChanged(const QString &arg1);
+    void on_serverIPLineEdit_textChanged(const QString &arg1);      ///< Insert an IP address
+    void on_serverPortLineEdit_textChanged(const QString &arg1);    ///< Insert a Internet port
+    void on_playerUsernameLineEdit_textChanged(const QString &arg1);///< Choose a Username
+    void on_playerPasswordLineEdit_textChanged(const QString &arg1);///< Choose a password
 
-    void on_fadeColorPushButton_clicked();
-    void on_wallColor1PushButton_clicked();
-    void on_wallColor2PushButton_clicked();
-    void on_floorColor1PushButton_clicked();
-    void on_floorColor2PushButton_clicked();
-    void on_headColorPushButton_clicked();
-    void on_themeOverlayImagerPushButton_clicked();
-    void on_themeFolderPushButton_clicked();
-    void on_mouseSpeedLineEdit_textChanged(const QString &arg1);
+    void on_fadeColorPushButton_clicked();          ///< Change the fade color
+    void on_wallColor1PushButton_clicked();         ///< Chaneg the first wall color
+    void on_wallColor2PushButton_clicked();         ///< Change the second wall color
+    void on_floorColor1PushButton_clicked();        ///< Change the first floor color
+    void on_floorColor2PushButton_clicked();        ///< Change the second wall color
+    void on_headColorPushButton_clicked();          ///< Change the head color
+    void on_themeOverlayImagerPushButton_clicked(); ///< Change the theme overlay image
+    void on_themeFolderPushButton_clicked();        ///< Change the theme folder
+    void on_mouseSpeedLineEdit_textChanged(const QString &arg1);    ///< Change mouse speed
 
     void customJoystick0Slot(QString s);
     void customJoystick1Slot(QString s);
