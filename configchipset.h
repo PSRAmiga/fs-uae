@@ -6,6 +6,15 @@
 #define CONFIGCHIPSET_H
 using namespace std;
 /// This class is responsible for the Chipset Configuration.
+/** In this class are defined all the variables for the correct management
+ * of chipset configuration's tab.\n
+ * In this tab, you can choose the type of model you want to emulate FS-UAE (A500, A500+,...,CDTV),
+ * the paths for the kickstart and extended kickstart.\n
+ * You can also select the emulation accuracy, the refresh rate of the video (50 Hz PAL or 60 Hz NTSC)
+ * and the various types of RAM mountable.\n
+ * The extended kickstart path explorer is only permitted if the Amiga model selected si CDTV or CD32.\n
+ * In all other cases the Cd-Rom Configuration tabs appears disabled.
+*/
 class ConfigChipset			  
 {
     string amiga_model;          ///< Specify the Amiga model you want to emulate.

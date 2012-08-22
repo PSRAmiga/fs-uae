@@ -1,4 +1,4 @@
-.TH "ConfigChipset" 3 "Tue Aug 21 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "ConfigChipset" 3 "Wed Aug 22 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -104,6 +104,16 @@ This class is responsible for the Chipset Configuration\&.
 .SH "Detailed Description"
 .PP 
 This class is responsible for the Chipset Configuration\&. 
+
+In this class are defined all the variables for the correct management of chipset configuration's tab\&.
+.br
+ In this tab, you can choose the type of model you want to emulate FS-UAE (A500, A500+,\&.\&.\&.,CDTV), the paths for the kickstart and extended kickstart\&.
+.br
+ You can also select the emulation accuracy, the refresh rate of the video (50 Hz PAL or 60 Hz NTSC) and the various types of RAM mountable\&.
+.br
+ The extended kickstart path explorer is only permitted if the \fBAmiga\fP model selected si CDTV or CD32\&.
+.br
+ In all other cases the Cd-Rom Configuration tabs appears disabled\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "\fBConfigChipset::ConfigChipset\fP ()"

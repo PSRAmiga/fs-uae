@@ -1,4 +1,4 @@
-.TH "Amiga" 3 "Tue Aug 21 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "Amiga" 3 "Wed Aug 22 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -541,38 +541,6 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .br
 .RI "\fIA list of method of video syncronization\&. \fP"
 .ti -1c
-.RI "void \fBon_viewportIn1LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIX input value\&. \fP"
-.ti -1c
-.RI "void \fBon_viewportIn2LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIY input value\&. \fP"
-.ti -1c
-.RI "void \fBon_viewportIn3LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIwidth input value \fP"
-.ti -1c
-.RI "void \fBon_viewportIn4LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIheight ionput value \fP"
-.ti -1c
-.RI "void \fBon_viewportOut1LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIX output value\&. \fP"
-.ti -1c
-.RI "void \fBon_viewportOut2LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIY output value\&. \fP"
-.ti -1c
-.RI "void \fBon_viewportOut3LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIwidth output value \fP"
-.ti -1c
-.RI "void \fBon_viewportOut4LineEdit_textChanged\fP (const QString &arg1)"
-.br
-.RI "\fIhieght output value \fP"
-.ti -1c
 .RI "void \fBon_alternativeBaseDirPushButton_clicked\fP ()"
 .br
 .RI "\fIExplore system for an Alternative Base directory\&. \fP"
@@ -691,27 +659,35 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .ti -1c
 .RI "void \fBcustomJoystick0Slot\fP (QString s)"
 .br
+.RI "\fICustom slot for joystick 0\&. \fP"
 .ti -1c
 .RI "void \fBcustomJoystick1Slot\fP (QString s)"
 .br
+.RI "\fICustom slot for joystick 1\&. \fP"
 .ti -1c
 .RI "void \fBcustomJoystick2Slot\fP (QString s)"
 .br
+.RI "\fICustom slot for joystick 2\&. \fP"
 .ti -1c
 .RI "void \fBcustomJoystick3Slot\fP (QString s)"
 .br
+.RI "\fICustom slot for joystick 3\&. \fP"
 .ti -1c
 .RI "void \fBon_readKeyPushButton_clicked\fP ()"
 .br
+.RI "\fIStart recording keyboard to change a default key\&. \fP"
 .ti -1c
 .RI "void \fBon_customInputMappingAddPushButton_clicked\fP ()"
 .br
+.RI "\fIAdd a new different mapping for a key\&. \fP"
 .ti -1c
 .RI "void \fBon_customInputMappingRemovePushButton_clicked\fP ()"
 .br
+.RI "\fIRemove a different mapping for a key\&. \fP"
 .ti -1c
 .RI "void \fBon_joystickPort0CustomizePushButton_clicked\fP ()"
 .br
+.RI "\fICustomize joystick in port 0\&. \fP"
 .ti -1c
 .RI "void \fBon_joystickPort0CustomJoystickRadioButton_clicked\fP ()"
 .br
@@ -730,6 +706,7 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .ti -1c
 .RI "void \fBon_joystickPort0ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
 .br
+.RI "\fIA list of type of joystick's model\&. \fP"
 .ti -1c
 .RI "void \fBon_joystickPort1MouseRadioButton_clicked\fP ()"
 .br
@@ -760,12 +737,15 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .ti -1c
 .RI "void \fBon_joystickPort1ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
 .br
+.RI "\fIA list of type of joystick's model\&. \fP"
 .ti -1c
 .RI "void \fBon_joystickPort2ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
 .br
+.RI "\fIA list of type of joystick's model\&. \fP"
 .ti -1c
 .RI "void \fBon_joystickPort3ModelComboBox_currentIndexChanged\fP (const QString &arg1)"
 .br
+.RI "\fIA list of type of joystick's model\&. \fP"
 .ti -1c
 .RI "void \fBon_joystickPort1CustomJoystickRadioButton_clicked\fP ()"
 .br
@@ -793,6 +773,14 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .ti -1c
 .RI "void \fBon_joystickPort2CustomizePushButton_clicked\fP ()"
 .br
+.ti -1c
+.RI "void \fBon_themeAddViewportPushButton_clicked\fP ()"
+.br
+.RI "\fIAdd a new viewport\&. \fP"
+.ti -1c
+.RI "void \fBon_themeRemoveViewportPushButton_clicked\fP ()"
+.br
+.RI "\fIReport a viewport\&. \fP"
 .in -1c
 .SS "Private Member Functions"
 
@@ -803,6 +791,7 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .ti -1c
 .RI "void \fBcheckConfigurationConsistency\fP ()"
 .br
+.RI "\fIVerify the consistency of configuration\&. \fP"
 .ti -1c
 .RI "void \fBsetFastMemoryDisabled\fP (bool state)"
 .br
@@ -831,37 +820,51 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .ti -1c
 .RI "Ui::Amiga * \fBui\fP"
 .br
+.RI "\fI\fBAmiga\fP main window\&. \fP"
 .ti -1c
 .RI "\fBConfigChipset\fP \fBchipsetConfiguration\fP"
 .br
+.RI "\fIChipset configuration tab\&. \fP"
 .ti -1c
 .RI "\fBConfigRam\fP \fBramConfiguration\fP"
 .br
+.RI "\fIRAM configuration tab\&. \fP"
 .ti -1c
 .RI "\fBConfigFloppy\fP \fBfloppyConfiguration\fP"
 .br
+.RI "\fIFloppy configuration tab\&. \fP"
 .ti -1c
 .RI "\fBConfigCDRom\fP \fBcdromConfiguration\fP"
 .br
+.RI "\fICDROM configuraion tab\&. \fP"
 .ti -1c
 .RI "\fBConfigHardDisks\fP \fBhardDiskConfiguration\fP"
 .br
+.RI "\fIHard Disks configuration tab\&. \fP"
 .ti -1c
 .RI "\fBConfigInput\fP \fBinputConfiguration\fP"
 .br
+.RI "\fIInput configuration tab\&. \fP"
 .ti -1c
 .RI "\fBConfigGraphics\fP \fBgraphicsConfiguration\fP"
 .br
+.RI "\fIGraphics configuration tab\&. \fP"
 .ti -1c
 .RI "\fBConfigTheme\fP \fBthemeConfiguration\fP"
 .br
+.RI "\fITheme configuration tab\&. \fP"
 .ti -1c
 .RI "\fBConfigMisc\fP \fBmiscConfiguration\fP"
 .br
+.RI "\fIMisc configuration tab\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
 This class is responsible for the magement of FS-UAE Gui\&. 
+
+In this class are defined all the variables for the correct management of all types of settings possible to run FS-UAE\&.
+.br
+ We have also introduced some secondary features for FS-UAE but not for the end user such as saving and loading configurations, the possibility of refreshing the gui and reporting bugs\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "\fBAmiga::Amiga\fP (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
@@ -869,10 +872,20 @@ This class is responsible for the magement of FS-UAE Gui\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void \fBAmiga::checkConfigurationConsistency\fP ()\fC [private]\fP"
+.PP
+Verify the consistency of configuration\&. 
 .SS "void \fBAmiga::customJoystick0Slot\fP (QStrings)\fC [private, slot]\fP"
+.PP
+Custom slot for joystick 0\&. 
 .SS "void \fBAmiga::customJoystick1Slot\fP (QStrings)\fC [private, slot]\fP"
+.PP
+Custom slot for joystick 1\&. 
 .SS "void \fBAmiga::customJoystick2Slot\fP (QStrings)\fC [private, slot]\fP"
+.PP
+Custom slot for joystick 2\&. 
 .SS "void \fBAmiga::customJoystick3Slot\fP (QStrings)\fC [private, slot]\fP"
+.PP
+Custom slot for joystick 3\&. 
 .SS "bool \fBAmiga::eventFilter\fP (QObject *obj, QEvent *event)\fC [private]\fP"
 .SS "bool \fBAmiga::isExistingParameter\fP (stringparameterName)\fC [private]\fP"
 .SS "void \fBAmiga::loadDefaultValues\fP ()\fC [private]\fP"
@@ -961,7 +974,11 @@ Chip memory setting at 512Kb\&.
 .PP
 Chip memory setting at 8Mb\&. 
 .SS "void \fBAmiga::on_customInputMappingAddPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Add a new different mapping for a key\&. 
 .SS "void \fBAmiga::on_customInputMappingRemovePushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Remove a different mapping for a key\&. 
 .SS "void \fBAmiga::on_displaySettingsKeepAspectRatioRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Enable keep aspect ratio\&. 
@@ -1188,10 +1205,14 @@ Load Hard Disks in Drive 9\&.
 .PP
 Change the head color\&. 
 .SS "void \fBAmiga::on_joystickPort0CustomizePushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Customize joystick in port 0\&. 
 .SS "void \fBAmiga::on_joystickPort0CustomJoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort0JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort0KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort0ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+A list of type of joystick's model\&. 
 .SS "void \fBAmiga::on_joystickPort0MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort0NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort1CusomizePushButton_clicked\fP ()\fC [private, slot]\fP"
@@ -1199,6 +1220,8 @@ Change the head color\&.
 .SS "void \fBAmiga::on_joystickPort1JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort1KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort1ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+A list of type of joystick's model\&. 
 .SS "void \fBAmiga::on_joystickPort1MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort1NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort2CustomizePushButton_clicked\fP ()\fC [private, slot]\fP"
@@ -1206,6 +1229,8 @@ Change the head color\&.
 .SS "void \fBAmiga::on_joystickPort2JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort2KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort2ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+A list of type of joystick's model\&. 
 .SS "void \fBAmiga::on_joystickPort2MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort2NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort3CustomizePushButton_clicked\fP ()\fC [private, slot]\fP"
@@ -1213,6 +1238,8 @@ Change the head color\&.
 .SS "void \fBAmiga::on_joystickPort3JoystickRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort3KeyboardRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort3ModelComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
+.PP
+A list of type of joystick's model\&. 
 .SS "void \fBAmiga::on_joystickPort3MouseRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_joystickPort3NothingRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .SS "void \fBAmiga::on_kickstartExtFileToolButton_clicked\fP ()\fC [private, slot]\fP"
@@ -1249,6 +1276,8 @@ Choose a password\&.
 .PP
 Choose a Username\&. 
 .SS "void \fBAmiga::on_readKeyPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Start recording keyboard to change a default key\&. 
 .SS "void \fBAmiga::on_runConfigButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Run FS-UAE\&. 
@@ -1312,12 +1341,18 @@ Setting video texture as RGBA\&.
 .SS "void \fBAmiga::on_textureFormatModeRGBRadioButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Setting video texture as RGB\&. 
+.SS "void \fBAmiga::on_themeAddViewportPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Add a new viewport\&. 
 .SS "void \fBAmiga::on_themeFolderPushButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Change the theme folder\&. 
 .SS "void \fBAmiga::on_themeOverlayImagerPushButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Change the theme overlay image\&. 
+.SS "void \fBAmiga::on_themeRemoveViewportPushButton_clicked\fP ()\fC [private, slot]\fP"
+.PP
+Report a viewport\&. 
 .SS "void \fBAmiga::on_useBSDCheckBox_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Enable BSD\&. 
@@ -1339,30 +1374,6 @@ A list of type of video syncronization\&.
 .SS "void \fBAmiga::on_videoSynkMethodeComboBox_currentIndexChanged\fP (const QString &arg1)\fC [private, slot]\fP"
 .PP
 A list of method of video syncronization\&. 
-.SS "void \fBAmiga::on_viewportIn1LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-X input value\&. 
-.SS "void \fBAmiga::on_viewportIn2LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-Y input value\&. 
-.SS "void \fBAmiga::on_viewportIn3LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-width input value 
-.SS "void \fBAmiga::on_viewportIn4LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-height ionput value 
-.SS "void \fBAmiga::on_viewportOut1LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-X output value\&. 
-.SS "void \fBAmiga::on_viewportOut2LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-Y output value\&. 
-.SS "void \fBAmiga::on_viewportOut3LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-width output value 
-.SS "void \fBAmiga::on_viewportOut4LineEdit_textChanged\fP (const QString &arg1)\fC [private, slot]\fP"
-.PP
-hieght output value 
 .SS "void \fBAmiga::on_wallColor1PushButton_clicked\fP ()\fC [private, slot]\fP"
 .PP
 Chaneg the first wall color\&. 
@@ -1413,15 +1424,35 @@ None Zorro III memory\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBConfigCDRom\fP \fBAmiga::cdromConfiguration\fP\fC [private]\fP"
+.PP
+CDROM configuraion tab\&. 
 .SS "\fBConfigChipset\fP \fBAmiga::chipsetConfiguration\fP\fC [private]\fP"
+.PP
+Chipset configuration tab\&. 
 .SS "\fBConfigFloppy\fP \fBAmiga::floppyConfiguration\fP\fC [private]\fP"
+.PP
+Floppy configuration tab\&. 
 .SS "\fBConfigGraphics\fP \fBAmiga::graphicsConfiguration\fP\fC [private]\fP"
+.PP
+Graphics configuration tab\&. 
 .SS "\fBConfigHardDisks\fP \fBAmiga::hardDiskConfiguration\fP\fC [private]\fP"
+.PP
+Hard Disks configuration tab\&. 
 .SS "\fBConfigInput\fP \fBAmiga::inputConfiguration\fP\fC [private]\fP"
+.PP
+Input configuration tab\&. 
 .SS "\fBConfigMisc\fP \fBAmiga::miscConfiguration\fP\fC [private]\fP"
+.PP
+Misc configuration tab\&. 
 .SS "\fBConfigRam\fP \fBAmiga::ramConfiguration\fP\fC [private]\fP"
+.PP
+RAM configuration tab\&. 
 .SS "\fBConfigTheme\fP \fBAmiga::themeConfiguration\fP\fC [private]\fP"
+.PP
+Theme configuration tab\&. 
 .SS "Ui::Amiga* \fBAmiga::ui\fP\fC [private]\fP"
+.PP
+\fBAmiga\fP main window\&. 
 
 .SH "Author"
 .PP 

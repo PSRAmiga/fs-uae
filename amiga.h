@@ -16,10 +16,19 @@
 #include <configtheme.h>
 #include <configmisc.h>
 /// Create a new main window: Amiga Gui
+/** This main window contains several tabs for the correct configuration of FS-UAE.\n
+  * For further explanations, see the respective codes.
+  */
 namespace Ui {
 class Amiga;
 }
 /// This class is responsible for the magement of FS-UAE Gui
+/** In this class are defined all the variables for the correct management
+ * of all types of settings possible to run FS-UAE.\n
+ * We have also introduced some secondary features for FS-UAE but not for
+ * the end user such as saving and loading configurations, the possibility
+ * of refreshing the gui and reporting bugs.
+ */
 class Amiga : public QMainWindow
 {
     Q_OBJECT
@@ -202,22 +211,22 @@ private slots:
     void on_themeFolderPushButton_clicked();        ///< Change the theme folder
     void on_mouseSpeedLineEdit_textChanged(const QString &arg1);    ///< Change mouse speed
 
-    void customJoystick0Slot(QString s);
-    void customJoystick1Slot(QString s);
-    void customJoystick2Slot(QString s);
-    void customJoystick3Slot(QString s);
+    void customJoystick0Slot(QString s);        ///< Custom slot for joystick 0
+    void customJoystick1Slot(QString s);        ///< Custom slot for joystick 1
+    void customJoystick2Slot(QString s);        ///< Custom slot for joystick 2
+    void customJoystick3Slot(QString s);        ///< Custom slot for joystick 3
 
-    void on_readKeyPushButton_clicked();
+    void on_readKeyPushButton_clicked();        ///< Start recording keyboard to change a default key
 
-    void on_customInputMappingAddPushButton_clicked();
-    void on_customInputMappingRemovePushButton_clicked();
-    void on_joystickPort0CustomizePushButton_clicked();
-    void on_joystickPort0CustomJoystickRadioButton_clicked();
-    void on_joystickPort0JoystickRadioButton_clicked();
-    void on_joystickPort0MouseRadioButton_clicked();
-    void on_joystickPort0KeyboardRadioButton_clicked();
-    void on_joystickPort0NothingRadioButton_clicked();
-    void on_joystickPort0ModelComboBox_currentIndexChanged(const QString &arg1);
+    void on_customInputMappingAddPushButton_clicked();          ///< Add a new different mapping for a key.
+    void on_customInputMappingRemovePushButton_clicked();       ///< Remove a different mapping for a key.
+    void on_joystickPort0CustomizePushButton_clicked();         ///< Customize joystick in port 0
+    void on_joystickPort0CustomJoystickRadioButton_clicked();   ///<
+    void on_joystickPort0JoystickRadioButton_clicked();         ///<
+    void on_joystickPort0MouseRadioButton_clicked();            ///<
+    void on_joystickPort0KeyboardRadioButton_clicked();         ///<
+    void on_joystickPort0NothingRadioButton_clicked();          ///<
+    void on_joystickPort0ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
     void on_joystickPort1MouseRadioButton_clicked();
     void on_joystickPort2MouseRadioButton_clicked();
     void on_joystickPort3MouseRadioButton_clicked();
@@ -227,9 +236,9 @@ private slots:
     void on_joystickPort1JoystickRadioButton_clicked();
     void on_joystickPort2JoystickRadioButton_clicked();
     void on_joystickPort3JoystickRadioButton_clicked();
-    void on_joystickPort1ModelComboBox_currentIndexChanged(const QString &arg1);
-    void on_joystickPort2ModelComboBox_currentIndexChanged(const QString &arg1);
-    void on_joystickPort3ModelComboBox_currentIndexChanged(const QString &arg1);
+    void on_joystickPort1ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
+    void on_joystickPort2ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
+    void on_joystickPort3ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
     void on_joystickPort1CustomJoystickRadioButton_clicked();
     void on_joystickPort2CustomJoystickRadioButton_clicked();
     void on_joystickPort3CustomizePushButton_clicked();
@@ -240,24 +249,24 @@ private slots:
     void on_joystickPort1CusomizePushButton_clicked();
     void on_joystickPort2CustomizePushButton_clicked();
 
-    void on_themeAddViewportPushButton_clicked();
+    void on_themeAddViewportPushButton_clicked();       ///< Add a new viewport
 
-    void on_themeRemoveViewportPushButton_clicked();
+    void on_themeRemoveViewportPushButton_clicked();    ///< Report a viewport
 
 private:
-    Ui::Amiga *ui;
-    ConfigChipset chipsetConfiguration;
-    ConfigRam ramConfiguration;
-    ConfigFloppy floppyConfiguration;
-    ConfigCDRom cdromConfiguration;
-    ConfigHardDisks hardDiskConfiguration;
-    ConfigInput inputConfiguration;
-    ConfigGraphics graphicsConfiguration;
-    ConfigTheme themeConfiguration;
-    ConfigMisc miscConfiguration;
+    Ui::Amiga *ui;                              ///< Amiga main window
+    ConfigChipset chipsetConfiguration;         ///< Chipset configuration tab
+    ConfigRam ramConfiguration;                 ///< RAM configuration tab
+    ConfigFloppy floppyConfiguration;           ///< Floppy configuration tab
+    ConfigCDRom cdromConfiguration;             ///< CDROM configuraion tab
+    ConfigHardDisks hardDiskConfiguration;      ///< Hard Disks configuration tab
+    ConfigInput inputConfiguration;             ///< Input configuration tab
+    ConfigGraphics graphicsConfiguration;       ///< Graphics configuration tab
+    ConfigTheme themeConfiguration;             ///< Theme configuration tab
+    ConfigMisc miscConfiguration;               ///< Misc configuration tab
 
     void parseLine(string line);
-    void checkConfigurationConsistency();
+    void checkConfigurationConsistency();       ///< Verify the consistency of configuration
 
     void setFastMemoryDisabled(bool state);
     void setZorroIIIMemoryDisabled(bool state);

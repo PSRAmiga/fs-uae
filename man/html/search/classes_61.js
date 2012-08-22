@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['amiga',['Amiga',['../classAmiga.html',1,'']]]
+  ['amiga',['Amiga',['../d1/d60/classAmiga.html',1,'']]]
 ];

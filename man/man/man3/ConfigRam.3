@@ -1,10 +1,10 @@
-.TH "ConfigRam" 3 "Tue Aug 21 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.TH "ConfigRam" 3 "Wed Aug 22 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 ConfigRam \- 
 .PP
-This class is responsible for the Ram Configuration\&. The default value of each type of ram depends on the selected \fBAmiga\fP model\&.  
+This class is responsible for the Ram Configuration\&.  
 
 .SH SYNOPSIS
 .br
@@ -20,9 +20,7 @@ This class is responsible for the Ram Configuration\&. The default value of each
 .ti -1c
 .RI "string \fBgetChipMemoryConfigString\fP ()"
 .br
-.RI "\fIRepresents the string of Chip memory to be written in Config File\&. If Chip memory is the default value, it returns an empty string\&.
-.br
- chip_memory = 1024\&. \fP"
+.RI "\fIRepresents the string of Chip memory to be written in Config File\&. \fP"
 .ti -1c
 .RI "string \fBgetChipMemoryString\fP ()"
 .br
@@ -30,9 +28,7 @@ This class is responsible for the Ram Configuration\&. The default value of each
 .ti -1c
 .RI "string \fBgetSlowMemoryConfigString\fP ()"
 .br
-.RI "\fIRepresents the string of Slow memory to be written in Config File\&. If Slow memory is the default value, it returns an empty string\&.
-.br
- slow_memory = 512\&. \fP"
+.RI "\fIRepresents the string of Slow memory to be written in Config File\&. \fP"
 .ti -1c
 .RI "string \fBgetSlowMemoryString\fP ()"
 .br
@@ -40,9 +36,7 @@ This class is responsible for the Ram Configuration\&. The default value of each
 .ti -1c
 .RI "string \fBgetFastMemoryConfigString\fP ()"
 .br
-.RI "\fIRepresents the string of Zorro II Fast memory to be written in Config File\&. If Fast memory is the default value, it returns an empty string\&.
-.br
- fast_memory = 4096\&. \fP"
+.RI "\fIRepresents the string of Zorro II Fast memory to be written in Config File\&. \fP"
 .ti -1c
 .RI "string \fBgetFastMemoryString\fP ()"
 .br
@@ -50,9 +44,7 @@ This class is responsible for the Ram Configuration\&. The default value of each
 .ti -1c
 .RI "string \fBgetZorro3ConfigString\fP ()"
 .br
-.RI "\fIRepresents the string of Zorro III Fast memory to be written in Config File\&. If Zorro III memory is the default value, it returns an empty string\&.
-.br
- zorro_iii_memory = 65536\&. \fP"
+.RI "\fIRepresents the string of Zorro III Fast memory to be written in Config File\&. \fP"
 .ti -1c
 .RI "string \fBgetZorro3String\fP ()"
 .br
@@ -85,11 +77,15 @@ This class is responsible for the Ram Configuration\&. The default value of each
 .ti -1c
 .RI "string \fBzorro_iii_memory\fP"
 .br
-.RI "\fIOverride the amount of Zorro III Fast memory, specified in KB\&. Must be a multiple of 1024\&. a processor with 32­bit address bus, (use for example the A1200/020 model)\&. \fP"
+.RI "\fIOverride the amount of Zorro III Fast memory, specified in KB\&. Must be a multiple of 1024\&.
+.br
+ Requires a processor with 32­bit address bus, (use for example the A1200/020 model)\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
-This class is responsible for the Ram Configuration\&. The default value of each type of ram depends on the selected \fBAmiga\fP model\&. 
+This class is responsible for the Ram Configuration\&. 
+
+The default value of each type of ram depends on the selected \fBAmiga\fP model\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "\fBConfigRam::ConfigRam\fP ()"
@@ -99,7 +95,7 @@ This class is responsible for the Ram Configuration\&. The default value of each
 .PP
 Represents the string of Chip memory to be written in Config File\&. If Chip memory is the default value, it returns an empty string\&.
 .br
- chip_memory = 1024\&. 
+ chip_memory = 1024 
 .SS "string \fBConfigRam::getChipMemoryString\fP ()"
 .PP
 Represent the effective value of Chip memory\&. 
@@ -107,7 +103,7 @@ Represent the effective value of Chip memory\&.
 .PP
 Represents the string of Zorro II Fast memory to be written in Config File\&. If Fast memory is the default value, it returns an empty string\&.
 .br
- fast_memory = 4096\&. 
+ fast_memory = 4096 
 .SS "string \fBConfigRam::getFastMemoryString\fP ()"
 .PP
 Represent the effective value of Zorro II Fast memory\&. 
@@ -115,7 +111,7 @@ Represent the effective value of Zorro II Fast memory\&.
 .PP
 Represents the string of Slow memory to be written in Config File\&. If Slow memory is the default value, it returns an empty string\&.
 .br
- slow_memory = 512\&. 
+ slow_memory = 512 
 .SS "string \fBConfigRam::getSlowMemoryString\fP ()"
 .PP
 Represent the effective value of Slow memory\&. 
@@ -123,7 +119,7 @@ Represent the effective value of Slow memory\&.
 .PP
 Represents the string of Zorro III Fast memory to be written in Config File\&. If Zorro III memory is the default value, it returns an empty string\&.
 .br
- zorro_iii_memory = 65536\&. 
+ zorro_iii_memory = 65536 
 .SS "string \fBConfigRam::getZorro3String\fP ()"
 .PP
 Represent the effective value of Zorro III Fast memory\&. 
@@ -143,7 +139,9 @@ Override the amount of Zorro II Fast memory, specified in KB\&. Must be a multip
 Override the amount of “slow” memory, specified in KB\&. Must be a multiple of 256\&. 
 .SS "string \fBConfigRam::zorro_iii_memory\fP\fC [private]\fP"
 .PP
-Override the amount of Zorro III Fast memory, specified in KB\&. Must be a multiple of 1024\&. a processor with 32­bit address bus, (use for example the A1200/020 model)\&. 
+Override the amount of Zorro III Fast memory, specified in KB\&. Must be a multiple of 1024\&.
+.br
+ Requires a processor with 32­bit address bus, (use for example the A1200/020 model)\&. 
 
 .SH "Author"
 .PP 

@@ -7,6 +7,11 @@
 #include <vector>
 using namespace std;
 /// This class is responsible for the Graphics Configuration
+/** In this class are defined all the variables for the correct management
+ * of graphics configuration's tab.\n
+ *
+ *
+*/
 class ConfigGraphics
 {
     string fullscreen;
