@@ -20,7 +20,7 @@ using namespace std;
 class ConfigFloppy
 {
     string floppy_drive[4];
-    vector<string> floppy_image;///< In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy list.\nYou can use floppy_image_0, floppy_image_1, floppy_image_2, and so on.
+    vector<string> floppy_image;///< In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy list.\n You can use floppy_image_0, floppy_image_1, floppy_image_2, and so on.
     string floppy_drive_volume; ///< Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20.
     string floppy_drive_speed;  ///< Set the speed of the emulated floppy drives, in percent. The default is 100.
     /** For example, you can specify 800 to get an 8x increase in speed. Use 0 to specify turbo mode.*/

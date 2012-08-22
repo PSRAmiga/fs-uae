@@ -1144,8 +1144,7 @@
 <para>This class is responsible for the Graphics Configuration. </para>    </briefdescription>
     <detaileddescription>
 <para>In this class are defined all the variables for the correct management of graphics configuration&apos;s tab.<linebreak/>
- The use of the Cd-Rom is only permitted if the <ref refid="d1/d60/classAmiga" kindref="compound">Amiga</ref> model selected si CDTV or CD32.<linebreak/>
- In all other cases the Cd-Rom Configuration tabs appears disabled. </para>    </detaileddescription>
+ </para>    </detaileddescription>
     <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configgraphics.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configgraphics.h" bodystart="15" bodyend="112"/>
     <listofallmembers>
       <member refid="d0/d01/classConfigGraphics_1ad188a95ae34ef3b0312be70ceaf49b24" prot="private" virt="non-virtual"><scope>ConfigGraphics</scope><name>align_x</name></member>

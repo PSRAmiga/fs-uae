@@ -7,6 +7,6 @@
     <detaileddescription>
 <para>This main window contains several tabs for the correct configuration of FS-UAE.<linebreak/>
  For further explanations, see the respective codes. </para>    </detaileddescription>
-    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="2"/>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="40"/>
   </compounddef>
 </doxygen>

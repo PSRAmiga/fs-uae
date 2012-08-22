@@ -23,7 +23,8 @@
         <argsstring></argsstring>
         <name>floppy_image</name>
         <briefdescription>
-<para>In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy list. can use floppy_image_0, floppy_image_1, floppy_image_2, and so on. </para>        </briefdescription>
+<para>In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy list.<linebreak/>
+ You can use floppy_image_0, floppy_image_1, floppy_image_2, and so on. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>

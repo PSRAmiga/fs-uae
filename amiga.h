@@ -1,4 +1,42 @@
 /*! \mainpage A Gui designed to simplify the creation of Amiga configuration file
+* \section UAE "There are several options available to tune your Amiga experience."
+* Unix Amiga Emulator (UAE) is a software emulator of the Amiga platform that runs on Unix machines.\n
+* Its purpose is to reproduce the hardware of the original system, so that software written for the emulated
+* machine "does not notice" the difference between the real and the virtual machine created by the emulator,
+* and then "turns" just like on the original system.
+* \subsection AmigaDOS AmigaDOS Beer: a brief "story" of Amiga.
+* The company has gone out of business, but their recipe has been
+* picked up by some weird German company, so now this beer will be an import. This
+* beer never really sold very well because the original manufacturer didn’t understand
+* marketing. Like Unix Beer, AmigaDOS Beer fans are an extremely loyal and loud
+* group. It originally came in a 16-oz. can, but now comes in 32-oz. cans too. When
+* this can was originally introduced, it appeared flashy and colorful, but the design hasn’t
+* changed much over the years, so it appears dated now. Critics of this beer claim that it
+* is only meant for watching TV anyway.
+* \subsection Hardware Hradware
+* The Amiga hardware characteristic is the Motorola 68000 processor flanked by three custom-built
+* chips that are designed to alleviate the workload of the processor: Agnus, Denise and Paula.
+* \subsubsection Agnus Agnus:
+* Agnus performs three functions:\n
+* \subsection Denise Denise:
+* Denise is the chip that deals with the generation of the video output.\n
+* Denise displays up to 64 colors (at most 6 bits per pixel indicating the color to be used,
+* among those in the registers of color), from a palette of 4096 (12 bit, ie 4 for each color component
+* R, G and B, for each color register). Through mode called HAM (short for Hold And Modify)
+* can simultaneously show 4096 colors.\n
+* Another function of the chip Denise is the management of the sprite, graphic objects of limited size
+* (16 pixels wide and up to 255 high), completely independent resolution and number of colors
+* from the screen below (called "playfield"), and which is the same hardware to implement the display
+* and movement. Denise handles up to eight sprites to four colors; they can then be combined to obtain
+* moving objects larger and with a greater number of colors; in the same frame a sprite can be reused
+* several times, on the condition that between two copies is maintained distance of a video line horizontal.\n
+* \subsubsection Paula Paula:
+* Paula is the sound chip, which manages four entries digital 8-bit Amiga.\n
+* Amiga produces stereo sound: two items are associated audio to the right channel,
+* and two to the left channel, all items are independent, then the two channels from
+* sounds completely different.\n
+* Paula is also responsible for the management of floppy-disk driver and port I/O: the parallel port "Centronics"
+* and the RS-232 25-pin.\n
 * \namespace Ui
 * \class Amiga
 */
