@@ -1,0 +1,968 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="da/d33/classConfigMisc" kind="class" prot="public">
+    <compoundname>ConfigMisc</compoundname>
+    <includes refid="d6/d3b/configmisc_8h" local="no">configmisc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a22cd19e60a08591f04885aed36fb95f4" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::input_grab</definition>
+        <argsstring></argsstring>
+        <name>input_grab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="11" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a782a27622642510d4f3a880c0978a765" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::automatic_input_grab</definition>
+        <argsstring></argsstring>
+        <name>automatic_input_grab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="12" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a3fa4b55a8f09fae3c9abf1c9e559463a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::bsdsocket_library</definition>
+        <argsstring></argsstring>
+        <name>bsdsocket_library</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="13" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1aabd62cd98fb3aad51c8aeb13ce4af547" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::audio_buffer_target_bytes</definition>
+        <argsstring></argsstring>
+        <name>audio_buffer_target_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="14" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a5e8f1fbeccb3020ea69e4f9ffdf12e82" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::mouse_speed</definition>
+        <argsstring></argsstring>
+        <name>mouse_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="15" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a9ab2ecd449fc1bb7a097af06f8e79a8c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a843ab5b32601aee585b3798cc4e101af" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::sub_title</definition>
+        <argsstring></argsstring>
+        <name>sub_title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="17" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a4ba2e67c1674730e43a05458f8e7f117" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::netplay_server</definition>
+        <argsstring></argsstring>
+        <name>netplay_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a4f89755b7febb116a54d2e582760c873" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::netplay_port</definition>
+        <argsstring></argsstring>
+        <name>netplay_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1ae6f149e17a56e421ad7b920dbd33fd78" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::netplay_tag</definition>
+        <argsstring></argsstring>
+        <name>netplay_tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="21" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1ab12732ddbe5456f01c5be0612a19e34f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::netplay_password</definition>
+        <argsstring></argsstring>
+        <name>netplay_password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="22" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1ab654bac4401615233aabddb22e24f6bb" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::base_dir</definition>
+        <argsstring></argsstring>
+        <name>base_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1ae96f7d2a05172c25dd2706e43a5e26fc" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::kickstarts_dir</definition>
+        <argsstring></argsstring>
+        <name>kickstarts_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a14c86d9dda0410f472149d04893fb9b1" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::save_states_dir</definition>
+        <argsstring></argsstring>
+        <name>save_states_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a6973cb8df315ab068391faf67bdc885e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::floppy_overlays_dir</definition>
+        <argsstring></argsstring>
+        <name>floppy_overlays_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a6b6ba790675e0ce1fc404787d53bc0bd" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::flash_memory_dir</definition>
+        <argsstring></argsstring>
+        <name>flash_memory_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1ad4ad47fc54ee23bf7891f5e92cff7e6f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::controllers_dir</definition>
+        <argsstring></argsstring>
+        <name>controllers_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1ad2cc6243f1a4e58a709be5bfd1d829e3" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::logs_dir</definition>
+        <argsstring></argsstring>
+        <name>logs_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1aca198cec6d35a695a181c0493ad3500c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::hard_drives_dir</definition>
+        <argsstring></argsstring>
+        <name>hard_drives_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a3e9690cdf18d18cd63c91e1d14d38146" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::cdroms_dir</definition>
+        <argsstring></argsstring>
+        <name>cdroms_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d33/classConfigMisc_1a034635d6c70bf95c4f4a1bfb30e082f0" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigMisc::floppies_dir</definition>
+        <argsstring></argsstring>
+        <name>floppies_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a85ec555cfdcd1b48774c13f227c0d800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConfigMisc::ConfigMisc</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigMisc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="36" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a51ec175e5a1cdbde8889b8cd97ff486a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getInputGrabConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getInputGrabConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="38" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a265601f70924e7a3f3b0b72edcb408ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getInputGrabString</definition>
+        <argsstring>()</argsstring>
+        <name>getInputGrabString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="39" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a227e9a93c8026c91732d390f32d8ba0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getAutomaticInputGrabConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getAutomaticInputGrabConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="40" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1af6db433438b023530af599c97e4e34da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getAutomaticInputGrabString</definition>
+        <argsstring>()</argsstring>
+        <name>getAutomaticInputGrabString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="41" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1aac982b75357a996ecdbaf23967d596ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getBsdSocketLibraryConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getBsdSocketLibraryConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="42" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ad408756331dd0eca3bc2c84eeae7393c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getBsdSocketLibraryString</definition>
+        <argsstring>()</argsstring>
+        <name>getBsdSocketLibraryString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="43" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ae25508d5429cc3211c50b9d2abbca512" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getAudioBufferConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getAudioBufferConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="44" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a7ba449ce13a2a60724358e15ceefcc17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getAudioBufferString</definition>
+        <argsstring>()</argsstring>
+        <name>getAudioBufferString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="45" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1acfd02fb9abeb38b168f1b15ab3de8f85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getMouseSpeedConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getMouseSpeedConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="46" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ae7aa208b3ec3caf251560ed9ef7869bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getMouseSpeedString</definition>
+        <argsstring>()</argsstring>
+        <name>getMouseSpeedString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="47" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a01b55ac6775a7270396d07a960f64493" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getTitleConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getTitleConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="48" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1aa5e0f72b7ed76127d4fa4bdbd5cbb447" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getTitleString</definition>
+        <argsstring>()</argsstring>
+        <name>getTitleString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="49" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1aab190a1449d505f1c12512494d7b0d5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getSubTitleConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getSubTitleConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="50" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a8b5d5657ea71fa1c838a1ab3f31bc76d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getSubTitleString</definition>
+        <argsstring>()</argsstring>
+        <name>getSubTitleString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="51" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a4170980339b7c0730f7a10b2f813ebf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayServerConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayServerConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="53" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1aee5e7f6c6bf11dc81d1d9ea885f296dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayServerString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayServerString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="54" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a725d1516595c27a8981a38f1490f2bd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayPortConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayPortConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="55" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ab95d20df4fd0b8fb415ba46fd8b02128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayPortString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayPortString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="56" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a68ceab474eee35409e57365aea97c5b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayTagConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayTagConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="57" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1aa3fbb98cc7015b6fb2b55f9edf51d46e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayTagString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayTagString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="58" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1aced451bfa7ed9b6b10375113bc054a68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayPasswordConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayPasswordConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="59" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a98b3aa52c098db2f1fbe501beec87981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getNetPlayPasswordString</definition>
+        <argsstring>()</argsstring>
+        <name>getNetPlayPasswordString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="60" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="160" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a61ca76ff5e391fa2a88ed30025ef7241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getBaseDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getBaseDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="62" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="165" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a35d336146d2128477a09036fe4c1c8fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getBaseDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getBaseDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="63" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="171" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a27ee9f082ed10ea3da6e279c1c96c709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getKickstartsDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getKickstartsDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="64" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="176" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1afae7218577ab2f9b455bba3cd2ebc543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getKickstartsDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getKickstartsDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="65" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1af98a1905192c310acca7dc1f2881c0ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getSaveStatesDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getSaveStatesDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="66" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="187" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ae6ce3aec14ce3b5af0e567fc2c2c01e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getSaveStatesDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getSaveStatesDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="67" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1af824deae9311d0a5d72a8004cd4d20ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getFloppyOverlaysDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getFloppyOverlaysDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="68" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="198" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ab1a3d42f8b397e81d3a3d2d288f88773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getFloppyOverlaysDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getFloppyOverlaysDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="69" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a0301e0ea443fc03d76fb81f3bb095a0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getFlashMemoryDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getFlashMemoryDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="70" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="209" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1addfb8fea13079dda72522556a023c018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getFlashMemoryDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getFlashMemoryDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="71" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="215" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a8442a505bb9943fa2ba3b5a13ec285fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getControllersDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getControllersDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="72" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="220" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a736a52ac669e1ae439ac4bfcb1407dab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getControllersDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getControllersDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="73" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a8501a6bb2a6c2aa2140d2ef8eae2eb68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getLogsDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getLogsDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="74" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="231" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a8caea871ab8f86429e6b0305dfbb54f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getLogsDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getLogsDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="75" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="237" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1adf547fff146421793005deb2d8ee9f78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getHardDrivesDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getHardDrivesDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="76" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="242" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ae9293c672d9e73b33c340438d7df0ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getHardDrivesDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getHardDrivesDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="77" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ad1d44977c4c07bf122333fa196dcdcd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getCDRomsDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getCDRomsDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="78" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="253" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ae382e0686f254a12f7b70e67dfe875a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getCDRomsDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getCDRomsDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="79" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a0501d6c662b734320cb51790ac9d70c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getFloppiesDirConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getFloppiesDirConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="80" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="264" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1aba7efb27def44e650c8116252ff1e7d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigMisc::getFloppiesDirString</definition>
+        <argsstring>()</argsstring>
+        <name>getFloppiesDirString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="81" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a1ec5f284294a8c0c2f9d3a02d3a8ff4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ConfigMisc::setParameter</definition>
+        <argsstring>(string parameter, string value)</argsstring>
+        <name>setParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="83" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="293" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1a6a78fcbcc2990ca67773f2a72ca41b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigMisc::setToDefaultConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>setToDefaultConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="84" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="391" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d33/classConfigMisc_1ac7dc08009063b4e6168ccb830bf3d409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigMisc::hasParameter</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>hasParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="85" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.cpp" bodystart="418" bodyend="427"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for the Miscellaneous Configuration. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" line="10" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configmisc.h" bodystart="9" bodyend="86"/>
+    <listofallmembers>
+      <member refid="da/d33/classConfigMisc_1aabd62cd98fb3aad51c8aeb13ce4af547" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>audio_buffer_target_bytes</name></member>
+      <member refid="da/d33/classConfigMisc_1a782a27622642510d4f3a880c0978a765" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>automatic_input_grab</name></member>
+      <member refid="da/d33/classConfigMisc_1ab654bac4401615233aabddb22e24f6bb" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>base_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1a3fa4b55a8f09fae3c9abf1c9e559463a" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>bsdsocket_library</name></member>
+      <member refid="da/d33/classConfigMisc_1a3e9690cdf18d18cd63c91e1d14d38146" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>cdroms_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1a85ec555cfdcd1b48774c13f227c0d800" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>ConfigMisc</name></member>
+      <member refid="da/d33/classConfigMisc_1ad4ad47fc54ee23bf7891f5e92cff7e6f" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>controllers_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1a6b6ba790675e0ce1fc404787d53bc0bd" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>flash_memory_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1a034635d6c70bf95c4f4a1bfb30e082f0" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>floppies_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1a6973cb8df315ab068391faf67bdc885e" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>floppy_overlays_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1ae25508d5429cc3211c50b9d2abbca512" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getAudioBufferConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1a7ba449ce13a2a60724358e15ceefcc17" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getAudioBufferString</name></member>
+      <member refid="da/d33/classConfigMisc_1a227e9a93c8026c91732d390f32d8ba0c" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getAutomaticInputGrabConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1af6db433438b023530af599c97e4e34da" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getAutomaticInputGrabString</name></member>
+      <member refid="da/d33/classConfigMisc_1a61ca76ff5e391fa2a88ed30025ef7241" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getBaseDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1a35d336146d2128477a09036fe4c1c8fe" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getBaseDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1aac982b75357a996ecdbaf23967d596ba" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getBsdSocketLibraryConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1ad408756331dd0eca3bc2c84eeae7393c" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getBsdSocketLibraryString</name></member>
+      <member refid="da/d33/classConfigMisc_1ad1d44977c4c07bf122333fa196dcdcd2" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getCDRomsDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1ae382e0686f254a12f7b70e67dfe875a3" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getCDRomsDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1a8442a505bb9943fa2ba3b5a13ec285fe" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getControllersDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1a736a52ac669e1ae439ac4bfcb1407dab" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getControllersDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1a0301e0ea443fc03d76fb81f3bb095a0b" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getFlashMemoryDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1addfb8fea13079dda72522556a023c018" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getFlashMemoryDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1a0501d6c662b734320cb51790ac9d70c0" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getFloppiesDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1aba7efb27def44e650c8116252ff1e7d9" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getFloppiesDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1af824deae9311d0a5d72a8004cd4d20ab" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getFloppyOverlaysDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1ab1a3d42f8b397e81d3a3d2d288f88773" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getFloppyOverlaysDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1adf547fff146421793005deb2d8ee9f78" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getHardDrivesDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1ae9293c672d9e73b33c340438d7df0ae6" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getHardDrivesDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1a51ec175e5a1cdbde8889b8cd97ff486a" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getInputGrabConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1a265601f70924e7a3f3b0b72edcb408ef" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getInputGrabString</name></member>
+      <member refid="da/d33/classConfigMisc_1a27ee9f082ed10ea3da6e279c1c96c709" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getKickstartsDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1afae7218577ab2f9b455bba3cd2ebc543" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getKickstartsDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1a8501a6bb2a6c2aa2140d2ef8eae2eb68" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getLogsDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1a8caea871ab8f86429e6b0305dfbb54f2" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getLogsDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1acfd02fb9abeb38b168f1b15ab3de8f85" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getMouseSpeedConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1ae7aa208b3ec3caf251560ed9ef7869bd" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getMouseSpeedString</name></member>
+      <member refid="da/d33/classConfigMisc_1aced451bfa7ed9b6b10375113bc054a68" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayPasswordConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1a98b3aa52c098db2f1fbe501beec87981" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayPasswordString</name></member>
+      <member refid="da/d33/classConfigMisc_1a725d1516595c27a8981a38f1490f2bd2" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayPortConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1ab95d20df4fd0b8fb415ba46fd8b02128" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayPortString</name></member>
+      <member refid="da/d33/classConfigMisc_1a4170980339b7c0730f7a10b2f813ebf0" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayServerConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1aee5e7f6c6bf11dc81d1d9ea885f296dd" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayServerString</name></member>
+      <member refid="da/d33/classConfigMisc_1a68ceab474eee35409e57365aea97c5b1" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayTagConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1aa3fbb98cc7015b6fb2b55f9edf51d46e" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getNetPlayTagString</name></member>
+      <member refid="da/d33/classConfigMisc_1af98a1905192c310acca7dc1f2881c0ff" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getSaveStatesDirConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1ae6ce3aec14ce3b5af0e567fc2c2c01e7" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getSaveStatesDirString</name></member>
+      <member refid="da/d33/classConfigMisc_1aab190a1449d505f1c12512494d7b0d5d" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getSubTitleConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1a8b5d5657ea71fa1c838a1ab3f31bc76d" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getSubTitleString</name></member>
+      <member refid="da/d33/classConfigMisc_1a01b55ac6775a7270396d07a960f64493" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getTitleConfigString</name></member>
+      <member refid="da/d33/classConfigMisc_1aa5e0f72b7ed76127d4fa4bdbd5cbb447" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>getTitleString</name></member>
+      <member refid="da/d33/classConfigMisc_1aca198cec6d35a695a181c0493ad3500c" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>hard_drives_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1ac7dc08009063b4e6168ccb830bf3d409" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>hasParameter</name></member>
+      <member refid="da/d33/classConfigMisc_1a22cd19e60a08591f04885aed36fb95f4" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>input_grab</name></member>
+      <member refid="da/d33/classConfigMisc_1ae96f7d2a05172c25dd2706e43a5e26fc" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>kickstarts_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1ad2cc6243f1a4e58a709be5bfd1d829e3" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>logs_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1a5e8f1fbeccb3020ea69e4f9ffdf12e82" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>mouse_speed</name></member>
+      <member refid="da/d33/classConfigMisc_1ab12732ddbe5456f01c5be0612a19e34f" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>netplay_password</name></member>
+      <member refid="da/d33/classConfigMisc_1a4f89755b7febb116a54d2e582760c873" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>netplay_port</name></member>
+      <member refid="da/d33/classConfigMisc_1a4ba2e67c1674730e43a05458f8e7f117" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>netplay_server</name></member>
+      <member refid="da/d33/classConfigMisc_1ae6f149e17a56e421ad7b920dbd33fd78" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>netplay_tag</name></member>
+      <member refid="da/d33/classConfigMisc_1a14c86d9dda0410f472149d04893fb9b1" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>save_states_dir</name></member>
+      <member refid="da/d33/classConfigMisc_1a1ec5f284294a8c0c2f9d3a02d3a8ff4d" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>setParameter</name></member>
+      <member refid="da/d33/classConfigMisc_1a6a78fcbcc2990ca67773f2a72ca41b46" prot="public" virt="non-virtual"><scope>ConfigMisc</scope><name>setToDefaultConfiguration</name></member>
+      <member refid="da/d33/classConfigMisc_1a843ab5b32601aee585b3798cc4e101af" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>sub_title</name></member>
+      <member refid="da/d33/classConfigMisc_1a9ab2ecd449fc1bb7a097af06f8e79a8c" prot="private" virt="non-virtual"><scope>ConfigMisc</scope><name>title</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

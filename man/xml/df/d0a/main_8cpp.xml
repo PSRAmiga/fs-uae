@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="df/d0a/main_8cpp" kind="file">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">QtGui/QApplication</includes>
+    <includes refid="d0/d66/amiga_8h" local="yes">amiga.h</includes>
+    <incdepgraph>
+      <node id="207">
+        <label>configharddisks.h</label>
+        <link refid="df/d7b/configharddisks_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>configmisc.h</label>
+        <link refid="d6/d3b/configmisc_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>configram.h</label>
+        <link refid="d9/dd5/configram_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="202">
+        <label>string</label>
+      </node>
+      <node id="200">
+        <label>QMainWindow</label>
+      </node>
+      <node id="198">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="210">
+        <label>configtheme.h</label>
+        <link refid="d1/d06/configtheme_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="204">
+        <label>configfloppy.h</label>
+        <link refid="d9/d63/configfloppy_8h"/>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>configgraphics.h</label>
+        <link refid="dd/d56/configgraphics_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>configchipset.h</label>
+        <link refid="dc/d47/configchipset_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>configinput.h</label>
+        <link refid="de/da1/configinput_8h"/>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="205">
+        <label>vector</label>
+      </node>
+      <node id="206">
+        <label>configcdrom.h</label>
+        <link refid="d7/de5/configcdrom_8h"/>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>main.cpp</label>
+        <link refid="main.cpp"/>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>amiga.h</label>
+        <link refid="d0/d66/amiga_8h"/>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d0a/main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/main.cpp" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/main.cpp" bodystart="23" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="df/d0a/main_8cpp" kindref="compound">main.cpp</ref></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. Written by Riva Alessandro Mario, <ulink url="mailto:alessandromario.riva@gmail.com">alessandromario.riva@gmail.com</ulink> and Sanvito Davide, <ulink url="mailto:dsanvito90@gmail.com">dsanvito90@gmail.com</ulink>. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#include<sp/>&lt;QtGui/QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/d66/amiga_8h" kindref="compound">amiga.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d0a/main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>QApplication<sp/>a(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d60/classAmiga" kindref="compound" tooltip="This class is responsible for the magement of FS-UAE Gui.">Amiga</ref><sp/>w;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>w.show();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.exec();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/main.cpp"/>
+  </compounddef>
+</doxygen>

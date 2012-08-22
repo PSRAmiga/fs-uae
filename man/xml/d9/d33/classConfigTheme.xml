@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="d9/d33/classConfigTheme" kind="class" prot="public">
+    <compoundname>ConfigTheme</compoundname>
+    <includes refid="d1/d06/configtheme_8h" local="no">configtheme.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1a78cd8d5a52ca8674ad2f3e1f21bc576e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme</definition>
+        <argsstring></argsstring>
+        <name>theme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="10" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1a7388d597c4981ac38115bcbfd50c0b72" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme_fade_color</definition>
+        <argsstring></argsstring>
+        <name>theme_fade_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="11" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1ab890f122d4774d5416b423a3a31f4c40" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme_wall_color_1</definition>
+        <argsstring></argsstring>
+        <name>theme_wall_color_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="12" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1aa7d3cd0f89e2a68aa76efbe15ee45326" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme_wall_color_2</definition>
+        <argsstring></argsstring>
+        <name>theme_wall_color_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="13" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1abf35d52b47dccbb9fa0bd60a63937363" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme_floor_color_1</definition>
+        <argsstring></argsstring>
+        <name>theme_floor_color_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="14" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1ae340b19b12bad88688ac1b1e71d5748c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme_floor_color_2</definition>
+        <argsstring></argsstring>
+        <name>theme_floor_color_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="15" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1ae8e82d98d79f9945d139eaaf381102bb" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme_heading_color</definition>
+        <argsstring></argsstring>
+        <name>theme_heading_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d33/classConfigTheme_1aa63b6ef98d55d57e56e909b6b5d3ed9a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigTheme::theme_overlay_image</definition>
+        <argsstring></argsstring>
+        <name>theme_overlay_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="17" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1ad586a7e87627e44fc9858aca7cca56dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConfigTheme::ConfigTheme</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigTheme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a8f030330084a404195d7e98961dc3441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getThemeConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getThemeConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="22" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a62ee4f7ec03b346f353fbaf2c8960b70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getThemeString</definition>
+        <argsstring>()</argsstring>
+        <name>getThemeString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1afb454ec4859646c303054046fc551fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getFadeColorConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getFadeColorConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a8250cde5350ba5bed97db3bca8341d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getFadeColorString</definition>
+        <argsstring>()</argsstring>
+        <name>getFadeColorString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a9c2323b9d32fd272479ace767a34bdb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getWallColor1ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getWallColor1ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1acf58df332219f26c8fd5b9ce158f41ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getWallColor1String</definition>
+        <argsstring>()</argsstring>
+        <name>getWallColor1String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a15b27c8e60038dd82dae2622db92b703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getWallColor2ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getWallColor2ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1adfbd92a513b28206018420c0ba8c6d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getWallColor2String</definition>
+        <argsstring>()</argsstring>
+        <name>getWallColor2String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1ae7dc147120391b8210e9742667c56bad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getFloorColor1ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getFloorColor1ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a6e1df669b74541bcc058fcacbd8b9dc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getFloorColor1String</definition>
+        <argsstring>()</argsstring>
+        <name>getFloorColor1String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a1be1721425a6c75c4c47566d14447891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getFloorColor2ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getFloorColor2ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1adbf965584fc8b3fc1f6bb39c8862c216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getFloorColor2String</definition>
+        <argsstring>()</argsstring>
+        <name>getFloorColor2String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a276a69631feb500a37319a260f6781af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getHeadingColorConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getHeadingColorConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="34" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1ac68a4d64f060086004d45b1b5136c124" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getHeadingColorString</definition>
+        <argsstring>()</argsstring>
+        <name>getHeadingColorString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="35" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a4ad2271e0851a21b6110e91f537ef04b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getOverlayImageConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getOverlayImageConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="36" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="112" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1aa5b9c21014f39a67ec48ed1e8c4bf3b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigTheme::getOverlayImageString</definition>
+        <argsstring>()</argsstring>
+        <name>getOverlayImageString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="37" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1ab6fe4eb9ca704980d9e82ca8a104b543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ConfigTheme::setParameter</definition>
+        <argsstring>(string parameter, string value)</argsstring>
+        <name>setParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="39" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="123" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1ab3cd5e9247843ee93d5c39fa7d60d195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigTheme::setToDefaultConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>setToDefaultConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="40" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="176" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d33/classConfigTheme_1a34a95bf0f8b4d0c4fb3add7f23e613a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigTheme::hasParameter</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>hasParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="41" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.cpp" bodystart="188" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for the Theme Configuration. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="9" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="8" bodyend="42"/>
+    <listofallmembers>
+      <member refid="d9/d33/classConfigTheme_1ad586a7e87627e44fc9858aca7cca56dc" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>ConfigTheme</name></member>
+      <member refid="d9/d33/classConfigTheme_1afb454ec4859646c303054046fc551fcb" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getFadeColorConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1a8250cde5350ba5bed97db3bca8341d28" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getFadeColorString</name></member>
+      <member refid="d9/d33/classConfigTheme_1ae7dc147120391b8210e9742667c56bad" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getFloorColor1ConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1a6e1df669b74541bcc058fcacbd8b9dc7" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getFloorColor1String</name></member>
+      <member refid="d9/d33/classConfigTheme_1a1be1721425a6c75c4c47566d14447891" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getFloorColor2ConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1adbf965584fc8b3fc1f6bb39c8862c216" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getFloorColor2String</name></member>
+      <member refid="d9/d33/classConfigTheme_1a276a69631feb500a37319a260f6781af" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getHeadingColorConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1ac68a4d64f060086004d45b1b5136c124" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getHeadingColorString</name></member>
+      <member refid="d9/d33/classConfigTheme_1a4ad2271e0851a21b6110e91f537ef04b" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getOverlayImageConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1aa5b9c21014f39a67ec48ed1e8c4bf3b0" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getOverlayImageString</name></member>
+      <member refid="d9/d33/classConfigTheme_1a8f030330084a404195d7e98961dc3441" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getThemeConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1a62ee4f7ec03b346f353fbaf2c8960b70" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getThemeString</name></member>
+      <member refid="d9/d33/classConfigTheme_1a9c2323b9d32fd272479ace767a34bdb7" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getWallColor1ConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1acf58df332219f26c8fd5b9ce158f41ed" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getWallColor1String</name></member>
+      <member refid="d9/d33/classConfigTheme_1a15b27c8e60038dd82dae2622db92b703" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getWallColor2ConfigString</name></member>
+      <member refid="d9/d33/classConfigTheme_1adfbd92a513b28206018420c0ba8c6d9b" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>getWallColor2String</name></member>
+      <member refid="d9/d33/classConfigTheme_1a34a95bf0f8b4d0c4fb3add7f23e613a4" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>hasParameter</name></member>
+      <member refid="d9/d33/classConfigTheme_1ab6fe4eb9ca704980d9e82ca8a104b543" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>setParameter</name></member>
+      <member refid="d9/d33/classConfigTheme_1ab3cd5e9247843ee93d5c39fa7d60d195" prot="public" virt="non-virtual"><scope>ConfigTheme</scope><name>setToDefaultConfiguration</name></member>
+      <member refid="d9/d33/classConfigTheme_1a78cd8d5a52ca8674ad2f3e1f21bc576e" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme</name></member>
+      <member refid="d9/d33/classConfigTheme_1a7388d597c4981ac38115bcbfd50c0b72" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme_fade_color</name></member>
+      <member refid="d9/d33/classConfigTheme_1abf35d52b47dccbb9fa0bd60a63937363" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme_floor_color_1</name></member>
+      <member refid="d9/d33/classConfigTheme_1ae340b19b12bad88688ac1b1e71d5748c" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme_floor_color_2</name></member>
+      <member refid="d9/d33/classConfigTheme_1ae8e82d98d79f9945d139eaaf381102bb" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme_heading_color</name></member>
+      <member refid="d9/d33/classConfigTheme_1aa63b6ef98d55d57e56e909b6b5d3ed9a" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme_overlay_image</name></member>
+      <member refid="d9/d33/classConfigTheme_1ab890f122d4774d5416b423a3a31f4c40" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme_wall_color_1</name></member>
+      <member refid="d9/d33/classConfigTheme_1aa7d3cd0f89e2a68aa76efbe15ee45326" prot="private" virt="non-virtual"><scope>ConfigTheme</scope><name>theme_wall_color_2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

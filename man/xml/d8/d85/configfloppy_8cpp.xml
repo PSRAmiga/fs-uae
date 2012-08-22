@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="d8/d85/configfloppy_8cpp" kind="file">
+    <compoundname>configfloppy.cpp</compoundname>
+    <includes refid="d9/d63/configfloppy_8h" local="yes">configfloppy.h</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="77">
+        <label>string</label>
+      </node>
+      <node id="75">
+        <label>configfloppy.h</label>
+        <link refid="d9/d63/configfloppy_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>vector</label>
+      </node>
+      <node id="78">
+        <label>sstream</label>
+      </node>
+      <node id="74">
+        <label>configfloppy.cpp</label>
+        <link refid="configfloppy.cpp"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d8/d85/configfloppy_8cpp_1a514c2b9a9b765bc3fc268969cdc6514f" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string DEFAULTFLOPPYDRIVE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULTFLOPPYDRIVE</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d85/configfloppy_8cpp_1afb2522fc085d5d42c44c4ac99e1e0ddc" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string DEFAULTFLOPPYDRIVEVOLUME</definition>
+        <argsstring></argsstring>
+        <name>DEFAULTFLOPPYDRIVEVOLUME</name>
+        <initializer>&quot;20&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d85/configfloppy_8cpp_1a7dda05950472b377b748893bd522bb70" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string DEFAULTFLOPPYDRIVESPEED</definition>
+        <argsstring></argsstring>
+        <name>DEFAULTFLOPPYDRIVESPEED</name>
+        <initializer>&quot;100&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d8/d85/configfloppy_8cpp_1ab4acfb9f1d2fb1a7467416b432a7bd41" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool isNumber</definition>
+        <argsstring>(string s)</argsstring>
+        <name>isNumber</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" line="90" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" bodystart="90" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d85/configfloppy_8cpp_1a2007a28114d8eefc3cff46e96108b15c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int strToInt</definition>
+        <argsstring>(string s)</argsstring>
+        <name>strToInt</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" line="99" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp" bodystart="99" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="d8/d85/configfloppy_8cpp" kindref="compound">configfloppy.cpp</ref></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. Written by Riva Alessandro Mario, <ulink url="mailto:alessandromario.riva@gmail.com">alessandromario.riva@gmail.com</ulink> and Sanvito Davide, <ulink url="mailto:dsanvito90@gmail.com">dsanvito90@gmail.com</ulink>. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="19"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/d63/configfloppy_8h" kindref="compound">configfloppy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d8/d85/configfloppy_8cpp_1a514c2b9a9b765bc3fc268969cdc6514f" kindref="member">DEFAULTFLOPPYDRIVE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d8/d85/configfloppy_8cpp_1afb2522fc085d5d42c44c4ac99e1e0ddc" kindref="member">DEFAULTFLOPPYDRIVEVOLUME</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;20&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d8/d85/configfloppy_8cpp_1a7dda05950472b377b748893bd522bb70" kindref="member">DEFAULTFLOPPYDRIVESPEED</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;100&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="d7/dff/classConfigFloppy_1a75d54a0d12cde066d49a5936b28dd11a" kindref="member">ConfigFloppy::ConfigFloppy</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a1ef111aadbbbc82c0a37bcabbd2d78e5" kindref="member">setToDefaultConfiguration</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1afdfd3010bfa98a83dbf466e99b40cc82" kindref="member">ConfigFloppy::getFloppyDriveConfigStringAt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>iString=</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">ostringstream*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>&amp;(ostringstream()<sp/>&lt;&lt;<sp/>i)<sp/>)-&gt;str();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;0<sp/>||<sp/>i&gt;3){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[i].compare(<ref refid="d8/d85/configfloppy_8cpp_1a514c2b9a9b765bc3fc268969cdc6514f" kindref="member">DEFAULTFLOPPYDRIVE</ref>)==0){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;floppy_drive_&quot;</highlight><highlight class="normal"><sp/>+<sp/>iString<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[i];}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1ae302b3e1625a38454b73b39cce695b4a" kindref="member">ConfigFloppy::getFloppyDriveStringAt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&lt;0<sp/>||<sp/>i&gt;3){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[i];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1ae23a9205765ae374056eeedc61ecc4e0" kindref="member" tooltip="Represents the string of floppy_drive_volume to be written in Config File.">ConfigFloppy::getFloppyDriveVolumeConfigString</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d7/dff/classConfigFloppy_1a837e42c4161dd4260f792f5463494f5d" kindref="member" tooltip="Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20...">floppy_drive_volume</ref>.compare(<ref refid="d8/d85/configfloppy_8cpp_1afb2522fc085d5d42c44c4ac99e1e0ddc" kindref="member">DEFAULTFLOPPYDRIVEVOLUME</ref>)==0){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;floppy_drive_volume<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="d7/dff/classConfigFloppy_1a837e42c4161dd4260f792f5463494f5d" kindref="member" tooltip="Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20...">floppy_drive_volume</ref>;}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a42d162155742145202cdbb0e4511a3e1" kindref="member" tooltip="Represent the effective value of floppy_drive_volume.">ConfigFloppy::getFloppyDriveVolumeString</ref>()</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a837e42c4161dd4260f792f5463494f5d" kindref="member" tooltip="Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20...">floppy_drive_volume</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a89d4c3e870f1dd98c2b5cc018ca302ff" kindref="member" tooltip="Represents the string of floppy_drive_speed to be written in Config File.">ConfigFloppy::getFloppyDriveSpeedConfigString</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d7/dff/classConfigFloppy_1a8ec130442e9d309be80375441efbe869" kindref="member" tooltip="Set the speed of the emulated floppy drives, in percent. The default is 100.">floppy_drive_speed</ref>.compare(<ref refid="d8/d85/configfloppy_8cpp_1a7dda05950472b377b748893bd522bb70" kindref="member">DEFAULTFLOPPYDRIVESPEED</ref>)==0){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;floppy_drive_speed<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="d7/dff/classConfigFloppy_1a8ec130442e9d309be80375441efbe869" kindref="member" tooltip="Set the speed of the emulated floppy drives, in percent. The default is 100.">floppy_drive_speed</ref>;}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a06d4b5a421fabfd65c81bfe786de0121" kindref="member">ConfigFloppy::getFloppyDriveSpeedString</ref>()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a8ec130442e9d309be80375441efbe869" kindref="member" tooltip="Set the speed of the emulated floppy drives, in percent. The default is 100.">floppy_drive_speed</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a5a3184d2d357f265496917da3572bc18" kindref="member" tooltip="Returns the size of the floppy.">ConfigFloppy::getFloppyImageSize</ref>()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.size();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1ade3102e0c84e7161e65dc4db081f87e5" kindref="member" tooltip="Returns the string that represet the Floppy Image.">ConfigFloppy::getFloppyImageAt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(position&gt;=(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.size()){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.at(position);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a33efa54ddc6d1f903b3033f409ff5711" kindref="member" tooltip="Add new Floppy Image.">ConfigFloppy::pushBackFloppyImage</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.push_back(s);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a438a72cf02a171956e0518e2ecad1d62" kindref="member" tooltip="Erase a Flopy Image.">ConfigFloppy::eraseFloppyImageAt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(position&gt;=(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.size()){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.erase(<ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.begin()+<sp/>position);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d8/d85/configfloppy_8cpp_1ab4acfb9f1d2fb1a7467416b432a7bd41" kindref="member">isNumber</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s){</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>istringstream<sp/>buffer(s);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>intValue;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer<sp/>&gt;&gt;<sp/>intValue;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//la<sp/>conversione<sp/>ritorna<sp/>0<sp/>se<sp/>non<sp/>è<sp/>un<sp/>numero.<sp/>Devo<sp/>stare<sp/>attento<sp/>al<sp/>caso<sp/>in<sp/>cui<sp/>la<sp/>stringa<sp/>sia<sp/>proprio<sp/>&quot;0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(intValue==0<sp/>&amp;&amp;<sp/>s.compare(</highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">)==0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>intValue!=0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="db/d10/amiga_8cpp_1a9a111086724f24c1b88a8d5dac63aa1d" kindref="member">strToInt</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s){</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>istringstream<sp/>buffer(s);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>intValue;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer<sp/>&gt;&gt;<sp/>intValue;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>intValue;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a9adb626c8b5dc40e94cb4f421452029d" kindref="member">ConfigFloppy::setParameter</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameter,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameter.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_0&quot;</highlight><highlight class="normal">)==0){</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[0]=value;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameter.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_1&quot;</highlight><highlight class="normal">)==0){</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[1]=value;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameter.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_2&quot;</highlight><highlight class="normal">)==0){</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[2]=value;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameter.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_3&quot;</highlight><highlight class="normal">)==0){</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[3]=value;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameter.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_volume&quot;</highlight><highlight class="normal">)==0){</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d8/d85/configfloppy_8cpp_1ab4acfb9f1d2fb1a7467416b432a7bd41" kindref="member">isNumber</ref>(value)<sp/>&amp;&amp;<sp/><ref refid="db/d10/amiga_8cpp_1a9a111086724f24c1b88a8d5dac63aa1d" kindref="member">strToInt</ref>(value)&gt;=0<sp/>&amp;&amp;<sp/><ref refid="db/d10/amiga_8cpp_1a9a111086724f24c1b88a8d5dac63aa1d" kindref="member">strToInt</ref>(value)&lt;=100){</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a837e42c4161dd4260f792f5463494f5d" kindref="member" tooltip="Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20...">floppy_drive_volume</ref>=value;}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a837e42c4161dd4260f792f5463494f5d" kindref="member" tooltip="Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20...">floppy_drive_volume</ref>=<ref refid="d8/d85/configfloppy_8cpp_1afb2522fc085d5d42c44c4ac99e1e0ddc" kindref="member">DEFAULTFLOPPYDRIVEVOLUME</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameter.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_speed&quot;</highlight><highlight class="normal">)==0){</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((value.compare(</highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;100&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;200&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;300&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;400&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;500&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;600&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;700&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;800&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;900&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;1000&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;1100&quot;</highlight><highlight class="normal">)==0)||(value.compare(</highlight><highlight class="stringliteral">&quot;1200&quot;</highlight><highlight class="normal">)==0)){</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a8ec130442e9d309be80375441efbe869" kindref="member" tooltip="Set the speed of the emulated floppy drives, in percent. The default is 100.">floppy_drive_speed</ref>=value;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a8ec130442e9d309be80375441efbe869" kindref="member" tooltip="Set the speed of the emulated floppy drives, in percent. The default is 100.">floppy_drive_speed</ref>=<ref refid="d8/d85/configfloppy_8cpp_1a7dda05950472b377b748893bd522bb70" kindref="member">DEFAULTFLOPPYDRIVESPEED</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((parameter.substr(0,parameter.length()-1).compare(</highlight><highlight class="stringliteral">&quot;floppy_image_&quot;</highlight><highlight class="normal">)==0<sp/>||<sp/>parameter.substr(0,parameter.length()-2).compare(</highlight><highlight class="stringliteral">&quot;floppy_image_&quot;</highlight><highlight class="normal">)==0)&amp;&amp;<sp/><ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.size()&lt;20){</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.push_back(value);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1a1ef111aadbbbc82c0a37bcabbd2d78e5" kindref="member">ConfigFloppy::setToDefaultConfiguration</ref>()</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>options<sp/>to<sp/>default<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;4;i++){</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a503917a7d7f423ed21aca5485066e590" kindref="member">floppy_drive</ref>[i]=<ref refid="d8/d85/configfloppy_8cpp_1a514c2b9a9b765bc3fc268969cdc6514f" kindref="member">DEFAULTFLOPPYDRIVE</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a837e42c4161dd4260f792f5463494f5d" kindref="member" tooltip="Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20...">floppy_drive_volume</ref>=<ref refid="d8/d85/configfloppy_8cpp_1afb2522fc085d5d42c44c4ac99e1e0ddc" kindref="member">DEFAULTFLOPPYDRIVEVOLUME</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a8ec130442e9d309be80375441efbe869" kindref="member" tooltip="Set the speed of the emulated floppy drives, in percent. The default is 100.">floppy_drive_speed</ref>=<ref refid="d8/d85/configfloppy_8cpp_1a7dda05950472b377b748893bd522bb70" kindref="member">DEFAULTFLOPPYDRIVESPEED</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dff/classConfigFloppy_1a89af257a11a5a71dbf002a06c6077c9c" kindref="member" tooltip="In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy ...">floppy_image</ref>.clear();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d7/dff/classConfigFloppy_1ac04e50830b98988857ba98ee70f340a6" kindref="member">ConfigFloppy::hasParameter</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameterName)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(parameterName.substr(0,parameterName.length()-1).compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_&quot;</highlight><highlight class="normal">)==0)||(parameterName.substr(0,parameterName.length()-1).compare(</highlight><highlight class="stringliteral">&quot;floppy_image_&quot;</highlight><highlight class="normal">)==0)||(parameterName.substr(0,parameterName.length()-2).compare(</highlight><highlight class="stringliteral">&quot;floppy_image_&quot;</highlight><highlight class="normal">)==0)||(parameterName.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_volume&quot;</highlight><highlight class="normal">)==0)||(parameterName.compare(</highlight><highlight class="stringliteral">&quot;floppy_drive_speed&quot;</highlight><highlight class="normal">)==0);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configfloppy.cpp"/>
+  </compounddef>
+</doxygen>

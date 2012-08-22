@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="db/d81/classConfigInput" kind="class" prot="public">
+    <compoundname>ConfigInput</compoundname>
+    <includes refid="de/da1/configinput_8h" local="no">configinput.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/d81/classConfigInput_1a2baae33b1a25b590cca86201a9d74b92" prot="private" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt;string&gt; ConfigInput::custom_input_mapping_inserted_keys</definition>
+        <argsstring></argsstring>
+        <name>custom_input_mapping_inserted_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="12" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1a8a171cb1bbde58bffdf56b1301e05629" prot="private" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt;string&gt; ConfigInput::custom_input_mapping_inserted_actions</definition>
+        <argsstring></argsstring>
+        <name>custom_input_mapping_inserted_actions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="13" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1aec3a49b2f201ea2546d3f18836948923" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_0</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="14" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1ad96dbbe2b5223671784856eebc7fd7fe" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_1</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="15" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1a7c12a033eca6c7d0db2222b20b749d12" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_2</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1ab011bae6319d03bd2cfd4eb33271315c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_3</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="17" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1a3baa7ed405de7839bb985102472b3263" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_0_mode</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_0_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="18" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1af6471964410b7824227ab99b4578945a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_1_mode</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_1_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1a0d3cf411b8afa21610ac7ba57bd13cef" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_2_mode</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_2_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d81/classConfigInput_1a387de806d61a7e31225ff32885a7c52a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigInput::joystick_port_3_mode</definition>
+        <argsstring></argsstring>
+        <name>joystick_port_3_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="21" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d81/classConfigInput_1a857038752c21c23ca844992cf124e4af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConfigInput::ConfigInput</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a8e7b90f1fca40f3b4deee3a3f4ef8759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort0ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort0ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1aec9d76d81c60ccbf96f96915651c8def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort0String</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort0String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a946f059c453af8ac8aef0464f2bc769c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort1ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort1ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1ae856ef1114edb47ace7346d54d2b2800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort1String</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort1String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1ab50717f549f055520e2c88262d2c8c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort2ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort2ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="30" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="98" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a2e27b2d31a431931ee0e2f08a7b24bc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort2String</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort2String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a377e032771eece8b75b6025b0555400b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort3ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort3ConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a450b17024d97c50c0366c6813774ee36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort3String</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort3String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a993d978770d68a6db665d3e7276dae93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort0ModeConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort0ModeConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="34" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a8593e6d14e501bb7d067fbdb687f2c84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort0ModeString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort0ModeString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="35" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a3097903e79ae059b561d9ed0f3b1aaf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort1ModeConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort1ModeConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="36" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="131" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1aedcb2cc87e11bed14cba8fb005497661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort1ModeString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort1ModeString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="37" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a89ab19e935057393ef8d07b5c81da1bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort2ModeConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort2ModeConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="38" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="142" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a23e8ff57379b6f7bfafa428060f60134" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort2ModeString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort2ModeString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="39" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1aec5fb280ff8e77aed146cbc8c7a3873d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort3ModeConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort3ModeConfigString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="40" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="153" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1ad35dc50cd49b829c56d3497d99ed66ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getJoystickPort3ModeString</definition>
+        <argsstring>()</argsstring>
+        <name>getJoystickPort3ModeString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="41" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a82d3b55578796552f3257a9b7f2ac25b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigInput::containsKeyOrAction</definition>
+        <argsstring>(string s)</argsstring>
+        <name>containsKeyOrAction</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="43" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="251" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a3fe054324da73ebe977453701eafebaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ConfigInput::getCustomInputMappingSize</definition>
+        <argsstring>()</argsstring>
+        <name>getCustomInputMappingSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="44" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1af78da571bb15f14cbc9bffd738f95b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::getCustomInputMappingAt</definition>
+        <argsstring>(int position)</argsstring>
+        <name>getCustomInputMappingAt</name>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="45" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="267" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a24ca2d508ad64e4e3cd23089b9874ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigInput::eraseCustomInputMappingAt</definition>
+        <argsstring>(int position)</argsstring>
+        <name>eraseCustomInputMappingAt</name>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="46" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="273" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a99a00e4f25c80f8dfa3251555974805e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ConfigInput::setParameter</definition>
+        <argsstring>(string parameter, string value)</argsstring>
+        <name>setParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="48" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="172" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a0c3a8d0ef982e8c2068bcd466f88e383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigInput::setToDefaultConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>setToDefaultConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="49" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="236" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d81/classConfigInput_1a5747b6723f9a1fa3a69c2d5ecb6dc82e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigInput::hasParameter</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>hasParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="50" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="280" bodyend="287"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/d81/classConfigInput_1a527dc8bd98985eac44d45bddebbd20f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigInput::joystickNumberString</definition>
+        <argsstring>(int portNumber)</argsstring>
+        <name>joystickNumberString</name>
+        <param>
+          <type>int</type>
+          <declname>portNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="53" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.cpp" bodystart="18" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for the Graphics Configuration. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="11" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="10" bodyend="54"/>
+    <listofallmembers>
+      <member refid="db/d81/classConfigInput_1a857038752c21c23ca844992cf124e4af" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>ConfigInput</name></member>
+      <member refid="db/d81/classConfigInput_1a82d3b55578796552f3257a9b7f2ac25b" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>containsKeyOrAction</name></member>
+      <member refid="db/d81/classConfigInput_1a8a171cb1bbde58bffdf56b1301e05629" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>custom_input_mapping_inserted_actions</name></member>
+      <member refid="db/d81/classConfigInput_1a2baae33b1a25b590cca86201a9d74b92" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>custom_input_mapping_inserted_keys</name></member>
+      <member refid="db/d81/classConfigInput_1a24ca2d508ad64e4e3cd23089b9874ef7" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>eraseCustomInputMappingAt</name></member>
+      <member refid="db/d81/classConfigInput_1af78da571bb15f14cbc9bffd738f95b5f" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getCustomInputMappingAt</name></member>
+      <member refid="db/d81/classConfigInput_1a3fe054324da73ebe977453701eafebaf" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getCustomInputMappingSize</name></member>
+      <member refid="db/d81/classConfigInput_1a8e7b90f1fca40f3b4deee3a3f4ef8759" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort0ConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1a993d978770d68a6db665d3e7276dae93" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort0ModeConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1a8593e6d14e501bb7d067fbdb687f2c84" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort0ModeString</name></member>
+      <member refid="db/d81/classConfigInput_1aec9d76d81c60ccbf96f96915651c8def" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort0String</name></member>
+      <member refid="db/d81/classConfigInput_1a946f059c453af8ac8aef0464f2bc769c" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort1ConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1a3097903e79ae059b561d9ed0f3b1aaf7" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort1ModeConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1aedcb2cc87e11bed14cba8fb005497661" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort1ModeString</name></member>
+      <member refid="db/d81/classConfigInput_1ae856ef1114edb47ace7346d54d2b2800" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort1String</name></member>
+      <member refid="db/d81/classConfigInput_1ab50717f549f055520e2c88262d2c8c47" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort2ConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1a89ab19e935057393ef8d07b5c81da1bd" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort2ModeConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1a23e8ff57379b6f7bfafa428060f60134" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort2ModeString</name></member>
+      <member refid="db/d81/classConfigInput_1a2e27b2d31a431931ee0e2f08a7b24bc2" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort2String</name></member>
+      <member refid="db/d81/classConfigInput_1a377e032771eece8b75b6025b0555400b" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort3ConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1aec5fb280ff8e77aed146cbc8c7a3873d" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort3ModeConfigString</name></member>
+      <member refid="db/d81/classConfigInput_1ad35dc50cd49b829c56d3497d99ed66ec" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort3ModeString</name></member>
+      <member refid="db/d81/classConfigInput_1a450b17024d97c50c0366c6813774ee36" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>getJoystickPort3String</name></member>
+      <member refid="db/d81/classConfigInput_1a5747b6723f9a1fa3a69c2d5ecb6dc82e" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>hasParameter</name></member>
+      <member refid="db/d81/classConfigInput_1aec3a49b2f201ea2546d3f18836948923" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_0</name></member>
+      <member refid="db/d81/classConfigInput_1a3baa7ed405de7839bb985102472b3263" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_0_mode</name></member>
+      <member refid="db/d81/classConfigInput_1ad96dbbe2b5223671784856eebc7fd7fe" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_1</name></member>
+      <member refid="db/d81/classConfigInput_1af6471964410b7824227ab99b4578945a" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_1_mode</name></member>
+      <member refid="db/d81/classConfigInput_1a7c12a033eca6c7d0db2222b20b749d12" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_2</name></member>
+      <member refid="db/d81/classConfigInput_1a0d3cf411b8afa21610ac7ba57bd13cef" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_2_mode</name></member>
+      <member refid="db/d81/classConfigInput_1ab011bae6319d03bd2cfd4eb33271315c" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_3</name></member>
+      <member refid="db/d81/classConfigInput_1a387de806d61a7e31225ff32885a7c52a" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystick_port_3_mode</name></member>
+      <member refid="db/d81/classConfigInput_1a527dc8bd98985eac44d45bddebbd20f9" prot="private" virt="non-virtual"><scope>ConfigInput</scope><name>joystickNumberString</name></member>
+      <member refid="db/d81/classConfigInput_1a99a00e4f25c80f8dfa3251555974805e" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>setParameter</name></member>
+      <member refid="db/d81/classConfigInput_1a0c3a8d0ef982e8c2068bcd466f88e383" prot="public" virt="non-virtual"><scope>ConfigInput</scope><name>setToDefaultConfiguration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

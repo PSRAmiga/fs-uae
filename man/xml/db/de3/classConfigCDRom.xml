@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="db/de3/classConfigCDRom" kind="class" prot="public">
+    <compoundname>ConfigCDRom</compoundname>
+    <includes refid="d7/de5/configcdrom_8h" local="no">configcdrom.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigCDRom::cdrom_drive_0</definition>
+        <argsstring></argsstring>
+        <name>cdrom_drive_0</name>
+        <briefdescription>
+<para>You specify paths for CD-ROM images in cdrom_drive_0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="17" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" prot="private" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt;string&gt; ConfigCDRom::cdrom_image</definition>
+        <argsstring></argsstring>
+        <name>cdrom_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="18" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1abb2ce18b3b13904c51df05b0312fee43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConfigCDRom::ConfigCDRom</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigCDRom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1abaa015d41adfae7da23e99db10b2eb69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigCDRom::getCDRomDrive0ConfigString</definition>
+        <argsstring>()</argsstring>
+        <name>getCDRomDrive0ConfigString</name>
+        <briefdescription>
+<para>Represents the string of cdrom_drive_0 to be written in Config File. </para>        </briefdescription>
+        <detaileddescription>
+<para>CUE/BIN and ISO images are supported.<linebreak/>
+ cdrom_drive_0 = path/to/cue_or_bin </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1acd3b95486fa0bad40c19541af77dfc62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigCDRom::getCDRomDrive0String</definition>
+        <argsstring>()</argsstring>
+        <name>getCDRomDrive0String</name>
+        <briefdescription>
+<para>Represent the effective value of cdrom_drive_0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1a8be54c2149f248f38df2d660a3ee9006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ConfigCDRom::getCDRomImageSize</definition>
+        <argsstring>()</argsstring>
+        <name>getCDRomImageSize</name>
+        <briefdescription>
+<para>Represent the image of a CD-Rom. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1a2fc1e5a66f20400409c1d4fb924070ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigCDRom::getCDRomImageAt</definition>
+        <argsstring>(int position)</argsstring>
+        <name>getCDRomImageAt</name>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Represent the position of a CD-Rom Image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1a8e8852a5a88780827be47ab28e6be33f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigCDRom::pushBackCDRomImage</definition>
+        <argsstring>(string s)</argsstring>
+        <name>pushBackCDRomImage</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1a0f78ca614f70da1671b997139ebc1f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigCDRom::erasCDRomImageAt</definition>
+        <argsstring>(int position)</argsstring>
+        <name>erasCDRomImageAt</name>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1aceb8218c5f2156c79b5c6336c1d2378b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ConfigCDRom::setParameter</definition>
+        <argsstring>(string parameter, string value)</argsstring>
+        <name>setParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1a69b62dbf21ea72a52cd3bd4d36bf06f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigCDRom::setToDefaultConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>setToDefaultConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="db/de3/classConfigCDRom_1a7be8d3fb6b1290fc50ae1fbf705a28cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigCDRom::hasParameter</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>hasParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for the Cd-Rom Configuration. </para>    </briefdescription>
+    <detaileddescription>
+<para>In this class are defined all the variables for the correct management of CDROM configuration&apos;s tab.<linebreak/>
+ The use of the Cd-Rom is only permitted if the <ref refid="d1/d60/classAmiga" kindref="compound">Amiga</ref> model selected si CDTV or CD32.<linebreak/>
+ In all other cases the Cd-Rom Configuration tabs appears disabled. </para>    </detaileddescription>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="15" bodyend="34"/>
+    <listofallmembers>
+      <member refid="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" prot="private" virt="non-virtual"><scope>ConfigCDRom</scope><name>cdrom_drive_0</name></member>
+      <member refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" prot="private" virt="non-virtual"><scope>ConfigCDRom</scope><name>cdrom_image</name></member>
+      <member refid="db/de3/classConfigCDRom_1abb2ce18b3b13904c51df05b0312fee43" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>ConfigCDRom</name></member>
+      <member refid="db/de3/classConfigCDRom_1a0f78ca614f70da1671b997139ebc1f3d" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>erasCDRomImageAt</name></member>
+      <member refid="db/de3/classConfigCDRom_1abaa015d41adfae7da23e99db10b2eb69" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>getCDRomDrive0ConfigString</name></member>
+      <member refid="db/de3/classConfigCDRom_1acd3b95486fa0bad40c19541af77dfc62" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>getCDRomDrive0String</name></member>
+      <member refid="db/de3/classConfigCDRom_1a2fc1e5a66f20400409c1d4fb924070ff" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>getCDRomImageAt</name></member>
+      <member refid="db/de3/classConfigCDRom_1a8be54c2149f248f38df2d660a3ee9006" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>getCDRomImageSize</name></member>
+      <member refid="db/de3/classConfigCDRom_1a7be8d3fb6b1290fc50ae1fbf705a28cd" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>hasParameter</name></member>
+      <member refid="db/de3/classConfigCDRom_1a8e8852a5a88780827be47ab28e6be33f" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>pushBackCDRomImage</name></member>
+      <member refid="db/de3/classConfigCDRom_1aceb8218c5f2156c79b5c6336c1d2378b" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>setParameter</name></member>
+      <member refid="db/de3/classConfigCDRom_1a69b62dbf21ea72a52cd3bd4d36bf06f0" prot="public" virt="non-virtual"><scope>ConfigCDRom</scope><name>setToDefaultConfiguration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

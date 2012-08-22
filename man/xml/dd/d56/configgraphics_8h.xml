@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dd/d56/configgraphics_8h" kind="file">
+    <compoundname>configgraphics.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="d0/d66/amiga_8h" local="no">amiga.h</includedby>
+    <includedby refid="d6/d6c/configgraphics_8cpp" local="yes">configgraphics.cpp</includedby>
+    <incdepgraph>
+      <node id="107">
+        <label>string</label>
+      </node>
+      <node id="106">
+        <label>configgraphics.h</label>
+        <link refid="configgraphics.h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="111">
+        <label>amiga.cpp</label>
+        <link refid="db/d10/amiga_8cpp"/>
+      </node>
+      <node id="109">
+        <label>configgraphics.h</label>
+        <link refid="configgraphics.h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>configmisc.cpp</label>
+        <link refid="da/d9c/configmisc_8cpp"/>
+      </node>
+      <node id="112">
+        <label>configgraphics.cpp</label>
+        <link refid="d6/d6c/configgraphics_8cpp"/>
+      </node>
+      <node id="114">
+        <label>main.cpp</label>
+        <link refid="df/d0a/main_8cpp"/>
+      </node>
+      <node id="110">
+        <label>amiga.h</label>
+        <link refid="d0/d66/amiga_8h"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d0/d01/classConfigGraphics" prot="public">ConfigGraphics</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4"><highlight class="preprocessor">#ifndef<sp/>CONFIGGRAPHICS_H</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONFIGGRAPHICS_H</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10"></codeline>
+<codeline lineno="15" refid="d0/d01/classConfigGraphics" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d0/d01/classConfigGraphics" kindref="compound" tooltip="This class is responsible for the Graphics Configuration.">ConfigGraphics</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="d0/d01/classConfigGraphics_1ab38c61e796c2d3900604c2d6985b37d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1ab38c61e796c2d3900604c2d6985b37d8" kindref="member">fullscreen</ref>;</highlight></codeline>
+<codeline lineno="18" refid="d0/d01/classConfigGraphics_1a7a9eda885c4120791e0cd9a3cdf87e8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a7a9eda885c4120791e0cd9a3cdf87e8d" kindref="member">fullscreen_width</ref>;</highlight></codeline>
+<codeline lineno="19" refid="d0/d01/classConfigGraphics_1a2741a87a4da0711c112f7e26a66565b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a2741a87a4da0711c112f7e26a66565b6" kindref="member">fullscreen_height</ref>;</highlight></codeline>
+<codeline lineno="20" refid="d0/d01/classConfigGraphics_1a8cc0c2778a1a3381de2e0cb422e18f55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a8cc0c2778a1a3381de2e0cb422e18f55" kindref="member">window_width</ref>;</highlight></codeline>
+<codeline lineno="21" refid="d0/d01/classConfigGraphics_1af4acafe32e34e9a0b95582b4c8b5926f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1af4acafe32e34e9a0b95582b4c8b5926f" kindref="member">window_height</ref>;</highlight></codeline>
+<codeline lineno="22" refid="d0/d01/classConfigGraphics_1ae0eed0458be59b875cd71cf52d81e4e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1ae0eed0458be59b875cd71cf52d81e4e8" kindref="member">window_resizable</ref>;</highlight></codeline>
+<codeline lineno="23" refid="d0/d01/classConfigGraphics_1ac866834bdb5280266a3cca59849bf328" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1ac866834bdb5280266a3cca59849bf328" kindref="member">fsaa</ref>;</highlight></codeline>
+<codeline lineno="24" refid="d0/d01/classConfigGraphics_1ac2dc756adc1700a8566e5ae7dddbf0ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1ac2dc756adc1700a8566e5ae7dddbf0ea" kindref="member">keep_aspect</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d0/d01/classConfigGraphics_1a29e87442d5bd0c3ac975b84dbdc817c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a29e87442d5bd0c3ac975b84dbdc817c5" kindref="member">scanlines</ref>;</highlight></codeline>
+<codeline lineno="27" refid="d0/d01/classConfigGraphics_1a00637f0e80cfaee5c5b5af6a959ab89f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a00637f0e80cfaee5c5b5af6a959ab89f" kindref="member">rtg_scanlines</ref>;</highlight></codeline>
+<codeline lineno="28" refid="d0/d01/classConfigGraphics_1ab8ecc9321152cedad7d722913df71415" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1ab8ecc9321152cedad7d722913df71415" kindref="member">scanlines_dark</ref>;</highlight></codeline>
+<codeline lineno="29" refid="d0/d01/classConfigGraphics_1ab8d464024ae226707da9d44ecb435567" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1ab8d464024ae226707da9d44ecb435567" kindref="member">scanlines_light</ref>;</highlight></codeline>
+<codeline lineno="30" refid="d0/d01/classConfigGraphics_1a3bd2e06389146bd32d12846f6208d301" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a3bd2e06389146bd32d12846f6208d301" kindref="member">shader</ref>;</highlight></codeline>
+<codeline lineno="31" refid="d0/d01/classConfigGraphics_1aba71fe83f15bcc4f526543af4127e991" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1aba71fe83f15bcc4f526543af4127e991" kindref="member">low_resolution</ref>;</highlight></codeline>
+<codeline lineno="32" refid="d0/d01/classConfigGraphics_1a4150bcdf8e6dca07be7e513976991010" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a4150bcdf8e6dca07be7e513976991010" kindref="member">line_doubling</ref>;</highlight></codeline>
+<codeline lineno="33" refid="d0/d01/classConfigGraphics_1a75d430c76dbdac5e69ef1f99a252744b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a75d430c76dbdac5e69ef1f99a252744b" kindref="member">scale_x</ref>;</highlight></codeline>
+<codeline lineno="34" refid="d0/d01/classConfigGraphics_1a9ee5e72cc7858019c161c427151dc891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a9ee5e72cc7858019c161c427151dc891" kindref="member">scale_y</ref>;</highlight></codeline>
+<codeline lineno="35" refid="d0/d01/classConfigGraphics_1ad188a95ae34ef3b0312be70ceaf49b24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1ad188a95ae34ef3b0312be70ceaf49b24" kindref="member">align_x</ref>;</highlight></codeline>
+<codeline lineno="36" refid="d0/d01/classConfigGraphics_1a9bc9928c91ee0e0a709db5f54c26e3e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a9bc9928c91ee0e0a709db5f54c26e3e3" kindref="member">align_y</ref>;</highlight></codeline>
+<codeline lineno="37" refid="d0/d01/classConfigGraphics_1a6c044eccc09b803225b67e5c13f7d9f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a6c044eccc09b803225b67e5c13f7d9f1" kindref="member">zoom</ref>;</highlight></codeline>
+<codeline lineno="38" refid="d0/d01/classConfigGraphics_1a5612e849e8c6bd3af65115bad985565d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a5612e849e8c6bd3af65115bad985565d" kindref="member">texture_filter</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="d0/d01/classConfigGraphics_1a4e3616dbe6d4ae7481825a858bfd3218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a4e3616dbe6d4ae7481825a858bfd3218" kindref="member">video_sync</ref>;</highlight></codeline>
+<codeline lineno="41" refid="d0/d01/classConfigGraphics_1a747cbebaf2f17ddd95de727523647fff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a747cbebaf2f17ddd95de727523647fff" kindref="member">video_sync_method</ref>;</highlight></codeline>
+<codeline lineno="42" refid="d0/d01/classConfigGraphics_1aabd7e6d09ce628811ba0cd4ddfd10f01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1aabd7e6d09ce628811ba0cd4ddfd10f01" kindref="member">video_format</ref>;</highlight></codeline>
+<codeline lineno="43" refid="d0/d01/classConfigGraphics_1a934a1114bc07671ba96910385ad50f24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d0/d01/classConfigGraphics_1a934a1114bc07671ba96910385ad50f24" kindref="member">texture_format</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="d0/d01/classConfigGraphics_1a8422a9455bdd64415281b71e6488a838" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/><ref refid="d0/d01/classConfigGraphics_1a8422a9455bdd64415281b71e6488a838" kindref="member">viewport</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d01/classConfigGraphics" kindref="compound" tooltip="This class is responsible for the Graphics Configuration.">ConfigGraphics</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFullscreenConfigString();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFullscreenString();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFullscreenWidthConfigString();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFullscreenWidthString();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFullscreenHeightConfigString();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFullscreenHeightString();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getWindowWidthConfigString();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getWindowWidthString();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getWindowHeightConfigString();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getWindowHeightString();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getWindowResizableConfigString();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getWindowResizableString();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFsaaConfigString();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getFsaaString();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getKeepAspectConfigString();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getKeepAspectString();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScanlinesConfigString();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScanlinesString();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getRtgScanlinesConfigString();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getRtgScanlinesString();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScanlinesDarkConfigString();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScanlinesDarkString();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScanlinesLightConfigString();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScanlinesLightString();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getShaderConfigString();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getShaderString();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getLowResolutionConfigString();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getLowResolutionString();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getLineDoublingConfigString();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getLineDoublingString();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScaleXConfigString();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScaleXString();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScaleYConfigString();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getScaleYString();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAlignXConfigString();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAlignXString();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAlignYConfigString();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAlignYString();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getZoomConfigString();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getZoomString();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getTextureFilterConfigString();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getTextureFilterString();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getVideoSyncConfigString();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getVideoSyncString();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getVideoSyncMethodConfigString();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getVideoSyncMethodString();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getVideoFormatConfigString();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getVideoFormatString();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getTextureFormatConfigString();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getTextureFormatString();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>containsViewport(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getViewportSize();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getViewportAt(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>eraseViewportAt(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>setParameter(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameter,</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setToDefaultConfiguration();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasParameter(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameterName);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isValidViewport(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>viewportString);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONFIGGRAPHICS_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configgraphics.h"/>
+  </compounddef>
+</doxygen>

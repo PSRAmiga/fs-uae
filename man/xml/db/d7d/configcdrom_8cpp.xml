@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="db/d7d/configcdrom_8cpp" kind="file">
+    <compoundname>configcdrom.cpp</compoundname>
+    <includes refid="d7/de5/configcdrom_8h" local="yes">configcdrom.h</includes>
+    <incdepgraph>
+      <node id="49">
+        <label>string</label>
+      </node>
+      <node id="46">
+        <label>configcdrom.cpp</label>
+        <link refid="configcdrom.cpp"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>vector</label>
+      </node>
+      <node id="47">
+        <label>configcdrom.h</label>
+        <link refid="d7/de5/configcdrom_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="db/d7d/configcdrom_8cpp_1a77bc7c5695184c9f5e3331b936659db5" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string DEFAULTCDROMEDRIVE0</definition>
+        <argsstring></argsstring>
+        <name>DEFAULTCDROMEDRIVE0</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" line="21" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="db/d7d/configcdrom_8cpp" kindref="compound">configcdrom.cpp</ref></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. Written by Riva Alessandro Mario, <ulink url="mailto:alessandromario.riva@gmail.com">alessandromario.riva@gmail.com</ulink> and Sanvito Davide, <ulink url="mailto:dsanvito90@gmail.com">dsanvito90@gmail.com</ulink>. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="19"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/de5/configcdrom_8h" kindref="compound">configcdrom.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="db/d7d/configcdrom_8cpp_1a77bc7c5695184c9f5e3331b936659db5" kindref="member">DEFAULTCDROMEDRIVE0</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="db/de3/classConfigCDRom_1abb2ce18b3b13904c51df05b0312fee43" kindref="member">ConfigCDRom::ConfigCDRom</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/de3/classConfigCDRom_1a69b62dbf21ea72a52cd3bd4d36bf06f0" kindref="member">setToDefaultConfiguration</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1abaa015d41adfae7da23e99db10b2eb69" kindref="member" tooltip="Represents the string of cdrom_drive_0 to be written in Config File.">ConfigCDRom::getCDRomDrive0ConfigString</ref>()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" kindref="member" tooltip="You specify paths for CD-ROM images in cdrom_drive_0.">cdrom_drive_0</ref>.compare(<ref refid="db/d7d/configcdrom_8cpp_1a77bc7c5695184c9f5e3331b936659db5" kindref="member">DEFAULTCDROMEDRIVE0</ref>)==0){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;cdrom_drive_0<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" kindref="member" tooltip="You specify paths for CD-ROM images in cdrom_drive_0.">cdrom_drive_0</ref>;}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1acd3b95486fa0bad40c19541af77dfc62" kindref="member" tooltip="Represent the effective value of cdrom_drive_0.">ConfigCDRom::getCDRomDrive0String</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" kindref="member" tooltip="You specify paths for CD-ROM images in cdrom_drive_0.">cdrom_drive_0</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1a8be54c2149f248f38df2d660a3ee9006" kindref="member" tooltip="Represent the image of a CD-Rom.">ConfigCDRom::getCDRomImageSize</ref>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.size();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1a2fc1e5a66f20400409c1d4fb924070ff" kindref="member" tooltip="Represent the position of a CD-Rom Image.">ConfigCDRom::getCDRomImageAt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(position&gt;=(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.size()){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.at(position);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1a8e8852a5a88780827be47ab28e6be33f" kindref="member">ConfigCDRom::pushBackCDRomImage</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.push_back(s);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1a0f78ca614f70da1671b997139ebc1f3d" kindref="member">ConfigCDRom::erasCDRomImageAt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(position&gt;=(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.size()){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.erase(<ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.begin()+<sp/>position);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1aceb8218c5f2156c79b5c6336c1d2378b" kindref="member">ConfigCDRom::setParameter</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameter,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameter.compare(</highlight><highlight class="stringliteral">&quot;cdrom_drive_0&quot;</highlight><highlight class="normal">)==0){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" kindref="member" tooltip="You specify paths for CD-ROM images in cdrom_drive_0.">cdrom_drive_0</ref>=value;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((parameter.substr(0,parameter.length()-1).compare(</highlight><highlight class="stringliteral">&quot;cdrom_image&quot;</highlight><highlight class="normal">)==0<sp/>||<sp/>parameter.substr(0,parameter.length()-2).compare(</highlight><highlight class="stringliteral">&quot;cdrom_image&quot;</highlight><highlight class="normal">)==0)&amp;&amp;<sp/><ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.size()&lt;20){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.push_back(value);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1a69b62dbf21ea72a52cd3bd4d36bf06f0" kindref="member">ConfigCDRom::setToDefaultConfiguration</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" kindref="member" tooltip="You specify paths for CD-ROM images in cdrom_drive_0.">cdrom_drive_0</ref>=<ref refid="db/d7d/configcdrom_8cpp_1a77bc7c5695184c9f5e3331b936659db5" kindref="member">DEFAULTCDROMEDRIVE0</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" kindref="member">cdrom_image</ref>.clear();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/de3/classConfigCDRom_1a7be8d3fb6b1290fc50ae1fbf705a28cd" kindref="member">ConfigCDRom::hasParameter</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameterName)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(parameterName.substr(0,parameterName.length()-1).compare(</highlight><highlight class="stringliteral">&quot;cdrom_drive_&quot;</highlight><highlight class="normal">)==0)||(parameterName.substr(0,parameterName.length()-1).compare(</highlight><highlight class="stringliteral">&quot;cdrom_image_&quot;</highlight><highlight class="normal">)==0)||(parameterName.substr(0,parameterName.length()-2).compare(</highlight><highlight class="stringliteral">&quot;cdrom_image_&quot;</highlight><highlight class="normal">)==0);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp"/>
+  </compounddef>
+</doxygen>

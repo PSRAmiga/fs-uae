@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="d4/df2/classConfigHardDisks" kind="class" prot="public">
+    <compoundname>ConfigHardDisks</compoundname>
+    <includes refid="df/d7b/configharddisks_8h" local="no">configharddisks.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/df2/classConfigHardDisks_1aacce02bf3c29bd37a173a1009f9f9fee" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigHardDisks::hard_drive[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>hard_drive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="11" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/df2/classConfigHardDisks_1a58b44fb5ce5ffdcd316a67aa50fd891d" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigHardDisks::hard_drive_label[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>hard_drive_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="12" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/df2/classConfigHardDisks_1a18ea7b5d8de1d9937dbf3dcdccf01269" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ConfigHardDisks::hard_drive_read_only[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>hard_drive_read_only</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="13" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a05d1c7cb90b78b6fbe6e5f8e75f22b75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConfigHardDisks::ConfigHardDisks</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigHardDisks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a64d74ce5caa55ce0e9fb7afc56718b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigHardDisks::getHardDriveConfigStringAt</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getHardDriveConfigStringAt</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="18" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1aa9a13d8a2de9ca2ba270113995409c9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigHardDisks::getHardDriveStringAt</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getHardDriveStringAt</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="19" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a749e99cec668bf2e6bb9353393aad03a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigHardDisks::getHardDriveLabelConfigStringAt</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getHardDriveLabelConfigStringAt</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a6cdcbdffd8d53bafce27f0518fce109f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigHardDisks::getHardDriveLabelStringAt</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getHardDriveLabelStringAt</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="21" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a1c18c71afb3c5bc7c8e291e922dd2602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigHardDisks::getHardDriveReadOnlyConfigStringAt</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getHardDriveReadOnlyConfigStringAt</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="22" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1ad887288c21a0639ae722d0088d9ea586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ConfigHardDisks::getHardDriveReadOnlyStringAt</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getHardDriveReadOnlyStringAt</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a21fecbbb887e01c296fefcff66977010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ConfigHardDisks::setParameter</definition>
+        <argsstring>(string parameter, string value)</argsstring>
+        <name>setParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="77" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a48f254ac83a7943877972537a95caaaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigHardDisks::setToDefaultConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>setToDefaultConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="193" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/df2/classConfigHardDisks_1a795c311ad265dd1a6ffad2f7b2d0887f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConfigHardDisks::hasParameter</definition>
+        <argsstring>(string parameterName)</argsstring>
+        <name>hasParameter</name>
+        <param>
+          <type>string</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.cpp" bodystart="203" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for the Hard Disks Configuration. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" line="10" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configharddisks.h" bodystart="9" bodyend="28"/>
+    <listofallmembers>
+      <member refid="d4/df2/classConfigHardDisks_1a05d1c7cb90b78b6fbe6e5f8e75f22b75" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>ConfigHardDisks</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a64d74ce5caa55ce0e9fb7afc56718b9f" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>getHardDriveConfigStringAt</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a749e99cec668bf2e6bb9353393aad03a" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>getHardDriveLabelConfigStringAt</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a6cdcbdffd8d53bafce27f0518fce109f" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>getHardDriveLabelStringAt</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a1c18c71afb3c5bc7c8e291e922dd2602" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>getHardDriveReadOnlyConfigStringAt</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1ad887288c21a0639ae722d0088d9ea586" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>getHardDriveReadOnlyStringAt</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1aa9a13d8a2de9ca2ba270113995409c9b" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>getHardDriveStringAt</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1aacce02bf3c29bd37a173a1009f9f9fee" prot="private" virt="non-virtual"><scope>ConfigHardDisks</scope><name>hard_drive</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a58b44fb5ce5ffdcd316a67aa50fd891d" prot="private" virt="non-virtual"><scope>ConfigHardDisks</scope><name>hard_drive_label</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a18ea7b5d8de1d9937dbf3dcdccf01269" prot="private" virt="non-virtual"><scope>ConfigHardDisks</scope><name>hard_drive_read_only</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a795c311ad265dd1a6ffad2f7b2d0887f" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>hasParameter</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a21fecbbb887e01c296fefcff66977010" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>setParameter</name></member>
+      <member refid="d4/df2/classConfigHardDisks_1a48f254ac83a7943877972537a95caaaf" prot="public" virt="non-virtual"><scope>ConfigHardDisks</scope><name>setToDefaultConfiguration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

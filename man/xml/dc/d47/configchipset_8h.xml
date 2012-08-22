@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dc/d47/configchipset_8h" kind="file">
+    <compoundname>configchipset.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="d0/d66/amiga_8h" local="no">amiga.h</includedby>
+    <includedby refid="d6/d06/configchipset_8cpp" local="yes">configchipset.cpp</includedby>
+    <incdepgraph>
+      <node id="66">
+        <label>string</label>
+      </node>
+      <node id="65">
+        <label>configchipset.h</label>
+        <link refid="configchipset.h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="73">
+        <label>configchipset.cpp</label>
+        <link refid="d6/d06/configchipset_8cpp"/>
+      </node>
+      <node id="69">
+        <label>amiga.cpp</label>
+        <link refid="db/d10/amiga_8cpp"/>
+      </node>
+      <node id="67">
+        <label>configchipset.h</label>
+        <link refid="configchipset.h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>configmisc.cpp</label>
+        <link refid="da/d9c/configmisc_8cpp"/>
+      </node>
+      <node id="70">
+        <label>configgraphics.cpp</label>
+        <link refid="d6/d6c/configgraphics_8cpp"/>
+      </node>
+      <node id="72">
+        <label>main.cpp</label>
+        <link refid="df/d0a/main_8cpp"/>
+      </node>
+      <node id="68">
+        <label>amiga.h</label>
+        <link refid="d0/d66/amiga_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d3/d2d/classConfigChipset" prot="public">ConfigChipset</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4"><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIGCHIPSET_H</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONFIGCHIPSET_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="9"></codeline>
+<codeline lineno="18" refid="d3/d2d/classConfigChipset" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d3/d2d/classConfigChipset" kindref="compound" tooltip="This class is responsible for the Chipset Configuration.">ConfigChipset</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="d3/d2d/classConfigChipset_1a4bc77e1b25746f228af19e8315982822" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d3/d2d/classConfigChipset_1a4bc77e1b25746f228af19e8315982822" kindref="member" tooltip="Specify the Amiga model you want to emulate.">amiga_model</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="d3/d2d/classConfigChipset_1a741b37054ee3bba7d7c1dd0478c99062" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d3/d2d/classConfigChipset_1a741b37054ee3bba7d7c1dd0478c99062" kindref="member" tooltip="Specify the path to a specific kickstart file.">kickstart_file</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="d3/d2d/classConfigChipset_1ad96fe812365b5770a3cf57326aa564f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d3/d2d/classConfigChipset_1ad96fe812365b5770a3cf57326aa564f6" kindref="member" tooltip="Specify the path to the extended kickstart ROM (for CD32, ...).">kickstart_ext_file</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="d3/d2d/classConfigChipset_1aac118cb9562ecaba7d6fc24c1bfedc45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d3/d2d/classConfigChipset_1aac118cb9562ecaba7d6fc24c1bfedc45" kindref="member" tooltip="Represet the accuracy of the emulation.">accuracy</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="d3/d2d/classConfigChipset_1a2957b49b2ebd0fa73850bc3f0e893502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d3/d2d/classConfigChipset_1a2957b49b2ebd0fa73850bc3f0e893502" kindref="member" tooltip="Represent the video mode of the emulation (NTSC/PAL)">ntsc_mode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d2d/classConfigChipset" kindref="compound" tooltip="This class is responsible for the Chipset Configuration.">ConfigChipset</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAccuracyConfigString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAccuracyString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getNTSCModeConfigString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getNTSCModeString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAmigaModelConfigString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getAmigaModelString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getKickstartFileConfigString();<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getKickstartFileString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getKickstartExtFileConfigString();<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getKickstartExtFileString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>setParameter(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameter,</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setToDefaultConfiguration();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasParameter(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>parameterName);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONFIGCHIPSET_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configchipset.h"/>
+  </compounddef>
+</doxygen>
