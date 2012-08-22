@@ -6,7 +6,7 @@
 <para>Create a new main window: <ref refid="d1/d60/classAmiga" kindref="compound">Amiga</ref> Gui. </para>    </briefdescription>
     <detaileddescription>
 <para>This main window contains several tabs for the correct configuration of FS-UAE.<linebreak/>
- For further explanations, see the respective codes. </para>    </detaileddescription>
-    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="40"/>
+ For further explanations, see the respective tabs code. </para>    </detaileddescription>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/amiga.h" line="50"/>
   </compounddef>
 </doxygen>

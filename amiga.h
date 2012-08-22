@@ -12,12 +12,21 @@
 * group. It originally came in a 16-oz. can, but now comes in 32-oz. cans too. When
 * this can was originally introduced, it appeared flashy and colorful, but the design hasn’t
 * changed much over the years, so it appears dated now. Critics of this beer claim that it
-* is only meant for watching TV anyway.
-* \subsection Hardware Hradware
+* is only meant for watching TV anyway. */
+/* \subsection Hardware Hardware
 * The Amiga hardware characteristic is the Motorola 68000 processor flanked by three custom-built
 * chips that are designed to alleviate the workload of the processor: Agnus, Denise and Paula.
 * \subsubsection Agnus Agnus:
 * Agnus performs three functions:\n
+* \paragraph DMA control of the 25 DMA channels:
+* through the channels DMA coprocessors and input devices,
+* first of all mass storage devices such as floppy and hard disk can make the direct transfer
+* of data in memory without requiring the supervision of the processor.\n
+* \paragraph Syncro synchronization:
+* synchronization with the electron beam of the monitor, through the coprocessor Copper.
+* Synchronization with the monitor is essential for smooth animations, smoothly and without the "snow effect".\n
+* \paragraph Blitter management of the Blitter:
+* the Blitter is a coprocessor whose purpose is the rapid transfer of blocks of memory from one location to another.\n
 * \subsection Denise Denise:
 * Denise is the chip that deals with the generation of the video output.\n
 * Denise displays up to 64 colors (at most 6 bits per pixel indicating the color to be used,
@@ -36,7 +45,8 @@
 * and two to the left channel, all items are independent, then the two channels from
 * sounds completely different.\n
 * Paula is also responsible for the management of floppy-disk driver and port I/O: the parallel port "Centronics"
-* and the RS-232 25-pin.\n
+* and the RS-232 25-pin.\n*/
+/**
 * \namespace Ui
 * \class Amiga
 */
@@ -55,7 +65,7 @@
 #include <configmisc.h>
 /// Create a new main window: Amiga Gui
 /** This main window contains several tabs for the correct configuration of FS-UAE.\n
-  * For further explanations, see the respective codes.
+  * For further explanations, see the respective tabs code.
   */
 namespace Ui {
 class Amiga;

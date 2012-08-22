@@ -86,28 +86,27 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#include &lt;vector&gt;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00008"></a>00008 <span class="keyword">using namespace </span>std;
-<a name="l00010"></a>00010 
-<a name="l00015"></a><a class="code" href="../../db/de3/classConfigCDRom.html">00015</a> <span class="keyword">class </span><a class="code" href="../../db/de3/classConfigCDRom.html" title="This class is responsible for the Cd-Rom Configuration.">ConfigCDRom</a>
-<a name="l00016"></a>00016 {
-<a name="l00017"></a><a class="code" href="../../db/de3/classConfigCDRom.html#a78e4d0596199f7b219137c9fc779cec2">00017</a>     <span class="keywordtype">string</span> <a class="code" href="../../db/de3/classConfigCDRom.html#a78e4d0596199f7b219137c9fc779cec2" title="You specify paths for CD-ROM images in cdrom_drive_0.">cdrom_drive_0</a>;      
-<a name="l00018"></a><a class="code" href="../../db/de3/classConfigCDRom.html#ae70baa082e2765db04d39e292c095720">00018</a>     vector&lt;string&gt; <a class="code" href="../../db/de3/classConfigCDRom.html#ae70baa082e2765db04d39e292c095720">cdrom_image</a>;
-<a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00020"></a>00020     <a class="code" href="../../db/de3/classConfigCDRom.html" title="This class is responsible for the Cd-Rom Configuration.">ConfigCDRom</a>();
-<a name="l00021"></a>00021 
-<a name="l00023"></a>00023     <span class="keywordtype">string</span> getCDRomDrive0ConfigString();       
-<a name="l00024"></a>00024     <span class="keywordtype">string</span> getCDRomDrive0String();             
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026     <span class="keywordtype">int</span> getCDRomImageSize();                   
-<a name="l00027"></a>00027     <span class="keywordtype">string</span> getCDRomImageAt(<span class="keywordtype">int</span> position);      
-<a name="l00028"></a>00028     <span class="keywordtype">void</span> pushBackCDRomImage(<span class="keywordtype">string</span> s);
-<a name="l00029"></a>00029     <span class="keywordtype">void</span> erasCDRomImageAt(<span class="keywordtype">int</span> position);
+<a name="l00024"></a><a class="code" href="../../db/de3/classConfigCDRom.html">00024</a> <span class="keyword">class </span><a class="code" href="../../db/de3/classConfigCDRom.html" title="On the success of the A500, Commodore launches in the production of alternative projects, that are based on the Amiga. The &quot;CDTV&quot;, of 1990, is designed as a household appliance for multimedia entertainment, and is basically an A500 with a CD-Rom, in a chassis similar to that of a VCR.   The intention of the Commodore, the CDTV must implement the convergence of television and computers, allowing the user to play games, watch movies and listen to music with the same equipment, the most advanced user can then expand the purchasing CDTV keyboard, floppy disk drives, and mouse and turn it into an actual computer.  AmigaCD32 (1993), is instead a console dedicated to video games, equipped with 68020 processor with 32-bit architecture and is based on the use of a CD-Rom integrated.     CD This class is responsible for the Cd-Rom Configuration.">ConfigCDRom</a>
+<a name="l00025"></a>00025 {
+<a name="l00026"></a><a class="code" href="../../db/de3/classConfigCDRom.html#a78e4d0596199f7b219137c9fc779cec2">00026</a>     <span class="keywordtype">string</span> <a class="code" href="../../db/de3/classConfigCDRom.html#a78e4d0596199f7b219137c9fc779cec2" title="You specify paths for CD-ROM images in cdrom_drive_0.">cdrom_drive_0</a>;      
+<a name="l00027"></a><a class="code" href="../../db/de3/classConfigCDRom.html#ae70baa082e2765db04d39e292c095720">00027</a>     vector&lt;string&gt; <a class="code" href="../../db/de3/classConfigCDRom.html#ae70baa082e2765db04d39e292c095720">cdrom_image</a>;
+<a name="l00028"></a>00028 <span class="keyword">public</span>:
+<a name="l00029"></a>00029     <a class="code" href="../../db/de3/classConfigCDRom.html" title="On the success of the A500, Commodore launches in the production of alternative projects, that are based on the Amiga. The &quot;CDTV&quot;, of 1990, is designed as a household appliance for multimedia entertainment, and is basically an A500 with a CD-Rom, in a chassis similar to that of a VCR.   The intention of the Commodore, the CDTV must implement the convergence of television and computers, allowing the user to play games, watch movies and listen to music with the same equipment, the most advanced user can then expand the purchasing CDTV keyboard, floppy disk drives, and mouse and turn it into an actual computer.  AmigaCD32 (1993), is instead a console dedicated to video games, equipped with 68020 processor with 32-bit architecture and is based on the use of a CD-Rom integrated.     CD This class is responsible for the Cd-Rom Configuration.">ConfigCDRom</a>();
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031     <span class="keywordtype">int</span> setParameter(<span class="keywordtype">string</span> parameter,<span class="keywordtype">string</span> value);
-<a name="l00032"></a>00032     <span class="keywordtype">void</span> setToDefaultConfiguration();
-<a name="l00033"></a>00033     <span class="keywordtype">bool</span> hasParameter(<span class="keywordtype">string</span> parameterName);
-<a name="l00034"></a>00034 };
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#endif // CONFIGCDROM_H</span>
+<a name="l00032"></a>00032     <span class="keywordtype">string</span> getCDRomDrive0ConfigString();       
+<a name="l00033"></a>00033     <span class="keywordtype">string</span> getCDRomDrive0String();             
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035     <span class="keywordtype">int</span> getCDRomImageSize();                   
+<a name="l00036"></a>00036     <span class="keywordtype">string</span> getCDRomImageAt(<span class="keywordtype">int</span> position);      
+<a name="l00037"></a>00037     <span class="keywordtype">void</span> pushBackCDRomImage(<span class="keywordtype">string</span> s);
+<a name="l00038"></a>00038     <span class="keywordtype">void</span> erasCDRomImageAt(<span class="keywordtype">int</span> position);
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040     <span class="keywordtype">int</span> setParameter(<span class="keywordtype">string</span> parameter,<span class="keywordtype">string</span> value);
+<a name="l00041"></a>00041     <span class="keywordtype">void</span> setToDefaultConfiguration();
+<a name="l00042"></a>00042     <span class="keywordtype">bool</span> hasParameter(<span class="keywordtype">string</span> parameterName);
+<a name="l00043"></a>00043 };
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="preprocessor">#endif // CONFIGCDROM_H</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -126,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 22 2012 19:19:22 for FS-UAE Gui for Linux OS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2012 21:22:42 for FS-UAE Gui for Linux OS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

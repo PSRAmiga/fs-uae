@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="17" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" prot="private" static="no" mutable="no">
         <type>vector&lt; string &gt;</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="18" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="20" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="23" bodyend="26"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="23" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1abaa015d41adfae7da23e99db10b2eb69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -57,7 +57,7 @@
  cdrom_drive_0 = path/to/cue_or_bin </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="23" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="28" bodyend="32"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="28" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1acd3b95486fa0bad40c19541af77dfc62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="24" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="34" bodyend="37"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="34" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1a8be54c2149f248f38df2d660a3ee9006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="26" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="39" bodyend="42"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="35" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1a2fc1e5a66f20400409c1d4fb924070ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="27" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="44" bodyend="48"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="36" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="44" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1a8e8852a5a88780827be47ab28e6be33f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="28" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="50" bodyend="53"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="37" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="50" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1a0f78ca614f70da1671b997139ebc1f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="29" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="55" bodyend="59"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="38" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="55" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1aceb8218c5f2156c79b5c6336c1d2378b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="31" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="61" bodyend="69"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="40" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="61" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1a69b62dbf21ea72a52cd3bd4d36bf06f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="32" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="71" bodyend="75"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="41" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="71" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="db/de3/classConfigCDRom_1a7be8d3fb6b1290fc50ae1fbf705a28cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -185,16 +185,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="33" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="77" bodyend="80"/>
+        <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="42" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.cpp" bodystart="77" bodyend="80"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This class is responsible for the Cd-Rom Configuration. </para>    </briefdescription>
+<para>On the success of the A500, Commodore launches in the production of alternative projects, that are based on the <ref refid="d1/d60/classAmiga" kindref="compound">Amiga</ref>. The &quot;CDTV&quot;, of 1990, is designed as a household appliance for multimedia entertainment, and is basically an A500 with a CD-Rom, in a chassis similar to that of a VCR. <linebreak/>
+ The intention of the Commodore, the CDTV must implement the convergence of television and computers, allowing the user to play games, watch movies and listen to music with the same equipment, the most advanced user can then expand the purchasing CDTV keyboard, floppy disk drives, and mouse and turn it into an actual computer.<linebreak/>
+ AmigaCD32 (1993), is instead a console dedicated to video games, equipped with 68020 processor with 32-bit architecture and is based on the use of a CD-Rom integrated. <linebreak/>
+ <linebreak/>
+ CD This class is responsible for the Cd-Rom Configuration. </para>    </briefdescription>
     <detaileddescription>
 <para>In this class are defined all the variables for the correct management of CDROM configuration&apos;s tab.<linebreak/>
  The use of the Cd-Rom is only permitted if the <ref refid="d1/d60/classAmiga" kindref="compound">Amiga</ref> model selected si CDTV or CD32.<linebreak/>
  In all other cases the Cd-Rom Configuration tabs appears disabled. </para>    </detaileddescription>
-    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="16" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="15" bodyend="34"/>
+    <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" line="25" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configcdrom.h" bodystart="24" bodyend="43"/>
     <listofallmembers>
       <member refid="db/de3/classConfigCDRom_1a78e4d0596199f7b219137c9fc779cec2" prot="private" virt="non-virtual"><scope>ConfigCDRom</scope><name>cdrom_drive_0</name></member>
       <member refid="db/de3/classConfigCDRom_1ae70baa082e2765db04d39e292c095720" prot="private" virt="non-virtual"><scope>ConfigCDRom</scope><name>cdrom_image</name></member>
