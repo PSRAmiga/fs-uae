@@ -110,7 +110,7 @@ int strToInt(string s){
     return intValue;
 }
 /** \brief Convert a string to a float
-      * \param s is the string to be converted
+      * \param line is the string to be converted
       * \return s as float
       */
 float strToFloat(string line){
@@ -1350,9 +1350,8 @@ void Amiga::on_actionAmiga_triggered()
 void Amiga::on_actionSummary_triggered()
 {
     /////verificare che esista il file altrimenti informare l'utnete che non trova la documentazione!!!!!!!!!!!!!
-    char *username=getenv("USER");
-    string index="file:///home/"+string(username)+"/.FS-UAE/html/index.html";
-    QDesktopServices::openUrl(QUrl(QString::fromStdString(index), QUrl::TolerantMode));
+    QString docPath = "file://"+QDir::currentPath()+"/man/html/index.html";
+    QDesktopServices::openUrl(QUrl(docPath, QUrl::TolerantMode));
 }
 
 void Amiga::on_floppyDrive0ToolButton_clicked()
