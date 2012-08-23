@@ -7,18 +7,13 @@
 #include <vector>
 using namespace std;
 /// This class is responsible for the Graphics Configuration management.
-/** In this class are defined all the variables for the correct management
-* of graphics configuration's tab.\n
-* This board is composed of 4 parts: the first section with the DISPLAY SETTINGS,
-* the second FILTERS, SHADERS AND SCALING, the third VIDEO SYNCHRONIZATION, and
-* fourth VIDEO AND TEXTURE BUFFER FORMAT.\n
+/** In this class are stored all the variables for GRAPHICS configuration.\n
+* You can select the DISPLAY SETTINGS, FILTERS, SHADERS AND SCALING, VIDEO SYNCHRONIZATION, and VIDEO AND TEXTURE BUFFER FORMAT.\n
 * DISPLAY SETTINGS: you can change for startup fullscreen mode and make
 * possible the resizing window, change fullscreen and window resolution
 * and enable full-scene anti-aliasing.\n
-* FILTERS, SHADERS AND SCALING: in this section are all the settings relating scanlines
-* (enable, RTG and variation of light and dark), type of shaders, resolution and line doubling.\n
-* Here are also managed the position and alignment of the texture as well as their filtering and
-* how to start the video emulation.\n
+* FILTERS, SHADERS AND SCALING: you can edit scanlines parameter, type of shaders, resolution and line doubling.\n
+* Here are also managed the position and alignment of the video, textures setting as well as video initial mode .\n
 * VIDEO SYNCHRONIZATION: here you can select type and methode of syncronization.\n
 * VIDEO AND TEXTURE BUFFER FORMAT: here you can select video and texture format.\n
 */
