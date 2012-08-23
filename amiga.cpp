@@ -1350,8 +1350,12 @@ void Amiga::on_actionAmiga_triggered()
 void Amiga::on_actionSummary_triggered()
 {
     /////verificare che esista il file altrimenti informare l'utnete che non trova la documentazione!!!!!!!!!!!!!
-    char *username=getenv("USER");
-    string index="file:///home/"+string(username)+"/.FS-UAE/html/index.html";
+    QString filename = QDir::currentPath();
+    char* cstr;
+    string fname = filename.toStdString();
+    cstr = new char [fname.size()+1];
+    strcpy(cstr, fname.c_str());
+    string index="file://"+string(cstr)+"/man/html/index.html";
     QDesktopServices::openUrl(QUrl(QString::fromStdString(index), QUrl::TolerantMode));
 }
 
