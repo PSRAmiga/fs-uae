@@ -5,7 +5,7 @@
 #define CONFIGMISC_H
 #include <string>
 using namespace std;
-/// This class is responsible for the Miscellaneous Configuration
+/// This class is responsible for the Miscellaneous Configuration management
 class ConfigMisc
 {
     string input_grab;

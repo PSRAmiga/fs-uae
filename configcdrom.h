@@ -15,7 +15,7 @@ using namespace std;
 * and mouse and turn it into an actual computer.\n
 * AmigaCD32 (1993), is instead a console dedicated to video games, equipped with 68020 processor with 32-bit
 * architecture and is based on the use of a CD-Rom integrated. \n \n
-*  CD This class is responsible for the Cd-Rom Configuration. */
+* This class is responsible for the Cd-Rom Configuration management. */
 /** In this class are defined all the variables for the correct management
  * of CDROM configuration's tab.\n
  * The use of the Cd-Rom is only permitted if the Amiga model selected si CDTV or CD32.\n

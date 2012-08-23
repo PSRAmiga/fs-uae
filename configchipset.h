@@ -5,7 +5,7 @@
 #ifndef CONFIGCHIPSET_H
 #define CONFIGCHIPSET_H
 using namespace std;
-/// This class is responsible for the Chipset Configuration.
+/// This class is responsible for the Chipset Configuration management.
 /** In this class are defined all the variables for the correct management
  * of chipset configuration's tab.\n
  * In this tab, you can choose the type of model you want to emulate FS-UAE (A500, A500+,...,CDTV),

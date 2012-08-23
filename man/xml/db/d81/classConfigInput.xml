@@ -493,7 +493,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This class is responsible for the Graphics Configuration. </para>    </briefdescription>
+<para>This class is responsible for the Graphics Configuration management. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" line="11" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configinput.h" bodystart="10" bodyend="54"/>

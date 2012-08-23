@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-/// This class is responsible for the Graphics Configuration
+/// This class is responsible for the Graphics Configuration management
 class ConfigInput
 {
     vector<string> custom_input_mapping_inserted_keys;

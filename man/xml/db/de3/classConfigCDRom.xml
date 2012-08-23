@@ -193,7 +193,7 @@
  The intention of the Commodore, the CDTV must implement the convergence of television and computers, allowing the user to play games, watch movies and listen to music with the same equipment, the most advanced user can then expand the purchasing CDTV keyboard, floppy disk drives, and mouse and turn it into an actual computer.<linebreak/>
  AmigaCD32 (1993), is instead a console dedicated to video games, equipped with 68020 processor with 32-bit architecture and is based on the use of a CD-Rom integrated. <linebreak/>
  <linebreak/>
- CD This class is responsible for the Cd-Rom Configuration. </para>    </briefdescription>
+ This class is responsible for the Cd-Rom Configuration management. </para>    </briefdescription>
     <detaileddescription>
 <para>In this class are defined all the variables for the correct management of CDROM configuration&apos;s tab.<linebreak/>
  The use of the Cd-Rom is only permitted if the <ref refid="d1/d60/classAmiga" kindref="compound">Amiga</ref> model selected si CDTV or CD32.<linebreak/>

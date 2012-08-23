@@ -69,7 +69,7 @@
 <codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONFIGTHEME_H</highlight></codeline>
 <codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="8" refid="d9/d33/classConfigTheme" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/d33/classConfigTheme" kindref="compound" tooltip="This class is responsible for the Theme Configuration.">ConfigTheme</ref></highlight></codeline>
+<codeline lineno="8" refid="d9/d33/classConfigTheme" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/d33/classConfigTheme" kindref="compound" tooltip="This class is responsible for the Theme Configuration management.">ConfigTheme</ref></highlight></codeline>
 <codeline lineno="9"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="10" refid="d9/d33/classConfigTheme_1a78cd8d5a52ca8674ad2f3e1f21bc576e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d9/d33/classConfigTheme_1a78cd8d5a52ca8674ad2f3e1f21bc576e" kindref="member">theme</ref>;</highlight></codeline>
 <codeline lineno="11" refid="d9/d33/classConfigTheme_1a7388d597c4981ac38115bcbfd50c0b72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d9/d33/classConfigTheme_1a7388d597c4981ac38115bcbfd50c0b72" kindref="member">theme_fade_color</ref>;</highlight></codeline>
@@ -81,7 +81,7 @@
 <codeline lineno="17" refid="d9/d33/classConfigTheme_1aa63b6ef98d55d57e56e909b6b5d3ed9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d9/d33/classConfigTheme_1aa63b6ef98d55d57e56e909b6b5d3ed9a" kindref="member">theme_overlay_image</ref>;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d33/classConfigTheme" kindref="compound" tooltip="This class is responsible for the Theme Configuration.">ConfigTheme</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d33/classConfigTheme" kindref="compound" tooltip="This class is responsible for the Theme Configuration management.">ConfigTheme</ref>();</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getThemeConfigString();</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getThemeString();</highlight></codeline>

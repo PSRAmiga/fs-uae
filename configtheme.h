@@ -4,7 +4,7 @@
 #define CONFIGTHEME_H
 #include <string>
 using namespace std;
-/// This class is responsible for the Theme Configuration.
+/// This class is responsible for the Theme Configuration management.
 class ConfigTheme
 {
     string theme;

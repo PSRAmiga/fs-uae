@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="ConfigGraphics" -->
-<p>This class is responsible for the Graphics Configuration.  
+<p>This class is responsible for the Graphics Configuration management.  
  <a href="../../d0/d01/classConfigGraphics.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dd/d56/configgraphics_8h_source.html">configgraphics.h</a>&gt;</code></p>
@@ -183,8 +183,14 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d01/classConfigGraphics.html#a8422a9455bdd64415281b71e6488a838">viewport</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>This class is responsible for the Graphics Configuration. </p>
+<div class="textblock"><p>This class is responsible for the Graphics Configuration management. </p>
 <p>In this class are defined all the variables for the correct management of graphics configuration's tab.<br/>
+ This board is composed of 4 parts: the first section with the DISPLAY SETTINGS, the second FILTERS, SHADERS AND SCALING, the third VIDEO SYNCHRONIZATION, and fourth VIDEO AND TEXTURE BUFFER FORMAT.<br/>
+ DISPLAY SETTINGS: you can change for startup fullscreen mode and make possible the resizing window, change fullscreen and window resolution and enable full-scene anti-aliasing.<br/>
+ FILTERS, SHADERS AND SCALING: in this section are all the settings relating scanlines (enable, RTG and variation of light and dark), type of shaders, resolution and line doubling.<br/>
+ Here are also managed the position and alignment of the texture as well as their filtering and how to start the video emulation.<br/>
+ VIDEO SYNCHRONIZATION: here you can select type and methode of syncronization.<br/>
+ VIDEO AND TEXTURE BUFFER FORMAT: here you can select video and texture format.<br/>
  </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a624f551149e426f0135eabe27dd317b0"></a><!-- doxytag: member="ConfigGraphics::ConfigGraphics" ref="a624f551149e426f0135eabe27dd317b0" args="()" -->
@@ -1509,7 +1515,7 @@ Private Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 22 2012 21:22:44 for FS-UAE Gui for Linux OS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 23 2012 11:30:54 for FS-UAE Gui for Linux OS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

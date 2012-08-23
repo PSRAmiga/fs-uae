@@ -70,7 +70,7 @@
 <codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="8"></codeline>
-<codeline lineno="9" refid="dd/dfc/classConfigRam" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dd/dfc/classConfigRam" kindref="compound" tooltip="This class is responsible for the Ram Configuration.">ConfigRam</ref></highlight></codeline>
+<codeline lineno="9" refid="dd/dfc/classConfigRam" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dd/dfc/classConfigRam" kindref="compound" tooltip="This class is responsible for the Ram Configuration management.">ConfigRam</ref></highlight></codeline>
 <codeline lineno="10"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="11" refid="dd/dfc/classConfigRam_1ad6b2684bcb11199f26659524612e3741" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="dd/dfc/classConfigRam_1ad6b2684bcb11199f26659524612e3741" kindref="member" tooltip="Override amount of chip memory, specified in KB. Must be a multiple of 512.">chip_memory</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="12" refid="dd/dfc/classConfigRam_1a716614ef01fde9b247de51555722eb21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="dd/dfc/classConfigRam_1a716614ef01fde9b247de51555722eb21" kindref="member" tooltip="Override the amount of “slow” memory, specified in KB. Must be a multiple of 256.">slow_memory</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -79,7 +79,7 @@
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/dfc/classConfigRam" kindref="compound" tooltip="This class is responsible for the Ram Configuration.">ConfigRam</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/dfc/classConfigRam" kindref="compound" tooltip="This class is responsible for the Ram Configuration management.">ConfigRam</ref>();</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getChipMemoryConfigString();<sp/></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getChipMemoryString();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>

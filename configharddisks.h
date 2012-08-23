@@ -5,7 +5,7 @@
 #define CONFIGHARDDISKS_H
 #include <string>
 using namespace std;
-/// This class is responsible for the Hard Disks Configuration.
+/// This class is responsible for the Hard Disks Configuration management.
 class ConfigHardDisks
 {
     string hard_drive[10];

@@ -233,7 +233,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This class is responsible for the Ram Configuration. </para>    </briefdescription>
+<para>This class is responsible for the Ram Configuration management. </para>    </briefdescription>
     <detaileddescription>
 <para>The default value of each type of ram depends on the selected <ref refid="d1/d60/classAmiga" kindref="compound">Amiga</ref> model. </para>    </detaileddescription>
     <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" line="10" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configram.h" bodystart="9" bodyend="36"/>

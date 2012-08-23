@@ -4,7 +4,7 @@
 #define CONFIGRAM_H
 #include <string>
 using namespace std;
-///  This class is responsible for the Ram Configuration.
+///  This class is responsible for the Ram Configuration management.
 /** The default value of each type of ram depends on the selected Amiga model. */
 class ConfigRam
 {

@@ -384,7 +384,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This class is responsible for the Theme Configuration. </para>    </briefdescription>
+<para>This class is responsible for the Theme Configuration management. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <location file="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" line="9" bodyfile="/home/alessandro/Scrivania/Amiga/fs-uae/configtheme.h" bodystart="8" bodyend="42"/>
