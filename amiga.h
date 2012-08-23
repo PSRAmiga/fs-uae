@@ -1,4 +1,5 @@
-/*! \mainpage A Gui designed to simplify the creation of Amiga configuration file
+//perchè mettiamo la descrizione di UAE se il nostro programma è una gui per FS-UAE? secondo me ha più senso mettere la descrizione di FS
+/* \mainpage A Gui designed to simplify the creation of Amiga configuration file
 * \section UAE "There are several options available to tune your Amiga experience."
 * Unix Amiga Emulator (UAE) is a software emulator of the Amiga platform that runs on Unix machines.\n
 * Its purpose is to reproduce the hardware of the original system, so that software written for the emulated
@@ -13,39 +14,25 @@
 * this can was originally introduced, it appeared flashy and colorful, but the design hasn’t
 * changed much over the years, so it appears dated now. Critics of this beer claim that it
 * is only meant for watching TV anyway. */
-/* \subsection Hardware Hardware
-* The Amiga hardware characteristic is the Motorola 68000 processor flanked by three custom-built
-* chips that are designed to alleviate the workload of the processor: Agnus, Denise and Paula.
-* \subsubsection Agnus Agnus:
-* Agnus performs three functions:\n
-* \paragraph DMA control of the 25 DMA channels:
-* through the channels DMA coprocessors and input devices,
-* first of all mass storage devices such as floppy and hard disk can make the direct transfer
-* of data in memory without requiring the supervision of the processor.\n
-* \paragraph Syncro synchronization:
-* synchronization with the electron beam of the monitor, through the coprocessor Copper.
-* Synchronization with the monitor is essential for smooth animations, smoothly and without the "snow effect".\n
-* \paragraph Blitter management of the Blitter:
-* the Blitter is a coprocessor whose purpose is the rapid transfer of blocks of memory from one location to another.\n
-* \subsection Denise Denise:
-* Denise is the chip that deals with the generation of the video output.\n
-* Denise displays up to 64 colors (at most 6 bits per pixel indicating the color to be used,
-* among those in the registers of color), from a palette of 4096 (12 bit, ie 4 for each color component
-* R, G and B, for each color register). Through mode called HAM (short for Hold And Modify)
-* can simultaneously show 4096 colors.\n
-* Another function of the chip Denise is the management of the sprite, graphic objects of limited size
-* (16 pixels wide and up to 255 high), completely independent resolution and number of colors
-* from the screen below (called "playfield"), and which is the same hardware to implement the display
-* and movement. Denise handles up to eight sprites to four colors; they can then be combined to obtain
-* moving objects larger and with a greater number of colors; in the same frame a sprite can be reused
-* several times, on the condition that between two copies is maintained distance of a video line horizontal.\n
-* \subsubsection Paula Paula:
-* Paula is the sound chip, which manages four entries digital 8-bit Amiga.\n
-* Amiga produces stereo sound: two items are associated audio to the right channel,
-* and two to the left channel, all items are independent, then the two channels from
-* sounds completely different.\n
-* Paula is also responsible for the management of floppy-disk driver and port I/O: the parallel port "Centronics"
-* and the RS-232 25-pin.\n*/
+
+/*! \mainpage A Gui designed to simplify the creation of Amiga configuration file
+* \section FS-UAE FS-UAE README
+* FS-UAE is an Amiga emulator for Windows, Linux and Mac OS X based on UAE/WinUAE, with a focus on emulating games.\n
+* Features include emulation of Amiga 500, 1200, 4000, CD32 and CDTV, perfectly smooth scrolling on 50Hz displays, support for floppy images in
+* ADF and IPF formats, CD-ROM images in ISO or BIN/CUE format, mounting folders on your computer as Amiga hard drives, support for Picasso 96 drivers for
+* high-color and high-resolution Workbench displays, and more! * A unique feature is support for cross-platform online play. You can now play Amiga games against (or with) friends over the Internet.\n
+* The emulator uses the latest Amiga emulation code from the WinUAE project and requires a moderately fast computer with accelerated graphics (OpenGL)
+* to work. A game pad or joystick is recommended, but not required (FS-UAE can emulate a joystick using the cursor keys and right ctrl/alt keys).\n
+* The official home page of FS-UAE is:\n
+* http://fengestad.no/fs-uae/\n
+* The complete README can be found here:\n
+* http://fengestad.no/fs-uae/README\n
+* \section FS-UAEGUI Why a Gui?
+* FS-UAE does not include a configuration UI, so you must create a configuration file before the emulator will be usable.
+* This application can help you to create a new configuration file or modify an existent one and launch the emulator for you.\n\n
+* The application is divided in 9 different configuration area:\n-Chipset\n-Floppy\n-CD-ROM\n-HD\n-Input Devices\n-Input Map\n-Graphics\n-Theme\n-Misc\n
+*/
+
 /**
 * \namespace Ui
 * \class Amiga
@@ -63,19 +50,15 @@
 #include <configinput.h>
 #include <configtheme.h>
 #include <configmisc.h>
-/// Create a new main window: Amiga Gui
-/** This main window contains several tabs for the correct configuration of FS-UAE.\n
-  * For further explanations, see the respective tabs code.
-  */
+
 namespace Ui {
 class Amiga;
 }
 /// This class is responsible for the magement of FS-UAE Gui
-/** In this class are defined all the variables for the correct management
- * of all types of settings possible to run FS-UAE.\n
- * We have also introduced some secondary features for FS-UAE but not for
- * the end user such as saving and loading configurations, the possibility
- * of refreshing the gui and reporting bugs.
+/** This main window contains several tabs for the correct configuration of FS-UAE:
+ * For further explanations, see the respective configuration area code.\n
+ * When the application is started, all parameters are set to the default value.
+ * User can Load default values, Load an existing configuration file, Save current configuration in a file or Launch FS-UAE with the current configuration.
  */
 class Amiga : public QMainWindow
 {
@@ -83,52 +66,52 @@ class Amiga : public QMainWindow
 
     
 public:
-    explicit Amiga(QWidget *parent = 0);
-    ~Amiga();
+    explicit Amiga(QWidget *parent = 0); ///< Create the GUI.
+    ~Amiga();                            ///< Destroy the GUI,
 
 private slots:
-    void on_saveConfigToolButton_clicked(); ///< Save configuration.
-    void on_loadConfigToolButton_clicked(); ///< Load configuration.
-    void on_loadDefaultValuesToolButton_clicked();  ///< Reset configuration.
-    void on_runConfigButton_clicked();  ///< Run FS-UAE.
+    void on_saveConfigToolButton_clicked(); ///< Save current configuration.
+    void on_loadConfigToolButton_clicked(); ///< Load an existing configuration.
+    void on_loadDefaultValuesToolButton_clicked();  ///< Reset configuration to the default values.
+    void on_runConfigButton_clicked();  ///< Run FS-UAE with current configuration.
 
     void on_actionAmiga_triggered();    ///< Help menu: what's Amiga?
     void on_actionSummary_triggered();  ///< Help menu: a brief summary.
     void on_actionReport_bug_triggered();   ///< Help menu: open an email browser to report bug.
 
-    void on_kickstartFileToolButton_clicked(); ///< Load Kickstart file.
-    void on_kickstartExtFileToolButton_clicked(); ///< Load Extended Kickstart file.
-    void on_amigaModelComboBox_currentIndexChanged(const QString &arg1);    ///< List of avaiable Amiga models.
+    void on_kickstartFileToolButton_clicked(); ///< Select Kickstart file.
+    void on_kickstartExtFileToolButton_clicked(); ///< Select Extended Kickstart file.
+    void on_amigaModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select Amiga model.
     void on_accuracyLeastRadio_clicked();   ///< Switch to least accuracy.
     void on_accuracyNormalRadio_clicked();  ///< Switch to normal accuracy.
     void on_accuracyMostadio_clicked();     ///< Switch to most accuracy.
     void on_videoModePALRadio_clicked();    ///< Switch to PAL video mode.
     void on_videoModeNTSCRadio_clicked();   ///< Switch to NTST video mode.
 
-    void on_chipMem4MbRadio_clicked();      ///< Chip memory setting at 4Mb.
-    void on_chipMeme8MbRadio_clicked();     ///< Chip memory setting at 8Mb.
-    void on_chipMem512KbRadio_clicked();    ///< Chip memory setting at 512Kb.
-    void on_chipMem1MbRadio_clicked();      ///< Chip memory setting at 1Mb.
-    void on_chipMem2MbRadio_clicked();      ///< Chip memory setting at 2Mb.
-    void on_slowMemNoneRadio_clicked();     ///< None slow memory.
-    void on_slowMem512KbRadio_clicked();    ///< Slow memory setting at 512kb.
-    void on_slowMem1MbRadio_clicked();      ///< Slow memory setting at 1Mb.
-    void on_slowMem1_8MbRadio_clicked();    ///< Slow memory setting at 1.8Mb.
-    void on_fastMemNoneRadio_clicked();     ///< None fast memory.
-    void on_fastMem1MbRadio_clicked();      ///< Fast memory setting at 1Mb.
-    void on_fastMem2MbRadio_clicked();      ///< Fast memory setting at 2Mb.
-    void on_fastMem4MbRadio_clicked();      ///< Fast memory setting at 4Mb.
-    void on_fastMem8MbRadio_clicked();      ///< Fast memory setting at 8Mb.
-    void on_z3MemNoneRadio_clicked();       ///< None Zorro III memory.
-    void on_z3Mem1MbRadio_clicked();        ///< Zorro III memory setting at 1Mb.
-    void on_z3Mem2MbRadio_clicked();        ///< Zorro III memory setting at 2Mb.
-    void on_z3Mem4MbRadio_clicked();        ///< Zorro III memory setting at 4Mb.
-    void on_z3Mem8MbRadio_clicked();        ///< Zorro III memory setting at 8Mb.
-    void on_z3Mem16MbRadio_clicked();       ///< Zorro III memory setting at 16Mb.
-    void on_z3Mem32MbRadio_clicked();       ///< Zorro III memory setting at 32Mb.
-    void on_z3Mem64MbRadio_clicked();       ///< Zorro III memory setting at 64Mb.
-    void on_z3Mem128MbRadio_clicked();      ///< Zorro III memory setting at 128Mb.
-    void on_z3Mem256MbRadio_clicked();      ///< Zorro III memory setting at 256Mb.
+    void on_chipMem4MbRadio_clicked();      ///< Set Chip memory to 4Mb.
+    void on_chipMeme8MbRadio_clicked();     ///< Set Chip memory at 8Mb.
+    void on_chipMem512KbRadio_clicked();    ///< Set Chip memory at 512Kb.
+    void on_chipMem1MbRadio_clicked();      ///< Set Chip memory at 1Mb.
+    void on_chipMem2MbRadio_clicked();      ///< Set Chip memory at 2Mb.
+    void on_slowMemNoneRadio_clicked();     ///< Disable Slow memory.
+    void on_slowMem512KbRadio_clicked();    ///< Set Slow memory at 512kb.
+    void on_slowMem1MbRadio_clicked();      ///< Set Slow memory at 1Mb.
+    void on_slowMem1_8MbRadio_clicked();    ///< Set Slow memory at 1.8Mb.
+    void on_fastMemNoneRadio_clicked();     ///< Disable Fast memory.
+    void on_fastMem1MbRadio_clicked();      ///< Set Fast memory at 1Mb.
+    void on_fastMem2MbRadio_clicked();      ///< Set Fast memory at 2Mb.
+    void on_fastMem4MbRadio_clicked();      ///< Set Fast memory at 4Mb.
+    void on_fastMem8MbRadio_clicked();      ///< Set Fast memory at 8Mb.
+    void on_z3MemNoneRadio_clicked();       ///< Disable Zorro III memory.
+    void on_z3Mem1MbRadio_clicked();        ///< Set Zorro III memory at 1Mb.
+    void on_z3Mem2MbRadio_clicked();        ///< Set Zorro III memory at 2Mb.
+    void on_z3Mem4MbRadio_clicked();        ///< Set Zorro III memory at 4Mb.
+    void on_z3Mem8MbRadio_clicked();        ///< Set Zorro III memory at 8Mb.
+    void on_z3Mem16MbRadio_clicked();       ///< Set Zorro III memory at 16Mb.
+    void on_z3Mem32MbRadio_clicked();       ///< Set Zorro III memory at 32Mb.
+    void on_z3Mem64MbRadio_clicked();       ///< Set Zorro III memory at 64Mb.
+    void on_z3Mem128MbRadio_clicked();      ///< Set Zorro III memory at 128Mb.
+    void on_z3Mem256MbRadio_clicked();      ///< Set Zorro III memory at 256Mb.
 
     void on_floppyDrive0ToolButton_clicked();                   ///< Load Floppy in Drive 0.
     void on_floppyDrive1ToolButton_clicked();                   ///< Load Floppy in Drive 1.
@@ -145,24 +128,24 @@ private slots:
     void on_cdromSwappingImagesRemovePushButton_clicked();  ///< Remove CD-ROM(s) from Swapping area.
 
     void on_hardDrive0FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 0.
-    void on_hardDrive0ToolButton_clicked();///< Load Hard Disks in Drive 0.
-    void on_hardDrive1ToolButton_clicked();///< Load Hard Disks in Drive 1.
+    void on_hardDrive0ToolButton_clicked();///< Load Hard Disk file in Drive 0.
+    void on_hardDrive1ToolButton_clicked();///< Load Hard Disk file in Drive 1.
     void on_hardDrive1FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 1.
-    void on_hardDrive2ToolButton_clicked();///< Load Hard Disks in Drive 2.
+    void on_hardDrive2ToolButton_clicked();///< Load Hard Disk file in Drive 2.
     void on_hardDrive2FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 2.
-    void on_hardDrive3ToolButton_clicked();///< Load Hard Disks in Drive 3.
+    void on_hardDrive3ToolButton_clicked();///< Load Hard Disk file in Drive 3.
     void on_hardDrive3FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 3.
     void on_hardDrive4FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 4.
-    void on_hardDrive4ToolButton_clicked();///< Load Hard Disks in Drive 4.
-    void on_hardDrive5ToolButton_clicked();///< Load Hard Disks in Drive 5.
+    void on_hardDrive4ToolButton_clicked();///< Load Hard Disk file in Drive 4.
+    void on_hardDrive5ToolButton_clicked();///< Load Hard Disk file in Drive 5.
     void on_hardDrive5FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 5.
-    void on_hardDrive6ToolButton_clicked();///< Load Hard Disks in Drive 6.
+    void on_hardDrive6ToolButton_clicked();///< Load Hard Disk file in Drive 6.
     void on_hardDrive6FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 6.
-    void on_hardDrive7ToolButton_clicked();///< Load Hard Disks in Drive 7.
+    void on_hardDrive7ToolButton_clicked();///< Load Hard Disk file in Drive 7.
     void on_hardDrive7FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 7.
-    void on_hardDrive8ToolButton_clicked();///< Load Hard Disks in Drive 8.
+    void on_hardDrive8ToolButton_clicked();///< Load Hard Disk file in Drive 8.
     void on_hardDrive8FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 8.
-    void on_hardDrive9ToolButton_clicked();///< Load Hard Disks in Drive 9.
+    void on_hardDrive9ToolButton_clicked();///< Load Hard Disk file in Drive 9.
     void on_hardDrive9FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 9.
 
     void on_hardDrive0LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 0.
@@ -176,24 +159,24 @@ private slots:
     void on_hardDrive8LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 8.
     void on_hardDrive9LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 9.
 
-    void on_hardDrive0ReadOnlyCheckBox_clicked();///< Set hard drive 0 as Read Only.
-    void on_hardDrive1ReadOnlyCheckBox_clicked();///< Set hard drive 1 as Read Only.
-    void on_hardDrive2ReadOnlyCheckBox_clicked();///< Set hard drive 2 as Read Only.
-    void on_hardDrive3ReadOnlyCheckBox_clicked();///< Set hard drive 3 as Read Only.
-    void on_hardDrive4ReadOnlyCheckBox_clicked();///< Set hard drive 4 as Read Only.
-    void on_hardDrive5ReadOnlyCheckBox_clicked();///< Set hard drive 5 as Read Only.
-    void on_hardDrive6ReadOnlyCheckBox_clicked();///< Set hard drive 6 as Read Only.
-    void on_hardDrive7ReadOnlyCheckBox_clicked();///< Set hard drive 7 as Read Only.
-    void on_hardDrive8ReadOnlyCheckBox_clicked();///< Set hard drive 8 as Read Only.
-    void on_hardDrive9ReadOnlyCheckBox_clicked();///< Set hard drive 9 as Read Only.
+    void on_hardDrive0ReadOnlyCheckBox_clicked();///< Set/unset hard drive 0 as Read Only.
+    void on_hardDrive1ReadOnlyCheckBox_clicked();///< Set/unset hard drive 1 as Read Only.
+    void on_hardDrive2ReadOnlyCheckBox_clicked();///< Set/unset hard drive 2 as Read Only.
+    void on_hardDrive3ReadOnlyCheckBox_clicked();///< Set/unset hard drive 3 as Read Only.
+    void on_hardDrive4ReadOnlyCheckBox_clicked();///< Set/unset hard drive 4 as Read Only.
+    void on_hardDrive5ReadOnlyCheckBox_clicked();///< Set/unset hard drive 5 as Read Only.
+    void on_hardDrive6ReadOnlyCheckBox_clicked();///< Set/unset hard drive 6 as Read Only.
+    void on_hardDrive7ReadOnlyCheckBox_clicked();///< Set/unset hard drive 7 as Read Only.
+    void on_hardDrive8ReadOnlyCheckBox_clicked();///< Set/unset hard drive 8 as Read Only.
+    void on_hardDrive9ReadOnlyCheckBox_clicked();///< Set/unset hard drive 9 as Read Only.
 
-    void on_displaySettingsStartFullscreenRadioButton_clicked();    ///< Start emulation in fulscreen mode.
-    void on_displaySettingsResizableRadioButton_clicked();///< Disable resizing of emulation window.
-    void on_displaySettingsKeepAspectRatioRadioButton_clicked();///< Enable keep aspect ratio.
-    void on_scanlinesRadioButton_clicked();///< Enable scanlines.
-    void on_scanlinesRTGRadioButton_clicked();///< Enable RTG scanlines.
-    void on_lowResolutionRadioButton_clicked();///< Start emulatio with low resolution.
-    void on_lineDoublingRadioButton_clicked();///< Enable line doubling.
+    void on_displaySettingsStartFullscreenRadioButton_clicked();    ///< Enable/disable emulation start in fulscreen mode.
+    void on_displaySettingsResizableRadioButton_clicked();///< Enable/disable the resizing of emulation window.
+    void on_displaySettingsKeepAspectRatioRadioButton_clicked();///< Enable/disable keep aspect ratio.
+    void on_scanlinesRadioButton_clicked();///< Enable/disable scanlines.
+    void on_scanlinesRTGRadioButton_clicked();///< Enable/disable RTG scanlines.
+    void on_lowResolutionRadioButton_clicked();///< Enable/disable emulation start with low resolution.
+    void on_lineDoublingRadioButton_clicked();///< Enable/disable line doubling.
     void on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1);///< Change X-resolution in fullscreen mode.
     void on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1);///< Change Y-resolution in fullscreen mode.
     void on_windowResolutionXSpinBox_valueChanged(const QString &arg1);///< Change X-resolution in window mode.
@@ -210,44 +193,46 @@ private slots:
     void on_fullSceneAntiAliasing8xRadioButton_clicked();///< Enable 8x fullScene anti-aliasing mode.
     void on_textureFilterLinearRadioButton_clicked();///< Apply a linear filter on the texture.
     void on_textureFilterNearestRadioButton_clicked();///< Apply a nearest filter on the texture.
-    void on_f11InitalModeAutoRadioButton_clicked();///< Setting F11 initial mode as automatic.
-    void on_f11InitalModeFullRadioButton_clicked();///< Setting F11 initial mode as fullscreen.
-    void on_f11InitalMode640x400RadioButton_clicked();///< Setting F11 initial mode as 640x400 px.
-    void on_f11InitalMode640x480RadioButton_clicked();///< Setting F11 initial mode as 640x480 px.
-    void on_f11InitalMode640x512RadioButton_clicked();///< Setting F11 initial mode as 640x512 px.
-    void on_f11InitialModeWithBorderCheckBox_clicked();///< Enable border in F11 initial mode.
-    void on_videoFormatBGRARadioButton_clicked();///< Setting video format as BRGA.
-    void on_videoFormatRGBARadioButton_clicked();///< Setting video format as RBGA.
-    void on_textureFormatModeRGBRadioButton_clicked();///< Setting video texture as RGB.
-    void on_textureFormatModeRGB8RadioButton_clicked();///< Setting video texture as RGB8.
-    void on_textureFormatModeRGBARadioButton_clicked();///< Setting video texture as RGBA.
-    void on_textureFormatModeRGBA8RadioButton_clicked();///< Setting vide texture as RGBA8.
-    void on_shaderComboBox_currentIndexChanged(const QString &arg1);///< A list of type of shader.
-    void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);///< A list of type of video syncronization.
-    void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);///< A list of method of video syncronization.
+    void on_f11InitalModeAutoRadioButton_clicked();///< Set F11 initial mode ti automatic.
+    void on_f11InitalModeFullRadioButton_clicked();///< Set F11 initial mode ti fullscreen.
+    void on_f11InitalMode640x400RadioButton_clicked();///< Set F11 initial mode ti 640x400 px.
+    void on_f11InitalMode640x480RadioButton_clicked();///< Set F11 initial mode ti 640x480 px.
+    void on_f11InitalMode640x512RadioButton_clicked();///< Set F11 initial mode ti 640x512 px.
+    void on_f11InitialModeWithBorderCheckBox_clicked();///< Enable/disable border in F11 initial mode.
+    void on_videoFormatBGRARadioButton_clicked();///< Set BRGA video format.
+    void on_videoFormatRGBARadioButton_clicked();///< Set RBGA video format.
+    void on_textureFormatModeRGBRadioButton_clicked();///< Set RGB video texture.
+    void on_textureFormatModeRGB8RadioButton_clicked();///< Set RGB8 video texture.
+    void on_textureFormatModeRGBARadioButton_clicked();///< Sett RGBA video texture.
+    void on_textureFormatModeRGBA8RadioButton_clicked();///< Set RGBA8 video texture.
+    void on_shaderComboBox_currentIndexChanged(const QString &arg1);///< Select shader type.
+    void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);///< Select video syncronization.
+    void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);///< Select video syncronization method.
+    void on_themeAddViewportPushButton_clicked();       ///< Add a new viewport
+    void on_themeRemoveViewportPushButton_clicked();    ///< Remove a viewport
 
-    void on_alternativeBaseDirPushButton_clicked();                 ///< Explore system for an Alternative Base directory
-    void on_alternativeKickstartDirPushButton_clicked();            ///< Explore system for an Alternative Kickstart directory
-    void on_alernativeSaveStatesDirPushButton_clicked();            ///< Explore system for an Alternative SaveStates directory
-    void on_alternativeFloppyOverlaysDirPushButton_clicked();       ///< Explore system for an Alternative FloppyOverlay directory
-    void on_alternativeFlashMemoryDirPushButton_clicked();          ///< Explore system for an Alternative FlashMemory directory
-    void on_alternativeControllersDirPushButton_clicked();          ///< Explore system for an Alternative Controllers directory
-    void on_alternativeLogsDirPushButton_clicked();                 ///< Explore system for an Alternative Logs directory
-    void on_alternativeHardDrivesDirPushButton_clicked();           ///< Explore system for an Alternative HardDrivers directory
-    void on_alternativeCdromsDirPushButton_clicked();               ///< Explore system for an Alternative Cdroms directory
-    void on_alternativeFloppiesDirPushButton_clicked();             ///< Explore system for an Alternative Floppies directory
+    void on_alternativeBaseDirPushButton_clicked();                 ///< Select an Alternative Base directory.
+    void on_alternativeKickstartDirPushButton_clicked();            ///< Select an Alternative Kickstart directory.
+    void on_alernativeSaveStatesDirPushButton_clicked();            ///< Select an Alternative SaveStates directory.
+    void on_alternativeFloppyOverlaysDirPushButton_clicked();       ///< Select an Alternative FloppyOverlay directory.
+    void on_alternativeFlashMemoryDirPushButton_clicked();          ///< Select an Alternative FlashMemory directory.
+    void on_alternativeControllersDirPushButton_clicked();          ///< Select an Alternative Controllers directory.
+    void on_alternativeLogsDirPushButton_clicked();                 ///< Select an Alternative Logs directory.
+    void on_alternativeHardDrivesDirPushButton_clicked();           ///< Select an Alternative HardDrivers directory.
+    void on_alternativeCdromsDirPushButton_clicked();               ///< Select an Alternative Cdroms directory.
+    void on_alternativeFloppiesDirPushButton_clicked();             ///< Select an Alternative Floppies directory.
 
-    void on_grabMouseCheckBox_clicked();                            ///< Disable grabbing mouse
-    void on_grabMouseAutoCheckBox_clicked();                        ///< Disable automatic grabbing mouse
-    void on_useBSDCheckBox_clicked();                               ///< Enable BSD
-    void on_audioBufferLineEdit_textChanged(const QString &arg1);   ///< Change size of audio buffer
-    void on_menuTitleLineEdit_textChanged(const QString &arg1);     ///< Change menu title
-    void on_menuSubtitleLineEdit_textChanged(const QString &arg1);  ///< Change menu subtitle
+    void on_grabMouseCheckBox_clicked();                            ///< Enable/disable mouse grabbing.
+    void on_grabMouseAutoCheckBox_clicked();                        ///< Enable/disable automatic mouse grabbing.
+    void on_useBSDCheckBox_clicked();                               ///< Enable/disable BSD.
+    void on_audioBufferLineEdit_textChanged(const QString &arg1);   ///< Change size of audio buffer.
+    void on_menuTitleLineEdit_textChanged(const QString &arg1);     ///< Change menu title.
+    void on_menuSubtitleLineEdit_textChanged(const QString &arg1);  ///< Change menu subtitle.
 
-    void on_serverIPLineEdit_textChanged(const QString &arg1);      ///< Insert an IP address
-    void on_serverPortLineEdit_textChanged(const QString &arg1);    ///< Insert a Internet port
-    void on_playerUsernameLineEdit_textChanged(const QString &arg1);///< Choose a Username
-    void on_playerPasswordLineEdit_textChanged(const QString &arg1);///< Choose a password
+    void on_serverIPLineEdit_textChanged(const QString &arg1);      ///< Set the server IP address.
+    void on_serverPortLineEdit_textChanged(const QString &arg1);    ///< Set the server port.
+    void on_playerUsernameLineEdit_textChanged(const QString &arg1);///< Set user's Username.
+    void on_playerPasswordLineEdit_textChanged(const QString &arg1);///< Set user's password.
 
     void on_fadeColorPushButton_clicked();          ///< Change the fade color
     void on_wallColor1PushButton_clicked();         ///< Chaneg the first wall color
@@ -259,69 +244,80 @@ private slots:
     void on_themeFolderPushButton_clicked();        ///< Change the theme folder
     void on_mouseSpeedLineEdit_textChanged(const QString &arg1);    ///< Change mouse speed
 
-    void customJoystick0Slot(QString s);        ///< Custom slot for joystick 0
-    void customJoystick1Slot(QString s);        ///< Custom slot for joystick 1
-    void customJoystick2Slot(QString s);        ///< Custom slot for joystick 2
-    void customJoystick3Slot(QString s);        ///< Custom slot for joystick 3
+    void customJoystick0Slot(QString s);        ///< Custom slot for joystick 0 selection
+    void customJoystick1Slot(QString s);        ///< Custom slot for joystick 1 selection
+    void customJoystick2Slot(QString s);        ///< Custom slot for joystick 2 selection
+    void customJoystick3Slot(QString s);        ///< Custom slot for joystick 3 selection
 
-    void on_readKeyPushButton_clicked();        ///< Start recording keyboard to change a default key
+    void on_readKeyPushButton_clicked();        ///< Start reading keyboard
 
-    void on_customInputMappingAddPushButton_clicked();          ///< Add a new different mapping for a key.
-    void on_customInputMappingRemovePushButton_clicked();       ///< Remove a different mapping for a key.
-    void on_joystickPort0CustomizePushButton_clicked();         ///< Customize joystick in port 0
-    void on_joystickPort0CustomJoystickRadioButton_clicked();   ///<
-    void on_joystickPort0JoystickRadioButton_clicked();         ///<
-    void on_joystickPort0MouseRadioButton_clicked();            ///<
-    void on_joystickPort0KeyboardRadioButton_clicked();         ///<
-    void on_joystickPort0NothingRadioButton_clicked();          ///<
-    void on_joystickPort0ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
-    void on_joystickPort1MouseRadioButton_clicked();
-    void on_joystickPort2MouseRadioButton_clicked();
-    void on_joystickPort3MouseRadioButton_clicked();
-    void on_joystickPort1KeyboardRadioButton_clicked();
-    void on_joystickPort2KeyboardRadioButton_clicked();
-    void on_joystickPort3KeyboardRadioButton_clicked();
-    void on_joystickPort1JoystickRadioButton_clicked();
-    void on_joystickPort2JoystickRadioButton_clicked();
-    void on_joystickPort3JoystickRadioButton_clicked();
-    void on_joystickPort1ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
-    void on_joystickPort2ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
-    void on_joystickPort3ModelComboBox_currentIndexChanged(const QString &arg1);    ///< A list of type of joystick's model
-    void on_joystickPort1CustomJoystickRadioButton_clicked();
-    void on_joystickPort2CustomJoystickRadioButton_clicked();
-    void on_joystickPort3CustomizePushButton_clicked();
-    void on_joystickPort3CustomJoystickRadioButton_clicked();
-    void on_joystickPort1NothingRadioButton_clicked();
-    void on_joystickPort2NothingRadioButton_clicked();
-    void on_joystickPort3NothingRadioButton_clicked();
-    void on_joystickPort1CusomizePushButton_clicked();
-    void on_joystickPort2CustomizePushButton_clicked();
-
-    void on_themeAddViewportPushButton_clicked();       ///< Add a new viewport
-
-    void on_themeRemoveViewportPushButton_clicked();    ///< Report a viewport
+    void on_customInputMappingAddPushButton_clicked();          ///< Add a custom keyboard mapping
+    void on_customInputMappingRemovePushButton_clicked();       ///< Remove a custom keyboard mapping
+    void on_joystickPort0CustomizePushButton_clicked();         ///< Customize joystick on port 0
+    void on_joystickPort1CusomizePushButton_clicked();          ///< Customize joystick on port 1
+    void on_joystickPort2CustomizePushButton_clicked();         ///< Customize joystick on port 2
+    void on_joystickPort3CustomizePushButton_clicked();         ///< Customize joystick on port 3
+    void on_joystickPort0CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 0
+    void on_joystickPort1CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 1
+    void on_joystickPort2CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 2
+    void on_joystickPort3CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 3
+    void on_joystickPort0JoystickRadioButton_clicked();         ///< Select an existing joystick on port 0
+    void on_joystickPort1JoystickRadioButton_clicked();         ///< Select an existing joystick on port 1
+    void on_joystickPort2JoystickRadioButton_clicked();         ///< Select an existing joystick on port 2
+    void on_joystickPort3JoystickRadioButton_clicked();         ///< Select an existing joystick on port 3
+    void on_joystickPort0MouseRadioButton_clicked();            ///< Select a mouse on port 0
+    void on_joystickPort1MouseRadioButton_clicked();            ///< Select a mouse on port 1
+    void on_joystickPort2MouseRadioButton_clicked();            ///< Select a mouse on port 2
+    void on_joystickPort3MouseRadioButton_clicked();            ///< Select a mouse on port 3
+    void on_joystickPort0KeyboardRadioButton_clicked();         ///< Select a keyboard on port 0
+    void on_joystickPort1KeyboardRadioButton_clicked();         ///< Select a keyboard on port 1
+    void on_joystickPort2KeyboardRadioButton_clicked();         ///< Select a keyboard on port 2
+    void on_joystickPort3KeyboardRadioButton_clicked();         ///< Select a keyboard on port 3
+    void on_joystickPort0NothingRadioButton_clicked();          ///< Select nothing on port 0
+    void on_joystickPort1NothingRadioButton_clicked();          ///< Select nothing on port 1
+    void on_joystickPort2NothingRadioButton_clicked();          ///< Select nothing on port 2
+    void on_joystickPort3NothingRadioButton_clicked();          ///< Select nothing on port 3
+    void on_joystickPort0ModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select an existing joystick on port 0
+    void on_joystickPort1ModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select an existing joystick on port 1
+    void on_joystickPort2ModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select an existing joystick on port 2
+    void on_joystickPort3ModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select an existing joystick on port 3
 
 private:
     Ui::Amiga *ui;                              ///< Amiga main window
-    ConfigChipset chipsetConfiguration;         ///< Chipset configuration tab
-    ConfigRam ramConfiguration;                 ///< RAM configuration tab
-    ConfigFloppy floppyConfiguration;           ///< Floppy configuration tab
-    ConfigCDRom cdromConfiguration;             ///< CDROM configuraion tab
-    ConfigHardDisks hardDiskConfiguration;      ///< Hard Disks configuration tab
-    ConfigInput inputConfiguration;             ///< Input configuration tab
-    ConfigGraphics graphicsConfiguration;       ///< Graphics configuration tab
-    ConfigTheme themeConfiguration;             ///< Theme configuration tab
-    ConfigMisc miscConfiguration;               ///< Misc configuration tab
+    ConfigChipset chipsetConfiguration;         ///< Chipset configuration
+    ConfigRam ramConfiguration;                 ///< RAM configuration
+    ConfigFloppy floppyConfiguration;           ///< Floppy configuration
+    ConfigCDRom cdromConfiguration;             ///< CDROM configuraion
+    ConfigHardDisks hardDiskConfiguration;      ///< Hard Disks configuration
+    ConfigInput inputConfiguration;             ///< Input configuration
+    ConfigGraphics graphicsConfiguration;       ///< Graphics configuration
+    ConfigTheme themeConfiguration;             ///< Theme configuration
+    ConfigMisc miscConfiguration;               ///< Misc configuration
 
+    /** \brief Process a line read from file and store the setting
+         * \param line to be processed
+         */
     void parseLine(string line);
-    void checkConfigurationConsistency();       ///< Verify the consistency of configuration
-
+    /** \brief Verify the consistency of configuration \n
+         * Checks if the current configuration is valid. For example if the selected model has not a CD drive, user can't have selected a CD iso image.
+         */
+    void checkConfigurationConsistency();
+    /** \brief Enable/disable Fast Memory radio buttons
+         * \param state can be true (disable) or false (enable)
+         */
     void setFastMemoryDisabled(bool state);
+    /** \brief Enable/disable Zorro III radio buttons
+         * \param state can be true (disable) or false (enable)
+         */
     void setZorroIIIMemoryDisabled(bool state);
 
-    void updateGraphicsFromInternalConfiguration();
-    void saveConfigInFile(string fileName);
-    void loadDefaultValues();
+    void updateGraphicsFromInternalConfiguration(); ///< Read the internal configuration and update Gui
+    void saveConfigInFile(string fileName);         ///< Save current configuration
+    void loadDefaultValues();                       ///< Set all the parameter to the default values
+    /** \brief Checks if parameterName is an existing parameter
+         * \param parameterName is the name of the parameter to be checked
+         * \return true if the parameterName is the name of an existing parameter
+         */
     bool isExistingParameter(string parameterName);
 
     bool eventFilter(QObject *obj, QEvent *event);

@@ -1,0 +1,302 @@
+.TH "ConfigMisc" 3 "Thu Aug 23 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigMisc \- 
+.PP
+This class is responsible for the Miscellaneous Configuration management\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configmisc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigMisc\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetInputGrabConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetInputGrabString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetAutomaticInputGrabConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetAutomaticInputGrabString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetBsdSocketLibraryConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetBsdSocketLibraryString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetAudioBufferConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetAudioBufferString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetMouseSpeedConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetMouseSpeedString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetTitleConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetTitleString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetSubTitleConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetSubTitleString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayServerConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayServerString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayPortConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayPortString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayTagConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayTagString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayPasswordConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetNetPlayPasswordString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetBaseDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetBaseDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetKickstartsDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetKickstartsDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetSaveStatesDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetSaveStatesDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetFloppyOverlaysDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetFloppyOverlaysDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetFlashMemoryDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetFlashMemoryDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetControllersDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetControllersDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetLogsDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetLogsDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetHardDrivesDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetHardDrivesDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetCDRomsDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetCDRomsDirString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetFloppiesDirConfigString\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetFloppiesDirString\fP ()"
+.br
+.ti -1c
+.RI "int \fBsetParameter\fP (string parameter, string value)"
+.br
+.ti -1c
+.RI "void \fBsetToDefaultConfiguration\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhasParameter\fP (string parameterName)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBinput_grab\fP"
+.br
+.ti -1c
+.RI "string \fBautomatic_input_grab\fP"
+.br
+.ti -1c
+.RI "string \fBbsdsocket_library\fP"
+.br
+.ti -1c
+.RI "string \fBaudio_buffer_target_bytes\fP"
+.br
+.ti -1c
+.RI "string \fBmouse_speed\fP"
+.br
+.ti -1c
+.RI "string \fBtitle\fP"
+.br
+.ti -1c
+.RI "string \fBsub_title\fP"
+.br
+.ti -1c
+.RI "string \fBnetplay_server\fP"
+.br
+.ti -1c
+.RI "string \fBnetplay_port\fP"
+.br
+.ti -1c
+.RI "string \fBnetplay_tag\fP"
+.br
+.ti -1c
+.RI "string \fBnetplay_password\fP"
+.br
+.ti -1c
+.RI "string \fBbase_dir\fP"
+.br
+.ti -1c
+.RI "string \fBkickstarts_dir\fP"
+.br
+.ti -1c
+.RI "string \fBsave_states_dir\fP"
+.br
+.ti -1c
+.RI "string \fBfloppy_overlays_dir\fP"
+.br
+.ti -1c
+.RI "string \fBflash_memory_dir\fP"
+.br
+.ti -1c
+.RI "string \fBcontrollers_dir\fP"
+.br
+.ti -1c
+.RI "string \fBlogs_dir\fP"
+.br
+.ti -1c
+.RI "string \fBhard_drives_dir\fP"
+.br
+.ti -1c
+.RI "string \fBcdroms_dir\fP"
+.br
+.ti -1c
+.RI "string \fBfloppies_dir\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is responsible for the Miscellaneous Configuration management\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBConfigMisc::ConfigMisc\fP ()"
+.SH "Member Function Documentation"
+.PP 
+.SS "string \fBConfigMisc::getAudioBufferConfigString\fP ()"
+.SS "string \fBConfigMisc::getAudioBufferString\fP ()"
+.SS "string \fBConfigMisc::getAutomaticInputGrabConfigString\fP ()"
+.SS "string \fBConfigMisc::getAutomaticInputGrabString\fP ()"
+.SS "string \fBConfigMisc::getBaseDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getBaseDirString\fP ()"
+.SS "string \fBConfigMisc::getBsdSocketLibraryConfigString\fP ()"
+.SS "string \fBConfigMisc::getBsdSocketLibraryString\fP ()"
+.SS "string \fBConfigMisc::getCDRomsDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getCDRomsDirString\fP ()"
+.SS "string \fBConfigMisc::getControllersDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getControllersDirString\fP ()"
+.SS "string \fBConfigMisc::getFlashMemoryDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getFlashMemoryDirString\fP ()"
+.SS "string \fBConfigMisc::getFloppiesDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getFloppiesDirString\fP ()"
+.SS "string \fBConfigMisc::getFloppyOverlaysDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getFloppyOverlaysDirString\fP ()"
+.SS "string \fBConfigMisc::getHardDrivesDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getHardDrivesDirString\fP ()"
+.SS "string \fBConfigMisc::getInputGrabConfigString\fP ()"
+.SS "string \fBConfigMisc::getInputGrabString\fP ()"
+.SS "string \fBConfigMisc::getKickstartsDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getKickstartsDirString\fP ()"
+.SS "string \fBConfigMisc::getLogsDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getLogsDirString\fP ()"
+.SS "string \fBConfigMisc::getMouseSpeedConfigString\fP ()"
+.SS "string \fBConfigMisc::getMouseSpeedString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayPasswordConfigString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayPasswordString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayPortConfigString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayPortString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayServerConfigString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayServerString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayTagConfigString\fP ()"
+.SS "string \fBConfigMisc::getNetPlayTagString\fP ()"
+.SS "string \fBConfigMisc::getSaveStatesDirConfigString\fP ()"
+.SS "string \fBConfigMisc::getSaveStatesDirString\fP ()"
+.SS "string \fBConfigMisc::getSubTitleConfigString\fP ()"
+.SS "string \fBConfigMisc::getSubTitleString\fP ()"
+.SS "string \fBConfigMisc::getTitleConfigString\fP ()"
+.SS "string \fBConfigMisc::getTitleString\fP ()"
+.SS "bool \fBConfigMisc::hasParameter\fP (stringparameterName)"
+.SS "int \fBConfigMisc::setParameter\fP (stringparameter, stringvalue)"
+.SS "void \fBConfigMisc::setToDefaultConfiguration\fP ()"
+.SH "Member Data Documentation"
+.PP 
+.SS "string \fBConfigMisc::audio_buffer_target_bytes\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::automatic_input_grab\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::base_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::bsdsocket_library\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::cdroms_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::controllers_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::flash_memory_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::floppies_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::floppy_overlays_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::hard_drives_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::input_grab\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::kickstarts_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::logs_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::mouse_speed\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::netplay_password\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::netplay_port\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::netplay_server\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::netplay_tag\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::save_states_dir\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::sub_title\fP\fC [private]\fP"
+.SS "string \fBConfigMisc::title\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FS-UAE Gui for Linux OS from the source code\&.

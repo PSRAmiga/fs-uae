@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-/// Create the Floppy Configuration Class
+/// This class is responsible for the Floppy Configuration management.
 /** In this class are defined all the variables for the correct management
  * of floppy configuration's tab.\n
  * In this tab, you can load up to a maximum of 4 physical floppy disk,

@@ -1,0 +1,86 @@
+.TH "ConfigHardDisks" 3 "Thu Aug 23 2012" "Version 1.0" "FS-UAE Gui for Linux OS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigHardDisks \- 
+.PP
+This class is responsible for the Hard Disks Configuration management\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configharddisks\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigHardDisks\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetHardDriveConfigStringAt\fP (int i)"
+.br
+.ti -1c
+.RI "string \fBgetHardDriveStringAt\fP (int i)"
+.br
+.ti -1c
+.RI "string \fBgetHardDriveLabelConfigStringAt\fP (int i)"
+.br
+.ti -1c
+.RI "string \fBgetHardDriveLabelStringAt\fP (int i)"
+.br
+.ti -1c
+.RI "string \fBgetHardDriveReadOnlyConfigStringAt\fP (int i)"
+.br
+.ti -1c
+.RI "string \fBgetHardDriveReadOnlyStringAt\fP (int i)"
+.br
+.ti -1c
+.RI "int \fBsetParameter\fP (string parameter, string value)"
+.br
+.ti -1c
+.RI "void \fBsetToDefaultConfiguration\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhasParameter\fP (string parameterName)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBhard_drive\fP [10]"
+.br
+.ti -1c
+.RI "string \fBhard_drive_label\fP [10]"
+.br
+.ti -1c
+.RI "string \fBhard_drive_read_only\fP [10]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is responsible for the Hard Disks Configuration management\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBConfigHardDisks::ConfigHardDisks\fP ()"
+.SH "Member Function Documentation"
+.PP 
+.SS "string \fBConfigHardDisks::getHardDriveConfigStringAt\fP (inti)"
+.SS "string \fBConfigHardDisks::getHardDriveLabelConfigStringAt\fP (inti)"
+.SS "string \fBConfigHardDisks::getHardDriveLabelStringAt\fP (inti)"
+.SS "string \fBConfigHardDisks::getHardDriveReadOnlyConfigStringAt\fP (inti)"
+.SS "string \fBConfigHardDisks::getHardDriveReadOnlyStringAt\fP (inti)"
+.SS "string \fBConfigHardDisks::getHardDriveStringAt\fP (inti)"
+.SS "bool \fBConfigHardDisks::hasParameter\fP (stringparameterName)"
+.SS "int \fBConfigHardDisks::setParameter\fP (stringparameter, stringvalue)"
+.SS "void \fBConfigHardDisks::setToDefaultConfiguration\fP ()"
+.SH "Member Data Documentation"
+.PP 
+.SS "string \fBConfigHardDisks::hard_drive\fP[10]\fC [private]\fP"
+.SS "string \fBConfigHardDisks::hard_drive_label\fP[10]\fC [private]\fP"
+.SS "string \fBConfigHardDisks::hard_drive_read_only\fP[10]\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FS-UAE Gui for Linux OS from the source code\&.

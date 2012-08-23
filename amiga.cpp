@@ -34,12 +34,18 @@
 #include <sys/stat.h>
 using namespace std;
 
+/** \brief Show an alert to user
+* \param message to be displayed
+*/
 void static showAlert(string message){
     QMessageBox msg;
     msg.setText(QString::fromStdString(message));
     msg.exec();
 }
 
+/**
+  * Check if FS-UAE folder exists
+  */
 void static checkFoldersExistence(){
     char *username=getenv("USER");
     struct stat st;
@@ -93,26 +99,39 @@ Amiga::~Amiga()
     delete ui;
 }
 
+/** \brief Convert a string to an integer
+      * \param s is the string to be converted
+      * \return s as integer
+      */
 int strToInt(string s){
     istringstream buffer(s);
     int intValue;
     buffer >> intValue;
     return intValue;
 }
-
+/** \brief Convert a string to a float
+      * \param s is the string to be converted
+      * \return s as float
+      */
 float strToFloat(string line){
     float valor;
     stringstream stream(line);
     stream >> valor;
     return valor;
 }
-
+/** \brief Convert a int into a string
+      * \param n is the number to be converted
+      * \return n as string
+      */
 string intToStr(int n){
     return static_cast<ostringstream*>( &(ostringstream() << n) )->str();
 }
 
 /////////////////////////////////////////////////////////////////////
-
+/** \brief Checks if s is an empty string
+      * \param s is the string to be checked
+      * \return true if s is an empty string
+      */
 bool isEmptyString(string s){
     //NB compare ritorna 0 se è la comparazione è vera, è il contrario!
     return (s.compare("")==0);
@@ -1330,6 +1349,7 @@ void Amiga::on_actionAmiga_triggered()
 
 void Amiga::on_actionSummary_triggered()
 {
+    /////verificare che esista il file altrimenti informare l'utnete che non trova la documentazione!!!!!!!!!!!!!
     char *username=getenv("USER");
     string index="file:///home/"+string(username)+"/.FS-UAE/html/index.html";
     QDesktopServices::openUrl(QUrl(QString::fromStdString(index), QUrl::TolerantMode));
@@ -2260,6 +2280,10 @@ void Amiga::customJoystick3Slot(QString s){
     inputConfiguration.setParameter("joystick_port_3",s.toStdString());
 }
 
+/** \brief Convert Qt Keyboard Code in Amiga Keyboard Key
+      * \param key is the Qt Keyboard Code
+      * \return a string in Amiga Keyboard Key format
+      */
 QString getAmigaKeyboardKeysFromKey(int key){
     /*
     To map an action, you add a line like this to your configuration file:
