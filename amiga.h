@@ -312,7 +312,10 @@ private:
     void setZorroIIIMemoryDisabled(bool state);
 
     void updateGraphicsFromInternalConfiguration(); ///< Read the internal configuration and update Gui
-    void saveConfigInFile(string fileName);         ///< Save current configuration
+    /** \brief Save current configuration in a file fileName. Please note that parameters set to default values are not stored in the file.
+         * \param fileName is the name of the file
+         */
+    void saveConfigInFile(string fileName);
     void loadDefaultValues();                       ///< Set all the parameter to the default values
     /** \brief Checks if parameterName is an existing parameter
          * \param parameterName is the name of the parameter to be checked

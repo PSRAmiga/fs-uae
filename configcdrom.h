@@ -8,28 +8,57 @@
 using namespace std;
 
 /// This class is responsible for the Cd-Rom Configuration management.
-/** In this class are are stored all the variables for CDROM configuration.\n
- * The use of the Cd-Rom is only permitted if the Amiga model selected si CDTV or CD32.\n
- * In all other cases the Cd-Rom Configuration tabs appears disabled.
+/** In this class are stored all the variables for CDROM configuration.\n
+  * You can specify the path to the CD-ROM image and a list of other CD-ROM images to enable CD-ROM swapping.
 */
 class ConfigCDRom
 {
-    string cdrom_drive_0;      ///< You specify paths for CD-ROM images in cdrom_drive_0.
-    vector<string> cdrom_image;
+    string cdrom_drive_0;      ///< CD-ROM drive 0 image path
+    vector<string> cdrom_image;///< List of CD-ROM images
 public:
-    ConfigCDRom();
+    ConfigCDRom(); ///< Creates an empty CD-ROM configuration
 
-    /** CUE/BIN and ISO images are supported.\n cdrom_drive_0 = path/to/cue_or_bin */
-    string getCDRomDrive0ConfigString();       ///< Represents the string of cdrom_drive_0 to be written in Config File.
-    string getCDRomDrive0String();             ///< Represent the effective value of cdrom_drive_0.
+    /** \brief Returns the string of cdrom_drive_0 to be written in Config File.
+          * \return the string to be written in Config File.
+          */
+    string getCDRomDrive0ConfigString();
+    /** \brief Returns the CD-ROM drive 0 image path.
+          * \return the CD-ROM drive 0 image path.
+          */
+    string getCDRomDrive0String();
 
-    int getCDRomImageSize();                   ///< Represent the image of a CD-Rom.
-    string getCDRomImageAt(int position);      ///< Represent the position of a CD-Rom Image.
+    /** \brief Returns the size of List of CD-ROM images.
+          * \return the size of List of CD-ROM images.
+          */
+    int getCDRomImageSize();
+    /** \brief Returns the CD-ROM image path at position
+          *\param position of image to be returned
+          * \return the CD-ROM image path at position.
+          */
+    string getCDRomImageAt(int position);
+    /** \brief Add a CD-ROM image at the end of the list
+          *\param s is the CD-ROM image to be added
+          */
     void pushBackCDRomImage(string s);
-    void erasCDRomImageAt(int position);
+    /** \brief Delete the CD-ROM image path at position
+          *\param position of the image to be removed
+          */
+    void eraseCDRomImageAt(int position);
 
+
+    /** \brief Set CD-ROM configuration parameter
+          *\param parameter is the name of parameter
+          *\param value is the value to assign to parameter
+          *\return 0 if there aren't error or invalid parameters, -1 otherwise
+          */
     int setParameter(string parameter,string value);
+    /** \brief Set CD-ROM configuration parameter to default values
+          */
     void setToDefaultConfiguration();
+    /** \brief Checks if CD-ROM configuration has a parameter with that name
+          *\param parameterName is the name of parameter to be checked
+          *\return true if a parameter with that name exists
+          */
     bool hasParameter(string parameterName);
 };
 

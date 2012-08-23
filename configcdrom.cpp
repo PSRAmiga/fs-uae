@@ -52,7 +52,7 @@ void ConfigCDRom::pushBackCDRomImage(string s)
     cdrom_image.push_back(s);
 }
 
-void ConfigCDRom::erasCDRomImageAt(int position)
+void ConfigCDRom::eraseCDRomImageAt(int position)
 {
     if (position>=(int)cdrom_image.size()){return;}
     cdrom_image.erase(cdrom_image.begin()+ position);

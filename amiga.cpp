@@ -1516,7 +1516,7 @@ void Amiga::on_cdromSwappingImagesRemovePushButton_clicked()
     //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
     //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
     for(int x=indexList.size()-1;x>=0;x--){
-        cdromConfiguration.erasCDRomImageAt(indexList[x]);
+        cdromConfiguration.eraseCDRomImageAt(indexList[x]);
     }
 
     //svuoto lista grafica
