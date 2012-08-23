@@ -7,7 +7,7 @@
 using namespace std;
 /// This class is responsible for the Chipset Configuration management.
 /** In this class are stored all the variables for CHIPSET configuration.\n
- * In this tab, you can choose the type of model you want to emulate FS-UAE (A500, A500+,...,CDTV),
+ * You can choose the type of model you want to emulate FS-UAE (A500, A500+,...,CDTV),
  * the paths for the kickstart and extended kickstart.\n
  * You can also select the emulation accuracy, the video mode (50 Hz PAL or 60 Hz NTSC)
  * and the various types of RAM mountable.\n

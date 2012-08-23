@@ -7,44 +7,80 @@
 #include <string>
 using namespace std;
 /// This class is responsible for the Floppy Configuration management.
-/** In this class are defined all the variables for the correct management
- * of floppy configuration's tab.\n
- * In this tab, you can load up to a maximum of 4 physical floppy disk,
- * and create a list with up to 20 floppy images to change the floppy despite
- * having already launched emulation and without having to manually change the configuration file.
- * It is also possible to add or remove from the list one or more files at a time.
- * At the bottom of the tab there are also two sliders:\n one manages the output volume
- * of the floppy disk drive and is flanked by a checkbox where you can disable the sound (mute);\n
- * the second manages the speed of rotation of the disk.
+/** In this class are stored all the variables for FLOPPY configuration.\n
+ * You can load up to a maximum of 4 physical floppy disk,
+ * and create a list with up to 20 floppy images to enable floppy-swapping during emulation without having to manually change the configuration file.\n
+ * You can also set he output volume of the floppy disk drive and floppy drive speed.
 */
 class ConfigFloppy
 {
-    string floppy_drive[4];
-    vector<string> floppy_image;///< In order to enable floppy­swapping, you must list all floppy images which is to appear in the floppy list.\n You can use floppy_image_0, floppy_image_1, floppy_image_2, and so on.
-    string floppy_drive_volume; ///< Set volume to 0 to disable floppy drive sounds. Max volume is 100. The default value is 20.
-    string floppy_drive_speed;  ///< Set the speed of the emulated floppy drives, in percent. The default is 100.
-    /** For example, you can specify 800 to get an 8x increase in speed. Use 0 to specify turbo mode.*/
-
+    string floppy_drive[4]; ///< Floppy drive image 0-3 list
+    vector<string> floppy_image;///< List of floppy images
+    string floppy_drive_volume; ///< Floppy drive sounds. Max volume is 100. The default value is 20.
+    string floppy_drive_speed;  ///< Floppy drive speed, in percent. The default is 100. You can specify 800 to get an 8x increase in speed. Use 0 to specify turbo mode.*/
 
 public:
-    ConfigFloppy();
-    string getFloppyDriveConfigStringAt(int i); ///<
-    string getFloppyDriveStringAt(int i);       ///<
-    /** If floppy_drive_volume is the default value, it returns an empty string.\n floppy_drive_volume = 20*/
-    string getFloppyDriveVolumeConfigString();  ///< Represents the string of floppy_drive_volume to be written in Config File.
-    string getFloppyDriveVolumeString();        ///< Represent the effective value of floppy_drive_volume.
+    ConfigFloppy(); ///< Creates an empty FLOPPY configuration
+
+    /** \brief Returns the floppy image string at position i to be written in Config File.
+          *\param i is the position of floppy image to be returned.
+          * \return the string to be written in Config File.
+          */
+    string getFloppyDriveConfigStringAt(int i);
+    /** \brief Returns the floppy image string at position i
+          * \return the floppy image string at position i
+          */
+    string getFloppyDriveStringAt(int i);
+
+    /** \brief Returns the floppy drive volume to be written in Config File.
+          * \return the string to be written in Config File. If floppy_drive_volume has the default value (20), it returns an empty string
+          */
+    string getFloppyDriveVolumeConfigString();
+    /** \brief Returns the floppy drive volume value.
+          * \return the floppy drive volume value.
+          */
+    string getFloppyDriveVolumeString();
     /** If floppy_drive_speed is the default value [100], it returns an empty string.\n floppy_drive_speed = 100 */
-    string getFloppyDriveSpeedConfigString();   ///< Represents the string of floppy_drive_speed to be written in Config File.
+    /** \brief Returns the floppy drive speed to be written in Config File.
+          * \return the string to be written in Config File. If floppy_drive_speed has the default value (100), it returns an empty string
+          */
+    string getFloppyDriveSpeedConfigString();
+    /** \brief Returns the floppy drive speed value.
+          * \return the floppy drive speed value.
+          */
     string getFloppyDriveSpeedString();
 
-    int getFloppyImageSize();                   ///< Returns the size of the floppy
-    string getFloppyImageAt(int position);      ///< Returns the string that represet the Floppy Image
-    void pushBackFloppyImage(string s);         ///< Add new Floppy Image
-    void eraseFloppyImageAt(int position);      ///< Erase a Flopy Image
+    /** \brief Returns the size of List of Floppy images.
+          * \return the size of List of Floppy images.
+          */
+    int getFloppyImageSize();
+    /** \brief Returns the floppy image at position
+          *\param position of image to be returned
+          * \return the floppy image at position.
+          */
+    string getFloppyImageAt(int position);
+    /** \brief Add a floppy image at the end of the list
+          *\param s is the floppy image to be added
+          */
+    void pushBackFloppyImage(string s);
+    /** \brief Delete the floppy image path at position
+          *\param position of the image to be removed
+          */
+    void eraseFloppyImageAt(int position);
 
-
+    /** \brief Set Floppy configuration parameter
+          *\param parameter is the name of parameter
+          *\param value is the value to assign to parameter
+          *\return 0 if there aren't error or invalid parameters, -1 otherwise
+          */
     int setParameter(string parameter,string value);
+    /** \brief Set Floppy configuration parameter to default values
+          */
     void setToDefaultConfiguration();
+    /** \brief Checks if Chipset configuration has a parameter with that name
+          *\param parameterName is the name of parameter to be checked
+          *\return true if a parameter with that name exists
+          */
     bool hasParameter(string parameterName);
 };
 

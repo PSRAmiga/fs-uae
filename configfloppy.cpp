@@ -87,6 +87,10 @@ void ConfigFloppy::eraseFloppyImageAt(int position)
     floppy_image.erase(floppy_image.begin()+ position);
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/** \brief Checks if s is a number
+      * \param s is the string to be checked
+      * \return true if s is a number
+      */
 bool static isNumber(string s){
     istringstream buffer(s);
     int intValue;
@@ -95,13 +99,17 @@ bool static isNumber(string s){
     if (intValue==0 && s.compare("0")==0) return true;
     return intValue!=0;
 }
-
+/** \brief Convert a string to an integer
+      * \param s is the string to be converted
+      * \return s as integer
+      */
 int static strToInt(string s){
     istringstream buffer(s);
     int intValue;
     buffer >> intValue;
     return intValue;
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 int ConfigFloppy::setParameter(string parameter, string value)
 {
     if(parameter.compare("floppy_drive_0")==0){
