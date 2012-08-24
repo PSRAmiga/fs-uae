@@ -1,35 +1,24 @@
-//perchè mettiamo la descrizione di UAE se il nostro programma è una gui per FS-UAE? secondo me ha più senso mettere la descrizione di FS
-/* \mainpage A Gui designed to simplify the creation of Amiga configuration file
-* \section UAE "There are several options available to tune your Amiga experience."
-* Unix Amiga Emulator (UAE) is a software emulator of the Amiga platform that runs on Unix machines.\n
-* Its purpose is to reproduce the hardware of the original system, so that software written for the emulated
-* machine "does not notice" the difference between the real and the virtual machine created by the emulator,
-* and then "turns" just like on the original system.
-* \subsection AmigaDOS AmigaDOS Beer: a brief "story" of Amiga.
-* The company has gone out of business, but their recipe has been
-* picked up by some weird German company, so now this beer will be an import. This
-* beer never really sold very well because the original manufacturer didn’t understand
-* marketing. Like Unix Beer, AmigaDOS Beer fans are an extremely loyal and loud
-* group. It originally came in a 16-oz. can, but now comes in 32-oz. cans too. When
-* this can was originally introduced, it appeared flashy and colorful, but the design hasn’t
-* changed much over the years, so it appears dated now. Critics of this beer claim that it
-* is only meant for watching TV anyway. */
-
 /*! \mainpage A Gui designed to simplify the creation of Amiga configuration file
 * \section FS-UAE FS-UAE README
 * FS-UAE is an Amiga emulator for Windows, Linux and Mac OS X based on UAE/WinUAE, with a focus on emulating games.\n
-* Features include emulation of Amiga 500, 1200, 4000, CD32 and CDTV, perfectly smooth scrolling on 50Hz displays, support for floppy images in
-* ADF and IPF formats, CD-ROM images in ISO or BIN/CUE format, mounting folders on your computer as Amiga hard drives, support for Picasso 96 drivers for
-* high-color and high-resolution Workbench displays, and more! * A unique feature is support for cross-platform online play. You can now play Amiga games against (or with) friends over the Internet.\n
-* The emulator uses the latest Amiga emulation code from the WinUAE project and requires a moderately fast computer with accelerated graphics (OpenGL)
-* to work. A game pad or joystick is recommended, but not required (FS-UAE can emulate a joystick using the cursor keys and right ctrl/alt keys).\n
+* Features include emulation of Amiga 500, 1200, 4000, CD32 and CDTV, perfectly smooth scrolling on 50Hz displays, support \n
+* for floppy images in ADF and IPF formats, CD-ROM images in ISO or BIN/CUE format, mounting folders on your computer as \n
+* Amiga hard drives, support for Picasso 96 drivers for high-color and high-resolution Workbench displays, and more! A unique\n
+* feature is support for cross-platform online play. You can now play Amiga games against (or with) friends over the Internet.\n
+* The emulator uses the latest Amiga emulation code from the WinUAE project and requires a moderately fast computer with\n
+* accelerated graphics (OpenGL) to work. A game pad or joystick is recommended, but not required (FS-UAE can emulate a joystick\n
+* using the cursor keys and right ctrl/alt keys).\n
 * The official home page of FS-UAE is:\n
 * http://fengestad.no/fs-uae/\n
 * The complete README can be found here:\n
 * http://fengestad.no/fs-uae/README\n
 * \section FS-UAEGUI Why a Gui?
-* FS-UAE does not include a configuration UI, so you must create a configuration file before the emulator will be usable.
-* This application can help you to create a new configuration file or modify an existent one and launch the emulator for you.\n\n
+* FS-UAE does not include a configuration UI, so you must create a configuration file before the emulator will be usable.\n
+* This application can help you to create a new configuration file and launch the emulator for you.\n
+* When you start the application all the parameters are set to the default values. You can create your own configuration file\n
+* or load an existing one. Finally you can launch directly FS-UAE. The application can control the consistency of the configuration\n
+* and correct it before launching FS-UAE (for example it checks that you have not load a CD-ROM iso image if the model you have\n
+* selected has not a CD player!).\n
 * The application is divided in 9 different configuration area:\n-Chipset\n-Floppy\n-CD-ROM\n-HD\n-Input Devices\n-Input Map\n-Graphics\n-Theme\n-Misc\n
 */
 
