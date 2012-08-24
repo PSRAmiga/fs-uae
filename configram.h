@@ -5,33 +5,66 @@
 #include <string>
 using namespace std;
 ///  This class is responsible for the Ram Configuration management.
-/** The default value of each type of ram depends on the selected Amiga model. */
+/** In this class are stored all the variables for RAM configuration.\n
+* You can set chip memory, slow memory, fast memory and zorro III memory.\n
+* The default value of each type of ram depends on the selected Amiga model. */
 class ConfigRam
 {
-    string chip_memory;                 ///< Override amount of chip memory, specified in KB. Must be a multiple of 512.
-    string slow_memory;                 ///< Override the amount of “slow” memory, specified in KB. Must be a multiple of 256.
-    string fast_memory;                 ///< Override the amount of Zorro II Fast memory, specified in KB. Must be a multiple of 1024.
-    string zorro_iii_memory;            ///< Override the amount of Zorro III Fast memory, specified in KB. Must be a multiple of 1024.\n Requires a processor with 32­bit address bus, (use for example the A1200/020 model).
+    string chip_memory;                 ///< Chip memory in KB (Must be a multiple of 512)
+    string slow_memory;                 ///< Slow memory in KB (Must be a multiple of 256)
+    string fast_memory;                 ///< Fast memory in KB (Must be a multiple of 1024)
+    string zorro_iii_memory;            ///< Zorro III Fast memory in KB (Must be a multiple of 1024 and Requires a processor with 32­bit address bus (for example the A1200/020 model).
 
 
 public:
-    ConfigRam();
+    ConfigRam();///< Creates an empty RAM configuration
 
-    /** If Chip memory is the default value, it returns an empty string.\n chip_memory = 1024 */
-    string getChipMemoryConfigString(); ///< Represents the string of Chip memory to be written in Config File.
-    string getChipMemoryString();       ///< Represent the effective value of Chip memory
-    /** If Slow memory is the default value, it returns an empty string.\n slow_memory = 512 */
-    string getSlowMemoryConfigString(); ///< Represents the string of Slow memory to be written in Config File.
-    string getSlowMemoryString();       ///< Represent the effective value of Slow memory
-    /** If Fast memory is the default value, it returns an empty string.\n fast_memory = 4096*/
-    string getFastMemoryConfigString(); ///< Represents the string of Zorro II Fast memory to be written in Config File.
-    string getFastMemoryString();       ///< Represent the effective value of Zorro II Fast memory
-    /** If Zorro III memory is the default value, it returns an empty string.\n zorro_iii_memory = 65536 */
-    string getZorro3ConfigString();     ///< Represents the string of Zorro III Fast memory to be written in Config File.
-    string getZorro3String();           ///< Represent the effective value of Zorro III Fast memory
+    /** \brief Returns the string of chip memory to be written in Config File.
+          * \return the string to be written in Config File. If Chip memory has the default value (512), it returns an empty string
+          */
+    string getChipMemoryConfigString();
+    /** \brief Returns the chip memory value.
+          * \return the chip memory value.
+          */
+    string getChipMemoryString();
+    /** \brief Returns the string of slow memory to be written in Config File.
+          * \return the string to be written in Config File. If Slow memory has the default value (NONE), it returns an empty string
+          */
+    string getSlowMemoryConfigString();
+    /** \brief Returns the slow memory value.
+          * \return the slow memory value.
+          */
+    string getSlowMemoryString();
+    /** \brief Returns the string of fast memory to be written in Config File.
+          * \return the string to be written in Config File. If Fast memory has the default value (NONE), it returns an empty string
+          */
+    string getFastMemoryConfigString();
+    /** \brief Returns the fast memory value.
+          * \return the fast memory value.
+          */
+    string getFastMemoryString();
+    /** \brief Returns the string of zorro III memory to be written in Config File.
+          * \return the string to be written in Config File. If Zorro III memory has the default value (NONE), it returns an empty string
+          */
+    string getZorro3ConfigString();
+    /** \brief Returns the zorro III memory value.
+          * \return the zorro III memory value.
+          */
+    string getZorro3String();
 
+    /** \brief Set RAM configuration parameter
+          *\param parameter is the name of parameter
+          *\param value is the value to assign to parameter
+          *\return 0 if there aren't error or invalid parameters, -1 otherwise
+          */
     int setParameter(string parameter,string value);
+    /** \brief Set CD-ROM configuration parameter to default values
+          */
     void setToDefaultConfiguration();
+    /** \brief Checks if Ram configuration has a parameter with that name
+          *\param parameterName is the name of parameter to be checked
+          *\return true if a parameter with that name exists
+          */
     bool hasParameter(string parameterName);
 };
 
