@@ -58,10 +58,10 @@ public:
       *\return 0 if there aren't error or invalid parameters, -1 otherwise
       */
     int setParameter(string parameter,string value);
-    /** \brief Set CD-ROM configuration parameter to default values
+    /** \brief Set RAM configuration parameter to default values
       */
     void setToDefaultConfiguration();
-    /** \brief Checks if Ram configuration has a parameter with that name
+    /** \brief Checks if RAM configuration has a parameter with that name
       *\param parameterName is the name of parameter to be checked
       *\return true if a parameter with that name exists
       */

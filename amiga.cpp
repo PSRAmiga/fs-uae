@@ -249,7 +249,7 @@ void Amiga::saveConfigInFile(string fileName){
 
     if (inputConfiguration.getCustomInputMappingSize()>0){
         for(int i=0;i<inputConfiguration.getCustomInputMappingSize();i++){
-            myfile << inputConfiguration.getCustomInputMappingAt(i) << endl;
+            myfile << inputConfiguration.getCustomInputMappingConfigStringAt(i) << endl;
         }
     }
 
@@ -989,7 +989,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     ui->customInputMappingListWidget->clear();
     if (inputConfiguration.getCustomInputMappingSize()>0){
         for(int i=0;i<inputConfiguration.getCustomInputMappingSize();i++){
-            ui->customInputMappingListWidget->addItem(QString::fromStdString(inputConfiguration.getCustomInputMappingAt(i)));
+            ui->customInputMappingListWidget->addItem(QString::fromStdString(inputConfiguration.getCustomInputMappingConfigStringAt(i)));
         }
     }
 

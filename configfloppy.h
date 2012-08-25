@@ -67,16 +67,16 @@ public:
       */
     void eraseFloppyImageAt(int position);
 
-    /** \brief Set Floppy configuration parameter
+    /** \brief Set FLOPPY configuration parameter
       *\param parameter is the name of parameter
       *\param value is the value to assign to parameter
       *\return 0 if there aren't error or invalid parameters, -1 otherwise
       */
     int setParameter(string parameter,string value);
-    /** \brief Set Floppy configuration parameter to default values
+    /** \brief Set FLOPPY configuration parameter to default values
       */
     void setToDefaultConfiguration();
-    /** \brief Checks if Chipset configuration has a parameter with that name
+    /** \brief Checks if FLOPPY configuration has a parameter with that name
       *\param parameterName is the name of parameter to be checked
       *\return true if a parameter with that name exists
       */

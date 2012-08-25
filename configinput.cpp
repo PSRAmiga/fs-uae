@@ -264,7 +264,7 @@ int ConfigInput::getCustomInputMappingSize()
     return custom_input_mapping_inserted_keys.size();
 }
 
-string ConfigInput::getCustomInputMappingAt(int position)
+string ConfigInput::getCustomInputMappingConfigStringAt(int position)
 {
     if (position>=(int)custom_input_mapping_inserted_keys.size()){return "";}
     return custom_input_mapping_inserted_keys.at(position)+" = "+custom_input_mapping_inserted_actions.at(position);

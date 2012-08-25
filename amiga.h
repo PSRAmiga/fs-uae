@@ -19,6 +19,7 @@
 * or load an existing one. Finally you can launch directly FS-UAE. The application can control the consistency of the configuration\n
 * and correct it before launching FS-UAE (for example it checks that you have not load a CD-ROM iso image if the model you have\n
 * selected has not a CD player!).\n
+* If you have more than one device of the same model, this application can also automatically number joystick to distinguish them.\n
 * The application is divided in 9 different configuration area:\n-Chipset\n-Floppy\n-CD-ROM\n-HD\n-Input Devices\n-Input Map\n-Graphics\n-Theme\n-Misc\n
 */
 

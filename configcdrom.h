@@ -31,16 +31,16 @@ public:
       * \return the size of List of CD-ROM images.
       */
     int getCDRomImageSize();
-    /** \brief Returns the CD-ROM image path at position
+    /** \brief Returns the CD-ROM image path at the specified position
       *\param position of image to be returned
-      * \return the CD-ROM image path at position.
+      * \return the CD-ROM image path at the specified position.
       */
     string getCDRomImageAt(int position);
     /** \brief Add a CD-ROM image at the end of the list
       *\param s is the CD-ROM image to be added
       */
     void pushBackCDRomImage(string s);
-    /** \brief Delete the CD-ROM image path at position
+    /** \brief Delete the CD-ROM image path at the specified position
       *\param position of the image to be removed
       */
     void eraseCDRomImageAt(int position);
