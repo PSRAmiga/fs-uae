@@ -20,51 +20,51 @@ public:
     ConfigRam();///< Creates an empty RAM configuration
 
     /** \brief Returns the string of chip memory to be written in Config File.
-          * \return the string to be written in Config File. If Chip memory has the default value (512), it returns an empty string
-          */
+      * \return the string to be written in Config File. If Chip memory has the default value (512), it returns an empty string
+      */
     string getChipMemoryConfigString();
     /** \brief Returns the chip memory value.
-          * \return the chip memory value.
-          */
+      * \return the chip memory value.
+      */
     string getChipMemoryString();
     /** \brief Returns the string of slow memory to be written in Config File.
-          * \return the string to be written in Config File. If Slow memory has the default value (NONE), it returns an empty string
-          */
+      * \return the string to be written in Config File. If Slow memory has the default value (NONE), it returns an empty string
+      */
     string getSlowMemoryConfigString();
     /** \brief Returns the slow memory value.
-          * \return the slow memory value.
-          */
+      * \return the slow memory value.
+      */
     string getSlowMemoryString();
     /** \brief Returns the string of fast memory to be written in Config File.
-          * \return the string to be written in Config File. If Fast memory has the default value (NONE), it returns an empty string
-          */
+      * \return the string to be written in Config File. If Fast memory has the default value (NONE), it returns an empty string
+      */
     string getFastMemoryConfigString();
     /** \brief Returns the fast memory value.
-          * \return the fast memory value.
-          */
+      * \return the fast memory value.
+      */
     string getFastMemoryString();
     /** \brief Returns the string of zorro III memory to be written in Config File.
-          * \return the string to be written in Config File. If Zorro III memory has the default value (NONE), it returns an empty string
-          */
+      * \return the string to be written in Config File. If Zorro III memory has the default value (NONE), it returns an empty string
+      */
     string getZorro3ConfigString();
     /** \brief Returns the zorro III memory value.
-          * \return the zorro III memory value.
-          */
+      * \return the zorro III memory value.
+      */
     string getZorro3String();
 
     /** \brief Set RAM configuration parameter
-          *\param parameter is the name of parameter
-          *\param value is the value to assign to parameter
-          *\return 0 if there aren't error or invalid parameters, -1 otherwise
-          */
+      *\param parameter is the name of parameter
+      *\param value is the value to assign to parameter
+      *\return 0 if there aren't error or invalid parameters, -1 otherwise
+      */
     int setParameter(string parameter,string value);
     /** \brief Set CD-ROM configuration parameter to default values
-          */
+      */
     void setToDefaultConfiguration();
     /** \brief Checks if Ram configuration has a parameter with that name
-          *\param parameterName is the name of parameter to be checked
-          *\return true if a parameter with that name exists
-          */
+      *\param parameterName is the name of parameter to be checked
+      *\return true if a parameter with that name exists
+      */
     bool hasParameter(string parameterName);
 };
 

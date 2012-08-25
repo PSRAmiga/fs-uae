@@ -19,66 +19,67 @@ class ConfigChipset
     string amiga_model;          ///< Amiga model you want to emulate.
     string kickstart_file;       ///< Path of kickstart file.
     string kickstart_ext_file;   ///< Path of extended kickstart ROM (for CD32, ...).
-    string accuracy;             ///< Sccuracy of the emulation
+    string accuracy;             ///< Accuracy of the emulation
     string ntsc_mode;            ///< Video mode of the emulation (NTSC/PAL)
 
 
 public:
     ConfigChipset(); ///< Creates an empty CHIPSET configuration
-    /** \brief Returns the string of accuracy to be written in Config File.
-          * \return the string to be written in Config File. If Accuracy has the default value (1), it returns an empty string
-          */
+
+    /** \brief Returns the Accuracy setting to be written in Config File.
+     * \return the string to be written in Config File. If Accuracy has the default value (1), it returns an empty string
+     */
     string getAccuracyConfigString();
-    /** \brief Returns the accuracy value.
-          * \return the accuracy value.
-          */
+    /** \brief Returns the Accuracy value.
+      * \return the Accuracy value.
+      */
     string getAccuracyString();
-    /** \brief Returns the string of video mode to be written in Config File.
-          * \return the string to be written in Config File. If Video Mode has the default value (0), it returns an empty string
-          */
+    /** \brief Returns the Video mode setting to be written in Config File.
+      * \return the string to be written in Config File. If Video Mode has the default value (0), it returns an empty string
+      */
     string getNTSCModeConfigString();
-    /** \brief Returns the video mode value.
-          * \return the video mode value.
-          */
+    /** \brief Returns the Video mode value.
+      * \return the Video mode value.
+      */
     string getNTSCModeString();
-    /** \brief Returns the string of amiga model to be written in Config File.
-          * \return the string to be written in Config File. If amiga model has the default value (A500), it returns an empty string
-          */
+    /** \brief Returns the Amiga model string to be written in Config File.
+      * \return the string to be written in Config File. If Amiga model has the default value (A500), it returns an empty string
+      */
     string getAmigaModelConfigString();
-    /** \brief Returns the amiga model value.
-          * \return the amiga model value.
-          */
+    /** \brief Returns the Amiga model value.
+      * \return the Amiga model value.
+      */
     string getAmigaModelString();
     /** \brief Returns the string of kickstart file to be written in Config File.
-          * \return the string to be written in Config File.
-          */
+      * \return the string to be written in Config File.
+      */
     string getKickstartFileConfigString();
     /** \brief Returns the kickstart file value.
-          * \return the kickstart file value.
-          */
+      * \return the kickstart file value.
+      */
     string getKickstartFileString();
     /** \brief Returns the string of extended kickstart file to be written in Config File.
-          * \return the string to be written in Config File.
-          */
+      * \return the string to be written in Config File.
+      */
     string getKickstartExtFileConfigString();
     /** \brief Returns the extended kickstart file value.
-          * \return the extended kickstart file value.
-          */
+      * \return the extended kickstart file value.
+      */
     string getKickstartExtFileString();
 
     /** \brief Set Chipset configuration parameter
-          *\param parameter is the name of parameter
-          *\param value is the value to assign to parameter
-          *\return 0 if there aren't error or invalid parameters, -1 otherwise
-          */
+      *\param parameter is the name of parameter
+      *\param value is the value to assign to parameter
+      *\return 0 if there aren't error or invalid parameters, -1 otherwise
+      */
     int setParameter(string parameter,string value);
     /** \brief Set Chipset configuration parameter to default values
-          */
+      */
     void setToDefaultConfiguration();
     /** \brief Checks if Chipset configuration has a parameter with that name
-          *\param parameterName is the name of parameter to be checked
-          *\return true if a parameter with that name exists
-          */
+      *\param parameterName is the name of parameter to be checked
+      *\return true if a parameter with that name exists
+      */
     bool hasParameter(string parameterName);
 };
 
