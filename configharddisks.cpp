@@ -28,6 +28,10 @@ ConfigHardDisks::ConfigHardDisks()
     setToDefaultConfiguration();
 }
 
+/** \brief Convert a int into a string
+      * \param n is the number to be converted
+      * \return n as string
+      */
 string static intToStr(int n){
     return static_cast<ostringstream*>( &(ostringstream() << n) )->str();
 }

@@ -49,9 +49,6 @@ const string DEFAULTVIDEOSYNCMETHOD = "finish-swap-finish";
 const string DEFAULTVIDEOFORMAT = "bgra";
 const string DEFAULTTEXTUREFORMAT = "rgb";
 
-//const string DEFAULTVIEWPORT = "* * * * => * * * *";
-
-
 ConfigGraphics::ConfigGraphics()
 {
     setToDefaultConfiguration();
