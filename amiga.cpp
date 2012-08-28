@@ -25,10 +25,7 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QColorDialog>
-#include <cstdlib>
-
 #include <QKeyEvent>
-
 #include <QApplication>
 #include <QDesktopWidget>
 #include <sys/stat.h>
@@ -43,23 +40,6 @@ void static showAlert(string message){
     msg.exec();
 }
 
-/**
-  * Check if FS-UAE folder exists
-  */
-void static checkFoldersExistence(){
-    char *username=getenv("USER");
-    struct stat st;
-    string italianFolder="/home/"+string(username)+"/Documenti/FS-UAE";     //per testare il msg d'errore scrivere Documenti con la D minuscola
-    string englishFolder="/home/"+string(username)+"/Documents/FS-UAE";
-    if ((stat(italianFolder.c_str(),&st) != 0)&&(stat(englishFolder.c_str(),&st) != 0)){
-        showAlert("FS-UAE folders not found. You must start FS-UAE for the first time to create FS-UAE folders. FS-UAE wil be now launched.\nPress F12 to enter menu, then navigate to the X button in the top right corner with the cursor keys and finally press Return to quit FS-UAE.");
-        int returnValue=system("fs-uae"); //per testare il msg d'errore fare system("fs-uaeeee")
-        if (returnValue!=0){
-            showAlert("FS-UAE is not installed in your system, please install it and relaunch this application.");
-            exit(0);
-        }
-    }
-}
 
 Amiga::Amiga(QWidget *parent) :
     QMainWindow(parent),
@@ -68,9 +48,7 @@ Amiga::Amiga(QWidget *parent) :
     ui->setupUi(this);
 
     //things to do onLoad
-
     checkFoldersExistence();
-
     loadDefaultValues();
 
     ui->mainTabWidget->setCurrentIndex(0);
@@ -103,48 +81,64 @@ Amiga::~Amiga()
       * \param s is the string to be converted
       * \return s as integer
       */
-int strToInt(string s){
+int static strToInt(string s){
     istringstream buffer(s);
     int intValue;
     buffer >> intValue;
     return intValue;
 }
 /** \brief Convert a string to a float
-      * \param line is the string to be converted
+      * \param s is the string to be converted
       * \return s as float
       */
-float strToFloat(string line){
-    float valor;
-    stringstream stream(line);
-    stream >> valor;
-    return valor;
+float static strToFloat(string s){
+    float floatValue;
+    stringstream stream(s);
+    stream >> floatValue;
+    return floatValue;
 }
 /** \brief Convert a int into a string
       * \param n is the number to be converted
       * \return n as string
       */
-string intToStr(int n){
+string static intToStr(int n){
     return static_cast<ostringstream*>( &(ostringstream() << n) )->str();
 }
 
-/////////////////////////////////////////////////////////////////////
 /** \brief Checks if s is an empty string
       * \param s is the string to be checked
       * \return true if s is an empty string
       */
-bool isEmptyString(string s){
+bool static isEmptyString(string s){
     //NB compare ritorna 0 se è la comparazione è vera, è il contrario!
     return (s.compare("")==0);
 }
 
-void Amiga::saveConfigInFile(string fileName){
-    //TODO devo controllare gli errore sulla scrittura/lettura /////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+void Amiga::checkFoldersExistence(){
+    char *username=getenv("USER");
+    struct stat st;
+    string italianFolder="/home/"+string(username)+"/Documenti/FS-UAE";
+    string englishFolder="/home/"+string(username)+"/Documents/FS-UAE";
+    if ((stat(italianFolder.c_str(),&st)!=0)&&(stat(englishFolder.c_str(),&st)!=0)){
+        showAlert("FS-UAE folders not found. You must start FS-UAE for the first time to create FS-UAE folders. FS-UAE wil be now launched.\n"
+                  "Press F12 to enter menu, then navigate to the X button in the top right corner with the cursor keys and finally press Return to quit FS-UAE.");
+        int returnValue=system("fs-uae");
+        if (returnValue!=0){
+            showAlert("FS-UAE is not installed in your system, please install it and relaunch this application.");
+            ui->runConfigButton->setDisabled(true);
+        }
+    }
+}
+
+void Amiga::saveConfigInFile(string fileName){
     ofstream myfile;
     myfile.open(fileName.c_str(),ios::out);
 
     myfile << "[config]" <<endl;
 
+    ///getXXXString() returns an empty string if XXX value has remained to the default value
     if (!isEmptyString(chipsetConfiguration.getAccuracyConfigString())) {myfile << chipsetConfiguration.getAccuracyConfigString() << endl;}
     if (!isEmptyString(chipsetConfiguration.getNTSCModeConfigString())) {myfile << chipsetConfiguration.getNTSCModeConfigString() << endl;}
     if (!isEmptyString(chipsetConfiguration.getAmigaModelConfigString())) {myfile << chipsetConfiguration.getAmigaModelConfigString() << endl;}
@@ -270,14 +264,14 @@ void Amiga::on_saveConfigToolButton_clicked()
     QString fileName=QFileDialog::getSaveFileName(this, tr("Save file as"), QDir::homePath(), tr("Config file *.fs-uae (*.fs-uae)"));
     if (fileName.compare("")==0) {return; }
 
-    //fare check sull'estensione
+    //file extension check
     string fileNameString;
-
     if(fileName.contains(".fs-uae", Qt::CaseInsensitive)) {fileNameString=fileName.toStdString();}
     else {fileNameString=fileName.toStdString()+".fs-uae";}
 
-    checkConfigurationConsistency();// --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+    checkConfigurationConsistency();
 
+    //after consistency check something could have been changed
     updateGraphicsFromInternalConfiguration();
 
     saveConfigInFile(fileNameString);
@@ -285,16 +279,14 @@ void Amiga::on_saveConfigToolButton_clicked()
 
 void Amiga::parseLine(string line){
     if (line.length()<=1) return;
-    //fs-uae config file convention is "name = value"
 
-    //int separatorPosition=line.find_first_of(" = ");
+    //FS-UAE config file convention is "name = value"
     int separatorPosition=line.find(" = ");
     string parameterName=line.substr(0,separatorPosition);
     string parameterValue=line.substr(separatorPosition+3,line.length()-1);
 
-    //bisogna capire in quale area di configurazione indirizzarlo
-    //NB se non trovo nessun parametro con quel nome significa che il parametro non esiste
-    //MA se invece il parametro esiste ma non ha un valore valido se ne preoccupa l'area di configurazione
+    //I have to find in which configuration area the parameter is.
+    //A parameter can not exist or can have an invalid valid value.
 
     if (chipsetConfiguration.hasParameter(parameterName)){
         if (chipsetConfiguration.setParameter(parameterName,parameterValue)==-1){
@@ -600,8 +592,10 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
 
     //FLOPPY DRIVE VOLUME
     string floppy_drive_volume=floppyConfiguration.getFloppyDriveVolumeString();
+
     ui->floppyDriveVolumeDisplayLabel->setText(QString::fromStdString(floppy_drive_volume));
     ui->floppyDriveVolumeSlider->setValue(strToInt(floppy_drive_volume));
+    ui->floppyDriveVolumeSlider->setEnabled(true);
 
     //FLOPPY DRIVE SPEED
     //0<floppy_drive_speed<1200
@@ -1349,8 +1343,8 @@ void Amiga::on_actionAmiga_triggered()
 
 void Amiga::on_actionSummary_triggered()
 {
-    /////verificare che esista il file altrimenti informare l'utnete che non trova la documentazione!!!!!!!!!!!!!
-    QString docPath = "file://"+QDir::currentPath()+"/man/html/index.html";
+    char *username=getenv("USER");
+    QString docPath = QString::fromStdString("file:///home/"+string(username)+"/.FS-UAE/Man/index.html");
     QDesktopServices::openUrl(QUrl(docPath, QUrl::TolerantMode));
 }
 

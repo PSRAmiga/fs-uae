@@ -60,19 +60,19 @@ public:
     ~Amiga();                            ///< Destroy the GUI,
 
 private slots:
-    void on_saveConfigToolButton_clicked(); ///< Save current configuration.
-    void on_loadConfigToolButton_clicked(); ///< Load an existing configuration.
+    void on_saveConfigToolButton_clicked();         ///< Save current configuration.
+    void on_loadConfigToolButton_clicked();         ///< Load an existing configuration.
     void on_loadDefaultValuesToolButton_clicked();  ///< Reset configuration to the default values.
-    void on_runConfigButton_clicked();  ///< Run FS-UAE with current configuration.
+    void on_runConfigButton_clicked();              ///< Run FS-UAE with current configuration.
 
-    void on_actionAmiga_triggered();    ///< Help menu: what's Amiga?
-    void on_actionSummary_triggered();  ///< Help menu: a brief summary.
+    void on_actionAmiga_triggered();        ///< Help menu: what's Amiga?
+    void on_actionSummary_triggered();      ///< Help menu: a brief summary.
     void on_actionReport_bug_triggered();   ///< Help menu: open an email browser to report bug.
 
-    void on_kickstartFileToolButton_clicked(); ///< Select Kickstart file.
-    void on_kickstartExtFileToolButton_clicked(); ///< Select Extended Kickstart file.
+    void on_kickstartFileToolButton_clicked();                              ///< Select Kickstart file.
+    void on_kickstartExtFileToolButton_clicked();                           ///< Select Extended Kickstart file.
     void on_amigaModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select Amiga model.
-    void on_accuracyLeastRadio_clicked();   ///< Switch to least accuracy.
+    void on_accuracyLeastRadio_clicked();    ///< Switch to least accuracy.
     void on_accuracyNormalRadio_clicked();  ///< Switch to normal accuracy.
     void on_accuracyMostadio_clicked();     ///< Switch to most accuracy.
     void on_videoModePALRadio_clicked();    ///< Switch to PAL video mode.
@@ -138,68 +138,68 @@ private slots:
     void on_hardDrive9ToolButton_clicked();///< Load Hard Disk file in Drive 9.
     void on_hardDrive9FolderToolButton_clicked();///< Load Hard Disk Folder in Drive 9.
 
-    void on_hardDrive0LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 0.
-    void on_hardDrive1LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 1.
-    void on_hardDrive2LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 2.
-    void on_hardDrive3LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 3.
-    void on_hardDrive4LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 4.
-    void on_hardDrive5LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 5.
-    void on_hardDrive6LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 6.
-    void on_hardDrive7LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 7.
-    void on_hardDrive8LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 8.
-    void on_hardDrive9LabelLineEdit_textChanged(const QString &arg1);///< Change label of Hard Disk stored in Drive 9.
+    void on_hardDrive0LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 0.
+    void on_hardDrive1LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 1.
+    void on_hardDrive2LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 2.
+    void on_hardDrive3LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 3.
+    void on_hardDrive4LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 4.
+    void on_hardDrive5LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 5.
+    void on_hardDrive6LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 6.
+    void on_hardDrive7LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 7.
+    void on_hardDrive8LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 8.
+    void on_hardDrive9LabelLineEdit_textChanged(const QString &arg1);       ///< Change label of Hard Disk stored in Drive 9.
 
-    void on_hardDrive0ReadOnlyCheckBox_clicked();///< Set/unset hard drive 0 as Read Only.
-    void on_hardDrive1ReadOnlyCheckBox_clicked();///< Set/unset hard drive 1 as Read Only.
-    void on_hardDrive2ReadOnlyCheckBox_clicked();///< Set/unset hard drive 2 as Read Only.
-    void on_hardDrive3ReadOnlyCheckBox_clicked();///< Set/unset hard drive 3 as Read Only.
-    void on_hardDrive4ReadOnlyCheckBox_clicked();///< Set/unset hard drive 4 as Read Only.
-    void on_hardDrive5ReadOnlyCheckBox_clicked();///< Set/unset hard drive 5 as Read Only.
-    void on_hardDrive6ReadOnlyCheckBox_clicked();///< Set/unset hard drive 6 as Read Only.
-    void on_hardDrive7ReadOnlyCheckBox_clicked();///< Set/unset hard drive 7 as Read Only.
-    void on_hardDrive8ReadOnlyCheckBox_clicked();///< Set/unset hard drive 8 as Read Only.
-    void on_hardDrive9ReadOnlyCheckBox_clicked();///< Set/unset hard drive 9 as Read Only.
+    void on_hardDrive0ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 0 as Read Only.
+    void on_hardDrive1ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 1 as Read Only.
+    void on_hardDrive2ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 2 as Read Only.
+    void on_hardDrive3ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 3 as Read Only.
+    void on_hardDrive4ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 4 as Read Only.
+    void on_hardDrive5ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 5 as Read Only.
+    void on_hardDrive6ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 6 as Read Only.
+    void on_hardDrive7ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 7 as Read Only.
+    void on_hardDrive8ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 8 as Read Only.
+    void on_hardDrive9ReadOnlyCheckBox_clicked();       ///< Set/unset hard drive 9 as Read Only.
 
-    void on_displaySettingsStartFullscreenRadioButton_clicked();    ///< Enable/disable emulation start in fulscreen mode.
-    void on_displaySettingsResizableRadioButton_clicked();///< Enable/disable the resizing of emulation window.
-    void on_displaySettingsKeepAspectRatioRadioButton_clicked();///< Enable/disable keep aspect ratio.
-    void on_scanlinesRadioButton_clicked();///< Enable/disable scanlines.
-    void on_scanlinesRTGRadioButton_clicked();///< Enable/disable RTG scanlines.
-    void on_lowResolutionRadioButton_clicked();///< Enable/disable emulation start with low resolution.
-    void on_lineDoublingRadioButton_clicked();///< Enable/disable line doubling.
-    void on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1);///< Change X-resolution in fullscreen mode.
-    void on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1);///< Change Y-resolution in fullscreen mode.
-    void on_windowResolutionXSpinBox_valueChanged(const QString &arg1);///< Change X-resolution in window mode.
-    void on_windowResolutionYSpinBox_valueChanged(const QString &arg1);///< Change Y-resolution in window mode.
-    void on_scaleXDoubleSpinBox_valueChanged(const QString &arg1);///< Change X-scale.
-    void on_scaleYDoubleSpinBox_valueChanged(const QString &arg1);///< Change Y-scale.
-    void on_alignXdoubleSpinBox_valueChanged(const QString &arg1);///< Change X-alignment.
-    void on_alignYDoubleSpinBox_valueChanged(const QString &arg1);///< Change Y-alignment.
-    void on_scanlinesDarkHorizontalSlider_valueChanged(int position);///< Change scanlines dark.
-    void on_scanlinesLightHorizontalSlider_valueChanged(int position);///< Change scanline light.
-    void on_fullSceneAntiAliasingOffRadioButton_clicked();///< Disable fullScene anti-aliasing mode.
-    void on_fullSceneAntiAliasing2xRadioButton_clicked();///< Enable 2x fullScene anti-aliasing mode.
-    void on_fullSceneAntiAliasing4xRadioButton_clicked();///< Enable 4x fullScene anti-aliasing mode.
-    void on_fullSceneAntiAliasing8xRadioButton_clicked();///< Enable 8x fullScene anti-aliasing mode.
-    void on_textureFilterLinearRadioButton_clicked();///< Apply a linear filter on the texture.
-    void on_textureFilterNearestRadioButton_clicked();///< Apply a nearest filter on the texture.
-    void on_f11InitalModeAutoRadioButton_clicked();///< Set F11 initial mode ti automatic.
-    void on_f11InitalModeFullRadioButton_clicked();///< Set F11 initial mode ti fullscreen.
-    void on_f11InitalMode640x400RadioButton_clicked();///< Set F11 initial mode ti 640x400 px.
-    void on_f11InitalMode640x480RadioButton_clicked();///< Set F11 initial mode ti 640x480 px.
-    void on_f11InitalMode640x512RadioButton_clicked();///< Set F11 initial mode ti 640x512 px.
-    void on_f11InitialModeWithBorderCheckBox_clicked();///< Enable/disable border in F11 initial mode.
-    void on_videoFormatBGRARadioButton_clicked();///< Set BRGA video format.
-    void on_videoFormatRGBARadioButton_clicked();///< Set RBGA video format.
-    void on_textureFormatModeRGBRadioButton_clicked();///< Set RGB video texture.
-    void on_textureFormatModeRGB8RadioButton_clicked();///< Set RGB8 video texture.
-    void on_textureFormatModeRGBARadioButton_clicked();///< Sett RGBA video texture.
-    void on_textureFormatModeRGBA8RadioButton_clicked();///< Set RGBA8 video texture.
-    void on_shaderComboBox_currentIndexChanged(const QString &arg1);///< Select shader type.
-    void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);///< Select video syncronization.
-    void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);///< Select video syncronization method.
-    void on_themeAddViewportPushButton_clicked();       ///< Add a new viewport
-    void on_themeRemoveViewportPushButton_clicked();    ///< Remove a viewport
+    void on_displaySettingsStartFullscreenRadioButton_clicked();                ///< Enable/disable emulation start in fulscreen mode.
+    void on_displaySettingsResizableRadioButton_clicked();                      ///< Enable/disable the resizing of emulation window.
+    void on_displaySettingsKeepAspectRatioRadioButton_clicked();                ///< Enable/disable keep aspect ratio.
+    void on_scanlinesRadioButton_clicked();                                     ///< Enable/disable scanlines.
+    void on_scanlinesRTGRadioButton_clicked();                                  ///< Enable/disable RTG scanlines.
+    void on_lowResolutionRadioButton_clicked();                                 ///< Enable/disable emulation start with low resolution.
+    void on_lineDoublingRadioButton_clicked();                                  ///< Enable/disable line doubling.
+    void on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1);     ///< Change X-resolution in fullscreen mode.
+    void on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1);     ///< Change Y-resolution in fullscreen mode.
+    void on_windowResolutionXSpinBox_valueChanged(const QString &arg1);         ///< Change X-resolution in window mode.
+    void on_windowResolutionYSpinBox_valueChanged(const QString &arg1);         ///< Change Y-resolution in window mode.
+    void on_scaleXDoubleSpinBox_valueChanged(const QString &arg1);              ///< Change X-scale.
+    void on_scaleYDoubleSpinBox_valueChanged(const QString &arg1);              ///< Change Y-scale.
+    void on_alignXdoubleSpinBox_valueChanged(const QString &arg1);              ///< Change X-alignment.
+    void on_alignYDoubleSpinBox_valueChanged(const QString &arg1);              ///< Change Y-alignment.
+    void on_scanlinesDarkHorizontalSlider_valueChanged(int position);           ///< Change scanlines dark.
+    void on_scanlinesLightHorizontalSlider_valueChanged(int position);          ///< Change scanline light.
+    void on_fullSceneAntiAliasingOffRadioButton_clicked();                      ///< Disable fullScene anti-aliasing mode.
+    void on_fullSceneAntiAliasing2xRadioButton_clicked();                       ///< Enable 2x fullScene anti-aliasing mode.
+    void on_fullSceneAntiAliasing4xRadioButton_clicked();                       ///< Enable 4x fullScene anti-aliasing mode.
+    void on_fullSceneAntiAliasing8xRadioButton_clicked();                       ///< Enable 8x fullScene anti-aliasing mode.
+    void on_textureFilterLinearRadioButton_clicked();                           ///< Apply a linear filter on the texture.
+    void on_textureFilterNearestRadioButton_clicked();                          ///< Apply a nearest filter on the texture.
+    void on_f11InitalModeAutoRadioButton_clicked();                             ///< Set F11 initial mode ti automatic.
+    void on_f11InitalModeFullRadioButton_clicked();                             ///< Set F11 initial mode ti fullscreen.
+    void on_f11InitalMode640x400RadioButton_clicked();                          ///< Set F11 initial mode ti 640x400 px.
+    void on_f11InitalMode640x480RadioButton_clicked();                          ///< Set F11 initial mode ti 640x480 px.
+    void on_f11InitalMode640x512RadioButton_clicked();                          ///< Set F11 initial mode ti 640x512 px.
+    void on_f11InitialModeWithBorderCheckBox_clicked();                         ///< Enable/disable border in F11 initial mode.
+    void on_videoFormatBGRARadioButton_clicked();                               ///< Set BRGA video format.
+    void on_videoFormatRGBARadioButton_clicked();                               ///< Set RBGA video format.
+    void on_textureFormatModeRGBRadioButton_clicked();                          ///< Set RGB video texture.
+    void on_textureFormatModeRGB8RadioButton_clicked();                         ///< Set RGB8 video texture.
+    void on_textureFormatModeRGBARadioButton_clicked();                         ///< Sett RGBA video texture.
+    void on_textureFormatModeRGBA8RadioButton_clicked();                        ///< Set RGBA8 video texture.
+    void on_shaderComboBox_currentIndexChanged(const QString &arg1);            ///< Select shader type.
+    void on_videoSyncComboBox_currentIndexChanged(const QString &arg1);         ///< Select video syncronization.
+    void on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1);  ///< Select video syncronization method.
+    void on_themeAddViewportPushButton_clicked();                               ///< Add a new viewport
+    void on_themeRemoveViewportPushButton_clicked();                            ///< Remove a viewport
 
     void on_alternativeBaseDirPushButton_clicked();                 ///< Select an Alternative Base directory.
     void on_alternativeKickstartDirPushButton_clicked();            ///< Select an Alternative Kickstart directory.
@@ -224,14 +224,14 @@ private slots:
     void on_playerUsernameLineEdit_textChanged(const QString &arg1);///< Set user's Username.
     void on_playerPasswordLineEdit_textChanged(const QString &arg1);///< Set user's password.
 
-    void on_fadeColorPushButton_clicked();          ///< Change the fade color
-    void on_wallColor1PushButton_clicked();         ///< Chaneg the first wall color
-    void on_wallColor2PushButton_clicked();         ///< Change the second wall color
-    void on_floorColor1PushButton_clicked();        ///< Change the first floor color
-    void on_floorColor2PushButton_clicked();        ///< Change the second wall color
-    void on_headColorPushButton_clicked();          ///< Change the head color
-    void on_themeOverlayImagerPushButton_clicked(); ///< Change the theme overlay image
-    void on_themeFolderPushButton_clicked();        ///< Change the theme folder
+    void on_fadeColorPushButton_clicked();                          ///< Change the fade color
+    void on_wallColor1PushButton_clicked();                         ///< Chaneg the first wall color
+    void on_wallColor2PushButton_clicked();                         ///< Change the second wall color
+    void on_floorColor1PushButton_clicked();                        ///< Change the first floor color
+    void on_floorColor2PushButton_clicked();                        ///< Change the second wall color
+    void on_headColorPushButton_clicked();                          ///< Change the head color
+    void on_themeOverlayImagerPushButton_clicked();                 ///< Change the theme overlay image
+    void on_themeFolderPushButton_clicked();                        ///< Change the theme folder
     void on_mouseSpeedLineEdit_textChanged(const QString &arg1);    ///< Change mouse speed
 
     void customJoystick0Slot(QString s);        ///< Custom slot for joystick 0 selection
@@ -241,32 +241,32 @@ private slots:
 
     void on_readKeyPushButton_clicked();        ///< Start reading keyboard
 
-    void on_customInputMappingAddPushButton_clicked();          ///< Add a custom keyboard mapping
-    void on_customInputMappingRemovePushButton_clicked();       ///< Remove a custom keyboard mapping
-    void on_joystickPort0CustomizePushButton_clicked();         ///< Customize joystick on port 0
-    void on_joystickPort1CusomizePushButton_clicked();          ///< Customize joystick on port 1
-    void on_joystickPort2CustomizePushButton_clicked();         ///< Customize joystick on port 2
-    void on_joystickPort3CustomizePushButton_clicked();         ///< Customize joystick on port 3
-    void on_joystickPort0CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 0
-    void on_joystickPort1CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 1
-    void on_joystickPort2CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 2
-    void on_joystickPort3CustomJoystickRadioButton_clicked();   ///< Select a Custom joystick on port 3
-    void on_joystickPort0JoystickRadioButton_clicked();         ///< Select an existing joystick on port 0
-    void on_joystickPort1JoystickRadioButton_clicked();         ///< Select an existing joystick on port 1
-    void on_joystickPort2JoystickRadioButton_clicked();         ///< Select an existing joystick on port 2
-    void on_joystickPort3JoystickRadioButton_clicked();         ///< Select an existing joystick on port 3
-    void on_joystickPort0MouseRadioButton_clicked();            ///< Select a mouse on port 0
-    void on_joystickPort1MouseRadioButton_clicked();            ///< Select a mouse on port 1
-    void on_joystickPort2MouseRadioButton_clicked();            ///< Select a mouse on port 2
-    void on_joystickPort3MouseRadioButton_clicked();            ///< Select a mouse on port 3
-    void on_joystickPort0KeyboardRadioButton_clicked();         ///< Select a keyboard on port 0
-    void on_joystickPort1KeyboardRadioButton_clicked();         ///< Select a keyboard on port 1
-    void on_joystickPort2KeyboardRadioButton_clicked();         ///< Select a keyboard on port 2
-    void on_joystickPort3KeyboardRadioButton_clicked();         ///< Select a keyboard on port 3
-    void on_joystickPort0NothingRadioButton_clicked();          ///< Select nothing on port 0
-    void on_joystickPort1NothingRadioButton_clicked();          ///< Select nothing on port 1
-    void on_joystickPort2NothingRadioButton_clicked();          ///< Select nothing on port 2
-    void on_joystickPort3NothingRadioButton_clicked();          ///< Select nothing on port 3
+    void on_customInputMappingAddPushButton_clicked();                              ///< Add a custom keyboard mapping
+    void on_customInputMappingRemovePushButton_clicked();                           ///< Remove a custom keyboard mapping
+    void on_joystickPort0CustomizePushButton_clicked();                             ///< Customize joystick on port 0
+    void on_joystickPort1CusomizePushButton_clicked();                              ///< Customize joystick on port 1
+    void on_joystickPort2CustomizePushButton_clicked();                             ///< Customize joystick on port 2
+    void on_joystickPort3CustomizePushButton_clicked();                             ///< Customize joystick on port 3
+    void on_joystickPort0CustomJoystickRadioButton_clicked();                       ///< Select a Custom joystick on port 0
+    void on_joystickPort1CustomJoystickRadioButton_clicked();                       ///< Select a Custom joystick on port 1
+    void on_joystickPort2CustomJoystickRadioButton_clicked();                       ///< Select a Custom joystick on port 2
+    void on_joystickPort3CustomJoystickRadioButton_clicked();                       ///< Select a Custom joystick on port 3
+    void on_joystickPort0JoystickRadioButton_clicked();                             ///< Select an existing joystick on port 0
+    void on_joystickPort1JoystickRadioButton_clicked();                             ///< Select an existing joystick on port 1
+    void on_joystickPort2JoystickRadioButton_clicked();                             ///< Select an existing joystick on port 2
+    void on_joystickPort3JoystickRadioButton_clicked();                             ///< Select an existing joystick on port 3
+    void on_joystickPort0MouseRadioButton_clicked();                                ///< Select a mouse on port 0
+    void on_joystickPort1MouseRadioButton_clicked();                                ///< Select a mouse on port 1
+    void on_joystickPort2MouseRadioButton_clicked();                                ///< Select a mouse on port 2
+    void on_joystickPort3MouseRadioButton_clicked();                                ///< Select a mouse on port 3
+    void on_joystickPort0KeyboardRadioButton_clicked();                             ///< Select a keyboard on port 0
+    void on_joystickPort1KeyboardRadioButton_clicked();                             ///< Select a keyboard on port 1
+    void on_joystickPort2KeyboardRadioButton_clicked();                             ///< Select a keyboard on port 2
+    void on_joystickPort3KeyboardRadioButton_clicked();                             ///< Select a keyboard on port 3
+    void on_joystickPort0NothingRadioButton_clicked();                              ///< Select nothing on port 0
+    void on_joystickPort1NothingRadioButton_clicked();                              ///< Select nothing on port 1
+    void on_joystickPort2NothingRadioButton_clicked();                              ///< Select nothing on port 2
+    void on_joystickPort3NothingRadioButton_clicked();                              ///< Select nothing on port 3
     void on_joystickPort0ModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select an existing joystick on port 0
     void on_joystickPort1ModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select an existing joystick on port 1
     void on_joystickPort2ModelComboBox_currentIndexChanged(const QString &arg1);    ///< Select an existing joystick on port 2
@@ -284,6 +284,10 @@ private:
     ConfigTheme themeConfiguration;             ///< Theme configuration
     ConfigMisc miscConfiguration;               ///< Misc configuration
 
+    /**
+      * Check if FS-UAE folder exists
+      */
+    void checkFoldersExistence();
     /** \brief Process a line read from file and store the setting
          * \param line to be processed
          */

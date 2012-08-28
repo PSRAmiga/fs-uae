@@ -354,7 +354,10 @@ void ConfigGraphics::eraseViewportAt(int position)
     viewport.erase(viewport.begin()+ position);
 }
 ////////////////////////////////////////////////////////////////////////////////////////////
-
+/** \brief Checks if s is a number
+      * \param s is the string to be checked
+      * \return true if s is a number
+      */
 bool static isNumber(string s){
     istringstream buffer(s);
     int intValue;
@@ -363,10 +366,13 @@ bool static isNumber(string s){
     if (intValue==0 && s.compare("0")==0) return true;
     return intValue!=0;
 }
-
-bool static isFloat(string line){
+/** \brief Checks if n is a float
+      * \param n is the string to be checked
+      * \return true if n is a number
+      */
+bool static isFloat(string n){
     float valor;
-    stringstream stream(line);
+    stringstream stream(n);
     stream >> valor;
     if (stream.fail()) {
         return false;
@@ -374,6 +380,10 @@ bool static isFloat(string line){
     return true;
 }
 
+/** \brief Convert a string to an integer
+      * \param s is the string to be converted
+      * \return s as integer
+      */
 int static strToInt(string s){
     istringstream buffer(s);
     int intValue;
