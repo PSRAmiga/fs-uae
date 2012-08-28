@@ -37,3 +37,8 @@ FORMS    += amiga.ui
 
 RESOURCES += \
     ICO.qrc
+
+MOC_DIR = Compile
+OBJECTS_DIR = Compile
+UI_DIR = Compile
+RCC_DIR = Compile
