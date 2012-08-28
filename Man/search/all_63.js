@@ -43,5 +43,6 @@ var searchData=
   ['customjoystick0slot',['customJoystick0Slot',['../d1/d60/classAmiga.html#a80bf81e9dc1d774b9432be83cd80a1b1',1,'Amiga']]],
   ['customjoystick1slot',['customJoystick1Slot',['../d1/d60/classAmiga.html#af6b42a66b63ea6fad58eaf29af2dbfcc',1,'Amiga']]],
   ['customjoystick2slot',['customJoystick2Slot',['../d1/d60/classAmiga.html#af464732bdd319d63c8dc738ef12883e7',1,'Amiga']]],
-  ['customjoystick3slot',['customJoystick3Slot',['../d1/d60/classAmiga.html#a11a6c2f56a07306dfcc72a29ac35334f',1,'Amiga']]]
+  ['customjoystick3slot',['customJoystick3Slot',['../d1/d60/classAmiga.html#a11a6c2f56a07306dfcc72a29ac35334f',1,'Amiga']]],
+  ['customjoystickexplanationstring',['customJoystickExplanationString',['../db/d10/amiga_8cpp.html#aab8cee4038908f917261906d88656d95',1,'amiga.cpp']]]
 ];

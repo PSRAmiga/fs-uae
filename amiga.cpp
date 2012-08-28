@@ -1171,7 +1171,7 @@ void Amiga::on_runConfigButton_clicked()
     int returnValue=system("fs-uae .current.fs-uae");
     if (returnValue!=0)
     {
-        QMessageBox::about(this, tr("Error"),tr("Ops...something went wrong :-("));
+        QMessageBox::warning(this, tr("Error"),tr("Ops...something went wrong :-("));
     }
 }
 
@@ -1369,7 +1369,7 @@ void Amiga::on_actionAmiga_triggered()
     window->setLayout(formLayout);
     window->setWindowTitle("About");
     window->setWindowModality(Qt::ApplicationModal);
-    QSize fixedSize(470,290);
+    QSize fixedSize(470,260);
     window->setMinimumSize(fixedSize);
     window->setMaximumSize(fixedSize);
     window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
@@ -2774,7 +2774,7 @@ void Amiga::on_joystickPort0CustomizePushButton_clicked()
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick0Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
-    QSize fixedSize(640,320);
+    QSize fixedSize(640,300);
     window->setMinimumSize(fixedSize);
     window->setMaximumSize(fixedSize);
     window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
@@ -2814,7 +2814,7 @@ void Amiga::on_joystickPort1CusomizePushButton_clicked()
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick1Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
-    QSize fixedSize(640,320);
+    QSize fixedSize(640,300);
     window->setMinimumSize(fixedSize);
     window->setMaximumSize(fixedSize);
     window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
@@ -2854,7 +2854,7 @@ void Amiga::on_joystickPort2CustomizePushButton_clicked()
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick2Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
-    QSize fixedSize(640,320);
+    QSize fixedSize(640,300);
     window->setMinimumSize(fixedSize);
     window->setMaximumSize(fixedSize);
     window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
@@ -2893,7 +2893,7 @@ void Amiga::on_joystickPort3CustomizePushButton_clicked()
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick3Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
-    QSize fixedSize(640,320);
+    QSize fixedSize(640,300);
     window->setMinimumSize(fixedSize);
     window->setMaximumSize(fixedSize);
     window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);

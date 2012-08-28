@@ -8,5 +8,6 @@ var searchData=
   ['chipsetconfiguration',['chipsetConfiguration',['../d1/d60/classAmiga.html#aeb2c3830963c65181abffc55f4cbe73a',1,'Amiga']]],
   ['controllers_5fdir',['controllers_dir',['../da/d33/classConfigMisc.html#ad4ad47fc54ee23bf7891f5e92cff7e6f',1,'ConfigMisc']]],
   ['custom_5finput_5fmapping_5finserted_5factions',['custom_input_mapping_inserted_actions',['../db/d81/classConfigInput.html#a8a171cb1bbde58bffdf56b1301e05629',1,'ConfigInput']]],
-  ['custom_5finput_5fmapping_5finserted_5fkeys',['custom_input_mapping_inserted_keys',['../db/d81/classConfigInput.html#a2baae33b1a25b590cca86201a9d74b92',1,'ConfigInput']]]
+  ['custom_5finput_5fmapping_5finserted_5fkeys',['custom_input_mapping_inserted_keys',['../db/d81/classConfigInput.html#a2baae33b1a25b590cca86201a9d74b92',1,'ConfigInput']]],
+  ['customjoystickexplanationstring',['customJoystickExplanationString',['../db/d10/amiga_8cpp.html#aab8cee4038908f917261906d88656d95',1,'amiga.cpp']]]
 ];
