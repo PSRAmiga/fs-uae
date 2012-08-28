@@ -1351,31 +1351,37 @@ void Amiga::on_z3Mem256MbRadio_clicked()
 
 void Amiga::on_actionAmiga_triggered()
 {
-    ///////////////////////////////////////////////////////////////////// fs4  8 6  8 5 6 8 8/ 6 6 5 94 98 6 3 2 4 7 5 5  /********
     QFormLayout *formLayout = new QFormLayout;
     QLabel *label = new QLabel;
-    label->setText("Insert your Joystick/GamePad name:");
-    QLabel *label2 = new QLabel;
-    label2->setTextFormat(Qt::RichText);
-    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
-    label2->setOpenExternalLinks(true);
-    label2->setText(customJoystickExplanationString);
-    QLineEdit *nameLineEdit = new QLineEdit;
-    QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort0String());
-    if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort0ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
-        nameLineEdit->setText(actualJoystick);}
-    QPushButton *closeButton = new QPushButton("OK");
+    label->setTextFormat(Qt::RichText);
+    label->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
+    label->setOpenExternalLinks(true);
+
+    label->setText("<center><br><font size='14'>FS-UAE Gui for Linux OS  1.0</font><br><br>"
+                   "A Gui designed to simplify the creation of Amiga configuration file.<br><br>"
+                   "Written by Riva Alessandro Mario and Sanvito Davide<br><br>"
+                   "<a href='mailto:alessandromario.riva@gmail.com'>alessandromario.riva@gmail.com</a> - dsanvito90@gmail.com<br><br>"
+                   "(C) 2012 - Please visit <a href='http://fengestad.no/wp/fs-uae/'>http://fengestad.no/wp/fs-uae/</a><br></center>");
+
+    QPushButton *closeButton = new QPushButton("Close");
     QWidget *window = new QWidget;
     formLayout->addRow(label);
-    formLayout->addRow(("Name:"), nameLineEdit);
-    formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
+    window->setWindowTitle("About");
     window->setWindowModality(Qt::ApplicationModal);
-    connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick0Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
     window->show();
 
+    //put dialog in center
+    QWidget *d = QApplication::desktop();
+    int w=d->width();
+    int h=d->height();
+    int mw = window->width();
+    int mh = window->height();
+    int cw = (w/2) - (mw/2);
+    int ch = (h/2) - (mh/2);
+    window->move(cw,ch);
 }
 
 void Amiga::on_actionSummary_triggered()
@@ -2761,10 +2767,20 @@ void Amiga::on_joystickPort0CustomizePushButton_clicked()
     formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
+    window->setWindowTitle("Customize Joystick 0");
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick0Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
     window->show();
+    //put dialog in center
+    QWidget *d = QApplication::desktop();
+    int w=d->width();
+    int h=d->height();
+    int mw = window->width();
+    int mh = window->height();
+    int cw = (w/2) - (mw/2);
+    int ch = (h/2) - (mh/2);
+    window->move(cw,ch);
 }
 void Amiga::on_joystickPort1CusomizePushButton_clicked()
 {
@@ -2787,10 +2803,20 @@ void Amiga::on_joystickPort1CusomizePushButton_clicked()
     formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
+     window->setWindowTitle("Customize Joystick 1");
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick1Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
     window->show();
+    //put dialog in center
+    QWidget *d = QApplication::desktop();
+    int w=d->width();
+    int h=d->height();
+    int mw = window->width();
+    int mh = window->height();
+    int cw = (w/2) - (mw/2);
+    int ch = (h/2) - (mh/2);
+    window->move(cw,ch);
 }
 
 void Amiga::on_joystickPort2CustomizePushButton_clicked()
@@ -2813,10 +2839,20 @@ void Amiga::on_joystickPort2CustomizePushButton_clicked()
     formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
+     window->setWindowTitle("Customize Joystick 2");
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick2Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
     window->show();
+    //put dialog in center
+    QWidget *d = QApplication::desktop();
+    int w=d->width();
+    int h=d->height();
+    int mw = window->width();
+    int mh = window->height();
+    int cw = (w/2) - (mw/2);
+    int ch = (h/2) - (mh/2);
+    window->move(cw,ch);
 }
 void Amiga::on_joystickPort3CustomizePushButton_clicked()
 {
@@ -2838,10 +2874,20 @@ void Amiga::on_joystickPort3CustomizePushButton_clicked()
     formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
+     window->setWindowTitle("Customize Joystick 3");
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick3Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
     window->show();
+    //put dialog in center
+    QWidget *d = QApplication::desktop();
+    int w=d->width();
+    int h=d->height();
+    int mw = window->width();
+    int mh = window->height();
+    int cw = (w/2) - (mw/2);
+    int ch = (h/2) - (mh/2);
+    window->move(cw,ch);
 }
 
 void Amiga::customJoystick0Slot(QString s){
