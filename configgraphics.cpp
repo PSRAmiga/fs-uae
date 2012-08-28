@@ -18,6 +18,7 @@
  and Sanvito Davide, dsanvito90@gmail.com. */
 #include "configgraphics.h"
 #include "amiga.h"
+#include <algorithm>
 #include <sstream>
 using namespace std;
 
