@@ -1171,7 +1171,7 @@ void Amiga::on_runConfigButton_clicked()
     int returnValue=system("fs-uae .current.fs-uae");
     if (returnValue!=0)
     {
-        QMessageBox::warning(this, tr("Error"),tr("Ops...something went wrong :-("));
+        QMessageBox::warning(this, tr("Error"),tr("\nOps...something went wrong"));
     }
 }
 
