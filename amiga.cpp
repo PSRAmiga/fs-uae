@@ -329,6 +329,11 @@ void Amiga::parseLine(string line){
 
 void Amiga::checkConfigurationConsistency()
 {
+    /*
+    NNB la consistenza non si preoccupa della grafica (disabilitazioni varie) ma dello stato interno. va quindi eseguita PRIMA per preparare
+    l'aggiornamento della grafica DALLO stato interno. Viceversa updateGraphics() non tocca lo stato interno però sa cosa abilitare/disabilitare
+    */
+
     string message="Following configuration inconsistencies have been found and resolved:\n\n";
 
     string amiga_model=chipsetConfiguration.getAmigaModelString();
@@ -415,10 +420,6 @@ void Amiga::checkConfigurationConsistency()
         }
     }
 
-    /*
-    NNB la consistenza non si preoccupa della grafica (disabilitazioni varie) ma dello stato interno. va quindi eseguita PRIMA per preparare
-    l'aggiornamento della grafica DALLO stato interno. Viceversa updateGraphics() non tocca lo stato interno però sa cosa abilitare/disabilitare
-    */
 
     if (message.compare("Following configuration inconsistencies have been found and resolved:\n\n")==0){
         return;}
@@ -508,7 +509,6 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     ui->kickstartExtFileLineEdit->setText(QString::fromStdString(kickstart_ext_file));
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
     setFastMemoryDisabled(false);
     //CHIP MEMORY
@@ -622,6 +622,8 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string floppyOccupiedSlotsString=intToStr(floppyConfiguration.getFloppyImageSize());
     ui->floppyOccupiedSlotsDisplayLabel->setText(QString::fromStdString(floppyOccupiedSlotsString+"/20"));
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //CDROM DRIVE
     string cdrom_drive_0=cdromConfiguration.getCDRomDrive0String();
     ui->cdromDrive0LineEdit->setText(QString::fromStdString(cdrom_drive_0));
@@ -636,6 +638,8 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     }
     string cdromOccupiedSlotsString=intToStr(cdromConfiguration.getCDRomImageSize());
     ui->cdromOccupiedSlotsDisplayLabel->setText(QString::fromStdString(cdromOccupiedSlotsString+"/20"));
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //HARD DRIVES
 
@@ -979,6 +983,8 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     ui->headColorPushButton->setText(QString::fromStdString(theme_heading_color));
     ui->headColorPushButton->setStyleSheet(QString("background-color: ").append(theme_heading_color.c_str()));
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //CUSTOM INPUT MAPPING
     ui->customInputMappingListWidget->clear();
     if (inputConfiguration.getCustomInputMappingSize()>0){
@@ -991,8 +997,9 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string joystick_port_0=inputConfiguration.getJoystickPort0String();
     ui->joystickPort0CustomizePushButton->setDisabled(true);
     ui->joystickPort0ModelComboBox->setDisabled(true);
-    if(ui->joystickPort0ModelComboBox->findText(QString::fromStdString(joystick_port_0),Qt::MatchExactly)!=-1){
-        ui->joystickPort0ModelComboBox->setCurrentIndex(ui->joystickPort0ModelComboBox->findText(QString::fromStdString(joystick_port_0),Qt::MatchExactly));
+    QString joystick_0_name=QString::fromStdString(joystick_port_0);
+    if(ui->joystickPort0ModelComboBox->findText(joystick_0_name,Qt::MatchExactly)!=-1){
+        ui->joystickPort0ModelComboBox->setCurrentIndex(ui->joystickPort0ModelComboBox->findText(joystick_0_name,Qt::MatchExactly));
         ui->joystickPort0ModelComboBox->setDisabled(false);
         ui->joystickPort0JoystickRadioButton->setChecked(true);
     } else if(joystick_port_0.compare("mouse")==0){
@@ -1010,8 +1017,9 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string joystick_port_1=inputConfiguration.getJoystickPort1String();
     ui->joystickPort1CusomizePushButton->setDisabled(true);
     ui->joystickPort1ModelComboBox->setDisabled(true);
-    if(ui->joystickPort1ModelComboBox->findText(QString::fromStdString(joystick_port_1),Qt::MatchExactly)!=-1){
-        ui->joystickPort1ModelComboBox->setCurrentIndex(ui->joystickPort1ModelComboBox->findText(QString::fromStdString(joystick_port_1),Qt::MatchExactly));
+    QString joystick_1_name=QString::fromStdString(joystick_port_1);
+    if(ui->joystickPort1ModelComboBox->findText(joystick_1_name,Qt::MatchExactly)!=-1){
+        ui->joystickPort1ModelComboBox->setCurrentIndex(ui->joystickPort1ModelComboBox->findText(joystick_1_name,Qt::MatchExactly));
         ui->joystickPort1ModelComboBox->setDisabled(false);
         ui->joystickPort1JoystickRadioButton->setChecked(true);
     } else if(joystick_port_1.compare("mouse")==0){
@@ -1029,8 +1037,9 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string joystick_port_2=inputConfiguration.getJoystickPort2String();
     ui->joystickPort2CustomizePushButton->setDisabled(true);
     ui->joystickPort2ModelComboBox->setDisabled(true);
-    if(ui->joystickPort2ModelComboBox->findText(QString::fromStdString(joystick_port_2),Qt::MatchExactly)!=-1){
-        ui->joystickPort2ModelComboBox->setCurrentIndex(ui->joystickPort2ModelComboBox->findText(QString::fromStdString(joystick_port_2),Qt::MatchExactly));
+    QString joystick_2_name=QString::fromStdString(joystick_port_2);
+    if(ui->joystickPort2ModelComboBox->findText(joystick_2_name,Qt::MatchExactly)!=-1){
+        ui->joystickPort2ModelComboBox->setCurrentIndex(ui->joystickPort2ModelComboBox->findText(joystick_2_name,Qt::MatchExactly));
         ui->joystickPort2ModelComboBox->setDisabled(false);
         ui->joystickPort2JoystickRadioButton->setChecked(true);
     } else if(joystick_port_2.compare("mouse")==0){
@@ -1048,8 +1057,9 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string joystick_port_3=inputConfiguration.getJoystickPort3String();
     ui->joystickPort3CustomizePushButton->setDisabled(true);
     ui->joystickPort3ModelComboBox->setDisabled(true);
-    if(ui->joystickPort3ModelComboBox->findText(QString::fromStdString(joystick_port_3),Qt::MatchExactly)!=-1){
-        ui->joystickPort3ModelComboBox->setCurrentIndex(ui->joystickPort3ModelComboBox->findText(QString::fromStdString(joystick_port_3),Qt::MatchExactly));
+    QString joystick_3_name=QString::fromStdString(joystick_port_3);
+    if(ui->joystickPort3ModelComboBox->findText(joystick_3_name,Qt::MatchExactly)!=-1){
+        ui->joystickPort3ModelComboBox->setCurrentIndex(ui->joystickPort3ModelComboBox->findText(joystick_3_name,Qt::MatchExactly));
         ui->joystickPort3ModelComboBox->setDisabled(false);
         ui->joystickPort3JoystickRadioButton->setChecked(true);
     } else if(joystick_port_3.compare("mouse")==0){
@@ -1078,13 +1088,19 @@ void Amiga::on_loadConfigToolButton_clicked()
     QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Config file *.fs-uae (*.fs-uae)"));
     if (fileName.compare("")==0) {return; }
 
-    //devo resettare tutte le impostazioni a default perchè nel file i valori di defult non sono esplicitamente salvati
-    //quindi rischierei di vedere i valori dell'ultima config
+    /*I have to load the default values beacuse parameters set to the default values are NOT stored in file, so I would
+    see the values of the old configuration in the parameters set to the default values.
+    For example if you have set a model Amiga 1200 and you load a configuration with Amiga 500 the value of model A500
+    isn't store in the file so if I only load values from file I would still see model 1200!
+
+    In pratica se tu cambi un parametro nella configurazione attuale e carichi un file in cui quel parametro ha il valore
+    di default, quel parametro non è scritto nel file quindi leggendo solo i valori scritti nel file, quel parametro resterebbe
+    settato al valore prima del caricamento (sbagliato!)
+    */
 
     loadDefaultValues();
 
-    //poi leggo riga per riga, aggiorno la configurazione interna e aggiorno i componenti
-
+    //then I have to read line by line, update the internal configuration and update graphics comopnents
     string errorMessage;
     string line;
     ifstream myfile(fileName.toStdString().c_str());
@@ -1093,10 +1109,9 @@ void Amiga::on_loadConfigToolButton_clicked()
         while (myfile.good())
         {
             getline (myfile,line);
-            //int separatorPosition=line.find_first_of(" = ");
             int separatorPosition=line.find(" = ");
             string parameterName=line.substr(0,separatorPosition);
-            if(line.compare("")!=0 && line.compare("[config]")!=0 &&!isExistingParameter(parameterName)){
+            if(line.compare("")!=0 && line.compare("[config]")!=0 && !isExistingParameter(parameterName)){
                 errorMessage.append("-Line \""+line+"\" has an invalid parameter name\n");
             }
             parseLine(line);
@@ -1108,10 +1123,8 @@ void Amiga::on_loadConfigToolButton_clicked()
         showAlert(errorMessage);
     }
 
+    checkConfigurationConsistency();
 
-    checkConfigurationConsistency();// --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
-
-    //lo devo fare per ogni configuration area
     updateGraphicsFromInternalConfiguration();
 }
 
@@ -1150,7 +1163,7 @@ void Amiga::on_loadDefaultValuesToolButton_clicked()
 
 void Amiga::on_runConfigButton_clicked()
 {
-    checkConfigurationConsistency();// --> devo eliminare le configurazioni proibite che potrebbero essere venute fuori dal caricamento di un file manomeso
+    checkConfigurationConsistency();
 
     updateGraphicsFromInternalConfiguration();
 
@@ -1338,7 +1351,31 @@ void Amiga::on_z3Mem256MbRadio_clicked()
 
 void Amiga::on_actionAmiga_triggered()
 {
-    ui->mainTabWidget->setCurrentIndex(8);
+    ///////////////////////////////////////////////////////////////////// fs4  8 6  8 5 6 8 8/ 6 6 5 94 98 6 3 2 4 7 5 5  /********
+    QFormLayout *formLayout = new QFormLayout;
+    QLabel *label = new QLabel;
+    label->setText("Insert your Joystick/GamePad name:");
+    QLabel *label2 = new QLabel;
+    label2->setTextFormat(Qt::RichText);
+    label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
+    label2->setOpenExternalLinks(true);
+    label2->setText(customJoystickExplanationString);
+    QLineEdit *nameLineEdit = new QLineEdit;
+    QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort0String());
+    if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort0ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
+        nameLineEdit->setText(actualJoystick);}
+    QPushButton *closeButton = new QPushButton("OK");
+    QWidget *window = new QWidget;
+    formLayout->addRow(label);
+    formLayout->addRow(("Name:"), nameLineEdit);
+    formLayout->addRow(label2);
+    formLayout->addRow(closeButton);
+    window->setLayout(formLayout);
+    window->setWindowModality(Qt::ApplicationModal);
+    connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick0Slot(QString)));
+    connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    window->show();
+
 }
 
 void Amiga::on_actionSummary_triggered()
@@ -1376,7 +1413,6 @@ void Amiga::on_floppyDrive3ToolButton_clicked()
     floppyConfiguration.setParameter("floppy_drive_3",fileName.toStdString());
 }
 
-
 void Amiga::on_floppySwappingImagesAddPushButton_clicked()
 {
     if (ui->floppySwappingImagesListWidget->count()==20){
@@ -1385,25 +1421,22 @@ void Amiga::on_floppySwappingImagesAddPushButton_clicked()
     QStringList fileNames=QFileDialog::getOpenFileNames(this, tr("Open file"), QDir::homePath(), tr("ADF File(*.adf)"));
 
     if (fileNames.count()==0){
-        //hai premuto annulla
         return;}
 
-    if (fileNames.count()+ui->floppySwappingImagesListWidget->count()>20){
+    if (fileNames.count()+(ui->floppySwappingImagesListWidget->count())>20){
         QMessageBox::about(this, tr("Error"),tr("You can select at most 20 floppies"));
         return;}
 
     for(int i=0;i<fileNames.count();i++){
-        //aggiorno la lista interna
+        //update internal configuration
         floppyConfiguration.pushBackFloppyImage(fileNames.at(i).toStdString());
-        //aggiorno la lista grafica
-        //  ui->floppySwappingImagesListWidget->addItem(fileNames.at(i));
     }
     updateGraphicsFromInternalConfiguration();
 }
 
 void Amiga::on_floppySwappingImagerRemovePushButton_clicked()
 {
-    //devo rimuovere i selezionati dalla lista interna
+    //I have to remove selected floppy from the internal configuration
     QItemSelectionModel *selection = ui->floppySwappingImagesListWidget->selectionModel();
     QModelIndexList indexes = selection->selectedRows();
     QListIterator<QModelIndex> i(indexes);
@@ -1415,15 +1448,13 @@ void Amiga::on_floppySwappingImagerRemovePushButton_clicked()
     };
 
     //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
-    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
+    //se devo eliminare [1,4,7] e tolgo il 1° poi quando elimino il 4° in realtà sto eliminando il 5°, quindi devo partire dal #° e scendere
     for(int x=indexList.size()-1;x>=0;x--){
         floppyConfiguration.eraseFloppyImageAt(indexList[x]);
     }
 
-    //svuoto lista grafica
     ui->floppySwappingImagesListWidget->clear();
 
-    //aggiorno la grafica
     updateGraphicsFromInternalConfiguration();
 }
 
@@ -1479,7 +1510,6 @@ void Amiga::on_cdromSwappingImagesAddPushButton_clicked()
     QStringList fileNames=QFileDialog::getOpenFileNames(this, tr("Open file"), QDir::homePath(), tr("CD Image CUE/BIN/ISO(*.cue *.bin *.iso)"));
 
     if (fileNames.count()==0){
-        //hai premuto annulla
         return;}
 
     if (fileNames.count()+ui->cdromSwappingImagesListWidget->count()>20){
@@ -1487,7 +1517,7 @@ void Amiga::on_cdromSwappingImagesAddPushButton_clicked()
         return;}
 
     for(int i=0;i<fileNames.count();i++){
-        //aggiorno la lista interna
+        //update internal configuration
         cdromConfiguration.pushBackCDRomImage(fileNames.at(i).toStdString());
     }
     updateGraphicsFromInternalConfiguration();
@@ -1495,7 +1525,7 @@ void Amiga::on_cdromSwappingImagesAddPushButton_clicked()
 
 void Amiga::on_cdromSwappingImagesRemovePushButton_clicked()
 {
-    //devo rimuovere i selezionati dalla lista interna
+    //I have to remove selected CD-ROMs from the internal configuration
     QItemSelectionModel *selection = ui->cdromSwappingImagesListWidget->selectionModel();
     QModelIndexList indexes = selection->selectedRows();
     QListIterator<QModelIndex> i(indexes);
@@ -1506,16 +1536,15 @@ void Amiga::on_cdromSwappingImagesRemovePushButton_clicked()
         indexList << index.row();
 
     };
+
     //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
-    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
+    //se devo eliminare [1,4,7] e tolgo il 1° poi quando elimino il 4° in realtà sto eliminando il 5°, quindi devo partire dal #° e scendere
     for(int x=indexList.size()-1;x>=0;x--){
         cdromConfiguration.eraseCDRomImageAt(indexList[x]);
     }
 
-    //svuoto lista grafica
     ui->cdromSwappingImagesListWidget->clear();
 
-    //aggiorno la grafica
     updateGraphicsFromInternalConfiguration();
 }
 
@@ -1867,7 +1896,6 @@ void Amiga::on_fullscreenResolutionXSpinBox_valueChanged(const QString &arg1)
     graphicsConfiguration.setParameter("fullscreen_width",arg1.toStdString());
 }
 
-
 void Amiga::on_fullscreenResolutionYSpinBox_valueChanged(const QString &arg1)
 {
     graphicsConfiguration.setParameter("fullscreen_height",arg1.toStdString());
@@ -1887,7 +1915,6 @@ void Amiga::on_scaleXDoubleSpinBox_valueChanged(const QString &arg1)
 {
     graphicsConfiguration.setParameter("scale_x",arg1.toStdString());
 }
-
 
 void Amiga::on_scaleYDoubleSpinBox_valueChanged(const QString &arg1)
 {
@@ -2059,7 +2086,6 @@ void Amiga::on_videoSynkMethodeComboBox_currentIndexChanged(const QString &arg1)
     graphicsConfiguration.setParameter("video_sync_method",arg1.toStdString());
 }
 
-// PER CAMBIARE COLORE AL BOTTONE
 void Amiga::on_fadeColorPushButton_clicked()
 {
     QColor color = QColorDialog::getColor(Qt::white, this);
@@ -2068,6 +2094,45 @@ void Amiga::on_fadeColorPushButton_clicked()
     themeConfiguration.setParameter("theme_fade_color",color.name().toStdString());
 }
 
+void Amiga::on_wallColor1PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->wallColor1PushButton->setText(color.name());
+    ui->wallColor1PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_wall_color_1",color.name().toStdString());
+}
+
+void Amiga::on_wallColor2PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->wallColor2PushButton->setText(color.name());
+    ui->wallColor2PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_wall_color_2",color.name().toStdString());
+}
+
+void Amiga::on_floorColor1PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->floorColor1PushButton->setText(color.name());
+    ui->floorColor1PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_floor_color_1",color.name().toStdString());
+}
+
+void Amiga::on_floorColor2PushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->floorColor2PushButton->setText(color.name());
+    ui->floorColor2PushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_floor_color_2",color.name().toStdString());
+}
+
+void Amiga::on_headColorPushButton_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    ui->headColorPushButton->setText(color.name());
+    ui->headColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
+    themeConfiguration.setParameter("theme_heading_color",color.name().toStdString());
+}
 
 void Amiga::on_alternativeBaseDirPushButton_clicked()
 {
@@ -2201,46 +2266,6 @@ void Amiga::on_playerPasswordLineEdit_textChanged(const QString &arg1)
     miscConfiguration.setParameter("netplay_password",arg1.toStdString());
 }
 
-void Amiga::on_wallColor1PushButton_clicked()
-{
-    QColor color = QColorDialog::getColor(Qt::white, this);
-    ui->wallColor1PushButton->setText(color.name());
-    ui->wallColor1PushButton->setStyleSheet(QString("background-color: ")+color.name());
-    themeConfiguration.setParameter("theme_wall_color_1",color.name().toStdString());
-}
-
-void Amiga::on_wallColor2PushButton_clicked()
-{
-    QColor color = QColorDialog::getColor(Qt::white, this);
-    ui->wallColor2PushButton->setText(color.name());
-    ui->wallColor2PushButton->setStyleSheet(QString("background-color: ")+color.name());
-    themeConfiguration.setParameter("theme_wall_color_2",color.name().toStdString());
-}
-
-void Amiga::on_floorColor1PushButton_clicked()
-{
-    QColor color = QColorDialog::getColor(Qt::white, this);
-    ui->floorColor1PushButton->setText(color.name());
-    ui->floorColor1PushButton->setStyleSheet(QString("background-color: ")+color.name());
-    themeConfiguration.setParameter("theme_floor_color_1",color.name().toStdString());
-}
-
-void Amiga::on_floorColor2PushButton_clicked()
-{
-    QColor color = QColorDialog::getColor(Qt::white, this);
-    ui->floorColor2PushButton->setText(color.name());
-    ui->floorColor2PushButton->setStyleSheet(QString("background-color: ")+color.name());
-    themeConfiguration.setParameter("theme_floor_color_2",color.name().toStdString());
-}
-
-void Amiga::on_headColorPushButton_clicked()
-{
-    QColor color = QColorDialog::getColor(Qt::white, this);
-    ui->headColorPushButton->setText(color.name());
-    ui->headColorPushButton->setStyleSheet(QString("background-color: ")+color.name());
-    themeConfiguration.setParameter("theme_heading_color",color.name().toStdString());
-}
-
 void Amiga::on_themeOverlayImagerPushButton_clicked()
 {
     QString fileName=QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("File png(*.png)"));
@@ -2260,18 +2285,6 @@ void Amiga::on_mouseSpeedLineEdit_textChanged(const QString &arg1)
     miscConfiguration.setParameter("uae_input.mouse_speed",arg1.toStdString());
 }
 
-void Amiga::customJoystick0Slot(QString s){
-    inputConfiguration.setParameter("joystick_port_0",s.toStdString());
-}
-void Amiga::customJoystick1Slot(QString s){
-    inputConfiguration.setParameter("joystick_port_1",s.toStdString());
-}
-void Amiga::customJoystick2Slot(QString s){
-    inputConfiguration.setParameter("joystick_port_2",s.toStdString());
-}
-void Amiga::customJoystick3Slot(QString s){
-    inputConfiguration.setParameter("joystick_port_3",s.toStdString());
-}
 
 /** \brief Convert Qt Keyboard Code in Amiga Keyboard Key
       * \param key is the Qt Keyboard Code
@@ -2284,6 +2297,7 @@ QString getAmigaKeyboardKeysFromKey(int key){
     Here is a specific example, mapping the keyboard key q to the fire button on the primary Amiga joystick (joy_1 is the joystick in joystick port 1):
     keyboard_key_q = action_joy_1_fire_button
     */
+
     switch(key)
     {
     case Qt::Key_Backspace:
@@ -2643,8 +2657,8 @@ keyboard_key_compose
 keyboard_key_break
 keyboard_key_euro
 keyboard_key_undo
-
           */
+
     default:
         return QString("");
     }
@@ -2655,8 +2669,6 @@ bool Amiga::eventFilter(QObject *obj, QEvent *event)
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
         ui->keyboardEventLineEdit->setText(getAmigaKeyboardKeysFromKey(keyEvent->key()));
-        /* ui->readKeyPushButton->setText("Read Key from Keyboard");
-        ui->readKeyPushButton->setStyleSheet(QString(""));*/
         return true;
     }  else
         if (event->type() == QEvent::FocusOut) {
@@ -2676,12 +2688,11 @@ void Amiga::on_readKeyPushButton_clicked()
 }
 void Amiga::on_customInputMappingAddPushButton_clicked()
 {
-    ////NON faccio alcun controllo sul fatto che potrei già aver assegnato la stessa azione o lo stesso tasto?? magari sì
-
-    //keyboard_key_q = action_joy_1_fire_button
     if (ui->keyboardEventLineEdit->text().compare("")==0){
         QMessageBox::about(this, tr("Error"),tr("You must assign a Key Value"));
         return;}
+
+    //I can't map neither 2 different key to the same action nor 2 action to the same key
     if (inputConfiguration.containsKeyOrAction(ui->keyboardEventLineEdit->text().toStdString())){
         QMessageBox::about(this, tr("Error"),QString("You have already assigned \""+ui->keyboardEventLineEdit->text()+"\" key."));
         return;
@@ -2699,7 +2710,7 @@ void Amiga::on_customInputMappingAddPushButton_clicked()
 
 void Amiga::on_customInputMappingRemovePushButton_clicked()
 {
-    //devo rimuovere i selezionati dalla lista interna
+    //I have to remove selected items from the internal configuration
     QItemSelectionModel *selection = ui->customInputMappingListWidget->selectionModel();
     QModelIndexList indexes = selection->selectedRows();
     QListIterator<QModelIndex> i(indexes);
@@ -2710,21 +2721,17 @@ void Amiga::on_customInputMappingRemovePushButton_clicked()
         indexList << index.row();
     };
 
-    //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
-    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
     for(int x=indexList.size()-1;x>=0;x--){
         inputConfiguration.eraseCustomInputMappingAt(indexList[x]);
     }
 
-    //svuoto lista grafica
     ui->customInputMappingListWidget->clear();
 
-    //aggiorno la grafica
     updateGraphicsFromInternalConfiguration();
 }
 
-const QString pro="Custom configurations file can be placed in the directory: Documents/FS-UAE/Controllers/<br>"
-        "The name of the ini file is the system name of the controller, converted to lowercase,<br>"
+const QString customJoystickExplanationString="Custom configurations file can be placed in the directory: Documents/FS-UAE/Controllers/<br>"
+        "The name of the INI file is the system name of the controller, converted to lowercase,<br>"
         "with an underscore between each work. Characters other than letters and numbers are also<br>"
         "converted to underscore, and there is never more than one underscore between each word,<br>"
         "and the name will not start nor end with underscore.<br><br>"
@@ -2742,7 +2749,7 @@ void Amiga::on_joystickPort0CustomizePushButton_clicked()
     label2->setTextFormat(Qt::RichText);
     label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
     label2->setOpenExternalLinks(true);
-    label2->setText(pro);
+    label2->setText(customJoystickExplanationString);
     QLineEdit *nameLineEdit = new QLineEdit;
     QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort0String());
     if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort0ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
@@ -2768,7 +2775,7 @@ void Amiga::on_joystickPort1CusomizePushButton_clicked()
     label2->setTextFormat(Qt::RichText);
     label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
     label2->setOpenExternalLinks(true);
-    label2->setText(pro);
+    label2->setText(customJoystickExplanationString);
     QLineEdit *nameLineEdit = new QLineEdit;
     QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort1String());
     if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort1ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
@@ -2794,7 +2801,7 @@ void Amiga::on_joystickPort2CustomizePushButton_clicked()
     label2->setTextFormat(Qt::RichText);
     label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
     label2->setOpenExternalLinks(true);
-    label2->setText(pro);
+    label2->setText(customJoystickExplanationString);
     QLineEdit *nameLineEdit = new QLineEdit;
     QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort2String());
     if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort2ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
@@ -2819,7 +2826,7 @@ void Amiga::on_joystickPort3CustomizePushButton_clicked()
     label2->setTextFormat(Qt::RichText);
     label2->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
     label2->setOpenExternalLinks(true);
-    label2->setText(pro);
+    label2->setText(customJoystickExplanationString);
     QLineEdit *nameLineEdit = new QLineEdit;
     QString actualJoystick=QString::fromStdString(inputConfiguration.getJoystickPort3String());
     if(!(actualJoystick.compare("mouse")==0)&&!(actualJoystick.compare("none")==0)&&!(actualJoystick.compare("keyboard")==0)&&(ui->joystickPort3ModelComboBox->findText(actualJoystick,Qt::MatchExactly)==-1)){
@@ -2836,6 +2843,20 @@ void Amiga::on_joystickPort3CustomizePushButton_clicked()
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
     window->show();
 }
+
+void Amiga::customJoystick0Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_0",s.toStdString());
+}
+void Amiga::customJoystick1Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_1",s.toStdString());
+}
+void Amiga::customJoystick2Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_2",s.toStdString());
+}
+void Amiga::customJoystick3Slot(QString s){
+    inputConfiguration.setParameter("joystick_port_3",s.toStdString());
+}
+
 void Amiga::on_joystickPort0CustomJoystickRadioButton_clicked()
 {
     ui->joystickPort0ModelComboBox->setEnabled(false);
@@ -3024,7 +3045,7 @@ void Amiga::on_themeAddViewportPushButton_clicked()
 
 void Amiga::on_themeRemoveViewportPushButton_clicked()
 {
-    //devo rimuovere i selezionati dalla lista interna
+    //I have to remove selected items from the internal configuration
     QItemSelectionModel *selection = ui->viewportsListWidget->selectionModel();
     QModelIndexList indexes = selection->selectedRows();
     QListIterator<QModelIndex> i(indexes);
@@ -3035,15 +3056,11 @@ void Amiga::on_themeRemoveViewportPushButton_clicked()
         indexList << index.row();
     };
 
-    //il problema è che avendo la lista crescente di indici degli elementi da togliere non potevo partire dal più piccolo: x es
-    //se ho [1,4,7] e tolgo il #1 poi quando elimino il #4 in realtà sto eliminando il 5, quindi devo partire dal #7 e scendere
     for(int x=indexList.size()-1;x>=0;x--){
         graphicsConfiguration.eraseViewportAt(indexList[x]);
     }
 
-    //svuoto lista grafica
     ui->viewportsListWidget->clear();
 
-    //aggiorno la grafica
     updateGraphicsFromInternalConfiguration();
 }
