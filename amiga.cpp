@@ -40,7 +40,6 @@ void static showAlert(string message){
     msg.exec();
 }
 
-
 Amiga::Amiga(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Amiga)
@@ -915,7 +914,7 @@ void Amiga::updateGraphicsFromInternalConfiguration(){
     string netplay_tag=miscConfiguration.getNetPlayTagString();
     ui->playerUsernameLineEdit->setText(QString::fromStdString(netplay_tag));
 
-    string netplay_password=miscConfiguration.getNetPlayTagString();
+    string netplay_password=miscConfiguration.getNetPlayPasswordString();
     ui->playerPasswordLineEdit->setText(QString::fromStdString(netplay_password));
 
     //ALTERNATIVE DIRs
@@ -1370,6 +1369,10 @@ void Amiga::on_actionAmiga_triggered()
     window->setLayout(formLayout);
     window->setWindowTitle("About");
     window->setWindowModality(Qt::ApplicationModal);
+    QSize fixedSize(470,290);
+    window->setMinimumSize(fixedSize);
+    window->setMaximumSize(fixedSize);
+    window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
     window->show();
 
@@ -2771,6 +2774,10 @@ void Amiga::on_joystickPort0CustomizePushButton_clicked()
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick0Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    QSize fixedSize(640,320);
+    window->setMinimumSize(fixedSize);
+    window->setMaximumSize(fixedSize);
+    window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
     window->show();
     //put dialog in center
     QWidget *d = QApplication::desktop();
@@ -2803,10 +2810,14 @@ void Amiga::on_joystickPort1CusomizePushButton_clicked()
     formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
-     window->setWindowTitle("Customize Joystick 1");
+    window->setWindowTitle("Customize Joystick 1");
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick1Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    QSize fixedSize(640,320);
+    window->setMinimumSize(fixedSize);
+    window->setMaximumSize(fixedSize);
+    window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
     window->show();
     //put dialog in center
     QWidget *d = QApplication::desktop();
@@ -2839,10 +2850,14 @@ void Amiga::on_joystickPort2CustomizePushButton_clicked()
     formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
-     window->setWindowTitle("Customize Joystick 2");
+    window->setWindowTitle("Customize Joystick 2");
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick2Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    QSize fixedSize(640,320);
+    window->setMinimumSize(fixedSize);
+    window->setMaximumSize(fixedSize);
+    window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
     window->show();
     //put dialog in center
     QWidget *d = QApplication::desktop();
@@ -2874,10 +2889,14 @@ void Amiga::on_joystickPort3CustomizePushButton_clicked()
     formLayout->addRow(label2);
     formLayout->addRow(closeButton);
     window->setLayout(formLayout);
-     window->setWindowTitle("Customize Joystick 3");
+    window->setWindowTitle("Customize Joystick 3");
     window->setWindowModality(Qt::ApplicationModal);
     connect(nameLineEdit, SIGNAL(textChanged(QString)),this, SLOT(customJoystick3Slot(QString)));
     connect(closeButton,SIGNAL(clicked()),window,SLOT(close()));
+    QSize fixedSize(640,320);
+    window->setMinimumSize(fixedSize);
+    window->setMaximumSize(fixedSize);
+    window->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
     window->show();
     //put dialog in center
     QWidget *d = QApplication::desktop();

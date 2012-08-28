@@ -145,16 +145,12 @@ int ConfigFloppy::setParameter(string parameter, string value)
 
 void ConfigFloppy::setToDefaultConfiguration()
 {
-    //set options to default values
-
     for(int i=0;i<4;i++){
         floppy_drive[i]=DEFAULTFLOPPYDRIVE;
     }
     floppy_drive_volume=DEFAULTFLOPPYDRIVEVOLUME;
     floppy_drive_speed=DEFAULTFLOPPYDRIVESPEED;
     floppy_image.clear();
-
-
 }
 
 bool ConfigFloppy::hasParameter(string parameterName)

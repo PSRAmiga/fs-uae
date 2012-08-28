@@ -76,7 +76,7 @@ string ConfigChipset::getKickstartFileString()
 
 string ConfigChipset::getKickstartExtFileConfigString()
 {
-    if (kickstart_ext_file.compare(DEFAULTKICKSTARTEXTFILE)==0){return "";} //|| ((amiga_model.compare("CD32")!=0) && (amiga_model.compare("CDTV")!=0))
+    if (kickstart_ext_file.compare(DEFAULTKICKSTARTEXTFILE)==0){return "";}
     else {return "kickstart_ext_file = " + kickstart_ext_file;}
 }
 
@@ -118,7 +118,6 @@ int ConfigChipset::setParameter(string parameter, string value)
 
 void ConfigChipset::setToDefaultConfiguration()
 {
-    //set options to default values
     amiga_model=DEFAULTAMIGAMODEL;
     accuracy=DEFAULTACCURACY;
     kickstart_file=DEFAULTKICKSTARTFILE;

@@ -14,7 +14,10 @@ ConfigInput::ConfigInput()
     setToDefaultConfiguration();
 }
 
-//Returns the string to be appended to joystick name so that, if user has 2 joystick with the same name, fs-uae can distinguish them
+/** \brief Returns the string to be appended to joystick name so that, if user has 2 joystick with the same name, fs-uae can distinguish them
+  *\param portNumber is the port number of Joystick
+  *\return the string to be appended to joystick name
+  */
 string ConfigInput::joystickNumberString(int portNumber){
     if (portNumber==0){
         return "";
